@@ -136,7 +136,7 @@ OakSpeech:
 	ld a, SFX_SHRINK
 	call PlaySound
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ld c, 4
 	call DelayFrames
 	ld hl, vSprites
@@ -162,7 +162,7 @@ OakSpeech:
 	ld [wAudioFadeOutControl], a
 	call StopAllMusic ; stop music
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ld c, 20
 	call DelayFrames
 	coord hl, 6, 5

@@ -270,10 +270,10 @@ CheckForPlayerNameInSRAM:
 ; (indicating that a name may have been saved there) and return whether it does
 ; in carry.
 	ld a, SRAM_ENABLE
-	ld [MBC1SRamEnable], a
+	ld [MBC5SRamEnable], a
 	ld a, $1
-	ld [MBC1SRamBankingMode], a
-	ld [MBC1SRamBank], a
+	ld [MBC5SRamBankingMode], a
+	ld [MBC5SRamBank], a
 	ld b, NAME_LENGTH
 	ld hl, sPlayerName
 .loop
@@ -284,13 +284,13 @@ CheckForPlayerNameInSRAM:
 	jr nz, .loop
 ; not found
 	xor a
-	ld [MBC1SRamEnable], a
-	ld [MBC1SRamBankingMode], a
+	ld [MBC5SRamEnable], a
+	ld [MBC5SRamBankingMode], a
 	and a
 	ret
 .found
 	xor a
-	ld [MBC1SRamEnable], a
-	ld [MBC1SRamBankingMode], a
+	ld [MBC5SRamEnable], a
+	ld [MBC5SRamBankingMode], a
 	scf
 	ret

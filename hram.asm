@@ -319,11 +319,17 @@ hCurSpriteMapX EQU $FFEE
 
 hDidntFindAnyHiddenObject EQU $FFEE
 
+hLSB EQU $FFF0
+hLSC EQU $FFF1
+
 hBattleTurn EQU $FFF3 ; 0 on player’s turn, 1 on enemy’s turn
 
 hLCDCPointer EQU $FFF4
 
 hJoyInput EQU $FFF5
+
+hBCBuffer EQU $FFF6
+hMarkovChain EQU $FFF6 ; dw
 
 hDisableJoypadPolling EQU $FFF8 ; non-zero value disables polling of joypad
 

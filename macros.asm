@@ -1,3 +1,5 @@
+FarCall = $08
+Bankswitch = $10
 
 text   EQUS "db $00," ; Start writing text.
 next   EQUS "db $4e," ; Move a line down.
@@ -48,105 +50,93 @@ homecall_jump: MACRO
 	ld a, [hROMBank]
 	push af
 	ld a, BANK(\1)
-	call BankswitchCommon
+	rst Bankswitch
 	call \1
 	pop af
-	jp BankswitchCommon
+	rst Bankswitch
+	ret
 	ENDM
 
 homecall_jump_sf: MACRO
 	ld a, [hROMBank]
 	push af
 	ld a, BANK(\1)
-	call BankswitchCommon
+	rst Bankswitch
 	call \1
 	pop bc
-	ld a,b
-	jp BankswitchCommon
+	ld a, b
+	rst Bankswitch
+	ret
 	ENDM
 
 homecall: MACRO
 	ld a, [hROMBank]
 	push af
 	ld a, BANK(\1)
-	call BankswitchCommon
+	rst Bankswitch
 	call \1
 	pop af
-	call BankswitchCommon
+	rst Bankswitch
 	ENDM
 
 homecall_sf: MACRO ; homecall but save flags by popping into bc instead of af
 	ld a, [hROMBank]
 	push af
 	ld a, BANK(\1)
-	call BankswitchCommon
+	rst Bankswitch
 	call \1
 	pop bc
-	ld a,b
-	call BankswitchCommon
+	ld a, b
+	rst Bankswitch
 	ENDM
 
 switchbank: MACRO
 	ld a, BANK(\1)
-	call BankswitchCommon
+	rst Bankswitch
 	ENDM
 
 callbs: MACRO
 	ld a, BANK(\1)
-	call BankswitchCommon
+	rst Bankswitch
 	call \1
 	ENDM
 
 callba: MACRO
-; support conditional farcalls
-IF _NARG > 1
-	ld b, BANK(\2)
-	ld hl, \2
-	call \1, FarCall
-ELSE
-	ld b, BANK(\1)
+	ld a, BANK(\1)
 	ld hl, \1
-	call FarCall
-ENDC
+	rst FarCall
 	ENDM
 
 callab: MACRO
-; support conditional farcalls
-IF _NARG > 1
-	ld hl, \2
-	ld b, BANK(\2)
-	call \1, FarCall
-ELSE
 	ld hl, \1
-	ld b, BANK(\1)
-	call FarCall
-ENDC
+	ld a, BANK(\1)
+	rst FarCall
 	ENDM
 
 calladb_ModifyPikachuHappiness: MACRO
 	ld hl, ModifyPikachuHappiness
 	ld d, \1
-	ld b, BANK(ModifyPikachuHappiness)
-	call FarCall
+	ld a, BANK(ModifyPikachuHappiness)
+	rst FarCall
 	ENDM
 
 callabd_ModifyPikachuHappiness: MACRO
 	ld hl, ModifyPikachuHappiness
-	ld b, BANK(ModifyPikachuHappiness)
+	ld a, BANK(ModifyPikachuHappiness)
 	ld d, \1
-	call FarCall
+	rst FarCall
 	ENDM
 
 jpba: MACRO
-	ld b, BANK(\1)
+	ld a, BANK(\1)
 	ld hl, \1
-	jp FarCall
+	jp FarCall_hl
 	ENDM
 
 jpab: MACRO
 	ld hl, \1
-	ld b, BANK(\1)
-	jp FarCall
+	ld a, BANK(\1)
+	jp FarCall_hl
 	ENDM
 
 bcd: MACRO
@@ -337,8 +327,16 @@ TX_CURSOR: MACRO
 	dwCoord \1, \2
 	ENDM
 
+TX_BOX: MACRO
+	db $4
+	dwCoord \1, \2
+	db \3, \4
+	ENDM
+
+
 TX_LINE EQUS "db $05"
 TX_BUTTON_SOUND EQUS "db $06"
+TX_CONT EQUS "db $07"
 TX_ASM EQUS "db $08"
 
 TX_NUM: MACRO
@@ -353,6 +351,8 @@ TX_NUM: MACRO
 
 TX_SFX_ITEM EQUS "db $0b"
 TX_WAIT_BUTTON EQUS "db $0d"
+
+; SFX
 TX_SFX_POKEDEX_RATING EQUS "db $0e"
 TX_SFX_ITEM2 EQUS "db $0f"
 TX_SFX_CONGRATS EQUS "db $10"
@@ -367,6 +367,13 @@ TX_FAR: MACRO
 ; 17AAAABB (call text at BB:AAAA)
 	db $17
 	dab \1
+	ENDM
+
+TX_PIKACHU EQUS "db $18"
+
+TX_MARKOV: MACRO
+	db $19
+	dab \2
 	ENDM
 
 TX_VENDING_MACHINE         EQUS "db $f5"

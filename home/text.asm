@@ -346,13 +346,9 @@ NextTextCommand::
 	pop af
 	ld [wLetterPrintingDelayFlags], a
 	ret
+
 .doTextCommand
 	push hl
-	cp $17 ; TX_FAR
-	jp z, TextCommand17
-	cp $0e ; TX_SFX_???
-	jp nc, TextCommand0B ; if a != 0x17 and a >= 0xE, go to command 0xB
-; if a < 0xE, use a jump table
 	ld hl, TextCommandJumpTable
 	push bc
 	add a
@@ -496,7 +492,7 @@ TextCommand08::
 	pop hl
 	ld de, NextTextCommand
 	push de ; return address
-	jp hl
+	jp [hl]
 
 ; print decimal number (converted from binary number)
 ; 09AAAABB
@@ -648,8 +644,7 @@ TextCommand17::
 	ld a, [hli]
 	ld d, a
 	ld a, [hli]
-	ld [hROMBank], a
-	ld [MBC1RomBank], a
+	call Bankswitch
 	push hl
 	ld l, e
 	ld h, d
@@ -657,7 +652,68 @@ TextCommand17::
 	pop hl
 	pop af
 	ld [hROMBank], a
-	ld [MBC1RomBank], a
+	ld [MBC5RomBank], a
+	jp NextTextCommand
+
+TextCommand18::
+TextCommand19::
+	pop hl
+; bc is the tilemap dest
+; hl, on the stack, is the text source
+	ld a, [hROMBank]
+	push af
+	dec hl
+	ld a, [hli]
+	sub $18 ; LUA_REQUEST_NPC or LUA_REQUEST_CHATOT
+	ld [hLSB], a
+	jr z, .chatot
+	ld a, [hli]
+	ld [hMarkovChain], a
+	ld a, [hli]
+	ld [hMarkovChain + 1], a
+	ld a, [hli]
+	call Bankswitch
+	jr .okay
+
+.chatot
+	xor a
+	ld [hMarkovChain], a
+	ld [hMarkovChain + 1], a
+.okay
+	pop af
+	call Bankswitch
+	push hl
+	ld a, LUA_REQUEST_CHAIN
+	ld [hLSC], a
+.loop
+	halt
+	nop
+	ld a, [hLSC]
+	and a ; cp LUA_REQUEST_COMPLETE
+	jr nz, .loop
+.char_loop
+	ld a, LUA_REQUEST_NEXT_CHAR
+	ld [hLSC], a
+.loop2
+	halt
+	nop
+	ld a, [hLSC]
+	and a ; cp LUA_REQUEST_COMPLETE
+	jr nz, .loop2
+	ld a, [hLSB]
+	cp $57 ; done
+	jr z, .done
+	ld [hMarkovChain], a
+	ld a, "@"
+	ld [hMarkovChain + 1], a
+	ld h, b
+	ld l, c
+	ld de, hMarkovChain
+	call PlaceString
+	jr .char_loop
+
+.done
+	pop hl
 	jp NextTextCommand
 
 TextCommandJumpTable::
@@ -675,3 +731,15 @@ TextCommandJumpTable::
 	dw TextCommand0B
 	dw TextCommand0C
 	dw TextCommand0D
+	dw TextCommand0B
+	dw TextCommand0B
+	dw TextCommand0B
+	dw TextCommand0B
+	dw TextCommand0B
+	dw TextCommand0B
+	dw TextCommand0B
+	dw TextCommand0B
+	dw TextCommand0B
+	dw TextCommand17
+	dw TextCommand18
+	dw TextCommand19

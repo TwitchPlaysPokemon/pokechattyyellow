@@ -86,7 +86,7 @@ GetPikachuMovementScriptByte::
 	ld a, [hROMBank]
 	push af
 	ld a, [wPikachuMovementScriptBank]
-	call BankswitchCommon
+	call Bankswitch
 	ld hl, wPikachuMovementScriptAddress
 	ld c, [hl]
 	inc hl
@@ -98,7 +98,7 @@ GetPikachuMovementScriptByte::
 	ld [hl], c
 	ld c, a
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ld a, c
 	pop bc
 	pop hl
@@ -110,5 +110,5 @@ ApplyPikachuMovementData::
 	push af
 	callbs ApplyPikachuMovementData_
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret

@@ -31,5 +31,5 @@ ConvertedTypeText:
 PrintButItFailedText:
 	ld hl, PrintButItFailedText_
 CallBankF:
-	ld b, BANK(PrintButItFailedText_)
-	jp FarCall
+	ld a, BANK(PrintButItFailedText_)
+	jp FarCall_hl

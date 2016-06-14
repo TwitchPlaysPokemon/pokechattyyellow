@@ -34,7 +34,7 @@ VBlank::
 	call $ff80 ; hOAMDMA
 	ld a, BANK(PrepareOAMData)
 	ld [hROMBank], a
-	ld [MBC1RomBank], a
+	ld [MBC5RomBank], a
 	call PrepareOAMData
 
 	; VBlank-sensitive operations end.
@@ -65,7 +65,7 @@ VBlank::
 
 	ld a, [wVBlankSavedROMBank]
 	ld [hROMBank], a
-	ld [MBC1RomBank], a
+	ld [MBC5RomBank], a
 
 	pop af
 	ld [rVBK],a

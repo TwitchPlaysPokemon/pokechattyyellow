@@ -346,8 +346,8 @@ BoostExp:
 	ret
 
 Bankswitch15ToF:
-	ld b, BANK(BattleCore)
-	jp FarCall
+	ld a, BANK(BattleCore)
+	jp FarCall_hl
 
 GainedText:
 	TX_FAR _GainedText

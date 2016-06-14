@@ -1,23 +1,23 @@
-BankswitchCommon::
-	ld [hROMBank], a
-	ld [MBC1RomBank], a
-	ret
-
-FarCall::
+FarCall_hl::
 ; self-contained bankswitch, use this when not in the home bank
 ; calls b:hl
-; preserves c and de going into the call
-; bc is lost when returning
+; preserves bc and de going into the call
+	ld [hSwapTemp], a
 	ld a, [hROMBank]
 	push af
-	ld a, b
-	ld [hROMBank], a
-	ld [MBC1RomBank], a
+	ld a, [hSwapTemp]
+	rst Bankswitch
 	call FarJump_hl
-	pop bc
-	ld a, b
-	ld [hROMBank], a
-	ld [MBC1RomBank], a
+	push af
+	push hl
+	ld hl, [sp + 2] ; flags of a
+	ld a, [hli] ; read
+	inc l ; inc hl
+	ld [hl], a ; and write to the flags of the saved bank
+	pop hl
+	pop af
+	pop af
+	rst Bankswitch
 	ret
 
 FarJump_hl::

@@ -14,12 +14,12 @@ Predef::
 	push af
 	ld a, BANK(GetPredefPointer)
 	ld [hROMBank], a
-	ld [MBC1RomBank], a
+	ld [MBC5RomBank], a
 
 	call GetPredefPointer
 
 	ld a, [wPredefBank]
-	call BankswitchCommon
+	call Bankswitch
 
 	ld de, .done
 	push de
@@ -27,7 +27,7 @@ Predef::
 .done
 
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 GetPredefRegisters::

@@ -41,5 +41,5 @@ ReflectGainedArmorText:
 	db "@"
 
 Bankswitch3DtoF:
-	ld b, BANK(BattleCore)
-	jp FarCall
+	ld a, BANK(BattleCore)
+	jp FarCall_hl

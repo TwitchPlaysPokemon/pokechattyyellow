@@ -26,20 +26,22 @@ TransformEffect_:
 ; animation(s) played are different if target has Substitute up
 	bit HasSubstituteUp, [hl]
 	push af
-	callab nz, HideSubstituteShowMonAnim
+	jr z, .skip
+	callab HideSubstituteShowMonAnim
+.skip
 	ld a, [wOptions]
 	add a
 	ld hl, PlayCurrentMoveAnimation
-	ld b, BANK(PlayCurrentMoveAnimation)
+	ld a, BANK(PlayCurrentMoveAnimation)
 	jr nc, .gotAnimToPlay
 	ld hl, AnimationTransformMon
-	ld b, BANK(AnimationTransformMon)
+	ld a, BANK(AnimationTransformMon)
 .gotAnimToPlay
-	call FarCall
-	ld hl, ReshowSubstituteAnim
-	ld b, BANK(ReshowSubstituteAnim)
+	rst FarCall
 	pop af
-	call nz, FarCall
+	jr nz, .skip2
+	callab ReshowSubstituteAnim
+.skip2
 	pop bc
 	ld a, [bc]
 	set Transformed, a ; mon is now Transformed

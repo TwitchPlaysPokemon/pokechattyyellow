@@ -724,8 +724,8 @@ ExtraWarpCheck::
 .useFunction2
 	ld hl, IsWarpTileInFrontOfPlayer
 .doBankswitch
-	ld b, BANK(IsWarpTileInFrontOfPlayer)
-	jp FarCall
+	ld a, BANK(IsWarpTileInFrontOfPlayer)
+	jp FarCall_hl
 
 MapEntryAfterBattle::
 	callba IsPlayerStandingOnWarp ; for enabling warp testing after collisions
@@ -1373,7 +1373,7 @@ LoadCurrentMapView::
 	ld a, [hROMBank]
 	push af
 	ld a, [wTilesetBank] ; tile data ROM bank
-	call BankswitchCommon ; switch to ROM bank that contains tile data
+	call Bankswitch ; switch to ROM bank that contains tile data
 	ld a, [wCurrentTileBlockMapViewPointer] ; address of upper left corner of current map view
 	ld e, a
 	ld a, [wCurrentTileBlockMapViewPointer + 1]
@@ -1454,7 +1454,7 @@ LoadCurrentMapView::
 	dec b
 	jr nz, .rowLoop2
 	pop af
-	call BankswitchCommon ; restore previous ROM bank
+	call Bankswitch ; restore previous ROM bank
 	ret
 
 AdvancePlayerSprite::
@@ -1462,9 +1462,7 @@ AdvancePlayerSprite::
 	push af
 	ld a, $FF
 	ld [wUpdateSpritesEnabled], a
-	ld hl, _AdvancePlayerSprite
-	ld b, BANK(_AdvancePlayerSprite)
-	call FarCall
+	callab _AdvancePlayerSprite
 	pop af
 	ld [wUpdateSpritesEnabled], a
 	ret
@@ -1946,7 +1944,7 @@ asm_0dbd
 	ld a, [hl]
 	ld [wMapMusicROMBank], a ; music 2
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 ; function to copy map connection data from ROM to WRAM
@@ -2008,7 +2006,7 @@ LoadMapData::
 	call PlayDefaultMusicFadeOutCurrent ; music related
 .restoreRomBank
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 LoadScreenRelatedData::
@@ -2031,7 +2029,7 @@ ReloadMapAfterSurfingMinigame::
 	call EnableLCD
 	call ReloadMapSpriteTilePatterns
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	jr asm_0f4d
 
 ReloadMapAfterPrinter::
@@ -2041,7 +2039,7 @@ ReloadMapAfterPrinter::
 	call SwitchToMapRomBank
 	call LoadTileBlockMap
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 asm_0f4d:
 	jpab SetMapSpecificScriptFlagsOnMapReload
 	ret ; useless?
@@ -2098,7 +2096,7 @@ SwitchToMapRomBank::
 	ld [$ffe8], a ; save map ROM bank
 	call BankswitchBack
 	ld a, [$ffe8]
-	call BankswitchCommon
+	call Bankswitch
 	pop bc
 	pop hl
 	ret
@@ -2119,7 +2117,7 @@ GetMapHeaderPointer::
 	ld l, a
 	pop de
 	pop af
-	jp BankswitchCommon
+	jp Bankswitch
 
 IgnoreInputForHalfSecond:
 	ld a, 30
@@ -2136,9 +2134,9 @@ ResetUsingStrengthOutOfBattleBit:
 	ret
 
 ForceBikeOrSurf::
-	ld b, BANK(RedSprite)
+	ld a, BANK(RedSprite)
 	ld hl, LoadPlayerSpriteGraphics
-	call FarCall
+	rst FarCall
 	jp PlayDefaultMusic ; update map/player state?
 
 ; Handle the player jumping down

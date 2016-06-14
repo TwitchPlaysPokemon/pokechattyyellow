@@ -47,15 +47,16 @@ SubstituteEffect_:
 	ld a, [wOptions]
 	bit 7, a ; battle animation is enabled?
 	ld hl, PlayCurrentMoveAnimation
-	ld b, BANK(PlayCurrentMoveAnimation)
+	ld a, BANK(PlayCurrentMoveAnimation)
 	jr z, .animationEnabled
 	ld hl, AnimationSubstitute
-	ld b, BANK(AnimationSubstitute)
+	ld a, BANK(AnimationSubstitute)
 .animationEnabled
-	call FarCall ; jump to routine depending on animation setting
+	rst FarCall ; jump to routine depending on animation setting
 	ld hl, SubstituteText
 	call PrintText
 	jpab DrawHUDsAndHPBars
+
 .alreadyHasSubstitute
 	ld hl, HasSubstituteText
 	jr .printText

@@ -2,11 +2,11 @@
 
 GBC EQU $11
 
-; MBC1
-MBC1SRamEnable      EQU $0000
-MBC1RomBank         EQU $2000
-MBC1SRamBank        EQU $4000
-MBC1SRamBankingMode EQU $6000
+; MBC5
+MBC5SRamEnable      EQU $0000
+MBC5RomBank         EQU $2000
+MBC5SRamBank        EQU $4000
+MBC5SRamBankingMode EQU $6000
 
 SRAM_DISABLE EQU $00
 SRAM_ENABLE  EQU $0a

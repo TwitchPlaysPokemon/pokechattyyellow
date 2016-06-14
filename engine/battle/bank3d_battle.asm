@@ -136,7 +136,9 @@ InitBattle_Common:
 	call ClearSprites
 	ld a, [wIsInBattle]
 	dec a ; is it a wild battle?
-	callab z, DrawEnemyHUDAndHPBar ; draw enemy HUD and HP bar if it's a wild battle
+	jr nz, .skip
+	callab DrawEnemyHUDAndHPBar ; draw enemy HUD and HP bar if it's a wild battle
+.skip
 	callab StartBattle
 	callab EndOfBattle
 	pop af

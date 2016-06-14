@@ -1,21 +1,27 @@
-
-; The rst vectors are unused.
+jr_abs EQUS "db $18, -1 - @ + "
+; TPP is using the RST vectors
 SECTION "rst 00", ROM0 [$00]
-	rst $38
+	jr_abs $38
 SECTION "rst 08", ROM0 [$08]
-	rst $38
+	jp FarCall_hl
 SECTION "rst 10", ROM0 [$10]
-	rst $38
+	ld [hROMBank], a
+	ld [MBC5RomBank], a
+	ret
+
 SECTION "rst 18", ROM0 [$18]
-	rst $38
+	jr_abs $38
 SECTION "rst 20", ROM0 [$20]
-	rst $38
+	jr_abs $38
 SECTION "rst 28", ROM0 [$28]
-	rst $38
+	jr_abs $38
 SECTION "rst 30", ROM0 [$30]
-	rst $38
+	jr_abs $38
 SECTION "rst 38", ROM0 [$38]
-	rst $38
+	di
+	ld b, b
+	db $10, $69 ; corrupted stop
+	jr @
 
 ; Hardware interrupts
 SECTION "vblank", ROM0 [$40]
@@ -99,7 +105,7 @@ PlayPikachuPCM::
 	ld a, [hROMBank]
 	push af
 	ld a, b
-	call BankswitchCommon
+	call Bankswitch
 	ld a, [hli]
 	ld c, a
 	ld a, [hli]
@@ -123,7 +129,7 @@ PlayPikachuPCM::
 	or b
 	jr nz, .loop
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 LoadNextSoundClipSample::
@@ -197,7 +203,7 @@ LoadDestinationWarpPosition::
 	push af
 	ld a, [wPredefParentBank]
 	ld [hROMBank], a
-	ld [MBC1RomBank], a
+	ld [MBC5RomBank], a
 	ld a, b
 	add a
 	add a
@@ -209,7 +215,7 @@ LoadDestinationWarpPosition::
 	call CopyData
 	pop af
 	ld [hROMBank], a
-	ld [MBC1RomBank], a
+	ld [MBC5RomBank], a
 	ret
 
 DrawHPBar::
@@ -344,7 +350,7 @@ LoadFrontSpriteByMonIndex::
 	xor a
 	ld [wSpriteFlipped], a
 	pop af
-	jp BankswitchCommon
+	jp Bankswitch
 
 PlayCry::
 ; Play monster a's cry.
@@ -539,8 +545,8 @@ RedrawPartyMenu::
 	ld hl, RedrawPartyMenu_
 
 DrawPartyMenuCommon::
-	ld b, BANK(RedrawPartyMenu_)
-	jp FarCall
+	ld a, BANK(RedrawPartyMenu_)
+	jp FarCall_hl
 
 ; prints a pokemon's status condition
 ; INPUT:
@@ -663,7 +669,7 @@ GetMonHeader::
 	pop de
 	pop bc
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 ; copy party pokemon's name to wStringBuffer
@@ -996,7 +1002,7 @@ UpdateSprites::
 	ld a, $1
 	ld [wUpdateSpritesEnabled], a
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 INCLUDE "data/mart_inventories.asm"
@@ -1246,7 +1252,7 @@ CloseTextDisplay::
 	call z, LoadPlayerSpriteGraphics
 	call LoadCurrentMapView
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	jp UpdateSprites
 
 DisplayPokemartDialogue::
@@ -1936,7 +1942,7 @@ GetMonName::
 	push af
 	ld a, BANK(MonsterNames)
 	ld [hROMBank], a
-	ld [MBC1RomBank], a
+	ld [MBC5RomBank], a
 	ld a, [wd11e]
 	dec a
 	ld hl, MonsterNames
@@ -1952,7 +1958,7 @@ GetMonName::
 	pop de
 	pop af
 	ld [hROMBank], a
-	ld [MBC1RomBank], a
+	ld [MBC5RomBank], a
 	pop hl
 	ret
 
@@ -2085,7 +2091,7 @@ ReloadMapData::
 	call LoadTilesetTilePatternData
 	call EnableLCD
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 ; reloads tileset tile patterns
@@ -2098,7 +2104,7 @@ ReloadTilesetTilePatterns::
 	call LoadTilesetTilePatternData
 	call EnableLCD
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 ; shows the town map and lets the player choose a destination to fly to
@@ -2166,12 +2172,12 @@ TossItem::
 	push af
 	ld a, BANK(TossItem_)
 	ld [hROMBank], a
-	ld [MBC1RomBank], a
+	ld [MBC5RomBank], a
 	call TossItem_
 	pop de
 	ld a, d
 	ld [hROMBank], a
-	ld [MBC1RomBank], a
+	ld [MBC5RomBank], a
 	ret
 
 ; checks if an item is a key item
@@ -2234,10 +2240,8 @@ UpdateGBCPal_OBP0::
 	ld a, [wLastOBP0]
 	cp b
 	jr z, .noChangeInOBP0
-	ld b, BANK(_UpdateGBCPal_OBP)
-	ld hl, _UpdateGBCPal_OBP
 	ld c, CONVERT_OBP0
-	call FarCall
+	callba _UpdateGBCPal_OBP
 .noChangeInOBP0
 	pop hl
 	pop de
@@ -2259,10 +2263,8 @@ UpdateGBCPal_OBP1::
 	ld a, [wLastOBP1]
 	cp b
 	jr z, .noChangeInOBP1
-	ld b, BANK(_UpdateGBCPal_OBP)
-	ld hl, _UpdateGBCPal_OBP
 	ld c, CONVERT_OBP1
-	call FarCall
+	callba _UpdateGBCPal_OBP
 .noChangeInOBP1
 	pop hl
 	pop de
@@ -2278,7 +2280,7 @@ Func_3082::
 	callbs Music_DoLowHealthAlarm
 	callbs Audio1_UpdateMusic
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 ; not zero if an NPC movement script is running, the player character is
@@ -2314,11 +2316,11 @@ RunNPCMovementScript::
 	ld a, [hROMBank]
 	push af
 	ld a, [wNPCMovementScriptBank]
-	call BankswitchCommon
+	call Bankswitch
 	ld a, [wNPCMovementScriptFunctionNum]
 	call JumpTable
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 .NPCMovementScriptPointerTables
@@ -2586,8 +2588,8 @@ SetSpritePosition1:: ; Read from HRAM
 SetSpritePosition2:: ; Read from WRAM
 	ld hl, _SetSpritePosition2
 SpritePositionBankswitch::
-	ld b, BANK(_GetSpritePosition1) ; BANK(_GetSpritePosition2), BANK(_SetSpritePosition1), BANK(_SetSpritePosition2)
-	jp FarCall ; indirect jump to one of the four functions
+	ld a, BANK(_GetSpritePosition1) ; BANK(_GetSpritePosition2), BANK(_SetSpritePosition1), BANK(_SetSpritePosition2)
+	jp FarCall_hl ; indirect jump to one of the four functions
 
 CheckForEngagingTrainers::
 	xor a
@@ -2677,7 +2679,7 @@ PrintEndBattleText::
 	push af
 	ld a, [wEndBattleTextRomBank]
 	ld [hROMBank], a
-	ld [MBC1RomBank], a
+	ld [MBC5RomBank], a
 	push hl
 	callba SaveTrainerName
 	ld hl, TrainerEndBattleText
@@ -2685,7 +2687,7 @@ PrintEndBattleText::
 	pop hl
 	pop af
 	ld [hROMBank], a
-	ld [MBC1RomBank], a
+	ld [MBC5RomBank], a
 	callba FreezeEnemyTrainerSprite
 	jp WaitForSoundToFinish
 
@@ -2789,27 +2791,27 @@ DecodeArrowMovementRLE::
 
 FuncTX_ItemStoragePC::
 	call SaveScreenTilesToBuffer2
-	ld b, BANK(PlayerPC)
+	ld a, BANK(PlayerPC)
 	ld hl, PlayerPC
 	jr bankswitchAndContinue
 
 FuncTX_BillsPC::
 	call SaveScreenTilesToBuffer2
-	ld b, BANK(BillsPC_)
+	ld a, BANK(BillsPC_)
 	ld hl, BillsPC_
 	jr bankswitchAndContinue
 
 FuncTX_GameCornerPrizeMenu::
 ; XXX find a better name for this function
 ; special_F7
-	ld b, BANK(CeladonPrizeMenu)
+	ld a, BANK(CeladonPrizeMenu)
 	ld hl, CeladonPrizeMenu
 bankswitchAndContinue::
-	call FarCall
+	rst FarCall
 	jp HoldTextDisplayOpen        ; continue to main text-engine function
 
 FuncTX_PokemonCenterPC::
-	ld b, BANK(ActivatePC)
+	ld a, BANK(ActivatePC)
 	ld hl, ActivatePC
 	jr bankswitchAndContinue
 
@@ -3160,13 +3162,13 @@ BankswitchHome::
 	ld a, [hROMBank]
 	ld [wBankswitchHomeSavedROMBank], a
 	ld a, [wBankswitchHomeTemp]
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 BankswitchBack::
 ; returns from BankswitchHome
 	ld a, [wBankswitchHomeSavedROMBank]
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 ; displays yes/no choice
@@ -3445,7 +3447,7 @@ GetName::
 .otherEntries
 	;2-7 = OTHER ENTRIES
 	ld a, [wPredefBank]
-	call BankswitchCommon
+	call Bankswitch
 	ld a, [wNameListType]    ;VariousNames' entryID
 	dec a
 	add a
@@ -3492,7 +3494,7 @@ GetName::
 	pop bc
 	pop hl
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 GetItemPrice::
@@ -3506,7 +3508,7 @@ GetItemPrice::
 	jr nz, .ok
 	ld a, $f ; hardcoded Bank
 .ok
-	call BankswitchCommon
+	call Bankswitch
 	ld hl, wItemPrices
 	ld a, [hli]
 	ld h, [hl]
@@ -3532,7 +3534,7 @@ GetItemPrice::
 .done
 	ld de, hItemPrice
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 ; copies a string from [de] to [wcf4b]
@@ -4339,10 +4341,10 @@ FarPrintText::
 	ld a, [hROMBank]
 	push af
 	ld a, b
-	call BankswitchCommon
+	call Bankswitch
 	call PrintText
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 PrintNumber::
@@ -4705,9 +4707,7 @@ INCLUDE "home/sram.asm"
 INCLUDE "home/predef.asm"
 
 UpdateCinnabarGymGateTileBlocks::
-	callba UpdateCinnabarGymGateTileBlocks_
-	ret ; again?
-	;jp FarCall
+	jpba UpdateCinnabarGymGateTileBlocks_
 
 CheckForHiddenObjectOrBookshelfOrCardKeyDoor::
 	ld a, [hROMBank]
@@ -4723,7 +4723,7 @@ CheckForHiddenObjectOrBookshelfOrCardKeyDoor::
 	xor a
 	ld [$ffeb], a
 	ld a, [wHiddenObjectFunctionRomBank]
-	call BankswitchCommon
+	call Bankswitch
 	call FarJump_hl
 	ld a, [$ffeb]
 	jr .done
@@ -4738,7 +4738,7 @@ CheckForHiddenObjectOrBookshelfOrCardKeyDoor::
 .done
 	ld [$ffeb], a
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 PrintPredefTextID::

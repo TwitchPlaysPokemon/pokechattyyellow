@@ -34,7 +34,7 @@ FileDataDestroyedText:
 LoadSAV0:
 	call EnableSRAMAndLatchClockData
 	ld a, $1
-	ld [MBC1SRamBank], a
+	ld [MBC5SRamBank], a
 	ld hl, sPlayerName ; hero name located in SRAM
 	ld bc, sMainDataCheckSum - sPlayerName ; but here checks the full SAV
 	call SAVCheckSum
@@ -79,7 +79,7 @@ LoadSAV0:
 LoadSAV1:
 	call EnableSRAMAndLatchClockData
 	ld a, $1
-	ld [MBC1SRamBank], a
+	ld [MBC5SRamBank], a
 	ld hl, sPlayerName ; hero name located in SRAM
 	ld bc, sMainDataCheckSum - sPlayerName  ; but here checks the full SAV
 	call SAVCheckSum
@@ -97,7 +97,7 @@ LoadSAV1:
 LoadSAV2:
 	call EnableSRAMAndLatchClockData
 	ld a, $1
-	ld [MBC1SRamBank], a
+	ld [MBC5SRamBank], a
 	ld hl, sPlayerName ; hero name located in SRAM
 	ld bc, sMainDataCheckSum - sPlayerName  ; but here checks the full SAV
 	call SAVCheckSum
@@ -194,7 +194,7 @@ OlderFileWillBeErasedText:
 SaveSAVtoSRAM0:
 	call EnableSRAMAndLatchClockData
 	ld a, $1
-	ld [MBC1SRamBank], a
+	ld [MBC5SRamBank], a
 	ld hl, wPlayerName
 	ld de, sPlayerName
 	ld bc, NAME_LENGTH
@@ -224,7 +224,7 @@ SaveSAVtoSRAM1:
 ; stored pokémon
 	call EnableSRAMAndLatchClockData
 	ld a, $1
-	ld [MBC1SRamBank], a
+	ld [MBC5SRamBank], a
 	ld hl, wBoxDataStart
 	ld de, sCurBoxData
 	ld bc, wBoxDataEnd - wBoxDataStart
@@ -239,7 +239,7 @@ SaveSAVtoSRAM1:
 SaveSAVtoSRAM2:
 	call EnableSRAMAndLatchClockData
 	ld a, $1
-	ld [MBC1SRamBank], a
+	ld [MBC5SRamBank], a
 	ld hl, wPartyDataStart
 	ld de, sPartyData
 	ld bc, wPartyDataEnd - wPartyDataStart
@@ -385,7 +385,7 @@ CopyBoxToOrFromSRAM:
 	push hl
 	call EnableSRAMAndLatchClockData
 	ld a, b
-	ld [MBC1SRamBank], a
+	ld [MBC5SRamBank], a
 	ld bc, wBoxDataEnd - wBoxDataStart
 	call CopyData
 	pop hl
@@ -499,10 +499,10 @@ EmptyAllSRAMBoxes:
 ; player changes the box)
 	call EnableSRAMAndLatchClockData
 	ld a, 2
-	ld [MBC1SRamBank], a
+	ld [MBC5SRamBank], a
 	call EmptySRAMBoxesInBank
 	ld a, 3
-	ld [MBC1SRamBank], a
+	ld [MBC5SRamBank], a
 	call EmptySRAMBoxesInBank
 	call DisableSRAMAndPrepareClockData
 	ret
@@ -540,10 +540,10 @@ GetMonCountsForAllBoxes:
 	push hl
 	call EnableSRAMAndLatchClockData
 	ld a, $2
-	ld [MBC1SRamBank], a
+	ld [MBC5SRamBank], a
 	call GetMonCountsForBoxesInBank
 	ld a, $3
-	ld [MBC1SRamBank], a
+	ld [MBC5SRamBank], a
 	call GetMonCountsForBoxesInBank
 	call DisableSRAMAndPrepareClockData
 	pop hl
@@ -580,7 +580,7 @@ SAVCheckRandomID:
 ;(which are stored at wPlayerID)s
 	call EnableSRAMAndLatchClockData
 	ld a, $1
-	ld [MBC1SRamBank], a
+	ld [MBC5SRamBank], a
 	ld a, [sPlayerName]
 	and a
 	jr z, .next
@@ -602,8 +602,8 @@ SAVCheckRandomID:
 	cp h
 .next
 	ld a,$00
-	ld [MBC1SRamBankingMode],a
-	ld [MBC1SRamEnable],a
+	ld [MBC5SRamBankingMode],a
+	ld [MBC5SRamEnable],a
 	ret
 
 SaveHallOfFameTeams:
@@ -644,7 +644,7 @@ LoadHallOfFameTeams:
 HallOfFame_Copy:
 	call EnableSRAMAndLatchClockData
 	xor a
-	ld [MBC1SRamBank], a
+	ld [MBC5SRamBank], a
 	call CopyData
 	call DisableSRAMAndPrepareClockData
 	ret
@@ -662,7 +662,7 @@ ClearSAV:
 	ret
 
 PadSRAM_FF:
-	ld [MBC1SRamBank], a
+	ld [MBC5SRamBank], a
 	ld hl, $a000
 	ld bc, $2000
 	ld a, $ff
@@ -670,13 +670,13 @@ PadSRAM_FF:
 
 EnableSRAMAndLatchClockData:
 	ld a, $1
-	ld [MBC1SRamBankingMode], a
+	ld [MBC5SRamBankingMode], a
 	ld a, SRAM_ENABLE
-	ld [MBC1SRamEnable], a
+	ld [MBC5SRamEnable], a
 	ret
 
 DisableSRAMAndPrepareClockData:
 	ld a, SRAM_DISABLE
-	ld [MBC1SRamBankingMode], a
-	ld [MBC1SRamEnable], a
+	ld [MBC5SRamBankingMode], a
+	ld [MBC5SRamEnable], a
 	ret

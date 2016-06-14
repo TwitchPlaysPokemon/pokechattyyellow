@@ -202,6 +202,6 @@ ViridianForestText16:
 	TX_ASM
 	ld hl, Func_f2528
 ViridianForestScript_6120d
-	ld b, BANK(Func_f2528)
-	call FarCall
+	ld a, BANK(Func_f2528)
+	rst FarCall
 	jp TextScriptEnd

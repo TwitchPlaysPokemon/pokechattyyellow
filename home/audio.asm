@@ -203,7 +203,7 @@ GetNextMusicByte::
 	ld a, [hROMBank]
 	push af
 	ld a, [wAudioROMBank]
-	call BankswitchCommon
+	call Bankswitch
 	ld d, $0
 	ld a, c
 	add a
@@ -221,7 +221,7 @@ GetNextMusicByte::
 	ld [hl], d
 	ld e, a
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ld a, e
 	ret
 
@@ -259,7 +259,7 @@ DetermineAudioFunction::
 	ld a, [hROMBank]
 	push af
 	ld a, [wAudioROMBank]
-	call BankswitchCommon
+	call Bankswitch
 ; determine the audio function, based on the bank
 	cp BANK(Audio1_PlaySound)
 	jr nz, .checkForBank08
@@ -291,6 +291,6 @@ DetermineAudioFunction::
 	call Audio4_PlaySound
 .done
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 

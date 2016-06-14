@@ -31,3 +31,5 @@ INCLUDE "constants/event_constants.asm"
 INCLUDE "constants/event_macros.asm"
 INCLUDE "constants/text_constants.asm"
 INCLUDE "constants/pikachu_emotion_constants.asm"
+
+INCLUDE "constants/chatty_yellow_constants.asm"

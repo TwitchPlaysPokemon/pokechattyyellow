@@ -5,13 +5,13 @@ UncompressSpriteData::
 	ld a, [hROMBank]
 	push af
 	ld a, b
-	call BankswitchCommon
+	call Bankswitch
 	ld a,$0
 	call OpenSRAM
 	call _UncompressSpriteData
 	call CloseSRAM
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 ; initializes necessary data to load a sprite and runs UncompressSpriteDataLoop

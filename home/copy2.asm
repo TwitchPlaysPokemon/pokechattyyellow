@@ -5,7 +5,7 @@ FarCopyDataDouble::
 	ld a,[hROMBank]
 	push af
 	ld a,[wFarCopyDataSavedROMBank]
-	call BankswitchCommon
+	call Bankswitch
 	ld a,h ; swap hl and de
 	ld h,d
 	ld d,a
@@ -30,7 +30,7 @@ FarCopyDataDouble::
 	dec b
 	jr nz, .expandloop
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ret
 
 CopyVideoData::
@@ -47,7 +47,7 @@ CopyVideoData::
 	push af
 
 	ld a, b
-	call BankswitchCommon
+	call Bankswitch
 
 	ld a, e
 	ld [h2bppSrc], a
@@ -68,7 +68,7 @@ CopyVideoData::
 	ld [h2bppSize], a
 	call DelayFrame
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	pop af
 	ld [hBGMapMode], a
 	ret
@@ -94,7 +94,7 @@ CopyVideoDataDouble::
 	push af
 
 	ld a, b
-	call BankswitchCommon
+	call Bankswitch
 
 	ld a, e
 	ld [h1bppSrc], a
@@ -115,7 +115,7 @@ CopyVideoDataDouble::
 	ld [h1bppSize], a
 	call DelayFrame
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	pop af
 	ld [hBGMapMode], a
 	ret
@@ -157,10 +157,10 @@ GetFarByte::
 	ld a, [hROMBank]
 	push af
 	ld a, b
-	call BankswitchCommon
+	call Bankswitch
 	ld b, [hl]
 	pop af
-	call BankswitchCommon
+	call Bankswitch
 	ld a, b
 	pop bc
 	ret
