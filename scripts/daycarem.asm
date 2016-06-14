@@ -219,12 +219,7 @@ DayCareMText1:
 .withdrewPikachuFromDayCare
 	ld a, $6
 	ld [wPikachuSpawnState], a
-
-	; GameFreak... TriHard
-	ld hl, SchedulePikachuSpawnForAfterText
-	ld b, BANK(SchedulePikachuSpawnForAfterText)
-	ld hl, FarCall
-
+	callab SchedulePikachuSpawnForAfterText
 	ldpikacry e, PikachuCry35
 	callab PlayPikachuSoundClip
 .asm_56430

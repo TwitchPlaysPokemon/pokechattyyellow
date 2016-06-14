@@ -28,16 +28,11 @@ TrashCanRandom:
 	and $1
 	ret
 
-.three ; should return to a, instead returns to b
+.three
 	call Random
-	swap a
-	cp 1 * $ff / 3
-	ld b, 0
-	ret c
-	cp 2 * $ff / 3
-	ld b, 1
-	ret c
-	ld b, 2
+	and $3
+	jr z, .three
+	dec a
 	ret
 
 .four
