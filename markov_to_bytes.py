@@ -153,8 +153,6 @@ class RWMC:
                 cur_line_length = 0
                 eos = False
         if cur_line == b"\x51":
-            cur_line = b"\x57" # done
-        else:
-            cur_line += b"\x57" # done
+            cur_line = b""
         lines.append(cur_line)
         return b"".join(lines)

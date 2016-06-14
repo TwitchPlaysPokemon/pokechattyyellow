@@ -24,7 +24,7 @@ $(foreach obj, $(objs:.o=), \
 .PRECIOUS: %.2bpp
 .PHONY: all clean chatty
 
-rom := pokeyellow.gbc
+rom := chatty.gbc
 
 all: $(rom)
 chatty: $(rom)
