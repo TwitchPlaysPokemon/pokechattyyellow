@@ -29,7 +29,7 @@ PokedexEntryPointers:
 	dw BlastoiseDexEntry
 	dw PinsirDexEntry
 	dw TangelaDexEntry
-	dw MissingNoDexEntry
+	dw ChatotDexEntry
 	dw MissingNoDexEntry
 	dw GrowlitheDexEntry
 	dw OnixDexEntry
@@ -1252,14 +1252,16 @@ MewDexEntry:
 	TX_FAR _MewDexEntry
 	db "@"
 
+ChatotDexEntry:
+	db "MUSIC NOTE@"
+	db 1,8
+	dw 40
+	TX_FAR _ChatotDexEntry
+	db "@"
+
 MissingNoDexEntry:
 	db "???@"
-	db 10 ; 1.0 m
-	db 100 ; 10.0 kg
-	text "コメント さくせいちゅう@" ; コメント作成中 (Comment to be written)
-
-; what the game sees
-;	db "???@"
-;	db 10,100 ; 10 feet, 100 inches
-;	dw 35072 ; dw ("コ" << 8 | 0), 3507.2 lbs
-;	db "メント さくせいちゅう@" ; a whole bunch of sound effects
+	db 3,3
+	db 50 
+	TX_FAR _MissingnoDexEntry
+	db "@"

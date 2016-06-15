@@ -1506,3 +1506,23 @@ _MewDexEntry::
 	next "fine, delicate"
 	next "hair can be seen"
 	dex
+
+_ChatotDexEntry::
+	text "It mimics the"
+	next "sound of human"
+	next "speech."
+
+	page "It's quite popular"
+	next "in certain commu-"
+	next "nities"
+	dex
+
+_MissingnoDexEntry::
+	text "Data for this"
+	next "#MON is not"
+	next "available."
+
+	page "Please ensure you"
+	next "have the latest"
+	next "data pack"
+	dex

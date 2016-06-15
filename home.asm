@@ -105,7 +105,7 @@ PlayPikachuPCM::
 	ld a, [hROMBank]
 	push af
 	ld a, b
-	call Bankswitch
+	rst Bankswitch
 	ld a, [hli]
 	ld c, a
 	ld a, [hli]
@@ -129,7 +129,7 @@ PlayPikachuPCM::
 	or b
 	jr nz, .loop
 	pop af
-	call Bankswitch
+	rst Bankswitch
 	ret
 
 LoadNextSoundClipSample::
@@ -330,7 +330,7 @@ LoadFrontSpriteByMonIndex::
 	and a
 	pop hl
 	jr z, .invalidDexNumber ; dex #0 invalid
-	cp NUM_POKEMON + 1
+	cp NUM_POKEMON + 2
 	jr c, .validDexNumber   ; dex >#151 invalid
 .invalidDexNumber
 	ld a, RHYDON ; $1
@@ -669,7 +669,7 @@ GetMonHeader::
 	pop de
 	pop bc
 	pop af
-	call Bankswitch
+	rst Bankswitch
 	ret
 
 ; copy party pokemon's name to wStringBuffer
@@ -962,7 +962,7 @@ InterlaceMergeSpriteBuffers::
 .notFlipped
 	pop hl
 	ld de, sSpriteBuffer1
-	ld c, (2*SPRITEBUFFERSIZE)/16 ; $31, number of 16 byte chunks to be copied
+	ld c, (2 * SPRITEBUFFERSIZE) / 16 ; $31, number of 16 byte chunks to be copied
 	ld a, [hROMBank]
 	ld b, a
 	call CopyVideoData
@@ -1002,7 +1002,7 @@ UpdateSprites::
 	ld a, $1
 	ld [wUpdateSpritesEnabled], a
 	pop af
-	call Bankswitch
+	rst Bankswitch
 	ret
 
 INCLUDE "data/mart_inventories.asm"
@@ -1252,7 +1252,7 @@ CloseTextDisplay::
 	call z, LoadPlayerSpriteGraphics
 	call LoadCurrentMapView
 	pop af
-	call Bankswitch
+	rst Bankswitch
 	jp UpdateSprites
 
 DisplayPokemartDialogue::
@@ -2091,7 +2091,7 @@ ReloadMapData::
 	call LoadTilesetTilePatternData
 	call EnableLCD
 	pop af
-	call Bankswitch
+	rst Bankswitch
 	ret
 
 ; reloads tileset tile patterns
@@ -2104,7 +2104,7 @@ ReloadTilesetTilePatterns::
 	call LoadTilesetTilePatternData
 	call EnableLCD
 	pop af
-	call Bankswitch
+	rst Bankswitch
 	ret
 
 ; shows the town map and lets the player choose a destination to fly to
@@ -2280,7 +2280,7 @@ Func_3082::
 	callbs Music_DoLowHealthAlarm
 	callbs Audio1_UpdateMusic
 	pop af
-	call Bankswitch
+	rst Bankswitch
 	ret
 
 ; not zero if an NPC movement script is running, the player character is
@@ -2316,11 +2316,11 @@ RunNPCMovementScript::
 	ld a, [hROMBank]
 	push af
 	ld a, [wNPCMovementScriptBank]
-	call Bankswitch
+	rst Bankswitch
 	ld a, [wNPCMovementScriptFunctionNum]
 	call JumpTable
 	pop af
-	call Bankswitch
+	rst Bankswitch
 	ret
 
 .NPCMovementScriptPointerTables
@@ -3162,13 +3162,13 @@ BankswitchHome::
 	ld a, [hROMBank]
 	ld [wBankswitchHomeSavedROMBank], a
 	ld a, [wBankswitchHomeTemp]
-	call Bankswitch
+	rst Bankswitch
 	ret
 
 BankswitchBack::
 ; returns from BankswitchHome
 	ld a, [wBankswitchHomeSavedROMBank]
-	call Bankswitch
+	rst Bankswitch
 	ret
 
 ; displays yes/no choice
@@ -3447,7 +3447,7 @@ GetName::
 .otherEntries
 	;2-7 = OTHER ENTRIES
 	ld a, [wPredefBank]
-	call Bankswitch
+	rst Bankswitch
 	ld a, [wNameListType]    ;VariousNames' entryID
 	dec a
 	add a
@@ -3494,7 +3494,7 @@ GetName::
 	pop bc
 	pop hl
 	pop af
-	call Bankswitch
+	rst Bankswitch
 	ret
 
 GetItemPrice::
@@ -3508,7 +3508,7 @@ GetItemPrice::
 	jr nz, .ok
 	ld a, $f ; hardcoded Bank
 .ok
-	call Bankswitch
+	rst Bankswitch
 	ld hl, wItemPrices
 	ld a, [hli]
 	ld h, [hl]
@@ -3534,7 +3534,7 @@ GetItemPrice::
 .done
 	ld de, hItemPrice
 	pop af
-	call Bankswitch
+	rst Bankswitch
 	ret
 
 ; copies a string from [de] to [wcf4b]
@@ -3986,23 +3986,22 @@ MoveMon::
 ; skips a text entries, each of size NAME_LENGTH (like trainer name, OT name, rival name, ...)
 ; hl: base pointer, will be incremented by NAME_LENGTH * a
 SkipFixedLengthTextEntries::
-	and a
-	ret z
 	ld bc, NAME_LENGTH
-.skipLoop
-	add hl, bc
-	dec a
-	jr nz, .skipLoop
-	ret
-
 AddNTimes::
 ; add bc to hl a times
 	and a
 	ret z
+	push bc
 .loop
+	srl a
+	jr nc, .skip_add
 	add hl, bc
-	dec a
+.skip_add
+	sla c
+	rl b
+	and a
 	jr nz, .loop
+	pop bc
 	ret
 
 ; Compare strings, c bytes in length, at de and hl.
@@ -4352,10 +4351,10 @@ FarPrintText::
 	ld a, [hROMBank]
 	push af
 	ld a, b
-	call Bankswitch
+	rst Bankswitch
 	call PrintText
 	pop af
-	call Bankswitch
+	rst Bankswitch
 	ret
 
 PrintNumber::
@@ -4734,7 +4733,7 @@ CheckForHiddenObjectOrBookshelfOrCardKeyDoor::
 	xor a
 	ld [$ffeb], a
 	ld a, [wHiddenObjectFunctionRomBank]
-	call Bankswitch
+	rst Bankswitch
 	call FarJump_hl
 	ld a, [$ffeb]
 	jr .done
@@ -4749,7 +4748,7 @@ CheckForHiddenObjectOrBookshelfOrCardKeyDoor::
 .done
 	ld [$ffeb], a
 	pop af
-	call Bankswitch
+	rst Bankswitch
 	ret
 
 PrintPredefTextID::

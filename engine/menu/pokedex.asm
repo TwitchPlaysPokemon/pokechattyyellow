@@ -532,17 +532,22 @@ DrawDexEntryOnScreen:
 	coord hl, 9, 2
 	call PlaceString
 
-	ld hl, PokedexEntryPointers
+	ld de, MissingNoDexEntry
 	ld a, [wd11e]
+	and a
+	jr z, .missingno
+	cp VICTREEBEL + 2
+	jr nc, .missingno
 	dec a
 	ld e, a
 	ld d, 0
+	ld hl, PokedexEntryPointers
 	add hl, de
 	add hl, de
 	ld a, [hli]
 	ld e, a
 	ld d, [hl] ; de = address of pokedex entry
-
+.missingno
 	coord hl, 9, 4
 	call PlaceString ; print species name
 
