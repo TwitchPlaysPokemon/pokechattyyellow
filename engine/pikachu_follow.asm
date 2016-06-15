@@ -1164,16 +1164,27 @@ ClearPikachuFollowCommandBuffer:
 
 AppendPikachuFollowCommandToBuffer:
 	ld hl, wPikachuFollowCommandBufferSize
+	push af
 	; prevent overflow
 	ld a, [hl]
+	cp $ff
+	jr z, .okay
 	cp $10
-	ret nc
+	jr nc, .full
+.okay
+	pop af
 	inc [hl]
 	ld e, [hl]
 	ld d, 0
 	ld hl, wPikachuFollowCommandBuffer
 	add hl, de
 	ld [hl], a
+	and a
+	ret
+
+.full
+	pop af
+	scf
 	ret
 
 RefreshPikachuFollow:
