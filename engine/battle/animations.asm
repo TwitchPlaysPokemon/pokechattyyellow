@@ -2490,7 +2490,11 @@ GetMoveSound:
 	add hl, de
 	ld a, [hli]
 	ld b, a
+	push hl
+	push bc
 	call IsCryMove
+	pop bc
+	pop hl
 	jr nc, .NotCryMove
 	ld a, [hBattleTurn]
 	and a
@@ -2524,15 +2528,23 @@ GetMoveSound:
 IsCryMove:
 ; set carry if the move animation involves playing a monster cry
 	ld a, [wAnimationID]
-	cp GROWL
-	jr z, .CryMove
-	cp ROAR
-	jr z, .CryMove
-	and a ; clear carry
-	ret
-.CryMove
+	ld b, a
+	ld hl, .CryMoves
+.loop
+	ld a, [hli]
+	cp $ff
+	jr z, .NotCryMove
+	cp b
+	jr nz, .loop
 	scf
 	ret
+
+.NotCryMove
+	and a
+	ret
+
+.CryMoves
+	db GROWL, ROAR, HYPER_VOICE, CHATTER, $FF
 
 MoveSoundTable:
 	; ID, pitch mod, tempo mod
@@ -2700,6 +2712,10 @@ MoveSoundTable:
 	db SFX_BATTLE_26,          $f0, $ff ; SUPER_FANG
 	db SFX_NOT_VERY_EFFECTIVE, $01, $ff ; SLASH
 	db SFX_BATTLE_2C,          $d8, $04 ; SUBSTITUTE
+	db SFX_BATTLE_0B,          $00, $00 ; CHATTER
+	db SFX_BATTLE_1C,          $11, $a0 ; ROOST
+	db SFX_BATTLE_1C,          $11, $a0 ; FEATHERDANCE
+	db SFX_BATTLE_0B,          $f0, $20 ; HYPER VOICE
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
 	db SFX_BATTLE_0B,          $00, $80
 

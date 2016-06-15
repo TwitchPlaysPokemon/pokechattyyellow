@@ -577,6 +577,17 @@ Mon152_EvosMoves:
 ;Evolutions
 	db 0
 ;Learnset
+	db 5,GROWL
+	db 9,MIRROR_MOVE
+	db 13,SING
+	db 17,FURY_ATTACK
+	db 21,CHATTER
+	db 25,LEER
+	db 29,MIMIC
+	db 33,ROOST
+	db 37,WING_ATTACK
+	db 41,FEATHERDANCE
+	db 45,HYPER_VOICE
 	db 0
 
 Mon153_EvosMoves:

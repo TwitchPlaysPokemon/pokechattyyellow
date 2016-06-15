@@ -163,4 +163,8 @@ MoveNames::
 	db "SUPER FANG@"
 	db "SLASH@"
 	db "SUBSTITUTE@"
+	db "CHATTER@"
+	db "ROOST@"
+	db "FEATHERDANCE@"
+	db "HYPER VOICE@"
 	db "STRUGGLE@"

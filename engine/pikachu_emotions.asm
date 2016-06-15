@@ -287,7 +287,7 @@ MapSpecificPikachuExpression:
 	ldpikaemotion a, PikachuEmotion22
 	jr c, .play_emotion
 .notInLavenderTower
-	ld a, [wd49c]
+	ld a, [wContextDependentPikachuEmotion]
 	and a
 	jr z, .mood_based_emotion
 	dec a

@@ -373,7 +373,7 @@ LearnMoveFromLevelUp:
 	jr nz, .done
 .foundThunderOrThunderbolt
 	ld a, $5
-	ld [wd49c], a
+	ld [wContextDependentPikachuEmotion], a ; PikachuEmotion25
 	ld a, $85
 	ld [wPikachuMood], a
 .done

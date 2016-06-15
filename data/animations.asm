@@ -163,6 +163,10 @@ AttackAnimationPointers:
 	dw SuperFangAnim
 	dw SlashAnim
 	dw SubstituteAnim
+	dw ChatterAnim
+	dw RoostAnim
+	dw FeatherDanceAnim
+	dw HyperVoiceAnim
 	dw StruggleAnim
 	dw ShowPicAnim
 	dw EnemyFlashAnim
@@ -269,6 +273,8 @@ RazorWindAnim:
 	db $04,$0C,$16
 	db $FF
 
+RoostAnim:
+FeatherDanceAnim:
 SwordsDanceAnim:
 	db $46,$0D,$18
 	db $46,$0D,$18
@@ -433,6 +439,8 @@ BiteAnim:
 	db $FF
 
 GrowlAnim:
+ChatterAnim:
+HyperVoiceAnim:
 	db $46,$2C,$12
 	db $FF
 

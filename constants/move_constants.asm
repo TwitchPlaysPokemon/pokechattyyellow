@@ -164,6 +164,10 @@ const_value = 1
 	const SUPER_FANG   ; a2
 	const SLASH        ; a3
 	const SUBSTITUTE   ; a4
+	const CHATTER
+	const ROOST
+	const FEATHERDANCE
+	const HYPER_VOICE
 
 NUM_ATTACKS EQU const_value + -1
 
@@ -197,7 +201,7 @@ NUM_ATTACKS EQU const_value + -1
 	const SLP_ANIM ; sleeping monster
 	const ANIM_BE
 	const CONF_ANIM ; confused monster
-	const DIGHOLE_ANIM
+	const DIGHOLE_ANIM ; C0
 	const TOSS_ANIM ; toss Poké Ball
 	const SHAKE_ANIM ; shaking Poké Ball when catching monster
 	const POOF_ANIM ; puff of smoke
@@ -207,4 +211,4 @@ NUM_ATTACKS EQU const_value + -1
 	const PLAYER_WAS_POISONED_ANIM
 	const HIDEPIC_ANIM ; monster disappears
 	const ROCK_ANIM ; throw rock
-	const BAIT_ANIM ; throw bait
+	const BAIT_ANIM ; throw bait CA

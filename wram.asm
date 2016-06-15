@@ -2915,7 +2915,7 @@ wPrinterSettings:: ds 1
 wUnknownSerialFlag_d499:: ds 1 ; d498
 wPrinterConnectionOpen:: ds 1 ; d499
 wPrinterOpcode:: ds 1 ; d49a
-wd49c:: ds 1 ; d49b
+wContextDependentPikachuEmotion:: ds 1 ; d49b
 
 	ds 19
 
