@@ -3384,7 +3384,7 @@ playPlayerMoveAnimation:
 	ld a, [wPlayerBattleStatus2]
 	bit HasSubstituteUp, a
 	ld hl, HideSubstituteShowMonAnim
-	ld b, BANK(HideSubstituteShowMonAnim)
+	ld a, BANK(HideSubstituteShowMonAnim)
 	call nz, FarCall
 	pop af
 	ld [wAnimationType], a
@@ -3395,7 +3395,7 @@ playPlayerMoveAnimation:
 	ld a, [wPlayerBattleStatus2]
 	bit HasSubstituteUp, a
 	ld hl, ReshowSubstituteAnim
-	ld b, BANK(ReshowSubstituteAnim)
+	ld a, BANK(ReshowSubstituteAnim)
 	call nz, FarCall
 	jr MirrorMoveCheck
 playerCheckIfFlyOrChargeEffect:
@@ -7609,9 +7609,9 @@ UpdateStatDone:
 	pop bc
 	ld a, $1
 	ld [bc], a
-	ld hl, ReshowSubstituteAnim
-	ld b, BANK(ReshowSubstituteAnim)
 	pop af
+	ld hl, ReshowSubstituteAnim
+	ld a, BANK(ReshowSubstituteAnim)
 	call nz, FarCall
 .applyBadgeBoostsAndStatusPenalties
 	ld a, [hBattleTurn]

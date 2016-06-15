@@ -705,9 +705,6 @@ GetPikaPicVRAMAddressForNewGFX:
 CheckIfThereIsRoomForPikaPicAnimGFX:
 ; d: idx
 ; e: size
-; FATAL: If the graphic has already been loaded, or if there are
-; already 8 graphics objects loaded, the game will execute arbitrary
-; code.
 	push bc
 	push hl
 	ld hl, wPikaPicUsedGFX
@@ -722,13 +719,17 @@ CheckIfThereIsRoomForPikaPicAnimGFX:
 	inc hl
 	dec c
 	jr nz, .loop
+	pop hl
+	pop bc
 	scf
-	ret ; execute hl, then bc
+	ret
 
 .found
 	inc hl
 	ld a, [hl]
-	ret ; execute hl, then bc
+	pop hl
+	pop bc
+	ret
 
 .empty
 	ld [hl], d

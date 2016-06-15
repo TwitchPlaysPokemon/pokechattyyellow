@@ -1053,14 +1053,14 @@ IsPikachuRightNextToPlayer:
 	push bc
 	push de
 	push hl
-	ld bc, wPikachuPictureID
+	ld bc, wPikachuSpriteStateData1
 	ld a, [wXCoord]
 	add $4
 	ld d, a
 	ld a, [wYCoord]
 	add $4
 	ld e, a
-	ld hl, wPlayerMapY - wPlayerSpriteStateData1
+	ld hl, wPikachuMapY - wPikachuSpriteStateData1
 	add hl, bc
 	ld a, [hl]
 	sub e
@@ -1073,7 +1073,7 @@ IsPikachuRightNextToPlayer:
 	jr .bad
 
 .one_away
-	ld hl, wPlayerMapX - wPlayerSpriteStateData1
+	ld hl, wPikachuMapX - wPikachuSpriteStateData1
 	add hl, bc
 	ld a, [hl]
 	sub d
@@ -1081,7 +1081,7 @@ IsPikachuRightNextToPlayer:
 	jr .bad
 
 .equal
-	ld hl, wPlayerMapX - wPlayerSpriteStateData1
+	ld hl, wPikachuMapX - wPikachuSpriteStateData1
 	add hl, bc
 	ld a, [hl]
 	sub d
@@ -1113,14 +1113,14 @@ GetPikachuFacingDirectionAndReturnToE:
 	ret
 
 GetPikachuFacingDirection:
-	ld bc, wPikachuPictureID
+	ld bc, wPikachuSpriteStateData1
 	ld a, [wXCoord]
 	add $4
 	ld d, a
 	ld a, [wYCoord]
 	add $4
 	ld e, a
-	ld hl, wPlayerMapY - wPlayerSpriteStateData1
+	ld hl, wPikachuMapY - wPikachuSpriteStateData1
 	add hl, bc
 	ld a, [hl]
 	cp e
@@ -1134,7 +1134,7 @@ GetPikachuFacingDirection:
 	ret
 
 .asm_fcb71
-	ld hl, wPlayerMapX - wPlayerSpriteStateData1
+	ld hl, wPikachuMapX - wPikachuSpriteStateData1
 	add hl, bc
 	ld a, [hl]
 	cp d
@@ -1164,6 +1164,10 @@ ClearPikachuFollowCommandBuffer:
 
 AppendPikachuFollowCommandToBuffer:
 	ld hl, wPikachuFollowCommandBufferSize
+	; prevent overflow
+	ld a, [hl]
+	cp $10
+	ret nc
 	inc [hl]
 	ld e, [hl]
 	ld d, 0

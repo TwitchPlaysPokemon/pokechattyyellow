@@ -1,5 +1,9 @@
-import re, sys, requests, json, subprocess, os
+import re, sys, requests, json, subprocess, os, logging, socketserver, threading
 import numpy as np
+from flask import Flask, request
+import urllib.request
+import traceback
+from werkzeug.exceptions import BadRequest
 PUNCTUATION = (".", "?", "!")
 PUNCTUATION_PROBS = (0.7, 0.25, 0.05)
 commands_regex = re.compile("(a|b|up|down|left|right|start)$", re.IGNORECASE)
@@ -78,7 +82,7 @@ class RWMC:
             else:
                 self.triples[cur_key] = [words[i+2]]
 
-    def build_chain(self, min_len, max_len):
+    def build_chain(self, min_len = 10, max_len = 80):
         # Sentence start and end state is two empty strings
         construction = ["", ""]
         cur_key = ("", "")
@@ -156,3 +160,23 @@ class RWMC:
             cur_line = b""
         lines.append(cur_line)
         return b"".join(lines)
+
+chat_chainer = RWMC()
+# train in the background from the bot's IRC connection using chat_chainer.train_line(chat_message)
+
+def npc_chain(npc_text, logs):
+    global markov_chain
+    npc_chainer = RWMC()
+    npc_chainer.train_line(npc_text)
+    for line in reversed(logs):
+        npc_chainer.train_line(line)
+        if npc_chainer.num_lines > 10:
+            break
+    markov_chain = npc_chainer.chain2bytes(npc_chainer.build_chain())
+    return markov_chain
+
+def pika_chain():
+    global markov_chain
+    chat_chainer.train_line(npc_text)
+    markov_chain = chat_chainer.chain2bytes(chat_chainer.build_chain())
+    return markov_chain

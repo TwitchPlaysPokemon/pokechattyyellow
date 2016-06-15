@@ -3677,6 +3677,9 @@ Multiply::
 ; FF95-FF98 = quotient
 ; FF99 = remainder
 Divide::
+	ld a, [hDivisor]
+	and a
+	jr z, .div0
 	push hl
 	push de
 	push bc
@@ -3684,6 +3687,14 @@ Divide::
 	pop bc
 	pop de
 	pop hl
+	ret
+
+.div0 ; OH SHI-
+	dec a
+	ld [hQuotient], a
+	ld [hQuotient + 1], a
+	ld [hQuotient + 2], a
+	ld [hRemainder], a
 	ret
 
 ; This function is used to wait a short period after printing a letter to the
