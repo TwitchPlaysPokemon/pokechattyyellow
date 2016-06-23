@@ -2,7 +2,8 @@ Route22Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, Route22ScriptPointers
 	ld a, [wRoute22CurScript]
-	jp JumpTable
+	rst Jumptable
+	ret
 
 Route22ScriptPointers:
 	dw Route22Script0

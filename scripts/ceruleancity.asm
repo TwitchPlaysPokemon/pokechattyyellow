@@ -2,7 +2,8 @@ CeruleanCityScript:
 	call EnableAutoTextBoxDrawing
 	ld hl, CeruleanCityScriptPointers
 	ld a, [wCeruleanCityCurScript]
-	jp JumpTable
+	rst Jumptable
+	ret
 
 CeruleanCityScript_1948c:
 	xor a

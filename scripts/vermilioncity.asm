@@ -13,7 +13,7 @@ VermilionCityScript:
 	call nz, VermilionCityScript_197c0
 	ld hl, VermilionCityScriptPointers
 	ld a, [wVermilionCityCurScript]
-	call JumpTable
+	rst Jumptable
 	call VermilionCityScript_19869
 	ret
 

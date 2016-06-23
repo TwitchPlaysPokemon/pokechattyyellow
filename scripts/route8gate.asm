@@ -2,7 +2,8 @@ Route8GateScript:
 	call EnableAutoTextBoxDrawing
 	ld hl, Route8GateScriptPointers
 	ld a, [wRoute8GateCurScript]
-	jp JumpTable
+	rst Jumptable
+	ret
 
 Route8GateScriptPointers:
 	dw Route8GateScript0

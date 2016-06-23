@@ -2,7 +2,7 @@ Route7GateScript:
 	call EnableAutoTextBoxDrawing
 	ld a, [wRoute7GateCurScript]
 	ld hl, Route7GateScriptPointers
-	call JumpTable
+	rst Jumptable
 	ret
 
 Route7GateScriptPointers:

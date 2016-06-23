@@ -2,7 +2,7 @@ ViridianCityScript:
 	call EnableAutoTextBoxDrawing
 	ld hl, ViridianCityScriptPointers
 	ld a, [wViridianCityCurScript]
-	call JumpTable
+	rst Jumptable
 	ret
 
 ViridianCityScriptPointers:

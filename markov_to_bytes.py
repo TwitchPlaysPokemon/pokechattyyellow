@@ -89,8 +89,8 @@ class RWMC:
         chain = ""
         # Iterate until you have a long-enough sentence.
         while True:
-            if cur_key in triples:
-                construction.append(np.random.choice(triples[cur_key])) # Continue the current sentence.
+            if cur_key in self.triples:
+                construction.append(np.random.choice(self.triples[cur_key])) # Continue the current sentence.
             else:
                 construction = ["", ""] # Reseed the current sentence.
             cur_key = (construction[-2], construction[-1])

@@ -2,7 +2,8 @@ HallofFameRoomScript:
 	call EnableAutoTextBoxDrawing
 	ld hl, HallofFameRoomScriptPointers
 	ld a, [wHallOfFameRoomCurScript]
-	jp JumpTable
+	rst Jumptable
+	ret
 
 HallofFameRoomScript_5a4aa:
 	xor a

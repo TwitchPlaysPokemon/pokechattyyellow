@@ -2,7 +2,8 @@ PokemonTower2Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, PokemonTower2ScriptPointers
 	ld a, [wPokemonTower2CurScript]
-	jp JumpTable
+	rst Jumptable
+	ret
 
 PokemonTower2Script_604fe:
 	xor a

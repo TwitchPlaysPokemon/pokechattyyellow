@@ -172,11 +172,11 @@ _PewterGymGuyText::
 	line "get happening!"
 
 	para "It will be tough"
-	line "for your PIKACHU"
+	line "for your CHATOT"
 	cont "at this GYM!"
 
-	para "Electric attacks"
-	line "are harmless to"
-	cont "BROCK's ground-"
-	cont "type #MON."
+	para "Flying attacks"
+	line "won't do much to"
+	cont "BROCK's Rock-"
+	cont "type #MON!"
 	done

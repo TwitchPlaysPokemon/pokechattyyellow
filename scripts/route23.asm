@@ -3,7 +3,8 @@ Route23Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, Route23ScriptPointers
 	ld a, [wRoute23CurScript]
-	jp JumpTable
+	rst Jumptable
+	ret
 
 Route23Script_511e9:
 	ld hl, wCurrentMapScriptFlags

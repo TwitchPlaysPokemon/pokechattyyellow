@@ -2,7 +2,8 @@ Route5GateScript:
 	call EnableAutoTextBoxDrawing
 	ld a, [wRoute5GateCurScript]
 	ld hl, Route5GateScriptPointers
-	jp JumpTable
+	rst Jumptable
+	ret
 
 Route5GateScriptPointers:
 	dw Route5GateScript0

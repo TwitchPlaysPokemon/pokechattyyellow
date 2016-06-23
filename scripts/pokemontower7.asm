@@ -2,7 +2,7 @@ PokemonTower7Script:
 	call EnableAutoTextBoxDrawing
 	ld hl, PokemonTower7ScriptPointers
 	ld a, [wPokemonTower7CurScript]
-	call JumpTable
+	rst Jumptable
 	ret
 
 PokemonTower7Script_60d01:

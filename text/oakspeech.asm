@@ -15,7 +15,8 @@ _OakSpeechText2A::
 	cont "#MON!@@"
 
 _OakSpeechText2B::
-	text $51,"For some people,"
+	text ""
+	para "For some people,"
 	line "#MON are"
 	cont "pets. Others use"
 	cont "them for fights."
@@ -42,7 +43,7 @@ _IntroduceRivalText::
 	prompt
 
 _OakSpeechText3::
-	text $52,"!"
+	text "<PLAYER>!"
 
 	para "Your very own"
 	line "#MON legend is"

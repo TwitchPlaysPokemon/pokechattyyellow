@@ -4,7 +4,8 @@ Route18GateScript:
 	call EnableAutoTextBoxDrawing
 	ld a, [wRoute18GateCurScript]
 	ld hl, Route18GateScriptPointers
-	jp JumpTable
+	rst Jumptable
+	ret
 
 Route18GateScriptPointers:
 	dw Route18GateScript0

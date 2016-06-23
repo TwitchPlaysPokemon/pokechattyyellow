@@ -2,7 +2,7 @@ GaryScript:
 	call EnableAutoTextBoxDrawing
 	ld hl, GaryScriptPointers
 	ld a, [wGaryCurScript]
-	call JumpTable
+	rst Jumptable
 	ret
 
 ResetGaryScript:

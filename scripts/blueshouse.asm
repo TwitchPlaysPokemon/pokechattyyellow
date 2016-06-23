@@ -2,7 +2,7 @@ BluesHouseScript:
 	call EnableAutoTextBoxDrawing
 	ld hl, BluesHouseScriptPointers
 	xor a
-	call JumpTable
+	rst Jumptable
 	ret
 
 BluesHouseScriptPointers:

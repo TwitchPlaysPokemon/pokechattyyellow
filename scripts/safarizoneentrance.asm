@@ -2,7 +2,7 @@ SafariZoneEntranceScript:
 	call EnableAutoTextBoxDrawing
 	ld hl, SafariZoneEntranceScriptPointers
 	ld a, [wSafariZoneEntranceCurScript]
-	call JumpTable
+	rst Jumptable
 	ret
 
 SafariZoneEntranceScriptPointers:

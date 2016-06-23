@@ -5,7 +5,7 @@ Museum1FScript:
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
 	ld hl, Museum1FScriptPointers
 	ld a, [wMuseum1FCurScript]
-	call JumpTable
+	rst Jumptable
 	ret
 
 Museum1FScriptPointers:

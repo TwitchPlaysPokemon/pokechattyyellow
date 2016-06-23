@@ -6,7 +6,8 @@ PalletTownScript:
 	call EnableAutoTextBoxDrawing
 	ld hl, PalletTownScriptPointers
 	ld a, [wPalletTownCurScript]
-	jp JumpTable
+	rst Jumptable
+	ret
 
 PalletTownScriptPointers:
 	dw PalletTownScript0
@@ -141,7 +142,7 @@ PalletTownScript4:
 	ld [wListScrollOffset], a
 	ld a, BATTLE_TYPE_PIKACHU
 	ld [wBattleType], a
-	ld a, PIKACHU
+	ld a, CHATOT
 	ld [wCurOpponent], a
 	ld a, 5
 	ld [wCurEnemyLVL], a

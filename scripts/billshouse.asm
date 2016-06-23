@@ -3,7 +3,7 @@ BillsHouseScript:
 	call EnableAutoTextBoxDrawing
 	ld a, [wBillsHouseCurScript]
 	ld hl, BillsHouseScriptPointers
-	call JumpTable
+	rst Jumptable
 	ret
 
 BillsHouseScriptPointers:

@@ -4,7 +4,7 @@ PewterCityScript:
 	res 7, [hl]
 	ld hl, PewterCityScriptPointers
 	ld a, [wPewterCityCurScript]
-	call JumpTable
+	rst Jumptable
 	ret
 
 PewterCityScriptPointers:

@@ -1,9 +1,9 @@
 _SurfinDudeText1::
 	text "Whoa!"
 
-	para "Your PIKACHU knows"
-	line "how to SURF! So,"
-	cont "I'm not alone..."
+	para "Your CHATOT knows"
+	line "how to SURF! Far"
+	cont "out, man!"
 
 	para "Great! You earned"
 	line "the right to SURF"

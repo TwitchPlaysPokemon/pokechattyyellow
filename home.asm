@@ -14,7 +14,8 @@ SECTION "rst 18", ROM0 [$18]
 SECTION "rst 20", ROM0 [$20]
 	jr_abs $38
 SECTION "rst 28", ROM0 [$28]
-	jr_abs $38
+	jp JumpTable
+
 SECTION "rst 30", ROM0 [$30]
 	jr_abs $38
 SECTION "rst 38", ROM0 [$38]
@@ -1343,8 +1344,15 @@ RepelWoreOffText::
 	db "@"
 
 DisplayPikachuEmotion::
-	callab TalkToPikachu ; 3f:5004
-	jp CloseTextDisplay
+	; callab TalkToPikachu ; 3f:5004
+	; jp CloseTextDisplay
+	ld hl, .MarkovChain
+	call PrintText
+	jp AfterDisplayingTextID
+
+.MarkovChain:
+	TX_PIKACHU
+	db "@"
 
 INCLUDE "engine/menu/start_menu.asm"
 
@@ -2202,8 +2210,7 @@ IsKeyItem::
 ; [wTextBoxID] = text box ID
 ; b, c = y, x cursor position (TWO_OPTION_MENU only)
 DisplayTextBoxID::
-	homecall_sf DisplayTextBoxID_
-	ret
+	homecall_jump_sf DisplayTextBoxID_
 
 UpdateGBCPal_BGP::
 	push af
@@ -2318,7 +2325,7 @@ RunNPCMovementScript::
 	ld a, [wNPCMovementScriptBank]
 	rst Bankswitch
 	ld a, [wNPCMovementScriptFunctionNum]
-	call JumpTable
+	rst Jumptable
 	pop af
 	rst Bankswitch
 	ret
@@ -2361,7 +2368,7 @@ ExecuteCurMapScriptInTable::
 .useProvidedIndex
 	pop hl
 	ld [wCurMapScript], a
-	call JumpTable
+	rst Jumptable
 	ld a, [wCurMapScript]
 	ret
 
@@ -2995,11 +3002,11 @@ CheckBoulderCoords::
 	jp CheckCoords
 
 GetPointerWithinSpriteStateData1::
-	ld h, $c1
+	ld h, wSprite01SpriteStateData1 / $100
 	jr _GetPointerWithinSpriteStateData
 
 GetPointerWithinSpriteStateData2::
-	ld h, $c2
+	ld h, wSprite01SpriteStateData2 / $100
 
 _GetPointerWithinSpriteStateData:
 	ld a, [hSpriteDataOffset]
@@ -3058,7 +3065,7 @@ StopSprite::
 	call GetSpriteMovementByte1Pointer
 	ld [hl], STAY
 	call GetSpriteMovementByte2Pointer
-	ld [hl], NONE ; spin in place
+	ld [hl], a
 	pop hl
 	ret
 
@@ -3976,12 +3983,10 @@ CalcStat::
 	ret
 
 AddEnemyMonToPlayerParty::
-	homecall_sf _AddEnemyMonToPlayerParty
-	ret
+	homecall_jump_sf _AddEnemyMonToPlayerParty
 
 MoveMon::
-	homecall_sf _MoveMon
-	ret
+	homecall_jump_sf _MoveMon
 
 ; skips a text entries, each of size NAME_LENGTH (like trainer name, OT name, rival name, ...)
 ; hl: base pointer, will be incremented by NAME_LENGTH * a

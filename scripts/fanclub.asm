@@ -2,7 +2,7 @@ FanClubScript:
 	call EnableAutoTextBoxDrawing
 	ld hl, FanClubScriptPointers
 	ld a, [wFanClubCurScript]
-	call JumpTable
+	rst Jumptable
 	ret
 
 FanClubScriptPointers:

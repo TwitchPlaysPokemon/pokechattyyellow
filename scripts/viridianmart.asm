@@ -3,7 +3,7 @@ ViridianMartScript:
 	call EnableAutoTextBoxDrawing
 	ld hl, ViridianMartScriptPointers
 	ld a, [wViridianMarketCurScript]
-	call JumpTable
+	rst Jumptable
 	ret
 
 ViridianMartScript_1d47d:

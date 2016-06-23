@@ -7,7 +7,7 @@ OaksLabScript:
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
 	ld hl, OaksLabScriptPointers
 	ld a, [wOaksLabCurScript]
-	call JumpTable
+	rst Jumptable
 	ret
 
 OaksLabScriptPointers:
@@ -1024,7 +1024,7 @@ OaksLabText_1cb3a:
 
 OaksLabText18:
 	TX_ASM
-	ld a, PIKACHU
+	ld a, CHATOT
 	ld [wPlayerStarter], a
 	ld [wd11e], a
 	call GetMonName
@@ -1038,7 +1038,7 @@ OaksLabText18:
 	ld [wMonDataLocation], a
 	ld a, 5
 	ld [wCurEnemyLVL], a
-	ld a, PIKACHU
+	ld a, CHATOT
 	ld [wd11e], a
 	ld [wcf91], a
 	call AddPartyMon

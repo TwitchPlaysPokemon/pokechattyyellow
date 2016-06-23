@@ -42,7 +42,8 @@ SeafoamIslands4Script:
 .asm_465ed
 	ld hl, SeafoamIslands4ScriptPointers
 	ld a, [wSeafoamIslands4CurScript]
-	jp JumpTable
+	rst Jumptable
+	ret
 
 Seafoam4HolesCoords:
 	db $10,$03

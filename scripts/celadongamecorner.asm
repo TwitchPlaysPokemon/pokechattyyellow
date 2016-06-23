@@ -4,7 +4,8 @@ CeladonGameCornerScript:
 	call EnableAutoTextBoxDrawing
 	ld hl, CeladonGameCornerScriptPointers
 	ld a, [wCeladonGameCornerCurScript]
-	jp JumpTable
+	rst Jumptable
+	ret
 
 CeladonGameCornerScript_48bcf:
 	ld hl, wCurrentMapScriptFlags

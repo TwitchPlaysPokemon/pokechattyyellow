@@ -23,6 +23,8 @@ wEnemyMonNick  = 0xCFD9
 wBattleMonNick = 0xD008
 wPlayerName    = 0xD157
 wRivalName     = 0xD349
+hROMBank       = 0xFFB8
+hMarkovROMBank = 0xFFB9
 
 function get_stream_input(url)
 	b, c, h = http.request(url)
@@ -54,44 +56,48 @@ function read_string_at(pointer)
 	return output
 end
 
--- function read_raw_bytes_at(pointer)
-	-- output = {}
-	-- while true do
-		-- cur_byte = memory.readbyte(pointer)
-		-- cur_char = charmap[cur_byte]
-		-- pointer = pointer + 1
-		-- if (cur_byte == 0x4F) or (cur_byte == 0x51) or (cur_byte == 0x55) then
-			-- table.insert(output, cur_byte)
-		-- elseif cur_char == nil then
-			-- break
-		-- else
-			-- table.insert(output, cur_byte)
-		-- end
-	-- end
-	-- return output
--- end
+function read_raw_bytes_at(pointer)
+	output = {}
+  -- vba.print(string.format("%04x",pointer))
+	while true do
+		cur_byte = memory.readbyte(pointer)
+    -- vba.print(cur_byte)
+		cur_char = charmap[cur_byte]
+		pointer = pointer + 1
+		if (cur_byte == 0x4F) or (cur_byte == 0x51) or (cur_byte == 0x55) then
+			table.insert(output, cur_byte)
+    elseif cur_byte == 0x00 then
+		elseif cur_char == nil then
+			break
+		else
+      -- vba.print("Current char is \""..cur_char.."\"")
+			table.insert(output, cur_byte)
+		end
+	end
+	return output
+end
 
 function read_npc_text()
 	pointer = memory.readword(hMarkovChain)
 	-- ROM is already in correct bank
-	return read_string_at(pointer)
-	-- return read_raw_bytes_at(pointer)
+	-- return read_string_at(pointer)
+	return read_raw_bytes_at(pointer)
 end
 
 function get_pikachu_chain()
 	returned_chain = nil
 	
-	repeat
-		-- request AI's response up to 4 times a second, to avoid emulator stutter
-		returned_chain = http.request(base_url.."/get_chain")
-		if (returned_chain == nil or returned_chain == "") then
-			FramesAdvance(1)
-		end
-	-- this request returns either the next move,
-	-- or an empty string if the result isn't set yet.
-	until (returned_chain ~= nil and returned_chain ~= "")
-	return returned_chain
-	-- return {0x94, 0xa7, 0xa8, 0xb3, 0x7f, 0xa8, 0xb3, 0x7f, 0xa0, 0x4f, 0xb4, 0xa4, 0xb3, 0xb4, 0xe8}
+	-- repeat
+		-- -- request AI's response up to 4 times a second, to avoid emulator stutter
+		-- returned_chain = http.request(base_url.."/get_chain")
+		-- if (returned_chain == nil or returned_chain == "") then
+			-- emu.frameadvance()
+		-- end
+	-- -- this request returns either the next move,
+	-- -- or an empty string if the result isn't set yet.
+	-- until (returned_chain ~= nil and returned_chain ~= "")
+	-- return returned_chain
+	return {0x93, 0xa7, 0xa8, 0xb2, 0x7f, 0xa8, 0xb2, 0x7f, 0xa0, 0x4f, 0xb3, 0xa4, 0xb2, 0xb3, 0xe8}
 	-- return "This is a test."
 end
 
@@ -100,14 +106,20 @@ while true do
 	-- Therefore, there's no need to check rSVBK.
 	lua_ctrl = memory.readbyte(hLSC)
 	if lua_ctrl == LUA_REQUEST_CHAIN then
+    MarkovBank = memory.readbyte(hMarkovROMBank)
+    CurrentBank = memory.readbyte(hROMBank)
+    -- vba.print("Chain source in bank "..MarkovBank..". Currently loaded: "..CurrentBank)
+    if MarkovBank ~= CurrentBank then
+      error("bank mismatch")
+    end
 		which_chain = memory.readbyte(hLSB)
 		if which_chain == LUA_REQUEST_NPC then
 			npc_text = read_npc_text()
 			http.request(base_url.."/npc_chain", JSON:encode({npc_text}))
-			markov_chain = get_markov_chain()
+			markov_chain = read_npc_text()
 		else
 			http.request(base_url.."/pika_chain", JSON:encode({}))
-			markov_chain = get_markov_chain()
+			markov_chain = get_pikachu_chain()
 		end
 		memory.writebyte(hLSC, LUA_REQUEST_COMPLETE)
 	elseif lua_ctrl == LUA_REQUEST_NEXT_CHAR then
@@ -119,5 +131,6 @@ while true do
 		end
 		memory.writebyte(hLSC, LUA_REQUEST_COMPLETE)
 	end
-	get_stream_input(stream_input_url)
+  emu.frameadvance()
+	-- get_stream_input(stream_input_url)
 end

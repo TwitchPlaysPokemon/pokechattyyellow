@@ -3,7 +3,8 @@ CinnabarGymScript:
 	call EnableAutoTextBoxDrawing
 	ld hl, CinnabarGymScriptPointers
 	ld a, [wCinnabarGymCurScript]
-	jp JumpTable
+	rst Jumptable
+	ret
 
 CinnabarGymScript_75759:
 	ld hl, wCurrentMapScriptFlags

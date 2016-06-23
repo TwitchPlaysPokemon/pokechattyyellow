@@ -18,6 +18,7 @@ DebugTeam:
 	db PERSIAN,80
 	db JIGGLYPUFF,15
 	db PIKACHU,5
+	db CHATOT,5
 	db $FF
 
 EmptyFunc:

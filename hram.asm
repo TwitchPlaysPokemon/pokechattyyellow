@@ -43,7 +43,7 @@ hNorthSouthConnectedMapWidth    EQU $FF8C
 
 ; DisplayTextID's argument
 hSpriteIndexOrTextID EQU $FF8C
-
+hMarkovROMBank EQU $FFB9
 hPartyMonIndex EQU $FF8C
 
 ; the total number of tiles being shifted each time the pic slides by one tile

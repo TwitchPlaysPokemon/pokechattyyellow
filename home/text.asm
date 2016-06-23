@@ -588,7 +588,7 @@ TextCommandSounds::
 	TX_SFX_CONGRATS,       SFX_GET_ITEM_2
 	TX_SFX_KEY_ITEM,       SFX_GET_KEY_ITEM
 	TX_SFX_TRADE_MACHINE,  SFX_TRADE_MACHINE
-	TX_CRY_PIKACHU,        PIKACHU ; used in OakSpeech
+	TX_CRY_PIKACHU,        CHATOT ; used in OakSpeech
 	TX_CRY_PIDGEOT,        PIDGEOT  ; used in SaffronCityText12
 	TX_CRY_DEWGONG,        DEWGONG  ; unused?
 
@@ -660,8 +660,6 @@ TextCommand19::
 	pop hl
 ; bc is the tilemap dest
 ; hl, on the stack, is the text source
-	ld a, [hROMBank]
-	push af
 	dec hl
 	ld a, [hli]
 	sub $18 ; LUA_REQUEST_NPC or LUA_REQUEST_CHATOT
@@ -672,31 +670,35 @@ TextCommand19::
 	ld a, [hli]
 	ld [hMarkovChain + 1], a
 	ld a, [hli]
-	call Bankswitch
+	ld [hMarkovROMBank], a
 	jr .okay
 
 .chatot
 	xor a
 	ld [hMarkovChain], a
 	ld [hMarkovChain + 1], a
+	ld [hMarkovROMBank], a
 .okay
-	pop af
-	call Bankswitch
 	push hl
+	ld a, [hROMBank]
+	push af
+	ld a, [hMarkovROMBank]
+	and a
+	call nz, Bankswitch
 	ld a, LUA_REQUEST_CHAIN
 	ld [hLSC], a
 .loop
-	halt
-	nop
+	call DelayFrame
 	ld a, [hLSC]
 	and a ; cp LUA_REQUEST_COMPLETE
 	jr nz, .loop
+	pop af
+	call Bankswitch
 .char_loop
 	ld a, LUA_REQUEST_NEXT_CHAR
 	ld [hLSC], a
 .loop2
-	halt
-	nop
+	call DelayFrame
 	ld a, [hLSC]
 	and a ; cp LUA_REQUEST_COMPLETE
 	jr nz, .loop2

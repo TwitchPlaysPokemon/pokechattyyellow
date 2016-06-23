@@ -85,7 +85,7 @@ OakSpeech:
 
 	; This is what we call a Pokemon
 	call ClearScreen
-	ld a, PIKACHU
+	ld a, CHATOT
 	ld [wd0b5], a
 	ld [wcf91], a
 	call GetMonHeader
@@ -178,21 +178,26 @@ OakSpeech:
 	ret
 
 OakSpeechText1:
-	TX_FAR _OakSpeechText1
+	TX_MARKOV _OakSpeechText1
+	TX_WAIT_BUTTON
 	db "@"
 OakSpeechText2:
-	TX_FAR _OakSpeechText2A
-	TX_CRY_PIKACHU ; play PIKACHU cry from TextCommandSounds
-	TX_FAR _OakSpeechText2B
+	TX_MARKOV _OakSpeechText2A
+	TX_CRY_PIKACHU ; play CHATOT cry from TextCommandSounds
+	TX_MARKOV _OakSpeechText2B
+	TX_WAIT_BUTTON
 	db "@"
 IntroducePlayerText:
-	TX_FAR _IntroducePlayerText
+	TX_MARKOV _IntroducePlayerText
+	TX_WAIT_BUTTON
 	db "@"
 IntroduceRivalText:
-	TX_FAR _IntroduceRivalText
+	TX_MARKOV _IntroduceRivalText
+	TX_WAIT_BUTTON
 	db "@"
 OakSpeechText3:
-	TX_FAR _OakSpeechText3
+	TX_MARKOV _OakSpeechText3
+	TX_WAIT_BUTTON
 	db "@"
 
 FadeInIntroPic:

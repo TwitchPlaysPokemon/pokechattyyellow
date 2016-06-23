@@ -1,5 +1,6 @@
 FarCall = $08
 Bankswitch = $10
+Jumptable = $28
 
 text   EQUS "db $00," ; Start writing text.
 next   EQUS "db $4e," ; Move a line down.
@@ -373,7 +374,7 @@ TX_PIKACHU EQUS "db $18"
 
 TX_MARKOV: MACRO
 	db $19
-	dab \2
+	dab \1
 	ENDM
 
 TX_VENDING_MACHINE         EQUS "db $f5"

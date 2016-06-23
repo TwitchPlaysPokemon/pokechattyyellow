@@ -2,7 +2,7 @@ RedsHouse2FScript:
 	call EnableAutoTextBoxDrawing
 	ld hl, RedsHouse2FScriptPointers
 	ld a, 0
-	call JumpTable
+	rst Jumptable
 	ret
 
 RedsHouse2FScriptPointers:
