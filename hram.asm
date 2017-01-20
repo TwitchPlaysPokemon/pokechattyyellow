@@ -330,7 +330,6 @@ hLCDCPointer EQU $FFF4
 
 hJoyInput EQU $FFF5
 
-hBCBuffer EQU $FFF6
 hMarkovChain EQU $FFF6 ; dw
 
 hDisableJoypadPolling EQU $FFF8 ; non-zero value disables polling of joypad
@@ -341,6 +340,6 @@ hFlags_0xFFFA EQU $FFFA
 
 hFieldMoveMonMenuTopMenuItemX EQU $FFFB
 
-h_0xFFFC EQU $FFFC
+hLoadPikachuSpriteIntoTile4C EQU $FFFC
 
 hGBC EQU $FFFE ; 0 if DMG, != 0 if GBC

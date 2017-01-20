@@ -179,25 +179,20 @@ OakSpeech:
 
 OakSpeechText1:
 	TX_MARKOV _OakSpeechText1
-	TX_WAIT_BUTTON
 	db "@"
 OakSpeechText2:
 	TX_MARKOV _OakSpeechText2A
 	TX_CRY_PIKACHU ; play CHATOT cry from TextCommandSounds
 	TX_MARKOV _OakSpeechText2B
-	TX_WAIT_BUTTON
 	db "@"
 IntroducePlayerText:
 	TX_MARKOV _IntroducePlayerText
-	TX_WAIT_BUTTON
 	db "@"
 IntroduceRivalText:
 	TX_MARKOV _IntroduceRivalText
-	TX_WAIT_BUTTON
 	db "@"
 OakSpeechText3:
 	TX_MARKOV _OakSpeechText3
-	TX_WAIT_BUTTON
 	db "@"
 
 FadeInIntroPic:

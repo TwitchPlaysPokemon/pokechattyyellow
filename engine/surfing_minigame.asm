@@ -421,7 +421,7 @@ SurfingMinigame_RunGame:
 	and a
 	jr z, .dead
 	call Random
-	ld [wc5d5], a
+	ld [wNewRandomWaveFunction], a
 	call SurfingMinigame_UpdateLYOverrides
 	call SurfingMinigame_UpdatePikachuYCoord
 	call SurfingMinigame_UpdateBGMapReadBuffer
@@ -467,7 +467,7 @@ SurfingMinigame_SpeedTowardsEnd:
 	call SurfingMinigame_RunDelayTimer
 	jr c, .done_delay
 	xor a
-	ld [wc5d5], a
+	ld [wNewRandomWaveFunction], a
 	call SurfingMinigame_UpdateLYOverrides
 	call SurfingMinigame_UpdatePikachuYCoord
 	call SurfingMinigame_UpdateBGMapReadBuffer
@@ -2129,7 +2129,7 @@ SurfingMinigameWaveFunction_NoWave:
 	jr .got_next_fn
 
 .check_param
-	ld a, [wc5d5]
+	ld a, [wNewRandomWaveFunction]
 	and a
 	jr z, .got_wave
 	dec a

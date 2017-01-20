@@ -358,7 +358,7 @@ INCLUDE "data/pikachu_emotions.asm"
 
 PikachuWalksToNurseJoy:
 	ld a, $40
-	ld [h_0xFFFC], a
+	ld [hLoadPikachuSpriteIntoTile4C], a
 	call LoadPikachuSpriteIntoVRAM
 	call .GetMovementData
 	and a
@@ -366,7 +366,7 @@ PikachuWalksToNurseJoy:
 	call ApplyPikachuMovementData
 .skip
 	xor a
-	ld [h_0xFFFC], a
+	ld [hLoadPikachuSpriteIntoTile4C], a
 	ret
 
 .GetMovementData:

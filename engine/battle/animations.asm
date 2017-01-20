@@ -16,7 +16,7 @@ DrawFrameBlock:
 	inc a
 	ld [wFBTileCounter], a
 	ld a, $2
-	ld [wdef5], a
+	ld [wBattleAnimationObjectFlags], a
 	ld a, [wSubAnimTransform]
 	dec a
 	jr z, .flipHorizontalAndVertical   ; 1
@@ -50,9 +50,9 @@ DrawFrameBlock:
 	ld [de], a ; store X
 	cp 88
 	jr c, .asm_78056
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	inc a
-	ld [wdef5], a
+	ld [wBattleAnimationObjectFlags], a
 .asm_78056
 	inc hl
 	inc de
@@ -62,7 +62,7 @@ DrawFrameBlock:
 	inc de
 	ld a, [hli]
 	ld b, a
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	or b
 	ld [de], a ; store flags
 	inc de
@@ -84,9 +84,9 @@ DrawFrameBlock:
 	ld [de], a ; store X
 	cp 88
 	jr c, .asm_78087
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	inc a
-	ld [wdef5], a
+	ld [wBattleAnimationObjectFlags], a
 .asm_78087
 	inc hl
 	inc de
@@ -107,7 +107,7 @@ DrawFrameBlock:
 	jr z, .storeFlags1
 	ld b, 0
 .storeFlags1
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	or b
 	ld [de], a
 	inc de
@@ -127,9 +127,9 @@ DrawFrameBlock:
 	ld [de], a ; store X
 	cp 88
 	jr c, .asm_780c8
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	inc a
-	ld [wdef5], a
+	ld [wBattleAnimationObjectFlags], a
 .asm_780c8
 	inc hl
 	inc de
@@ -147,7 +147,7 @@ DrawFrameBlock:
 	res 5, a
 .storeFlags2
 	ld b, a
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	or b
 	ld [de], a
 	inc de
@@ -1316,14 +1316,14 @@ _AnimationWaterDroplets:
 	ld hl, wOAMBuffer
 .loop
 	ld a, $1
-	ld [wdef5], a
+	ld [wBattleAnimationObjectFlags], a
 	ld a, [wBaseCoordY]
 	ld [hli], a ; Y
 	cp 40
 	jr c, .asm_792d7
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	inc a
-	ld [wdef5], a
+	ld [wBattleAnimationObjectFlags], a
 .asm_792d7
 	ld a, [wBaseCoordX]
 	add 27
@@ -1331,14 +1331,14 @@ _AnimationWaterDroplets:
 	ld [hli], a ; X
 	cp 88
 	jr c, .asm_792ee
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	add $2
 	and $3
-	ld [wdef5], a
+	ld [wBattleAnimationObjectFlags], a
 .asm_792ee
 	ld a, [wDropletTile]
 	ld [hli], a ; tile
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	ld [hli], a ; attribute
 	ld a, [wBaseCoordX]
 	cp 144
@@ -1483,28 +1483,28 @@ BattleAnimWriteOAMEntry:
 ; tile = d
 ; attributes = variable (dependant on coords)
 	ld a, $1
-	ld [wdef5], a
+	ld [wBattleAnimationObjectFlags], a
 	ld a, e
 	add 8
 	ld e, a
 	ld [hli], a
 	cp 40
 	jr c, .asm_793d8
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	inc a
-	ld [wdef5], a
+	ld [wBattleAnimationObjectFlags], a
 .asm_793d8
 	ld a, [wBaseCoordX]
 	ld [hli], a
 	cp 88
 	jr c, .asm_793e8
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	add $2
-	ld [wdef5], a
+	ld [wBattleAnimationObjectFlags], a
 .asm_793e8
 	ld a, d
 	ld [hli], a
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	ld [hli], a
 	ret
 
@@ -1710,7 +1710,7 @@ AnimationSpiralBallsInward:
 	cp $ff
 	jr z, .done
 	ld a, $2
-	ld [wdef5], a
+	ld [wBattleAnimationObjectFlags], a
 	ld a, [wSpiralBallsBaseY]
 	add [hl]
 	ld [de], a ; Y
@@ -1722,7 +1722,7 @@ AnimationSpiralBallsInward:
 	cp 88
 	jr c, .asm_79524
 	ld a, $3
-	ld [wdef5], a
+	ld [wBattleAnimationObjectFlags], a
 .asm_79524
 	inc hl
 	inc de
@@ -1730,7 +1730,7 @@ AnimationSpiralBallsInward:
 	ld a, [de]
 	and $f0
 	ld b, a
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	or b
 	ld [de], a
 	inc de
@@ -2932,7 +2932,7 @@ FallingObjects_UpdateOAMEntry:
 	ld hl, wOAMBuffer
 	add hl, de
 	ld a, $1
-	ld [wdef5], a
+	ld [wBattleAnimationObjectFlags], a
 	ld a, [hl]
 	inc a
 	inc a
@@ -2943,9 +2943,9 @@ FallingObjects_UpdateOAMEntry:
 	ld [hli], a ; Y
 	cp 40
 	jr c, .asm_79e51
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	inc a
-	ld [wdef5], a
+	ld [wBattleAnimationObjectFlags], a
 .asm_79e51
 	ld a, [wFallingObjectMovementByte]
 	ld b, a
@@ -2965,10 +2965,10 @@ FallingObjects_UpdateOAMEntry:
 	ld [hli], a ; X
 	cp 88
 	jr c, .asm_79e75
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	add $2
 	and $3
-	ld [wdef5], a
+	ld [wBattleAnimationObjectFlags], a
 .asm_79e75
 	inc hl
 	xor a ; no horizontal flip
@@ -2981,16 +2981,16 @@ FallingObjects_UpdateOAMEntry:
 	ld [hli], a ; X
 	cp 88
 	jr c, .asm_79e5c
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	add $2
 	and $3
-	ld [wdef5], a
+	ld [wBattleAnimationObjectFlags], a
 .asm_79e5c
 	inc hl
 	ld a, (1 << OAM_X_FLIP)
 .next2
 	ld b, a
-	ld a, [wdef5]
+	ld a, [wBattleAnimationObjectFlags]
 	or b
 	ld [hl], a ; attribute
 	ret

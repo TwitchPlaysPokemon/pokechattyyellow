@@ -203,7 +203,6 @@ wTempoModifier:: ; c0f2
 
 wc0f3:: ds 1
 wc0f4:: ds 1
-wc0f5:: ds 11
 
 SECTION "Sprite State Data", WRAM0[$c100]
 
@@ -422,7 +421,7 @@ wSurfingMinigamePikachuObjectFunctionIndex:: ; c5d2
 	ds 1
 wSurfingMinigameWaveFunctionNumber:: ; c5d3
 	ds 2
-wc5d5:: ; c5d5
+wNewRandomWaveFunction:: ; c5d5
 	ds 1
 wSurfingMinigamePikachuHP:: ; c5d6
 	ds 2 ; little-endian BCD
@@ -3583,7 +3582,7 @@ wGBCPal:: ds PAL_SIZE ; dee9
 wLastBGP:: ds 1 ; def1
 wLastOBP0:: ds 1 ; def2
 wLastOBP1:: ds 1 ; def3
-wdef5:: ds 1 ; def4
+wBattleAnimationObjectFlags:: ds 1 ; def4
 wBGPPalsBuffer:: ds NUM_ACTIVE_PALS * PAL_SIZE ; def5
 
 SECTION "Stack", WRAMX[$dfff], BANK[1]

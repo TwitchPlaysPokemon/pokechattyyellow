@@ -958,7 +958,7 @@ LoadPikachuSpriteIntoVRAM:
 	call CopyVideoDataAlternate
 	ld de, PikachuSprite + $c * $10
 	ld hl, vNPCSprites2 + $c * $10
-	ld a, [h_0xFFFC]
+	ld a, [hLoadPikachuSpriteIntoTile4C]
 	and a
 	jr z, .load
 	ld de, PikachuSprite + $c * $10

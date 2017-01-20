@@ -28,7 +28,7 @@ PlayPikachuSoundClip::
 	ld [rNR50], a
 	xor a
 	ld [rNR30], a
-	ld hl, $ff30 ; wave data
+	ld hl, rWAVE ; wave data
 	ld de, wRedrawRowOrColumnSrcTiles
 .saveWaveDataLoop
 	ld a, [hl]
@@ -62,7 +62,7 @@ PlayPikachuSoundClip::
 	ld [rNR52], a
 	xor a
 	ld [rNR30], a
-	ld hl, $ff30
+	ld hl, rWAVE
 	ld de, wRedrawRowOrColumnSrcTiles
 .reloadWaveDataLoop
 	ld a, [de]
