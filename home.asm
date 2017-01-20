@@ -1344,8 +1344,7 @@ RepelWoreOffText::
 	db "@"
 
 DisplayPikachuEmotion::
-	; callab TalkToPikachu ; 3f:5004
-	; jp CloseTextDisplay
+IF DEF(MARKOV)
 	ld hl, .MarkovChain
 	call PrintText
 	jp AfterDisplayingTextID
@@ -1353,6 +1352,10 @@ DisplayPikachuEmotion::
 .MarkovChain:
 	TX_PIKACHU
 	db "@"
+ELSE
+	callab TalkToPikachu ; 3f:5004
+	jp CloseTextDisplay
+ENDC
 
 INCLUDE "engine/menu/start_menu.asm"
 

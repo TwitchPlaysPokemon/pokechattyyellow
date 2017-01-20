@@ -13,6 +13,8 @@ objs := \
 	text.o \
 	wram.o
 
+markov_objs := $(objs:.o=_markov.o)
+
 $(foreach obj, $(objs:.o=), \
 	$(eval $(obj)_dep := $(shell $(includes) $(obj).asm)) \
 )
@@ -22,24 +24,34 @@ $(foreach obj, $(objs:.o=), \
 .SECONDEXPANSION:
 # Suppress annoying intermediate file deletion messages.
 .PRECIOUS: %.2bpp
-.PHONY: all clean chatty
+.PHONY: all clean chatty debug
 
 rom := chatty.gbc
+debug := chatty_debug.gbc
 
-all: $(rom)
+all: $(rom) $(debug)
 chatty: $(rom)
 
-clean:
-	rm -f $(rom) $(objs) $(rom:.gbc=.sym)
+tidy:
+	rm -f $(rom) $(debug) $(objs) $(markov_objs) $(rom:.gbc=.sym)
+
+clean: tidy
 	find . \( -iname '*.1bpp' -o -iname '*.2bpp' -o -iname '*.pic' -o -iname '*.pcm' \) -exec rm {} +
 
 %.asm: ;
 $(objs): %.o: %.asm $$(%_dep)
 	rgbasm -h -o $@ $*.asm
 
+$(markov_objs): %_markov.o: %.asm $$(%_dep)
+	rgbasm -D MARKOV -h -o $@ $*.asm
+
 opts = -cjsv -k 01 -l 0x33 -m 0x1b -p 0 -r 03 -t "TPP_CHATTYYLLW"
 
-$(rom): $(objs)
+$(rom): $(markov_objs)
+	rgblink -n $*.sym -o $@ $^
+	rgbfix $(opts) $@
+
+$(debug): $(objs)
 	rgblink -n $*.sym -o $@ $^
 	rgbfix $(opts) $@
 

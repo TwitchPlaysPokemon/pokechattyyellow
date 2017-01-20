@@ -1,137 +1,196 @@
 _Multiply:: ; 66de
+
 ; hMultiplier is one byte.
-	push de
-	push hl
-	ld a, [hMultiplier]
-	cp 1
-	jr z, .skip
-	and a
-	jr nz, .skip2
-	ld [hProduct], a
-	ld [hProduct + 1], a
-	ld [hProduct + 2], a
-	ld [hProduct + 3], a
-	jr .skip
-.skip2
-	ld c, a
-	ld a, [hMultiplicand]
-	ld e, a
-	ld a, [hMultiplicand + 1]
-	ld h, a
-	ld a, [hMultiplicand + 2]
-	ld l, a
+	ld a, 8
+	ld b, a
+
 	xor a
-	ld d, a
 	ld [hProduct], a
-	ld [hProduct + 1], a
-	ld [hProduct + 2], a
-	ld [hProduct + 3], a
-	ld b, 8
+	ld [hMathBuffer + 1], a
+	ld [hMathBuffer + 2], a
+	ld [hMathBuffer + 3], a
+	ld [hMathBuffer + 4], a
+
 
 .loop
-	srl c
+	ld a, [hMultiplier]
+	srl a
+	ld [hMultiplier], a
 	jr nc, .next
 
-	ld a, [hProduct + 3]
-	add l
-	ld [hProduct + 3], a
-	ld a, [hProduct + 2]
-	adc h
-	ld [hProduct + 2], a
-	ld a, [hProduct + 1]
-	adc e
-	ld [hProduct + 1], a
+	ld a, [hMathBuffer + 4]
+	ld c, a
+	ld a, [hMultiplicand + 2]
+	add c
+	ld [hMathBuffer + 4], a
+
+	ld a, [hMathBuffer + 3]
+	ld c, a
+	ld a, [hMultiplicand + 1]
+	adc c
+	ld [hMathBuffer + 3], a
+
+	ld a, [hMathBuffer + 2]
+	ld c, a
+	ld a, [hMultiplicand + 0]
+	adc c
+	ld [hMathBuffer + 2], a
+
+	ld a, [hMathBuffer + 1]
+	ld c, a
 	ld a, [hProduct]
-	adc d
-	ld [hProduct], a
+	adc c
+	ld [hMathBuffer + 1], a
 
 .next
-	sla l
-	rl h
-	rl e
-	rl d
 	dec b
-	jr nz, .loop
-.skip
-	pop hl
-	pop de
+	jr z, .done
+
+
+; hMultiplicand <<= 1
+
+	ld a, [hMultiplicand + 2]
+	add a
+	ld [hMultiplicand + 2], a
+
+	ld a, [hMultiplicand + 1]
+	rla
+	ld [hMultiplicand + 1], a
+
+	ld a, [hMultiplicand + 0]
+	rla
+	ld [hMultiplicand + 0], a
+
+	ld a, [hProduct]
+	rla
+	ld [hProduct], a
+
+	jr .loop
+
+
+.done
+	ld a, [hMathBuffer + 4]
+	ld [hProduct + 3], a
+
+	ld a, [hMathBuffer + 3]
+	ld [hProduct + 2], a
+
+	ld a, [hMathBuffer + 2]
+	ld [hProduct + 1], a
+
+	ld a, [hMathBuffer + 1]
+	ld [hProduct + 0], a
+
 	ret
 ; 673e
 
+
 _Divide:: ; 673e
-	push hl
-	ld a, [hDivisor]
-	ld d, a
-	ld c, hDividend % $100
-	ld e, 0
-	ld l, e
-.loop
-	push bc
-	ld b, 8
-	ld a, [$ff00+c]
-	ld h, a
-	ld l, 0
-.loop2
-	sla h
-	rl e
-	ld a, e
-	jr c, .carry
-	cp d
-	jr c, .skip
-.carry
-	sub d
+	xor a
+	ld [hMathBuffer + 0], a
+	ld [hMathBuffer + 1], a
+	ld [hMathBuffer + 2], a
+	ld [hMathBuffer + 3], a
+	ld [hMathBuffer + 4], a
+
+	ld a, 9
 	ld e, a
-	inc l
-.skip
+
+.loop
+	ld a, [hMathBuffer + 0]
+	ld c, a
+	ld a, [hDividend + 1]
+	sub c
+	ld d, a
+
+	ld a, [hDivisor]
+	ld c, a
+	ld a, [hDividend + 0]
+	sbc c
+	jr c, .next
+
+	ld [hDividend + 0], a
+
+	ld a, d
+	ld [hDividend + 1], a
+
+	ld a, [hMathBuffer + 4]
+	inc a
+	ld [hMathBuffer + 4], a
+
+	jr .loop
+
+.next
 	ld a, b
 	cp 1
 	jr z, .done
-	sla l
-	dec b
-	jr .loop2
-.done
-	ld a, c
-	add hMathBuffer - hDividend
-	ld c, a
-	ld a, l
-	ld [$ff00+c], a
-	pop bc
-	inc c
-	dec b
-	jr nz, .loop
 
+	ld a, [hMathBuffer + 4]
+	add a
+	ld [hMathBuffer + 4], a
+
+	ld a, [hMathBuffer + 3]
+	rla
+	ld [hMathBuffer + 3], a
+
+	ld a, [hMathBuffer + 2]
+	rla
+	ld [hMathBuffer + 2], a
+
+	ld a, [hMathBuffer + 1]
+	rla
+	ld [hMathBuffer + 1], a
+
+	dec e
+	jr nz, .next2
+
+	ld e, 8
+	ld a, [hMathBuffer + 0]
+	ld [hDivisor], a
 	xor a
-	ld [hDividend], a
+	ld [hMathBuffer + 0], a
+
+	ld a, [hDividend + 1]
+	ld [hDividend + 0], a
+
+	ld a, [hDividend + 2]
 	ld [hDividend + 1], a
+
+	ld a, [hDividend + 3]
 	ld [hDividend + 2], a
-	ld [hDividend + 3], a
+
+.next2
 	ld a, e
-	ld [hDividend + 4], a ; I believe the remainder is stored here...
-	ld [hDivisor], a ; and here too...
-	ld a, c
-	sub hDividend % $100
-	ld b, a
-	ld a, c
-	add hMathBuffer - hDividend - 1
-	ld c, a
-	ld a, [$ff00+c]
+	cp 1
+	jr nz, .okay
+	dec b
+
+.okay
+	ld a, [hDivisor]
+	srl a
+	ld [hDivisor], a
+
+	ld a, [hMathBuffer + 0]
+	rr a
+	ld [hMathBuffer + 0], a
+
+	jr .loop
+
+.done
+	ld a, [hDividend + 1]
+	ld [hDivisor], a
+
+	ld a, [hMathBuffer + 4]
 	ld [hDividend + 3], a
-	dec b
-	jr z, .finished
-	dec c
-	ld a, [$ff00+c]
+
+	ld a, [hMathBuffer + 3]
 	ld [hDividend + 2], a
-	dec b
-	jr z, .finished
-	dec c
-	ld a, [$ff00+c]
+
+	ld a, [hMathBuffer + 2]
 	ld [hDividend + 1], a
-	dec b
-	jr z, .finished
-	dec c
-	ld a, [$ff00+c]
-	ld [hDividend], a
-.finished
-	pop hl
+
+	ld a, [hMathBuffer + 1]
+	ld [hDividend + 0], a
+
 	ret
 ; 67c1

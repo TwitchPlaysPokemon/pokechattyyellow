@@ -636,6 +636,9 @@ TextCommand0D::
 ; AAAA = address of text commands
 ; BB = bank
 TextCommand17::
+IF !DEF(MARKOV)
+TextCommand19::
+ENDC
 	pop hl
 	ld a, [hROMBank]
 	push af
@@ -656,6 +659,7 @@ TextCommand17::
 	jp NextTextCommand
 
 TextCommand18::
+IF DEF(MARKOV)
 TextCommand19::
 	pop hl
 ; bc is the tilemap dest
@@ -716,6 +720,10 @@ TextCommand19::
 	call PlaceString
 	pop hl
 	jp NextTextCommand
+ELSE
+	pop hl
+	jp NextTextCommand
+ENDC
 
 TextCommandJumpTable::
 	dw TextCommand00

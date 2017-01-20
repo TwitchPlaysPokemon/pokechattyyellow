@@ -153,4 +153,4 @@ const_value = 1
 	const DEX_MEW        ; 151
 	const DEX_CHATOT     ; 152
 
-NUM_POKEMON    EQU 151
+NUM_POKEMON    EQU 152
