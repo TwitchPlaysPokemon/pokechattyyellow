@@ -680,6 +680,16 @@ TextCommand19::
 	ld [hMarkovROMBank], a
 .okay
 	push hl
+	push bc
+	ld bc, $180
+	ld hl, wMarkovChainBuffer
+	xor a
+.fill
+	ld [hli], a
+	dec c
+	jr nz, .fill
+	dec b
+	jr nz, .fill
 	ld a, [hROMBank]
 	push af
 	ld a, [hMarkovROMBank]
@@ -694,7 +704,6 @@ TextCommand19::
 	jr nz, .loop
 	pop af
 	call Bankswitch
-.char_loop
 	ld a, LUA_REQUEST_NEXT_CHAR
 	ld [hLSC], a
 .loop2
@@ -702,19 +711,9 @@ TextCommand19::
 	ld a, [hLSC]
 	and a ; cp LUA_REQUEST_COMPLETE
 	jr nz, .loop2
-	ld a, [hLSB]
-	cp $57 ; done
-	jr z, .done
-	ld [hMarkovChain], a
-	ld a, "@"
-	ld [hMarkovChain + 1], a
-	ld h, b
-	ld l, c
-	ld de, hMarkovChain
+	pop hl
+	ld de, wMarkovChainBuffer
 	call PlaceString
-	jr .char_loop
-
-.done
 	pop hl
 	jp NextTextCommand
 

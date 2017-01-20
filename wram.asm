@@ -3498,6 +3498,8 @@ wEnemyPartyMons::  ds PARTY_LENGTH + 1 ; d89c
 wWaterRate:: db ; d8a3
 wWaterMons:: db ; d8a4
 
+wMarkovChainBuffer:: ds $180
+
 	ds wWaterRate - @
 
 wEnemyMons:: ; d8a3

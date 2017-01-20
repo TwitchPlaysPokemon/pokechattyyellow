@@ -573,7 +573,7 @@ Mon114_EvosMoves:
 	db 0
 
 Mon152_EvosMoves:
-;MISSINGNO_1F
+;CHATOT
 ;Evolutions
 	db 0
 ;Learnset
