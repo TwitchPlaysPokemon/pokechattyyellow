@@ -2,10 +2,10 @@ FarCall_hl::
 ; self-contained bankswitch, use this when not in the home bank
 ; calls b:hl
 ; preserves bc and de going into the call
-	ld [hSwapTemp], a
+	ld [hBuffer], a
 	ld a, [hROMBank]
 	push af
-	ld a, [hSwapTemp]
+	ld a, [hBuffer]
 	rst Bankswitch
 	call FarJump_hl
 	push af

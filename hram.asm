@@ -319,6 +319,8 @@ hCurSpriteMapX EQU $FFEE
 
 hDidntFindAnyHiddenObject EQU $FFEE
 
+hBuffer EQU $FFEF
+
 hLSB EQU $FFF0
 hLSC EQU $FFF1
 
