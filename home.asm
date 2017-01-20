@@ -3672,7 +3672,9 @@ ManualTextScroll::
 Multiply::
 	push hl
 	push bc
+	push de
 	callab _Multiply
+	pop de
 	pop bc
 	pop hl
 	ret
