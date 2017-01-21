@@ -4,19 +4,14 @@ LoadBGMapAttributes::
 	ld hl, BGMapAttributesPointers
 	ld a, c ; c = which packet
 	push af ; save for later (to determine if we're handling the trainer card or party menu)
-	dec a         ; read this code as:
-	add a         ;	dec a
-	ld e, a       ; add a
-	xor a         ; ld e, a
-	ld d, a       ; ld d, 0
-	add hl, de    ; add hl, de
-	ld a, [hli]   ; ld a, [hli]
-	ld e, a       ; ld h, [hl]
-	ld a, [hl]    ; ld l, a
-	ld h, a
-	ld a, e
+	dec a
+	add a
+	ld e, a
+	ld d, 0
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
 	ld l, a
-
 	di
 	ld a, $1
 	ld [rVBK], a
@@ -50,7 +45,7 @@ LoadBGMapAttributes::
 .lcdOff
 	ld a, c ; number of BG attributes to transfer, plus 1 times 16
 	ld [rHDMA5], a ; initiate transfer
-	call Func_3082 ; update audio so it doesn't "lag"
+	call UpdateAudioDuringBGAttrTransfer ; update audio so it doesn't "lag"
 	pop hl
 	ld a, [hli]
 	ld c, a     ; number of BG attributes to transfer, plus 1 times 16
@@ -96,7 +91,7 @@ LoadBGMapAttributes::
 	dec a
 	call z, HandlePartyHPBarAttributes
 .done
-	call Func_3082
+	call UpdateAudioDuringBGAttrTransfer
 	ld a, [rIF]
 	res VBLANK, a
 	ld [rIF], a

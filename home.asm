@@ -394,10 +394,10 @@ GetCryData::
 	; and start from index $14,
 	; so add 3 times the cry id.
 	ld a, b
-	ld c, $14
-	rlca ; * 2
-	add b
-	add c
+	; ld c, CRY_SFX_START
+	; rlca ; * 2
+	; add b
+	; add c
 	ret
 
 DisplayPartyMenu::
@@ -2283,7 +2283,7 @@ UpdateGBCPal_OBP1::
 	pop af
 	ret
 
-Func_3082::
+UpdateAudioDuringBGAttrTransfer::
 	ld a, [hROMBank]
 	push af
 	call FadeOutAudio

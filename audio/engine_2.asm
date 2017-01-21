@@ -187,6 +187,18 @@ Audio2_21940:
 Noise2_endchannel:
 	endchannel
 
+Music_WinWildAlternateStart::
+	ld c, BANK(Music_DefeatedWildMon)
+	ld a, MUSIC_DEFEATED_WILD_MON
+	call PlayMusic
+	ld hl, wChannelCommandPointers
+	ld de, Music_DefeatedWildMon2_Ch1
+	call Audio2_OverwriteChannelPointer
+	ld de, Music_DefeatedWildMon2_Ch2
+	call Audio2_OverwriteChannelPointer
+	ld de, Music_DefeatedWildMon2_Ch3
+	jr Audio2_OverwriteChannelPointer
+
 Music_PokeFluteInBattle::
 	; begin playing the "caught mon" sound effect
 	ld a, SFX_CAUGHT_MON

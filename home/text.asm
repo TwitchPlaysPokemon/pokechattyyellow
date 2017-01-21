@@ -718,12 +718,9 @@ TextCommand19::
 	pop hl
 	ld de, wMarkovChainBuffer
 	call PlaceString
-	pop hl
-	jp NextTextCommand
-ELSE
-	pop hl
-	jp NextTextCommand
 ENDC
+	pop hl
+	jp NextTextCommand
 
 TextCommandJumpTable::
 	dw TextCommand00

@@ -1287,23 +1287,20 @@ Func_fcc08::
 	ret
 
 Func_fcc23:
+	and a
 	ld a, [wPikachuOverworldStateFlags]
 	bit 5, a
-	jr nz, .asm_fcc40
+	ret nz
 	ld a, [wPikachuOverworldStateFlags]
 	bit 7, a
-	jr nz, .asm_fcc40
+	ret nz
 	ld a, [wd472]
 	bit 7, a
-	jr z, .asm_fcc40
+	ret z
 	ld a, [wWalkBikeSurfState]
 	and a
-	jr nz, .asm_fcc40
+	ret nz
 	scf
-	ret
-
-.asm_fcc40
-	and a
 	ret
 
 Func_fcc42:

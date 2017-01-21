@@ -574,20 +574,19 @@ SetAnimationPalette:
 	call UpdateGBCPal_OBP1
 	ret
 
-Func_78e98:
+BattleAnimation_BackUpTilesAndCopyTileMapToMapAndWindow:
 	call SaveScreenTilesToBuffer2
 	xor a
 	ld [hBGMapMode], a
 	call ClearScreen
 	ld h, vBGMap0 / $100
-	call WriteLowerByteOfBGMapAndEnableBGTransfer
+	call .TransferToMapOrWindow
 	call Delay3
 	xor a
 	ld [hBGMapMode], a
 	call LoadScreenTilesFromBuffer2
 	ld h, vBGMap1 / $100
-
-WriteLowerByteOfBGMapAndEnableBGTransfer:
+.TransferToMapOrWindow:
 	ld l, vBGMap0 & $ff
 	call BattleAnimCopyTileMapToVRAM
 	ld a, $1
@@ -699,78 +698,30 @@ DoSpecialEffectByAnimationId:
 
 ; Format: Animation ID (1 byte), Address (2 bytes)
 AnimationIdSpecialEffects:
-	db MEGA_PUNCH
-	dw AnimationFlashScreen
-
-	db GUILLOTINE
-	dw AnimationFlashScreen
-
-	db MEGA_KICK
-	dw AnimationFlashScreen
-
-	db HEADBUTT
-	dw AnimationFlashScreen
-
-	db TAIL_WHIP
-	dw TailWhipAnimationUnused
-
-	db GROWL
-	dw DoGrowlSpecialEffects
-
-	db DISABLE
-	dw AnimationFlashScreen
-
-	db BLIZZARD
-	dw DoBlizzardSpecialEffects
-
-	db BUBBLEBEAM
-	dw AnimationFlashScreen
-
-	db HYPER_BEAM
-	dw FlashScreenEveryFourFrameBlocks
-
-	db THUNDERBOLT
-	dw FlashScreenEveryEightFrameBlocks
-
-	db REFLECT
-	dw AnimationFlashScreen
-
-	db SELFDESTRUCT
-	dw DoExplodeSpecialEffects
-
-	db SPORE
-	dw FlashScreenEveryFourFrameBlocks
-
-	db EXPLOSION
-	dw DoExplodeSpecialEffects
-
-	db ROCK_SLIDE
-	dw DoRockSlideSpecialEffects
-
-	db TRADE_BALL_DROP_ANIM
-	dw TradeHidePokemon
-
-	db TRADE_BALL_SHAKE_ANIM
-	dw TradeShakePokeball
-
-	db TRADE_BALL_TILT_ANIM
-	dw TradeJumpPokeball
-
-	db TOSS_ANIM
-	dw DoBallTossSpecialEffects
-
-	db SHAKE_ANIM
-	dw DoBallShakeSpecialEffects
-
-	db POOF_ANIM
-	dw DoPoofSpecialEffects
-
-	db GREATTOSS_ANIM
-	dw DoBallTossSpecialEffects
-
-	db ULTRATOSS_ANIM
-	dw DoBallTossSpecialEffects
-
+	dbw MEGA_PUNCH, AnimationFlashScreen
+	dbw GUILLOTINE, AnimationFlashScreen
+	dbw MEGA_KICK, AnimationFlashScreen
+	dbw HEADBUTT, AnimationFlashScreen
+	dbw TAIL_WHIP, TailWhipAnimationUnused
+	dbw GROWL, DoGrowlSpecialEffects
+	dbw DISABLE, AnimationFlashScreen
+	dbw BLIZZARD, DoBlizzardSpecialEffects
+	dbw BUBBLEBEAM, AnimationFlashScreen
+	dbw HYPER_BEAM, FlashScreenEveryFourFrameBlocks
+	dbw THUNDERBOLT, FlashScreenEveryEightFrameBlocks
+	dbw REFLECT, AnimationFlashScreen
+	dbw SELFDESTRUCT, DoExplodeSpecialEffects
+	dbw SPORE, FlashScreenEveryFourFrameBlocks
+	dbw EXPLOSION, DoExplodeSpecialEffects
+	dbw ROCK_SLIDE, DoRockSlideSpecialEffects
+	dbw TRADE_BALL_DROP_ANIM, TradeHidePokemon
+	dbw TRADE_BALL_SHAKE_ANIM, TradeShakePokeball
+	dbw TRADE_BALL_TILT_ANIM, TradeJumpPokeball
+	dbw TOSS_ANIM, DoBallTossSpecialEffects
+	dbw SHAKE_ANIM, DoBallShakeSpecialEffects
+	dbw POOF_ANIM, DoPoofSpecialEffects
+	dbw GREATTOSS_ANIM, DoBallTossSpecialEffects
+	dbw ULTRATOSS_ANIM, DoBallTossSpecialEffects
 	db $FF ; terminator
 
 DoBallTossSpecialEffects:

@@ -2909,7 +2909,7 @@ Func_3d4f5:
 	xor a
 	ld [wAnimationType], a
 	predef MoveAnimation
-	callab Func_78e98
+	callab BattleAnimation_BackUpTilesAndCopyTileMapToMapAndWindow
 	jp MoveSelectionMenu
 
 Func_3d523:
@@ -6893,7 +6893,7 @@ PlayMoveAnimation:
 	ld [wAnimationID], a
 	call Delay3
 	predef MoveAnimation
-	callab Func_78e98
+	callab BattleAnimation_BackUpTilesAndCopyTileMapToMapAndWindow
 	ret
 
 JumpMoveEffect:
@@ -8561,7 +8561,7 @@ PlayBattleAnimationGotID:
 	push de
 	push bc
 	predef MoveAnimation
-	callab Func_78e98
+	callab BattleAnimation_BackUpTilesAndCopyTileMapToMapAndWindow
 	pop bc
 	pop de
 	pop hl

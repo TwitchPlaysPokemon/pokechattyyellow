@@ -727,6 +727,12 @@ dutycycle: MACRO
 	db \1
 ENDM
 
+;format: jumpchannel address
+jumpchannel: MACRO
+	db $FC
+	dw \1
+ENDM
+
 ;format: callchannel address
 callchannel: MACRO
 	db $FD

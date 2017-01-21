@@ -166,10 +166,10 @@ Audio1_PlayNextNote:
 	call Audio1_EnableChannelOutput
 	ret
 .asm_918c
-	call Audio1_endchannel
+	call Audio1_ProcessMusicCommand
 	ret
 
-Audio1_endchannel: ; 0x91e6
+Audio1_ProcessMusicCommand: ; 0x91e6
 	call Audio1_GetNextMusicByte
 	ld d, a
 	cp $ff ; is this command an endchannel?
@@ -224,7 +224,7 @@ Audio1_endchannel: ; 0x91e6
 	inc de
 	ld a, [de]
 	ld [hl], a ; loads channel address to return to
-	jp Audio1_endchannel
+	jp Audio1_ProcessMusicCommand
 .disableChannelOutput
 	ld hl, Audio1_HWChannelDisableMasks
 	add hl, bc
@@ -294,7 +294,7 @@ Audio1_callchannel: ; 0x9274
 	ld hl, wChannelFlags1
 	add hl, bc
 	set BIT_CHANNEL_CALL, [hl] ; set the call flag
-	jp Audio1_endchannel
+	jp Audio1_ProcessMusicCommand
 
 Audio1_loopchannel: ; 0x92a9
 	cp $fe ; is this command a loopchannel?
@@ -313,7 +313,7 @@ Audio1_loopchannel: ; 0x92a9
 	ld [hl], a
 	call Audio1_GetNextMusicByte ; skip pointer
 	call Audio1_GetNextMusicByte
-	jp Audio1_endchannel
+	jp Audio1_ProcessMusicCommand
 .loopAgain ; inc loop count
 	inc a
 	ld [hl], a
@@ -332,7 +332,7 @@ Audio1_loopchannel: ; 0x92a9
 	pop af
 	ld [hli], a
 	ld [hl], b
-	jp Audio1_endchannel
+	jp Audio1_ProcessMusicCommand
 
 Audio1_notetype: ; 0x92e4
 	and $f0
@@ -376,7 +376,7 @@ Audio1_notetype: ; 0x92e4
 	add hl, bc
 	ld [hl], d
 .noiseChannel
-	jp Audio1_endchannel
+	jp Audio1_ProcessMusicCommand
 
 Audio1_toggleperfectpitch: ; 0x9323
 	ld a, d
@@ -388,7 +388,7 @@ Audio1_toggleperfectpitch: ; 0x9323
 	ld a, [hl]
 	xor $1
 	ld [hl], a ; flip bit 0 of wChannelFlags1
-	jp Audio1_endchannel
+	jp Audio1_ProcessMusicCommand
 
 Audio1_vibrato: ; 0x9335
 	cp $ea ; is this command a vibrato?
@@ -436,7 +436,7 @@ Audio1_vibrato: ; 0x9335
 	or d
 	ld [hl], a
 
-	jp Audio1_endchannel
+	jp Audio1_ProcessMusicCommand
 
 Audio1_pitchbend: ; 0x936d
 	cp $eb ; is this command a pitchbend?
@@ -480,7 +480,7 @@ Audio1_duty: ; 0x93a5
 	ld hl, wChannelDuties
 	add hl, bc
 	ld [hl], a ; store duty
-	jp Audio1_endchannel
+	jp Audio1_ProcessMusicCommand
 
 Audio1_tempo: ; 0x93ba
 	cp $ed ; is this command a tempo?
@@ -509,14 +509,14 @@ Audio1_tempo: ; 0x93ba
 	ld [wChannelNoteDelayCountersFractionalPart + 6], a
 	ld [wChannelNoteDelayCountersFractionalPart + 7], a
 .musicChannelDone
-	jp Audio1_endchannel
+	jp Audio1_ProcessMusicCommand
 
 Audio1_stereopanning: ; 0x93fa
 	cp $ee ; is this command a stereopanning?
 	jr nz, Audio1_unknownmusic0xef ; no
 	call Audio1_GetNextMusicByte
 	ld [wStereoPanning], a ; store panning
-	jp Audio1_endchannel
+	jp Audio1_ProcessMusicCommand
 
 ; this appears to never be used
 Audio1_unknownmusic0xef: ; 0x9407
@@ -535,7 +535,7 @@ Audio1_unknownmusic0xef: ; 0x9407
 	xor a
 	ld [wChannelSoundIDs + CH7], a
 .skip
-	jp Audio1_endchannel
+	jp Audio1_ProcessMusicCommand
 
 Audio1_dutycycle: ; 0x9426
 	cp $fc ; is this command a dutycycle?
@@ -552,14 +552,14 @@ Audio1_dutycycle: ; 0x9426
 	ld hl, wChannelFlags1
 	add hl, bc
 	set BIT_ROTATE_DUTY, [hl]
-	jp Audio1_endchannel
+	jp Audio1_ProcessMusicCommand
 
 Audio1_volume: ; 0x9444
 	cp $f0 ; is this command a volume?
 	jr nz, Audio1_executemusic ; no
 	call Audio1_GetNextMusicByte
 	ld [rNR50], a ; store volume
-	jp Audio1_endchannel
+	jp Audio1_ProcessMusicCommand
 
 Audio1_executemusic: ; 0x9450
 	cp $f8 ; is this command an executemusic?
@@ -568,7 +568,7 @@ Audio1_executemusic: ; 0x9450
 	ld hl, wChannelFlags2
 	add hl, bc
 	set BIT_EXECUTE_MUSIC, [hl]
-	jp Audio1_endchannel
+	jp Audio1_ProcessMusicCommand
 
 Audio1_octave: ; 0x945f
 	and $f0
@@ -580,7 +580,7 @@ Audio1_octave: ; 0x945f
 	ld a, d
 	and $f
 	ld [hl], a ; store low nibble as octave
-	jp Audio1_endchannel
+	jp Audio1_ProcessMusicCommand
 
 Audio1_unknownsfx0x20: ; 0x9472
 	cp $20 ; is this command an unknownsfx0x20?
@@ -648,7 +648,7 @@ Audio1_unknownsfx0x10:
 	jr nz, Audio1_note ; no
 	call Audio1_GetNextMusicByte
 	ld [rNR10], a
-	jp Audio1_endchannel
+	jp Audio1_ProcessMusicCommand
 
 Audio1_note:
 	ld a, c

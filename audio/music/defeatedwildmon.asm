@@ -1,3 +1,13 @@
+Music_DefeatedWildMon2_Ch1::
+	tempo 112
+	volume 7, 7
+	executemusic
+	duty 3
+	vibrato 6, 3, 4
+	toggleperfectpitch
+	tempo 112
+	loopchannel 0, Music_DefeatedWildMon_branch_23b8b
+
 Music_DefeatedWildMon_Ch1::
 	tempo 112
 	volume 7, 7
@@ -66,6 +76,11 @@ Music_DefeatedWildMon_branch_23b8b::
 	A_ 8
 	loopchannel 0, Music_DefeatedWildMon_branch_23b8b
 
+
+Music_DefeatedWildMon2_Ch2::
+	executemusic
+	duty 2
+	loopchannel 0, Music_DefeatedWildMon_branch_23bce
 
 Music_DefeatedWildMon_Ch2::
 	executemusic
@@ -141,6 +156,11 @@ Music_DefeatedWildMon_branch_23bce::
 	C_ 8
 	loopchannel 0, Music_DefeatedWildMon_branch_23bce
 
+
+Music_DefeatedWildMon2_Ch3::
+	executemusic
+	notetype 12, 2, 0
+	loopchannel 0, Music_DefeatedWildMon_branch_23c21
 
 Music_DefeatedWildMon_Ch3::
 	executemusic

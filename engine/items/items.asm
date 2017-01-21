@@ -633,7 +633,14 @@ ItemUseBallText05:
 ;"All right! {MonName} was caught!"
 ;play sound
 	TX_FAR _ItemUseBallText05
-	db $12, $06
+	TX_SFX_TURN_OFF_PC
+	TX_ASM
+	call StopAllMusic
+	callba Music_WinWildAlternateStart
+	ld hl, .done
+	ret
+.done
+	TX_BUTTON_SOUND
 	db "@"
 ItemUseBallText07:
 ;"X was transferred to Bill's PC"
@@ -648,7 +655,8 @@ ItemUseBallText06:
 ;"New DEX data will be added..."
 ;play sound
 	TX_FAR _ItemUseBallText06
-	db $13, $06
+	TX_SFX_TRADE_MACHINE
+	TX_BUTTON_SOUND
 	db "@"
 
 ItemUseTownMap:
