@@ -13,7 +13,7 @@ _LavenderTownText_44146::
 	line "not."
 
 	para "That white hand"
-	line "on your shoulder,"
+	line "on your shoulder, "
 	cont "it's not real."
 	done
 

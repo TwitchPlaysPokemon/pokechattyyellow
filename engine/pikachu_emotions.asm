@@ -362,9 +362,7 @@ PikachuWalksToNurseJoy:
 	call LoadPikachuSpriteIntoVRAM
 	call .GetMovementData
 	and a
-	jr z, .skip
-	call ApplyPikachuMovementData
-.skip
+	call nz, ApplyPikachuMovementData
 	xor a
 	ld [hLoadPikachuSpriteIntoTile4C], a
 	ret

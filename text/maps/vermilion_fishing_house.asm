@@ -38,7 +38,7 @@ _VermilionHouse2Text_560c0::
 	done
 
 _VermilionHouse2Text_560c5::
-	text "Hello there,"
+	text "Hello there, "
 	line $52, "!"
 
 	para "How are the fish"

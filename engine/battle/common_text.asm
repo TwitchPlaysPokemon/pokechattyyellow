@@ -8,13 +8,13 @@ PrintBeginningBattleText:
 	cp LAVENDER_HOUSE_1
 	jr c, .pokemonTower
 .notPokemonTower
-	ld a,[wBattleType]
+	ld a, [wBattleType]
 	cp BATTLE_TYPE_PIKACHU
-	jr nz,.notPikachuBattle
+	jr nz, .notPikachuBattle
 	callab IsPlayerPikachuAsleepInParty
-	ld e,$24
-	jr c,.asm_f4026
-	ld e,$a
+	ld e, $24
+	jr c, .asm_f4026
+	ld e, $a
 .asm_f4026
 	callab PlayPikachuSoundClip
 	jr .continue

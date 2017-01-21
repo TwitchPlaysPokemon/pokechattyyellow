@@ -67,8 +67,8 @@ EmotionBubble:
 
 
 EmotionBubblesOAM:
-	db $F8,$00,$F9,$00
-	db $FA,$00,$FB,$00
+	db $F8, $00,$F9,$00
+	db $FA, $00,$FB,$00
 
 EmotionBubbles:
 	INCBIN "gfx/emotion_bubbles.2bpp"

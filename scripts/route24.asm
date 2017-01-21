@@ -45,7 +45,7 @@ Route24Script0:
 	ret
 
 CoordsData_5140e:
-	db $0F,$0A,$FF
+	db $0F, $0A,$FF
 
 Route24Script4:
 	ld a, [wSimulatedJoypadStatesIndex]

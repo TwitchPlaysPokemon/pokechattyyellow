@@ -31,8 +31,8 @@ Route22GateScript0:
 	ret
 
 Route22GateScriptCoords:
-	db 2,4
-	db 2,5
+	db 2, 4
+	db 2, 5
 	db $ff
 
 Route22GateScript_1e6ba:

@@ -2,15 +2,15 @@ FarCall = $08
 Bankswitch = $10
 Jumptable = $28
 
-text   EQUS "db $00," ; Start writing text.
-next   EQUS "db $4e," ; Move a line down.
-line   EQUS "db $4f," ; Start writing at the bottom line.
-para   EQUS "db $51," ; Start a new paragraph.
-cont   EQUS "db $55," ; Scroll to the next line.
+text   EQUS "db $00, " ; Start writing text.
+next   EQUS "db $4e, " ; Move a line down.
+line   EQUS "db $4f, " ; Start writing at the bottom line.
+para   EQUS "db $51, " ; Start a new paragraph.
+cont   EQUS "db $55, " ; Scroll to the next line.
 done   EQUS "db $57"  ; End a text box.
 prompt EQUS "db $58"  ; Prompt the player to end a text box (initiating some other event).
 
-page   EQUS "db $49,"     ; Start a new Pokedex page.
+page   EQUS "db $49, "     ; Start a new Pokedex page.
 dex    EQUS "db $5f, $50" ; End a Pokedex entry.
 
 
@@ -151,8 +151,8 @@ x = x / 100
 	endr
 	endm
 
-coins equs "bcd 2,"
-money equs "bcd 3,"
+coins equs "bcd 2, "
+money equs "bcd 3, "
 
 validateCoords: MACRO
 	if \1 >= SCREEN_WIDTH
@@ -225,17 +225,17 @@ overworldMapCoord: MACRO
 ;\3 = X movement (X-blocks)
 EVENT_DISP: MACRO
 	dw (wOverworldMap + 7 + (\1) + ((\1) + 6) * ((\2) >> 1) + ((\3) >> 1)) ; Ev.Disp
-	db \2,\3	;Y,X
+	db \2, \3	;Y, X
 	ENDM
 
 FLYWARP_DATA: MACRO
-	EVENT_DISP \1,\2,\3
+	EVENT_DISP \1, \2,\3
 	db ((\2) & $01)	;sub-block Y
 	db ((\3) & $01)	;sub-block X
 	ENDM
 
 ; external map entry macro
-EMAP: MACRO ; emap x-coordinate,y-coordinate,textpointer
+EMAP: MACRO ; emap x-coordinate, y-coordinate,textpointer
 ; the appearance of towns and routes in the town map, indexed by map id
 	; nybble: y-coordinate
 	; nybble: x-coordinate
@@ -245,7 +245,7 @@ EMAP: MACRO ; emap x-coordinate,y-coordinate,textpointer
 	ENDM
 
 ; internal map entry macro
-IMAP: MACRO ; imap mapid_less_than,x-coordinate,y-coordinate,textpointer
+IMAP: MACRO ; imap mapid_less_than, x-coordinate,y-coordinate,textpointer
 ; the appearance of buildings and dungeons in the town map
 	; byte  : maximum map id subject to this rule
 	; nybble: y-coordinate

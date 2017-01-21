@@ -1535,7 +1535,7 @@ SurfingMinigame_PrintTextHiScore:
 	ret
 
 .Hi_Score:
-	db $20,$2e,$2f,$30,$31,$2c,$32,$23,$33 ; Hi-Score!!
+	db $20, $2e,$2f,$30,$31,$2c,$32,$23,$33 ; Hi-Score!!
 
 SurfingMinigame_WriteHPLeft:
 	ld hl, .HP_Left
@@ -1546,7 +1546,7 @@ SurfingMinigame_WriteHPLeft:
 	ret
 
 .HP_Left:
-	db $20,$21,$ff,$22,$23,$24,$25 ; HP Left
+	db $20, $21,$ff,$22,$23,$24,$25 ; HP Left
 
 SurfingMinigame_AddRemainingHPToTotal:
 	ld c, 99
@@ -1599,7 +1599,7 @@ SurfingMinigame_WriteRadness:
 	ret
 
 .Radness:
-	db $27,$28,$29,$2a,$23,$26,$26 ; Radness
+	db $27, $28,$29,$2a,$23,$26,$26 ; Radness
 
 SurfingMinigame_AddRadnessToTotal:
 	ld c, 99
@@ -1692,7 +1692,7 @@ SurfingMinigame_WriteTotal:
 	ret
 
 .Total:
-	db $2b,$2c,$25,$28,$2d ; Total
+	db $2b, $2c,$25,$28,$2d ; Total
 	
 DidPlayerGetAHighScore:
 	ld hl, wSurfingMinigameHiScore + 1
@@ -2147,7 +2147,7 @@ SurfingMinigameWaveFunction_NoWave:
 	ret
 
 Unkn_f8e75:
-	db $01,$0e,$1a,$29,$32,$40,$4d,$5c
+	db $01, $0e,$1a,$29,$32,$40,$4d,$5c
 
 Func_f8e7d:
 	lb bc, $74, $74

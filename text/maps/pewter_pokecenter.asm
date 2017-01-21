@@ -16,7 +16,7 @@ _PewterPokecenterText3::
 	line "completely."
 
 	para "Even conditions"
-	line "like sleep, burn,"
+	line "like sleep, burn, "
 	cont "poison and others"
 	cont "are cured."
 	done

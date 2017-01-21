@@ -69,17 +69,13 @@ LoadPikachuMovementCommandData:
 	ld [wCurPikaMovementFunc1], a
 	ld a, [hli]
 	cp $80
-	jr nz, .no_param
-	call GetPikachuMovementScriptByte
-.no_param
+	call z, GetPikachuMovementScriptByte
 	ld [wCurPikaMovementParam1], a
 	ld a, [hli]
 	ld [wCurPikaMovementFunc2], a
 	ld a, [hli]
 	cp $80
-	jr nz, .no_param2
-	call GetPikachuMovementScriptByte
-.no_param2
+	call z, GetPikachuMovementScriptByte
 	ld [wCurPikaMovementParam2], a
 	xor a
 	ld [wd451], a

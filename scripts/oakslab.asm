@@ -106,7 +106,7 @@ OaksLabScript3:
 	ret
 
 PlayerEntryMovementRLE:
-	db D_UP,$8
+	db D_UP, $8
 	db $ff
 
 OaksLabScript4:

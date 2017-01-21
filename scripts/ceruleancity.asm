@@ -64,9 +64,7 @@ CeruleanCityScript0:
 	ret nc
 	ld a, [wWalkBikeSurfState]
 	and a
-	jr z, .asm_19512
-	call StopAllMusic
-.asm_19512
+	call nz, StopAllMusic
 	ld c, BANK(Music_MeetRival)
 	ld a, MUSIC_MEET_RIVAL
 	call PlayMusic
@@ -96,13 +94,13 @@ CeruleanCityScript0:
 	ret
 
 CeruleanCityCoords1:
-	db $07,$1e
-	db $09,$1e
+	db $07, $1e
+	db $09, $1e
 	db $ff
 
 CeruleanCityCoords2:
-	db $06,$14
-	db $06,$15
+	db $06, $14
+	db $06, $15
 	db $ff
 
 CeruleanCityMovement1:
@@ -112,10 +110,10 @@ CeruleanCityMovement1:
 	db $FF
 
 CeruleanCityScript_1955d:
-	ld a,1
-	ld [hSpriteIndexOrTextID],a
+	ld a, 1
+	ld [hSpriteIndexOrTextID], a
 	xor a ; SPRITE_FACING_DOWN
-	ld [hSpriteFacingDirection],a
+	ld [hSpriteFacingDirection], a
 	jp SetSpriteFacingDirectionAndDelay ; face object
 
 CeruleanCityScript1:

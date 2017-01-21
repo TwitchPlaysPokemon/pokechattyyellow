@@ -1,6 +1,6 @@
 _ViridianHouseText1::
 	text "Coming up with"
-	line "nicknames is fun,"
+	line "nicknames is fun, "
 	cont "but hard."
 
 	para "Simple names are"

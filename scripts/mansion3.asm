@@ -51,9 +51,9 @@ Mansion3Script0:
 	ret
 
 CoordsData_52254:
-	db $0E,$10
-	db $0E,$11
-	db $0E,$13
+	db $0E, $10
+	db $0E, $11
+	db $0E, $13
 	db $FF
 
 Mansion3Script_5225b:

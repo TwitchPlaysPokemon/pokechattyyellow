@@ -68,7 +68,7 @@ VBlank::
 	ld [MBC5RomBank], a
 
 	pop af
-	ld [rVBK],a
+	ld [rVBK], a
 
 	pop hl
 	pop de

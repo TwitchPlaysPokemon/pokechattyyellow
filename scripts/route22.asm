@@ -89,9 +89,7 @@ Route22Script0:
 	predef EmotionBubble
 	ld a, [wWalkBikeSurfState]
 	and a
-	jr z, .asm_50f4e
-	call StopAllMusic
-.asm_50f4e
+	call nz, StopAllMusic
 	ld c, BANK(Music_MeetRival)
 	ld a, MUSIC_MEET_RIVAL
 	call PlayMusic
@@ -243,9 +241,7 @@ Route22Script_5104e:
 	predef EmotionBubble
 	ld a, [wWalkBikeSurfState]
 	and a
-	jr z, .skipYVisibilityTesta
-	call StopAllMusic
-.skipYVisibilityTesta
+	call nz, StopAllMusic
 	call StopAllMusic
 	callba Music_RivalAlternateTempo
 	ld a, $2

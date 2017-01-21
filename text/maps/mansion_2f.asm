@@ -17,7 +17,7 @@ _Mansion2AfterBattleText1::
 
 _Mansion2Text3::
 	text "Diary: July 5"
-	line "Guyana,"
+	line "Guyana, "
 	cont "South America"
 
 	para "A new #MON was"

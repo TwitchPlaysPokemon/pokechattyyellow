@@ -28,7 +28,7 @@ _FuchsiaHouse3Text_56212::
 	done
 
 _FuchsiaHouse3Text_56217::
-	text "Hello there,"
+	text "Hello there, "
 	line $52, "!"
 
 	para "How are the fish"

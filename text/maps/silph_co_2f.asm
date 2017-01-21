@@ -5,7 +5,7 @@ _SilphCo2Text_59ded::
 	para "Oh, you're not"
 	line "with TEAM ROCKET."
 	cont "I thought..."
-	cont "I'm sorry. Here,"
+	cont "I'm sorry. Here, "
 	cont "please take this!"
 	prompt
 

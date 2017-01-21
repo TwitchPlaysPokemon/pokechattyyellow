@@ -34,101 +34,101 @@ RocketHideout3Script0:
 	ret
 
 ;format:
-;db y,x
+;db y, x
 ;dw pointer to movement
 RocketHideout3ArrowTilePlayerMovement:
-	db $d,$a
+	db $d, $a
 	dw RocketHideout3ArrowMovement6
-	db $13,$a
+	db $13, $a
 	dw RocketHideout3ArrowMovement1
-	db $12,$b
+	db $12, $b
 	dw RocketHideout3ArrowMovement2
-	db $b,$c
+	db $b, $c
 	dw RocketHideout3ArrowMovement3
-	db $11,$c
+	db $11, $c
 	dw RocketHideout3ArrowMovement4
-	db $14,$c
+	db $14, $c
 	dw RocketHideout3ArrowMovement5
-	db $10,$d
+	db $10, $d
 	dw RocketHideout3ArrowMovement6
-	db $b,$e
+	db $b, $e
 	dw RocketHideout3ArrowMovement7
-	db $f,$e
+	db $f, $e
 	dw RocketHideout3ArrowMovement6
-	db $11,$e
+	db $11, $e
 	dw RocketHideout3ArrowMovement8
-	db $13,$e
+	db $13, $e
 	dw RocketHideout3ArrowMovement9
-	db $10,$f
+	db $10, $f
 	dw RocketHideout3ArrowMovement7
-	db $12,$f
+	db $12, $f
 	dw RocketHideout3ArrowMovement10
-	db $d,$10
+	db $d, $10
 	dw RocketHideout3ArrowMovement11
-	db $c,$11
+	db $c, $11
 	dw RocketHideout3ArrowMovement10
-	db $10,$12
+	db $10, $12
 	dw RocketHideout3ArrowMovement12
 	db $FF
 
 ;format: direction, count
 ;each list is read starting from the $FF and working backwards
 RocketHideout3ArrowMovement1:
-	db D_RIGHT,$04
-	db D_UP,$04
-	db D_RIGHT,$04
+	db D_RIGHT, $04
+	db D_UP, $04
+	db D_RIGHT, $04
 	db $FF
 
 RocketHideout3ArrowMovement2:
-	db D_DOWN,$04
-	db D_RIGHT,$04
+	db D_DOWN, $04
+	db D_RIGHT, $04
 	db $FF
 
 RocketHideout3ArrowMovement3:
-	db D_LEFT,$02
+	db D_LEFT, $02
 	db $FF
 
 RocketHideout3ArrowMovement4:
-	db D_RIGHT,$04
-	db D_UP,$02
-	db D_RIGHT,$02
+	db D_RIGHT, $04
+	db D_UP, $02
+	db D_RIGHT, $02
 	db $FF
 
 RocketHideout3ArrowMovement5:
-	db D_RIGHT,$04
-	db D_UP,$02
-	db D_RIGHT,$02
-	db D_UP,$03
+	db D_RIGHT, $04
+	db D_UP, $02
+	db D_RIGHT, $02
+	db D_UP, $03
 	db $FF
 
 RocketHideout3ArrowMovement6:
-	db D_RIGHT,$04
+	db D_RIGHT, $04
 	db $FF
 
 RocketHideout3ArrowMovement7:
-	db D_RIGHT,$02
+	db D_RIGHT, $02
 	db $FF
 
 RocketHideout3ArrowMovement8:
-	db D_RIGHT,$04
-	db D_UP,$02
+	db D_RIGHT, $04
+	db D_UP, $02
 	db $FF
 
 RocketHideout3ArrowMovement9:
-	db D_RIGHT,$04
-	db D_UP,$04
+	db D_RIGHT, $04
+	db D_UP, $04
 	db $FF
 
 RocketHideout3ArrowMovement10:
-	db D_DOWN,$04
+	db D_DOWN, $04
 	db $FF
 
 RocketHideout3ArrowMovement11:
-	db D_UP,$02
+	db D_UP, $02
 	db $FF
 
 RocketHideout3ArrowMovement12:
-	db D_UP,$01
+	db D_UP, $01
 	db $FF
 
 RocketHideout3Script3:

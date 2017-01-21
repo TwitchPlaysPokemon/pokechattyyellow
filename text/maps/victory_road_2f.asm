@@ -12,7 +12,7 @@ _VictoryRoad2EndBattleText1::
 	prompt
 
 _VictoryRoad2AfterBattleText1::
-	text "If you get stuck,"
+	text "If you get stuck, "
 	line "try moving some"
 	cont "boulders around!"
 	done

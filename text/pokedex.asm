@@ -170,7 +170,7 @@ _PidgeottoDexEntry::
 
 _PidgeotDexEntry::
 	text "This #MON flies"
-	next "at Mach 2 speed,"
+	next "at Mach 2 speed, "
 	next "seeking prey."
 
 	page "Its large talons"
@@ -219,9 +219,9 @@ _FearowDexEntry::
 	dex
 
 _EkansDexEntry::
-	text "The older it gets,"
+	text "The older it gets, "
 	next "the longer it"
-	next "grows. At night,"
+	next "grows. At night, "
 
 	page "it wraps its long"
 	next "body around tree"
@@ -370,7 +370,7 @@ _VulpixDexEntry::
 
 _NinetalesDexEntry::
 	text "According to an"
-	next "enduring legend,"
+	next "enduring legend, "
 	next "9 noble saints"
 
 	page "were united and"
@@ -391,7 +391,7 @@ _JigglypuffDexEntry::
 _WigglytuffDexEntry::
 	text "Its body is full"
 	next "of elasticity. By"
-	next "inhaling deeply,"
+	next "inhaling deeply, "
 
 	page "it can continue"
 	next "to inflate itself"
@@ -410,7 +410,7 @@ _ZubatDexEntry::
 
 _GolbatDexEntry::
 	text "It attacks in a"
-	next "stealthy manner,"
+	next "stealthy manner, "
 	next "without warning."
 
 	page "Its sharp fangs"
@@ -430,10 +430,10 @@ _OddishDexEntry::
 
 _GloomDexEntry::
 	text "Smells incredibly"
-	next "foul! However,"
+	next "foul! However, "
 	next "around 1 out of"
 
-	page "1,000 people enjoy"
+	page "1, 000 people enjoy"
 	next "sniffing its nose-"
 	next "bending stink"
 	dex
@@ -493,7 +493,7 @@ _DiglettDexEntry::
 	next "places. It spends"
 	next "most of its time"
 
-	page "underground,"
+	page "underground, "
 	next "though it may pop"
 	next "up in caves"
 	dex
@@ -633,7 +633,7 @@ _KadabraDexEntry::
 	next "happen if this"
 	next "#MON is close"
 
-	page "by. For example,"
+	page "by. For example, "
 	next "it makes clocks"
 	next "run backwards"
 	dex
@@ -704,7 +704,7 @@ _VictreebelDexEntry::
 	next "honey. Swallowed"
 
 	page "whole, the prey is"
-	next "melted in a day,"
+	next "melted in a day, "
 	next "bones and all"
 	dex
 
@@ -734,7 +734,7 @@ _GeodudeDexEntry::
 	next "trails, etc."
 
 	page "If you step on"
-	next "one by accident,"
+	next "one by accident, "
 	next "it gets angry"
 	dex
 
@@ -793,7 +793,7 @@ _SlowbroDexEntry::
 	next "the sea. If the"
 	next "SHELLDER on its"
 
-	page "tail comes off,"
+	page "tail comes off, "
 	next "it becomes a"
 	next "SLOWPOKE again"
 	dex
@@ -815,13 +815,13 @@ _MagnetonDexEntry::
 
 	page "perature by 3.6F"
 	next "degrees within"
-	next "3,300 feet"
+	next "3, 300 feet"
 	dex
 
 _FarfetchdDexEntry::
 	text "Lives where reedy"
 	next "plants grow. They"
-	next "are rarely seen,"
+	next "are rarely seen, "
 
 	page "so it's thought"
 	next "their numbers are"
@@ -831,7 +831,7 @@ _FarfetchdDexEntry::
 _DoduoDexEntry::
 	text "Its short wings"
 	next "make flying dif-"
-	next "ficult. Instead,"
+	next "ficult. Instead, "
 
 	page "this #MON runs"
 	next "at high speed on"
@@ -879,7 +879,7 @@ _GrimerDexEntry::
 	dex
 
 _MukDexEntry::
-	text "Smells so awful,"
+	text "Smells so awful, "
 	next "it can cause"
 	next "fainting. Through"
 
@@ -891,9 +891,9 @@ _MukDexEntry::
 _ShellderDexEntry::
 	text "The shell can"
 	next "withstand any"
-	next "attack. However,"
+	next "attack. However, "
 
-	page "when it is open,"
+	page "when it is open, "
 	next "the tender body"
 	next "is exposed"
 	dex
@@ -950,7 +950,7 @@ _OnixDexEntry::
 
 _DrowzeeDexEntry::
 	text "If you sleep by"
-	next "it all the time,"
+	next "it all the time, "
 	next "it will sometimes"
 
 	page "show you dreams"
@@ -983,8 +983,8 @@ _KinglerDexEntry::
 	next "massively and as"
 	next "hard as steel."
 
-	page "It has 10,000-HP"
-	next "strength. However,"
+	page "It has 10, 000-HP"
+	next "strength. However, "
 	next "it is too heavy"
 	dex
 
@@ -1039,7 +1039,7 @@ _CuboneDexEntry::
 	dex
 
 _MarowakDexEntry::
-	text "Small and weak,"
+	text "Small and weak, "
 	next "this #MON is"
 	next "adept with its"
 
@@ -1089,7 +1089,7 @@ _KoffingDexEntry::
 
 _WeezingDexEntry::
 	text "It lives and grows"
-	next "by absorbing dust,"
+	next "by absorbing dust, "
 	next "germs and poison"
 
 	page "gases that are"
@@ -1282,7 +1282,7 @@ _MagikarpDexEntry::
 	next "very unreliable."
 	next "It can be found"
 
-	page "swimming in seas,"
+	page "swimming in seas, "
 	next "lakes, rivers and"
 	next "shallow puddles"
 	dex
@@ -1343,18 +1343,18 @@ _JolteonDexEntry::
 	next "becomes sad or"
 
 	page "angry. Every time"
-	next "its mood changes,"
+	next "its mood changes, "
 	next "it charges power"
 	dex
 
 _FlareonDexEntry::
 	text "It has a flame"
 	next "chamber inside its"
-	next "body. It inhales,"
+	next "body. It inhales, "
 
 	page "then blows out"
 	next "fire that is over"
-	next "3,000F degrees"
+	next "3, 000F degrees"
 	dex
 
 _PorygonDexEntry::
@@ -1418,7 +1418,7 @@ _AerodactylDexEntry::
 	dex
 
 _SnorlaxDexEntry::
-	text "Will eat anything,"
+	text "Will eat anything, "
 	next "even if the food"
 	next "happens to be a"
 
@@ -1502,7 +1502,7 @@ _MewDexEntry::
 	next "through a micro-"
 	next "scope, this"
 
-	page "#MON's short,"
+	page "#MON's short, "
 	next "fine, delicate"
 	next "hair can be seen"
 	dex

@@ -38,7 +38,7 @@ _Route12HouseText_564cf::
 	done
 
 _Route12HouseText_564d4::
-	text "Hello there,"
+	text "Hello there, "
 	line $52, "!"
 
 	para "Use the SUPER ROD"

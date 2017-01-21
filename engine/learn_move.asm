@@ -184,7 +184,7 @@ TryingToLearn:
 
 LearnedMove1Text:
 	TX_FAR _LearnedMove1Text
-	db $b,6,"@"
+	db $b, 6,"@"
 
 WhichMoveToForgetText:
 	TX_FAR _WhichMoveToForgetText

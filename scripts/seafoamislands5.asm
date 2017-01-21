@@ -55,10 +55,10 @@ SeafoamIslands5Script0:
 	ret
 
 .Coords
-	db $11,$14
-	db $11,$15
-	db $10,$14
-	db $10,$15
+	db $11, $14
+	db $11, $15
+	db $10, $14
+	db $10, $15
 	db $FF
 
 SeafoamIslands5Script1:
@@ -98,20 +98,20 @@ SeafoamIslands5Script2:
 	ret
 
 .Coords
-	db $0E,$04
-	db $0E,$05
+	db $0E, $04
+	db $0E, $05
 	db $FF
 
 RLEMovementData_46852:
-	db D_UP,$03
-	db D_RIGHT,$02
-	db D_UP,$01
+	db D_UP, $03
+	db D_RIGHT, $02
+	db D_UP, $01
 	db $FF
 
 RLEMovementData_46859:
-	db D_UP,$03
-	db D_RIGHT,$03
-	db D_UP,$01
+	db D_UP, $03
+	db D_RIGHT, $03
+	db D_UP, $01
 	db $FF
 
 SeafoamIslands5Script3:

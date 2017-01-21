@@ -93,13 +93,13 @@ DisplayTitleScreen:
 
 .TitleScreenPokemonLogoYScrolls:
 ; Controls the bouncing effect of the Pokemon logo on the title screen
-	db -4,16  ; y scroll amount, number of times to scroll
-	db 3,4
-	db -3,4
-	db 2,2
-	db -2,2
-	db 1,2
-	db -1,2
+	db -4, 16  ; y scroll amount, number of times to scroll
+	db 3, 4
+	db -3, 4
+	db 2, 2
+	db -2, 2
+	db 1, 2
+	db -1, 2
 	db 0      ; terminate list with 0
 
 .ScrollTitleScreenPokemonLogo:
@@ -126,7 +126,7 @@ DisplayTitleScreen:
 	jr .titleScreenCopyrightTilesLoop
 
 .tileScreenCopyrightTiles ; 424f (1:424f)
-	db $e0,$e1,$e2,$e3,$e1,$e2,$ee,$e5,$e6,$e7,$e8,$e9,$ea,$eb,$ec,$ed,$ff ; ©1995-1999 GAME FREAK inc.
+	db $e0, $e1,$e2,$e3,$e1,$e2,$ee,$e5,$e6,$e7,$e8,$e9,$ea,$eb,$ec,$ed,$ff ; ©1995-1999 GAME FREAK inc.
 
 .finishedBouncingPokemonLogo ; 4260 (1:4260)
 	call LoadScreenTilesFromBuffer1
@@ -246,9 +246,9 @@ LoadCopyrightTiles:
 	jp PlaceString
 
 CopyrightTextString:
-	db   $60,$61,$62,$63,$61,$62,$7c,$7f,$65,$66,$67,$68,$69,$6a			 ; ©1995-1999  Nintendo
-	next $60,$61,$62,$63,$61,$62,$7c,$7f,$6b,$6c,$6d,$6e,$6f,$70,$71,$72	 ; ©1995-1999  Creatures inc.
-	next $60,$61,$62,$63,$61,$62,$7c,$7f,$73,$74,$75,$76,$77,$78,$79,$7a,$7b ; ©1995-1999  GAME FREAK inc.
+	db   $60, $61,$62,$63,$61,$62,$7c,$7f,$65,$66,$67,$68,$69,$6a			 ; ©1995-1999  Nintendo
+	next $60, $61,$62,$63,$61,$62,$7c,$7f,$6b,$6c,$6d,$6e,$6f,$70,$71,$72	 ; ©1995-1999  Creatures inc.
+	next $60, $61,$62,$63,$61,$62,$7c,$7f,$73,$74,$75,$76,$77,$78,$79,$7a,$7b ; ©1995-1999  GAME FREAK inc.
 	db   "@"
 
 TitleScreen_PlayPikachuPCM:

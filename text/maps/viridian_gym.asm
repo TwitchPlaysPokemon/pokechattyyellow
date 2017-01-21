@@ -71,7 +71,7 @@ _TM27ExplanationText::
 	cont "one hit!"
 
 	para "I made it when I"
-	line "ran the GYM here,"
+	line "ran the GYM here, "
 	cont "too long ago..."
 	done
 

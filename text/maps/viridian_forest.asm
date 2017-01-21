@@ -68,12 +68,12 @@ _ViridianForestBattleTextPikaGirl::
 	done
 
 _ViridianForestEndBattleTextPikaGirl::
-	text "Oh no,"
+	text "Oh no, "
 	line "really?"
 	prompt
 
 _ViridianForestAfterBattleTextPikaGirl::
-	text "I looked forever,"
+	text "I looked forever, "
 	line "but I never found"
 	cont "a PIKACHU here!"
 	done
@@ -109,7 +109,7 @@ _ViridianForestText9::
 	text "TRAINER TIPS"
 
 	para "If you want to"
-	line "avoid battles,"
+	line "avoid battles, "
 	cont "stay away from"
 	cont "grassy areas!"
 	done
@@ -146,7 +146,7 @@ _ViridianForestText13::
 	line "before attempting"
 	cont "capture!"
 
-	para "When healthy,"
+	para "When healthy, "
 	line "they may escape!"
 	done
 

@@ -171,8 +171,8 @@ _CeladonGymEndBattleText6::
 	prompt
 
 _CeladonGymAfterBattleText6::
-	text "Our LEADER, ERIKA,"
-	line "might be quiet,"
+	text "Our LEADER, ERIKA, "
+	line "might be quiet, "
 	cont "but she's also"
 	cont "very skilled!"
 	done

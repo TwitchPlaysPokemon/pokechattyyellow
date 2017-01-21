@@ -10,7 +10,7 @@ _Route14EndBattleText1::
 	prompt
 
 _Route14AfterBattleText1::
-	text "You have some HMs,"
+	text "You have some HMs, "
 	line "right? #MON"
 	cont "can't ever forget"
 	cont "those moves."
@@ -40,7 +40,7 @@ _Route14BattleText3::
 	done
 
 _Route14EndBattleText3::
-	text "Aww,"
+	text "Aww, "
 	line "bummer!"
 	prompt
 
@@ -85,7 +85,7 @@ _Route14AfterBattleText5::
 	done
 
 _Route14BattleText6::
-	text "I'm not into it,"
+	text "I'm not into it, "
 	line "but OK! Let's go!"
 	done
 
@@ -95,7 +95,7 @@ _Route14EndBattleText6::
 	prompt
 
 _Route14AfterBattleText6::
-	text "Winning, losing,"
+	text "Winning, losing, "
 	line "it doesn't matter"
 	cont "in the long run!"
 	done

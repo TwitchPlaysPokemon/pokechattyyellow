@@ -46,8 +46,8 @@ SeafoamIslands4Script:
 	ret
 
 Seafoam4HolesCoords:
-	db $10,$03
-	db $10,$06
+	db $10, $03
+	db $10, $06
 	db $ff
 
 SeafoamIslands4ScriptPointers:
@@ -78,9 +78,9 @@ SeafoamIslands4Script0:
 	ret
 
 RLEMovement46632:
-	db D_DOWN,6
-	db D_RIGHT,5
-	db D_DOWN,3
+	db D_DOWN, 6
+	db D_RIGHT, 5
+	db D_DOWN, 3
 	db $ff
 
 SeafoamIslands4Script1:
@@ -121,16 +121,16 @@ SeafoamIslands4Script2:
 	ret
 
 RLEData_4667f:
-	db D_DOWN,$06
-	db D_RIGHT,$02
-	db D_DOWN,$04
-	db D_LEFT,$01
+	db D_DOWN, $06
+	db D_RIGHT, $02
+	db D_DOWN, $04
+	db D_LEFT, $01
 	db $FF
 
 RLEData_46688:
-	db D_DOWN,$06
-	db D_RIGHT,$02
-	db D_DOWN,$04
+	db D_DOWN, $06
+	db D_RIGHT, $02
+	db D_DOWN, $04
 	db $FF
 
 SeafoamIslands4Script3:

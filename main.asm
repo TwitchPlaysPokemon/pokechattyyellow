@@ -15,7 +15,7 @@ PICS_5 EQU $D
 INCLUDE "home.asm"
 
 
-SECTION "bank01",ROMX,BANK[$01]
+SECTION "bank01", ROMX,BANK[$01]
 
 INCLUDE "data/facing.asm"
 
@@ -67,7 +67,7 @@ INCLUDE "engine/remove_pokemon.asm"
 INCLUDE "engine/display_pokedex.asm"
 
 
-SECTION "bank03",ROMX,BANK[$03]
+SECTION "bank03", ROMX,BANK[$03]
 
 INCLUDE "engine/joypad.asm"
 
@@ -233,7 +233,7 @@ INCLUDE "engine/battle/moveEffects/substitute_effect.asm"
 INCLUDE "engine/menu/pc.asm"
 
 
-SECTION "bank06",ROMX,BANK[$06]
+SECTION "bank06", ROMX,BANK[$06]
 
 INCLUDE "data/mapHeaders/celadoncity.asm"
 INCLUDE "data/mapObjects/celadoncity.asm"
@@ -306,7 +306,7 @@ INCLUDE "engine/overworld/doors.asm"
 INCLUDE "engine/overworld/ledges.asm"
 
 
-SECTION "bank07",ROMX,BANK[$07]
+SECTION "bank07", ROMX,BANK[$07]
 
 INCLUDE "data/mapHeaders/cinnabarisland.asm"
 INCLUDE "data/mapObjects/cinnabarisland.asm"
@@ -830,7 +830,7 @@ INCLUDE "engine/slot_machine.asm"
 INCLUDE "engine/game_corner_slots.asm"
 
 
-SECTION "bank0E",ROMX,BANK[$0E]
+SECTION "bank0E", ROMX,BANK[$0E]
 
 INCLUDE "data/moves.asm"
 BaseStats: INCLUDE "data/base_stats.asm"
@@ -850,12 +850,12 @@ TradingAnimationGraphics2End:
 INCLUDE "engine/evos_moves.asm"
 
 
-SECTION "bank0F",ROMX,BANK[$0F]
+SECTION "bank0F", ROMX,BANK[$0F]
 
 INCLUDE "engine/battle/core.asm"
 
 
-SECTION "bank10",ROMX,BANK[$10]
+SECTION "bank10", ROMX,BANK[$10]
 
 INCLUDE "engine/menu/pokedex.asm"
 INCLUDE "engine/overworld/emotion_bubbles.asm"
@@ -865,7 +865,7 @@ INCLUDE "engine/trade2.asm"
 INCLUDE "engine/menu/options.asm"
 
 
-SECTION "bank11",ROMX,BANK[$11]
+SECTION "bank11", ROMX,BANK[$11]
 
 INCLUDE "data/mapHeaders/lavendertown.asm"
 INCLUDE "data/mapObjects/lavendertown.asm"
@@ -1013,7 +1013,7 @@ SeafoamIslands5Blocks: INCBIN "maps/seafoamislands5.blk"
 INCLUDE "engine/overworld/dungeon_warps.asm"
 
 
-SECTION "bank12",ROMX,BANK[$12]
+SECTION "bank12", ROMX,BANK[$12]
 
 INCLUDE "data/mapHeaders/route7.asm"
 INCLUDE "data/mapObjects/route7.asm"
@@ -1187,7 +1187,7 @@ INCLUDE "data/mapObjects/safarizonesecrethouse.asm"
 SafariZoneSecretHouseBlocks: INCBIN "maps/safarizonesecrethouse.blk"
 
 
-SECTION "bank13",ROMX,BANK[$13]
+SECTION "bank13", ROMX,BANK[$13]
 
 TrainerPics:
 YoungsterPic:     INCBIN "pic/trainer/youngster.pic"
@@ -1253,7 +1253,7 @@ INCLUDE "data/mapObjects/colosseum.asm"
 ColosseumBlocks: INCBIN "maps/colosseum.blk"
 
 
-SECTION "bank14",ROMX,BANK[$14]
+SECTION "bank14", ROMX,BANK[$14]
 
 INCLUDE "data/mapHeaders/route22.asm"
 INCLUDE "data/mapObjects/route22.asm"
@@ -1327,7 +1327,7 @@ INCLUDE "engine/menu/prize_menu.asm"
 INCLUDE "engine/hidden_object_functions14.asm"
 
 
-SECTION "bank15",ROMX,BANK[$15]
+SECTION "bank15", ROMX,BANK[$15]
 
 INCLUDE "data/mapHeaders/route2.asm"
 INCLUDE "data/mapObjects/route2.asm"
@@ -1418,7 +1418,7 @@ INCLUDE "engine/menu/diploma_1.asm"
 INCLUDE "engine/overworld/trainers.asm"
 
 
-SECTION "bank16",ROMX,BANK[$16]
+SECTION "bank16", ROMX,BANK[$16]
 
 INCLUDE "data/mapHeaders/route6.asm"
 INCLUDE "data/mapObjects/route6.asm"
@@ -1502,7 +1502,7 @@ HallofFameRoomBlocks: INCBIN "maps/halloffameroom.blk"
 INCLUDE "engine/overworld/saffron_guards.asm"
 
 
-SECTION "bank17",ROMX,BANK[$17]
+SECTION "bank17", ROMX,BANK[$17]
 
 CeruleanMartBlocks:
 VermilionMartBlocks:
@@ -1654,7 +1654,7 @@ INCLUDE "engine/predefs17_2.asm"
 INCLUDE "engine/hidden_object_functions17.asm"
 
 
-SECTION "bank18",ROMX,BANK[$18]
+SECTION "bank18", ROMX,BANK[$18]
 
 ViridianForestBlocks: INCBIN "maps/viridianforest.blk"
 UndergroundPathNSBlocks: INCBIN "maps/undergroundpathns.blk"
@@ -1772,7 +1772,7 @@ SilphCo11Blocks: INCBIN "maps/silphco11.blk"
 INCLUDE "engine/hidden_object_functions18.asm"
 
 
-SECTION "bank19",ROMX,BANK[$19]
+SECTION "bank19", ROMX,BANK[$19]
 
 Overworld_GFX:     INCBIN "gfx/tilesets/overworld.2bpp"
 Overworld_Block:   INCBIN "gfx/blocksets/overworld.bst"
@@ -1792,7 +1792,7 @@ Plateau_GFX:       INCBIN "gfx/tilesets/plateau.t10.2bpp"
 Plateau_Block:     INCBIN "gfx/blocksets/plateau.bst"
 
 
-SECTION "bank1A",ROMX,BANK[$1A]
+SECTION "bank1A", ROMX,BANK[$1A]
 
 INCBIN "gfx/blueversion.1bpp" ; unused
 
@@ -1816,7 +1816,7 @@ Facility_GFX:      INCBIN "gfx/tilesets/facility.2bpp"
 Facility_Block:    INCBIN "gfx/blocksets/facility.bst"
 
 
-SECTION "bank1B",ROMX,BANK[$1B]
+SECTION "bank1B", ROMX,BANK[$1B]
 
 Cemetery_GFX:      INCBIN "gfx/tilesets/cemetery.t4.2bpp"
 Cemetery_Block:    INCBIN "gfx/blocksets/cemetery.bst"
@@ -1834,7 +1834,7 @@ Underground_GFX:   INCBIN "gfx/tilesets/underground.t7.2bpp"
 Underground_Block: INCBIN "gfx/blocksets/underground.bst"
 
 
-SECTION "bank1C",ROMX,BANK[$1C]
+SECTION "bank1C", ROMX,BANK[$1C]
 
 INCLUDE "engine/gamefreak.asm"
 INCLUDE "engine/hall_of_fame.asm"
@@ -1849,7 +1849,7 @@ INCLUDE "engine/palettes.asm"
 INCLUDE "engine/save.asm"
 
 
-SECTION "bank1D",ROMX,BANK[$1D]
+SECTION "bank1D", ROMX,BANK[$1D]
 
 CopycatsHouse1FBlocks: INCBIN "maps/copycatshouse1f.blk"
 PewterMartBlocks:
@@ -1975,7 +1975,7 @@ INCLUDE "engine/overworld/elevator.asm"
 INCLUDE "engine/overworld/hidden_items.asm"
 
 
-SECTION "bank1E",ROMX,BANK[$1E]
+SECTION "bank1E", ROMX,BANK[$1E]
 
 INCLUDE "engine/battle/animations.asm"
 
@@ -1991,18 +1991,18 @@ RedFishingRodTiles:   INCBIN "gfx/red_fishingrod_tiles.2bpp"
 INCLUDE "data/animations.asm"
 
 
-SECTION "bank2f",ROMX[$5000],BANK[$2F]
+SECTION "bank2f", ROMX[$5000],BANK[$2F]
 
 INCLUDE "engine/bg_map_attributes.asm"
 
 
-SECTION "bank30",ROMX,BANK[$30]
+SECTION "bank30", ROMX,BANK[$30]
 
 ; This whole bank is garbage data.
 INCBIN "engine/bank30.bin"
 
 
-SECTION "bank39",ROMX,BANK[$39]
+SECTION "bank39", ROMX,BANK[$39]
 
 Pic_e4000: ; e4000
 INCBIN "gfx/pikachu/unknown_e4000.pic"
@@ -2120,7 +2120,7 @@ GFX_e7d13: ; e7d13
 INCBIN "gfx/pikachu/unknown_e7d13.2bpp"
 
 
-SECTION "bank3A",ROMX,BANK[$3A]
+SECTION "bank3A", ROMX,BANK[$3A]
 
 INCLUDE "text/monster_names.asm"
 
@@ -2136,21 +2136,21 @@ INCLUDE "engine/printer2.asm"
 
 INCLUDE "engine/overworld/npc_movement_2.asm"
 
-SECTION "bank3C",ROMX,BANK[$3C]
+SECTION "bank3C", ROMX,BANK[$3C]
 
 INCLUDE "engine/bank3c.asm"
 
 
-SECTION "bank3D",ROMX,BANK[$3D]
+SECTION "bank3D", ROMX,BANK[$3D]
 
 INCLUDE "engine/bank3d.asm"
 
 
-SECTION "bank3E",ROMX,BANK[$3E]
+SECTION "bank3E", ROMX,BANK[$3E]
 
 INCLUDE "engine/bank3e.asm"
 
 
-SECTION "bank3F",ROMX,BANK[$3F]
+SECTION "bank3F", ROMX,BANK[$3F]
 
 INCLUDE "engine/bank3f.asm"

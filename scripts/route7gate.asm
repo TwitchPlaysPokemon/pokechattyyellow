@@ -52,8 +52,8 @@ Route7GateScript0:
 	ret
 
 CoordsData_1e167:
-	db 3,3
-	db 4,3
+	db 3, 3
+	db 4, 3
 	db $ff
 
 Route7GateScript1:

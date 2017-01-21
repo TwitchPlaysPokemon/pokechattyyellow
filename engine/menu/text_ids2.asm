@@ -1,28 +1,28 @@
 ; function to draw various text boxes
 DisplayTextBoxID_:
-	ld a,[wTextBoxID]
+	ld a, [wTextBoxID]
 	cp TWO_OPTION_MENU
-	jp z,DisplayTwoOptionMenu
-	ld c,a
-	ld hl,TextBoxFunctionTable
-	ld de,3
+	jp z, DisplayTwoOptionMenu
+	ld c, a
+	ld hl, TextBoxFunctionTable
+	ld de, 3
 	call SearchTextBoxTable
-	jr c,.functionTableMatch
-	ld hl,TextBoxCoordTable
-	ld de,5
+	jr c, .functionTableMatch
+	ld hl, TextBoxCoordTable
+	ld de, 5
 	call SearchTextBoxTable
-	jr c,.coordTableMatch
-	ld hl,TextBoxTextAndCoordTable
-	ld de,9
+	jr c, .coordTableMatch
+	ld hl, TextBoxTextAndCoordTable
+	ld de, 9
 	call SearchTextBoxTable
-	jr c,.textAndCoordTableMatch
+	jr c, .textAndCoordTableMatch
 .done
 	ret
 .functionTableMatch
-	ld a,[hli]
-	ld h,[hl]
-	ld l,a ; hl = address of function
-	ld de,.done
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a ; hl = address of function
+	ld de, .done
 	push de
 	jp [hl] ; jump to the function
 .coordTableMatch
@@ -37,14 +37,14 @@ DisplayTextBoxID_:
 	call TextBoxBorder
 	pop hl
 	call GetTextBoxIDText
-	ld a,[wd730]
+	ld a, [wd730]
 	push af
-	ld a,[wd730]
-	set 6,a ; no pauses between printing each letter
-	ld [wd730],a
+	ld a, [wd730]
+	set 6, a ; no pauses between printing each letter
+	ld [wd730], a
 	call PlaceString
 	pop af
-	ld [wd730],a
+	ld [wd730], a
 	call UpdateSprites
 	ret
 
@@ -53,12 +53,12 @@ DisplayTextBoxID_:
 SearchTextBoxTable:
 	dec de
 .loop
-	ld a,[hli]
+	ld a, [hli]
 	cp $ff
-	jr z,.notFound
+	jr z, .notFound
 	cp c
-	jr z,.found
-	add hl,de
+	jr z, .found
+	add hl, de
 	jr .loop
 .found
 	scf
@@ -74,31 +74,31 @@ SearchTextBoxTable:
 ; d = row of upper left corner
 ; e = column of upper left corner
 GetTextBoxIDCoords:
-	ld a,[hli] ; column of upper left corner
-	ld e,a
-	ld a,[hli] ; row of upper left corner
-	ld d,a
-	ld a,[hli] ; column of lower right corner
+	ld a, [hli] ; column of upper left corner
+	ld e, a
+	ld a, [hli] ; row of upper left corner
+	ld d, a
+	ld a, [hli] ; column of lower right corner
 	sub e
 	dec a
-	ld c,a     ; c = width
-	ld a,[hli] ; row of lower right corner
+	ld c, a     ; c = width
+	ld a, [hli] ; row of lower right corner
 	sub d
 	dec a
-	ld b,a     ; b = height
+	ld b, a     ; b = height
 	ret
 
 ; function to load a text address and text coordinates from the TextBoxTextAndCoordTable
 GetTextBoxIDText:
-	ld a,[hli]
-	ld e,a
-	ld a,[hli]
-	ld d,a ; de = address of text
+	ld a, [hli]
+	ld e, a
+	ld a, [hli]
+	ld d, a ; de = address of text
 	push de ; save text address
-	ld a,[hli]
-	ld e,a ; column of upper left corner of text
-	ld a,[hl]
-	ld d,a ; row of upper left corner of text
+	ld a, [hli]
+	ld e, a ; column of upper left corner of text
+	ld a, [hl]
+	ld d, a ; row of upper left corner of text
 	call GetAddressOfScreenCoords
 	pop de ; restore text address
 	ret
@@ -112,17 +112,17 @@ GetTextBoxIDText:
 GetAddressOfScreenCoords:
 	push bc
 	coord hl, 0, 0
-	ld bc,20
+	ld bc, 20
 .loop ; loop to add d rows to the base address
-	ld a,d
+	ld a, d
 	and a
-	jr z,.addedRows
-	add hl,bc
+	jr z, .addedRows
+	add hl, bc
 	dec d
 	jr .loop
 .addedRows
 	pop bc
-	add hl,de
+	add hl, de
 	ret
 
 ; Format:
@@ -161,59 +161,59 @@ TextBoxCoordTable:
 ; table of window positions and corresponding text [key, start column, start row, end column, end row, text pointer [2 bytes], text column, text row]
 TextBoxTextAndCoordTable:
 	db JP_MOCHIMONO_MENU_TEMPLATE
-	db 0,0,14,17   ; text box coordinates
+	db 0, 0,14,17   ; text box coordinates
 	dw JapaneseMochimonoText
-	db 3,0   ; text coordinates
+	db 3, 0   ; text coordinates
 
 	db USE_TOSS_MENU_TEMPLATE
-	db 13,10,19,14 ; text box coordinates
+	db 13, 10,19,14 ; text box coordinates
 	dw UseTossText
-	db 15,11 ; text coordinates
+	db 15, 11 ; text coordinates
 
 	db JP_SAVE_MESSAGE_MENU_TEMPLATE
-	db 0,0,7,5     ; text box coordinates
+	db 0, 0,7,5     ; text box coordinates
 	dw JapaneseSaveMessageText
-	db 2,2   ; text coordinates
+	db 2, 2   ; text coordinates
 
 	db JP_SPEED_OPTIONS_MENU_TEMPLATE
-	db 0,6,5,10    ; text box coordinates
+	db 0, 6,5,10    ; text box coordinates
 	dw JapaneseSpeedOptionsText
-	db 2,7   ; text coordinates
+	db 2, 7   ; text coordinates
 
 	db BATTLE_MENU_TEMPLATE
-	db 8,12,19,17  ; text box coordinates
+	db 8, 12,19,17  ; text box coordinates
 	dw BattleMenuText
-	db 10,14 ; text coordinates
+	db 10, 14 ; text coordinates
 
 	db SAFARI_BATTLE_MENU_TEMPLATE
-	db 0,12,19,17  ; text box coordinates
+	db 0, 12,19,17  ; text box coordinates
 	dw SafariZoneBattleMenuText
-	db 2,14  ; text coordinates
+	db 2, 14  ; text coordinates
 
 	db SWITCH_STATS_CANCEL_MENU_TEMPLATE
-	db 11,11,19,17 ; text box coordinates
+	db 11, 11,19,17 ; text box coordinates
 	dw SwitchStatsCancelText
-	db 13,12 ; text coordinates
+	db 13, 12 ; text coordinates
 
 	db BUY_SELL_QUIT_MENU_TEMPLATE
-	db 0,0,10,6    ; text box coordinates
+	db 0, 0,10,6    ; text box coordinates
 	dw BuySellQuitText
-	db 2,1   ; text coordinates
+	db 2, 1   ; text coordinates
 
 	db MONEY_BOX_TEMPLATE
-	db 11,0,19,2   ; text box coordinates
+	db 11, 0,19,2   ; text box coordinates
 	dw MoneyText
-	db 13,0  ; text coordinates
+	db 13, 0  ; text coordinates
 
 	db JP_AH_MENU_TEMPLATE
-	db 7,6,11,10   ; text box coordinates
+	db 7, 6,11,10   ; text box coordinates
 	dw JapaneseAhText
-	db 8,8   ; text coordinates
+	db 8, 8   ; text coordinates
 
 	db JP_POKEDEX_MENU_TEMPLATE
-	db 11,8,19,17  ; text box coordinates
+	db 11, 8,19,17  ; text box coordinates
 	dw JapanesePokedexMenu
-	db 12,10 ; text coordinates
+	db 12, 10 ; text coordinates
 
 ; note that there is no terminator
 
@@ -245,7 +245,7 @@ JapaneseMainMenuText:
 	next "さいしょから@"
 
 BattleMenuText:
-	db   "FIGHT ",$E1,$E2
+	db   "FIGHT ", $E1,$E2
 	next "ITEM  RUN@"
 
 SafariZoneBattleMenuText:
@@ -495,37 +495,37 @@ TwoOptionMenu_RestoreScreenTiles:
 ; 02: byte put blank line before first menu item
 ; 03: word text pointer
 TwoOptionMenuStrings:
-	db 4,3,0
+	db 4, 3,0
 	dw .YesNoMenu
-	db 6,3,0
+	db 6, 3,0
 	dw .NorthWestMenu
-	db 6,3,0
+	db 6, 3,0
 	dw .SouthEastMenu
-	db 6,3,0
+	db 6, 3,0
 	dw .YesNoMenu
-	db 6,3,0
+	db 6, 3,0
 	dw .NorthEastMenu
-	db 7,3,0
+	db 7, 3,0
 	dw .TradeCancelMenu
-	db 7,4,1
+	db 7, 4,1
 	dw .HealCancelMenu
-	db 4,3,0
+	db 4, 3,0
 	dw .NoYesMenu
 
 .NoYesMenu ; 7542 (1:7542)
-	db "NO",$4E,"YES@"
+	db "NO", $4E,"YES@"
 .YesNoMenu ; 7549 (1:7549)
-	db "YES",$4E,"NO@"
+	db "YES", $4E,"NO@"
 .NorthWestMenu ; 7550 (1:7550)
-	db "NORTH",$4E,"WEST@"
+	db "NORTH", $4E,"WEST@"
 .SouthEastMenu ; 755b (1:755b)
-	db "SOUTH",$4E,"EAST@"
+	db "SOUTH", $4E,"EAST@"
 .NorthEastMenu ; 7566 (1:7566)
-	db "NORTH",$4E,"EAST@"
+	db "NORTH", $4E,"EAST@"
 .TradeCancelMenu ; 7571 (1:7571)
-	db "TRADE",$4E,"CANCEL@"
+	db "TRADE", $4E,"CANCEL@"
 .HealCancelMenu ; 757e (1:757e)
-	db "HEAL",$4E,"CANCEL@"
+	db "HEAL", $4E,"CANCEL@"
 
 DisplayFieldMoveMonMenu:
 	xor a

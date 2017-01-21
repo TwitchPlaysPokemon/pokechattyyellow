@@ -28,7 +28,7 @@ _VictoryRoadGuardText2::
 
 _VictoryRoadGuardText_513a3::
 	db $0
-	para "OK then! Please,"
+	para "OK then! Please, "
 	line "go right ahead!"
 	done
 

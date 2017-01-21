@@ -94,7 +94,7 @@ _OaksAideHiText::
 	para "If you caught @"
 	TX_NUM hOaksAideRequirement, 1, 3
 	text ""
-	line "kinds of #MON,"
+	line "kinds of #MON, "
 	cont "I'm supposed to"
 	cont "give you an"
 	cont "@"
@@ -265,7 +265,7 @@ _TradeForText::
 	text "For <PLAYER>'s"
 	line "@"
 	TX_RAM wcf4b
-	text ","
+	text ", "
 	done
 
 _TradeSendsText::
@@ -392,7 +392,7 @@ _GymStatueText2::
 
 _ViridianCityPokecenterGuyText::
 	text "#MON CENTERs"
-	line "heal your tired,"
+	line "heal your tired, "
 	cont "hurt or fainted"
 	cont "#MON!"
 	done
@@ -470,7 +470,7 @@ _VermilionPokecenterGuyText::
 	done
 
 _CeladonCityPokecenterGuyText::
-	text "If I had a BIKE,"
+	text "If I had a BIKE, "
 	line "I would go to"
 	cont "CYCLING ROAD!"
 	done
@@ -696,7 +696,7 @@ _OakLabEmailText::
 	para "#MON LEAGUE HQ"
 	line "INDIGO PLATEAU"
 
-	para "PS: PROF.OAK,"
+	para "PS: PROF.OAK, "
 	line "please visit us!"
 	cont "..."
 	done
@@ -1351,7 +1351,7 @@ _Used2Text::
 	line "used @@"
 
 _InsteadText::
-	text "instead,"
+	text "instead, "
 	cont "@@"
 
 _CF4BText::
@@ -1470,7 +1470,7 @@ _GainedText::
 	line "@@"
 
 _WithExpAllText::
-	text "with EXP.ALL,"
+	text "with EXP.ALL, "
 	cont "@@"
 
 _BoostedText::
@@ -1870,7 +1870,7 @@ _ReleaseWhichMonText::
 	done
 
 _OnceReleasedText::
-	text "Once released,"
+	text "Once released, "
 	line "@"
 	TX_RAM wcf4b
 	text " is"
@@ -3275,7 +3275,7 @@ _WrongMon1Text::
 	TX_RAM wInGameTradeGiveMonName
 	text "!"
 
-	para "If you get one,"
+	para "If you get one, "
 	line "come back here!"
 	done
 
@@ -3351,7 +3351,7 @@ _WrongMon3Text::
 	TX_RAM wInGameTradeGiveMonName
 	text "."
 
-	para "If you get one,"
+	para "If you get one, "
 	line "trade it with me!"
 	done
 

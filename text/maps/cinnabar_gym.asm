@@ -78,10 +78,10 @@ _CinnabarGymText_75964::
 
 _CinnabarGymText_75969::
 	text "Fire, or to be"
-	line "more precise,"
+	line "more precise, "
 	cont "combustion..."
 
-	para "Blah, blah, blah,"
+	para "Blah, blah, blah, "
 	line "blah..."
 	done
 

@@ -246,7 +246,7 @@ charmap "♂", $EF
 charmap "¥", $F0
 charmap "×", $F1
 charmap "/", $F3
-charmap ",", $F4
+charmap ", ", $F4
 charmap "♀", $F5
 charmap "0", $F6
 charmap "1", $F7

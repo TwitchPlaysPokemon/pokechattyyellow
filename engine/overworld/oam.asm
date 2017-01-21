@@ -213,16 +213,16 @@ Func_4a7b:
 INCLUDE "engine/oam_dma.asm"
 
 _IsTilePassable::
-	ld hl,wTilesetCollisionPtr ; pointer to list of passable tiles
-	ld a,[hli]
-	ld h,[hl]
-	ld l,a ; hl now points to passable tiles
+	ld hl, wTilesetCollisionPtr ; pointer to list of passable tiles
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a ; hl now points to passable tiles
 .loop
-	ld a,[hli]
+	ld a, [hli]
 	cp $ff
-	jr z,.tileNotPassable
+	jr z, .tileNotPassable
 	cp c
-	jr nz,.loop
+	jr nz, .loop
 	xor a
 	ret
 .tileNotPassable

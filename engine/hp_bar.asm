@@ -109,9 +109,7 @@ UpdateHPBar2:
 .ok
 	call UpdateHPBar_PrintHPNumber
 	and a
-	jr z, .noPixelDifference
-	call UpdateHPBar_AnimateHPBar
-.noPixelDifference
+	call nz, UpdateHPBar_AnimateHPBar
 	ld a, [wHPBarNewHP]
 	ld [wHPBarOldHP], a
 	ld a, [wHPBarNewHP+1]

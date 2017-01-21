@@ -2002,9 +2002,7 @@ DrawPlayerHUDAndHPBar:
 	ld de, wLoadedMonStatus
 	call PrintStatusConditionNotFainted
 	pop hl
-	jr nz, .doNotPrintLevel
-	call PrintLevel
-.doNotPrintLevel
+	call z, PrintLevel
 	ld a, [wLoadedMonSpecies]
 	ld [wcf91], a
 	coord hl, 10, 9
@@ -7694,9 +7692,7 @@ UpdateLoweredStatDone:
 	pop de
 	ld a, [de]
 	cp $44
-	jr nc, .ApplyBadgeBoostsAndStatusPenalties
-	call PlayCurrentMoveAnimation2
-.ApplyBadgeBoostsAndStatusPenalties
+	call c, PlayCurrentMoveAnimation2
 	ld a, [hBattleTurn]
 	and a
 	call nz, ApplyBadgeStatBoosts ; whenever the player uses a stat-down move, badge boosts get reapplied again to every stat, 

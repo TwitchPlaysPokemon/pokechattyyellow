@@ -1,5 +1,5 @@
 _PokemonTower2Text_6062d::
-	text $53, ": Hey,"
+	text $53, ": Hey, "
 	line $52, "! What"
 	cont "brings you here?"
 	cont "Your #MON"
@@ -19,7 +19,7 @@ _PokemonTower2Text_60632::
 	prompt
 
 _PokemonTower2Text_60637::
-	text $53, ": Well,"
+	text $53, ": Well, "
 	line "look at all your"
 	cont "wimpy #MON!"
 

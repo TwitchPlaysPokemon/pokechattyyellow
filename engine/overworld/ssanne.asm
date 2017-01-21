@@ -55,19 +55,19 @@ GetMoveBoulderDustFunctionPointer:
 
 MoveBoulderDustFunctionPointerTable:
 ; facing down
-	db $FF,$00
+	db $FF, $00
 	dw AdjustOAMBlockYPos
 
 ; facing up
-	db $01,$00
+	db $01, $00
 	dw AdjustOAMBlockYPos
 
 ; facing left
-	db $01,$01
+	db $01, $01
 	dw AdjustOAMBlockXPos
 
 ; facing right
-	db $FF,$01
+	db $FF, $01
 	dw AdjustOAMBlockXPos
 
 LoadSmokeTileFourTimes:

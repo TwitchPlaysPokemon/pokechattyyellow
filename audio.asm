@@ -612,14 +612,14 @@ Music_DoLowHealthAlarm::
 ;starting at FF11 (FF10 is always zeroed), so these bytes are:
 ;length, envelope, freq lo, freq hi
 .toneDataHi
-	db $A0,$E2,$50,$87
+	db $A0, $E2,$50,$87
 
 .toneDataLo
-	db $B0,$E2,$EE,$86
+	db $B0, $E2,$EE,$86
 
 ;written to stop the alarm
 .toneDataSilence
-	db $00,$00,$00,$80
+	db $00, $00,$00,$80
 
 INCLUDE "engine/menu/bills_pc.asm"
 
@@ -752,7 +752,7 @@ INCLUDE "audio/music/meetjessiejames.asm"
 
 INCBIN "audio/unknown_832b9.bin"
 
-SECTION "Pikachu Cries 1",ROMX,BANK[PCM_1]
+SECTION "Pikachu Cries 1", ROMX,BANK[PCM_1]
 PikachuCry1::
 	dw (PikachuCry1_End - PikachuCry1) - 2 ; length of pcm data
 	INCBIN "audio/pikachu_cries/pikachu_cry_1.pcm"
@@ -784,7 +784,7 @@ PikachuCry4_End:
 	db $e0  ; unused
 
 
-SECTION "Pikachu Cries 2",ROMX,BANK[PCM_2]
+SECTION "Pikachu Cries 2", ROMX,BANK[PCM_2]
 PikachuCry5::
 	dw (PikachuCry5_End - PikachuCry5) - 2 ; length of pcm data
 	INCBIN "audio/pikachu_cries/pikachu_cry_5.pcm"
@@ -807,7 +807,7 @@ PikachuCry7_End:
 	db $ff  ; unused
 
 
-SECTION "Pikachu Cries 3",ROMX,BANK[PCM_3]
+SECTION "Pikachu Cries 3", ROMX,BANK[PCM_3]
 PikachuCry8::
 	dw (PikachuCry8_End - PikachuCry8) - 2 ; length of pcm data
 	INCBIN "audio/pikachu_cries/pikachu_cry_8.pcm"
@@ -830,7 +830,7 @@ PikachuCry10_End:
 	db $ff  ; unused
 
 
-SECTION "Pikachu Cries 4",ROMX,BANK[PCM_4]
+SECTION "Pikachu Cries 4", ROMX,BANK[PCM_4]
 PikachuCry11::
 	dw (PikachuCry11_End - PikachuCry11) - 2 ; length of pcm data
 	INCBIN "audio/pikachu_cries/pikachu_cry_11.pcm"
@@ -853,7 +853,7 @@ PikachuCry13_End:
 	db $f0  ; unused
 
 
-SECTION "Pikachu Cries 5",ROMX,BANK[PCM_5]
+SECTION "Pikachu Cries 5", ROMX,BANK[PCM_5]
 PikachuCry14::
 	dw (PikachuCry14_End - PikachuCry14) - 2 ; length of pcm data
 	INCBIN "audio/pikachu_cries/pikachu_cry_14.pcm"
@@ -868,7 +868,7 @@ PikachuCry15_End:
 
 	db $77  ; unused
 
-SECTION "Pikachu Cries 6",ROMX,BANK[PCM_6]
+SECTION "Pikachu Cries 6", ROMX,BANK[PCM_6]
 PikachuCry16::
 	dw (PikachuCry16_End - PikachuCry16) - 2 ; length of pcm data
 	INCBIN "audio/pikachu_cries/pikachu_cry_16.pcm"
@@ -891,7 +891,7 @@ PikachuCry22_End:
 	db $7e  ; unused
 
 
-SECTION "Pikachu Cries 7",ROMX,BANK[PCM_7]
+SECTION "Pikachu Cries 7", ROMX,BANK[PCM_7]
 PikachuCry20::
 	dw (PikachuCry20_End - PikachuCry20) - 2 ; length of pcm data
 	INCBIN "audio/pikachu_cries/pikachu_cry_20.pcm"
@@ -907,7 +907,7 @@ PikachuCry21_End:
 	db $ff  ; unused
 
 
-SECTION "Pikachu Cries 8",ROMX,BANK[PCM_8]
+SECTION "Pikachu Cries 8", ROMX,BANK[PCM_8]
 PikachuCry19::
 	dw (PikachuCry19_End - PikachuCry19) - 2 ; length of pcm data
 	INCBIN "audio/pikachu_cries/pikachu_cry_19.pcm"
@@ -928,7 +928,7 @@ PikachuCry26::
 PikachuCry26_End:
 
 
-SECTION "Pikachu Cries 9",ROMX,BANK[PCM_9]
+SECTION "Pikachu Cries 9", ROMX,BANK[PCM_9]
 PikachuCry17::
 	dw (PikachuCry17_End - PikachuCry17) - 2 ; length of pcm data
 	INCBIN "audio/pikachu_cries/pikachu_cry_17.pcm"
@@ -951,7 +951,7 @@ PikachuCry25_End:
 	db $03  ; unused
 
 
-SECTION "Pikachu Cries 10",ROMX,BANK[PCM_10]
+SECTION "Pikachu Cries 10", ROMX,BANK[PCM_10]
 PikachuCry27::
 	dw (PikachuCry27_End - PikachuCry27) - 2 ; length of pcm data
 	INCBIN "audio/pikachu_cries/pikachu_cry_27.pcm"
@@ -986,7 +986,7 @@ PikachuCry31::
 PikachuCry31_End:
 
 
-SECTION "Pikachu Cries 11",ROMX,BANK[PCM_11]
+SECTION "Pikachu Cries 11", ROMX,BANK[PCM_11]
 PikachuCry32::
 	dw (PikachuCry32_End - PikachuCry32) - 2 ; length of pcm data
 	INCBIN "audio/pikachu_cries/pikachu_cry_32.pcm"
@@ -1016,7 +1016,7 @@ PikachuCry41_End:
 	db $9b  ; unused
 
 
-SECTION "Pikachu Cries 12",ROMX,BANK[PCM_12]
+SECTION "Pikachu Cries 12", ROMX,BANK[PCM_12]
 PikachuCry35::
 	dw (PikachuCry35_End - PikachuCry35) - 2 ; length of pcm data
 	INCBIN "audio/pikachu_cries/pikachu_cry_35.pcm"
@@ -1039,7 +1039,7 @@ PikachuCry39_End:
 	db $0f  ; unused
 
 
-SECTION "Pikachu Cries 13",ROMX,BANK[PCM_13]
+SECTION "Pikachu Cries 13", ROMX,BANK[PCM_13]
 PikachuCry37::
 	dw (PikachuCry37_End - PikachuCry37) - 2 ; length of pcm data
 	INCBIN "audio/pikachu_cries/pikachu_cry_37.pcm"

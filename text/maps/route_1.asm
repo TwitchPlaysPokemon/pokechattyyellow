@@ -33,7 +33,7 @@ _Route1Text2::
 	text "See those ledges"
 	line "along the road?"
 
-	para "It's a bit scary,"
+	para "It's a bit scary, "
 	line "but you can jump"
 	cont "from them."
 

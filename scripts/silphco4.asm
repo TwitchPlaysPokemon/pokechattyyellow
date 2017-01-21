@@ -33,8 +33,8 @@ SilphCo4Script_19d21:
 	predef_jump ReplaceTileBlock
 
 SilphCo4GateCoords:
-	db $06,$02
-	db $04,$06
+	db $06, $02
+	db $04, $06
 	db $FF
 
 SilphCo4Script_19d5d:

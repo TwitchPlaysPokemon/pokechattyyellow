@@ -12,7 +12,7 @@ _CeruleanCityText_19668::
 	cont "smart #MON!"
 
 	para "Here, let me see"
-	line "what you caught,"
+	line "what you caught, "
 	cont $52, "!"
 	done
 
@@ -29,7 +29,7 @@ _CeruleanCityText_19672::
 	prompt
 
 _CeruleanCityText_19677::
-	text $53, ": Hey,"
+	text $53, ": Hey, "
 	line "guess what?"
 
 	para "I went to BILL's"
@@ -98,7 +98,7 @@ _CeruleanCityText_196f3::
 
 _CeruleanCityText3::
 	text "You're a trainer"
-	line "too? Collecting,"
+	line "too? Collecting, "
 	cont "fighting, it's a"
 	cont "tough life."
 	done
@@ -136,7 +136,7 @@ _CeruleanCityText6::
 _CeruleanCityText_19730::
 	text "OK! ELECTRODE!"
 	line "Use SONICBOOM!"
-	cont "Please ELECTRODE,"
+	cont "Please ELECTRODE, "
 	cont "pay attention!"
 	done
 
@@ -202,7 +202,7 @@ _CeruleanCityText10::
 
 _CeruleanCityText12::
 	text "CERULEAN CITY"
-	line "A Mysterious,"
+	line "A Mysterious, "
 	cont "Blue Aura"
 	cont "Surrounds It"
 	done

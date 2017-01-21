@@ -86,7 +86,7 @@ _CeladonGameCornerText_48dca::
 	text "Hey!"
 
 	para "You have better"
-	line "things to do,"
+	line "things to do, "
 	cont "champ in making!"
 
 	para "CELADON GYM's"

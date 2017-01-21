@@ -26,7 +26,7 @@ WarpTileIDPointers:
 	dw BeachHouseWarpTileIDs
 
 OverworldWarpTileIDs:
-	db $1B,$58,$FF
+	db $1B, $58,$FF
 
 ForestGateWarpTileIDs:
 MuseumWarpTileIDs:
@@ -35,51 +35,51 @@ GateWarpTileIDs:
 
 RedsHouse1WarpTileIDs:
 RedsHouse2WarpTileIDs:
-	db $1A,$1C,$FF
+	db $1A, $1C,$FF
 
 MartWarpTileIDs:
 PokecenterWarpTileIDs:
-	db $5E,$FF
+	db $5E, $FF
 
 ForestWarpTileIDs:
-	db $5A,$5C,$3A,$FF
+	db $5A, $5C,$3A,$FF
 
 DojoWarpTileIDs:
 GymWarpTileIDs:
-	db $4A,$FF
+	db $4A, $FF
 
 HouseWarpTileIDs:
-	db $54,$5C,$32,$FF
+	db $54, $5C,$32,$FF
 
 ShipWarpTileIDs:
-	db $37,$39,$1E,$4A,$FF
+	db $37, $39,$1E,$4A,$FF
 
 InteriorWarpTileIDs:
-	db $15,$55,$04,$FF
+	db $15, $55,$04,$FF
 
 CavernWarpTileIDs:
-	db $18,$1A,$22,$FF
+	db $18, $1A,$22,$FF
 
 LobbyWarpTileIDs:
-	db $1A,$1C,$38,$FF
+	db $1A, $1C,$38,$FF
 
 MansionWarpTileIDs:
-	db $1A,$1C,$53,$FF
+	db $1A, $1C,$53,$FF
 
 LabWarpTileIDs:
-	db $34,$FF
+	db $34, $FF
 
 FacilityWarpTileIDs:
-	db $43,$58,$20
+	db $43, $58,$20
 
 CemeteryWarpTileIDs:
 	db $1B
 
 UndergroundWarpTileIDs:
-	db $13,$FF
+	db $13, $FF
 
 PlateauWarpTileIDs:
-	db $1B,$3B
+	db $1B, $3B
 
 ShipPortWarpTileIDs:
 ClubWarpTileIDs:

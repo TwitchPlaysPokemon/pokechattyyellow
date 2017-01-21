@@ -44,7 +44,7 @@ _Route3AfterBattleText2::
 	done
 
 _Route3BattleText3::
-	text "You looked at me,"
+	text "You looked at me, "
 	line "didn't you?"
 	done
 
@@ -66,7 +66,7 @@ _Route3BattleText4::
 
 _Route3EndBattleText4::
 	text "If I"
-	line "had new #MON,"
+	line "had new #MON, "
 	cont "I would've won!"
 	prompt
 

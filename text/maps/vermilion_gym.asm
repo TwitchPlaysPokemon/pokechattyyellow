@@ -41,7 +41,7 @@ _VermilionGymText_5cb77::
 	line "#MON FLY any-"
 	cont "time, kid!"
 
-	para "You're special,"
+	para "You're special, "
 	line "kid! Take this!"
 	done
 
@@ -95,7 +95,7 @@ _VermilionGymAfterBattleText1::
 	done
 
 _VermilionGymBattleText2::
-	text "I'm a lightweight,"
+	text "I'm a lightweight, "
 	line "but I'm good with"
 	cont "electricity!"
 	done

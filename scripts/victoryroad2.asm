@@ -65,8 +65,8 @@ VictoryRoad2Script0:
 	ret
 
 CoordsData_51816:
-	db $10,$01
-	db $10,$09
+	db $10, $01
+	db $10, $09
 	db $FF
 
 VictoryRoad2TextPointers:

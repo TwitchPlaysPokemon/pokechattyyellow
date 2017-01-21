@@ -53,8 +53,8 @@ PokemonTower2Script0:
 	ret
 
 CoordsData_6055e:
-	db $05,$0F
-	db $06,$0E
+	db $05, $0F
+	db $06, $0E
 	db $0F ; isn't this supposed to end in $ff?
 
 PokemonTower2Script1:

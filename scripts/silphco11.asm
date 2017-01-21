@@ -25,7 +25,7 @@ SilphCo11Script_62127:
 	ret
 
 SilphCo11GateCoords:
-	db $06,$03
+	db $06, $03
 	db $FF
 
 SilphCo11Script_6214f:
@@ -128,8 +128,8 @@ SilphCo11Script_621c5:
 	ret
 
 CoordsData_62211:
-	db $0D,$06
-	db $0C,$07
+	db $0D, $06
+	db $0C, $07
 	db $FF
 
 MovementData_62216:

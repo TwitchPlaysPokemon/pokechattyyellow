@@ -11,9 +11,7 @@ SpecialWarpIn:
 
 .next
 	bit 1, [hl]
-	jr z, .next3
-	call EmptyFunc
-.next3
+	call nz, EmptyFunc
 	ld a, 0
 .next2
 	ld b, a

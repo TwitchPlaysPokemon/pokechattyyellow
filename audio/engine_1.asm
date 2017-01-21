@@ -58,9 +58,7 @@ Audio1_ApplyMusicAffects:
 	ld hl, wChannelFlags1
 	add hl, bc
 	bit BIT_ROTATE_DUTY, [hl]
-	jr z, .checkForExecuteMusic
-	call Audio1_ApplyDutyCycle
-.checkForExecuteMusic
+	call nz, Audio1_ApplyDutyCycle
 	ld b, 0
 	ld hl, wChannelFlags2
 	add hl, bc
@@ -234,14 +232,10 @@ Audio1_ProcessMusicCommand: ; 0x91e6
 .asm_9248
 	ld a, [wChannelSoundIDs + CH4]
 	cp CRY_SFX_START
-	jr nc, .asm_9251
-	jr .skipCry
-.asm_9251
+	jr c, .skipCry
 	ld a, [wChannelSoundIDs + CH4]
 	cp CRY_SFX_END
-	jr z, .skipCry
-	jr c, .cry
-	jr .skipCry
+	jr nc, .skipCry
 .cry
 	ld a, c
 	cp CH4
@@ -794,9 +788,7 @@ Audio1_notepitch: ; 0x9568
 	ld hl, wChannelFlags1
 	add hl, bc
 	bit BIT_PITCH_BEND_ON, [hl]
-	jr z, .skipPitchBend
-	call Audio1_InitPitchBendVars
-.skipPitchBend
+	call nz, Audio1_InitPitchBendVars
 	push de
 	ld a, c
 	cp CH4
@@ -951,10 +943,9 @@ Audio1_ApplyWavePatternAndFrequency: ; 0x964b
 	ld [hl], d ; store frequency high byte
 	ld a, c
 	cp $4
-	jr c, .asm_9642
-	call Audio1_ApplyFrequencyModifier
-.asm_9642
+	call nc, Audio1_ApplyFrequencyModifier
 	ret
+
 .asm_9643
 	ld a, c
 	cp $4
@@ -971,7 +962,7 @@ Audio1_ApplyWavePatternAndFrequency: ; 0x964b
 Audio1_SetSfxTempo:
 	call Audio1_IsCry
 	jr c, .isCry
-	call Audio1_96c3
+	call Audio1_IsBattleSFX
 	jr nc, .notCry
 .isCry
 	ld d, 0
@@ -984,6 +975,7 @@ Audio1_SetSfxTempo:
 	ld a, d
 	ld [wSfxTempo], a
 	ret
+
 .notCry
 	xor a
 	ld [wSfxTempo + 1], a
@@ -994,7 +986,7 @@ Audio1_SetSfxTempo:
 Audio1_ApplyFrequencyModifier:
 	call Audio1_IsCry
 	jr c, .isCry
-	call Audio1_96c3
+	call Audio1_IsBattleSFX
 	ret nc
 .isCry
 ; if playing a cry, add the cry's frequency modifier
@@ -1004,16 +996,13 @@ Audio1_ApplyFrequencyModifier:
 	inc d
 .noCarry
 	dec hl
-	ld e, a
-	ld [hl], e
-	inc hl
+	ld [hli], a
 	ld [hl], d
-.done
 	ret
 
 Audio1_GoBackOneCommandIfCry:
 	call Audio1_IsCry
-	jr nc, .done
+	ret nc
 	ld hl, wChannelCommandPointers
 	ld e, c
 	ld d, 0
@@ -1029,46 +1018,29 @@ Audio1_GoBackOneCommandIfCry:
 	ld [hl], a
 	scf
 	ret
-.done
-	and a
-	ret
 
 Audio1_IsCry:
 ; Returns whether the currently playing audio is a cry in carry.
 	ld a, [wChannelSoundIDs + CH4]
-	cp CRY_SFX_START
-	jr nc, .next
-	jr .no
-.next
 	cp CRY_SFX_END
-	jr z, .no
-	jr c, .yes
-.no
-	scf
+	ret nc
+	cp CRY_SFX_START - 1
 	ccf
 	ret
-.yes
-	scf
-	ret
 
-Audio1_96c3:
+Audio1_IsBattleSFX:
 	ld a, [wAudioROMBank]
-	cp AUDIO_2
-	jr nz, .asm_96dc
+	sub AUDIO_2
+	and a
+	ret nz
 	ld a, [wChannelSoundIDs + CH7]
 	ld b, a
 	ld a, [wChannelSoundIDs + CH4]
 	or b
-	cp $9d
-	jr c, .asm_96dc
-	cp $ea
-	jr z, .asm_96de
-	jr c, .asm_96de
-.asm_96dc
-	and a
-	ret
-.asm_96de
-	scf
+	cp SFX_SWITCH
+	ccf
+	ret nc
+	cp MUSIC_GYM_LEADER_BATTLE + 1
 	ret
 
 Audio1_ApplyPitchBend: ; 0x96f9
@@ -1512,14 +1484,9 @@ Audio1_PlaySound::
 	jr nz, .commandPointerLoop
 	ld a, [wSoundID]
 	cp CRY_SFX_START
-	jr nc, .asm_9aeb
-	jr .done
-.asm_9aeb
-	ld a, [wSoundID]
+	ret c
 	cp CRY_SFX_END
-	jr z, .done
-	jr c, .cry
-	jr .done
+	ret nc
 .cry
 	ld hl, wChannelSoundIDs + CH4
 	ld [hli], a
@@ -1570,12 +1537,12 @@ Audio1_9972:
 Audio1_HWChannelEnableMasks:
 	db HW_CH1_ENABLE_MASK, HW_CH2_ENABLE_MASK, HW_CH3_ENABLE_MASK, HW_CH4_ENABLE_MASK ; channels 0-3
 	db HW_CH1_ENABLE_MASK, HW_CH2_ENABLE_MASK, HW_CH3_ENABLE_MASK, HW_CH4_ENABLE_MASK ; channels 4-7
-	db $01,$20,$44,$88
-	db $11,$22,$44,$88
-	db $01,$20,$04,$80
-	db $01,$20,$04,$80
-	db $01,$02,$40,$80
-	db $01,$02,$40,$80
+	db $01, $20,$44,$88
+	db $11, $22,$44,$88
+	db $01, $20,$04,$80
+	db $01, $20,$04,$80
+	db $01, $02,$40,$80
+	db $01, $02,$40,$80
 
 Audio1_Pitches:
 	dw $F82C ; C_

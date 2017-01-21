@@ -63,7 +63,7 @@ _PokemonTower5AfterBattleText4::
 	done
 
 _PokemonTower5Text7::
-	text "Entered purified,"
+	text "Entered purified, "
 	line "protected zone!"
 
 	para $52, "'s #MON"

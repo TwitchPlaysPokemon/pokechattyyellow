@@ -42,9 +42,9 @@ SilphCo7Script_51b77:
 	predef_jump ReplaceTileBlock
 
 SilphCo7GateCoords:
-	db $03,$05
-	db $02,$0A
-	db $06,$0A
+	db $03, $05
+	db $02, $0A
+	db $06, $0A
 	db $FF
 
 SilphCo7Text_51bc8:
@@ -154,8 +154,8 @@ SilphCo7Script0:
 	jp SilphCo7Text_51c10
 
 CoordsData_51c78:
-	db $02,$03
-	db $03,$03
+	db $02, $03
+	db $03, $03
 	db $FF
 
 MovementData_51c7d:

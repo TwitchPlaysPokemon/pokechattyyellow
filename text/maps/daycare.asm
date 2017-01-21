@@ -28,7 +28,7 @@ _DayCareMonHasGrownText::
 	line "has grown a lot!"
 	para "By level, it's"
 	line "grown by @"
-	TX_NUM wDayCareNumLevelsGrown,$1,$3
+	TX_NUM wDayCareNumLevelsGrown, $1,$3
 	text "!"
 
 	para "Aren't I great?"
@@ -58,7 +58,7 @@ _DayCareMonNeedsMoreTimeText::
 	prompt
 
 _DayCareAllRightThenText::
-	text "All right then,"
+	text "All right then, "
 	line "@@"
 
 _DayCareComeAgainText::

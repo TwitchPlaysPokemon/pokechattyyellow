@@ -77,11 +77,11 @@ LanceScript0:
 	jp LanceShowOrHideEntranceBlocks
 
 LanceTriggerMovementCoords:
-	db $01,$05
-	db $02,$06
-	db $0B,$05
-	db $0B,$06
-	db $10,$18
+	db $01, $05
+	db $02, $06
+	db $0B, $05
+	db $0B, $06
+	db $10, $18
 	db $FF
 
 LanceScript2:

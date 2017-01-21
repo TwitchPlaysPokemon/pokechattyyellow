@@ -57,7 +57,7 @@ _GaryVictoryText::
 	line "you, ", $52, "!"
 
 	para "You did well to"
-	line "even reach me,"
+	line "even reach me, "
 	cont $53, ", the"
 	cont "#MON genius!"
 

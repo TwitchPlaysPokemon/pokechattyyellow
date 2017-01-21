@@ -19,6 +19,6 @@ endr
 	endm
 
 delanim EQUS "db $fc"
-dorepeat EQUS "db $fd,"
+dorepeat EQUS "db $fd, "
 dorestart EQUS "db $fe"
 endanim EQUS "db $ff"

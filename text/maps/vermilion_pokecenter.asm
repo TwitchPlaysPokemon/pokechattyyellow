@@ -1,6 +1,6 @@
 _VermilionPokecenterText2::
 	text "Even if they are"
-	line "the same level,"
+	line "the same level, "
 	cont "#MON can have"
 	cont "very different"
 	cont "abilities."

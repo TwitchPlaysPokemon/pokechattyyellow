@@ -15,7 +15,7 @@ _CeruleanGymText_5c7be::
 	line "famous beauty, is"
 	cont "your host!"
 
-	para "Are you ready,"
+	para "Are you ready, "
 	line "sweetie?"
 	done
 
@@ -112,7 +112,7 @@ _CeruleanGymText_5c82a::
 
 	para "Here's my advice!"
 
-	para "The LEADER, MISTY,"
+	para "The LEADER, MISTY, "
 	line "is a pro who uses"
 	cont "water #MON!"
 
@@ -128,7 +128,7 @@ _CeruleanGymText_5c82f::
 	text "You beat MISTY!"
 	line "What'd I tell ya?"
 
-	para "You and me, kid,"
+	para "You and me, kid, "
 	line "we make a pretty"
 	cont "darn good team!"
 	done

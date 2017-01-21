@@ -89,10 +89,10 @@ LoreleiScript0:
 	ret
 
 LoreleiEntranceCoords:
-	db $0A,$04
-	db $0A,$05
-	db $0B,$04
-	db $0B,$05
+	db $0A, $04
+	db $0A, $05
+	db $0B, $04
+	db $0B, $05
 	db $FF
 
 LoreleiScript3:

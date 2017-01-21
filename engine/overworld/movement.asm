@@ -258,8 +258,8 @@ ChangeFacingDirection:
 	ld de, $0
 	; fall through
 
-; b: direction (1,2,4 or 8)
-; c: new facing direction (0,4,8 or $c)
+; b: direction (1, 2,4 or 8)
+; c: new facing direction (0, 4,8 or $c)
 ; d: Y movement delta (-1, 0 or 1)
 ; e: X movement delta (-1, 0 or 1)
 ; hl: pointer to tile the sprite would walk onto
@@ -326,7 +326,7 @@ UpdateSpriteInWalkingAnimation:
 	ld l, a
 	ld a, [hRandomAdd]
 	and $7f
-	ld [hl], a                       ; c2x8: set next movement delay to a random value in [0,$7f]
+	ld [hl], a                       ; c2x8: set next movement delay to a random value in [0, $7f]
 	dec h                            ;       note that value 0 actually makes the delay $100 (bug?)
 	ld a, [hCurrentSpriteOffset]
 	inc a
@@ -563,7 +563,7 @@ UpdateSpriteImage:
 	ret
 
 ; tests if sprite can walk the specified direction
-; b: direction (1,2,4 or 8)
+; b: direction (1, 2,4 or 8)
 ; c: ID of tile the sprite would walk onto
 ; d: Y movement delta (-1, 0 or 1)
 ; e: X movement delta (-1, 0 or 1)
@@ -620,7 +620,7 @@ CanWalkOntoTile:
 	add wSprite01CollisionDirections - wSprite01SpriteStateData1
 	ld l, a
 	ld a, [hl]         ; c1xc (directions in which sprite collision would occur)
-	and b              ; check against chosen direction (1,2,4 or 8)
+	and b              ; check against chosen direction (1, 2,4 or 8)
 	jr nz, .impassable ; collision between sprites, don't go there
 	ld h, wSpriteStateData2 / $100
 	ld a, [hCurrentSpriteOffset]
@@ -673,7 +673,7 @@ CanWalkOntoTile:
 	call Random
 	ld a, [hRandomAdd]
 	and $7f
-	ld [hl], a         ; c2x8: set next movement delay to a random value in [0,$7f] (again with delay $100 if value is 0)
+	ld [hl], a         ; c2x8: set next movement delay to a random value in [0, $7f] (again with delay $100 if value is 0)
 	scf                ; set carry (marking failure to walk)
 	ret
 

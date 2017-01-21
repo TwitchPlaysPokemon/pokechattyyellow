@@ -42,7 +42,7 @@ _SaffronGymText_5d173::
 	cont "to L70 obey you!"
 
 	para "Stronger #MON"
-	line "will become wild,"
+	line "will become wild, "
 	cont "ignoring your"
 	cont "orders in battle!"
 
@@ -89,10 +89,10 @@ _SaffronGymText_5d1e6::
 	done
 
 _SaffronGymText_5d1eb::
-	text "Psychic power,"
+	text "Psychic power, "
 	line "huh?"
 
-	para "If I had that,"
+	para "If I had that, "
 	line "I'd make a bundle"
 	cont "at the slots!"
 	done
@@ -115,7 +115,7 @@ _SaffronGymAfterBattleText1::
 	cont "will wins!"
 
 	para "If you wish"
-	line "to beat SABRINA,"
+	line "to beat SABRINA, "
 	cont "focus on winning!"
 	done
 
@@ -189,7 +189,7 @@ _SaffronGymAfterBattleText5::
 	done
 
 _SaffronGymBattleText6::
-	text "SABRINA is young,"
+	text "SABRINA is young, "
 	line "but she's also"
 	cont "our LEADER!"
 

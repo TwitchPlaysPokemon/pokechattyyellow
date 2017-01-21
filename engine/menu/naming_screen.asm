@@ -31,9 +31,7 @@ AskName:
 	call DisplayNamingScreen
 	ld a, [wIsInBattle]
 	and a
-	jr nz, .inBattle
-	call ReloadMapSpriteTilePatterns
-.inBattle
+	call z, ReloadMapSpriteTilePatterns
 	call LoadScreenTilesFromBuffer1
 	pop hl
 	pop af
@@ -380,10 +378,10 @@ PrintAlphabet:
 	jp Delay3
 
 LowerCaseAlphabet:
-	db "abcdefghijklmnopqrstuvwxyz ×():;[]",$e1,$e2,"-?!♂♀/",$f2,",¥UPPER CASE@"
+	db "abcdefghijklmnopqrstuvwxyz ×():;[]", $e1,$e2,"-?!♂♀/",$f2,",¥UPPER CASE@"
 
 UpperCaseAlphabet:
-	db "ABCDEFGHIJKLMNOPQRSTUVWXYZ ×():;[]",$e1,$e2,"-?!♂♀/",$f2,",¥lower case@"
+	db "ABCDEFGHIJKLMNOPQRSTUVWXYZ ×():;[]", $e1,$e2,"-?!♂♀/",$f2,",¥lower case@"
 
 PrintNicknameAndUnderscores:
 	call CalcStringLength

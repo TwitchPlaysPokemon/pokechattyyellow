@@ -317,6 +317,8 @@ hCurSpriteScreenX EQU $FFEC
 hCurSpriteMapY EQU $FFED
 hCurSpriteMapX EQU $FFEE
 
+hMapTextPointerBackup EQU $FFEC
+
 hDidntFindAnyHiddenObject EQU $FFEE
 
 hBuffer EQU $FFEF

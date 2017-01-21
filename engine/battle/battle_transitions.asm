@@ -372,7 +372,7 @@ BattleTransition_FlashScreen_:
 	ret
 
 BattleTransition_FlashScreenPalettes:
-	db $F9,$FE,$FF,$FE,$F9,$E4,$90,$40,$00,$40,$90,$E4
+	db $F9, $FE,$FF,$FE,$F9,$E4,$90,$40,$00,$40,$90,$E4
 	db $01 ; terminator
 
 ; used for low level trainer dungeon battles
@@ -811,16 +811,16 @@ BattleTransition_Circle_Sub3:
 	jr BattleTransition_Circle_Sub3
 
 BattleTransition_CircleData1:
-	db $02,$03,$05,$04,$09,$FF
+	db $02, $03,$05,$04,$09,$FF
 
 BattleTransition_CircleData2:
-	db $01,$01,$02,$02,$04,$02,$04,$02,$03,$FF
+	db $01, $01,$02,$02,$04,$02,$04,$02,$03,$FF
 
 BattleTransition_CircleData3:
-	db $02,$01,$03,$01,$04,$01,$04,$01,$04,$01,$03,$01,$02,$01,$01,$01,$01,$FF
+	db $02, $01,$03,$01,$04,$01,$04,$01,$04,$01,$03,$01,$02,$01,$01,$01,$01,$FF
 
 BattleTransition_CircleData4:
-	db $04,$01,$04,$00,$03,$01,$03,$00,$02,$01,$02,$00,$01,$FF
+	db $04, $01,$04,$00,$03,$01,$03,$00,$02,$01,$02,$00,$01,$FF
 
 BattleTransition_CircleData5:
-	db $04,$00,$03,$00,$03,$00,$02,$00,$02,$00,$01,$00,$01,$00,$01,$FF
+	db $04, $00,$03,$00,$03,$00,$02,$00,$02,$00,$01,$00,$01,$00,$01,$FF

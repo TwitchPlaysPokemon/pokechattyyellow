@@ -14,11 +14,11 @@ SetDebugTeam:
 	jr .loop
 
 DebugTeam:
-	db SNORLAX,80
-	db PERSIAN,80
-	db JIGGLYPUFF,15
-	db PIKACHU,5
-	db CHATOT,5
+	db SNORLAX, 80
+	db PERSIAN, 80
+	db JIGGLYPUFF, 15
+	db PIKACHU, 5
+	db CHATOT, 5
 	db $FF
 
 EmptyFunc:

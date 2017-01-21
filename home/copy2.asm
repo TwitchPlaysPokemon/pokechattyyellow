@@ -1,30 +1,30 @@
 FarCopyDataDouble::
 ; Expand bc bytes of 1bpp image data
 ; from a:de to 2bpp data at hl.
-	ld [wFarCopyDataSavedROMBank],a
-	ld a,[hROMBank]
+	ld [wFarCopyDataSavedROMBank], a
+	ld a, [hROMBank]
 	push af
-	ld a,[wFarCopyDataSavedROMBank]
+	ld a, [wFarCopyDataSavedROMBank]
 	call Bankswitch
-	ld a,h ; swap hl and de
-	ld h,d
-	ld d,a
-	ld a,l
-	ld l,e
-	ld e,a
-	ld a,b
+	ld a, h ; swap hl and de
+	ld h, d
+	ld d, a
+	ld a, l
+	ld l, e
+	ld e, a
+	ld a, b
 	and a
-	jr z,.eightbitcopyamount
-	ld a,c
+	jr z, .eightbitcopyamount
+	ld a, c
 	and a ; multiple of $100
 	jr z, .expandloop ; if so, do not increment b because the first instance of dec c results in underflow
 .eightbitcopyamount
 	inc b
 .expandloop
-	ld a,[de]
+	ld a, [de]
 	inc de
-	ld [hli],a
-	ld [hli],a
+	ld [hli], a
+	ld [hli], a
 	dec c
 	jr nz, .expandloop
 	dec b
@@ -131,10 +131,10 @@ CopyVideoDataDouble::
 
 FillMemory::
 	push af
-	ld a,b
+	ld a, b
 	and a
 	jr z, .eightbitcopyamount
-	ld a,c
+	ld a, c
 	and a
 	jr z, .mulitpleof0x100
 .eightbitcopyamount
@@ -142,7 +142,7 @@ FillMemory::
 .mulitpleof0x100
 	pop af
 .loop
-	ld [hli],a
+	ld [hli], a
 	dec c
 	jr nz, .loop
 	dec b

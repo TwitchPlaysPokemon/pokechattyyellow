@@ -123,7 +123,7 @@ AnimateShootingStar:
 	inc hl
 	push bc
 	ld a, [de]
-	ld b,a
+	ld b, a
 	ld a, [hl]
 	and $f0
 	or b
@@ -158,7 +158,7 @@ AnimateShootingStar:
 	ret
 
 SmallStarsOAM:
-	db $00,$00,$A2,$90
+	db $00, $00,$A2,$90
 SmallStarsOAMEnd:
 
 SmallStarsWaveCoordsPointerTable:
@@ -173,36 +173,36 @@ SmallStarsWaveCoordsPointerTable:
 ; These arrays contain the Y and X coordinates of each OAM entry.
 
 SmallStarsWave1Coords:
-	db $68,$30
-	db $05,$68
-	db $40,$05
-	db $68,$58
-	db $04,$68
-	db $78,$07
+	db $68, $30
+	db $05, $68
+	db $40, $05
+	db $68, $58
+	db $04, $68
+	db $78, $07
 
 SmallStarsWave2Coords:
-	db $68,$38
-	db $05,$68
-	db $48,$06
-	db $68,$60
-	db $04,$68
-	db $70,$07
+	db $68, $38
+	db $05, $68
+	db $48, $06
+	db $68, $60
+	db $04, $68
+	db $70, $07
 
 SmallStarsWave3Coords:
-	db $68,$34
-	db $05,$68
-	db $4c,$06
-	db $68,$54
-	db $06,$68
-	db $64,$07
+	db $68, $34
+	db $05, $68
+	db $4c, $06
+	db $68, $54
+	db $06, $68
+	db $64, $07
 
 SmallStarsWave4Coords:
-	db $68,$3c
-	db $05,$68
-	db $5c,$04
-	db $68,$6c
-	db $07,$68
-	db $74,$07
+	db $68, $3c
+	db $05, $68
+	db $5c, $04
+	db $68, $6c
+	db $07, $68
+	db $74, $07
 
 SmallStarsEmptyWave:
 	db $FF
@@ -233,29 +233,29 @@ MoveDownSmallStars:
 	ret
 
 GameFreakLogoOAMData:
-	db $48,$50,$8D,$00
-	db $48,$58,$8E,$00
-	db $50,$50,$8F,$00
-	db $50,$58,$90,$00
-	db $58,$50,$91,$00
-	db $58,$58,$92,$00
-	db $60,$30,$80,$00
-	db $60,$38,$81,$00
-	db $60,$40,$82,$00
-	db $60,$48,$83,$00
-	db $60,$50,$93,$00
-	db $60,$58,$84,$00
-	db $60,$60,$85,$00
-	db $60,$68,$83,$00
-	db $60,$70,$81,$00
-	db $60,$78,$86,$00
+	db $48, $50,$8D,$00
+	db $48, $58,$8E,$00
+	db $50, $50,$8F,$00
+	db $50, $58,$90,$00
+	db $58, $50,$91,$00
+	db $58, $58,$92,$00
+	db $60, $30,$80,$00
+	db $60, $38,$81,$00
+	db $60, $40,$82,$00
+	db $60, $48,$83,$00
+	db $60, $50,$93,$00
+	db $60, $58,$84,$00
+	db $60, $60,$85,$00
+	db $60, $68,$83,$00
+	db $60, $70,$81,$00
+	db $60, $78,$86,$00
 GameFreakLogoOAMDataEnd:
 
 GameFreakShootingStarOAMData:
-	db $00,$A0,$A0,$14
-	db $00,$A8,$A0,$34
-	db $08,$A0,$A1,$14
-	db $08,$A8,$A1,$34
+	db $00, $A0,$A0,$14
+	db $00, $A8,$A0,$34
+	db $08, $A0,$A1,$14
+	db $08, $A8,$A1,$34
 GameFreakShootingStarOAMDataEnd:
 
 FallingStar:

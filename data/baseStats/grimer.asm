@@ -8,7 +8,7 @@ db POISON ; species type 1
 db POISON ; species type 2
 db 190 ; catch rate
 db 90 ; base exp yield
-INCBIN "pic/ymon/grimer.pic",0,1 ; 55, sprite dimensions
+INCBIN "pic/ymon/grimer.pic", 0,1 ; 55, sprite dimensions
 dw GrimerPicFront
 dw GrimerPicBack
 ; attacks known at lvl 0
@@ -18,11 +18,11 @@ db 0
 db 0
 db 0 ; growth rate
 ; learnset
-	tmlearn 6,8
+	tmlearn 6, 8
 	tmlearn 0
-	tmlearn 20,21,24
-	tmlearn 25,31,32
-	tmlearn 34,36,38
-	tmlearn 44,47
+	tmlearn 20, 21,24
+	tmlearn 25, 31,32
+	tmlearn 34, 36,38
+	tmlearn 44, 47
 	tmlearn 50
 db 0 ; padding

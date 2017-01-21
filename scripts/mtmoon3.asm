@@ -19,22 +19,22 @@ MtMoon3Script:
 	ret
 
 CoordsData_49d37:
-	db $05,$0B
-	db $05,$0C
-	db $05,$0D
-	db $05,$0E
-	db $06,$0B
-	db $06,$0C
-	db $06,$0D
-	db $06,$0E
-	db $07,$0B
-	db $07,$0C
-	db $07,$0D
-	db $07,$0E
-	db $08,$0B
-	db $08,$0C
-	db $08,$0D
-	db $08,$0E
+	db $05, $0B
+	db $05, $0C
+	db $05, $0D
+	db $05, $0E
+	db $06, $0B
+	db $06, $0C
+	db $06, $0D
+	db $06, $0E
+	db $07, $0B
+	db $07, $0C
+	db $07, $0D
+	db $07, $0E
+	db $08, $0B
+	db $08, $0C
+	db $08, $0D
+	db $08, $0E
 	db $FF
 
 MtMoon3Script_49cd7:
@@ -154,13 +154,13 @@ MtMoon3Script4:
 	ret
 
 CoordsData_49dc0:
-	db $07,$0C
-	db $06,$0B
-	db $05,$0C
+	db $07, $0C
+	db $06, $0B
+	db $05, $0C
 	db $FF
 
 CoordsData_49dc7:
-	db $07,$0C
+	db $07, $0C
 	db $FF
 
 PikachuMovementData_49dca:
@@ -170,13 +170,13 @@ PikachuMovementData_49dca:
 	db $3f
 
 CoordsData_49dce:
-	db $07,$0D
-	db $06,$0E
-	db $05,$0E
+	db $07, $0D
+	db $06, $0E
+	db $05, $0E
 	db $FF
 
 CoordsData_49dd5:
-	db $07,$0D
+	db $07, $0D
 	db $FF
 
 PikachuMovementData_49dd8:

@@ -1,191 +1,191 @@
 Func_f531b::
-	ld c,$14
+	ld c, $14
 	call DelayFrames
-	ld a,$1
-	ld [wBuffer],a
+	ld a, $1
+	ld [wBuffer], a
 	xor a
-	ld [wUnknownSerialFlag_d499],a
-	coord hl, 0,0
+	ld [wUnknownSerialFlag_d499], a
+	coord hl, 0, 0
 	lb bc, 4, 5
 	call TextBoxBorder
-	ld de,Text_f5791
-	coord hl, 1,2
+	ld de, Text_f5791
+	coord hl, 1, 2
 	call PlaceString
-	coord hl, 8,0
+	coord hl, 8, 0
 	lb bc, 8, 10
 	call TextBoxBorder
-	coord hl, 10,2
-	ld de,Text_f579c
+	coord hl, 10, 2
+	ld de, Text_f579c
 	call PlaceString
-	coord hl, 0,10
+	coord hl, 0, 10
 	lb bc, 6, 18
 	call TextBoxBorder
 	call UpdateSprites
 	xor a
-	ld [wUnusedCD37],a
-	ld [wd72d],a
-	ld [wd11e],a
-	ld hl,wTopMenuItemY
-	ld a,$2
-	ld [hli],a
-	ld a,$9
-	ld [hli],a
+	ld [wUnusedCD37], a
+	ld [wd72d], a
+	ld [wd11e], a
+	ld hl, wTopMenuItemY
+	ld a, $2
+	ld [hli], a
+	ld a, $9
+	ld [hli], a
 	xor a
-	ld [hli],a
+	ld [hli], a
 	inc hl
-	ld a,$3
-	ld [hli],a
-	ld a,$3
-	ld [hli],a
+	ld a, $3
+	ld [hli], a
+	ld a, $3
+	ld [hli], a
 	xor a
-	ld [hl],a
+	ld [hl], a
 .asm_f5377
 	call Func_f56bd
 	call HandleMenuInput
 	and $3
 	add a
 	add a
-	ld b,a
-	ld a,[wCurrentMenuItem]
+	ld b, a
+	ld a, [wCurrentMenuItem]
 	cp $3
-	jr nz,.asm_f5390
-	bit 2,b
-	jr z,.asm_f5390
+	jr nz, .asm_f5390
+	bit 2, b
+	jr z, .asm_f5390
 	dec a
-	ld b,$8
+	ld b, $8
 .asm_f5390
 	add b
 	add $c0
-	ld [wLinkMenuSelectionSendBuffer],a
-	ld [wLinkMenuSelectionSendBuffer+1],a
+	ld [wLinkMenuSelectionSendBuffer], a
+	ld [wLinkMenuSelectionSendBuffer+1], a
 .asm_f5399
-	ld hl,wLinkMenuSelectionSendBuffer
-	ld a,[hl]
-	ld [hSerialSendData],a
+	ld hl, wLinkMenuSelectionSendBuffer
+	ld a, [hl]
+	ld [hSerialSendData], a
 	call Serial_ExchangeByte
 	push af
-	ld hl,wLinkMenuSelectionSendBuffer
-	ld a,[hl]
-	ld [hSerialSendData],a
+	ld hl, wLinkMenuSelectionSendBuffer
+	ld a, [hl]
+	ld [hSerialSendData], a
 	call Serial_ExchangeByte
 	pop bc
 	cp b
-	jr nz,.asm_f5399
+	jr nz, .asm_f5399
 	and $f0
 	cp $c0
-	jr nz,.asm_f5399
-	ld a,b
+	jr nz, .asm_f5399
+	ld a, b
 	and $c
-	jr nz,.asm_f53c4
-	ld a,[wLinkMenuSelectionSendBuffer]
+	jr nz, .asm_f53c4
+	ld a, [wLinkMenuSelectionSendBuffer]
 	and $c
-	jr z,.asm_f5377
+	jr z, .asm_f5377
 	jr .asm_f53df
 .asm_f53c4
-	ld a,[wLinkMenuSelectionSendBuffer]
+	ld a, [wLinkMenuSelectionSendBuffer]
 	and $c
-	jr z,.asm_f53d1
-	ld a,[hSerialConnectionStatus]
+	jr z, .asm_f53d1
+	ld a, [hSerialConnectionStatus]
 	cp $2
-	jr z,.asm_f53df
+	jr z, .asm_f53df
 .asm_f53d1
-	ld a,$1
-	ld [wd11e],a
-	ld a,b
-	ld [wLinkMenuSelectionSendBuffer],a
+	ld a, $1
+	ld [wd11e], a
+	ld a, b
+	ld [wLinkMenuSelectionSendBuffer], a
 	and $3
-	ld [wCurrentMenuItem],a
+	ld [wCurrentMenuItem], a
 .asm_f53df
 	call DelayFrame
 	call DelayFrame
-	ld hl,wLinkMenuSelectionSendBuffer
-	ld a,[hl]
-	ld [hSerialSendData],a
+	ld hl, wLinkMenuSelectionSendBuffer
+	ld a, [hl]
+	ld [hSerialSendData], a
 	call Serial_ExchangeByte
 	call Serial_ExchangeByte
-	ld b,$14
+	ld b, $14
 .loop
 	call DelayFrame
 	call Serial_SendZeroByte
 	dec b
-	jr nz,.loop
-	ld b,$7f
-	ld c,$7f
-	ld d,$7f
-	ld e,$ec
-	ld a,[wLinkMenuSelectionSendBuffer]
-	bit 3,a
-	jr nz,.asm_f541a
-	ld b,e
-	ld e,c
-	ld a,[wCurrentMenuItem]
+	jr nz, .loop
+	ld b, $7f
+	ld c, $7f
+	ld d, $7f
+	ld e, $ec
+	ld a, [wLinkMenuSelectionSendBuffer]
+	bit 3, a
+	jr nz, .asm_f541a
+	ld b, e
+	ld e, c
+	ld a, [wCurrentMenuItem]
 	and a
-	jr z,.asm_f541a
-	ld c,b
-	ld b,d
+	jr z, .asm_f541a
+	ld c, b
+	ld b, d
 	dec a
-	jr z,.asm_f541a
-	ld d,c
-	ld c,b
+	jr z, .asm_f541a
+	ld d, c
+	ld c, b
 .asm_f541a
-	ld a,b
-	Coorda 9,2
-	ld a,c
-	Coorda 9,4
-	ld a,d
-	Coorda 9,6
-	ld a,e
-	Coorda 9,8
-	ld c,40
+	ld a, b
+	Coorda 9, 2
+	ld a, c
+	Coorda 9, 4
+	ld a, d
+	Coorda 9, 6
+	ld a, e
+	Coorda 9, 8
+	ld c, 40
 	call DelayFrames
-	ld a,[wLinkMenuSelectionSendBuffer]
-	bit 3,a
-	jr nz,asm_f547f
-	ld a,[wCurrentMenuItem]
+	ld a, [wLinkMenuSelectionSendBuffer]
+	bit 3, a
+	jr nz, asm_f547f
+	ld a, [wCurrentMenuItem]
 	cp $3
-	jr z,asm_f547f
+	jr z, asm_f547f
 	inc a
-	ld [wUnknownSerialFlag_d499],a
-	ld a,[wCurrentMenuItem]
-	ld hl,PointerTable_f5488
-	ld c,a
-	ld b,$0
-	add hl,bc
-	add hl,bc
-	ld a,[hli]
-	ld h,[hl]
-	ld l,a
-	ld de,.returnaddress
+	ld [wUnknownSerialFlag_d499], a
+	ld a, [wCurrentMenuItem]
+	ld hl, PointerTable_f5488
+	ld c, a
+	ld b, $0
+	add hl, bc
+	add hl, bc
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ld de, .returnaddress
 	push de
 	jp hl
 .returnaddress
-	ld [wLinkMenuSelectionSendBuffer],a
+	ld [wLinkMenuSelectionSendBuffer], a
 	xor a
-	ld [wUnknownSerialCounter],a
-	ld [wUnknownSerialCounter+1],a
+	ld [wUnknownSerialCounter], a
+	ld [wUnknownSerialCounter+1], a
 	call Serial_SyncAndExchangeNybble
-	ld a,[wLinkMenuSelectionSendBuffer]
+	ld a, [wLinkMenuSelectionSendBuffer]
 	and a
-	jr nz,asm_f547c
+	jr nz, asm_f547c
 	ld a, [wLinkMenuSelectionReceiveBuffer]
 	and a
 	jr nz, Func_f5476
 	xor a
-	ld [wUnknownSerialCounter],a
-	ld [wUnknownSerialCounter+1],a
+	ld [wUnknownSerialCounter], a
+	ld [wUnknownSerialCounter+1], a
 	and a
 	ret
 
 Func_f5476::
-	ld hl,ColosseumIneligibleText
+	ld hl, ColosseumIneligibleText
 	call PrintText
 asm_f547c::
 	jp Func_f531b
 
 asm_f547f::
 	xor a
-	ld [wUnknownSerialCounter],a
-	ld [wUnknownSerialCounter+1],a
+	ld [wUnknownSerialCounter], a
+	ld [wUnknownSerialCounter+1], a
 	scf
 	ret
 
@@ -195,347 +195,347 @@ PointerTable_f5488::
 	dw PetitCup
 
 PokeCup::
-	ld hl,wPartyCount
-	ld a,[hli]
+	ld hl, wPartyCount
+	ld a, [hli]
 	cp $3
-	jp nz,NotThreeMonsInParty
-	ld b,$3
+	jp nz, NotThreeMonsInParty
+	ld b, $3
 .loop
-	ld a,[hli]
+	ld a, [hli]
 	cp MEW
-	jp z,MewInParty
+	jp z, MewInParty
 	dec b
-	jr nz,.loop
+	jr nz, .loop
 	dec hl
 	dec hl
 	cp [hl] ; is third mon second mon?
-	jp z,DuplicateSpecies
+	jp z, DuplicateSpecies
 	dec hl ; wPartySpecies
 	cp [hl] ; is third mon first mon?
-	jp z,DuplicateSpecies
-	ld a,[hli]
+	jp z, DuplicateSpecies
+	ld a, [hli]
 	cp [hl] ; is first mon second mon?
-	jp z,DuplicateSpecies
-	ld a,[wPartyMon1Level]
+	jp z, DuplicateSpecies
+	ld a, [wPartyMon1Level]
 	cp 56
-	jp nc,LevelAbove55
+	jp nc, LevelAbove55
 	cp 50
-	jp c,LevelUnder50
-	ld b,a
-	ld a,[wPartyMon2Level]
+	jp c, LevelUnder50
+	ld b, a
+	ld a, [wPartyMon2Level]
 	cp 56
-	jp nc,LevelAbove55
+	jp nc, LevelAbove55
 	cp 50
-	jp c,LevelUnder50
-	ld c,a
-	ld a,[wPartyMon3Level]
+	jp c, LevelUnder50
+	ld c, a
+	ld a, [wPartyMon3Level]
 	cp 56
-	jp nc,LevelAbove55
+	jp nc, LevelAbove55
 	cp 50
-	jp c,LevelUnder50
+	jp c, LevelUnder50
 	add b
 	add c
 	cp 156
-	jp nc,CombinedLevelsGreaterThan155
+	jp nc, CombinedLevelsGreaterThan155
 	xor a
 	ret
 
 PikaCup::
-	ld hl,wPartyCount
-	ld a,[hli]
+	ld hl, wPartyCount
+	ld a, [hli]
 	cp $3
-	jp nz,NotThreeMonsInParty
-	ld b,$3
+	jp nz, NotThreeMonsInParty
+	ld b, $3
 .loop
-	ld a,[hli] ; wPartySpecies
+	ld a, [hli] ; wPartySpecies
 	cp MEW
-	jp z,MewInParty
+	jp z, MewInParty
 	dec b
-	jr nz,.loop
+	jr nz, .loop
 	dec hl
 	dec hl
 	cp [hl] ; is third mon second mon?
-	jp z,DuplicateSpecies
+	jp z, DuplicateSpecies
 	dec hl ; wPartySpecies
 	cp [hl] ; is third mon first mon?
-	jp z,DuplicateSpecies
-	ld a,[hli]
+	jp z, DuplicateSpecies
+	ld a, [hli]
 	cp [hl] ; is first mon second mon?
-	jp z,DuplicateSpecies
-	ld a,[wPartyMon1Level]
+	jp z, DuplicateSpecies
+	ld a, [wPartyMon1Level]
 	cp 21
-	jp nc,LevelAbove20
+	jp nc, LevelAbove20
 	cp 15
-	jp c,LevelUnder15
-	ld b,a
-	ld a,[wPartyMon2Level]
+	jp c, LevelUnder15
+	ld b, a
+	ld a, [wPartyMon2Level]
 	cp 21
-	jp nc,LevelAbove20
+	jp nc, LevelAbove20
 	cp 15
-	jp c,LevelUnder15
-	ld c,a
-	ld a,[wPartyMon3Level]
+	jp c, LevelUnder15
+	ld c, a
+	ld a, [wPartyMon3Level]
 	cp 21
-	jp nc,LevelAbove20
+	jp nc, LevelAbove20
 	cp 15
-	jp c,LevelUnder15
+	jp c, LevelUnder15
 	add b
 	add c
 	cp 51
-	jp nc,CombinedLevelsAbove50
+	jp nc, CombinedLevelsAbove50
 	xor a
 	ret
 
 PetitCup::
-	ld hl,wPartyCount
-	ld a,[hli]
+	ld hl, wPartyCount
+	ld a, [hli]
 	cp $3
-	jp nz,NotThreeMonsInParty
-	ld b,$3
+	jp nz, NotThreeMonsInParty
+	ld b, $3
 .loop
-	ld a,[hli]
+	ld a, [hli]
 	cp MEW
-	jp z,MewInParty
+	jp z, MewInParty
 	dec b
-	jr nz,.loop
+	jr nz, .loop
 	dec hl
 	dec hl
 	cp [hl] ; is third mon second mon?
-	jp z,DuplicateSpecies
+	jp z, DuplicateSpecies
 	dec hl ; wPartySpecies
 	cp [hl] ; is third mon first mon?
-	jp z,DuplicateSpecies
-	ld a,[hli]
+	jp z, DuplicateSpecies
+	ld a, [hli]
 	cp [hl] ; is first mon second mon?
-	jp z,DuplicateSpecies
+	jp z, DuplicateSpecies
 	dec hl
-	ld a,[hl]
-	ld [wcf91],a
+	ld a, [hl]
+	ld [wcf91], a
 	push hl
 	callab Func_3b10f
 	pop hl
-	jp c,asm_f56ad
+	jp c, asm_f56ad
 	inc hl
-	ld a,[hl]
-	ld [wcf91],a
+	ld a, [hl]
+	ld [wcf91], a
 	push hl
 	callab Func_3b10f
 	pop hl
-	jp c,asm_f56ad
+	jp c, asm_f56ad
 	inc hl
-	ld a,[hl]
-	ld [wcf91],a
+	ld a, [hl]
+	ld [wcf91], a
 	push hl
 	callab Func_3b10f
 	pop hl
-	jp c,asm_f56ad
+	jp c, asm_f56ad
 	dec hl
 	dec hl
-	ld b,$3
+	ld b, $3
 .bigloop
-	ld a,[hli]
+	ld a, [hli]
 	push hl
 	push bc
 	push af
 	dec a
-	ld c,a
-	ld b,$0
-	ld hl,PokedexEntryPointers
-	add hl,bc
-	add hl,bc
-	ld de,wStringBuffer
-	ld bc,$2
-	ld a,BANK(PokedexEntryPointers)
+	ld c, a
+	ld b, $0
+	ld hl, PokedexEntryPointers
+	add hl, bc
+	add hl, bc
+	ld de, wStringBuffer
+	ld bc, $2
+	ld a, BANK(PokedexEntryPointers)
 	call FarCopyData
-	ld hl,wStringBuffer
-	ld a,[hli]
-	ld h,[hl]
-	ld l,a
-	ld de,wStringBuffer
-	ld bc,$14
-	ld a,BANK(PokedexEntryPointers)
+	ld hl, wStringBuffer
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ld de, wStringBuffer
+	ld bc, $14
+	ld a, BANK(PokedexEntryPointers)
 	call FarCopyData
-	ld hl,wStringBuffer
+	ld hl, wStringBuffer
 .loop2
-	ld a,[hli]
+	ld a, [hli]
 	cp "@"
-	jr nz,.loop2
-	ld a,[hli]
+	jr nz, .loop2
+	ld a, [hli]
 	cp $7
-	jp nc,asm_f5689
+	jp nc, asm_f5689
 	add a
 	add a
-	ld b,a
+	ld b, a
 	add a
 	add b
-	ld b,a
-	ld a,[hli]
+	ld b, a
+	ld a, [hli]
 	add b
 	cp $51
-	jp nc,asm_f5689
-	ld a,[hli]
+	jp nc, asm_f5689
+	ld a, [hli]
 	sub $b9
-	ld a,[hl]
+	ld a, [hl]
 	sbc $1
-	jp nc,asm_f569b
+	jp nc, asm_f569b
 	pop af
 	pop bc
 	pop hl
 	dec b
-	jr nz,.bigloop
-	ld a,[wPartyMon1Level]
+	jr nz, .bigloop
+	ld a, [wPartyMon1Level]
 	cp 31
-	jp nc,LevelAbove30
+	jp nc, LevelAbove30
 	cp 25
-	jp c,LevelUnder25
-	ld b,a
-	ld a,[wPartyMon2Level]
+	jp c, LevelUnder25
+	ld b, a
+	ld a, [wPartyMon2Level]
 	cp 31
-	jp nc,LevelAbove30
+	jp nc, LevelAbove30
 	cp 25
-	jp c,LevelUnder25
-	ld c,a
-	ld a,[wPartyMon3Level]
+	jp c, LevelUnder25
+	ld c, a
+	ld a, [wPartyMon3Level]
 	cp 31
-	jp nc,LevelAbove30
+	jp nc, LevelAbove30
 	cp 25
-	jp c,LevelUnder25
+	jp c, LevelUnder25
 	add b
 	add c
 	cp 81
-	jp nc,CombinedLevelsAbove80
+	jp nc, CombinedLevelsAbove80
 	xor a
 	ret
 
 NotThreeMonsInParty::
-	ld hl,Colosseum3MonsText
+	ld hl, Colosseum3MonsText
 	call PrintText
-	ld a,$1
+	ld a, $1
 	ret
 
 MewInParty::
-	ld hl,ColosseumMewText
+	ld hl, ColosseumMewText
 	call PrintText
-	ld a,$2
+	ld a, $2
 	ret
 
 DuplicateSpecies::
-	ld hl,ColosseumDifferentMonsText
+	ld hl, ColosseumDifferentMonsText
 	call PrintText
-	ld a,$3
+	ld a, $3
 	ret
 
 LevelAbove55::
-	ld hl,ColosseumMaxL55Text
+	ld hl, ColosseumMaxL55Text
 	call PrintText
-	ld a,$4
+	ld a, $4
 	ret
 
 LevelUnder50::
-	ld hl,ColosseumMinL50Text
+	ld hl, ColosseumMinL50Text
 	call PrintText
-	ld a,$5
+	ld a, $5
 	ret
 
 CombinedLevelsGreaterThan155::
-	ld hl,ColosseumTotalL155Text
+	ld hl, ColosseumTotalL155Text
 	call PrintText
-	ld a,$6
+	ld a, $6
 	ret
 
 LevelAbove30::
-	ld hl,ColosseumMaxL30Text
+	ld hl, ColosseumMaxL30Text
 	call PrintText
-	ld a,$7
+	ld a, $7
 	ret
 
 LevelUnder25::
-	ld hl,ColosseumMinL25Text
+	ld hl, ColosseumMinL25Text
 	call PrintText
-	ld a,$8
+	ld a, $8
 	ret
 
 CombinedLevelsAbove80::
-	ld hl,ColosseumTotalL80Text
+	ld hl, ColosseumTotalL80Text
 	call PrintText
-	ld a,$9
+	ld a, $9
 	ret
 
 LevelAbove20::
-	ld hl,ColosseumMaxL20Text
+	ld hl, ColosseumMaxL20Text
 	call PrintText
-	ld a,$a
+	ld a, $a
 	ret
 
 LevelUnder15::
-	ld hl,ColosseumMinL15Text
+	ld hl, ColosseumMinL15Text
 	call PrintText
-	ld a,$b
+	ld a, $b
 	ret
 
 CombinedLevelsAbove50::
-	ld hl,ColosseumTotalL50Text
+	ld hl, ColosseumTotalL50Text
 	call PrintText
-	ld a,$c
+	ld a, $c
 	ret
 
 asm_f5689::
 	pop af
 	pop bc
 	pop hl
-	ld [wd11e],a
+	ld [wd11e], a
 	call GetMonName
-	ld hl,ColosseumHeightText
+	ld hl, ColosseumHeightText
 	call PrintText
-	ld a,$d
+	ld a, $d
 	ret
 
 asm_f569b::
 	pop af
 	pop bc
 	pop hl
-	ld [wd11e],a
+	ld [wd11e], a
 	call GetMonName
-	ld hl,ColosseumWeightText
+	ld hl, ColosseumWeightText
 	call PrintText
-	ld a,$e
+	ld a, $e
 	ret
 
 asm_f56ad::
-	ld a,[hl]
-	ld [wd11e],a
+	ld a, [hl]
+	ld [wd11e], a
 	call GetMonName
-	ld hl,ColosseumEvolvedText
+	ld hl, ColosseumEvolvedText
 	call PrintText
-	ld a,$f
+	ld a, $f
 	ret
 
 Func_f56bd::
 	xor a
-	ld [hBGMapMode],a
-	coord hl, 1,11
+	ld [hBGMapMode], a
+	coord hl, 1, 11
 	lb bc, 6, 18
 	call ClearScreenArea
-	ld a,[wCurrentMenuItem]
+	ld a, [wCurrentMenuItem]
 	cp $3
-	jr nc,.asm_f56e6
-	ld hl,PointerTable_f56ee
-	ld a,[wCurrentMenuItem]
-	ld c,a
-	ld b,$0
-	add hl,bc
-	add hl,bc
-	ld a,[hli]
-	ld h,[hl]
-	ld l,a
-	ld d,h
-	ld e,l
-	coord hl, 1,12
+	jr nc, .asm_f56e6
+	ld hl, PointerTable_f56ee
+	ld a, [wCurrentMenuItem]
+	ld c, a
+	ld b, $0
+	add hl, bc
+	add hl, bc
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ld d, h
+	ld e, l
+	coord hl, 1, 12
 	call PlaceString
 .asm_f56e6
 	call Delay3
-	ld a,$1
-	ld [hBGMapMode],a
+	ld a, $1
+	ld [hBGMapMode], a
 	ret
 
 PointerTable_f56ee::
@@ -674,11 +674,11 @@ LinkMenu:
 	ld b, a
 	ld a, [wCurrentMenuItem]
 	cp $3
-	jr nz,.asm_f586b
-	bit 2,b
-	jr z,.asm_f586b
+	jr nz, .asm_f586b
+	bit 2, b
+	jr z, .asm_f586b
 	dec a
-	ld b,$8
+	ld b, $8
 .asm_f586b
 	add b
 	add $d0
@@ -800,75 +800,75 @@ LinkMenu:
 	ret
 
 .asm_f5963
-	ld a,[wd11e]
+	ld a, [wd11e]
 	and a
-	jr nz,.asm_f5974
-	ld b," "
-	ld c," "
-	ld d,"▷"
-	ld e," "
+	jr nz, .asm_f5974
+	ld b, " "
+	ld c, " "
+	ld d, "▷"
+	ld e, " "
 	call Func_f59ec
 .asm_f5974
 	xor a
 	ld [wBuffer], a
-	ld a,$ff
-	ld [wSerialExchangeNybbleReceiveData],a
+	ld a, $ff
+	ld [wSerialExchangeNybbleReceiveData], a
 	ld a, $b
 	ld [wLinkMenuSelectionSendBuffer], a
-	ld b,$78
+	ld b, $78
 .loop
-	ld a,[hSerialConnectionStatus]
+	ld a, [hSerialConnectionStatus]
 	cp $2
-	call z,DelayFrame
+	call z, DelayFrame
 	dec b
-	jr z,.asm_f59b2
+	jr z, .asm_f59b2
 	call Serial_ExchangeNybble
 	call DelayFrame
-	ld a,[wSerialExchangeNybbleReceiveData]
+	ld a, [wSerialExchangeNybbleReceiveData]
 	inc a
-	jr z,.loop
-	ld b,$f
+	jr z, .loop
+	ld b, $f
 .loop2
 	call DelayFrame
 	call Serial_ExchangeNybble
 	dec b
-	jr nz,.loop2
-	ld b,$f
+	jr nz, .loop2
+	ld b, $f
 .loop3
 	call DelayFrame
 	call Serial_SendZeroByte
 	dec b
-	jr nz,.loop3
+	jr nz, .loop3
 	jr .asm_f59d6
 
 .asm_f59b2
 	xor a
-	ld [wUnknownSerialCounter],a
-	ld [wUnknownSerialCounter+1],a
-	ld a,[wd11e]
+	ld [wUnknownSerialCounter], a
+	ld [wUnknownSerialCounter+1], a
+	ld a, [wd11e]
 	and a
-	jr z,.asm_f59cd
-	ld b," "
-	ld c," "
-	ld d," "
-	ld e,"▷"
+	jr z, .asm_f59cd
+	ld b, " "
+	ld c, " "
+	ld d, " "
+	ld e, "▷"
 	call Func_f59ec
 	jp .choseCancel
 
 .asm_f59cd
-	ld hl,ColosseumVersionText
+	ld hl, ColosseumVersionText
 	call PrintText
 	jp .choseCancel
 
 .asm_f59d6
-	ld b," "
-	ld c," "
-	ld d,"▷"
-	ld e," "
+	ld b, " "
+	ld c, " "
+	ld d, "▷"
+	ld e, " "
 	call Func_f59ec
 	call Func_f531b
-	jp c,.choseCancel
-	ld a,$f0
+	jp c, .choseCancel
+	ld a, $f0
 	jp .next
 
 Func_f59ec::

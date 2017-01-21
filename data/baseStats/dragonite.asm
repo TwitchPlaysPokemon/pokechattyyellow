@@ -8,7 +8,7 @@ db DRAGON ; species type 1
 db FLYING ; species type 2
 db 9 ; catch rate
 db 218 ; base exp yield
-INCBIN "pic/ymon/dragonite.pic",0,1 ; 77, sprite dimensions
+INCBIN "pic/ymon/dragonite.pic", 0,1 ; 77, sprite dimensions
 dw DragonitePicFront
 dw DragonitePicBack
 ; attacks known at lvl 0
@@ -18,11 +18,11 @@ db THUNDER_WAVE
 db AGILITY
 db 5 ; growth rate
 ; learnset
-	tmlearn 2,6,7,8
-	tmlearn 9,10,11,12,13,14,15
-	tmlearn 20,23,24
-	tmlearn 25,31,32
-	tmlearn 33,34,38,39,40
-	tmlearn 44,45
-	tmlearn 50,53,54
+	tmlearn 2, 6,7,8
+	tmlearn 9, 10,11,12,13,14,15
+	tmlearn 20, 23,24
+	tmlearn 25, 31,32
+	tmlearn 33, 34,38,39,40
+	tmlearn 44, 45
+	tmlearn 50, 53,54
 db 0 ; padding

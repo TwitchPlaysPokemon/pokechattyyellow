@@ -65,8 +65,8 @@ MovementData_6140d:
 	db $FF
 
 CoordsData_61411:
-	db $08,$24
-	db $08,$25
+	db $08, $24
+	db $08, $25
 	db $FF
 
 SSAnne2Script_61416:

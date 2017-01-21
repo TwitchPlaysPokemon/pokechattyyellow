@@ -88,7 +88,7 @@ _ReceivedTM18Text::
 _TM18ExplanationText::
 	text "TM18 is COUNTER!"
 	line "Not like the one"
-	cont "I'm leaning on,"
+	cont "I'm leaning on, "
 	cont "mind you!"
 	done
 

@@ -20,13 +20,13 @@ _Route15AfterBattleText1::
 	done
 
 _Route15BattleText2::
-	text "You look gentle,"
+	text "You look gentle, "
 	line "so I think I can"
 	cont "beat you!"
 	done
 
 _Route15EndBattleText2::
-	text "No,"
+	text "No, "
 	line "wrong!"
 	prompt
 

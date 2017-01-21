@@ -1,6 +1,6 @@
 _SafariZoneRestHouse1Text1::
 	text "SARA: Where did"
-	line "my boy friend,"
+	line "my boy friend, "
 	cont "ERIK, go?"
 	done
 

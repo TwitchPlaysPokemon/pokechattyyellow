@@ -12,7 +12,7 @@ _MomWakeUpText::
 _MomHealText1::
 	text "MOM: <PLAYER>, if"
 	line "you drive your"
-	cont "#MON too hard,"
+	cont "#MON too hard, "
 	cont "they'll dislike"
 	cont "you."
 

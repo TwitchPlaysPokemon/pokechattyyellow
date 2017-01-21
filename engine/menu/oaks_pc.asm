@@ -20,7 +20,7 @@ GetDexRatedText:
 
 ClosedOaksPCText:
 	TX_FAR _ClosedOaksPCText
-	db $0d,"@"
+	db $0d, "@"
 
 AccessedOaksPCText:
 	TX_FAR _AccessedOaksPCText

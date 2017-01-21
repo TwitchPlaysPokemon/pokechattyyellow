@@ -321,12 +321,12 @@ UpdateCinnabarGymGateTileBlocks_:
 CinnabarGymGateCoords:
 	; format: x-coord, y-coord, direction, padding
 	; direction: $54 = horizontal gate, $5f = vertical gate
-	db $09,$03,$54,$00
-	db $06,$03,$54,$00
-	db $06,$06,$54,$00
-	db $03,$08,$5f,$00
-	db $02,$06,$54,$00
-	db $02,$03,$54,$00
+	db $09, $03,$54,$00
+	db $06, $03,$54,$00
+	db $06, $06,$54,$00
+	db $03, $08,$5f,$00
+	db $02, $06,$54,$00
+	db $02, $03,$54,$00
 
 
 CinnabarGym_ReplaceTileBlock:

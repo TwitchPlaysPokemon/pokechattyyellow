@@ -36,10 +36,10 @@ PewterCityScript_1925e:
 	jp DisplayTextID
 
 CoordsData_19277:
-	db $11,$23
-	db $11,$24
-	db $12,$25
-	db $13,$25
+	db $11, $23
+	db $11, $24
+	db $12, $25
+	db $13, $25
 	db $ff
 
 PewterCityScript1:

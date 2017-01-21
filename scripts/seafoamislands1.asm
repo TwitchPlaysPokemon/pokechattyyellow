@@ -38,8 +38,8 @@ SeafoamIslands1Script:
 	jp IsPlayerOnDungeonWarp
 
 Seafoam1HolesCoords:
-	db $06,$11
-	db $06,$18
+	db $06, $11
+	db $06, $18
 	db $ff
 
 SeafoamIslands1TextPointers:

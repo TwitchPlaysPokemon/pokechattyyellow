@@ -225,7 +225,7 @@ BillsHouseScript7:
 	ret
 
 RLE_1e219:
-	db D_RIGHT,$3
+	db D_RIGHT, $3
 	db $FF
 
 BillsHouseScript8:

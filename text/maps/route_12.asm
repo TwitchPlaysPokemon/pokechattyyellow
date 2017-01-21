@@ -44,7 +44,7 @@ _Route12EndBattleText2::
 	prompt
 
 _Route12AfterBattleText2::
-	text "With a better ROD,"
+	text "With a better ROD, "
 	line "I could catch"
 	cont "better #MON!"
 	done

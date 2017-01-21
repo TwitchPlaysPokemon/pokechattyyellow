@@ -78,7 +78,7 @@ _Route8AfterBattleText5::
 	done
 
 _Route8BattleText6::
-	text "MEOWTH is so cute,"
+	text "MEOWTH is so cute, "
 	line "meow, meow, meow!"
 	done
 
@@ -111,7 +111,7 @@ _Route8AfterBattleText7::
 	done
 
 _Route8BattleText8::
-	text "I'm a rambling,"
+	text "I'm a rambling, "
 	line "gambling dude!"
 	done
 
@@ -128,7 +128,7 @@ _Route8AfterBattleText8::
 	done
 
 _Route8BattleText9::
-	text "What's a cute,"
+	text "What's a cute, "
 	line "round and fluffy"
 	cont "#MON?"
 	done

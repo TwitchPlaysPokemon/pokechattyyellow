@@ -133,7 +133,7 @@ INCLUDE "data/hidden_coins.asm"
 
 FoundHiddenCoinsText:
 	TX_FAR _FoundHiddenCoinsText
-	db $10,"@"
+	db $10, "@"
 
 DroppedHiddenCoinsText:
 	TX_FAR _FoundHiddenCoins2Text

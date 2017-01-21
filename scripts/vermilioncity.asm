@@ -86,7 +86,7 @@ VermilionCityScript0:
 	ret
 
 CoordsData_19823:
-	db $1e,$12
+	db $1e, $12
 	db $ff
 
 VermilionCityScript4:
@@ -210,8 +210,8 @@ VermilionCityText3:
 	jp TextScriptEnd
 
 VermilionCityCoords1:
-	db $1d,$13
-	db $1f,$13
+	db $1d, $13
+	db $1f, $13
 	db $ff
 
 SSAnneWelcomeText4:

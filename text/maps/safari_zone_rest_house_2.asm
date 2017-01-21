@@ -1,7 +1,7 @@
 _SafariZoneRestHouse2Text1::
 	text "Tossing ROCKs at"
 	line "#MON might"
-	cont "make them run,"
+	cont "make them run, "
 	cont "but they'll be"
 	cont "easier to catch."
 	done

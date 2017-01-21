@@ -29,7 +29,7 @@ _WardenTeethText2::
 	prompt
 
 _WardenThankYouText::
-	text "WARDEN: Thanks,"
+	text "WARDEN: Thanks, "
 	line "kid! No one could"
 	cont "understand a word"
 	cont "that I said."

@@ -24,7 +24,7 @@ SilphCo10Script_5a14f:
 	predef_jump ReplaceTileBlock
 
 SilphCo10GateCoords:
-	db $04,$05
+	db $04, $05
 	db $FF
 
 SilphCo10Text_5a176:

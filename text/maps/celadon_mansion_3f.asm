@@ -52,7 +52,7 @@ _WriterText::
 	para "I like MISTY a"
 	line "lot too!"
 
-	para "Oh, and SABRINA,"
+	para "Oh, and SABRINA, "
 	line "I like her!"
 	done
 
@@ -71,10 +71,10 @@ _GameDesignerText::
 	line "designer!"
 
 	para "Filling up your"
-	line "#DEX is tough,"
+	line "#DEX is tough, "
 	cont "but don't quit!"
 
-	para "When you finish,"
+	para "When you finish, "
 	line "come tell me!"
 	done
 

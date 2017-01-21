@@ -394,6 +394,7 @@ GetCryData::
 	; and start from index $14,
 	; so add 3 times the cry id.
 	ld a, b
+	cp CRY_SFX_END + 1
 	; ld c, CRY_SFX_START
 	; rlca ; * 2
 	; add b
@@ -1460,9 +1461,7 @@ DisplayListMenuID::
 	lb de, 9, 14 ; height and width of menu text box
 	ld a, [wListMenuID]
 	and a ; is it a PC pokemon list?
-	jr nz, .skipMovingSprites
-	call UpdateSprites
-.skipMovingSprites
+	call z, UpdateSprites
 	ld a, 1 ; max menu item ID is 1 if the list has less than 2 entries
 	ld [wMenuWatchMovingOutOfBounds], a
 	ld a, [wListCount]
@@ -4615,21 +4614,17 @@ IsInArray::
 
 IsInRestOfArray::
 	ld c, a
+	jr .handleLoop
+
 .loop
-	ld a, [hl]
-	cp -1
-	jr z, .notfound
-	cp c
-	jr z, .found
 	inc b
 	add hl, de
-	jr .loop
-
-.notfound
-	and a
-	ret
-
-.found
+.handleLoop
+	ld a, [hl]
+	cp -1
+	ret z
+	cp c
+	jr nz, .loop
 	scf
 	ret
 
@@ -4737,26 +4732,26 @@ CheckForHiddenObjectOrBookshelfOrCardKeyDoor::
 	jr z, .nothingFound
 ; A button is pressed
 	callbs CheckForHiddenObject
-	ld a, [$ffee]
+	ld a, [hDidntFindAnyHiddenObject]
 	and a
 	jr nz, .hiddenObjectNotFound
 	xor a
-	ld [$ffeb], a
+	ld [hItemAlreadyFound], a
 	ld a, [wHiddenObjectFunctionRomBank]
 	rst Bankswitch
 	call FarJump_hl
-	ld a, [$ffeb]
+	ld a, [hItemAlreadyFound]
 	jr .done
 .hiddenObjectNotFound
 	predef GetTileAndCoordsInFrontOfPlayer
 	callba PrintBookshelfText
-	ld a, [$ffdb]
+	ld a, [hGymTrashCanRandNumMask]
 	and a
 	jr z, .done
 .nothingFound
 	ld a, $ff
 .done
-	ld [$ffeb], a
+	ld [hItemAlreadyFound], a
 	pop af
 	rst Bankswitch
 	ret
@@ -4771,17 +4766,17 @@ PrintPredefTextID::
 
 RestoreMapTextPointer::
 	ld hl, wMapTextPtr
-	ld a, [$ffec]
+	ld a, [hMapTextPointerBackup]
 	ld [hli], a
-	ld a, [$ffec + 1]
+	ld a, [hMapTextPointerBackup + 1]
 	ld [hl], a
 	ret
 
 SetMapTextPointer::
 	ld a, [wMapTextPtr]
-	ld [$ffec], a
+	ld [hMapTextPointerBackup], a
 	ld a, [wMapTextPtr + 1]
-	ld [$ffec + 1], a
+	ld [hMapTextPointerBackup + 1], a
 	ld a, l
 	ld [wMapTextPtr], a
 	ld a, h

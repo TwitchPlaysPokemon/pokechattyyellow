@@ -107,7 +107,7 @@ _SilphCo7EndBattleText2::
 	prompt
 
 _SilphCo7AfterBattleText2::
-	text "Despite your age,"
+	text "Despite your age, "
 	line "you are a skilled"
 	cont "trainer!"
 	done

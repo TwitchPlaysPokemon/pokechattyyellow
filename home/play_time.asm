@@ -3,8 +3,8 @@ TrackPlayTime:
 	ld hl, wd47a
 	bit 0, [hl]
 	jr nz, .maxIGT
-	ld a,[wd732]
-	bit 0,a
+	ld a, [wd732]
+	bit 0, a
 	ret z
 	ld a, [wPlayTimeMaxed]
 	and a

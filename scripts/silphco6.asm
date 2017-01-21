@@ -24,7 +24,7 @@ SilphCo6Script_1a1bf:
 	predef_jump ReplaceTileBlock
 
 SilphCo6GateCoords:
-	db $06,$02
+	db $06, $02
 	db $FF
 
 SilphCo6Script_1a1e6:

@@ -70,7 +70,7 @@ HallofFameRoomScript0:
 	ret
 
 RLEMovement5a528:
-	db D_UP,$5
+	db D_UP, $5
 	db $ff
 
 HallofFameRoomScript1:

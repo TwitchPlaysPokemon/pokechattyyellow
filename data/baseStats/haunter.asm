@@ -8,7 +8,7 @@ db GHOST ; species type 1
 db POISON ; species type 2
 db 90 ; catch rate
 db 126 ; base exp yield
-INCBIN "pic/ymon/haunter.pic",0,1 ; 66, sprite dimensions
+INCBIN "pic/ymon/haunter.pic", 0,1 ; 66, sprite dimensions
 dw HaunterPicFront
 dw HaunterPicBack
 ; attacks known at lvl 0
@@ -20,9 +20,9 @@ db 3 ; growth rate
 ; learnset
 	tmlearn 6
 	tmlearn 0
-	tmlearn 20,21,24
-	tmlearn 25,29,31,32
-	tmlearn 34,36
-	tmlearn 42,44,46,47
+	tmlearn 20, 21,24
+	tmlearn 25, 29,31,32
+	tmlearn 34, 36
+	tmlearn 42, 44,46,47
 	tmlearn 50
 db 0 ; padding

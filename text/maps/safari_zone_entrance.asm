@@ -23,7 +23,7 @@ _SafariZoneEntranceText_753c5::
 	done
 
 SafariZoneEntranceText_9e6e4::
-	text "For just ¥500,"
+	text "For just ¥500, "
 	line "you can catch all"
 	cont "the #MON you"
 	cont "want in the park!"
@@ -34,7 +34,7 @@ SafariZoneEntranceText_9e6e4::
 SafariZoneEntranceText_9e747::
 	text "That'll be ¥@"
 	TX_BCD wPriceTemp, $c3
-	text ","
+	text ", "
 	line "please!"
 
 	para "We only use a"
@@ -82,7 +82,7 @@ _SafariZoneEntranceText_753eb::
 	cont "BALLs, it's game"
 	cont "over for you!"
 
-	para "Before you go,"
+	para "Before you go, "
 	line "open an unused"
 	cont "#MON BOX so"
 	cont "there's room for"
@@ -107,7 +107,7 @@ _SafariZoneLowCostText2::
 
 _SafariZoneLowCostText3::
 	db 0
-	para "You're persistent,"
+	para "You're persistent, "
 	line "aren't you?"
 
 	para "OK, you can go in"
@@ -130,7 +130,7 @@ _SafariZoneLowCostText6::
 	done
 
 _SafariZoneLowCostText7::
-	text "I said, no money,"
+	text "I said, no money, "
 	line "no entry!"
 	done
 

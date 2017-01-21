@@ -8,7 +8,7 @@ db NORMAL ; species type 1
 db FLYING ; species type 2
 db 255 ; catch rate
 db 58 ; base exp yield
-INCBIN "pic/ymon/spearow.pic",0,1 ; 55, sprite dimensions
+INCBIN "pic/ymon/spearow.pic", 0,1 ; 55, sprite dimensions
 dw SpearowPicFront
 dw SpearowPicBack
 ; attacks known at lvl 0
@@ -18,11 +18,11 @@ db 0
 db 0
 db 0 ; growth rate
 ; learnset
-	tmlearn 2,4,6
-	tmlearn 9,10
+	tmlearn 2, 4,6
+	tmlearn 9, 10
 	tmlearn 20
-	tmlearn 31,32
-	tmlearn 34,39
-	tmlearn 43,44
-	tmlearn 50,52
+	tmlearn 31, 32
+	tmlearn 34, 39
+	tmlearn 43, 44
+	tmlearn 50, 52
 db 0 ; padding

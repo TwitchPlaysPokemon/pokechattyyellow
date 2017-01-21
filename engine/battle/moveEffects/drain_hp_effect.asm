@@ -46,7 +46,7 @@ DrainHPEffect_:
 	adc b
 	ld [hli], a
 	ld [wHPBarNewHP+1], a
-	jr c, .capToMaxHP ; if HP > 65,535, cap to max HP
+	jr c, .capToMaxHP ; if HP > 65, 535, cap to max HP
 ; compare HP with max HP
 	ld a, [hld]
 	ld b, a

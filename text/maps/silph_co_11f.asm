@@ -11,7 +11,7 @@ _SilphCoPresidentText::
 	para "I have to thank"
 	line "you in some way!"
 
-	para "Because I am rich,"
+	para "Because I am rich, "
 	line "I can give you"
 	cont "anything!"
 
@@ -108,7 +108,7 @@ _SilphCo11EndBattleText2::
 	prompt
 
 _SilphCo11AfterBattleText2::
-	text "Watch your step,"
+	text "Watch your step, "
 	line "my BOSS likes his"
 	cont "#MON tough!"
 	done

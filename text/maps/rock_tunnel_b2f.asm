@@ -52,7 +52,7 @@ _RockTunnel2BattleText5::
 	done
 
 _RockTunnel2EndBattleText5::
-	text "Well,"
+	text "Well, "
 	line "that's that."
 	prompt
 
@@ -75,7 +75,7 @@ _RockTunnel2EndBattleText6::
 	prompt
 
 _RockTunnel2AfterBattleText6::
-	text "In mountains,"
+	text "In mountains, "
 	line "you'll often find"
 	cont "rock-type #MON."
 	done
@@ -124,6 +124,6 @@ _RockTunnel2EndBattleText9::
 	prompt
 
 _RockTunnel2AfterBattleText9::
-	text "I'm an artist,"
+	text "I'm an artist, "
 	line "not a fighter."
 	done

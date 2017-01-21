@@ -1,6 +1,6 @@
 _HallofFameRoomText1::
 	text "OAK: Er-hem!"
-	line "Congratulations,"
+	line "Congratulations, "
 	cont "<PLAYER>!"
 
 	para "This floor is the"
@@ -21,7 +21,7 @@ _HallofFameRoomText1::
 	cont "to become the new"
 	cont "LEAGUE champion!"
 
-	para "Congratulations,"
+	para "Congratulations, "
 	line "<PLAYER>, you and"
 	cont "your #MON are"
 	cont "HALL OF FAMERs!"

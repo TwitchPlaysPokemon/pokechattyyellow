@@ -73,16 +73,16 @@ Func_f0a7:
 	ret
 
 PushBoulderUpMovementData:
-	db NPC_MOVEMENT_UP,$FF
+	db NPC_MOVEMENT_UP, $FF
 
 PushBoulderDownMovementData:
-	db NPC_MOVEMENT_DOWN,$FF
+	db NPC_MOVEMENT_DOWN, $FF
 
 PushBoulderLeftMovementData:
-	db NPC_MOVEMENT_LEFT,$FF
+	db NPC_MOVEMENT_LEFT, $FF
 
 PushBoulderRightMovementData:
-	db NPC_MOVEMENT_RIGHT,$FF
+	db NPC_MOVEMENT_RIGHT, $FF
 
 DoBoulderDustAnimation:
 	ld a, [wd730]

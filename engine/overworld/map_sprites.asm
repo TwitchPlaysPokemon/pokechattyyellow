@@ -159,9 +159,7 @@ ReloadWalkingTilePatterns:
 .loop
 	ld [hVRAMSlot], a
 	cp 9
-	jr nc, .fourTileSprite
-	call LoadWalkingTilePattern
-.fourTileSprite
+	call c, LoadWalkingTilePattern
 	ld a, [hVRAMSlot]
 	inc a
 	cp 11

@@ -83,7 +83,7 @@ _SilphCo5Text9::
 	line "REPORT!"
 
 	para "#MON LAB"
-	line "created PORYGON,"
+	line "created PORYGON, "
 	cont "the first virtual"
 	cont "reality #MON."
 	done

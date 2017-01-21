@@ -5,7 +5,7 @@ Route19Object:
 	db $9, $5, $0, BEACH_HOUSE
 
 	db $1 ; signs
-	db $b,$b,$b
+	db $b, $b,$b
 
 	db $a ; objects
 

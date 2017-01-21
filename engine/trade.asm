@@ -349,8 +349,8 @@ Trade_AnimateBallEnteringLinkCable:
 	ret
 
 Trade_BallInsideLinkCableOAM:
-	db $7E,$00,$7E,$20
-	db $7E,$40,$7E,$60
+	db $7E, $00,$7E,$20
+	db $7E, $40,$7E,$60
 
 Trade_ShowEnemyMon:
 	ld a, TRADE_BALL_TILT_ANIM
@@ -703,29 +703,29 @@ Trade_WriteCircleOAM:
 
 Trade_CircleOAMPointers:
 	dw Trade_CircleOAM0
-	db $08,$08
+	db $08, $08
 	dw Trade_CircleOAM1
-	db $18,$08
+	db $18, $08
 	dw Trade_CircleOAM2
-	db $08,$18
+	db $08, $18
 	dw Trade_CircleOAM3
-	db $18,$18
+	db $18, $18
 
 Trade_CircleOAM0:
-	db $38,$10,$39,$10
-	db $3A,$10,$3B,$10
+	db $38, $10,$39,$10
+	db $3A, $10,$3B,$10
 
 Trade_CircleOAM1:
-	db $39,$30,$38,$30
-	db $3B,$30,$3A,$30
+	db $39, $30,$38,$30
+	db $3B, $30,$3A,$30
 
 Trade_CircleOAM2:
-	db $3A,$50,$3B,$50
-	db $38,$50,$39,$50
+	db $3A, $50,$3B,$50
+	db $38, $50,$39,$50
 
 Trade_CircleOAM3:
-	db $3B,$70,$3A,$70
-	db $39,$70,$38,$70
+	db $3B, $70,$3A,$70
+	db $39, $70,$38,$70
 
 ; a = species
 Trade_LoadMonSprite:

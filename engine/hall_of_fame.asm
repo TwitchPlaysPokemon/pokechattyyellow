@@ -6,7 +6,7 @@ AnimateHallOfFame:
 	call LoadFontTilePatterns
 	call LoadTextBoxTilePatterns
 	call DisableLCD
-	ld hl,vBGMap0
+	ld hl, vBGMap0
 	ld bc, $800
 	ld a, " "
 	call FillMemory
@@ -162,14 +162,14 @@ HoFDisplayAndRecordMonInfo:
 	callab PlayPikachuSoundClip
 	jr .asm_7033c
 .asm_70336
-	ld a,[wHoFMonSpecies]
+	ld a, [wHoFMonSpecies]
 	call PlayCry
 .asm_7033c
 	jp HoFRecordMonInfo
 
 LeaguePCShowMon2:
 	call HoFDisplayMonInfo
-	ld a,[wHoFMonSpecies]
+	ld a, [wHoFMonSpecies]
 	jp PlayCry
 
 HoFDisplayMonInfo:
@@ -200,7 +200,7 @@ HoFLoadPlayerPics:
 	ld de, RedPicFront
 	ld a, BANK(RedPicFront)
 	call UncompressSpriteFromDE
-	ld a,$0
+	ld a, $0
 	call OpenSRAM
 	ld hl, sSpriteBuffer1
 	ld de, sSpriteBuffer0
