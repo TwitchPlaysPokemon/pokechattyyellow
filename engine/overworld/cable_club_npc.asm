@@ -180,7 +180,8 @@ CableClubNPCPleaseApplyHereHaveToSaveText:
 
 CableClubNPCPleaseWaitText:
 	TX_FAR _CableClubNPCPleaseWaitText
-	db $a, "@"
+	TX_WAIT_30
+	db "@"
 
 CableClubNPCLinkClosedBecauseOfInactivityText:
 	TX_FAR _CableClubNPCLinkClosedBecauseOfInactivityText

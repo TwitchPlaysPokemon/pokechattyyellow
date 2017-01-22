@@ -33,7 +33,8 @@ SafariZoneSecretHouseText_4a350:
 
 ReceivedHM03Text:
 	TX_FAR _ReceivedHM03Text
-	db $0B, "@"
+	TX_SFX_ITEM
+	db "@"
 
 HM03ExplanationText:
 	TX_FAR _HM03ExplanationText

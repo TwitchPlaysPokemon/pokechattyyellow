@@ -151,7 +151,8 @@ CeruleanGymText5:
 CeruleanGymText6:
 ReceivedTM11Text:
 	TX_FAR _ReceivedTM11Text
-	db $0B, "@"
+	TX_SFX_ITEM
+	db "@"
 
 CeruleanGymText7:
 	TX_FAR _CeruleanGymText_5c7d3

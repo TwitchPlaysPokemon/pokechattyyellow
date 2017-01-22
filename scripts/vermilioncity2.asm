@@ -54,7 +54,7 @@ OfficerJennyText2:
 
 OfficerJennyText3:
 	TX_FAR _OfficerJennyText3
-	db $d
+	TX_WAIT_BUTTON
 	db "@"
 
 OfficerJennyText4:

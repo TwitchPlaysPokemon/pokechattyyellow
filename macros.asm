@@ -350,6 +350,7 @@ TX_NUM: MACRO
 	db \2 << 4 | \3
 	ENDM
 
+TX_WAIT_30 EQUS "db $0a"
 TX_SFX_ITEM EQUS "db $0b"
 TX_WAIT_BUTTON EQUS "db $0d"
 

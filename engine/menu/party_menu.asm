@@ -315,8 +315,8 @@ ReviveText:
 
 RareCandyText:
 	TX_FAR _RareCandyText
-	db $0B
-	db $06
+	TX_SFX_ITEM
+	TX_BUTTON_SOUND
 	db "@"
 
 SetPartyMenuHPBarColor:

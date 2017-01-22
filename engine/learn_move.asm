@@ -184,7 +184,9 @@ TryingToLearn:
 
 LearnedMove1Text:
 	TX_FAR _LearnedMove1Text
-	db $b, 6,"@"
+	TX_SFX_ITEM
+	TX_BUTTON_SOUND
+	db "@"
 
 WhichMoveToForgetText:
 	TX_FAR _WhichMoveToForgetText
@@ -206,7 +208,7 @@ OneTwoAndText:
 ; bugfix: In Red/Blue, the SFX_SWAP sound was played in the wrong bank, which played an incorrect sound
 ; Yellow has fixed this by swapping to the correct bank
 	TX_FAR _OneTwoAndText
-	db $a
+	TX_WAIT_30
 	TX_ASM
 	push af
 	push bc
@@ -238,7 +240,7 @@ OneTwoAndText:
 
 PoofText:
 	TX_FAR _PoofText
-	db $a
+	TX_WAIT_30
 ForgotAndText:
 	TX_FAR _ForgotAndText
 	db "@"

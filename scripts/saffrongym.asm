@@ -189,8 +189,8 @@ SaffronGymText_5d162:
 
 SaffronGymText_5d167:
 	TX_FAR _SaffronGymText_5d167
-	db $11 ; play same sound as red giving oak parcel
-	db $6 ; wait for keypress
+	TX_SFX_KEY_ITEM ; play same sound as red giving oak parcel
+	TX_BUTTON_SOUND ; wait for keypress
 	db "@"
 
 SaffronGymText_5d16e:
@@ -203,7 +203,7 @@ SaffronGymText10:
 
 SaffronGymText11:
 	TX_FAR ReceivedTM46Text
-	db $b
+	TX_SFX_ITEM
 	TX_FAR _TM46ExplanationText
 	db "@"
 

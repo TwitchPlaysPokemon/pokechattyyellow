@@ -612,7 +612,8 @@ SlotReward300Func:
 
 YeahText:
 	TX_FAR _YeahText
-	db $0a, "@"
+	TX_WAIT_30
+	db "@"
 
 SlotMachine_PrintWinningSymbol:
 ; prints winning symbol and down arrow in text box

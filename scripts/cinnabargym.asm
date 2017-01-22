@@ -294,8 +294,8 @@ BlaineBattleText:
 
 BlaineEndBattleText:
 	TX_FAR _BlaineEndBattleText
-	db $11
-	db $d
+	TX_SFX_KEY_ITEM
+	TX_WAIT_BUTTON
 	db "@"
 
 BlaineFireBlastText:
@@ -308,7 +308,7 @@ BlaineBadgeText:
 
 ReceivedTM38Text:
 	TX_FAR _ReceivedTM38Text
-	db $0B
+	TX_SFX_ITEM
 	TX_FAR _TM38ExplanationText
 	db "@"
 

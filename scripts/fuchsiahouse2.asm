@@ -69,7 +69,7 @@ WardenGibberishText3:
 
 WardenTeethText1:
 	TX_FAR _WardenTeethText1
-	db $0b
+	TX_SFX_ITEM
 
 WardenTeethText2:
 	TX_FAR _WardenTeethText2
@@ -81,7 +81,8 @@ WardenThankYouText:
 
 ReceivedHM04Text:
 	TX_FAR _ReceivedHM04Text
-	db $0B, "@"
+	TX_SFX_ITEM
+	db "@"
 
 HM04ExplanationText:
 	TX_FAR _HM04ExplanationText

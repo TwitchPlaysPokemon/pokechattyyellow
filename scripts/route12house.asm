@@ -40,7 +40,7 @@ Route12HouseText_564c0:
 
 Route12HouseText_564c5:
 	TX_FAR _Route12HouseText_564c5
-	db $0B
+	TX_SFX_ITEM
 	TX_FAR _Route12HouseText_564ca
 	db "@"
 

@@ -20,7 +20,8 @@ GetDexRatedText:
 
 ClosedOaksPCText:
 	TX_FAR _ClosedOaksPCText
-	db $0d, "@"
+	TX_WAIT_BUTTON
+	db "@"
 
 AccessedOaksPCText:
 	TX_FAR _AccessedOaksPCText

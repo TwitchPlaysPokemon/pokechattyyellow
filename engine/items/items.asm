@@ -2047,7 +2047,7 @@ FluteWokeUpText:
 
 PlayedFluteHadEffectText:
 	TX_FAR _PlayedFluteHadEffectText
-	db $06
+	TX_BUTTON_SOUND
 	TX_ASM
 	ld a, [wIsInBattle]
 	and a
@@ -2686,19 +2686,19 @@ DontHavePokemonText:
 
 ItemUseText00:
 	TX_FAR _ItemUseText001
-	db $05
+	TX_LINE
 	TX_FAR _ItemUseText002
 	db "@"
 
 GotOnBicycleText:
 	TX_FAR _GotOnBicycleText1
-	db $05
+	TX_LINE
 	TX_FAR _GotOnBicycleText2
 	db "@"
 
 GotOffBicycleText:
 	TX_FAR _GotOffBicycleText1
-	db $05
+	TX_LINE
 	TX_FAR _GotOffBicycleText2
 	db "@"
 

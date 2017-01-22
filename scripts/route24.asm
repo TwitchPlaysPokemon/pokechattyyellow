@@ -186,7 +186,7 @@ Route24Text1:
 
 Route24Text_51510:
 	TX_FAR _Route24Text_51510
-	db $0B
+	TX_SFX_ITEM
 	TX_FAR _Route24Text_51515
 	db "@"
 
@@ -365,7 +365,7 @@ Route24Text_515de:
 
 Route24Text_515e3:
 	TX_FAR _Route24DamianText2
-	db $d
+	TX_WAIT_BUTTON
 	db "@"
 
 Route24Text_515e9:

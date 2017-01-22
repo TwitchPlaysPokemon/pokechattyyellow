@@ -300,9 +300,10 @@ CeruleanCityText_196d9:
 
 ReceivedTM28Text:
 	TX_FAR _ReceivedTM28Text
-	db $0B
+	TX_SFX_ITEM
 	TX_FAR _ReceivedTM28Text2
-	db $0D, "@"
+	TX_WAIT_BUTTON
+	db "@"
 
 TM28NoRoomText:
 	TX_FAR _TM28NoRoomText

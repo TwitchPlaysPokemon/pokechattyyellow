@@ -285,7 +285,9 @@ ConnectCableText:
 
 TradedForText:
 	TX_FAR _TradedForText
-	db $11, $a, "@"
+	TX_SFX_KEY_ITEM
+	TX_WAIT_30
+	db "@"
 
 WannaTrade1Text:
 	TX_FAR _WannaTrade1Text
