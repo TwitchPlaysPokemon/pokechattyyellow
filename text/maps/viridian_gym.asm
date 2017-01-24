@@ -60,7 +60,7 @@ _ViridianGymText12::
 	done
 
 _ReceivedTM27Text::
-	text $52, " received"
+	text $52," received"
 	line "TM27!@@"
 
 _TM27ExplanationText::
@@ -71,7 +71,7 @@ _TM27ExplanationText::
 	cont "one hit!"
 
 	para "I made it when I"
-	line "ran the GYM here, "
+	line "ran the GYM here,"
 	cont "too long ago..."
 	done
 

@@ -1,9 +1,9 @@
 _SaffronGateText_1dfe7::
 	text "I'm on guard duty."
-	line "Gee, I'm thirsty, "
+	line "Gee, I'm thirsty,"
 	cont "though!"
 
-	para "Oh, wait there, "
+	para "Oh, wait there,"
 	line "the road's closed."
 	done
 

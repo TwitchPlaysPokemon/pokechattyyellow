@@ -27,13 +27,13 @@ _OaksLabText39::
 	done
 
 _OaksLabPikachuText::
-	text "OAK: Go ahead, "
+	text "OAK: Go ahead,"
 	line "it's yours!"
 	done
 
 _OaksLabText_1d2f5::
 	text "OAK: If a wild"
-	line "#MON appears, "
+	line "#MON appears,"
 	cont "your #MON can"
 	cont "fight against it!"
 
@@ -101,7 +101,7 @@ _OaksLabGivePokeballsText1::
 _OaksLabGivePokeballsText2::
 	text ""
 	para "When a wild"
-	line "#MON appears, "
+	line "#MON appears,"
 	cont "it's fair game."
 
 	para "Just like I showed"
@@ -190,7 +190,7 @@ _OaksLabRivalInterjectionText::
 	done
 
 _OaksLabBePatientText::
-	text "OAK: Be patient, "
+	text "OAK: Be patient,"
 	line "<RIVAL>, I'll give"
 	cont "you one later."
 	done
@@ -216,7 +216,7 @@ _OaksLabRivalTakesText4::
 	prompt
 
 _OaksLabRivalTakesText5::
-	text "OAK: But, I... Oh, "
+	text "OAK: But, I... Oh,"
 	line "all right then."
 	cont "That #MON is"
 	cont "yours."
@@ -312,14 +312,14 @@ _OaksLabText21::
 	done
 
 _OaksLabText22::
-	text "<RIVAL>: Gramps, "
+	text "<RIVAL>: Gramps,"
 	line "my #MON has"
 	cont "grown stronger!"
 	cont "Check it out!"
 	done
 
 _OaksLabText23::
-	text "OAK: Ah, <RIVAL>, "
+	text "OAK: Ah, <RIVAL>,"
 	line "good timing!"
 
 	para "I needed to ask"
@@ -329,7 +329,7 @@ _OaksLabText23::
 
 _OaksLabText24::
 	text "On the desk there"
-	line "is my invention, "
+	line "is my invention,"
 	cont "#DEX!"
 
 	para "It automatically"
@@ -386,7 +386,7 @@ _OaksLabText27::
 	cont "from my sis!"
 
 	para "I'll tell her not"
-	line "to lend you one, "
+	line "to lend you one,"
 	cont "<PLAYER>! Hahaha!"
 	done
 

@@ -37,7 +37,7 @@ _BillsHouseText_1e86f::
 	line "gotta help a guy"
 	cont "in deep trouble!"
 
-	para "What do you say, "
+	para "What do you say,"
 	line "chief? Please?"
 	cont "OK? All right!"
 	prompt
@@ -54,12 +54,12 @@ _BillThankYouText::
 	cont "That's a bummer."
 
 	para "I've got to thank"
-	line "you... Oh here, "
+	line "you... Oh here,"
 	cont "maybe this'll do."
 	prompt
 
 _SSTicketReceivedText::
-	text $52, " received"
+	text $52," received"
 	line "an @"
 	TX_RAM wcf4b
 	text "!@@"
@@ -70,14 +70,14 @@ _SSTicketNoRoomText::
 	done
 
 _BillsHouseText_1e8cb::
-	text "That cruise ship, "
+	text "That cruise ship,"
 	line "S.S.ANNE, is in"
 	cont "VERMILION CITY."
 	cont "Its passengers"
 	cont "are all trainers!"
 
 	para "They invited me"
-	line "to their party, "
+	line "to their party,"
 	cont "but I can't stand"
 	cont "fancy do's. Why"
 	cont "don't you go"
@@ -85,7 +85,7 @@ _BillsHouseText_1e8cb::
 	done
 
 _BillsHouseText_1e8da::
-	text "BILL: Look, bud, "
+	text "BILL: Look, bud,"
 	line "just check out"
 	cont "some of my rare"
 	cont "#MON on my PC!"

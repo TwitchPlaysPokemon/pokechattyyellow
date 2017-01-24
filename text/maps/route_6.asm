@@ -5,7 +5,7 @@ _Route6BattleText1::
 	done
 
 _Route6EndBattleText1::
-	text "No, "
+	text "No,"
 	line "this can't be..."
 	prompt
 
@@ -26,7 +26,7 @@ _Route6EndBattleText2::
 	prompt
 
 _Route6AfterBattleText2::
-	text "Now I understand, "
+	text "Now I understand,"
 	line "#MON isn't"
 	cont "about calculated"
 	cont "numbers."

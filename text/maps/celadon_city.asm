@@ -2,7 +2,7 @@ _CeladonCityText1::
 	text "I got my KOFFING"
 	line "from my friend!"
 
-	para "We get along now, "
+	para "We get along now,"
 	line "because I was"
 	cont "very nice to it!"
 	done
@@ -31,7 +31,7 @@ _CeladonCityText4::
 _TM41PreText::
 	text "Hello, there!"
 
-	para "I've seen you, "
+	para "I've seen you,"
 	line "but I never had a"
 	cont "chance to talk!"
 
@@ -40,7 +40,7 @@ _TM41PreText::
 	prompt
 
 _ReceivedTM41Text::
-	text $52, " received"
+	text $52," received"
 	line "@"
 	TX_RAM wcf4b
 	text "!@@"

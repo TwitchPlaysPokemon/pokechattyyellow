@@ -15,7 +15,7 @@ _Route17AfterBattleText1::
 	done
 
 _Route17BattleText2::
-	text "What do you want, "
+	text "What do you want,"
 	line "kiddo?"
 	done
 
@@ -80,7 +80,7 @@ _Route17BattleText6::
 	done
 
 _Route17EndBattleText6::
-	text "Why, "
+	text "Why,"
 	line "you!"
 	prompt
 

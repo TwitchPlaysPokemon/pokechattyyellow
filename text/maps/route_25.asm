@@ -41,7 +41,7 @@ _Route25BattleText3::
 	done
 
 _Route25EndBattleText3::
-	text "Aww, "
+	text "Aww,"
 	line "darn..."
 	prompt
 
@@ -78,7 +78,7 @@ _Route25EndBattleText5::
 _Route25AfterBattleText5::
 	text "If your #MON"
 	line "gets confused or"
-	cont "falls asleep, "
+	cont "falls asleep,"
 	cont "switch it!"
 	done
 
@@ -101,7 +101,7 @@ _Route25AfterBattleText6::
 
 _Route25BattleText7::
 	text "I just got down"
-	line "from MT.MOON, "
+	line "from MT.MOON,"
 	cont "but I'm ready!"
 	done
 
@@ -135,7 +135,7 @@ _Route25AfterBattleText8::
 
 _Route25BattleText9::
 	text "You're going to"
-	line "see BILL? First, "
+	line "see BILL? First,"
 	cont "let's fight!"
 	done
 

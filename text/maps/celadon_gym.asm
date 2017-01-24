@@ -62,7 +62,7 @@ _CeladonGymText9::
 	done
 
 _ReceivedTM21Text::
-	text $52, " received"
+	text $52," received"
 	line "@"
 	TX_RAM wcf4b
 	text "!@@"
@@ -171,8 +171,8 @@ _CeladonGymEndBattleText6::
 	prompt
 
 _CeladonGymAfterBattleText6::
-	text "Our LEADER, ERIKA, "
-	line "might be quiet, "
+	text "Our LEADER, ERIKA,"
+	line "might be quiet,"
 	cont "but she's also"
 	cont "very skilled!"
 	done

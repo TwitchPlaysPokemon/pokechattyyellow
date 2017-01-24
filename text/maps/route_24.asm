@@ -52,7 +52,7 @@ _Route24Text_5152b::
 	prompt
 
 _Route24Text_51530::
-	text "With your ability, "
+	text "With your ability,"
 	line "you could become"
 	cont "a top leader in"
 	cont "TEAM ROCKET!"

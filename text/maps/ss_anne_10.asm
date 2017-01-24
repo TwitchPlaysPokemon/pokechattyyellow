@@ -40,7 +40,7 @@ _SSAnne10BattleText3::
 	done
 
 _SSAnne10EndBattleText3::
-	text "OK, "
+	text "OK,"
 	line "you're not bad."
 	prompt
 
@@ -103,7 +103,7 @@ _SSAnne10AfterBattleText6::
 	done
 
 _SSAnne10Text7::
-	text "My buddy, MACHOKE, "
+	text "My buddy, MACHOKE,"
 	line "is super strong!"
 
 	para "He has enough"

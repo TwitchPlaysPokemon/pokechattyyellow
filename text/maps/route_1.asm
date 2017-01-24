@@ -13,7 +13,7 @@ _Route1ViridianMartSampleText::
 	prompt
 
 _Route1Text_1cae8::
-	text $52, " got"
+	text $52," got"
 	line "@"
 	TX_RAM wcf4b
 	text "!@@"
@@ -33,7 +33,7 @@ _Route1Text2::
 	text "See those ledges"
 	line "along the road?"
 
-	para "It's a bit scary, "
+	para "It's a bit scary,"
 	line "but you can jump"
 	cont "from them."
 

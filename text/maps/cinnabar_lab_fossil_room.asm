@@ -58,7 +58,7 @@ _Lab4Text_610b3::
 	text "So! You hurry and"
 	line "give me that!"
 
-	para $52, " handed"
+	para $52," handed"
 	line "over @"
 	TX_RAM wStringBuffer
 	text "!"

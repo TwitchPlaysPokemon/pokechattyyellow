@@ -42,7 +42,7 @@ _DayCareOweMoneyText::
 	done
 
 _DayCareGotMonBackText::
-	text $52, " got"
+	text $52," got"
 	line "@"
 	TX_RAM wDayCareMonName
 	text " back!"
@@ -58,7 +58,7 @@ _DayCareMonNeedsMoreTimeText::
 	prompt
 
 _DayCareAllRightThenText::
-	text "All right then, "
+	text "All right then,"
 	line "@@"
 
 _DayCareComeAgainText::

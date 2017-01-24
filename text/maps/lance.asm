@@ -12,7 +12,7 @@ _LanceBeforeBattleText::
 	cont "mythical #MON!"
 
 	para "They're hard to"
-	line "catch and raise, "
+	line "catch and raise,"
 	cont "but their powers"
 	cont "are superior!"
 
@@ -24,7 +24,7 @@ _LanceBeforeBattleText::
 
 	para "Your LEAGUE"
 	line "challenge ends"
-	cont "with me, ", $52, "!"
+	cont "with me,", $52,"!"
 	done
 
 _LanceEndBattleText::
@@ -39,7 +39,7 @@ _LanceAfterBattleText::
 	text "I still can't"
 	line "believe my"
 	cont "dragons lost to"
-	cont "you, ", $52, "!"
+	cont "you,", $52,"!"
 
 	para "You are now the"
 	line "#MON LEAGUE"
@@ -54,7 +54,7 @@ _LanceAfterBattleText::
 	line "another trainer!"
 	cont "His name is..."
 
-	para $53, "!"
+	para $53,"!"
 	line "He beat the ELITE"
 	cont "FOUR before you!"
 

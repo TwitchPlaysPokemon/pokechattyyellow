@@ -145,7 +145,7 @@ _Route19EndBattleText10::
 	prompt
 
 _Route19AfterBattleText10::
-	text "LAPRAS is so big, "
+	text "LAPRAS is so big,"
 	line "it must keep you"
 	cont "dry on water."
 	done

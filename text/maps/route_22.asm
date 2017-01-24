@@ -5,7 +5,7 @@ _Route22RivalDefeatedText1::
 	prompt
 
 _Route22Text_511bc::
-	text $53, ": What?"
+	text $53,": What?"
 	line "Why do I have 2"
 	cont "#MON?"
 
@@ -21,8 +21,8 @@ _Route22RivalDefeatedText2::
 	prompt
 
 _Route22Text_511d0::
-	text $53, ": Hahaha!"
-	line $52, "! That's"
+	text $53,": Hahaha!"
+	line $52,"! That's"
 	cont "your best? You're"
 	cont "nowhere near as"
 	cont "good as me, pal!"
@@ -32,8 +32,8 @@ _Route22Text_511d0::
 	prompt
 
 _Route22RivalBeforeBattleText1::
-	text $53, ": Hey!"
-	line $52, "!"
+	text $53,": Hey!"
+	line $52,"!"
 
 	para "You're going to"
 	line "#MON LEAGUE?"
@@ -65,8 +65,8 @@ _Route22RivalAfterBattleText1::
 	done
 
 _Route22RivalBeforeBattleText2::
-	text $53, ": What?"
-	line $52, "! What a"
+	text $53,": What?"
+	line $52,"! What a"
 	cont "surprise to see"
 	cont "you here!"
 
@@ -90,7 +90,7 @@ _Route22RivalAfterBattleText2::
 	line "up! I'm ready for"
 	cont "#MON LEAGUE!"
 
-	para $52, ", you need"
+	para $52,", you need"
 	line "more practice!"
 
 	para "But hey, you know"

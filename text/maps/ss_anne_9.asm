@@ -1,5 +1,5 @@
 _SSAnne9Text_61bf2::
-	text "In all my travels, "
+	text "In all my travels,"
 	line "I've never seen"
 	cont "any #MON sleep"
 	cont "like this one!"
@@ -56,7 +56,7 @@ _SSAnne9AfterBattleText2::
 	done
 
 _SSAnne9BattleText3::
-	text "Which do you like, "
+	text "Which do you like,"
 	line "a strong or a"
 	cont "rare #MON?"
 	done

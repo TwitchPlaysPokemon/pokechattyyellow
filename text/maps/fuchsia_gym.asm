@@ -38,7 +38,7 @@ _KogaExplainToxicText::
 
 _FuchsiaGymText9::
 	text "Now that you have"
-	line "the SOULBADGE, "
+	line "the SOULBADGE,"
 	cont "the DEFENSE of"
 	cont "your #MON"
 	cont "increases!"
@@ -52,7 +52,7 @@ _FuchsiaGymText9::
 	done
 
 _ReceivedTM06Text::
-	text $52, " received"
+	text $52," received"
 	line "@"
 	TX_RAM wcf4b
 	text "!@@"
@@ -123,7 +123,7 @@ _FuchsiaGymEndBattleText3::
 
 _FuchsiaGymAfterBattleText3::
 	text "I like poison and"
-	line "sleep techniques, "
+	line "sleep techniques,"
 	cont "as they linger"
 	cont "after battle!"
 	done

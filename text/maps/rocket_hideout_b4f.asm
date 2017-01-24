@@ -1,5 +1,5 @@
 _RocketHideoutJessieJamesText1::
-	text "Not another step, "
+	text "Not another step,"
 	line "brat!@@"
 
 _RocketHideoutJessieJamesText2::
@@ -7,7 +7,7 @@ _RocketHideoutJessieJamesText2::
 	line "humiliate us at"
 	cont "MT.MOON!"
 
-	para "It's payback time, "
+	para "It's payback time,"
 	line "you brat!"
 	done
 

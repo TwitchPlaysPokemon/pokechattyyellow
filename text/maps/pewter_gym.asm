@@ -44,7 +44,7 @@ _TM34PreReceiveText::
 	done
 
 _ReceivedTM34Text::
-	text $52, " received"
+	text $52," received"
 	line "TM34!@@"
 
 _TM34ExplanationText::
@@ -57,7 +57,7 @@ _TM34ExplanationText::
 	para "A TM is good only"
 	line "once! So when you"
 	cont "use one to teach"
-	cont "a new technique, "
+	cont "a new technique,"
 	cont "pick the #MON"
 	cont "carefully!"
 
@@ -83,7 +83,7 @@ _PewterGymText_5c4bc::
 	line "victory, here's"
 	cont "the BOULDERBADGE!"
 
-	para $52, " received"
+	para $52," received"
 	line "the BOULDERBADGE!@@"
 
 _PewterGymText_5c4c1::
@@ -102,7 +102,7 @@ _PewterGymText_5c4c1::
 	prompt
 
 _PewterGymBattleText1::
-	text "Stop right there, "
+	text "Stop right there,"
 	line "kid!"
 
 	para "You're still light"
@@ -119,7 +119,7 @@ _PewterGymEndBattleText1::
 	prompt
 
 _PewterGymAfterBattleText1::
-	text "You're pretty hot, "
+	text "You're pretty hot,"
 	line "but not as hot"
 	cont "as BROCK!"
 	done
@@ -130,7 +130,7 @@ _PewterGymText_5c515::
 	cont "takes to become a"
 	cont "#MON champ!"
 
-	para "I'm no trainer, "
+	para "I'm no trainer,"
 	line "but I can tell"
 	cont "you how to win!"
 
@@ -150,7 +150,7 @@ _PewterGymText_5c51f::
 	cont "#MON LIST!"
 
 	para "By changing the"
-	line "order of #MON, "
+	line "order of #MON,"
 	cont "matches could be"
 	cont "made easier!"
 	done

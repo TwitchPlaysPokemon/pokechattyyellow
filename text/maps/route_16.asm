@@ -9,7 +9,7 @@ _Route16EndBattleText1::
 
 _Route16AfterBattleText1::
 	text "We like just"
-	line "hanging here, "
+	line "hanging here,"
 	cont "what's it to you?"
 	done
 
@@ -29,7 +29,7 @@ _Route16AfterBattleText2::
 	done
 
 _Route16BattleText3::
-	text "Come out and play, "
+	text "Come out and play,"
 	line "little mouse!"
 	done
 
@@ -65,7 +65,7 @@ _Route16BattleText5::
 	done
 
 _Route16EndBattleText5::
-	text "Bad, "
+	text "Bad,"
 	line "bad, bad!"
 	prompt
 
@@ -103,7 +103,7 @@ _Route16Text10::
 	done
 
 _Route16Text11::
-	text "With a big yawn, "
+	text "With a big yawn,"
 	line "SNORLAX returned"
 	cont "to the mountains!"
 	done

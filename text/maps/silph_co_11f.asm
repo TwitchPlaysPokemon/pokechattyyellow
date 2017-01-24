@@ -11,7 +11,7 @@ _SilphCoPresidentText::
 	para "I have to thank"
 	line "you in some way!"
 
-	para "Because I am rich, "
+	para "Because I am rich,"
 	line "I can give you"
 	cont "anything!"
 
@@ -20,7 +20,7 @@ _SilphCoPresidentText::
 	prompt
 
 _ReceivedSilphCoMasterBallText::
-	text $52, " got a"
+	text $52," got a"
 	line "@"
 	TX_RAM wcf4b
 	text "!@@"
@@ -87,7 +87,7 @@ _SilphCo10Text_62335::
 	para "But, TEAM ROCKET"
 	line "will never fall!"
 
-	para $52, "! Never"
+	para $52,"! Never"
 	line "forget that all"
 	cont "#MON exist"
 	cont "for TEAM ROCKET!"
@@ -108,7 +108,7 @@ _SilphCo11EndBattleText2::
 	prompt
 
 _SilphCo11AfterBattleText2::
-	text "Watch your step, "
+	text "Watch your step,"
 	line "my BOSS likes his"
 	cont "#MON tough!"
 	done

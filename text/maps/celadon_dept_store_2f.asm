@@ -8,7 +8,7 @@ _CeladonMart2Text3::
 	done
 
 _CeladonMart2Text4::
-	text "For long outings, "
+	text "For long outings,"
 	line "you should buy"
 	cont "REVIVE."
 	done

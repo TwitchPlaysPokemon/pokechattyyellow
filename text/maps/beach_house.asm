@@ -13,7 +13,7 @@ _SurfinDudeText1::
 	done
 
 _SurfinDudeText2::
-	text "Come SURF anytime, "
+	text "Come SURF anytime,"
 	line "my friend!"
 	done
 

@@ -16,7 +16,7 @@ _VermilionHouse2Text_560b6::
 	para "Take this and"
 	line "fish, young one!"
 
-	para $52, " received"
+	para $52," received"
 	line "an @"
 	TX_RAM wcf4b
 	text "!@@"
@@ -38,8 +38,8 @@ _VermilionHouse2Text_560c0::
 	done
 
 _VermilionHouse2Text_560c5::
-	text "Hello there, "
-	line $52, "!"
+	text "Hello there,"
+	line $52,"!"
 
 	para "How are the fish"
 	line "biting?"

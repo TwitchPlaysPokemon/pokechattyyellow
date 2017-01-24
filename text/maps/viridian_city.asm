@@ -120,7 +120,7 @@ _ViridianCityText_191ca::
 	prompt
 
 _ReceivedTM42Text::
-	text $52, " received"
+	text $52," received"
 	line "TM42!@@"
 
 _TM42Explanation::
@@ -164,7 +164,7 @@ _ViridianCityText9::
 	line "and expand your"
 	cont "collection!"
 
-	para "The more you have, "
+	para "The more you have,"
 	line "the easier it is"
 	cont "to fight!"
 	done
@@ -177,7 +177,7 @@ _ViridianCityText10::
 	cont "limited by their"
 	cont "POWER POINTs, PP."
 
-	para "To replenish PP, "
+	para "To replenish PP,"
 	line "rest your tired"
 	cont "#MON at a"
 	cont "#MON CENTER!"

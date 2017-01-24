@@ -42,7 +42,7 @@ _BlaineBadgeText::
 	done
 
 _ReceivedTM38Text::
-	text $52, " received"
+	text $52," received"
 	line "@"
 	TX_RAM wcf4b
 	text "!@@"
@@ -78,10 +78,10 @@ _CinnabarGymText_75964::
 
 _CinnabarGymText_75969::
 	text "Fire, or to be"
-	line "more precise, "
+	line "more precise,"
 	cont "combustion..."
 
-	para "Blah, blah, blah, "
+	para "Blah, blah, blah,"
 	line "blah..."
 	done
 
@@ -204,7 +204,7 @@ _CinnabarGymText_75ac2::
 	done
 
 _CinnabarGymText_75ac7::
-	text $52, "! You beat"
+	text $52,"! You beat"
 	line "that fire brand!"
 	done
 

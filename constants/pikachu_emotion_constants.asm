@@ -23,7 +23,7 @@ pikaframe: macro
 	db (\1_id - PikaPicTilemapPointers) / 2, \2
 	endm
 
-pikaframedelay EQUS "db 0, "
+pikaframedelay EQUS "db 0,"
 
 ; Starter Pikachu emotion commands constants
 

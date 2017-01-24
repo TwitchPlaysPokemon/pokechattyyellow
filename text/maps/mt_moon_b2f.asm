@@ -30,7 +30,7 @@ _MtMoon3Text_49f64::
 	done
 
 _MtMoon3Text_49f6f::
-	text $52, " got the"
+	text $52," got the"
 	line "@"
 	TX_RAM wcf4b
 	text "!@@"
@@ -60,7 +60,7 @@ _MtMoon3Text_49f8f::
 
 _MtMoon3Text_49f94::
 	text "Far away, on"
-	line "CINNABAR ISLAND, "
+	line "CINNABAR ISLAND,"
 	cont "there's a #MON"
 	cont "LAB."
 
@@ -74,7 +74,7 @@ _MtMoon3Text_49f99::
 	line "this is mine!@@"
 
 _MtMoon3BattleText3::
-	text "We, TEAM ROCKET, "
+	text "We, TEAM ROCKET,"
 	line "are #MON"
 	cont "gangsters!"
 	done

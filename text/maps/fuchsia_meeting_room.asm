@@ -12,12 +12,12 @@ _FuchsiaMeetingRoomText2::
 	cont "about #MON!"
 
 	para "He even has some"
-	line "fossils of rare, "
+	line "fossils of rare,"
 	cont "extinct #MON!"
 	done
 
 _FuchsiaMeetingRoomText3::
-	text "SLOWPOKE came in, "
+	text "SLOWPOKE came in,"
 	line "but I couldn't"
 	cont "understand him."
 

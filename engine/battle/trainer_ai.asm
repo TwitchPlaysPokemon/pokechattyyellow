@@ -201,6 +201,12 @@ AIMoveChoiceModification3:
 	ret z ; no more moves in move set
 	inc de
 	call ReadMove
+	ld a, [wEnemyMovePower]
+	and a
+	jr nz, .damaging
+	inc [hl]
+	jr .nextMove
+.damaging
 	push hl
 	push bc
 	push de
