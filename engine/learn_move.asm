@@ -169,6 +169,8 @@ TryingToLearn:
 	pop de
 	ld a, d
 	jr c, .hm
+	cp CHATTER
+	jr z, .chatter
 	pop hl
 	add hl, bc
 	and a
@@ -181,6 +183,11 @@ TryingToLearn:
 .cancel
 	scf
 	ret
+.chatter
+	ld hl, CantDeleteChatterText
+	call PrintText
+	pop hl
+	jr .loop
 
 LearnedMove1Text:
 	TX_FAR _LearnedMove1Text
@@ -248,3 +255,8 @@ ForgotAndText:
 HMCantDeleteText:
 	TX_FAR _HMCantDeleteText
 	db "@"
+
+CantDeleteChatterText:
+	text "CHATTER can't be"
+	line "forgotten!"
+	prompt
