@@ -842,9 +842,7 @@ INCLUDE "text/trainer_names.asm"
 
 INCLUDE "engine/battle/bank_e_misc.asm"
 
-INCLUDE "data/trainer_moves.asm"
-
-INCLUDE "data/trainer_parties.asm"
+INCLUDE "engine/battle/trainer_ai.asm"
 
 TradingAnimationGraphics: INCBIN "gfx/game_boy.norepeat.2bpp"
 	INCBIN "gfx/link_cable.2bpp"
@@ -2001,9 +1999,11 @@ INCLUDE "engine/bg_map_attributes.asm"
 
 SECTION "bank30", ROMX,BANK[$30]
 
-INCLUDE "engine/battle/trainer_ai.asm"
-
 INCLUDE "engine/battle/read_trainer_party.asm"
+
+INCLUDE "data/trainer_moves.asm"
+
+INCLUDE "data/trainer_parties.asm"
 
 INCLUDE "engine/evos_moves.asm"
 
