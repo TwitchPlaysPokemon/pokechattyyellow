@@ -1,8 +1,3 @@
-INCLUDE "engine/battle/common_text.asm"
-INCLUDE "engine/battle/link_battle_versus_text.asm"
-INCLUDE "engine/battle/unused_stats_functions.asm"
-INCLUDE "engine/battle/scroll_draw_trainer_pic.asm"
-
 StarterPikachuBattleEntranceAnimation:
 	coord hl, 0, 5
 	ld c, 0
@@ -686,12 +681,3 @@ GenerateRandomFishingEncounter:
 	inc hl
 	ld d, [hl]
 	ret
-
-INCLUDE "data/super_rod.asm"
-INCLUDE "engine/battle/bank3d_battle.asm"
-INCLUDE "engine/items/tm_prices.asm"
-INCLUDE "engine/multiply_divide.asm"
-INCLUDE "engine/give_pokemon.asm"
-INCLUDE "engine/battle/get_trainer_name.asm"
-INCLUDE "engine/random.asm"
-INCLUDE "engine/predefs.asm"

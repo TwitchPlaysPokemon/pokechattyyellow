@@ -330,18 +330,6 @@ TrainerClassMoveChoiceModifications:
 	db 1, 0    ; AGATHA
 	db 1, 3, 0  ; LANCE
 
-INCLUDE "engine/battle/trainer_pic_money_pointers.asm"
-
-INCLUDE "text/trainer_names.asm"
-
-INCLUDE "engine/battle/bank_e_misc.asm"
-
-INCLUDE "engine/battle/read_trainer_party.asm"
-
-INCLUDE "data/trainer_moves.asm"
-
-INCLUDE "data/trainer_parties.asm"
-
 TrainerAI:
 	ld a, [wIsInBattle]
 	dec a

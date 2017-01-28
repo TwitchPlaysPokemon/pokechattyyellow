@@ -829,14 +829,22 @@ INCLUDE "engine/titlescreen2.asm"
 INCLUDE "engine/slot_machine.asm"
 INCLUDE "engine/game_corner_slots.asm"
 
-
 SECTION "bank0E", ROMX,BANK[$0E]
 
 INCLUDE "data/moves.asm"
 BaseStats: INCLUDE "data/base_stats.asm"
 INCLUDE "data/cries.asm"
-INCLUDE "engine/battle/trainer_ai.asm"
 INCLUDE "engine/battle/draw_hud_pokeball_gfx.asm"
+
+INCLUDE "engine/battle/trainer_pic_money_pointers.asm"
+
+INCLUDE "text/trainer_names.asm"
+
+INCLUDE "engine/battle/bank_e_misc.asm"
+
+INCLUDE "data/trainer_moves.asm"
+
+INCLUDE "data/trainer_parties.asm"
 
 TradingAnimationGraphics: INCBIN "gfx/game_boy.norepeat.2bpp"
 	INCBIN "gfx/link_cable.2bpp"
@@ -846,9 +854,6 @@ TradingAnimationGraphics2:
 ; Pokeball traveling through the link cable.
 	INCBIN "gfx/trade2.2bpp"
 TradingAnimationGraphics2End:
-
-INCLUDE "engine/evos_moves.asm"
-
 
 SECTION "bank0F", ROMX,BANK[$0F]
 
@@ -1990,17 +1995,17 @@ RedFishingRodTiles:   INCBIN "gfx/red_fishingrod_tiles.2bpp"
 
 INCLUDE "data/animations.asm"
 
-
 SECTION "bank2f", ROMX[$5000],BANK[$2F]
 
 INCLUDE "engine/bg_map_attributes.asm"
 
-
 SECTION "bank30", ROMX,BANK[$30]
 
-; This whole bank is garbage data.
-INCBIN "engine/bank30.bin"
+INCLUDE "engine/battle/trainer_ai.asm"
 
+INCLUDE "engine/battle/read_trainer_party.asm"
+
+INCLUDE "engine/evos_moves.asm"
 
 SECTION "bank39", ROMX,BANK[$39]
 
@@ -2119,7 +2124,6 @@ INCBIN "gfx/pikachu/unknown_e7b83.2bpp"
 GFX_e7d13: ; e7d13
 INCBIN "gfx/pikachu/unknown_e7d13.2bpp"
 
-
 SECTION "bank3A", ROMX,BANK[$3A]
 
 INCLUDE "text/monster_names.asm"
@@ -2138,19 +2142,96 @@ INCLUDE "engine/overworld/npc_movement_2.asm"
 
 SECTION "bank3C", ROMX,BANK[$3C]
 
+INCLUDE "engine/pikachu_pcm.asm"
+INCLUDE "engine/overworld/advance_player_sprite.asm"
+
 INCLUDE "engine/bank3c.asm"
 
+INCLUDE "engine/HoF_room_pc.asm"
+INCLUDE "scripts/viridiancity2.asm"
+INCLUDE "scripts/vermilioncity2.asm"
+INCLUDE "scripts/celadoncity2.asm"
+INCLUDE "scripts/route1_2.asm"
+INCLUDE "scripts/route22_2.asm"
+INCLUDE "scripts/redshouse1f2.asm"
+INCLUDE "scripts/oakslab2.asm"
+INCLUDE "scripts/school2.asm"
+INCLUDE "scripts/museum1f2.asm"
+INCLUDE "scripts/pewterpokecenter2.asm"
+INCLUDE "scripts/pokemontower2_2.asm"
+INCLUDE "scripts/celadonmart3_2.asm"
+INCLUDE "scripts/celadonmansion1_2.asm"
+INCLUDE "scripts/celadonmansion3_2.asm"
+INCLUDE "scripts/celadongamecorner2.asm"
+INCLUDE "scripts/celadondiner2.asm"
+INCLUDE "scripts/safarizoneentrance2.asm"
+INCLUDE "scripts/cinnabargym3.asm"
+INCLUDE "scripts/mtmoonpokecenter2.asm"
+
+INCLUDE "data/mapHeaders/beach_house.asm"
+INCLUDE "scripts/beach_house.asm"
+BeachHouseBlockdata:
+INCBIN "maps/beach_house.blk"
+INCLUDE "data/mapObjects/beach_house.asm"
+
+INCLUDE "scripts/beach_house2.asm"
+INCLUDE "scripts/billshouse2.asm"
+INCLUDE "scripts/viridianforest2.asm"
+INCLUDE "scripts/ssanne9_2.asm"
+INCLUDE "scripts/silphco11_2.asm"
+
+INCLUDE "engine/overworld/hidden_objects.asm"
+INCLUDE "engine/vermilion_gym_trash_cans.asm"
 
 SECTION "bank3D", ROMX,BANK[$3D]
 
+INCLUDE "engine/battle/common_text.asm"
+INCLUDE "engine/battle/link_battle_versus_text.asm"
+INCLUDE "engine/battle/unused_stats_functions.asm"
+INCLUDE "engine/battle/scroll_draw_trainer_pic.asm"
+
 INCLUDE "engine/bank3d.asm"
 
+INCLUDE "data/super_rod.asm"
+INCLUDE "engine/battle/bank3d_battle.asm"
+INCLUDE "engine/items/tm_prices.asm"
+INCLUDE "engine/multiply_divide.asm"
+INCLUDE "engine/give_pokemon.asm"
+INCLUDE "engine/battle/get_trainer_name.asm"
+INCLUDE "engine/random.asm"
+INCLUDE "engine/predefs.asm"
 
 SECTION "bank3E", ROMX,BANK[$3E]
 
-INCLUDE "engine/bank3e.asm"
-
+INCLUDE "engine/surfing_minigame.asm"
+INCLUDE "engine/yellow_intro.asm"
+INCLUDE "data/animated_objects_3e_2.asm"
+YellowIntroGraphics1: INCBIN "gfx/yellow_intro1.2bpp"
+YellowIntroGraphics2: INCBIN "gfx/yellow_intro2.2bpp"
+INCLUDE "engine/animated_objects_3e.asm"
 
 SECTION "bank3F", ROMX,BANK[$3F]
 
-INCLUDE "engine/bank3f.asm"
+INCLUDE "data/map_songs.asm"
+INCLUDE "data/map_header_pointers.asm"
+INCLUDE "data/map_header_banks.asm"
+INCLUDE "engine/pikachu_follow.asm"
+INCLUDE "engine/pikachu_status.asm"
+INCLUDE "engine/pikachu_emotions.asm"
+INCLUDE "engine/pikachu_movement.asm"
+INCLUDE "engine/pikachu_pic_animation.asm"
+
+Func_fe66e:
+	ret
+
+OfficerJennySprite:    INCBIN "gfx/sprites/officer_jenny.2bpp"
+PikachuSprite:         INCBIN "gfx/sprites/pikachu.2bpp"
+SandshrewSprite:       INCBIN "gfx/sprites/sandshrew.2bpp"
+OddishSprite:          INCBIN "gfx/sprites/oddish.2bpp"
+BulbasaurSprite:       INCBIN "gfx/sprites/bulbasaur.2bpp"
+JigglypuffSprite:      INCBIN "gfx/sprites/jigglypuff.2bpp"
+Clefairy2Sprite:       INCBIN "gfx/sprites/clefairy2.2bpp"
+ChanseySprite:         INCBIN "gfx/sprites/chansey.2bpp"
+SurfingPikachuSprite:  INCBIN "gfx/sprites/surfing_pikachu.2bpp"
+JessieSprite:          INCBIN "gfx/sprites/jessie.2bpp"
+JamesSprite:           INCBIN "gfx/sprites/james.2bpp"

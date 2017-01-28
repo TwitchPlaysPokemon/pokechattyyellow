@@ -1,6 +1,3 @@
-INCLUDE "engine/pikachu_pcm.asm"
-INCLUDE "engine/overworld/advance_player_sprite.asm"
-
 ResetStatusAndHalveMoneyOnBlackout:
 ; Reset player status on blackout.
 	xor a
@@ -197,39 +194,3 @@ PokecenterChanseyText:
 NurseChanseyText:
 	TX_FAR _NurseChanseyText
 	db "@"
-
-INCLUDE "engine/HoF_room_pc.asm"
-INCLUDE "scripts/viridiancity2.asm"
-INCLUDE "scripts/vermilioncity2.asm"
-INCLUDE "scripts/celadoncity2.asm"
-INCLUDE "scripts/route1_2.asm"
-INCLUDE "scripts/route22_2.asm"
-INCLUDE "scripts/redshouse1f2.asm"
-INCLUDE "scripts/oakslab2.asm"
-INCLUDE "scripts/school2.asm"
-INCLUDE "scripts/museum1f2.asm"
-INCLUDE "scripts/pewterpokecenter2.asm"
-INCLUDE "scripts/pokemontower2_2.asm"
-INCLUDE "scripts/celadonmart3_2.asm"
-INCLUDE "scripts/celadonmansion1_2.asm"
-INCLUDE "scripts/celadonmansion3_2.asm"
-INCLUDE "scripts/celadongamecorner2.asm"
-INCLUDE "scripts/celadondiner2.asm"
-INCLUDE "scripts/safarizoneentrance2.asm"
-INCLUDE "scripts/cinnabargym3.asm"
-INCLUDE "scripts/mtmoonpokecenter2.asm"
-
-INCLUDE "data/mapHeaders/beach_house.asm"
-INCLUDE "scripts/beach_house.asm"
-BeachHouseBlockdata:
-INCBIN "maps/beach_house.blk"
-INCLUDE "data/mapObjects/beach_house.asm"
-
-INCLUDE "scripts/beach_house2.asm"
-INCLUDE "scripts/billshouse2.asm"
-INCLUDE "scripts/viridianforest2.asm"
-INCLUDE "scripts/ssanne9_2.asm"
-INCLUDE "scripts/silphco11_2.asm"
-
-INCLUDE "engine/overworld/hidden_objects.asm"
-INCLUDE "engine/vermilion_gym_trash_cans.asm"
