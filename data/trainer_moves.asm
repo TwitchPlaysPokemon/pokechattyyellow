@@ -644,7 +644,7 @@ SpecialTrainerMoves:
 	db 1,1,SURF
 	db 1,2,SUBMISSION
 	db 1,3,EARTHQUAKE
-	db 1,4,PSYCHICM_M
+	db 1,4,PSYCHIC_M
 	db 0
 
 	db SWIMMER,$0c
