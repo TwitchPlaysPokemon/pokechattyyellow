@@ -613,7 +613,7 @@ JynxPicBack:         INCBIN "pic/monback/jynxb.pic"
 MoltresPicFront:     INCBIN "pic/ymon/moltres.pic"
 MoltresPicBack:      INCBIN "pic/monback/moltresb.pic"
 ChatotPicFront:      INCBIN "pic/ymon/chatot.pic"
-ChatotPicBack:       INCBIN "pic/monback/chatotb.pic"
+ChatotPicBack:       INCBIN "pic/monback/pidgeyb.pic" ; FIXME
 
 INCLUDE "engine/predefsA.asm"
 INCLUDE "engine/battle/moveEffects/leech_seed_effect.asm"
