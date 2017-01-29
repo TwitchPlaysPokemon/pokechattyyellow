@@ -43,6 +43,9 @@ DayCareMText1:
 	ld a, [wWhichPokemon]
 	ld hl, wPartyMonNicks
 	call GetPartyMonName
+	callab IsThisPartymonStarterPikachu
+	ld hl, DayCareCantAcceptTheBirdText
+	jp c, .done
 	ld hl, DayCareWillLookAfterMonText
 	call PrintText
 	ld a, 1
@@ -290,4 +293,8 @@ DayCareHeresYourMonText:
 
 DayCareNotEnoughMoneyText:
 	TX_FAR _DayCareNotEnoughMoneyText
+	db "@"
+
+DayCareCantAcceptTheBirdText:
+	TX_FAR _DayCareCantAcceptTheBirdText
 	db "@"

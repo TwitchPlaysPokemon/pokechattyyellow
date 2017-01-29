@@ -90,3 +90,12 @@ _DayCareNotEnoughMoneyText::
 	text "Hey, you don't"
 	line "have enough ¥!"
 	done
+
+_DayCareCantAcceptTheBirdText::
+	text "Why would you"
+	line "leave it here?"
+	para "Don't you love"
+	line "@"
+	TX_RAM wStringBuffer
+	text "?"
+	done
