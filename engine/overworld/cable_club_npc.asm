@@ -1,7 +1,7 @@
 CableClubNPC:
 	ld hl, CableClubNPCWelcomeText
 	call PrintText
-	call CheckPikachuFollowingPlayer
+	call IsPikachuPositionFrozenOnMap
 	jr nz, .asm_7048
 	CheckEvent EVENT_GOT_POKEDEX
 	jp nz, .receivedPokedex

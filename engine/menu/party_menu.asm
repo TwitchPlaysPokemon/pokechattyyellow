@@ -53,7 +53,7 @@ RedrawPartyMenu_:
 	ld [wWhichPokemon], a
 	callab IsThisPartymonStarterPikachu_Party
 	jr nc, .regularMon
-	call CheckPikachuFollowingPlayer
+	call IsPikachuPositionFrozenOnMap
 	jr z, .regularMon
 	ld a, $ff
 	ld [hPartyMonIndex], a

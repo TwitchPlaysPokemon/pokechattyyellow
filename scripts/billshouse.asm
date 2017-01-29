@@ -61,7 +61,7 @@ BillsHouseScript2:
 	and a ; cp SPRITE_FACING_DOWN
 	ld de, MovementData_1e79c
 	jr nz, .notDown
-	call CheckPikachuFollowingPlayer
+	call IsPikachuPositionFrozenOnMap
 	jr nz, .asm_1e0f8
 	callab Func_f250b
 .asm_1e0f8
@@ -96,7 +96,7 @@ BillsHouseScript3:
 	ld a, HS_BILL_POKEMON
 	ld [wMissableObjectIndex], a
 	predef HideObject
-	call CheckPikachuFollowingPlayer
+	call IsPikachuPositionFrozenOnMap
 	jr z, .asm_1e13e
 	ld hl, PikachuMovementData_1e14d
 	ld a, [wPlayerFacingDirection]
@@ -160,7 +160,7 @@ BillsHouseScript5:
 	ld hl, wd472
 	bit 7, [hl]
 	jr z, .asm_1e1c6
-	call CheckPikachuFollowingPlayer
+	call IsPikachuPositionFrozenOnMap
 	jr z, .asm_1e1c6
 	ld a, $2
 	ld [hSpriteIndexOrTextID], a

@@ -252,7 +252,7 @@ MapSpecificPikachuExpression:
 	bit 7, [hl]
 	ldpikaemotion a, PikachuEmotion29
 	jr z, .play_emotion
-	call CheckPikachuFollowingPlayer
+	call IsPikachuPositionFrozenOnMap
 	ldpikaemotion a, PikachuEmotion30
 	jr nz, .play_emotion
 	jr .check_pikachu_status
@@ -261,7 +261,7 @@ MapSpecificPikachuExpression:
 	ld a, [wCurMap]
 	cp PEWTER_POKECENTER
 	jr nz, .notPewterPokecenter
-	call CheckPikachuFollowingPlayer
+	call IsPikachuPositionFrozenOnMap
 	ldpikaemotion a, PikachuEmotion26
 	jr nz, .play_emotion
 	jr .check_pikachu_status

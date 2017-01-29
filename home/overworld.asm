@@ -1236,7 +1236,7 @@ CollisionCheckOnLand::
 ; if no sprite collision
 	cp $f
 	jr nz, .collision
-	call CheckPikachuFollowingPlayer
+	call IsPikachuPositionFrozenOnMap
 	jr nz, .collision
 	ld a, [hJoyHeld]
 	and $2

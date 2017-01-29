@@ -1929,7 +1929,7 @@ ItemUsePokeflute:
 .notRoute16
 	cp PEWTER_POKECENTER
 	jr nz, .noSnorlaxOrPikachuToWakeUp
-	call CheckPikachuFollowingPlayer
+	call IsPikachuPositionFrozenOnMap
 	jr z, .noSnorlaxOrPikachuToWakeUp
 	callab IsPikachuRightNextToPlayer
 	jr nc, .noSnorlaxOrPikachuToWakeUp

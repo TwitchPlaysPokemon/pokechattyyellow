@@ -477,7 +477,7 @@ HandlePartyMenuInput::
 	ld [wWhichPokemon], a
 	callab IsThisPartymonStarterPikachu_Party ; 3f:4e18
 	jr nc, .asm_1258
-	call CheckPikachuFollowingPlayer
+	call IsPikachuPositionFrozenOnMap
 	jr nz, .asm_128f
 .asm_1258
 	pop af

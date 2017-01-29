@@ -103,7 +103,7 @@ BillsPC_::
 	bit 3, a ; accessing Bill's PC through another PC?
 	jr nz, BillsPCMenu
 ; accessing it directly
-	ld a, $99
+	ld a, SFX_TURN_ON_PC
 	call PlaySound
 	ld hl, SwitchOnText
 	call PrintText
@@ -227,9 +227,11 @@ BillsPCDeposit:
 	jp c, BillsPCMenu
 	callab IsThisPartymonStarterPikachu_Party
 	jr nc, .asm_215ad
-	call CheckPikachuFollowingPlayer
-	jr z, .asm_215ad
+	call IsPikachuPositionFrozenOnMap
+	ld hl, CantDepositChatotText
+	jr z, .got_chatot_text
 	ld hl, SleepingPikachuText2
+.got_chatot_text
 	call PrintText
 	jp BillsPCMenu
 .asm_215ad
@@ -270,6 +272,10 @@ BillsPCDeposit:
 	ld hl, MonWasStoredText
 	call PrintText
 	jp BillsPCMenu
+
+CantDepositChatotText:
+	TX_FAR _CantDepositChatotText
+	db "@"
 
 SleepingPikachuText2:
 	TX_FAR _SleepingPikachuText2

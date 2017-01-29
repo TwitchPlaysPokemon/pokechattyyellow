@@ -87,7 +87,7 @@ Func_f24ae:
 	ld a, [wCurMap]
 	cp BILLS_HOUSE
 	jr nz, .asm_f24d2
-	call CheckPikachuFollowingPlayer
+	call IsPikachuPositionFrozenOnMap
 	jr z, .asm_f24d2
 	ld a, [wBillsHouseCurScript]
 	cp $5

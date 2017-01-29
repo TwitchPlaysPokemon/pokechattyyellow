@@ -44,7 +44,7 @@ EnablePikachuFollowingPlayer::
 	pop hl
 	ret
 
-CheckPikachuFollowingPlayer::
+IsPikachuPositionFrozenOnMap::
 	push hl
 	ld hl, wPikachuOverworldStateFlags
 	bit 1, [hl]

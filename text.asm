@@ -1800,6 +1800,11 @@ _AccessedHoFPCText::
 	line "OF FAME List."
 	prompt
 
+_CantDepositChatotText::
+	text "It can't leave"
+	line "your party!"
+	prompt
+
 _SleepingPikachuText2::
 	text "There isn't any"
 	line "response..."

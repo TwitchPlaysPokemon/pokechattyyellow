@@ -96,7 +96,7 @@ asm_fce21:
 	ld bc, NAME_LENGTH
 	call AddNTimes
 	ld de, wPlayerName
-	ld b, $6 ; possible Japanese player length + 1
+	ld b, 8 ; US player name length
 .loop
 	dec b
 	jr z, .isPlayerPikachu

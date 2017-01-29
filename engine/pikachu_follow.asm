@@ -366,7 +366,7 @@ SpawnPikachu_::
 	ld a, [wFontLoaded]
 	bit 0, a
 	jp nz, Func_fc76a
-	call CheckPikachuFollowingPlayer
+	call IsPikachuPositionFrozenOnMap
 	jp nz, Func_fc76a
 	ld a, [hl]
 	and $7f
@@ -430,7 +430,7 @@ Func_fc745:
 	ld hl, wPikachuWalkAnimationCounter - wPikachuSpriteStateData1
 	add hl, bc
 	ld [hl], a
-	call CheckPikachuFollowingPlayer
+	call IsPikachuPositionFrozenOnMap
 	jr nz, .okay
 	; Have Pikachu face in the opposite direction of you
 	ld a, [wPlayerFacingDirection]
