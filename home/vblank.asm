@@ -32,10 +32,7 @@ VBlank::
 	call VBlankCopyDouble
 	call UpdateMovingBgTiles
 	call $ff80 ; hOAMDMA
-	ld a, BANK(PrepareOAMData)
-	ld [hROMBank], a
-	ld [MBC5RomBank], a
-	call PrepareOAMData
+	callbs PrepareOAMData
 
 	; VBlank-sensitive operations end.
 	call TrackPlayTime ; keep track of time played

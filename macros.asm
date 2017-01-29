@@ -1,5 +1,6 @@
 FarCall = $08
 Bankswitch = $10
+StackFarCall = $18
 Jumptable = $28
 
 text   EQUS "db $00, " ; Start writing text.
@@ -103,42 +104,25 @@ callbs: MACRO
 	ENDM
 
 callba: MACRO
-	ld a, BANK(\1)
-	ld hl, \1
-	rst FarCall
+	rst StackFarCall
+	dab \1
 	ENDM
 
-callab: MACRO
-	ld hl, \1
-	ld a, BANK(\1)
-	rst FarCall
-	ENDM
+callab EQUS "callba"
 
 calladb_ModifyPikachuHappiness: MACRO
-	ld hl, ModifyPikachuHappiness
 	ld d, \1
-	ld a, BANK(ModifyPikachuHappiness)
-	rst FarCall
+	callba ModifyPikachuHappiness
 	ENDM
 
-callabd_ModifyPikachuHappiness: MACRO
-	ld hl, ModifyPikachuHappiness
-	ld a, BANK(ModifyPikachuHappiness)
-	ld d, \1
-	rst FarCall
-	ENDM
+callabd_ModifyPikachuHappiness EQUS "calladb_ModifyPikachuHappiness"
 
 jpba: MACRO
-	ld a, BANK(\1)
-	ld hl, \1
-	jp FarCall_hl
+	rst StackFarCall
+	dwb \1, $80 | BANK(\1)
 	ENDM
 
-jpab: MACRO
-	ld hl, \1
-	ld a, BANK(\1)
-	jp FarCall_hl
-	ENDM
+jpab EQUS "jpba"
 
 bcd: MACRO
 x = 1

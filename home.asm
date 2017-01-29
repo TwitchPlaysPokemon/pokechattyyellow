@@ -10,7 +10,7 @@ SECTION "rst 10", ROM0 [$10]
 	ret
 
 SECTION "rst 18", ROM0 [$18]
-	jr_abs $38
+	jp StackFarcall
 SECTION "rst 20", ROM0 [$20]
 	jr_abs $38
 SECTION "rst 28", ROM0 [$28]
