@@ -44,16 +44,16 @@ SpecialTrainerMoves:
 
 	db BUG_CATCHER,$2
 	db 1,1,TACKLE
-	db 2,1,TACKLE
+	db 2,1,POISON_STING
 	db 0
 
 	db BUG_CATCHER,$5
 	db 2,1,TACKLE
-	db 4,1,TACKLE
+	db 4,1,POISON_STING
 	db 0
 
 	db BUG_CATCHER,$7	
-	db 2,1,TACKLE
+	db 2,1,POISON_STING
 	db 3,2,POISON_STING
 	db 3,3,SWORDS_DANCE
 	db 0
@@ -65,14 +65,14 @@ SpecialTrainerMoves:
 
 	db BUG_CATCHER,$9	
 	db 1,1,TACKLE
-	db 2,1,TACKLE
+	db 2,1,POISON_STING
 	db 3,1,PSYCHIC_M
 	db 3,2,DOUBLE_TEAM
 	db 3,3,REST
 	db 0
 	
 	db BUG_CATCHER,$0a
-	db 2,1,TACKLE
+	db 2,1,POISON_STING
 	db 3,2,SWORDS_DANCE
 	db 3,3,CUT
 	db 0
@@ -290,6 +290,7 @@ SpecialTrainerMoves:
 	
 	db POKEMANIAC,$2
 	db 1,4,SUBMISSION
+	db 2,1,DISABLE
 	db 2,2,PSYCHIC_M
 	db 2,3,BUBBLEBEAM
 	db 2,4,TRI_ATTACK
@@ -298,7 +299,7 @@ SpecialTrainerMoves:
 
 	db POKEMANIAC,$5
 	db 1,2,SWIFT
-	db 1,1,ICE_BEAM
+	db 2,1,ICE_BEAM
 	db 0
 
 	db POKEMANIAC,$6
@@ -569,6 +570,7 @@ SpecialTrainerMoves:
 	db 0
 
 	db FISHER,$4
+	db 1,1,HYPNOSIS
 	db 1,2,SURF
 	db 1,3,0
 	db 1,4,0
@@ -731,16 +733,31 @@ SpecialTrainerMoves:
 	db GAMBLER,$3
 	db 1,1,HORN_DRILL
 	db 1,2,BODY_SLAM
+	db 1,3,0
+	db 1,4,0
 	db 2,1,HORN_DRILL
 	db 2,2,AGILITY
 	db 2,3,THUNDER_WAVE
+	db 2,4,0
 	db 3,1,FISSURE
+	db 3,2,0
+	db 3,3,0
+	db 3,4,0
 	db 0
 	
 	db GAMBLER,$4
 	db 1,1,BIDE
+	db 1,2,0
+	db 1,3,0
+	db 1,4,0
 	db 2,1,BIDE
+	db 2,2,0
+	db 2,3,0
+	db 2,4,0
 	db 3,1,BIDE
+	db 3,2,0
+	db 3,3,0
+	db 3,4,0
 	db 0
 
 	db GAMBLER,$5
@@ -1605,7 +1622,7 @@ SpecialTrainerMoves:
 	db 5,4,BIDE
 	db 6,2,THUNDERBOLT
 	db 0
-	
+
 	db SONY2,$3
 	db 1,2,METRONOME
 	db 2,1,FLASH
