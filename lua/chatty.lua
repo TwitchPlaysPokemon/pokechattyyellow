@@ -25,6 +25,7 @@ wPlayerName    = 0xD157
 wRivalName     = 0xD349
 hROMBank       = 0xFFB8
 hMarkovROMBank = 0xFFB9
+wMarkovBuffer  = 0xD8A5
 
 function get_stream_input(url)
 	b, c, h = http.request(url)
@@ -81,7 +82,8 @@ function read_npc_text()
 	pointer = memory.readword(hMarkovChain)
 	-- ROM is already in correct bank
 	-- return read_string_at(pointer)
-	return read_raw_bytes_at(pointer)
+	--return read_raw_bytes_at(pointer)
+    return {0x93, 0xa7, 0xa8, 0xb2, 0x7f, 0xa8, 0xb2, 0x7f, 0xa0, 0x4f, 0xb3, 0xa4, 0xb2, 0xb3, 0xe8}
 end
 
 function get_pikachu_chain()
@@ -110,25 +112,35 @@ while true do
     CurrentBank = memory.readbyte(hROMBank)
     -- vba.print("Chain source in bank "..MarkovBank..". Currently loaded: "..CurrentBank)
     if MarkovBank ~= CurrentBank then
-      error("bank mismatch")
+      --error("bank mismatch")
     end
 		which_chain = memory.readbyte(hLSB)
 		if which_chain == LUA_REQUEST_NPC then
 			npc_text = read_npc_text()
-			http.request(base_url.."/npc_chain", JSON:encode({npc_text}))
+			--http.request(base_url.."/npc_chain", JSON:encode({npc_text}))
 			markov_chain = read_npc_text()
 		else
-			http.request(base_url.."/pika_chain", JSON:encode({}))
+			--http.request(base_url.."/pika_chain", JSON:encode({}))
 			markov_chain = get_pikachu_chain()
 		end
+        
+        table.insert(markov_chain, 0x51)
+        
+        for i = 1, table.getn(markov_chain), 1 do 
+            memory.writebyte(wMarkovBuffer + i - 1, markov_chain[1])
+			table.remove(markov_chain, 1)
+        end
+        
 		memory.writebyte(hLSC, LUA_REQUEST_COMPLETE)
 	elseif lua_ctrl == LUA_REQUEST_NEXT_CHAR then
-		if markov_chain[1] == nil then
-			memory.writebyte(hLSB, 0x57)
-		else
-			memory.writebyte(hLSB, markov_chain[1])
-			table.remove(markov_chain, 1)
-		end
+    
+        
+		--if markov_chain[1] == nil then
+		--	memory.writebyte(hLSB, 0x57)
+		--else
+		--	memory.writebyte(hLSB, markov_chain[1])
+		--	table.remove(markov_chain, 1)
+		--end
 		memory.writebyte(hLSC, LUA_REQUEST_COMPLETE)
 	end
   emu.frameadvance()
