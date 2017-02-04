@@ -19,15 +19,10 @@ Predef::
 	call GetPredefPointer
 
 	ld a, [wPredefBank]
-	call Bankswitch
-
-	ld de, .done
-	push de
-	jp [hl]
-.done
-
+	rst Bankswitch
+	call FarJump_hl
 	pop af
-	call Bankswitch
+	rst Bankswitch
 	ret
 
 GetPredefRegisters::

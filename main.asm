@@ -2198,7 +2198,6 @@ INCLUDE "engine/items/tm_prices.asm"
 INCLUDE "engine/multiply_divide.asm"
 INCLUDE "engine/give_pokemon.asm"
 INCLUDE "engine/battle/get_trainer_name.asm"
-INCLUDE "engine/random.asm"
 INCLUDE "engine/predefs.asm"
 
 SECTION "bank3E", ROMX,BANK[$3E]

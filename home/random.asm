@@ -1,12 +1,16 @@
 Random::
 ; Return a random number in a.
 ; For battles, use BattleRandom.
-	push hl
-	push de
 	push bc
-	callba Random_
+	ld a, [rDIV]
+	ld b, a
 	ld a, [hRandomAdd]
+	adc b
+	ld [hRandomAdd], a
+	ld a, [rDIV]
+	ld b, a
+	ld a, [hRandomSub]
+	sbc b
+	ld [hRandomSub], a
 	pop bc
-	pop de
-	pop hl
 	ret

@@ -105,7 +105,7 @@ callbs: MACRO
 
 callba: MACRO
 	rst StackFarCall
-	dab \1
+	dba \1
 	ENDM
 
 callab EQUS "callba"
@@ -119,7 +119,7 @@ callabd_ModifyPikachuHappiness EQUS "calladb_ModifyPikachuHappiness"
 
 jpba: MACRO
 	rst StackFarCall
-	dwb \1, $80 | BANK(\1)
+	dbw $80 | BANK(\1), \1
 	ENDM
 
 jpab EQUS "jpba"

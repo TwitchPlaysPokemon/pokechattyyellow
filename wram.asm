@@ -3494,8 +3494,8 @@ wSerialEnemyDataBlock:: ; d892
 wEnemyPartyCount:: ds 1     ; d89b
 wEnemyPartyMons::  ds PARTY_LENGTH + 1 ; d89c
 
-wWaterRate:: db ; d8a3
-wWaterMons:: db ; d8a4
+wWaterRate:: ds 1 ; d8a3
+wWaterMons:: ds 20 ; d8a4
 
 wMarkovChainBuffer:: ds $180
 
