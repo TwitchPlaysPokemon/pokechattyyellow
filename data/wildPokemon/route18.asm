@@ -1,14 +1,14 @@
 Route18Mons:
 	db $19
-	db 22, SPEAROW
-	db 22, DODUO
-	db 23, RATTATA
-	db 24, DODUO
-	db 24, RATTATA
-	db 26, DODUO
-	db 23, SPEAROW
-	db 24, FEAROW
-	db 25, RATICATE
-	db 26, RATICATE
+	db 34, FARFETCHD
+	db 34, DODUO
+	db 34, SPEAROW
+	db 33, PIDGEOTTO
+	db 36, FARFETCHD
+	db 36, FEAROW
+	db 35, PIDGEOTTO
+	db 36, FEAROW
+	db 36, DODRIO
+	db 37, PIDGEOT
 	db $00
 

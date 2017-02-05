@@ -6,9 +6,9 @@ Route11Mons:
 	db 15, DROWZEE
 	db 17, RATTATA
 	db 17, DROWZEE
-	db 18, PIDGEOTTO
 	db 20, PIDGEOTTO
+	db 20, RATICATE
 	db 19, DROWZEE
-	db 17, RATICATE
+	db 20, LICKITUNG
 	db $00
 

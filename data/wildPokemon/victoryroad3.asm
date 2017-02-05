@@ -1,14 +1,14 @@
 PlateauMons3:
 	db $0F
-	db 36, GEODUDE
-	db 44, GOLBAT
-	db 41, GEODUDE
 	db 49, ONIX
-	db 46, GEODUDE
-	db 41, GRAVELER
-	db 42, MACHOKE
-	db 45, MACHOKE
-	db 47, GRAVELER
-	db 47, GRAVELER
+	db 49, GRAVELER
+	db 49, MACHOKE
+	db 50, GOLBAT
+	db 51, KINGLER
+	db 51, LICKITUNG
+	db 51, ONIX
+	db 53, GOLEM
+	db 53, JYNX
+	db 53, MACHAMP
 	db $00
 

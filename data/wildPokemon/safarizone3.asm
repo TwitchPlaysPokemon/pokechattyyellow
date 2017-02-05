@@ -1,14 +1,14 @@
 ZoneMons3:
 	db $1E
-	db 29, NIDORAN_M
-	db 21, NIDORAN_F
-	db 22, EXEGGCUTE
-	db 21, TAUROS
-	db 32, NIDORINO
-	db 19, CUBONE
-	db 26, EXEGGCUTE
-	db 24, MAROWAK
-	db 25, PINSIR
-	db 27, TANGELA
+	db 34, NIDORINO
+	db 34, NIDORINA
+	db 36, EXEGGCUTE
+	db 35, TAUROS
+	db 34, NIDORINO
+	db 32, EEVEE
+	db 34, EXEGGCUTE
+	db 34, EEVEE
+	db 35, PINSIR
+	db 35, TANGELA
 	db $00
 

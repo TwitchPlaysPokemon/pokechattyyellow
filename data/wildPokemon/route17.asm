@@ -1,14 +1,14 @@
 Route17Mons:
 	db $19
-	db 26, DODUO
-	db 27, FEAROW
-	db 27, DODUO
-	db 28, DODUO
-	db 28, PONYTA
-	db 30, PONYTA
-	db 29, FEAROW
-	db 28, DODUO
-	db 32, PONYTA
-	db 29, DODRIO
+	db 28, WEEDLE
+	db 28, CATERPIE
+	db 30, KAKUNA
+	db 30, METAPOD
+	db 30, WEEDLE
+	db 30, CATERPIE
+	db 29, BEEDRILL
+	db 29, BUTTERFREE
+	db 31, BUTTERFREE
+	db 31, BEEDRILL
 	db $00
 

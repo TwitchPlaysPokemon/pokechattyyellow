@@ -1,14 +1,14 @@
 MansionMons3:
 	db $0A
-	db 40, RATTATA
-	db 40, RATICATE
-	db 32, GRIMER
-	db 35, GRIMER
-	db 43, RATTATA
-	db 43, RATICATE
-	db 38, GRIMER
-	db 38, GRIMER
-	db 38, MUK
-	db 41, MUK
+	db 46, GRIMER
+	db 46, GROWLITHE
+	db 46, KOFFING
+	db 46, PONYTA
+	db 52, DITTO
+	db 49, MUK
+	db 49, ARCANINE
+	db 49, WEEZING
+	db 47, MAGMAR
+	db 49, RAPIDASH
 	db $00
 

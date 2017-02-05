@@ -1,14 +1,14 @@
 Route16Mons:
 	db $19
-	db 22, SPEAROW
-	db 22, DODUO
-	db 23, RATTATA
-	db 24, DODUO
-	db 24, RATTATA
-	db 26, DODUO
-	db 23, SPEAROW
-	db 24, FEAROW
-	db 25, RATICATE
-	db 26, RATICATE
+	db 30, NIDORINO
+	db 30, NIDORINA
+	db 29, DODUO
+	db 31, DODUO
+	db 28, SPEAROW
+	db 30, FEAROW
+	db 33, DODRIO
+	db 32, FEAROW
+	db 34, NIDOQUEEN
+	db 34, NIDOKING
 	db $00
 

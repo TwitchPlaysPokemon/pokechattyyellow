@@ -1,14 +1,14 @@
 IslandMons1:
 	db $0F
-	db 18, ZUBAT
-	db 25, KRABBY
-	db 27, KRABBY
-	db 27, ZUBAT
-	db 36, ZUBAT
-	db 28, SLOWPOKE
-	db 30, SLOWPOKE
-	db 9, ZUBAT
-	db 27, GOLBAT
-	db 36, GOLBAT
+	db 42, ZUBAT
+	db 43, GOLBAT
+	db 42, POLIWHIRL
+	db 41, RHYHORN
+	db 43, RHYHORN
+	db 44, POLIWHIRL
+	db 45, RHYDON
+	db 45, POLIWRATH
+	db 47, POLIWRATH
+	db 47, RHYDON
 	db $00
 

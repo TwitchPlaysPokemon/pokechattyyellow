@@ -1,14 +1,14 @@
 PlateauMons2:
 	db $0A
-	db 31, GEODUDE
-	db 36, GEODUDE
-	db 41, GEODUDE
-	db 44, ZUBAT
-	db 39, GOLBAT
-	db 44, GRAVELER
-	db 45, ONIX
-	db 47, ONIX
-	db 39, MACHOKE
-	db 42, MACHOKE
+	db 49, ONIX
+	db 49, GRAVELER
+	db 49, MACHOKE
+	db 50, GOLBAT
+	db 51, KINGLER
+	db 51, LICKITUNG
+	db 51, ONIX
+	db 53, GOLEM
+	db 53, JYNX
+	db 53, MACHAMP
 	db $00
 

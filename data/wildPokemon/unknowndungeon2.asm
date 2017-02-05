@@ -7,7 +7,7 @@ DungeonMons2:
 	db 50, RHYHORN
 	db 60, DITTO
 	db 58, GLOOM
-	db 58, WEEPINBELL
+	db 58, GOLEM
 	db 60, RHYDON
 	db 58, RHYDON
 	db $00

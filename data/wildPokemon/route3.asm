@@ -5,10 +5,10 @@ Route3Mons:
 	db 9, MANKEY
 	db 10, SPEAROW
 	db 8, SANDSHREW
-	db 10, RATTATA
+	db 9, PSYDUCK
 	db 10, SANDSHREW
-	db 12, RATTATA
-	db 11, SPEAROW
+	db 9, PONYTA
 	db 12, SPEAROW
+	db 10, FARFETCHD
 	db $00
 
