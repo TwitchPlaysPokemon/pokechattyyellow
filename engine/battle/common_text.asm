@@ -12,9 +12,9 @@ PrintBeginningBattleText:
 	cp BATTLE_TYPE_PIKACHU
 	jr nz, .notPikachuBattle
 	callab IsPlayerPikachuAsleepInParty
-	ld e, $24
+	ldpikacry e, PikachuCry37
 	jr c, .asm_f4026
-	ld e, $a
+	ldpikacry e, PikachuCry11
 .asm_f4026
 	callab PlayPikachuSoundClip
 	jr .continue

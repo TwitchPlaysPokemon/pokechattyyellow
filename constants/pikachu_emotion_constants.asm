@@ -124,6 +124,8 @@ dpikacry: MACRO
 	db (\1_id - PikachuCriesPointerTable) / 3
 	endm
 
+NUM_PIKACHU_CRIES EQU 42
+
 ldpikacry: MACRO
 	ld \1, (\2_id - PikachuCriesPointerTable) / 3
 	ENDM

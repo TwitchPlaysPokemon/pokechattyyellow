@@ -182,7 +182,7 @@ StatusScreen:
 	callab IsThisPartymonStarterPikachu_Box
 	jr nc, .playRegularCry
 .playPikachuSoundClip
-	ld e, 16
+	ldpikacry e, PikachuCry17
 	callab PlayPikachuSoundClip
 	jr .continue
 .playRegularCry

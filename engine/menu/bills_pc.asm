@@ -239,7 +239,7 @@ BillsPCDeposit:
 	jp nc, BillsPCMenu
 	callab IsThisPartymonStarterPikachu_Party
 	jr nc, .asm_215c9
-	ld e, $1b
+	ldpikacry e, PikachuCry28
 	callab PlayPikachuSoundClip
 	jr .asm_215cf
 .asm_215c9
@@ -306,7 +306,7 @@ BillsPCWithdraw:
 	call GetPartyMonName
 	callab IsThisPartymonStarterPikachu_Box
 	jr nc, .asm_21660
-	ld e, $22
+	ldpikacry e, PikachuCry35
 	callab PlayPikachuSoundClip
 	jr .asm_21666
 .asm_21660
@@ -357,7 +357,7 @@ BillsPCRelease:
 	ld a, [wWhichPokemon]
 	ld hl, wBoxMonNicks
 	call GetPartyMonName
-	ld e, $27
+	ldpikacry e, PikachuCry40
 	callab PlayPikachuSoundClip
 	ld hl, PikachuUnhappyText
 	call PrintText

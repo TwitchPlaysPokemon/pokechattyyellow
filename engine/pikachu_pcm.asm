@@ -85,7 +85,7 @@ PlayPikachuSoundClip::
 	ei
 	ret
 
-PikachuCriesPointerTable:
+PikachuCriesPointerTable::
 ; format:
 ; db bank
 ; dw pointer to cry

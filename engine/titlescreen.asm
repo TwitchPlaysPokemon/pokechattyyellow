@@ -140,7 +140,7 @@ DisplayTitleScreen:
 	ld a, SCREEN_HEIGHT_PIXELS
 	ld [hWY], a
 	call Delay3
-	ld e, 0
+	ldpikacry e, PikachuCry1
 	call TitleScreen_PlayPikachuPCM
 	call WaitForSoundToFinish
 	call StopAllMusic
@@ -170,7 +170,7 @@ DisplayTitleScreen:
 	jr .titleScreenLoop
 
 .go_to_main_menu
-	ld e, $a
+	ldpikacry e, PikachuCry11
 	call TitleScreen_PlayPikachuPCM
 	call GBPalWhiteOutWithDelay3
 	call ClearSprites
@@ -201,9 +201,9 @@ DisplayTitleScreen:
 ; unreferenced
 	ld a, [wTitleScreenScene + 4]
 	inc a
-	cp $2a
+	cp NUM_PIKACHU_CRIES
 	jr c, .asm_4305
-	ld a, $f
+	pikacry PikachuCry16
 .asm_4305
 	ld [wTitleScreenScene + 4], a
 	ld e, a
