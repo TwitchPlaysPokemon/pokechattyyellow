@@ -175,7 +175,7 @@ MoveEnd:
 	move SUPER_FANG,   SUPER_FANG_EFFECT,            1, NORMAL,    90, 10 ; a2
 	move SLASH,        NO_ADDITIONAL_EFFECT,        70, NORMAL,   100, 20 ; a3
 	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,   100, 10 ; a4
-	move CHATTER,      CHATTER_EFFECT,               0, FLYING,   100, 20 ; new
+	move CHATTER,      CHATTER_EFFECT,              60, FLYING,   100, 20 ; new
 	move ROOST,        HEAL_EFFECT,                  0, FLYING,   100, 10 ; new
 	move FEATHERDANCE, ATTACK_DOWN2_EFFECT,          0, FLYING,   100, 15 ; new
 	move HYPER_VOICE,  NO_ADDITIONAL_EFFECT,        90, NORMAL,   100, 10 ; new
