@@ -103,13 +103,6 @@ DisplayTownMap:
 	ld [wWhichTownMapLocation], a
 	jp .townMapLoop
 
-.asm_70f87
-	ld a, [hJoy5]
-	and D_DOWN | D_UP
-	ret z
-	callab PlayPikachuSoundClip
-	ret
-
 INCLUDE "data/town_map_order.asm"
 
 TownMapCursor:
