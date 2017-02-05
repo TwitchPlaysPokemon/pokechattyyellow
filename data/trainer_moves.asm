@@ -1663,7 +1663,7 @@ SpecialTrainerMoves:
 	db 0
 
 	db COOLTRAINER_F,$5
-	db 1,1,DRILL
+	db 1,1,DRILL_PECK
 	db 1,2,FLY
 	db 1,3,TRI_ATTACK
 	db 1,4,AGILITY
