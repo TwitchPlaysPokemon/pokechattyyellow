@@ -355,10 +355,10 @@ TX_FAR: MACRO
 	dab \1
 	ENDM
 
-TX_PIKACHU EQUS "db $18"
+; TX_PIKACHU EQUS "db $18"
 
 TX_MARKOV: MACRO
-	db $19
+	db $18
 	dab \1
 	ENDM
 

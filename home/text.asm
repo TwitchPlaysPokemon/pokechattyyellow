@@ -637,7 +637,7 @@ TextCommand0D::
 ; BB = bank
 TextCommand17::
 IF !DEF(MARKOV)
-TextCommand19::
+TextCommand18::
 ENDC
 	pop hl
 	ld a, [hROMBank]
@@ -658,16 +658,11 @@ ENDC
 	ld [MBC5RomBank], a
 	jp NextTextCommand
 
-TextCommand18::
 IF DEF(MARKOV)
-TextCommand19::
+TextCommand18::
 	pop hl
 ; bc is the tilemap dest
 ; hl, on the stack, is the text source
-	dec hl
-	ld a, [hli]
-	sub $18 ; LUA_REQUEST_NPC or LUA_REQUEST_CHATOT
-	ld [hLSB], a
 	jr z, .chatot
 	ld a, [hli]
 	ld [hMarkovChain], a
@@ -699,22 +694,10 @@ TextCommand19::
 	ld a, [hMarkovROMBank]
 	and a
 	call nz, Bankswitch
-	ld a, LUA_REQUEST_CHAIN
-	ld [hLSC], a
-.loop
-	call DelayFrame
-	ld a, [hLSC]
-	and a ; cp LUA_REQUEST_COMPLETE
-	jr nz, .loop
+	ld a, LUA_REQUEST_NPC
+	call LuaRequest
 	pop af
 	call Bankswitch
-	ld a, LUA_REQUEST_NEXT_CHAR
-	ld [hLSC], a
-.loop2
-	call DelayFrame
-	ld a, [hLSC]
-	and a ; cp LUA_REQUEST_COMPLETE
-	jr nz, .loop2
 	pop hl
 	ld de, wMarkovChainBuffer
 	call PlaceString
@@ -748,4 +731,4 @@ TextCommandJumpTable::
 	dw TextCommand0B
 	dw TextCommand17
 	dw TextCommand18
-	dw TextCommand19
+	; dw TextCommand19
