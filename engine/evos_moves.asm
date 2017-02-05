@@ -169,7 +169,8 @@ Evolution_PartyMonLoop: ; loop over party mons
 	ld bc, MonBaseStatsEnd - MonBaseStats
 	call AddNTimes
 	ld de, wMonHeader
-	call CopyData
+	ld a, BANK(BaseStats)
+	call FarCopyData
 	ld a, [wd0b5]
 	ld [wMonHIndex], a
 	pop af
