@@ -577,6 +577,7 @@ Mon152_EvosMoves:
 ;Evolutions
 	db 0
 ;Learnset
+	db 1, PECK
 	db 5, GROWL
 	db 9, MIRROR_MOVE
 	db 13, SING
