@@ -5303,6 +5303,10 @@ ChatterPickMove:
 	ld [hl], a
 ; function used to reload move data for moves like Mirror Move and Metronome
 ReloadMoveData:
+	ld b, a
+	ld a, [de]
+	push af
+	ld a, b
 	ld [wd11e], a
 	dec a
 	ld hl, Moves
@@ -5312,7 +5316,10 @@ ReloadMoveData:
 	call FarCopyData ; copy the move's stats
 	call IncrementMovePP
 ; the follow two function calls are used to reload the move name
-	call GetMoveName
+	pop af
+	cp CHATTER
+	ld de, wMarkovChainBuffer
+	call nz, GetMoveName
 	call CopyStringToCF4B
 	ld a, $01
 	and a
