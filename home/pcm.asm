@@ -1,4 +1,4 @@
-IF DEF(MARKOV)
+IF 0 == 1 ; DEF(MARKOV)
 PlayPikachuPCM::
 	ld c, hROMBank & $ff
 	ld a, [$ff00+c]
@@ -82,7 +82,7 @@ PlayPikachuPCM::
 ENDC
 
 LoadNextSoundClipSample::
-IF DEF(MARKOV)
+IF 0 == 1 ; DEF(MARKOV)
 	ld a, b
 ELSE
 	ld a, d
@@ -91,7 +91,7 @@ ENDC
 	srl a
 	srl a
 	ld [rNR32], a
-IF DEF(MARKOV)
+IF 0 == 1 ; DEF(MARKOV)
 	sla b
 ELSE
 	sla d

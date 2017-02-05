@@ -1,5 +1,5 @@
 PlayPikachuSoundClip::
-IF DEF(MARKOV)
+IF 0 == 1 ; DEF(MARKOV)
 	ld a, e
 	add 2
 	ld [hLSC], a
