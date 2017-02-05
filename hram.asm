@@ -321,9 +321,6 @@ hMapTextPointerBackup EQU $FFEC
 
 hDidntFindAnyHiddenObject EQU $FFEE
 
-hHLBuffer EQU $FFEF
-hABuffer EQU $FFF2
-
 hLSB EQU $FFF0
 hLSC EQU $FFF1
 
@@ -344,6 +341,5 @@ hFlags_0xFFFA EQU $FFFA
 hFieldMoveMonMenuTopMenuItemX EQU $FFFB
 
 hLoadPikachuSpriteIntoTile4C EQU $FFFC
-hBuffer EQU $FFFD
 
 hGBC EQU $FFFE ; 0 if DMG, != 0 if GBC
