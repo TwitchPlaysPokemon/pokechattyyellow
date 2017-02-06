@@ -3037,7 +3037,7 @@ StopSprite::
 	call GetSpriteMovementByte1Pointer
 	ld [hl], STAY
 	call GetSpriteMovementByte2Pointer
-	ld [hl], a
+	ld [hl], STAY
 	pop hl
 	ret
 

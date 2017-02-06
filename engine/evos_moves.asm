@@ -382,78 +382,79 @@ LearnMoveFromLevelUp:
 	ld [wd11e], a
 	ret
 
-Func_3b079:
+; Check whether the species at wcf91 or any of its pre-evolved forms
+; can learn the move at wd11e.
+; Is this a primitive form of legality check for competitions?
+CanMonOrAnyPreEvolutionLegallyHaveThisMove:
 	ld a, [wcf91]
 	push af
-	call Func_3b0a2
-	jr c, .asm_3b09c
+	call CanMonLegallyHaveThisMove
+	jr c, .found
 
-	call Func_3b10f
-	jr nc, .asm_3b096
+	call GetPreEvolution
+	jr nc, .not_found
 
-	call Func_3b0a2
-	jr c, .asm_3b09c
+	call CanMonLegallyHaveThisMove
+	jr c, .found
 
-	call Func_3b10f
-	jr nc, .asm_3b096
+	call GetPreEvolution
+	jr nc, .not_found
 
-	call Func_3b0a2
-	jr c, .asm_3b09c
-.asm_3b096
+	call CanMonLegallyHaveThisMove
+	jr c, .found
+.not_found
 	pop af
 	ld [wcf91], a
 	and a
 	ret
-.asm_3b09c
+.found
 	pop af
 	ld [wcf91], a
 	scf
 	ret
 
-Func_3b0a2:
-; XXX what is wcf91 entering this function?
+CanMonLegallyHaveThisMove:
 	ld a, [wd11e]
 	ld [wMoveNum], a
 	predef CanLearnTM
 	ld a, c
 	and a
-	jr nz, .asm_3b0ec
-	ld hl, Pointer_3b0ee
+	jr nz, .carry
+	ld hl, .monsWithDisjointLevelZeroMovesets
 	ld a, [wcf91]
 	ld de, $1
 	call IsInArray
-	jr c, .asm_3b0d2
-	ld a, $ff
+	jr c, .skip_header_moves_check
+	ld a, -1
 	ld [wMonHGrowthRate], a
 	ld a, [wd11e]
 	ld hl, wMonHMoves
 	ld de, $1
 	call IsInArray
-	jr c, .asm_3b0ec
-.asm_3b0d2
+	jr c, .carry
+.skip_header_moves_check
 	ld a, [wd11e]
 	ld d, a
 	call GetMonLearnset
 .loop
 	ld a, [hli]
 	and a
-	jr z, .asm_3b0ea
+	jr z, .no_carry
 	ld b, a
 	ld a, [wCurEnemyLVL]
 	cp b
-	jr c, .asm_3b0ea
+	jr c, .no_carry
 	ld a, [hli]
 	cp d
-	jr z, .asm_3b0ec
-	jr .loop
-.asm_3b0ea
-	and a
-	ret
-.asm_3b0ec
+	jr nz, .loop
+.carry
 	scf
 	ret
+.no_carry
+	and a
+	ret
 
-Pointer_3b0ee:
+.monsWithDisjointLevelZeroMovesets:
 	db NIDOKING
 	db IVYSAUR
 	db EXEGGUTOR
@@ -488,9 +489,9 @@ Pointer_3b0ee:
 	db VICTREEBEL
 	db $ff
 
-Func_3b10f:
+GetPreEvolution:
 	ld c, $0
-.asm_3b111
+.loop
 	ld hl, EvosMovesPointerTable
 	ld b, $0
 	add hl, bc
@@ -498,30 +499,30 @@ Func_3b10f:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-.asm_3b11b
+.inner_loop
 	ld a, [hli]
 	and a
-	jr z, .asm_3b130
-	cp $2
-	jr nz, .asm_3b124
+	jr z, .next
+	cp EV_ITEM
+	jr nz, .not_by_item
 	inc hl
-.asm_3b124
+.not_by_item
 	inc hl
 	ld a, [wcf91]
 	cp [hl]
-	jr z, .asm_3b138
+	jr z, .got_it
 	inc hl
 	ld a, [hl]
 	and a
-	jr nz, .asm_3b11b
-.asm_3b130
+	jr nz, .inner_loop
+.next
 	inc c
 	ld a, c
 	cp VICTREEBEL
-	jr c, .asm_3b111
+	jr c, .loop
 	and a
 	ret
-.asm_3b138
+.got_it
 	inc c
 	ld a, c
 	ld [wcf91], a
