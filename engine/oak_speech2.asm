@@ -1,15 +1,15 @@
 ChoosePlayerName:
-	call OakSpeechSlidePicRight
-	ld de, DefaultNamesPlayer
-	call DisplayIntroNameTextBox
-	ld a, [wCurrentMenuItem]
-	and a
-	jr z, .customName
-	ld hl, DefaultNamesPlayerList
-	call GetDefaultName
-	ld de, wPlayerName
-	call OakSpeechSlidePicLeft
-	jr .done
+	; call OakSpeechSlidePicRight
+	; ld de, DefaultNamesPlayer
+	; call DisplayIntroNameTextBox
+	; ld a, [wCurrentMenuItem]
+	; and a
+	; jr z, .customName
+	; ld hl, DefaultNamesPlayerList
+	; call GetDefaultName
+	; ld de, wPlayerName
+	; call OakSpeechSlidePicLeft
+	; jr .done
 .customName
 	ld hl, wPlayerName
 	xor a ; NAME_PLAYER_SCREEN
@@ -32,17 +32,17 @@ YourNameIsText:
 	db "@"
 
 ChooseRivalName:
-	call OakSpeechSlidePicRight
-	ld de, DefaultNamesRival
-	call DisplayIntroNameTextBox
-	ld a, [wCurrentMenuItem]
-	and a
-	jr z, .customName
-	ld hl, DefaultNamesRivalList
-	call GetDefaultName
-	ld de, wRivalName
-	call OakSpeechSlidePicLeft
-	jr .done
+	; call OakSpeechSlidePicRight
+	; ld de, DefaultNamesRival
+	; call DisplayIntroNameTextBox
+	; ld a, [wCurrentMenuItem]
+	; and a
+	; jr z, .customName
+	; ld hl, DefaultNamesRivalList
+	; call GetDefaultName
+	; ld de, wRivalName
+	; call OakSpeechSlidePicLeft
+	; jr .done
 .customName
 	ld hl, wRivalName
 	ld a, NAME_RIVAL_SCREEN
