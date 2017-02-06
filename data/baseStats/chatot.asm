@@ -12,8 +12,8 @@ INCBIN "pic/ymon/chatot.pic", 0,1 ; 66, sprite dimensions
 dw ChatotPicFront
 dw ChatotPicBack
 ; attacks known at lvl 0
+db CHATTER
 db PECK
-db 0
 db 0
 db 0
 db 3 ; growth rate
