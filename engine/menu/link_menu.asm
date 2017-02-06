@@ -312,21 +312,21 @@ PetitCup::
 	ld a, [hl]
 	ld [wcf91], a
 	push hl
-	callab Func_3b10f
+	callab GetPreEvolution
 	pop hl
 	jp c, asm_f56ad
 	inc hl
 	ld a, [hl]
 	ld [wcf91], a
 	push hl
-	callab Func_3b10f
+	callab GetPreEvolution
 	pop hl
 	jp c, asm_f56ad
 	inc hl
 	ld a, [hl]
 	ld [wcf91], a
 	push hl
-	callab Func_3b10f
+	callab GetPreEvolution
 	pop hl
 	jp c, asm_f56ad
 	dec hl
