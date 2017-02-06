@@ -3254,8 +3254,10 @@ wSeafoamIslands5CurScript:: ; d667
 	ds 1
 wRoute18GateCurScript:: ; d668
 	ds 1
+wBattleTentCurScript:: ; d669
+	ds 1
 
-	ds 78
+	ds 77
 wGameProgressFlagsEnd:: ; d6b7
 
 	ds 56
@@ -3584,6 +3586,8 @@ wLastOBP0:: ds 1 ; def2
 wLastOBP1:: ds 1 ; def3
 wBattleAnimationObjectFlags:: ds 1 ; def4
 wBGPPalsBuffer:: ds NUM_ACTIVE_PALS * PAL_SIZE ; def5
+
+wBTOrder:: ds 2
 
 SECTION "Stack", WRAMX[$dfff], BANK[1]
 wStack:: ; dfff
