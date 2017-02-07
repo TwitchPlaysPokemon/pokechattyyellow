@@ -355,12 +355,15 @@ TX_FAR: MACRO
 	dab \1
 	ENDM
 
-; TX_PIKACHU EQUS "db $18"
-
+IF DEF(MARKOV)
 TX_MARKOV: MACRO
+; 17AAAABB (use text at BB:AAAA to seed external markov chain)
 	db $18
 	dab \1
 	ENDM
+ELSE
+TX_MARKOV EQUS "TX_FAR"
+ENDC
 
 TX_VENDING_MACHINE         EQUS "db $f5"
 TX_CABLE_CLUB_RECEPTIONIST EQUS "db $f6"

@@ -204,7 +204,7 @@ SubBCD::
 	dec c
 	jr nz, .sub
 	jr nc, .done
-	ld a, $00
+	ld a, BANK(wSpriteDataStart)
 	inc de
 .fill
 	ld [de], a

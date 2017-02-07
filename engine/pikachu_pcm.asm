@@ -1,13 +1,8 @@
 PlayPikachuSoundClip::
 IF 0 == 1 ; DEF(MARKOV)
 	ld a, e
-	add 2
-	ld [hLSC], a
-.waitForPCM
-	call DelayFrame
-	ld a, [hLSC]
-	and a
-	jr nz, .waitForPCM
+	add LUA_REQUEST_CHATOT
+	call LuaRequest
 ELSE
 	ld d, $0
 	ld hl, PikachuCriesPointerTable

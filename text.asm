@@ -2635,6 +2635,12 @@ _RepelWoreOffText::
 	line "wore off."
 	done
 
+_SelectButtonText::
+	text "Words of OQT:"
+	line "This may be use-"
+	cont "ful sometime!"
+	done
+
 _PokemartBuyingGreetingText::
 	text "Take your time."
 	done

@@ -3425,12 +3425,14 @@ MirrorMoveCheck:
 	call MetronomePickMove
 	jp CheckIfPlayerNeedsToChargeUp ; Go back to damage calculation for the move picked by Metronome
 .chatterCheck
+IF DEF(MARKOV)
 	cp CHATTER_EFFECT
 	jr nz, .next
 	call ChatterPickMove
 	jp CheckIfPlayerNeedsToChargeUp
 
 .next
+ENDC
 	ld a, [wPlayerMoveEffect]
 	ld hl, ResidualEffects2
 	ld de, 1
@@ -5278,7 +5280,6 @@ MetronomePickMove:
 	xor a
 	ld [wAnimationType], a
 	ld a, METRONOME
-	call PlayMoveAnimation ; play Metronome's animation
 	call AnimateMoveAndGetMoveAddrsForChatterAndMetronome
 ; loop to pick a random number in the range [1, $a5) to be the move used by Metronome
 .pickMoveLoop
@@ -5290,6 +5291,7 @@ MetronomePickMove:
 	cp METRONOME
 	jr z, .pickMoveLoop
 	ld [hl], a
+IF DEF(MARKOV)
 	jr ReloadMoveData
 
 ; function that picks a Lua-specified move for chatter
@@ -5301,6 +5303,7 @@ ChatterPickMove:
 	ld a, LUA_REQUEST_MOVE
 	call LuaRequest
 	ld [hl], a
+ENDC
 ; function used to reload move data for moves like Mirror Move and Metronome
 ReloadMoveData:
 	ld b, a
@@ -5903,11 +5906,13 @@ EnemyCheckIfMirrorMoveEffect:
 	call MetronomePickMove
 	jp CheckIfEnemyNeedsToChargeUp
 .chatterCheck
+IF DEF(MARKOV)
 	cp CHATTER_EFFECT
 	jr nz, .notChatterEffect
 	call ChatterPickMove
 	jp CheckIfPlayerNeedsToChargeUp
 .notChatterEffect
+ENDC
 	ld a, [wEnemyMoveEffect]
 	ld hl, ResidualEffects2
 	ld de, $1

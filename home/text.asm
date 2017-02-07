@@ -647,62 +647,14 @@ ENDC
 	ld a, [hli]
 	ld d, a
 	ld a, [hli]
-	call Bankswitch
+	rst Bankswitch
 	push hl
 	ld l, e
 	ld h, d
 	call TextCommandProcessor
 	pop hl
 	pop af
-	ld [hROMBank], a
-	ld [MBC5RomBank], a
-	jp NextTextCommand
-
-IF DEF(MARKOV)
-TextCommand18::
-	pop hl
-; bc is the tilemap dest
-; hl, on the stack, is the text source
-	jr z, .chatot
-	ld a, [hli]
-	ld [hMarkovChain], a
-	ld a, [hli]
-	ld [hMarkovChain + 1], a
-	ld a, [hli]
-	ld [hMarkovROMBank], a
-	jr .okay
-
-.chatot
-	xor a
-	ld [hMarkovChain], a
-	ld [hMarkovChain + 1], a
-	ld [hMarkovROMBank], a
-.okay
-	push hl
-	push bc
-	ld bc, $180
-	ld hl, wMarkovChainBuffer
-	xor a
-.fill
-	ld [hli], a
-	dec c
-	jr nz, .fill
-	dec b
-	jr nz, .fill
-	ld a, [hROMBank]
-	push af
-	ld a, [hMarkovROMBank]
-	and a
-	call nz, Bankswitch
-	ld a, LUA_REQUEST_NPC
-	call LuaRequest
-	pop af
-	call Bankswitch
-	pop hl
-	ld de, wMarkovChainBuffer
-	call PlaceString
-ENDC
-	pop hl
+	rst Bankswitch
 	jp NextTextCommand
 
 TextCommandJumpTable::
@@ -730,5 +682,41 @@ TextCommandJumpTable::
 	dw TextCommand0B
 	dw TextCommand0B
 	dw TextCommand17
+IF DEF(MARKOV)
 	dw TextCommand18
-	; dw TextCommand19
+
+TextCommand18::
+	pop hl
+; bc is the tilemap dest
+; hl, on the stack, is the text source
+	ld a, [hli]
+	ld [hMarkovChain], a
+	ld a, [hli]
+	ld [hMarkovChain + 1], a
+	ld a, [hli]
+	ld [hMarkovROMBank], a
+	push hl
+	push bc
+	ld bc, $180
+	ld hl, wMarkovChainBuffer
+	xor a
+.fill
+	ld [hli], a
+	dec c
+	jr nz, .fill
+	dec b
+	jr nz, .fill
+	ld a, [hROMBank]
+	push af
+	ld a, [hMarkovROMBank]
+	rst Bankswitch
+	ld a, LUA_REQUEST_NPC
+	call LuaRequest
+	pop af
+	rst Bankswitch
+	pop hl
+	ld de, wMarkovChainBuffer
+	call PlaceString
+	pop hl
+	jp NextTextCommand
+ENDC

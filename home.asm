@@ -1119,6 +1119,8 @@ DisplayTextID::
 	jp z, DisplayPlayerBlackedOutText
 	cp TEXT_REPEL_WORE_OFF
 	jp z, DisplayRepelWoreOffText
+	cp TEXT_SELECT_BUTTON
+	jp z, DisplaySelectButtonText
 	ld a, [wNumSprites]
 	ld e, a
 	ld a, [hSpriteIndexOrTextID] ; sprite ID
@@ -1312,6 +1314,15 @@ DisplayRepelWoreOffText::
 
 RepelWoreOffText::
 	TX_FAR _RepelWoreOffText
+	db "@"
+
+DisplaySelectButtonText::
+	ld hl, SelectButtonText
+	call PrintText
+	jp AfterDisplayingTextID
+
+SelectButtonText::
+	TX_FAR _SelectButtonText
 	db "@"
 
 DisplayPikachuEmotion::

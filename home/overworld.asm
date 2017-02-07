@@ -80,6 +80,13 @@ OverworldLoopLessDelay::
 	ld [hSpriteIndexOrTextID], a ; start menu text ID
 	jp .displayDialogue
 .startButtonNotPressed
+	bit 2, a ; select button
+	jr z, .selectButtonNotPressed
+; if SELECT is pressed
+	ld a, TEXT_SELECT_BUTTON
+	ld [hSpriteIndexOrTextID], a ; words of oqt
+	jp .displayDialogue
+.selectButtonNotPressed
 	bit 0, a ; A button
 	jp z, .checkIfDownButtonIsPressed
 ; if A is pressed
