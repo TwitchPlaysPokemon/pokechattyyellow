@@ -636,9 +636,6 @@ TextCommand0D::
 ; AAAA = address of text commands
 ; BB = bank
 TextCommand17::
-IF !DEF(MARKOV)
-TextCommand18::
-ENDC
 	pop hl
 	ld a, [hROMBank]
 	push af
@@ -686,6 +683,9 @@ IF DEF(MARKOV)
 	dw TextCommand18
 
 TextCommand18::
+	ld a, [wPartyCount]
+	and a
+	jp z, TextCommand17
 	pop hl
 ; bc is the tilemap dest
 ; hl, on the stack, is the text source
