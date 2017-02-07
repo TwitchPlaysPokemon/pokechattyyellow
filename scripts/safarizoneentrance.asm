@@ -142,7 +142,7 @@ SafariZoneEntranceTextPointers:
 	dw .SafariZoneEntranceText6
 
 .SafariZoneEntranceText1
-	TX_FAR _SafariZoneEntranceText1
+	TX_MARKOV _SafariZoneEntranceText1
 	db "@"
 
 .SafariZoneEntranceText4
@@ -151,7 +151,7 @@ SafariZoneEntranceTextPointers:
 	jp TextScriptEnd
 
 .SafariZoneEntranceText5
-	TX_FAR SafariZoneEntranceText_9e814
+	TX_MARKOV SafariZoneEntranceText_9e814
 	TX_ASM
 	call YesNoChoice
 	ld a, [wCurrentMenuItem]
@@ -184,15 +184,15 @@ SafariZoneEntranceTextPointers:
 	jp TextScriptEnd
 
 .SafariZoneEntranceText_753bb
-	TX_FAR _SafariZoneEntranceText_753bb
+	TX_MARKOV _SafariZoneEntranceText_753bb
 	db "@"
 
 .SafariZoneEntranceText_753c0
-	TX_FAR _SafariZoneEntranceText_753c0
+	TX_MARKOV _SafariZoneEntranceText_753c0
 	db "@"
 
 .SafariZoneEntranceText6
-	TX_FAR _SafariZoneEntranceText_753c5
+	TX_MARKOV _SafariZoneEntranceText_753c5
 	db "@"
 
 .SafariZoneEntranceText2

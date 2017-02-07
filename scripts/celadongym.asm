@@ -184,29 +184,29 @@ CeladonGymText1:
 	jp TextScriptEnd
 
 CeladonGymText_48a5e:
-	TX_FAR _CeladonGymText_48a5e
+	TX_MARKOV _CeladonGymText_48a5e
 	db "@"
 
 CeladonGymText_48a63:
-	TX_FAR _CeladonGymText_48a63
+	TX_MARKOV _CeladonGymText_48a63
 	db "@"
 
 CeladonGymText_48a68:
-	TX_FAR _CeladonGymText_48a68
+	TX_MARKOV _CeladonGymText_48a68
 	db "@"
 
 CeladonGymText9:
-	TX_FAR _CeladonGymText9
+	TX_MARKOV _CeladonGymText9
 	db "@"
 
 TM21Text:
-	TX_FAR _ReceivedTM21Text
+	TX_MARKOV _ReceivedTM21Text
 	TX_SFX_ITEM
-	TX_FAR _TM21ExplanationText
+	TX_MARKOV _TM21ExplanationText
 	db "@"
 
 TM21NoRoomText:
-	TX_FAR _TM21NoRoomText
+	TX_MARKOV _TM21NoRoomText
 	db "@"
 
 CeladonGymText2:
@@ -216,15 +216,15 @@ CeladonGymText2:
 	jp TextScriptEnd
 
 CeladonGymBattleText2:
-	TX_FAR _CeladonGymBattleText2
+	TX_MARKOV _CeladonGymBattleText2
 	db "@"
 
 CeladonGymEndBattleText2:
-	TX_FAR _CeladonGymEndBattleText2
+	TX_MARKOV _CeladonGymEndBattleText2
 	db "@"
 
 CeladonGymAfterBattleText2:
-	TX_FAR _CeladonGymAfterBattleText2
+	TX_MARKOV _CeladonGymAfterBattleText2
 	db "@"
 
 CeladonGymText3:
@@ -234,15 +234,15 @@ CeladonGymText3:
 	jp TextScriptEnd
 
 CeladonGymBattleText3:
-	TX_FAR _CeladonGymBattleText3
+	TX_MARKOV _CeladonGymBattleText3
 	db "@"
 
 CeladonGymEndBattleText3:
-	TX_FAR _CeladonGymEndBattleText3
+	TX_MARKOV _CeladonGymEndBattleText3
 	db "@"
 
 CeladonGymAfterBattleText3:
-	TX_FAR _CeladonGymAfterBattleText3
+	TX_MARKOV _CeladonGymAfterBattleText3
 	db "@"
 
 CeladonGymText4:
@@ -252,15 +252,15 @@ CeladonGymText4:
 	jp TextScriptEnd
 
 CeladonGymBattleText4:
-	TX_FAR _CeladonGymBattleText4
+	TX_MARKOV _CeladonGymBattleText4
 	db "@"
 
 CeladonGymEndBattleText4:
-	TX_FAR _CeladonGymEndBattleText4
+	TX_MARKOV _CeladonGymEndBattleText4
 	db "@"
 
 CeladonGymAfterBattleText4:
-	TX_FAR _CeladonGymAfterBattleText4
+	TX_MARKOV _CeladonGymAfterBattleText4
 	db "@"
 
 CeladonGymText5:
@@ -270,15 +270,15 @@ CeladonGymText5:
 	jp TextScriptEnd
 
 CeladonGymBattleText5:
-	TX_FAR _CeladonGymBattleText5
+	TX_MARKOV _CeladonGymBattleText5
 	db "@"
 
 CeladonGymEndBattleText5:
-	TX_FAR _CeladonGymEndBattleText5
+	TX_MARKOV _CeladonGymEndBattleText5
 	db "@"
 
 CeladonGymAfterBattleText5:
-	TX_FAR _CeladonGymAfterBattleText5
+	TX_MARKOV _CeladonGymAfterBattleText5
 	db "@"
 
 CeladonGymText6:
@@ -288,15 +288,15 @@ CeladonGymText6:
 	jp TextScriptEnd
 
 CeladonGymBattleText6:
-	TX_FAR _CeladonGymBattleText6
+	TX_MARKOV _CeladonGymBattleText6
 	db "@"
 
 CeladonGymEndBattleText6:
-	TX_FAR _CeladonGymEndBattleText6
+	TX_MARKOV _CeladonGymEndBattleText6
 	db "@"
 
 CeladonGymAfterBattleText6:
-	TX_FAR _CeladonGymAfterBattleText6
+	TX_MARKOV _CeladonGymAfterBattleText6
 	db "@"
 
 CeladonGymText7:
@@ -306,15 +306,15 @@ CeladonGymText7:
 	jp TextScriptEnd
 
 CeladonGymBattleText7:
-	TX_FAR _CeladonGymBattleText7
+	TX_MARKOV _CeladonGymBattleText7
 	db "@"
 
 CeladonGymEndBattleText7:
-	TX_FAR _CeladonGymEndBattleText7
+	TX_MARKOV _CeladonGymEndBattleText7
 	db "@"
 
 CeladonGymAfterBattleText7:
-	TX_FAR _CeladonGymAfterBattleText7
+	TX_MARKOV _CeladonGymAfterBattleText7
 	db "@"
 
 CeladonGymText8:
@@ -324,13 +324,13 @@ CeladonGymText8:
 	jp TextScriptEnd
 
 CeladonGymBattleText8:
-	TX_FAR _CeladonGymBattleText8
+	TX_MARKOV _CeladonGymBattleText8
 	db "@"
 
 CeladonGymEndBattleText8:
-	TX_FAR _CeladonGymEndBattleText8
+	TX_MARKOV _CeladonGymEndBattleText8
 	db "@"
 
 CeladonGymAfterBattleText8:
-	TX_FAR _CeladonGymAfterBattleText8
+	TX_MARKOV _CeladonGymAfterBattleText8
 	db "@"

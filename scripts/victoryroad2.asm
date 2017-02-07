@@ -178,7 +178,7 @@ MoltresText:
 	jp TextScriptEnd
 
 MoltresBattleText:
-	TX_FAR _MoltresBattleText
+	TX_MARKOV _MoltresBattleText
 	TX_ASM
 	ld a, MOLTRES
 	call PlayCry
@@ -186,61 +186,61 @@ MoltresBattleText:
 	jp TextScriptEnd
 
 VictoryRoad2BattleText1:
-	TX_FAR _VictoryRoad2BattleText1
+	TX_MARKOV _VictoryRoad2BattleText1
 	db "@"
 
 VictoryRoad2EndBattleText1:
-	TX_FAR _VictoryRoad2EndBattleText1
+	TX_MARKOV _VictoryRoad2EndBattleText1
 	db "@"
 
 VictoryRoad2AfterBattleText1:
-	TX_FAR _VictoryRoad2AfterBattleText1
+	TX_MARKOV _VictoryRoad2AfterBattleText1
 	db "@"
 
 VictoryRoad2BattleText2:
-	TX_FAR _VictoryRoad2BattleText2
+	TX_MARKOV _VictoryRoad2BattleText2
 	db "@"
 
 VictoryRoad2EndBattleText2:
-	TX_FAR _VictoryRoad2EndBattleText2
+	TX_MARKOV _VictoryRoad2EndBattleText2
 	db "@"
 
 VictoryRoad2AfterBattleText2:
-	TX_FAR _VictoryRoad2AfterBattleText2
+	TX_MARKOV _VictoryRoad2AfterBattleText2
 	db "@"
 
 VictoryRoad2BattleText3:
-	TX_FAR _VictoryRoad2BattleText3
+	TX_MARKOV _VictoryRoad2BattleText3
 	db "@"
 
 VictoryRoad2EndBattleText3:
-	TX_FAR _VictoryRoad2EndBattleText3
+	TX_MARKOV _VictoryRoad2EndBattleText3
 	db "@"
 
 VictoryRoad2AfterBattleText3:
-	TX_FAR _VictoryRoad2AfterBattleText3
+	TX_MARKOV _VictoryRoad2AfterBattleText3
 	db "@"
 
 VictoryRoad2BattleText4:
-	TX_FAR _VictoryRoad2BattleText4
+	TX_MARKOV _VictoryRoad2BattleText4
 	db "@"
 
 VictoryRoad2EndBattleText4:
-	TX_FAR _VictoryRoad2EndBattleText4
+	TX_MARKOV _VictoryRoad2EndBattleText4
 	db "@"
 
 VictoryRoad2AfterBattleText4:
-	TX_FAR _VictoryRoad2AfterBattleText4
+	TX_MARKOV _VictoryRoad2AfterBattleText4
 	db "@"
 
 VictoryRoad2BattleText5:
-	TX_FAR _VictoryRoad2BattleText5
+	TX_MARKOV _VictoryRoad2BattleText5
 	db "@"
 
 VictoryRoad2EndBattleText5:
-	TX_FAR _VictoryRoad2EndBattleText5
+	TX_MARKOV _VictoryRoad2EndBattleText5
 	db "@"
 
 VictoryRoad2AfterBattleText5:
-	TX_FAR _VictoryRoad2AfterBattleText5
+	TX_MARKOV _VictoryRoad2AfterBattleText5
 	db "@"

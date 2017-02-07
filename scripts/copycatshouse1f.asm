@@ -7,15 +7,15 @@ CopycatsHouse1FTextPointers:
 	dw CopycatsHouse1FText3
 
 CopycatsHouse1FText1:
-	TX_FAR _CopycatsHouse1FText1
+	TX_MARKOV _CopycatsHouse1FText1
 	db "@"
 
 CopycatsHouse1FText2:
-	TX_FAR _CopycatsHouse1FText2
+	TX_MARKOV _CopycatsHouse1FText2
 	db "@"
 
 CopycatsHouse1FText3:
-	TX_FAR _CopycatsHouse1FText3
+	TX_MARKOV _CopycatsHouse1FText3
 	TX_ASM
 	ld a, CHANSEY
 	call PlayCry

@@ -97,7 +97,7 @@ PokemonTower5TrainerHeader3:
 	db $ff
 
 PokemonTower5Text1:
-	TX_FAR _PokemonTower5Text1
+	TX_MARKOV _PokemonTower5Text1
 	db "@"
 
 PokemonTower5Text2:
@@ -107,15 +107,15 @@ PokemonTower5Text2:
 	jp TextScriptEnd
 
 PokemonTower5BattleText1:
-	TX_FAR _PokemonTower5BattleText1
+	TX_MARKOV _PokemonTower5BattleText1
 	db "@"
 
 PokemonTower5EndBattleText1:
-	TX_FAR _PokemonTower5EndBattleText1
+	TX_MARKOV _PokemonTower5EndBattleText1
 	db "@"
 
 PokemonTower5AfterBattleText1:
-	TX_FAR _PokemonTower5AfterBattleText1
+	TX_MARKOV _PokemonTower5AfterBattleText1
 	db "@"
 
 PokemonTower5Text3:
@@ -125,15 +125,15 @@ PokemonTower5Text3:
 	jp TextScriptEnd
 
 PokemonTower5BattleText2:
-	TX_FAR _PokemonTower5BattleText2
+	TX_MARKOV _PokemonTower5BattleText2
 	db "@"
 
 PokemonTower5EndBattleText2:
-	TX_FAR _PokemonTower5EndBattleText2
+	TX_MARKOV _PokemonTower5EndBattleText2
 	db "@"
 
 PokemonTower5AfterBattleText2:
-	TX_FAR _PokemonTower5AfterBattleText2
+	TX_MARKOV _PokemonTower5AfterBattleText2
 	db "@"
 
 PokemonTower5Text4:
@@ -143,15 +143,15 @@ PokemonTower5Text4:
 	jp TextScriptEnd
 
 PokemonTower5BattleText3:
-	TX_FAR _PokemonTower5BattleText3
+	TX_MARKOV _PokemonTower5BattleText3
 	db "@"
 
 PokemonTower5EndBattleText3:
-	TX_FAR _PokemonTower5EndBattleText3
+	TX_MARKOV _PokemonTower5EndBattleText3
 	db "@"
 
 PokemonTower5AfterBattleText3:
-	TX_FAR _PokemonTower5AfterBattleText3
+	TX_MARKOV _PokemonTower5AfterBattleText3
 	db "@"
 
 PokemonTower5Text5:
@@ -161,17 +161,17 @@ PokemonTower5Text5:
 	jp TextScriptEnd
 
 PokemonTower5BattleText4:
-	TX_FAR _PokemonTower5BattleText4
+	TX_MARKOV _PokemonTower5BattleText4
 	db "@"
 
 PokemonTower5EndBattleText4:
-	TX_FAR _PokemonTower5EndBattleText4
+	TX_MARKOV _PokemonTower5EndBattleText4
 	db "@"
 
 PokemonTower5AfterBattleText4:
-	TX_FAR _PokemonTower5AfterBattleText4
+	TX_MARKOV _PokemonTower5AfterBattleText4
 	db "@"
 
 PokemonTower5Text7:
-	TX_FAR _PokemonTower5Text7
+	TX_MARKOV _PokemonTower5Text7
 	db "@"

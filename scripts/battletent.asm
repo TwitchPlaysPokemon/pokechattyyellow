@@ -768,7 +768,7 @@ BattleTentLost:
 	prompt
 
 BattleTentSeeYouAgain:
-	TX_FAR _PokemonCenterFarewellText
+	TX_MARKOV _PokemonCenterFarewellText
 	db "@"
 
 BattleTentGuy2_Init:

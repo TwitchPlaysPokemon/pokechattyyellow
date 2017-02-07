@@ -17,7 +17,7 @@ PewterHealNurseText:
 	TX_POKECENTER_NURSE
 
 PewterPokecenterText2:
-	TX_FAR _PewterPokecenterText2
+	TX_MARKOV _PewterPokecenterText2
 	db "@"
 
 PewterJigglypuffText:

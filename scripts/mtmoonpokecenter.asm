@@ -15,11 +15,11 @@ MtMoonHealNurseText:
 	TX_POKECENTER_NURSE
 
 MtMoonPokecenterText2:
-	TX_FAR _MtMoonPokecenterText1
+	TX_MARKOV _MtMoonPokecenterText1
 	db "@"
 
 MtMoonPokecenterText3:
-	TX_FAR _MtMoonPokecenterText3
+	TX_MARKOV _MtMoonPokecenterText3
 	db "@"
 
 MagikarpSalesmanText:
@@ -28,7 +28,7 @@ MagikarpSalesmanText:
 	jp TextScriptEnd
 
 MtMoonPokecenterText5:
-	TX_FAR _MtMoonPokecenterText5
+	TX_MARKOV _MtMoonPokecenterText5
 	db "@"
 
 MtMoonTradeNurseText:

@@ -83,19 +83,19 @@ Lab4Text1:
 	jr .asm_75d93
 
 Lab4Text_75dc6:
-	TX_FAR _Lab4Text_75dc6
+	TX_MARKOV _Lab4Text_75dc6
 	db "@"
 
 Lab4Text_75dcb:
-	TX_FAR _Lab4Text_75dcb
+	TX_MARKOV _Lab4Text_75dcb
 	db "@"
 
 Lab4Text_75dd0:
-	TX_FAR _Lab4Text_75dd0
+	TX_MARKOV _Lab4Text_75dd0
 	db "@"
 
 Lab4Text_75dd5:
-	TX_FAR _Lab4Text_75dd5
+	TX_MARKOV _Lab4Text_75dd5
 	db "@"
 
 Lab4Text2:

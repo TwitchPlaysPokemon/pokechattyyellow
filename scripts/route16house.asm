@@ -25,20 +25,20 @@ Route16HouseText1:
 	jp TextScriptEnd
 
 Route16HouseText3:
-	TX_FAR _Route16HouseText3
+	TX_MARKOV _Route16HouseText3
 	db "@"
 
 ReceivedHM02Text:
-	TX_FAR _ReceivedHM02Text
+	TX_MARKOV _ReceivedHM02Text
 	TX_SFX_KEY_ITEM
 	db "@"
 
 HM02ExplanationText:
-	TX_FAR _HM02ExplanationText
+	TX_MARKOV _HM02ExplanationText
 	db "@"
 
 HM02NoRoomText:
-	TX_FAR _HM02NoRoomText
+	TX_MARKOV _HM02NoRoomText
 	db "@"
 
 Route16HouseText2:
@@ -51,5 +51,5 @@ Route16HouseText2:
 	jp TextScriptEnd
 
 Route16HouseText_1e652:
-	TX_FAR _Route16HouseText_1e652
+	TX_MARKOV _Route16HouseText_1e652
 	db "@"

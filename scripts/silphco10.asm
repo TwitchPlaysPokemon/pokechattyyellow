@@ -91,33 +91,33 @@ SilphCo10Text3:
 	jp TextScriptEnd
 
 SilphCo10Text_5a1d3:
-	TX_FAR _SilphCo10Text_5a1d3
+	TX_MARKOV _SilphCo10Text_5a1d3
 	db "@"
 
 SilphCo10Text_5a1d8:
-	TX_FAR _SilphCo10Text_5a1d8
+	TX_MARKOV _SilphCo10Text_5a1d8
 	db "@"
 
 SilphCo10BattleText1:
-	TX_FAR _SilphCo10BattleText1
+	TX_MARKOV _SilphCo10BattleText1
 	db "@"
 
 SilphCo10EndBattleText1:
-	TX_FAR _SilphCo10EndBattleText1
+	TX_MARKOV _SilphCo10EndBattleText1
 	db "@"
 
 SilphCo10AfterBattleText1:
-	TX_FAR _SilphCo10AfterBattleText1
+	TX_MARKOV _SilphCo10AfterBattleText1
 	db "@"
 
 SilphCo10BattleText2:
-	TX_FAR _SilphCo10BattleText2
+	TX_MARKOV _SilphCo10BattleText2
 	db "@"
 
 SilphCo10EndBattleText2:
-	TX_FAR _SilphCo10EndBattleText2
+	TX_MARKOV _SilphCo10EndBattleText2
 	db "@"
 
 SilphCo10AfterBattleText2:
-	TX_FAR _SilphCo10AfterBattleText2
+	TX_MARKOV _SilphCo10AfterBattleText2
 	db "@"

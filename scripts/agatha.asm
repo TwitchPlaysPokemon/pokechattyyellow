@@ -140,17 +140,17 @@ AgathaText1:
 	jp TextScriptEnd
 
 AgathaBeforeBattleText:
-	TX_FAR _AgathaBeforeBattleText
+	TX_MARKOV _AgathaBeforeBattleText
 	db "@"
 
 AgathaEndBattleText:
-	TX_FAR _AgathaEndBattleText
+	TX_MARKOV _AgathaEndBattleText
 	db "@"
 
 AgathaAfterBattleText:
-	TX_FAR _AgathaAfterBattleText
+	TX_MARKOV _AgathaAfterBattleText
 	db "@"
 
 AgathaDontRunAwayText:
-	TX_FAR _AgathaDontRunAwayText
+	TX_MARKOV _AgathaDontRunAwayText
 	db "@"

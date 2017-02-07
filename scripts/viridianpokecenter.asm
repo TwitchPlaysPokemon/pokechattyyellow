@@ -13,11 +13,11 @@ ViridianHealNurseText:
 	TX_POKECENTER_NURSE
 
 ViridianPokeCenterText2:
-	TX_FAR _ViridianPokeCenterText2
+	TX_MARKOV _ViridianPokeCenterText2
 	db "@"
 
 ViridianPokeCenterText3:
-	TX_FAR _ViridianPokeCenterText3
+	TX_MARKOV _ViridianPokeCenterText3
 	db "@"
 
 ViridianTradeNurseText:

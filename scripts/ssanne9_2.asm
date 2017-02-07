@@ -4,7 +4,7 @@ Func_f2570:
 	ret
 
 SSAnne9Text_f2577:
-	TX_FAR _SSAnne9Text_61c1f
+	TX_MARKOV _SSAnne9Text_61c1f
 	db "@"
 
 Func_f257c:
@@ -13,7 +13,7 @@ Func_f257c:
 	ret
 
 SSAnne9Text_f2583:
-	TX_FAR _SSAnne9Text_61c2e
+	TX_MARKOV _SSAnne9Text_61c2e
 	db "@"
 
 Func_f2588:
@@ -22,7 +22,7 @@ Func_f2588:
 	ret
 
 SSAnne9Text_f258f:
-	TX_FAR _SSAnne9Text_61c3d
+	TX_MARKOV _SSAnne9Text_61c3d
 	db "@"
 
 Func_f2594:
@@ -31,5 +31,5 @@ Func_f2594:
 	ret
 
 SSAnne9Text_f259b:
-	TX_FAR _SSAnne9Text_61c4c
+	TX_MARKOV _SSAnne9Text_61c4c
 	db "@"

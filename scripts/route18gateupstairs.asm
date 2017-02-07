@@ -19,7 +19,7 @@ Route18GateUpstairsText2:
 	jp GateUpstairsScript_PrintIfFacingUp
 
 Route18GateUpstairsText_49993:
-	TX_FAR _Route18GateUpstairsText_49993
+	TX_MARKOV _Route18GateUpstairsText_49993
 	db "@"
 
 Route18GateUpstairsText3:
@@ -28,5 +28,5 @@ Route18GateUpstairsText3:
 	jp GateUpstairsScript_PrintIfFacingUp
 
 Route18GateUpstairsText_4999f:
-	TX_FAR _Route18GateUpstairsText_4999f
+	TX_MARKOV _Route18GateUpstairsText_4999f
 	db "@"

@@ -85,15 +85,15 @@ Mansion1Text1:
 	jp TextScriptEnd
 
 Mansion1BattleText2:
-	TX_FAR _Mansion1BattleText2
+	TX_MARKOV _Mansion1BattleText2
 	db "@"
 
 Mansion1EndBattleText2:
-	TX_FAR _Mansion1EndBattleText2
+	TX_MARKOV _Mansion1EndBattleText2
 	db "@"
 
 Mansion1AfterBattleText2:
-	TX_FAR _Mansion1AfterBattleText2
+	TX_MARKOV _Mansion1AfterBattleText2
 	db "@"
 
 Mansion1Text4:
@@ -123,13 +123,13 @@ Mansion1Text4:
 	jp TextScriptEnd
 
 MansionSwitchText:
-	TX_FAR _MansionSwitchText
+	TX_MARKOV _MansionSwitchText
 	db "@"
 
 MansionSwitchPressedText:
-	TX_FAR _MansionSwitchPressedText
+	TX_MARKOV _MansionSwitchPressedText
 	db "@"
 
 MansionSwitchNotPressedText:
-	TX_FAR _MansionSwitchNotPressedText
+	TX_MARKOV _MansionSwitchNotPressedText
 	db "@"

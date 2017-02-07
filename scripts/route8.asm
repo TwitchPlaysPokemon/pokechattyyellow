@@ -115,15 +115,15 @@ Route8Text1:
 	jp TextScriptEnd
 
 Route8BattleText1:
-	TX_FAR _Route8BattleText1
+	TX_MARKOV _Route8BattleText1
 	db "@"
 
 Route8EndBattleText1:
-	TX_FAR _Route8EndBattleText1
+	TX_MARKOV _Route8EndBattleText1
 	db "@"
 
 Route8AfterBattleText1:
-	TX_FAR _Route8AfterBattleText1
+	TX_MARKOV _Route8AfterBattleText1
 	db "@"
 
 Route8Text2:
@@ -133,15 +133,15 @@ Route8Text2:
 	jp TextScriptEnd
 
 Route8BattleText2:
-	TX_FAR _Route8BattleText2
+	TX_MARKOV _Route8BattleText2
 	db "@"
 
 Route8EndBattleText2:
-	TX_FAR _Route8EndBattleText2
+	TX_MARKOV _Route8EndBattleText2
 	db "@"
 
 Route8AfterBattleText2:
-	TX_FAR _Route8AfterBattleText2
+	TX_MARKOV _Route8AfterBattleText2
 	db "@"
 
 Route8Text3:
@@ -151,15 +151,15 @@ Route8Text3:
 	jp TextScriptEnd
 
 Route8BattleText3:
-	TX_FAR _Route8BattleText3
+	TX_MARKOV _Route8BattleText3
 	db "@"
 
 Route8EndBattleText3:
-	TX_FAR _Route8EndBattleText3
+	TX_MARKOV _Route8EndBattleText3
 	db "@"
 
 Route8AfterBattleText3:
-	TX_FAR _Route8AfterBattleText3
+	TX_MARKOV _Route8AfterBattleText3
 	db "@"
 
 Route8Text4:
@@ -169,15 +169,15 @@ Route8Text4:
 	jp TextScriptEnd
 
 Route8BattleText4:
-	TX_FAR _Route8BattleText4
+	TX_MARKOV _Route8BattleText4
 	db "@"
 
 Route8EndBattleText4:
-	TX_FAR _Route8EndBattleText4
+	TX_MARKOV _Route8EndBattleText4
 	db "@"
 
 Route8AfterBattleText4:
-	TX_FAR _Route8AfterBattleText4
+	TX_MARKOV _Route8AfterBattleText4
 	db "@"
 
 Route8Text5:
@@ -187,15 +187,15 @@ Route8Text5:
 	jp TextScriptEnd
 
 Route8BattleText5:
-	TX_FAR _Route8BattleText5
+	TX_MARKOV _Route8BattleText5
 	db "@"
 
 Route8EndBattleText5:
-	TX_FAR _Route8EndBattleText5
+	TX_MARKOV _Route8EndBattleText5
 	db "@"
 
 Route8AfterBattleText5:
-	TX_FAR _Route8AfterBattleText5
+	TX_MARKOV _Route8AfterBattleText5
 	db "@"
 
 Route8Text6:
@@ -205,15 +205,15 @@ Route8Text6:
 	jp TextScriptEnd
 
 Route8BattleText6:
-	TX_FAR _Route8BattleText6
+	TX_MARKOV _Route8BattleText6
 	db "@"
 
 Route8EndBattleText6:
-	TX_FAR _Route8EndBattleText6
+	TX_MARKOV _Route8EndBattleText6
 	db "@"
 
 Route8AfterBattleText6:
-	TX_FAR _Route8AfterBattleText6
+	TX_MARKOV _Route8AfterBattleText6
 	db "@"
 
 Route8Text7:
@@ -223,15 +223,15 @@ Route8Text7:
 	jp TextScriptEnd
 
 Route8BattleText7:
-	TX_FAR _Route8BattleText7
+	TX_MARKOV _Route8BattleText7
 	db "@"
 
 Route8EndBattleText7:
-	TX_FAR _Route8EndBattleText7
+	TX_MARKOV _Route8EndBattleText7
 	db "@"
 
 Route8AfterBattleText7:
-	TX_FAR _Route8AfterBattleText7
+	TX_MARKOV _Route8AfterBattleText7
 	db "@"
 
 Route8Text8:
@@ -241,15 +241,15 @@ Route8Text8:
 	jp TextScriptEnd
 
 Route8BattleText8:
-	TX_FAR _Route8BattleText8
+	TX_MARKOV _Route8BattleText8
 	db "@"
 
 Route8EndBattleText8:
-	TX_FAR _Route8EndBattleText8
+	TX_MARKOV _Route8EndBattleText8
 	db "@"
 
 Route8AfterBattleText8:
-	TX_FAR _Route8AfterBattleText8
+	TX_MARKOV _Route8AfterBattleText8
 	db "@"
 
 Route8Text9:
@@ -259,17 +259,17 @@ Route8Text9:
 	jp TextScriptEnd
 
 Route8BattleText9:
-	TX_FAR _Route8BattleText9
+	TX_MARKOV _Route8BattleText9
 	db "@"
 
 Route8EndBattleText9:
-	TX_FAR _Route8EndBattleText9
+	TX_MARKOV _Route8EndBattleText9
 	db "@"
 
 Route8AfterBattleText9:
-	TX_FAR _Route8AfterBattleText9
+	TX_MARKOV _Route8AfterBattleText9
 	db "@"
 
 Route8Text10:
-	TX_FAR _Route8Text10
+	TX_MARKOV _Route8Text10
 	db "@"

@@ -137,29 +137,29 @@ CeruleanGymText1:
 	jp TextScriptEnd
 
 CeruleanGymText_5c7be:
-	TX_FAR _CeruleanGymText_5c7be
+	TX_MARKOV _CeruleanGymText_5c7be
 	db "@"
 
 CeruleanGymText_5c7c3:
-	TX_FAR _CeruleanGymText_5c7c3
+	TX_MARKOV _CeruleanGymText_5c7c3
 	db "@"
 
 CeruleanGymText5:
-	TX_FAR _CeruleanGymText_5c7c8
+	TX_MARKOV _CeruleanGymText_5c7c8
 	db "@"
 
 CeruleanGymText6:
 ReceivedTM11Text:
-	TX_FAR _ReceivedTM11Text
+	TX_MARKOV _ReceivedTM11Text
 	TX_SFX_ITEM
 	db "@"
 
 CeruleanGymText7:
-	TX_FAR _CeruleanGymText_5c7d3
+	TX_MARKOV _CeruleanGymText_5c7d3
 	db "@"
 
 CeruleanGymText_5c7d8:
-	TX_FAR _CeruleanGymText_5c7d8
+	TX_MARKOV _CeruleanGymText_5c7d8
 	db "@"
 
 CeruleanGymText2:
@@ -169,15 +169,15 @@ CeruleanGymText2:
 	jp TextScriptEnd
 
 CeruleanGymBattleText1:
-	TX_FAR _CeruleanGymBattleText1
+	TX_MARKOV _CeruleanGymBattleText1
 	db "@"
 
 CeruleanGymEndBattleText1:
-	TX_FAR _CeruleanGymEndBattleText1
+	TX_MARKOV _CeruleanGymEndBattleText1
 	db "@"
 
 CeruleanGymAfterBattleText1:
-	TX_FAR _CeruleanGymAfterBattleText1
+	TX_MARKOV _CeruleanGymAfterBattleText1
 	db "@"
 
 CeruleanGymText3:
@@ -187,15 +187,15 @@ CeruleanGymText3:
 	jp TextScriptEnd
 
 CeruleanGymBattleText2:
-	TX_FAR _CeruleanGymBattleText2
+	TX_MARKOV _CeruleanGymBattleText2
 	db "@"
 
 CeruleanGymEndBattleText2:
-	TX_FAR _CeruleanGymEndBattleText2
+	TX_MARKOV _CeruleanGymEndBattleText2
 	db "@"
 
 CeruleanGymAfterBattleText2:
-	TX_FAR _CeruleanGymAfterBattleText2
+	TX_MARKOV _CeruleanGymAfterBattleText2
 	db "@"
 
 CeruleanGymText4:
@@ -212,9 +212,9 @@ CeruleanGymText4:
 	jp TextScriptEnd
 
 CeruleanGymText_5c82a:
-	TX_FAR _CeruleanGymText_5c82a
+	TX_MARKOV _CeruleanGymText_5c82a
 	db "@"
 
 CeruleanGymText_5c82f:
-	TX_FAR _CeruleanGymText_5c82f
+	TX_MARKOV _CeruleanGymText_5c82f
 	db "@"

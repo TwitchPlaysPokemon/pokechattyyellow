@@ -13,11 +13,11 @@ FuchsiaHealNurseText:
 	TX_POKECENTER_NURSE
 
 FuchsiaPokecenterText2:
-	TX_FAR _FuchsiaPokecenterText1
+	TX_MARKOV _FuchsiaPokecenterText1
 	db "@"
 
 FuchsiaPokecenterText3:
-	TX_FAR _FuchsiaPokecenterText3
+	TX_MARKOV _FuchsiaPokecenterText3
 	db "@"
 
 FuchsiaTradeNurseText:

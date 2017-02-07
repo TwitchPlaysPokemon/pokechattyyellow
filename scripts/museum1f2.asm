@@ -106,39 +106,39 @@ Func_f1c1b:
 	ret
 
 Museum1FText_f1cfd:
-	TX_FAR _Museum1FText_5c21a
+	TX_MARKOV _Museum1FText_5c21a
 	db "@"
 
 Museum1FText_f1d02:
-	TX_FAR _Museum1FText_5c21f
+	TX_MARKOV _Museum1FText_5c21f
 	db "@"
 
 Museum1FText_f1d07:
-	TX_FAR _Museum1FText_5c224
+	TX_MARKOV _Museum1FText_5c224
 	db "@"
 
 Museum1FText_f1d0c:
-	TX_FAR _Museum1FText_5c229
+	TX_MARKOV _Museum1FText_5c229
 	db "@"
 
 Museum1FText_f1d11:
-	TX_FAR _Museum1FText_5c22e
+	TX_MARKOV _Museum1FText_5c22e
 	db "@"
 
 Museum1FText_f1d16:
-	TX_FAR _Museum1FText_5c233
+	TX_MARKOV _Museum1FText_5c233
 	db "@"
 
 Museum1FText_f1d1b:
-	TX_FAR _Museum1FText_5c238
+	TX_MARKOV _Museum1FText_5c238
 	db "@"
 
 Museum1FText_f1d20:
-	TX_FAR _Museum1FText_5c23d
+	TX_MARKOV _Museum1FText_5c23d
 	db "@"
 
 Museum1FText_f1d25:
-	TX_FAR _Museum1FText_5c242
+	TX_MARKOV _Museum1FText_5c242
 	db "@"
 
 Func_f1d2a:
@@ -147,7 +147,7 @@ Func_f1d2a:
 	ret
 
 Museum1FText_f1d31:
-	TX_FAR _Museum1FText_5c251
+	TX_MARKOV _Museum1FText_5c251
 	db "@"
 
 Func_f1d36:
@@ -176,20 +176,20 @@ Func_f1d36:
 	ret
 
 Museum1FText_f1d6b:
-	TX_FAR _Museum1FText_5c28e
+	TX_MARKOV _Museum1FText_5c28e
 	db "@"
 
 Museum1FText_f1d70:
-	TX_FAR _ReceivedOldAmberText
+	TX_MARKOV _ReceivedOldAmberText
 	TX_SFX_ITEM
 	db "@"
 
 Museum1FText_f1d76:
-	TX_FAR _Museum1FText_5c299
+	TX_MARKOV _Museum1FText_5c299
 	db "@"
 
 Museum1FText_f1d7b:
-	TX_FAR _Museum1FText_5c29e
+	TX_MARKOV _Museum1FText_5c29e
 	db "@"
 
 Func_f1d80:
@@ -198,7 +198,7 @@ Func_f1d80:
 	ret
 
 Museum1FText_f1d87:
-	TX_FAR _Museum1FText_5c2ad
+	TX_MARKOV _Museum1FText_5c2ad
 	db "@"
 
 Func_f1d8c:
@@ -207,5 +207,5 @@ Func_f1d8c:
 	ret
 
 Museum1FText_f1d93:
-	TX_FAR _Museum1FText_5c2bc
+	TX_MARKOV _Museum1FText_5c2bc
 	db "@"

@@ -35,23 +35,23 @@ VermilionHouse2Text1:
 	jp TextScriptEnd
 
 VermilionHouse2Text_560b1:
-	TX_FAR _VermilionHouse2Text_560b1
+	TX_MARKOV _VermilionHouse2Text_560b1
 	db "@"
 
 VermilionHouse2Text_560b6:
-	TX_FAR _VermilionHouse2Text_560b6
+	TX_MARKOV _VermilionHouse2Text_560b6
 	TX_SFX_ITEM
-	TX_FAR _VermilionHouse2Text_560bb
+	TX_MARKOV _VermilionHouse2Text_560bb
 	db "@"
 
 VermilionHouse2Text_560c0:
-	TX_FAR _VermilionHouse2Text_560c0
+	TX_MARKOV _VermilionHouse2Text_560c0
 	db "@"
 
 VermilionHouse2Text_560c5:
-	TX_FAR _VermilionHouse2Text_560c5
+	TX_MARKOV _VermilionHouse2Text_560c5
 	db "@"
 
 VermilionHouse2Text_560ca:
-	TX_FAR _VermilionHouse2Text_560ca
+	TX_MARKOV _VermilionHouse2Text_560ca
 	db "@"

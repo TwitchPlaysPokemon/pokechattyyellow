@@ -135,11 +135,11 @@ Route22Script1:
 	ret
 
 Route22RivalDefeatedText1:
-	TX_FAR _Route22RivalDefeatedText1
+	TX_MARKOV _Route22RivalDefeatedText1
 	db "@"
 
 Route22Text_511bc:
-	TX_FAR _Route22Text_511bc
+	TX_MARKOV _Route22Text_511bc
 	db "@"
 
 Route22Script2:
@@ -288,11 +288,11 @@ Route22Script4:
 	ret
 
 Route22RivalDefeatedText2:
-	TX_FAR _Route22RivalDefeatedText2
+	TX_MARKOV _Route22RivalDefeatedText2
 	db "@"
 
 Route22Text_511d0:
-	TX_FAR _Route22Text_511d0
+	TX_MARKOV _Route22Text_511d0
 	db "@"
 
 Route22Script5:

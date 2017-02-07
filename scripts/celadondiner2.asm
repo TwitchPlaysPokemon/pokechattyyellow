@@ -21,18 +21,18 @@ Func_f1f31:
 	ret
 
 CeladonDinerText_491a7:
-	TX_FAR _CeladonDinerText_491a7
+	TX_MARKOV _CeladonDinerText_491a7
 	db "@"
 
 ReceivedCoinCaseText:
-	TX_FAR _ReceivedCoinCaseText
+	TX_MARKOV _ReceivedCoinCaseText
 	TX_SFX_KEY_ITEM
 	db "@"
 
 CoinCaseNoRoomText:
-	TX_FAR _CoinCaseNoRoomText
+	TX_MARKOV _CoinCaseNoRoomText
 	db "@"
 
 CeladonDinerText_491b7:
-	TX_FAR _CeladonDinerText_491b7
+	TX_MARKOV _CeladonDinerText_491b7
 	db "@"

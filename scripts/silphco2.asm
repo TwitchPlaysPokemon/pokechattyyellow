@@ -157,20 +157,20 @@ SilphCo2Text1:
 	jp TextScriptEnd
 
 SilphCo2Text_59ded:
-	TX_FAR _SilphCo2Text_59ded
+	TX_MARKOV _SilphCo2Text_59ded
 	db "@"
 
 ReceivedTM36Text:
-	TX_FAR _ReceivedTM36Text
+	TX_MARKOV _ReceivedTM36Text
 	TX_SFX_ITEM
 	db "@"
 
 TM36ExplanationText:
-	TX_FAR _TM36ExplanationText
+	TX_MARKOV _TM36ExplanationText
 	db "@"
 
 TM36NoRoomText:
-	TX_FAR _TM36NoRoomText
+	TX_MARKOV _TM36NoRoomText
 	db "@"
 
 SilphCo2Text2:
@@ -198,49 +198,49 @@ SilphCo2Text5:
 	jp TextScriptEnd
 
 SilphCo2BattleText1:
-	TX_FAR _SilphCo2BattleText1
+	TX_MARKOV _SilphCo2BattleText1
 	db "@"
 
 SilphCo2EndBattleText1:
-	TX_FAR _SilphCo2EndBattleText1
+	TX_MARKOV _SilphCo2EndBattleText1
 	db "@"
 
 SilphCo2AfterBattleText1:
-	TX_FAR _SilphCo2AfterBattleText1
+	TX_MARKOV _SilphCo2AfterBattleText1
 	db "@"
 
 SilphCo2BattleText2:
-	TX_FAR _SilphCo2BattleText2
+	TX_MARKOV _SilphCo2BattleText2
 	db "@"
 
 SilphCo2EndBattleText2:
-	TX_FAR _SilphCo2EndBattleText2
+	TX_MARKOV _SilphCo2EndBattleText2
 	db "@"
 
 SilphCo2AfterBattleText2:
-	TX_FAR _SilphCo2AfterBattleText2
+	TX_MARKOV _SilphCo2AfterBattleText2
 	db "@"
 
 SilphCo2BattleText3:
-	TX_FAR _SilphCo2BattleText3
+	TX_MARKOV _SilphCo2BattleText3
 	db "@"
 
 SilphCo2EndBattleText3:
-	TX_FAR _SilphCo2EndBattleText3
+	TX_MARKOV _SilphCo2EndBattleText3
 	db "@"
 
 SilphCo2AfterBattleText3:
-	TX_FAR _SilphCo2AfterBattleText3
+	TX_MARKOV _SilphCo2AfterBattleText3
 	db "@"
 
 SilphCo2BattleText4:
-	TX_FAR _SilphCo2BattleText4
+	TX_MARKOV _SilphCo2BattleText4
 	db "@"
 
 SilphCo2EndBattleText4:
-	TX_FAR _SilphCo2EndBattleText4
+	TX_MARKOV _SilphCo2EndBattleText4
 	db "@"
 
 SilphCo2AfterBattleText4:
-	TX_FAR _SilphCo2AfterBattleText4
+	TX_MARKOV _SilphCo2AfterBattleText4
 	db "@"

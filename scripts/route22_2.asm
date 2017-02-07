@@ -12,11 +12,11 @@ Func_f1b27:
 	ret
 
 Route22RivalBeforeBattleText1:
-	TX_FAR _Route22RivalBeforeBattleText1
+	TX_MARKOV _Route22RivalBeforeBattleText1
 	db "@"
 
 Route22RivalAfterBattleText1:
-	TX_FAR _Route22RivalAfterBattleText1
+	TX_MARKOV _Route22RivalAfterBattleText1
 	db "@"
 
 Func_f1b47:
@@ -33,11 +33,11 @@ Func_f1b47:
 	ret
 
 Route22RivalBeforeBattleText2:
-	TX_FAR _Route22RivalBeforeBattleText2
+	TX_MARKOV _Route22RivalBeforeBattleText2
 	db "@"
 
 Route22RivalAfterBattleText2:
-	TX_FAR _Route22RivalAfterBattleText2
+	TX_MARKOV _Route22RivalAfterBattleText2
 	db "@"
 
 Func_f1b67:
@@ -46,5 +46,5 @@ Func_f1b67:
 	ret
 
 Route22FrontGateText_3c:
-	TX_FAR _Route22FrontGateText
+	TX_MARKOV _Route22FrontGateText
 	db "@"

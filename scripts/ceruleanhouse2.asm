@@ -55,15 +55,15 @@ BadgeItemList:
 	db $8, BOULDERBADGE,CASCADEBADGE,THUNDERBADGE,RAINBOWBADGE,SOULBADGE,MARSHBADGE,VOLCANOBADGE,EARTHBADGE,$FF
 
 CeruleanHouse2Text_74e77:
-	TX_FAR _CeruleanHouse2Text_74e77
+	TX_MARKOV _CeruleanHouse2Text_74e77
 	db "@"
 
 CeruleanHouse2Text_74e7c:
-	TX_FAR _CeruleanHouse2Text_74e7c
+	TX_MARKOV _CeruleanHouse2Text_74e7c
 	db "@"
 
 CeruleanHouse2Text_74e81:
-	TX_FAR _CeruleanHouse2Text_74e81
+	TX_MARKOV _CeruleanHouse2Text_74e81
 	db "@"
 
 TextPointers_74e86:
@@ -77,33 +77,33 @@ TextPointers_74e86:
 	dw CeruleanHouse2Text_74eb9
 
 CeruleanHouse2Text_74e96:
-	TX_FAR _CeruleanHouse2Text_74e96
+	TX_MARKOV _CeruleanHouse2Text_74e96
 	db "@"
 
 CeruleanHouse2Text_74e9b:
-	TX_FAR _CeruleanHouse2Text_74e9b
+	TX_MARKOV _CeruleanHouse2Text_74e9b
 	db "@"
 
 CeruleanHouse2Text_74ea0:
-	TX_FAR _CeruleanHouse2Text_74ea0
+	TX_MARKOV _CeruleanHouse2Text_74ea0
 	db "@"
 
 CeruleanHouse2Text_74ea5:
-	TX_FAR _CeruleanHouse2Text_74ea5
+	TX_MARKOV _CeruleanHouse2Text_74ea5
 	db "@"
 
 CeruleanHouse2Text_74eaa:
-	TX_FAR _CeruleanHouse2Text_74eaa
+	TX_MARKOV _CeruleanHouse2Text_74eaa
 	db "@"
 
 CeruleanHouse2Text_74eaf:
-	TX_FAR _CeruleanHouse2Text_74eaf
+	TX_MARKOV _CeruleanHouse2Text_74eaf
 	db "@"
 
 CeruleanHouse2Text_74eb4:
-	TX_FAR _CeruleanHouse2Text_74eb4
+	TX_MARKOV _CeruleanHouse2Text_74eb4
 	db "@"
 
 CeruleanHouse2Text_74eb9:
-	TX_FAR _CeruleanHouse2Text_74eb9
+	TX_MARKOV _CeruleanHouse2Text_74eb9
 	db "@"

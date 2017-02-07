@@ -4,7 +4,7 @@ Func_f1ef3:
 	ret
 
 CeladonMansion3Text_f1efa:
-	TX_FAR _CeladonMansion3Text5
+	TX_MARKOV _CeladonMansion3Text5
 	db "@"
 
 Func_f1eff:
@@ -13,7 +13,7 @@ Func_f1eff:
 	ret
 
 CeladonMansion3Text_f1f06:
-	TX_FAR _CeladonMansion3Text6
+	TX_MARKOV _CeladonMansion3Text6
 	db "@"
 
 Func_f1f0b:
@@ -22,7 +22,7 @@ Func_f1f0b:
 	ret
 
 CeladonMansion3Text_f1f12:
-	TX_FAR _CeladonMansion3Text7
+	TX_MARKOV _CeladonMansion3Text7
 	db "@"
 
 Func_f1f17:
@@ -31,5 +31,5 @@ Func_f1f17:
 	ret
 
 CeladonMansion3Text_f1f1e:
-	TX_FAR _CeladonMansion3Text8
+	TX_MARKOV _CeladonMansion3Text8
 	db "@"

@@ -42,7 +42,7 @@ SSAnne7Text1:
 	jp TextScriptEnd
 
 SSAnne7RubText:
-	TX_FAR _SSAnne7RubText
+	TX_MARKOV _SSAnne7RubText
 	TX_ASM
 	ld a, [wAudioROMBank]
 	cp AUDIO_3
@@ -66,26 +66,26 @@ SSAnne7RubText:
 	jp TextScriptEnd
 
 ReceivingHM01Text:
-	TX_FAR _ReceivingHM01Text
+	TX_MARKOV _ReceivingHM01Text
 	db "@"
 
 ReceivedHM01Text:
-	TX_FAR _ReceivedHM01Text
+	TX_MARKOV _ReceivedHM01Text
 	TX_SFX_KEY_ITEM
 	db "@"
 
 SSAnne7Text_61932:
-	TX_FAR _SSAnne7Text_61932
+	TX_MARKOV _SSAnne7Text_61932
 	db "@"
 
 HM01NoRoomText:
-	TX_FAR _HM01NoRoomText
+	TX_MARKOV _HM01NoRoomText
 	db "@"
 
 SSAnne7Text2:
-	TX_FAR _SSAnne7Text2
+	TX_MARKOV _SSAnne7Text2
 	db "@"
 
 SSAnne7Text3:
-	TX_FAR _SSAnne7Text3
+	TX_MARKOV _SSAnne7Text3
 	db "@"

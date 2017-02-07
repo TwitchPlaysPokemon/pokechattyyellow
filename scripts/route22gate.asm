@@ -78,7 +78,7 @@ Route22GateText1:
 	jp TextScriptEnd
 
 Route22GateText_1e704:
-	TX_FAR _Route22GateText_1e704
+	TX_MARKOV _Route22GateText_1e704
 	TX_ASM
 	ld a, SFX_DENIED
 	call PlaySoundWaitForCurrent
@@ -87,10 +87,10 @@ Route22GateText_1e704:
 	ret
 
 Route22GateText_1e715:
-	TX_FAR _Route22GateText_1e715
+	TX_MARKOV _Route22GateText_1e715
 	db "@"
 
 Route22GateText_1e71a:
-	TX_FAR _Route22GateText_1e71a
+	TX_MARKOV _Route22GateText_1e71a
 	TX_SFX_ITEM
 	db "@"

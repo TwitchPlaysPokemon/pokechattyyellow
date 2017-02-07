@@ -13,11 +13,11 @@ CinnabarHealNurseText:
 	TX_POKECENTER_NURSE
 
 CinnabarPokecenterText2:
-	TX_FAR _CinnabarPokecenterText2
+	TX_MARKOV _CinnabarPokecenterText2
 	db "@"
 
 CinnabarPokecenterText3:
-	TX_FAR _CinnabarPokecenterText3
+	TX_MARKOV _CinnabarPokecenterText3
 	db "@"
 
 CinnabarTradeNurseText:

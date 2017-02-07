@@ -126,89 +126,89 @@ RockTunnel1TalkToTrainer:
 	jp TextScriptEnd
 
 RockTunnel1BattleText1:
-	TX_FAR _RockTunnel1BattleText1
+	TX_MARKOV _RockTunnel1BattleText1
 	db "@"
 
 RockTunnel1EndBattleText1:
-	TX_FAR _RockTunnel1EndBattleText1
+	TX_MARKOV _RockTunnel1EndBattleText1
 	db "@"
 
 RockTunnel1AfterBattleText1:
-	TX_FAR _RockTunnel1AfterBattleText1
+	TX_MARKOV _RockTunnel1AfterBattleText1
 	db "@"
 
 RockTunnel1BattleText2:
-	TX_FAR _RockTunnel1BattleText2
+	TX_MARKOV _RockTunnel1BattleText2
 	db "@"
 
 RockTunnel1EndBattleText2:
-	TX_FAR _RockTunnel1EndBattleText2
+	TX_MARKOV _RockTunnel1EndBattleText2
 	db "@"
 
 RockTunnel1AfterBattleText2:
-	TX_FAR _RockTunnel1AfterBattleText2
+	TX_MARKOV _RockTunnel1AfterBattleText2
 	db "@"
 
 RockTunnel1BattleText3:
-	TX_FAR _RockTunnel1BattleText3
+	TX_MARKOV _RockTunnel1BattleText3
 	db "@"
 
 RockTunnel1EndBattleText3:
-	TX_FAR _RockTunnel1EndBattleText3
+	TX_MARKOV _RockTunnel1EndBattleText3
 	db "@"
 
 RockTunnel1AfterBattleText3:
-	TX_FAR _RockTunnel1AfterBattleText3
+	TX_MARKOV _RockTunnel1AfterBattleText3
 	db "@"
 
 RockTunnel1BattleText4:
-	TX_FAR _RockTunnel1BattleText4
+	TX_MARKOV _RockTunnel1BattleText4
 	db "@"
 
 RockTunnel1EndBattleText4:
-	TX_FAR _RockTunnel1EndBattleText4
+	TX_MARKOV _RockTunnel1EndBattleText4
 	db "@"
 
 RockTunnel1AfterBattleText4:
-	TX_FAR _RockTunnel1AfterBattleText4
+	TX_MARKOV _RockTunnel1AfterBattleText4
 	db "@"
 
 RockTunnel1BattleText5:
-	TX_FAR _RockTunnel1BattleText5
+	TX_MARKOV _RockTunnel1BattleText5
 	db "@"
 
 RockTunnel1EndBattleText5:
-	TX_FAR _RockTunnel1EndBattleText5
+	TX_MARKOV _RockTunnel1EndBattleText5
 	db "@"
 
 RockTunnel1AfterBattleText5:
-	TX_FAR _RockTunnel1AfterBattleText5
+	TX_MARKOV _RockTunnel1AfterBattleText5
 	db "@"
 
 RockTunnel1BattleText6:
-	TX_FAR _RockTunnel1BattleText6
+	TX_MARKOV _RockTunnel1BattleText6
 	db "@"
 
 RockTunnel1EndBattleText6:
-	TX_FAR _RockTunnel1EndBattleText6
+	TX_MARKOV _RockTunnel1EndBattleText6
 	db "@"
 
 RockTunnel1AfterBattleText6:
-	TX_FAR _RockTunnel1AfterBattleText6
+	TX_MARKOV _RockTunnel1AfterBattleText6
 	db "@"
 
 RockTunnel1BattleText7:
-	TX_FAR _RockTunnel1BattleText7
+	TX_MARKOV _RockTunnel1BattleText7
 	db "@"
 
 RockTunnel1EndBattleText7:
-	TX_FAR _RockTunnel1EndBattleText7
+	TX_MARKOV _RockTunnel1EndBattleText7
 	db "@"
 
 RockTunnel1AfterBattleText7:
-	TX_FAR _RockTunnel1AfterBattleText7
+	TX_MARKOV _RockTunnel1AfterBattleText7
 	db "@"
 
 RockTunnel1Text8:
-	TX_FAR _RockTunnel1Text8
+	TX_MARKOV _RockTunnel1Text8
 	db "@"

@@ -30,20 +30,20 @@ Route12GateUpstairsText1:
 	jp TextScriptEnd
 
 TM39PreReceiveText:
-	TX_FAR _TM39PreReceiveText
+	TX_MARKOV _TM39PreReceiveText
 	db "@"
 
 ReceivedTM39Text:
-	TX_FAR _ReceivedTM39Text
+	TX_MARKOV _ReceivedTM39Text
 	TX_SFX_ITEM
 	db "@"
 
 TM39ExplanationText:
-	TX_FAR _TM39ExplanationText
+	TX_MARKOV _TM39ExplanationText
 	db "@"
 
 TM39NoRoomText:
-	TX_FAR _TM39NoRoomText
+	TX_MARKOV _TM39NoRoomText
 	db "@"
 
 Route12GateUpstairsText2:
@@ -52,7 +52,7 @@ Route12GateUpstairsText2:
 	jp GateUpstairsScript_PrintIfFacingUp
 
 Route12GateUpstairsText_495b8:
-	TX_FAR _Route12GateUpstairsText_495b8
+	TX_MARKOV _Route12GateUpstairsText_495b8
 	db "@"
 
 Route12GateUpstairsText3:
@@ -61,7 +61,7 @@ Route12GateUpstairsText3:
 	jp GateUpstairsScript_PrintIfFacingUp
 
 Route12GateUpstairsText_495c4:
-	TX_FAR _Route12GateUpstairsText_495c4
+	TX_MARKOV _Route12GateUpstairsText_495c4
 	db "@"
 
 GateUpstairsScript_PrintIfFacingUp:

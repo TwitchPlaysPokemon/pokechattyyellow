@@ -157,113 +157,113 @@ Route9TalkToTrainer:
 	jp TextScriptEnd
 
 Route9BattleText1:
-	TX_FAR _Route9BattleText1
+	TX_MARKOV _Route9BattleText1
 	db "@"
 
 Route9EndBattleText1:
-	TX_FAR _Route9EndBattleText1
+	TX_MARKOV _Route9EndBattleText1
 	db "@"
 
 Route9AfterBattleText1:
-	TX_FAR _Route9AfterBattleText1
+	TX_MARKOV _Route9AfterBattleText1
 	db "@"
 
 Route9BattleTextAJ:
-	TX_FAR _Route9BattleTextAJ
+	TX_MARKOV _Route9BattleTextAJ
 	db "@"
 
 Route9EndBattleTextAJ:
-	TX_FAR _Route9EndBattleTextAJ
+	TX_MARKOV _Route9EndBattleTextAJ
 	db "@"
 
 Route9AfterBattleTextAJ:
-	TX_FAR _Route9AfterBattleTextAJ
+	TX_MARKOV _Route9AfterBattleTextAJ
 	db "@"
 
 Route9BattleText3:
-	TX_FAR _Route9BattleText3
+	TX_MARKOV _Route9BattleText3
 	db "@"
 
 Route9EndBattleText3:
-	TX_FAR _Route9EndBattleText3
+	TX_MARKOV _Route9EndBattleText3
 	db "@"
 
 Route9AfterBattleText3:
-	TX_FAR _Route9AfterBattleText3
+	TX_MARKOV _Route9AfterBattleText3
 	db "@"
 
 Route9BattleText4:
-	TX_FAR _Route9BattleText4
+	TX_MARKOV _Route9BattleText4
 	db "@"
 
 Route9EndBattleText4:
-	TX_FAR _Route9EndBattleText4
+	TX_MARKOV _Route9EndBattleText4
 	db "@"
 
 Route9AfterBattleText4:
-	TX_FAR _Route9AfterBattleText4
+	TX_MARKOV _Route9AfterBattleText4
 	db "@"
 
 Route9BattleText5:
-	TX_FAR _Route9BattleText5
+	TX_MARKOV _Route9BattleText5
 	db "@"
 
 Route9EndBattleText5:
-	TX_FAR _Route9EndBattleText5
+	TX_MARKOV _Route9EndBattleText5
 	db "@"
 
 Route9AfterBattleText5:
-	TX_FAR _Route9AfterBattleText5
+	TX_MARKOV _Route9AfterBattleText5
 	db "@"
 
 Route9BattleText6:
-	TX_FAR _Route9BattleText6
+	TX_MARKOV _Route9BattleText6
 	db "@"
 
 Route9EndBattleText6:
-	TX_FAR _Route9EndBattleText6
+	TX_MARKOV _Route9EndBattleText6
 	db "@"
 
 Route9AfterBattleText6:
-	TX_FAR _Route9AfterBattleText6
+	TX_MARKOV _Route9AfterBattleText6
 	db "@"
 
 Route9BattleText7:
-	TX_FAR _Route9BattleText7
+	TX_MARKOV _Route9BattleText7
 	db "@"
 
 Route9EndBattleText7:
-	TX_FAR _Route9EndBattleText7
+	TX_MARKOV _Route9EndBattleText7
 	db "@"
 
 Route9AfterBattleText7:
-	TX_FAR _Route9AfterBattleText7
+	TX_MARKOV _Route9AfterBattleText7
 	db "@"
 
 Route9BattleText8:
-	TX_FAR _Route9BattleText8
+	TX_MARKOV _Route9BattleText8
 	db "@"
 
 Route9EndBattleText8:
-	TX_FAR _Route9EndBattleText8
+	TX_MARKOV _Route9EndBattleText8
 	db "@"
 
 Route9AfterBattleText8:
-	TX_FAR _Route9AfterBattleText8
+	TX_MARKOV _Route9AfterBattleText8
 	db "@"
 
 Route9BattleText9:
-	TX_FAR _Route9BattleText9
+	TX_MARKOV _Route9BattleText9
 	db "@"
 
 Route9EndBattleText9:
-	TX_FAR _Route9EndBattleText9
+	TX_MARKOV _Route9EndBattleText9
 	db "@"
 
 Route9AfterBattleText9:
-	TX_FAR _Route9AfterBattleText9
+	TX_MARKOV _Route9AfterBattleText9
 	db "@"
 
 Route9Text11:
-	TX_FAR _Route9Text11
+	TX_MARKOV _Route9Text11
 	db "@"

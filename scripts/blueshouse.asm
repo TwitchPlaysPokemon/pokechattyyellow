@@ -56,30 +56,30 @@ BluesHouseText1:
 	jp TextScriptEnd
 
 DaisyInitialText:
-	TX_FAR _DaisyInitialText
+	TX_MARKOV _DaisyInitialText
 	db "@"
 
 DaisyOfferMapText:
-	TX_FAR _DaisyOfferMapText
+	TX_MARKOV _DaisyOfferMapText
 	db "@"
 
 GotMapText:
-	TX_FAR _GotMapText
+	TX_MARKOV _GotMapText
 	TX_SFX_KEY_ITEM
 	db "@"
 
 DaisyBagFullText:
-	TX_FAR _DaisyBagFullText
+	TX_MARKOV _DaisyBagFullText
 	db "@"
 
 DaisyUseMapText:
-	TX_FAR _DaisyUseMapText
+	TX_MARKOV _DaisyUseMapText
 	db "@"
 
 BluesHouseText2: ; Daisy, walking around
-	TX_FAR _BluesHouseText2
+	TX_MARKOV _BluesHouseText2
 	db "@"
 
 BluesHouseText3: ; map on table
-	TX_FAR _BluesHouseText3
+	TX_MARKOV _BluesHouseText3
 	db "@"

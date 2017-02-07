@@ -89,76 +89,76 @@ SSAnne8Text4:
 	jp TextScriptEnd
 
 SSAnne8Text8:
-	TX_FAR _SSAnne8Text8
+	TX_MARKOV _SSAnne8Text8
 	TX_ASM
 	ld a, WIGGLYTUFF
 	call PlayCry
 	jp TextScriptEnd
 
 SSAnne8BattleText1:
-	TX_FAR _SSAnne8BattleText1
+	TX_MARKOV _SSAnne8BattleText1
 	db "@"
 
 SSAnne8EndBattleText1:
-	TX_FAR _SSAnne8EndBattleText1
+	TX_MARKOV _SSAnne8EndBattleText1
 	db "@"
 
 SSAnne8AfterBattleText1:
-	TX_FAR _SSAnne8AfterBattleText1
+	TX_MARKOV _SSAnne8AfterBattleText1
 	db "@"
 
 SSAnne8BattleText2:
-	TX_FAR _SSAnne8BattleText2
+	TX_MARKOV _SSAnne8BattleText2
 	db "@"
 
 SSAnne8EndBattleText2:
-	TX_FAR _SSAnne8EndBattleText2
+	TX_MARKOV _SSAnne8EndBattleText2
 	db "@"
 
 SSAnne8AfterBattleText2:
-	TX_FAR _SSAnne8AfterBattleText2
+	TX_MARKOV _SSAnne8AfterBattleText2
 	db "@"
 
 SSAnne8BattleText3:
-	TX_FAR _SSAnne8BattleText3
+	TX_MARKOV _SSAnne8BattleText3
 	db "@"
 
 SSAnne8EndBattleText3:
-	TX_FAR _SSAnne8EndBattleText3
+	TX_MARKOV _SSAnne8EndBattleText3
 	db "@"
 
 SSAnne8AfterBattleText3:
-	TX_FAR _SSAnne8AfterBattleText3
+	TX_MARKOV _SSAnne8AfterBattleText3
 	db "@"
 
 SSAnne8BattleText4:
-	TX_FAR _SSAnne8BattleText4
+	TX_MARKOV _SSAnne8BattleText4
 	db "@"
 
 SSAnne8EndBattleText4:
-	TX_FAR _SSAnne8EndBattleText4
+	TX_MARKOV _SSAnne8EndBattleText4
 	db "@"
 
 SSAnne8AfterBattleText4:
-	TX_FAR _SSAnne8AfterBattleText4
+	TX_MARKOV _SSAnne8AfterBattleText4
 	db "@"
 
 SSAnne8Text5:
-	TX_FAR _SSAnne8Text5
+	TX_MARKOV _SSAnne8Text5
 	db "@"
 
 SSAnne8Text6:
-	TX_FAR _SSAnne8Text6
+	TX_MARKOV _SSAnne8Text6
 	db "@"
 
 SSAnne8Text7:
-	TX_FAR _SSAnne8Text7
+	TX_MARKOV _SSAnne8Text7
 	db "@"
 
 SSAnne8Text9:
-	TX_FAR _SSAnne8Text9
+	TX_MARKOV _SSAnne8Text9
 	db "@"
 
 SSAnne8Text11:
-	TX_FAR _SSAnne8Text11
+	TX_MARKOV _SSAnne8Text11
 	db "@"

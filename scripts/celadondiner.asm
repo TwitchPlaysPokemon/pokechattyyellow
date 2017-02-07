@@ -10,19 +10,19 @@ CeladonDinerTextPointers:
 	dw CeladonDinerText5
 
 CeladonDinerText1:
-	TX_FAR _CeladonDinerText1
+	TX_MARKOV _CeladonDinerText1
 	db "@"
 
 CeladonDinerText2:
-	TX_FAR _CeladonDinerText2
+	TX_MARKOV _CeladonDinerText2
 	db "@"
 
 CeladonDinerText3:
-	TX_FAR _CeladonDinerText3
+	TX_MARKOV _CeladonDinerText3
 	db "@"
 
 CeladonDinerText4:
-	TX_FAR _CeladonDinerText4
+	TX_MARKOV _CeladonDinerText4
 	db "@"
 
 CeladonDinerText5:

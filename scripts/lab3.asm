@@ -32,31 +32,31 @@ Lab3Text1:
 	jp TextScriptEnd
 
 TM35PreReceiveText:
-	TX_FAR _TM35PreReceiveText
+	TX_MARKOV _TM35PreReceiveText
 	db "@"
 
 ReceivedTM35Text:
-	TX_FAR _ReceivedTM35Text
+	TX_MARKOV _ReceivedTM35Text
 	TX_SFX_ITEM
 	db "@"
 
 TM35ExplanationText:
-	TX_FAR _TM35ExplanationText
+	TX_MARKOV _TM35ExplanationText
 	db "@"
 
 TM35NoRoomText:
-	TX_FAR _TM35NoRoomText
+	TX_MARKOV _TM35NoRoomText
 	db "@"
 
 Lab3Text2:
-	TX_FAR _Lab3Text2
+	TX_MARKOV _Lab3Text2
 	db "@"
 
 Lab3Text4:
 Lab3Text3:
-	TX_FAR _Lab3Text3
+	TX_MARKOV _Lab3Text3
 	db "@"
 
 Lab3Text5:
-	TX_FAR _Lab3Text5
+	TX_MARKOV _Lab3Text5
 	db "@"

@@ -99,20 +99,20 @@ Route8GateText2:
 Route7GateText2:
 Route6GateText2:
 Route5GateText2:
-	TX_FAR _SaffronGateText_1dfe7
+	TX_MARKOV _SaffronGateText_1dfe7
 	db "@"
 
 Route8GateText3:
 Route7GateText3:
 Route6GateText3:
 Route5GateText3:
-	TX_FAR _SaffronGateText_8aaa9
+	TX_MARKOV _SaffronGateText_8aaa9
 	TX_SFX_KEY_ITEM
-	TX_FAR _SaffronGateText_1dff1
+	TX_MARKOV _SaffronGateText_1dff1
 	db "@"
 
 SaffronGateText_1dff6:
-	TX_FAR _SaffronGateText_1dff6
+	TX_MARKOV _SaffronGateText_1dff6
 	db "@"
 
 

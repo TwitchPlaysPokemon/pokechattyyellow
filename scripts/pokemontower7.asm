@@ -261,7 +261,7 @@ PokemonTower7Text2:
 	db "@"
 
 PokemonTower7Text4:
-	TX_FAR _PokemonTowerJessieJamesText1
+	TX_MARKOV _PokemonTowerJessieJamesText1
 	TX_ASM
 	ld c, 10
 	call DelayFrames
@@ -277,15 +277,15 @@ PokemonTower7Text4:
 	jp TextScriptEnd
 
 PokemonTower7Text5:
-	TX_FAR _PokemonTowerJessieJamesText2
+	TX_MARKOV _PokemonTowerJessieJamesText2
 	db "@"
 
 PokemonTower7JessieJamesEndBattleText:
-	TX_FAR _PokemonTowerJessieJamesText3
+	TX_MARKOV _PokemonTowerJessieJamesText3
 	db "@"
 
 PokemonTower7Text6:
-	TX_FAR _PokemonTowerJessieJamesText4
+	TX_MARKOV _PokemonTowerJessieJamesText4
 	TX_ASM
 	ld c, 64
 	call DelayFrames
@@ -311,5 +311,5 @@ PokemonTower7Text3:
 	jp TextScriptEnd
 
 PokemonTower7Text_60f75:
-	TX_FAR _TowerRescueFujiText
+	TX_MARKOV _TowerRescueFujiText
 	db "@"

@@ -23,11 +23,11 @@ Func_f23d0:
 	jp TextScriptEnd
 
 Text_f240c:
-	TX_FAR _BeachHousePrinterText5
+	TX_MARKOV _BeachHousePrinterText5
 	TX_WAIT_BUTTON
 	db "@"
 
 Text_f2412:
-	TX_FAR _BeachHousePrinterText6
+	TX_MARKOV _BeachHousePrinterText6
 	TX_WAIT_BUTTON
 	db "@"

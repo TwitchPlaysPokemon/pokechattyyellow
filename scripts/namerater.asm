@@ -79,29 +79,29 @@ NameRaterText1:
 	jr .asm_1daa8
 
 NameRaterText_1dab3:
-	TX_FAR _NameRaterText_1dab3
+	TX_MARKOV _NameRaterText_1dab3
 	db "@"
 
 NameRaterText_1dab8:
-	TX_FAR _NameRaterText_1dab8
+	TX_MARKOV _NameRaterText_1dab8
 	db "@"
 
 NameRaterText_1dabd:
-	TX_FAR _NameRaterText_1dabd
+	TX_MARKOV _NameRaterText_1dabd
 	db "@"
 
 NameRaterText_1dac2:
-	TX_FAR _NameRaterText_1dac2
+	TX_MARKOV _NameRaterText_1dac2
 	db "@"
 
 NameRaterText_1dac7:
-	TX_FAR _NameRaterText_1dac7
+	TX_MARKOV _NameRaterText_1dac7
 	db "@"
 
 NameRaterText_1dacc:
-	TX_FAR _NameRaterText_1dacc
+	TX_MARKOV _NameRaterText_1dacc
 	db "@"
 
 NameRaterText_1dad1:
-	TX_FAR _NameRaterText_1dad1
+	TX_MARKOV _NameRaterText_1dad1
 	db "@"

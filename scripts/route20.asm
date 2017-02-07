@@ -229,126 +229,126 @@ Route20Text10:
 	jp TextScriptEnd
 
 Route20BattleText1:
-	TX_FAR _Route20BattleText1
+	TX_MARKOV _Route20BattleText1
 	db "@"
 
 Route20EndBattleText1:
-	TX_FAR _Route20EndBattleText1
+	TX_MARKOV _Route20EndBattleText1
 	db "@"
 
 Route20AfterBattleText1:
-	TX_FAR _Route20AfterBattleText1
+	TX_MARKOV _Route20AfterBattleText1
 	db "@"
 
 Route20BattleText2:
-	TX_FAR _Route20BattleText2
+	TX_MARKOV _Route20BattleText2
 	db "@"
 
 Route20EndBattleText2:
-	TX_FAR _Route20EndBattleText2
+	TX_MARKOV _Route20EndBattleText2
 	db "@"
 
 Route20AfterBattleText2:
-	TX_FAR _Route20AfterBattleText2
+	TX_MARKOV _Route20AfterBattleText2
 	db "@"
 
 Route20BattleText3:
-	TX_FAR _Route20BattleText3
+	TX_MARKOV _Route20BattleText3
 	db "@"
 
 Route20EndBattleText3:
-	TX_FAR _Route20EndBattleText3
+	TX_MARKOV _Route20EndBattleText3
 	db "@"
 
 Route20AfterBattleText3:
-	TX_FAR _Route20AfterBattleText3
+	TX_MARKOV _Route20AfterBattleText3
 	db "@"
 
 Route20BattleText4:
-	TX_FAR _Route20BattleText4
+	TX_MARKOV _Route20BattleText4
 	db "@"
 
 Route20EndBattleText4:
-	TX_FAR _Route20EndBattleText4
+	TX_MARKOV _Route20EndBattleText4
 	db "@"
 
 Route20AfterBattleText4:
-	TX_FAR _Route20AfterBattleText4
+	TX_MARKOV _Route20AfterBattleText4
 	db "@"
 
 Route20BattleText5:
-	TX_FAR _Route20BattleText5
+	TX_MARKOV _Route20BattleText5
 	db "@"
 
 Route20EndBattleText5:
-	TX_FAR _Route20EndBattleText5
+	TX_MARKOV _Route20EndBattleText5
 	db "@"
 
 Route20AfterBattleText5:
-	TX_FAR _Route20AfterBattleText5
+	TX_MARKOV _Route20AfterBattleText5
 	db "@"
 
 Route20BattleText6:
-	TX_FAR _Route20BattleText6
+	TX_MARKOV _Route20BattleText6
 	db "@"
 
 Route20EndBattleText6:
-	TX_FAR _Route20EndBattleText6
+	TX_MARKOV _Route20EndBattleText6
 	db "@"
 
 Route20AfterBattleText6:
-	TX_FAR _Route20AfterBattleText6
+	TX_MARKOV _Route20AfterBattleText6
 	db "@"
 
 Route20BattleText7:
-	TX_FAR _Route20BattleText7
+	TX_MARKOV _Route20BattleText7
 	db "@"
 
 Route20EndBattleText7:
-	TX_FAR _Route20EndBattleText7
+	TX_MARKOV _Route20EndBattleText7
 	db "@"
 
 Route20AfterBattleText7:
-	TX_FAR _Route20AfterBattleText7
+	TX_MARKOV _Route20AfterBattleText7
 	db "@"
 
 Route20BattleText8:
-	TX_FAR _Route20BattleText8
+	TX_MARKOV _Route20BattleText8
 	db "@"
 
 Route20EndBattleText8:
-	TX_FAR _Route20EndBattleText8
+	TX_MARKOV _Route20EndBattleText8
 	db "@"
 
 Route20AfterBattleText8:
-	TX_FAR _Route20AfterBattleText8
+	TX_MARKOV _Route20AfterBattleText8
 	db "@"
 
 Route20BattleText9:
-	TX_FAR _Route20BattleText9
+	TX_MARKOV _Route20BattleText9
 	db "@"
 
 Route20EndBattleText9:
-	TX_FAR _Route20EndBattleText9
+	TX_MARKOV _Route20EndBattleText9
 	db "@"
 
 Route20AfterBattleText9:
-	TX_FAR _Route20AfterBattleText9
+	TX_MARKOV _Route20AfterBattleText9
 	db "@"
 
 Route20BattleText10:
-	TX_FAR _Route20BattleText10
+	TX_MARKOV _Route20BattleText10
 	db "@"
 
 Route20EndBattleText10:
-	TX_FAR _Route20EndBattleText10
+	TX_MARKOV _Route20EndBattleText10
 	db "@"
 
 Route20AfterBattleText10:
-	TX_FAR _Route20AfterBattleText10
+	TX_MARKOV _Route20AfterBattleText10
 	db "@"
 
 Route20Text12:
 Route20Text11:
-	TX_FAR _Route20Text11
+	TX_MARKOV _Route20Text11
 	db "@"

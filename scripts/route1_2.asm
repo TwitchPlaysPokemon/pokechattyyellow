@@ -18,20 +18,20 @@ Func_f1ad2:
 	ret
 
 Route1ViridianMartSampleText:
-	TX_FAR _Route1ViridianMartSampleText
+	TX_MARKOV _Route1ViridianMartSampleText
 	db "@"
 
 Route1Text_f1aff:
-	TX_FAR _Route1Text_1cae8
+	TX_MARKOV _Route1Text_1cae8
 	TX_SFX_ITEM
 	db "@"
 
 Route1Text_f1b05:
-	TX_FAR _Route1Text_1caee
+	TX_MARKOV _Route1Text_1caee
 	db "@"
 
 Route1Text_f1b0a:
-	TX_FAR _Route1Text_1caf3
+	TX_MARKOV _Route1Text_1caf3
 	db "@"
 
 Func_f1b0f:
@@ -40,7 +40,7 @@ Func_f1b0f:
 	ret
 
 Route1Text_f1b16:
-	TX_FAR _Route1Text2
+	TX_MARKOV _Route1Text2
 	db "@"
 
 Func_f1b1b:
@@ -49,5 +49,5 @@ Func_f1b1b:
 	ret
 
 Route1Text_f1b22:
-	TX_FAR _Route1Text3
+	TX_MARKOV _Route1Text3
 	db "@"

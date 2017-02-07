@@ -137,31 +137,31 @@ PewterGymText1:
 	jp TextScriptEnd
 
 PewterGymText_5c49e:
-	TX_FAR _PewterGymText_5c49e
+	TX_MARKOV _PewterGymText_5c49e
 	db "@"
 
 PewterGymText_5c4a3:
-	TX_FAR _PewterGymText_5c4a3
+	TX_MARKOV _PewterGymText_5c4a3
 	db "@"
 
 PewterGymText4:
-	TX_FAR _TM34PreReceiveText
+	TX_MARKOV _TM34PreReceiveText
 	db "@"
 
 PewterGymText5:
-	TX_FAR _ReceivedTM34Text
+	TX_MARKOV _ReceivedTM34Text
 	TX_SFX_ITEM
-	TX_FAR _TM34ExplanationText
+	TX_MARKOV _TM34ExplanationText
 	db "@"
 
 PewterGymText6:
-	TX_FAR _TM34NoRoomText
+	TX_MARKOV _TM34NoRoomText
 	db "@"
 
 PewterGymText_5c4bc:
-	TX_FAR _PewterGymText_5c4bc
+	TX_MARKOV _PewterGymText_5c4bc
 	TX_SFX_ITEM
-	TX_FAR _PewterGymText_5c4c1
+	TX_MARKOV _PewterGymText_5c4c1
 	db "@"
 
 PewterGymText2:
@@ -171,15 +171,15 @@ PewterGymText2:
 	jp TextScriptEnd
 
 PewterGymBattleText1:
-	TX_FAR _PewterGymBattleText1
+	TX_MARKOV _PewterGymBattleText1
 	db "@"
 
 PewterGymEndBattleText1:
-	TX_FAR _PewterGymEndBattleText1
+	TX_MARKOV _PewterGymEndBattleText1
 	db "@"
 
 PewterGymAfterBattleText1:
-	TX_FAR _PewterGymAfterBattleText1
+	TX_MARKOV _PewterGymAfterBattleText1
 	db "@"
 
 PewterGymText3:
@@ -218,26 +218,26 @@ PewterGymText3:
 	jp TextScriptEnd
 
 PewterGymText_5c515:
-	TX_FAR _PewterGymText_5c515
+	TX_MARKOV _PewterGymText_5c515
 	db "@"
 
 PewterGymText_5c51a:
-	TX_FAR _PewterGymText_5c51a
+	TX_MARKOV _PewterGymText_5c51a
 	db "@"
 
 PewterGymText_5c51f:
-	TX_FAR _PewterGymText_5c51f
+	TX_MARKOV _PewterGymText_5c51f
 	db "@"
 
 PewterGymText_5c524:
-	TX_FAR _PewterGymText_5c524
+	TX_MARKOV _PewterGymText_5c524
 	db "@"
 
 PewterGymText_5c529:
-	TX_FAR _PewterGymText_5c529
+	TX_MARKOV _PewterGymText_5c529
 	db "@"
 
 PewterGymText_5c41c:
-	TX_FAR _PewterGymGuyText
+	TX_MARKOV _PewterGymGuyText
 	db "@"
 

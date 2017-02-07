@@ -44,11 +44,11 @@ FuchsiaHouse3Text1:
 	jp TextScriptEnd
 
 FuchsiaHouse3Text_561bd:
-	TX_FAR _FuchsiaHouse3Text_561bd
+	TX_MARKOV _FuchsiaHouse3Text_561bd
 	db "@"
 
 FuchsiaHouse3Text_561c2:
-	TX_FAR _FuchsiaHouse3Text_561c2
+	TX_MARKOV _FuchsiaHouse3Text_561c2
 	TX_SFX_ITEM
 	db "@"
 
@@ -63,13 +63,13 @@ UnusedText_561c8:
 	done
 
 FuchsiaHouse3Text_56212:
-	TX_FAR _FuchsiaHouse3Text_56212
+	TX_MARKOV _FuchsiaHouse3Text_56212
 	db "@"
 
 FuchsiaHouse3Text_56217:
-	TX_FAR _FuchsiaHouse3Text_56217
+	TX_MARKOV _FuchsiaHouse3Text_56217
 	db "@"
 
 FuchsiaHouse3Text_5621c:
-	TX_FAR _FuchsiaHouse3Text_5621c
+	TX_MARKOV _FuchsiaHouse3Text_5621c
 	db "@"

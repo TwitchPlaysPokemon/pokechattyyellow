@@ -4,7 +4,7 @@ Func_f2528:
 	ret
 
 Text_f252f:
-	TX_FAR _ViridianForestText9
+	TX_MARKOV _ViridianForestText9
 	db "@"
 
 Func_f2534:
@@ -13,7 +13,7 @@ Func_f2534:
 	ret
 
 Text_f253b:
-	TX_FAR _ViridianForestText10
+	TX_MARKOV _ViridianForestText10
 	db "@"
 
 Func_f2540:
@@ -22,7 +22,7 @@ Func_f2540:
 	ret
 
 Text_f254a:
-	TX_FAR _ViridianForestText11
+	TX_MARKOV _ViridianForestText11
 	db "@"
 
 Func_f254c:
@@ -31,7 +31,7 @@ Func_f254c:
 	ret
 
 Text_f2553:
-	TX_FAR _ViridianForestText12
+	TX_MARKOV _ViridianForestText12
 	db "@"
 
 Func_f2558:
@@ -40,7 +40,7 @@ Func_f2558:
 	ret
 
 Text_f255f:
-	TX_FAR _ViridianForestText13
+	TX_MARKOV _ViridianForestText13
 	db "@"
 
 Func_f2564:
@@ -49,5 +49,5 @@ Func_f2564:
 	ret
 
 ViridianForestText_f256b:
-	TX_FAR _ViridianForestText14
+	TX_MARKOV _ViridianForestText14
 	db "@"

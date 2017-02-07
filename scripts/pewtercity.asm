@@ -193,11 +193,11 @@ PewterCityTextPointers:
 	dw PewterCityText14
 
 PewterCityText1:
-	TX_FAR _PewterCityText1
+	TX_MARKOV _PewterCityText1
 	db "@"
 
 PewterCityText2:
-	TX_FAR _PewterCityText2
+	TX_MARKOV _PewterCityText2
 	db "@"
 
 PewterCityText3:
@@ -231,19 +231,19 @@ PewterCityText3:
 	jp TextScriptEnd
 
 PewterCityText_193f1:
-	TX_FAR _PewterCityText_193f1
+	TX_MARKOV _PewterCityText_193f1
 	db "@"
 
 PewterCityText_193f6:
-	TX_FAR _PewterCityText_193f6
+	TX_MARKOV _PewterCityText_193f6
 	db "@"
 
 PewterCityText_193fb:
-	TX_FAR _PewterCityText_193fb
+	TX_MARKOV _PewterCityText_193fb
 	db "@"
 
 PewterCityText13:
-	TX_FAR _PewterCityText13
+	TX_MARKOV _PewterCityText13
 	db "@"
 
 PewterCityText4:
@@ -264,15 +264,15 @@ PewterCityText4:
 	jp TextScriptEnd
 
 PewterCityText_19427:
-	TX_FAR _PewterCityText_19427
+	TX_MARKOV _PewterCityText_19427
 	db "@"
 
 PewterCityText_1942c:
-	TX_FAR _PewterCityText_1942c
+	TX_MARKOV _PewterCityText_1942c
 	db "@"
 
 PewterCityText_19431:
-	TX_FAR _PewterCityText_19431
+	TX_MARKOV _PewterCityText_19431
 	db "@"
 
 PewterCityText5:
@@ -294,31 +294,31 @@ PewterCityText5:
 	jp TextScriptEnd
 
 PewterCityText_1945d:
-	TX_FAR _PewterCityText_1945d
+	TX_MARKOV _PewterCityText_1945d
 	db "@"
 
 PewterCityText14:
 
 PewterCityText_19462:
-	TX_FAR _PewterCityText_19462
+	TX_MARKOV _PewterCityText_19462
 	db "@"
 
 PewterCityText6:
-	TX_FAR _PewterCityText6
+	TX_MARKOV _PewterCityText6
 	db "@"
 
 PewterCityText7:
-	TX_FAR _PewterCityText7
+	TX_MARKOV _PewterCityText7
 	db "@"
 
 PewterCityText10:
-	TX_FAR _PewterCityText10
+	TX_MARKOV _PewterCityText10
 	db "@"
 
 PewterCityText11:
-	TX_FAR _PewterCityText11
+	TX_MARKOV _PewterCityText11
 	db "@"
 
 PewterCityText12:
-	TX_FAR _PewterCityText12
+	TX_MARKOV _PewterCityText12
 	db "@"

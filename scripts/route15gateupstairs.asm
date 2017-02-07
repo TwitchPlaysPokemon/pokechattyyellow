@@ -31,7 +31,7 @@ Route15GateUpstairsText1:
 	jp TextScriptEnd
 
 Route15GateUpstairsText_4968c:
-	TX_FAR _Route15GateUpstairsText_4968c
+	TX_MARKOV _Route15GateUpstairsText_4968c
 	db "@"
 
 Route15GateUpstairsText2:
@@ -40,5 +40,5 @@ Route15GateUpstairsText2:
 	jp GateUpstairsScript_PrintIfFacingUp
 
 Route15GateUpstairsText_49698:
-	TX_FAR _Route15GateUpstairsText_49698
+	TX_MARKOV _Route15GateUpstairsText_49698
 	db "@"

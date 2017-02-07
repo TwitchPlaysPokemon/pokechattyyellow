@@ -35,23 +35,23 @@ Route12HouseText1:
 	jp TextScriptEnd
 
 Route12HouseText_564c0:
-	TX_FAR _Route12HouseText_564c0
+	TX_MARKOV _Route12HouseText_564c0
 	db "@"
 
 Route12HouseText_564c5:
-	TX_FAR _Route12HouseText_564c5
+	TX_MARKOV _Route12HouseText_564c5
 	TX_SFX_ITEM
-	TX_FAR _Route12HouseText_564ca
+	TX_MARKOV _Route12HouseText_564ca
 	db "@"
 
 Route12HouseText_564cf:
-	TX_FAR _Route12HouseText_564cf
+	TX_MARKOV _Route12HouseText_564cf
 	db "@"
 
 Route12HouseText_564d4:
-	TX_FAR _Route12HouseText_564d4
+	TX_MARKOV _Route12HouseText_564d4
 	db "@"
 
 Route12HouseText_564d9:
-	TX_FAR _Route12HouseText_564d9
+	TX_MARKOV _Route12HouseText_564d9
 	db "@"

@@ -185,31 +185,31 @@ Route24Text1:
 	jp TextScriptEnd
 
 Route24Text_51510:
-	TX_FAR _Route24Text_51510
+	TX_MARKOV _Route24Text_51510
 	TX_SFX_ITEM
-	TX_FAR _Route24Text_51515
+	TX_MARKOV _Route24Text_51515
 	db "@"
 
 Route24Text_5151a:
-	TX_FAR _Route24Text_5151a
+	TX_MARKOV _Route24Text_5151a
 	TX_SFX_KEY_ITEM
 	TX_BUTTON_SOUND
 	db "@"
 
 Route24Text_51521:
-	TX_FAR _Route24Text_51521
+	TX_MARKOV _Route24Text_51521
 	db "@"
 
 Route24Text_51526:
-	TX_FAR _Route24Text_51526
+	TX_MARKOV _Route24Text_51526
 	db "@"
 
 Route24Text_5152b:
-	TX_FAR _Route24Text_5152b
+	TX_MARKOV _Route24Text_5152b
 	db "@"
 
 Route24Text_51530:
-	TX_FAR _Route24Text_51530
+	TX_MARKOV _Route24Text_51530
 	db "@"
 
 Route24Text2:
@@ -249,75 +249,75 @@ Route24Text7:
 	jp TextScriptEnd
 
 Route24BattleText1:
-	TX_FAR _Route24BattleText1
+	TX_MARKOV _Route24BattleText1
 	db "@"
 
 Route24EndBattleText1:
-	TX_FAR _Route24EndBattleText1
+	TX_MARKOV _Route24EndBattleText1
 	db "@"
 
 Route24AfterBattleText1:
-	TX_FAR _Route24AfterBattleText1
+	TX_MARKOV _Route24AfterBattleText1
 	db "@"
 
 Route24BattleText2:
-	TX_FAR _Route24BattleText2
+	TX_MARKOV _Route24BattleText2
 	db "@"
 
 Route24EndBattleText2:
-	TX_FAR _Route24EndBattleText2
+	TX_MARKOV _Route24EndBattleText2
 	db "@"
 
 Route24AfterBattleText2:
-	TX_FAR _Route24AfterBattleText2
+	TX_MARKOV _Route24AfterBattleText2
 	db "@"
 
 Route24BattleText3:
-	TX_FAR _Route24BattleText3
+	TX_MARKOV _Route24BattleText3
 	db "@"
 
 Route24EndBattleText3:
-	TX_FAR _Route24EndBattleText3
+	TX_MARKOV _Route24EndBattleText3
 	db "@"
 
 Route24AfterBattleText3:
-	TX_FAR _Route24AfterBattleText3
+	TX_MARKOV _Route24AfterBattleText3
 	db "@"
 
 Route24BattleText4:
-	TX_FAR _Route24BattleText4
+	TX_MARKOV _Route24BattleText4
 	db "@"
 
 Route24EndBattleText4:
-	TX_FAR _Route24EndBattleText4
+	TX_MARKOV _Route24EndBattleText4
 	db "@"
 
 Route24AfterBattleText4:
-	TX_FAR _Route24AfterBattleText4
+	TX_MARKOV _Route24AfterBattleText4
 	db "@"
 
 Route24BattleText5:
-	TX_FAR _Route24BattleText5
+	TX_MARKOV _Route24BattleText5
 	db "@"
 
 Route24EndBattleText5:
-	TX_FAR _Route24EndBattleText5
+	TX_MARKOV _Route24EndBattleText5
 	db "@"
 
 Route24AfterBattleText5:
-	TX_FAR _Route24AfterBattleText5
+	TX_MARKOV _Route24AfterBattleText5
 	db "@"
 
 Route24BattleText6:
-	TX_FAR _Route24BattleText6
+	TX_MARKOV _Route24BattleText6
 	db "@"
 
 Route24EndBattleText6:
-	TX_FAR _Route24EndBattleText6
+	TX_MARKOV _Route24EndBattleText6
 	db "@"
 
 Route24AfterBattleText6:
-	TX_FAR _Route24AfterBattleText6
+	TX_MARKOV _Route24AfterBattleText6
 	db "@"
 
 Route24Text8:
@@ -360,19 +360,19 @@ Route24Text8:
 	jp TextScriptEnd
 
 Route24Text_515de:
-	TX_FAR _Route24DamianText1
+	TX_MARKOV _Route24DamianText1
 	db "@"
 
 Route24Text_515e3:
-	TX_FAR _Route24DamianText2
+	TX_MARKOV _Route24DamianText2
 	TX_WAIT_BUTTON
 	db "@"
 
 Route24Text_515e9:
-	TX_FAR _Route24DamianText3
+	TX_MARKOV _Route24DamianText3
 	db "@"
 
 Route24Text_515ee:
-	TX_FAR _Route24DamianText4
+	TX_MARKOV _Route24DamianText4
 	db "@"
 

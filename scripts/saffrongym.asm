@@ -184,31 +184,31 @@ SaffronGymText1:
 	jp TextScriptEnd
 
 SaffronGymText_5d162:
-	TX_FAR _SaffronGymText_5d162
+	TX_MARKOV _SaffronGymText_5d162
 	db "@"
 
 SaffronGymText_5d167:
-	TX_FAR _SaffronGymText_5d167
+	TX_MARKOV _SaffronGymText_5d167
 	TX_SFX_KEY_ITEM ; play same sound as red giving oak parcel
 	TX_BUTTON_SOUND ; wait for keypress
 	db "@"
 
 SaffronGymText_5d16e:
-	TX_FAR _SaffronGymText_5d16e
+	TX_MARKOV _SaffronGymText_5d16e
 	db "@"
 
 SaffronGymText10:
-	TX_FAR _SaffronGymText_5d173
+	TX_MARKOV _SaffronGymText_5d173
 	db "@"
 
 SaffronGymText11:
-	TX_FAR ReceivedTM46Text
+	TX_MARKOV ReceivedTM46Text
 	TX_SFX_ITEM
-	TX_FAR _TM46ExplanationText
+	TX_MARKOV _TM46ExplanationText
 	db "@"
 
 SaffronGymText12:
-	TX_FAR _TM46NoRoomText
+	TX_MARKOV _TM46NoRoomText
 	db "@"
 
 SaffronGymText2:
@@ -267,93 +267,93 @@ SaffronGymText9:
 	jp TextScriptEnd
 
 SaffronGymText_5d1e6:
-	TX_FAR _SaffronGymText_5d1e6
+	TX_MARKOV _SaffronGymText_5d1e6
 	db "@"
 
 SaffronGymText_5d1eb:
-	TX_FAR _SaffronGymText_5d1eb
+	TX_MARKOV _SaffronGymText_5d1eb
 	db "@"
 
 SaffronGymBattleText1:
-	TX_FAR _SaffronGymBattleText1
+	TX_MARKOV _SaffronGymBattleText1
 	db "@"
 
 SaffronGymEndBattleText1:
-	TX_FAR _SaffronGymEndBattleText1
+	TX_MARKOV _SaffronGymEndBattleText1
 	db "@"
 
 SaffronGymAfterBattleText1:
-	TX_FAR _SaffronGymAfterBattleText1
+	TX_MARKOV _SaffronGymAfterBattleText1
 	db "@"
 
 SaffronGymBattleText2:
-	TX_FAR _SaffronGymBattleText2
+	TX_MARKOV _SaffronGymBattleText2
 	db "@"
 
 SaffronGymEndBattleText2:
-	TX_FAR _SaffronGymEndBattleText2
+	TX_MARKOV _SaffronGymEndBattleText2
 	db "@"
 
 SaffronGymAfterBattleText2:
-	TX_FAR _SaffronGymAfterBattleText2
+	TX_MARKOV _SaffronGymAfterBattleText2
 	db "@"
 
 SaffronGymBattleText3:
-	TX_FAR _SaffronGymBattleText3
+	TX_MARKOV _SaffronGymBattleText3
 	db "@"
 
 SaffronGymEndBattleText3:
-	TX_FAR _SaffronGymEndBattleText3
+	TX_MARKOV _SaffronGymEndBattleText3
 	db "@"
 
 SaffronGymAfterBattleText3:
-	TX_FAR _SaffronGymAfterBattleText3
+	TX_MARKOV _SaffronGymAfterBattleText3
 	db "@"
 
 SaffronGymBattleText4:
-	TX_FAR _SaffronGymBattleText4
+	TX_MARKOV _SaffronGymBattleText4
 	db "@"
 
 SaffronGymEndBattleText4:
-	TX_FAR _SaffronGymEndBattleText4
+	TX_MARKOV _SaffronGymEndBattleText4
 	db "@"
 
 SaffronGymAfterBattleText4:
-	TX_FAR _SaffronGymAfterBattleText4
+	TX_MARKOV _SaffronGymAfterBattleText4
 	db "@"
 
 SaffronGymBattleText5:
-	TX_FAR _SaffronGymBattleText5
+	TX_MARKOV _SaffronGymBattleText5
 	db "@"
 
 SaffronGymEndBattleText5:
-	TX_FAR _SaffronGymEndBattleText5
+	TX_MARKOV _SaffronGymEndBattleText5
 	db "@"
 
 SaffronGymAfterBattleText5:
-	TX_FAR _SaffronGymAfterBattleText5
+	TX_MARKOV _SaffronGymAfterBattleText5
 	db "@"
 
 SaffronGymBattleText6:
-	TX_FAR _SaffronGymBattleText6
+	TX_MARKOV _SaffronGymBattleText6
 	db "@"
 
 SaffronGymEndBattleText6:
-	TX_FAR _SaffronGymEndBattleText6
+	TX_MARKOV _SaffronGymEndBattleText6
 	db "@"
 
 SaffronGymAfterBattleText6:
-	TX_FAR _SaffronGymAfterBattleText6
+	TX_MARKOV _SaffronGymAfterBattleText6
 	db "@"
 
 SaffronGymBattleText7:
-	TX_FAR _SaffronGymBattleText7
+	TX_MARKOV _SaffronGymBattleText7
 	db "@"
 
 SaffronGymEndBattleText7:
-	TX_FAR _SaffronGymEndBattleText7
+	TX_MARKOV _SaffronGymEndBattleText7
 	db "@"
 
 SaffronGymAfterBattleText7:
-	TX_FAR _SaffronGymAfterBattleText7
+	TX_MARKOV _SaffronGymAfterBattleText7
 	db "@"

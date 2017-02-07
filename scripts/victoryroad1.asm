@@ -83,25 +83,25 @@ VictoryRoad1Text2:
 	jp TextScriptEnd
 
 VictoryRoad1BattleText1:
-	TX_FAR _VictoryRoad1BattleText1
+	TX_MARKOV _VictoryRoad1BattleText1
 	db "@"
 
 VictoryRoad1EndBattleText1:
-	TX_FAR _VictoryRoad1EndBattleText1
+	TX_MARKOV _VictoryRoad1EndBattleText1
 	db "@"
 
 VictoryRoad1AfterBattleText1:
-	TX_FAR _VictoryRoad1AfterBattleText1
+	TX_MARKOV _VictoryRoad1AfterBattleText1
 	db "@"
 
 VictoryRoad1BattleText2:
-	TX_FAR _VictoryRoad1BattleText2
+	TX_MARKOV _VictoryRoad1BattleText2
 	db "@"
 
 VictoryRoad1EndBattleText2:
-	TX_FAR _VictoryRoad1EndBattleText2
+	TX_MARKOV _VictoryRoad1EndBattleText2
 	db "@"
 
 VictoryRoad1AfterBattleText2:
-	TX_FAR _VictoryRoad1AfterBattleText2
+	TX_MARKOV _VictoryRoad1AfterBattleText2
 	db "@"

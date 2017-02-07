@@ -4,7 +4,7 @@ Func_f18bb:
 	ret
 
 ViridianCityText_f18c2:
-	TX_FAR _ViridianCityText1
+	TX_MARKOV _ViridianCityText1
 	db "@"
 
 Func_f18c7:
@@ -20,11 +20,11 @@ Func_f18c7:
 	ret
 
 ViridianCityText_f18df:
-	TX_FAR _ViridianCityText_19122
+	TX_MARKOV _ViridianCityText_19122
 	db "@"
 
 ViridianCityText_f18e4:
-	TX_FAR _ViridianCityText_19127
+	TX_MARKOV _ViridianCityText_19127
 	db "@"
 
 Func_f18e9:
@@ -41,15 +41,15 @@ Func_f18e9:
 	ret
 
 ViridianCityText_f1902:
-	TX_FAR _ViridianCityText_1914d
+	TX_MARKOV _ViridianCityText_1914d
 	db "@"
 
 ViridianCityText_f1907:
-	TX_FAR _ViridianCityText_19152
+	TX_MARKOV _ViridianCityText_19152
 	db "@"
 
 ViridianCityText_f190c:
-	TX_FAR _ViridianCityText_19157
+	TX_MARKOV _ViridianCityText_19157
 	db "@"
 
 Func_f1911:
@@ -62,11 +62,11 @@ Func_f1911:
 	ret
 
 ViridianCityText_f1922:
-	TX_FAR _ViridianCityText_19175
+	TX_MARKOV _ViridianCityText_19175
 	db "@"
 
 ViridianCityText_f1927:
-	TX_FAR _ViridianCityText_1917a
+	TX_MARKOV _ViridianCityText_1917a
 	db "@"
 
 Func_f192c:
@@ -82,7 +82,7 @@ Func_f192c:
 	ret
 
 ViridianCityText_f1945:
-	TX_FAR _ViridianCityText_19191
+	TX_MARKOV _ViridianCityText_19191
 	db "@"
 
 Func_f194a:
@@ -109,20 +109,20 @@ Func_f194a:
 	ret
 
 ViridianCityText_f1979:
-	TX_FAR _ViridianCityText_191ca
+	TX_MARKOV _ViridianCityText_191ca
 	db "@"
 
 ViridianCityText_f197e:
-	TX_FAR _ReceivedTM42Text
+	TX_MARKOV _ReceivedTM42Text
 	TX_SFX_CONGRATS
 	db "@"
 
 ViridianCityText_f1984:
-	TX_FAR _TM42Explanation
+	TX_MARKOV _TM42Explanation
 	db "@"
 
 ViridianCityText_f1989:
-	TX_FAR _TM42NoRoomText
+	TX_MARKOV _TM42NoRoomText
 	db "@"
 
 Func_f198e:
@@ -147,15 +147,15 @@ Func_f198e:
 	ret
 
 ViridianCityText_f19b6:
-	TX_FAR _OldManAgainText1
+	TX_MARKOV _OldManAgainText1
 	db "@"
 
 ViridianCityText_f19bb:
-	TX_FAR _OldManAgainText2
+	TX_MARKOV _OldManAgainText2
 	db "@"
 
 ViridianCityText_f19c0:
-	TX_FAR _OldManAgainText3
+	TX_MARKOV _OldManAgainText3
 	db "@"
 
 Func_f19c5:
@@ -164,7 +164,7 @@ Func_f19c5:
 	ret
 
 ViridianCityText_f19cc:
-	TX_FAR _ViridianCityText8
+	TX_MARKOV _ViridianCityText8
 	db "@"
 
 Func_f19d1:
@@ -173,7 +173,7 @@ Func_f19d1:
 	ret
 
 ViridianCityText_f19d8:
-	TX_FAR _ViridianCityText9
+	TX_MARKOV _ViridianCityText9
 	db "@"
 
 Func_f19dd:
@@ -182,7 +182,7 @@ Func_f19dd:
 	ret
 
 ViridianCityText_f19e4:
-	TX_FAR _ViridianCityText10
+	TX_MARKOV _ViridianCityText10
 	db "@"
 
 Func_f19e9:
@@ -191,7 +191,7 @@ Func_f19e9:
 	ret
 
 ViridianCityText_f19f0:
-	TX_FAR _ViridianCityText13
+	TX_MARKOV _ViridianCityText13
 	db "@"
 
 Func_f19f5:
@@ -200,7 +200,7 @@ Func_f19f5:
 	ret
 
 ViridianCityText_f19fc:
-	TX_FAR _ViridianCityText14
+	TX_MARKOV _ViridianCityText14
 	db "@"
 
 

@@ -14,12 +14,12 @@ Func_f1e70:
 	ret
 
 CeladonMansion1Text_f1e96:
-	TX_FAR _CeladonMansion1Text2
+	TX_MARKOV _CeladonMansion1Text2
 	TX_WAIT_BUTTON
 	db "@"
 
 CeladonMansionText_f1e9c:
-	TX_FAR _CeladonMansion1Text6
+	TX_MARKOV _CeladonMansion1Text6
 	TX_BUTTON_SOUND
 	db "@"
 
@@ -54,25 +54,25 @@ PikachuHappinessThresholds_f1eb9
 	dbbw 0, $ff, CeladonMansion1Text_f1eee
 
 CeladonMansion1Text_f1ed5:
-	TX_FAR _CeladonMansion1Text7
+	TX_MARKOV _CeladonMansion1Text7
 	db "@"
 
 CeladonMansion1Text_f1eda:
-	TX_FAR _CeladonMansion1Text8
+	TX_MARKOV _CeladonMansion1Text8
 	db "@"
 
 CeladonMansion1Text_f1edf:
-	TX_FAR _CeladonMansion1Text9
+	TX_MARKOV _CeladonMansion1Text9
 	db "@"
 
 CeladonMansion1Text_f1ee4:
-	TX_FAR _CeladonMansion1Text10
+	TX_MARKOV _CeladonMansion1Text10
 	db "@"
 
 CeladonMansion1Text_f1ee9:
-	TX_FAR _CeladonMansion1Text11
+	TX_MARKOV _CeladonMansion1Text11
 	db "@"
 
 CeladonMansion1Text_f1eee:
-	TX_FAR _CeladonMansion1Text12
+	TX_MARKOV _CeladonMansion1Text12
 	db "@"

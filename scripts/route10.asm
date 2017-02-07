@@ -88,15 +88,15 @@ Route10Text1:
 	jp TextScriptEnd
 
 Route10BattleText1:
-	TX_FAR _Route10BattleText1
+	TX_MARKOV _Route10BattleText1
 	db "@"
 
 Route10EndBattleText1:
-	TX_FAR _Route10EndBattleText1
+	TX_MARKOV _Route10EndBattleText1
 	db "@"
 
 Route10AfterBattleText1:
-	TX_FAR _Route10AfterBattleText1
+	TX_MARKOV _Route10AfterBattleText1
 	db "@"
 
 Route10Text2:
@@ -106,15 +106,15 @@ Route10Text2:
 	jp TextScriptEnd
 
 Route10BattleText2:
-	TX_FAR _Route10BattleText2
+	TX_MARKOV _Route10BattleText2
 	db "@"
 
 Route10EndBattleText2:
-	TX_FAR _Route10EndBattleText2
+	TX_MARKOV _Route10EndBattleText2
 	db "@"
 
 Route10AfterBattleText2:
-	TX_FAR _Route10AfterBattleText2
+	TX_MARKOV _Route10AfterBattleText2
 	db "@"
 
 Route10Text3:
@@ -124,15 +124,15 @@ Route10Text3:
 	jp TextScriptEnd
 
 Route10BattleText3:
-	TX_FAR _Route10BattleText3
+	TX_MARKOV _Route10BattleText3
 	db "@"
 
 Route10EndBattleText3:
-	TX_FAR _Route10EndBattleText3
+	TX_MARKOV _Route10EndBattleText3
 	db "@"
 
 Route10AfterBattleText3:
-	TX_FAR _Route10AfterBattleText3
+	TX_MARKOV _Route10AfterBattleText3
 	db "@"
 
 Route10Text4:
@@ -142,15 +142,15 @@ Route10Text4:
 	jp TextScriptEnd
 
 Route10BattleText4:
-	TX_FAR _Route10BattleText4
+	TX_MARKOV _Route10BattleText4
 	db "@"
 
 Route10EndBattleText4:
-	TX_FAR _Route10EndBattleText4
+	TX_MARKOV _Route10EndBattleText4
 	db "@"
 
 Route10AfterBattleText4:
-	TX_FAR _Route10AfterBattleText4
+	TX_MARKOV _Route10AfterBattleText4
 	db "@"
 
 Route10Text5:
@@ -160,15 +160,15 @@ Route10Text5:
 	jp TextScriptEnd
 
 Route10BattleText5:
-	TX_FAR _Route10BattleText5
+	TX_MARKOV _Route10BattleText5
 	db "@"
 
 Route10EndBattleText5:
-	TX_FAR _Route10EndBattleText5
+	TX_MARKOV _Route10EndBattleText5
 	db "@"
 
 Route10AfterBattleText5:
-	TX_FAR _Route10AfterBattleText5
+	TX_MARKOV _Route10AfterBattleText5
 	db "@"
 
 Route10Text6:
@@ -178,22 +178,22 @@ Route10Text6:
 	jp TextScriptEnd
 
 Route10BattleText6:
-	TX_FAR _Route10BattleText6
+	TX_MARKOV _Route10BattleText6
 	db "@"
 
 Route10EndBattleText6:
-	TX_FAR _Route10EndBattleText6
+	TX_MARKOV _Route10EndBattleText6
 	db "@"
 
 Route10AfterBattleText6:
-	TX_FAR _Route10AfterBattleText6
+	TX_MARKOV _Route10AfterBattleText6
 	db "@"
 
 Route10Text9:
 Route10Text7:
-	TX_FAR _Route10Text7 ; _Route10Text9
+	TX_MARKOV _Route10Text7 ; _Route10Text9
 	db "@"
 
 Route10Text10:
-	TX_FAR _Route10Text10
+	TX_MARKOV _Route10Text10
 	db "@"

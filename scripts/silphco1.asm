@@ -12,5 +12,5 @@ SilphCo1TextPointers:
 	dw SilphCo1Text1
 
 SilphCo1Text1:
-	TX_FAR _SilphCo1Text1
+	TX_MARKOV _SilphCo1Text1
 	db "@"

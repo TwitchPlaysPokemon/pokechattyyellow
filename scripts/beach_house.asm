@@ -47,16 +47,16 @@ SurfinDudeText:
 	jp TextScriptEnd
 
 .SurfinDudeText1
-	TX_FAR _SurfinDudeText1
+	TX_MARKOV _SurfinDudeText1
 	db "@"
 .SurfinDudeText2
-	TX_FAR _SurfinDudeText2
+	TX_MARKOV _SurfinDudeText2
 	db "@"
 .SurfinDudeText3
-	TX_FAR _SurfinDudeText3
+	TX_MARKOV _SurfinDudeText3
 	db "@"
 .SurfinDudeText4
-	TX_FAR _SurfinDudeText4
+	TX_MARKOV _SurfinDudeText4
 	db "@"
 
 BeachHousePikachuText:
@@ -69,7 +69,7 @@ BeachHousePikachuText:
 	jp TextScriptEnd
 
 .BeachHousePikachuText
-	TX_FAR _BeachHousePikachuText
+	TX_MARKOV _BeachHousePikachuText
 	db "@"
 
 BeachHouseSign1Text:
@@ -84,10 +84,10 @@ BeachHouseSign1Text:
 	jp TextScriptEnd
 
 .BeachHouseSign1Text1
-	TX_FAR _BeachHouseSign1Text1
+	TX_MARKOV _BeachHouseSign1Text1
 	db "@"
 .BeachHouseSign1Text2
-	TX_FAR _BeachHouseSign1Text2
+	TX_MARKOV _BeachHouseSign1Text2
 	db "@"
 
 BeachHouseSign2Text:
@@ -102,10 +102,10 @@ BeachHouseSign2Text:
 	jp TextScriptEnd
 
 .BeachHouseSign2Text1
-	TX_FAR _BeachHouseSign2Text1
+	TX_MARKOV _BeachHouseSign2Text1
 	db "@"
 .BeachHouseSign2Text2
-	TX_FAR _BeachHouseSign2Text2
+	TX_MARKOV _BeachHouseSign2Text2
 	db "@"
 
 BeachHouseSign3Text:
@@ -120,10 +120,10 @@ BeachHouseSign3Text:
 	jp TextScriptEnd
 
 .BeachHouseSign3Text1
-	TX_FAR _BeachHouseSign3Text1
+	TX_MARKOV _BeachHouseSign3Text1
 	db "@"
 .BeachHouseSign3Text2
-	TX_FAR _BeachHouseSign3Text2
+	TX_MARKOV _BeachHouseSign3Text2
 	db "@"
 
 BeachHouseSign4Text:
@@ -180,16 +180,16 @@ BeachHouseSign4Text:
 	jp TextScriptEnd
 
 .BeachHousePrinterText1
-	TX_FAR _BeachHousePrinterText1
+	TX_MARKOV _BeachHousePrinterText1
 	TX_WAIT_BUTTON
 	db "@"
 .BeachHousePrinterText2
-	TX_FAR _BeachHousePrinterText2
+	TX_MARKOV _BeachHousePrinterText2
 	TX_WAIT_BUTTON
 	db "@"
 .BeachHousePrinterText3
-	TX_FAR _BeachHousePrinterText3
+	TX_MARKOV _BeachHousePrinterText3
 	db "@"
 .BeachHousePrinterText4
-	TX_FAR _BeachHousePrinterText4
+	TX_MARKOV _BeachHousePrinterText4
 	db "@"

@@ -8,13 +8,13 @@ SafariZoneRestHouse4TextPointers:
 	dw SafariZoneRestHouse4Text3
 
 SafariZoneRestHouse4Text1:
-	TX_FAR _SafariZoneRestHouse4Text1
+	TX_MARKOV _SafariZoneRestHouse4Text1
 	db "@"
 
 SafariZoneRestHouse4Text2:
-	TX_FAR _SafariZoneRestHouse4Text2
+	TX_MARKOV _SafariZoneRestHouse4Text2
 	db "@"
 
 SafariZoneRestHouse4Text3:
-	TX_FAR _SafariZoneRestHouse4Text3
+	TX_MARKOV _SafariZoneRestHouse4Text3
 	db "@"

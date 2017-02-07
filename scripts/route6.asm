@@ -85,15 +85,15 @@ Route6Text1:
 	jp TextScriptEnd
 
 Route6BattleText1:
-	TX_FAR _Route6BattleText1
+	TX_MARKOV _Route6BattleText1
 	db "@"
 
 Route6EndBattleText1:
-	TX_FAR _Route6EndBattleText1
+	TX_MARKOV _Route6EndBattleText1
 	db "@"
 
 Route6AfterBattleText1:
-	TX_FAR _Route6AfterBattleText1
+	TX_MARKOV _Route6AfterBattleText1
 	db "@"
 
 Route6Text2:
@@ -103,15 +103,15 @@ Route6Text2:
 	jp TextScriptEnd
 
 Route6BattleText2:
-	TX_FAR _Route6BattleText2
+	TX_MARKOV _Route6BattleText2
 	db "@"
 
 Route6EndBattleText2:
-	TX_FAR _Route6EndBattleText2
+	TX_MARKOV _Route6EndBattleText2
 	db "@"
 
 Route6AfterBattleText2:
-	TX_FAR _Route6AfterBattleText2
+	TX_MARKOV _Route6AfterBattleText2
 	db "@"
 
 Route6Text3:
@@ -121,15 +121,15 @@ Route6Text3:
 	jp TextScriptEnd
 
 Route6BattleText3:
-	TX_FAR _Route6BattleText3
+	TX_MARKOV _Route6BattleText3
 	db "@"
 
 Route6EndBattleText3:
-	TX_FAR _Route6EndBattleText3
+	TX_MARKOV _Route6EndBattleText3
 	db "@"
 
 Route6AfterBattleText3:
-	TX_FAR _Route6AfterBattleText3
+	TX_MARKOV _Route6AfterBattleText3
 	db "@"
 
 Route6Text4:
@@ -139,15 +139,15 @@ Route6Text4:
 	jp TextScriptEnd
 
 Route6BattleText4:
-	TX_FAR _Route6BattleText4
+	TX_MARKOV _Route6BattleText4
 	db "@"
 
 Route6EndBattleText4:
-	TX_FAR _Route6EndBattleText4
+	TX_MARKOV _Route6EndBattleText4
 	db "@"
 
 Route6AfterBattleText4:
-	TX_FAR _Route6AfterBattleText4
+	TX_MARKOV _Route6AfterBattleText4
 	db "@"
 
 Route6Text5:
@@ -157,15 +157,15 @@ Route6Text5:
 	jp TextScriptEnd
 
 Route6BattleText5:
-	TX_FAR _Route6BattleText5
+	TX_MARKOV _Route6BattleText5
 	db "@"
 
 Route6EndBattleText5:
-	TX_FAR _Route6EndBattleText5
+	TX_MARKOV _Route6EndBattleText5
 	db "@"
 
 Route6AfterBattleText5:
-	TX_FAR _Route6AfterBattleText5
+	TX_MARKOV _Route6AfterBattleText5
 	db "@"
 
 Route6Text6:
@@ -175,17 +175,17 @@ Route6Text6:
 	jp TextScriptEnd
 
 Route6BattleText6:
-	TX_FAR _Route6BattleText6
+	TX_MARKOV _Route6BattleText6
 	db "@"
 
 Route6EndBattleText6:
-	TX_FAR _Route6EndBattleText6
+	TX_MARKOV _Route6EndBattleText6
 	db "@"
 
 Route6AfterBattleText6:
-	TX_FAR _Route6AfterBattleText6
+	TX_MARKOV _Route6AfterBattleText6
 	db "@"
 
 Route6Text7:
-	TX_FAR _Route6Text7
+	TX_MARKOV _Route6Text7
 	db "@"

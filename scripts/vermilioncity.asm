@@ -148,7 +148,7 @@ VermilionCityTextPointers:
 	dw VermilionCityText14
 
 VermilionCityText1:
-	TX_FAR _VermilionCityText1
+	TX_MARKOV _VermilionCityText1
 	db "@"
 
 VermilionCityText2:
@@ -165,11 +165,11 @@ VermilionCityText2:
 	jp TextScriptEnd
 
 VermilionCityText_198a7:
-	TX_FAR _VermilionCityText_198a7
+	TX_MARKOV _VermilionCityText_198a7
 	db "@"
 
 VermilionCityText_198ac:
-	TX_FAR _VermilionCityText_198ac
+	TX_MARKOV _VermilionCityText_198ac
 	db "@"
 
 VermilionCityText3:
@@ -215,31 +215,31 @@ VermilionCityCoords1:
 	db $ff
 
 SSAnneWelcomeText4:
-	TX_FAR _SSAnneWelcomeText4
+	TX_MARKOV _SSAnneWelcomeText4
 	db "@"
 
 SSAnneWelcomeText9:
-	TX_FAR _SSAnneWelcomeText9
+	TX_MARKOV _SSAnneWelcomeText9
 	db "@"
 
 SSAnneFlashedTicketText:
-	TX_FAR _SSAnneFlashedTicketText
+	TX_MARKOV _SSAnneFlashedTicketText
 	db "@"
 
 SSAnneNoTicketText:
-	TX_FAR _SSAnneNoTicketText
+	TX_MARKOV _SSAnneNoTicketText
 	db "@"
 
 SSAnneNotHereText:
-	TX_FAR _SSAnneNotHereText
+	TX_MARKOV _SSAnneNotHereText
 	db "@"
 
 VermilionCityText4:
-	TX_FAR _VermilionCityText4
+	TX_MARKOV _VermilionCityText4
 	db "@"
 
 VermilionCityText5:
-	TX_FAR _VermilionCityText5
+	TX_MARKOV _VermilionCityText5
 	TX_ASM
 	ld a, MACHOP
 	call PlayCry
@@ -248,11 +248,11 @@ VermilionCityText5:
 	ret
 
 VermilionCityText15:
-	TX_FAR _VermilionCityText15
+	TX_MARKOV _VermilionCityText15
 	db "@"
 
 VermilionCityText6:
-	TX_FAR _VermilionCityText6
+	TX_MARKOV _VermilionCityText6
 	db "@"
 
 VermilionCityText8:

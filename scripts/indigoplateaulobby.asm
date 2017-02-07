@@ -26,11 +26,11 @@ IndigoHealNurseText:
 	TX_POKECENTER_NURSE
 
 IndigoPlateauLobbyText2:
-	TX_FAR _IndigoPlateauLobbyText2
+	TX_MARKOV _IndigoPlateauLobbyText2
 	db "@"
 
 IndigoPlateauLobbyText3:
-	TX_FAR _IndigoPlateauLobbyText3
+	TX_MARKOV _IndigoPlateauLobbyText3
 	db "@"
 
 IndigoTradeNurseText:

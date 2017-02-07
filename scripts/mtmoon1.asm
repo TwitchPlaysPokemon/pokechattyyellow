@@ -132,89 +132,89 @@ MtMoon1TalkToTrainer:
 	jp TextScriptEnd
 
 MtMoon1BattleText2:
-	TX_FAR _MtMoon1BattleText2
+	TX_MARKOV _MtMoon1BattleText2
 	db "@"
 
 MtMoon1EndBattleText2:
-	TX_FAR _MtMoon1EndBattleText2
+	TX_MARKOV _MtMoon1EndBattleText2
 	db "@"
 
 MtMoon1AfterBattleText2:
-	TX_FAR _MtMoon1AfterBattleText2
+	TX_MARKOV _MtMoon1AfterBattleText2
 	db "@"
 
 MtMoon1BattleText3:
-	TX_FAR _MtMoon1BattleText3
+	TX_MARKOV _MtMoon1BattleText3
 	db "@"
 
 MtMoon1EndBattleText3:
-	TX_FAR _MtMoon1EndBattleText3
+	TX_MARKOV _MtMoon1EndBattleText3
 	db "@"
 
 MtMoon1AfterBattleText3:
-	TX_FAR _MtMoon1AfterBattleText3
+	TX_MARKOV _MtMoon1AfterBattleText3
 	db "@"
 
 MtMoon1BattleText4:
-	TX_FAR _MtMoon1BattleText4
+	TX_MARKOV _MtMoon1BattleText4
 	db "@"
 
 MtMoon1EndBattleText4:
-	TX_FAR _MtMoon1EndBattleText4
+	TX_MARKOV _MtMoon1EndBattleText4
 	db "@"
 
 MtMoon1AfterBattleText4:
-	TX_FAR _MtMoon1AfterBattleText4
+	TX_MARKOV _MtMoon1AfterBattleText4
 	db "@"
 
 MtMoon1BattleText5:
-	TX_FAR _MtMoon1BattleText5
+	TX_MARKOV _MtMoon1BattleText5
 	db "@"
 
 MtMoon1EndBattleText5:
-	TX_FAR _MtMoon1EndBattleText5
+	TX_MARKOV _MtMoon1EndBattleText5
 	db "@"
 
 MtMoon1AfterBattleText5:
-	TX_FAR _MtMoon1AfterBattleText5
+	TX_MARKOV _MtMoon1AfterBattleText5
 	db "@"
 
 MtMoon1BattleText6:
-	TX_FAR _MtMoon1BattleText6
+	TX_MARKOV _MtMoon1BattleText6
 	db "@"
 
 MtMoon1EndBattleText6:
-	TX_FAR _MtMoon1EndBattleText6
+	TX_MARKOV _MtMoon1EndBattleText6
 	db "@"
 
 MtMoon1AfterBattleText6:
-	TX_FAR _MtMoon1AfterBattleText6
+	TX_MARKOV _MtMoon1AfterBattleText6
 	db "@"
 
 MtMoon1BattleText7:
-	TX_FAR _MtMoon1BattleText7
+	TX_MARKOV _MtMoon1BattleText7
 	db "@"
 
 MtMoon1EndBattleText7:
-	TX_FAR _MtMoon1EndBattleText7
+	TX_MARKOV _MtMoon1EndBattleText7
 	db "@"
 
 MtMoon1AfterBattleText7:
-	TX_FAR _MtMoon1AfterBattleText7
+	TX_MARKOV _MtMoon1AfterBattleText7
 	db "@"
 
 MtMoon1BattleText8:
-	TX_FAR _MtMoon1BattleText8
+	TX_MARKOV _MtMoon1BattleText8
 	db "@"
 
 MtMoon1EndBattleText8:
-	TX_FAR _MtMoon1EndBattleText8
+	TX_MARKOV _MtMoon1EndBattleText8
 	db "@"
 
 MtMoon1AfterBattleText8:
-	TX_FAR _MtMoon1AfterBattleText8
+	TX_MARKOV _MtMoon1AfterBattleText8
 	db "@"
 
 MtMoon1Text14:
-	TX_FAR _MtMoon1Text14
+	TX_MARKOV _MtMoon1Text14
 	db "@"

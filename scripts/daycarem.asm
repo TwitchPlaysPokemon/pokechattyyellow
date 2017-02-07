@@ -238,63 +238,63 @@ DayCareMText1:
 	jp TextScriptEnd
 
 DayCareIntroText:
-	TX_FAR _DayCareIntroText
+	TX_MARKOV _DayCareIntroText
 	db "@"
 
 DayCareWhichMonText:
-	TX_FAR _DayCareWhichMonText
+	TX_MARKOV _DayCareWhichMonText
 	db "@"
 
 DayCareWillLookAfterMonText:
-	TX_FAR _DayCareWillLookAfterMonText
+	TX_MARKOV _DayCareWillLookAfterMonText
 	db "@"
 
 DayCareComeSeeMeInAWhileText:
-	TX_FAR _DayCareComeSeeMeInAWhileText
+	TX_MARKOV _DayCareComeSeeMeInAWhileText
 	db "@"
 
 DayCareMonHasGrownText:
-	TX_FAR _DayCareMonHasGrownText
+	TX_MARKOV _DayCareMonHasGrownText
 	db "@"
 
 DayCareOweMoneyText:
-	TX_FAR _DayCareOweMoneyText
+	TX_MARKOV _DayCareOweMoneyText
 	db "@"
 
 DayCareGotMonBackText:
-	TX_FAR _DayCareGotMonBackText
+	TX_MARKOV _DayCareGotMonBackText
 	db "@"
 
 DayCareMonNeedsMoreTimeText:
-	TX_FAR _DayCareMonNeedsMoreTimeText
+	TX_MARKOV _DayCareMonNeedsMoreTimeText
 	db "@"
 
 DayCareAllRightThenText:
-	TX_FAR _DayCareAllRightThenText
+	TX_MARKOV _DayCareAllRightThenText
 DayCareComeAgainText:
-	TX_FAR _DayCareComeAgainText
+	TX_MARKOV _DayCareComeAgainText
 	db "@"
 
 DayCareNoRoomForMonText:
-	TX_FAR _DayCareNoRoomForMonText
+	TX_MARKOV _DayCareNoRoomForMonText
 	db "@"
 
 DayCareOnlyHaveOneMonText:
-	TX_FAR _DayCareOnlyHaveOneMonText
+	TX_MARKOV _DayCareOnlyHaveOneMonText
 	db "@"
 
 DayCareCantAcceptMonWithHMText:
-	TX_FAR _DayCareCantAcceptMonWithHMText
+	TX_MARKOV _DayCareCantAcceptMonWithHMText
 	db "@"
 
 DayCareHeresYourMonText:
-	TX_FAR _DayCareHeresYourMonText
+	TX_MARKOV _DayCareHeresYourMonText
 	db "@"
 
 DayCareNotEnoughMoneyText:
-	TX_FAR _DayCareNotEnoughMoneyText
+	TX_MARKOV _DayCareNotEnoughMoneyText
 	db "@"
 
 DayCareCantAcceptTheBirdText:
-	TX_FAR _DayCareCantAcceptTheBirdText
+	TX_MARKOV _DayCareCantAcceptTheBirdText
 	db "@"

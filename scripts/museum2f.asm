@@ -12,19 +12,19 @@ Museum2FTextPointers:
 	dw Museum2FText7
 
 Museum2FText1:
-	TX_FAR _Museum2FText1
+	TX_MARKOV _Museum2FText1
 	db "@"
 
 Museum2FText2:
-	TX_FAR _Museum2FText2
+	TX_MARKOV _Museum2FText2
 	db "@"
 
 Museum2FText3:
-	TX_FAR _Museum2FText3
+	TX_MARKOV _Museum2FText3
 	db "@"
 
 Museum2FText4:
-	TX_FAR _Museum2FText4
+	TX_MARKOV _Museum2FText4
 	db "@"
 
 Museum2FText5:
@@ -51,21 +51,21 @@ Museum2FText5:
 	jp TextScriptEnd
 
 Museum2FText_5c20e:
-	TX_FAR _Museum2FText5
+	TX_MARKOV _Museum2FText5
 	db "@"
 
 Museum2FText_5c213:
-	TX_FAR _Museum2FPikachuText1
+	TX_MARKOV _Museum2FPikachuText1
 	db "@"
 
 Museum2FText_5c218:
-	TX_FAR _Museum2FPikachuText2
+	TX_MARKOV _Museum2FPikachuText2
 	db "@"
 
 Museum2FText6:
-	TX_FAR _Museum2FText6
+	TX_MARKOV _Museum2FText6
 	db "@"
 
 Museum2FText7:
-	TX_FAR _Museum2FText7
+	TX_MARKOV _Museum2FText7
 	db "@"

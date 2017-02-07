@@ -7,9 +7,9 @@ VermilionMartTextPointers:
 	dw VermilionMartText3
 
 VermilionMartText2:
-	TX_FAR _VermilionMartText2
+	TX_MARKOV _VermilionMartText2
 	db "@"
 
 VermilionMartText3:
-	TX_FAR _VermilionMartText3
+	TX_MARKOV _VermilionMartText3
 	db "@"

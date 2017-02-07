@@ -138,52 +138,52 @@ RemoveItemByIDBank12:
 	ret
 
 CeladonMartRoofText_484ee:
-	TX_FAR _CeladonMartRoofText_484ee
+	TX_MARKOV _CeladonMartRoofText_484ee
 	db "@"
 
 CeladonMartRoofText_484f3:
-	TX_FAR _CeladonMartRoofText_484f3
+	TX_MARKOV _CeladonMartRoofText_484f3
 	TX_WAIT_BUTTON
 	db "@"
 
 CeladonMartRoofText_484f9:
-	TX_FAR _CeladonMartRoofText_484f9
+	TX_MARKOV _CeladonMartRoofText_484f9
 	TX_SFX_ITEM
-	TX_FAR _CeladonMartRoofText_484fe
+	TX_MARKOV _CeladonMartRoofText_484fe
 	TX_WAIT_BUTTON
 	db "@"
 
 CeladonMartRoofText_48504:
-	TX_FAR _CeladonMartRoofText_48504
+	TX_MARKOV _CeladonMartRoofText_48504
 	TX_WAIT_BUTTON
 	db "@"
 
 CeladonMartRoofText_4850a:
-	TX_FAR _CeladonMartRoofText_4850a
+	TX_MARKOV _CeladonMartRoofText_4850a
 	TX_SFX_ITEM
-	TX_FAR _CeladonMartRoofText_4850f
+	TX_MARKOV _CeladonMartRoofText_4850f
 	TX_WAIT_BUTTON
 	db "@"
 
 CeladonMartRoofText_48515:
-	TX_FAR _CeladonMartRoofText_48515
+	TX_MARKOV _CeladonMartRoofText_48515
 	TX_WAIT_BUTTON
 	db "@"
 
 ReceivedTM49Text:
-	TX_FAR _ReceivedTM49Text
+	TX_MARKOV _ReceivedTM49Text
 	TX_SFX_ITEM
-	TX_FAR _CeladonMartRoofText_48520
+	TX_MARKOV _CeladonMartRoofText_48520
 	TX_WAIT_BUTTON
 	db "@"
 
 CeladonMartRoofText_48526:
-	TX_FAR _CeladonMartRoofText_48526
+	TX_MARKOV _CeladonMartRoofText_48526
 	TX_WAIT_BUTTON
 	db "@"
 
 CeladonMartRoofText_4852c:
-	TX_FAR _CeladonMartRoofText_4852c
+	TX_MARKOV _CeladonMartRoofText_4852c
 	TX_WAIT_BUTTON
 	db "@"
 
@@ -218,7 +218,7 @@ CeladonMartRoofTextPointers:
 	dw CeladonMartRoofText6
 
 CeladonMartRoofText1:
-	TX_FAR _CeladonMartRoofText1
+	TX_MARKOV _CeladonMartRoofText1
 	db "@"
 
 CeladonMartRoofText2:
@@ -244,16 +244,16 @@ CeladonMartRoofText2:
 	jp TextScriptEnd
 
 CeladonMartRoofText3:
-	TX_FAR _CeladonMartRoofText_48598
+	TX_MARKOV _CeladonMartRoofText_48598
 	db "@"
 
 CeladonMartRoofText4:
-	TX_FAR _CeladonMartRoofText4
+	TX_MARKOV _CeladonMartRoofText4
 	db "@"
 
 CeladonMartRoofText5:
 	TX_VENDING_MACHINE
 
 CeladonMartRoofText6:
-	TX_FAR _CeladonMartRoofText6
+	TX_MARKOV _CeladonMartRoofText6
 	db "@"

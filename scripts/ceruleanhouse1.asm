@@ -61,45 +61,45 @@ CeruleanHouse1Text1:
 	jp TextScriptEnd
 
 CeruleanHouse1Text_1cfc8:
-	TX_FAR MelanieText1
+	TX_MARKOV MelanieText1
 	TX_WAIT_BUTTON
 	db "@"
 
 CeruleanHouse1Text_1cfce:
-	TX_FAR MelanieText2
+	TX_MARKOV MelanieText2
 	db "@"
 
 CeruleanHouse1Text_1cfd3:
-	TX_FAR MelanieText3
+	TX_MARKOV MelanieText3
 	TX_WAIT_BUTTON
 	db "@"
 
 CeruleanHouse1Text_1cfd9:
-	TX_FAR MelanieText4
+	TX_MARKOV MelanieText4
 	TX_WAIT_BUTTON
 	db "@"
 
 CeruleanHouse1Text_1cfdf:
-	TX_FAR MelanieText5
+	TX_MARKOV MelanieText5
 	TX_WAIT_BUTTON
 	db "@"
 
 CeruleanHouse1Text2:
-	TX_FAR MelanieBulbasaurText
+	TX_MARKOV MelanieBulbasaurText
 	TX_ASM
 	ld a, BULBASAUR
 	call PlayCry
 	jp TextScriptEnd
 
 CeruleanHouse1Text3:
-	TX_FAR MelanieOddishText
+	TX_MARKOV MelanieOddishText
 	TX_ASM
 	ld a, ODDISH
 	call PlayCry
 	jp TextScriptEnd
 
 CeruleanHouse1Text4:
-	TX_FAR MelanieSandshrewText
+	TX_MARKOV MelanieSandshrewText
 	TX_ASM
 	ld a, SANDSHREW
 	call PlayCry

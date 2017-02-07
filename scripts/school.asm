@@ -8,7 +8,7 @@ SchoolTextPointers:
 	dw SchoolText3
 
 SchoolText1:
-	TX_FAR _SchoolText1
+	TX_MARKOV _SchoolText1
 	db "@"
 
 SchoolText2:

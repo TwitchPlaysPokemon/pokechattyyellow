@@ -7,7 +7,7 @@ LavenderMartTextPointers:
 	dw LavenderMartText3
 
 LavenderMartText2:
-	TX_FAR _LavenderMartText2
+	TX_MARKOV _LavenderMartText2
 	db "@"
 
 LavenderMartText3:
@@ -24,9 +24,9 @@ LavenderMartText3:
 	jp TextScriptEnd
 
 .ReviveText
-	TX_FAR _LavenderMartReviveText
+	TX_MARKOV _LavenderMartReviveText
 	db "@"
 
 .NuggetText
-	TX_FAR _LavenderMartNuggetText
+	TX_MARKOV _LavenderMartNuggetText
 	db "@"

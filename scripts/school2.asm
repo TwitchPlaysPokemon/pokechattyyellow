@@ -4,7 +4,7 @@ Func_f1c03:
 	ret
 
 SchoolText_f1c0a:
-	TX_FAR _SchoolText3
+	TX_MARKOV _SchoolText3
 	db "@"
 
 Func_f1c0f:
@@ -13,5 +13,5 @@ Func_f1c0f:
 	ret
 
 SchoolText_f1c16:
-	TX_FAR _SchoolText2
+	TX_MARKOV _SchoolText2
 	db "@"

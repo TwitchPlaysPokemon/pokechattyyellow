@@ -13,11 +13,11 @@ RockTunnelHealNurseText:
 	TX_POKECENTER_NURSE
 
 RockTunnelPokecenterText2:
-	TX_FAR _RockTunnelPokecenterText2
+	TX_MARKOV _RockTunnelPokecenterText2
 	db "@"
 
 RockTunnelPokecenterText3:
-	TX_FAR _RockTunnelPokecenterText3
+	TX_MARKOV _RockTunnelPokecenterText3
 	db "@"
 
 RockTunnelTradeNurseText:

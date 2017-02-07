@@ -66,37 +66,37 @@ PokemonTower3Text3:
 	jp TextScriptEnd
 
 PokemonTower3BattleText1:
-	TX_FAR _PokemonTower3BattleText1
+	TX_MARKOV _PokemonTower3BattleText1
 	db "@"
 
 PokemonTower3EndBattleText1:
-	TX_FAR _PokemonTower3EndBattleText1
+	TX_MARKOV _PokemonTower3EndBattleText1
 	db "@"
 
 PokemonTower3AfterBattleText1:
-	TX_FAR _PokemonTower3AfterBattleText1
+	TX_MARKOV _PokemonTower3AfterBattleText1
 	db "@"
 
 PokemonTower3BattleText2:
-	TX_FAR _PokemonTower3BattleText2
+	TX_MARKOV _PokemonTower3BattleText2
 	db "@"
 
 PokemonTower3EndBattleText2:
-	TX_FAR _PokemonTower3EndBattleText2
+	TX_MARKOV _PokemonTower3EndBattleText2
 	db "@"
 
 PokemonTower3AfterBattleText2:
-	TX_FAR _PokemonTower3AfterBattleText2
+	TX_MARKOV _PokemonTower3AfterBattleText2
 	db "@"
 
 PokemonTower3BattleText3:
-	TX_FAR _PokemonTower3BattleText3
+	TX_MARKOV _PokemonTower3BattleText3
 	db "@"
 
 PokemonTower3EndBattleText3:
-	TX_FAR _PokemonTower3EndBattleText3
+	TX_MARKOV _PokemonTower3EndBattleText3
 	db "@"
 
 PokemonTower3AfterBattleText3:
-	TX_FAR _PokemonTower3AfterBattleText3
+	TX_MARKOV _PokemonTower3AfterBattleText3
 	db "@"

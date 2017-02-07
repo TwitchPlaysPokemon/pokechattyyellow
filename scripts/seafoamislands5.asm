@@ -159,7 +159,7 @@ ArticunoText:
 	jp TextScriptEnd
 
 ArticunoBattleText:
-	TX_FAR _ArticunoBattleText
+	TX_MARKOV _ArticunoBattleText
 	TX_ASM
 	ld a, ARTICUNO
 	call PlayCry
@@ -167,9 +167,9 @@ ArticunoBattleText:
 	jp TextScriptEnd
 
 SeafoamIslands5Text4:
-	TX_FAR _SeafoamIslands5Text4
+	TX_MARKOV _SeafoamIslands5Text4
 	db "@"
 
 SeafoamIslands5Text5:
-	TX_FAR _SeafoamIslands5Text5
+	TX_MARKOV _SeafoamIslands5Text5
 	db "@"

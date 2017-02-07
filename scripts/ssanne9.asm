@@ -101,7 +101,7 @@ SSAnne9Text5:
 	jp TextScriptEnd
 
 SSAnne9Text_61bf2:
-	TX_FAR _SSAnne9Text_61bf2
+	TX_MARKOV _SSAnne9Text_61bf2
 	db "@"
 
 SSAnne9Text7:
@@ -111,7 +111,7 @@ SSAnne9Text7:
 	jp TextScriptEnd
 
 SSAnne9Text_61c01:
-	TX_FAR _SSAnne9Text_61c01
+	TX_MARKOV _SSAnne9Text_61c01
 	db "@"
 
 SSAnne9Text8:
@@ -121,7 +121,7 @@ SSAnne9Text8:
 	jp TextScriptEnd
 
 SSAnne9Text_61c10:
-	TX_FAR _SSAnne9Text_61c10
+	TX_MARKOV _SSAnne9Text_61c10
 	db "@"
 
 SSAnne9Text10:
@@ -145,49 +145,49 @@ SSAnne9Text13:
 	jp TextScriptEnd
 
 SSAnne9BattleText1:
-	TX_FAR _SSAnne9BattleText1
+	TX_MARKOV _SSAnne9BattleText1
 	db "@"
 
 SSAnne9EndBattleText1:
-	TX_FAR _SSAnne9EndBattleText1
+	TX_MARKOV _SSAnne9EndBattleText1
 	db "@"
 
 SSAnne9AfterBattleText1:
-	TX_FAR _SSAnne9AfterBattleText1
+	TX_MARKOV _SSAnne9AfterBattleText1
 	db "@"
 
 SSAnne9BattleText2:
-	TX_FAR _SSAnne9BattleText2
+	TX_MARKOV _SSAnne9BattleText2
 	db "@"
 
 SSAnne9EndBattleText2:
-	TX_FAR _SSAnne9EndBattleText2
+	TX_MARKOV _SSAnne9EndBattleText2
 	db "@"
 
 SSAnne9AfterBattleText2:
-	TX_FAR _SSAnne9AfterBattleText2
+	TX_MARKOV _SSAnne9AfterBattleText2
 	db "@"
 
 SSAnne9BattleText3:
-	TX_FAR _SSAnne9BattleText3
+	TX_MARKOV _SSAnne9BattleText3
 	db "@"
 
 SSAnne9EndBattleText3:
-	TX_FAR _SSAnne9EndBattleText3
+	TX_MARKOV _SSAnne9EndBattleText3
 	db "@"
 
 SSAnne9AfterBattleText3:
-	TX_FAR _SSAnne9AfterBattleText3
+	TX_MARKOV _SSAnne9AfterBattleText3
 	db "@"
 
 SSAnne9BattleText4:
-	TX_FAR _SSAnne9BattleText4
+	TX_MARKOV _SSAnne9BattleText4
 	db "@"
 
 SSAnne9EndBattleText4:
-	TX_FAR _SSAnne9EndBattleText4
+	TX_MARKOV _SSAnne9EndBattleText4
 	db "@"
 
 SSAnne9AfterBattleText4:
-	TX_FAR _SSAnne9AfterBattleText4
+	TX_MARKOV _SSAnne9AfterBattleText4
 	db "@"

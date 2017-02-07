@@ -767,15 +767,15 @@ OaksLabText1:
 	jp TextScriptEnd
 
 OaksLabText_1c97d:
-	TX_FAR _OaksLabGaryText1
+	TX_MARKOV _OaksLabGaryText1
 	db "@"
 
 OaksLabText_1c982:
-	TX_FAR _OaksLabText40
+	TX_MARKOV _OaksLabText40
 	db "@"
 
 OaksLabText_1c987:
-	TX_FAR _OaksLabText41
+	TX_MARKOV _OaksLabText41
 	db "@"
 
 OaksLabText2:
@@ -791,7 +791,7 @@ OaksLabText2:
 	jp TextScriptEnd
 
 OaksLabText_1c9a7:
-	TX_FAR _OaksLabText39
+	TX_MARKOV _OaksLabText39
 	db "@"
 
 OaksLabScript_1c9ac:
@@ -887,39 +887,39 @@ OaksLabText3:
 	jp TextScriptEnd
 
 OaksLabText_1ca72:
-	TX_FAR _OaksLabPikachuText
+	TX_MARKOV _OaksLabPikachuText
 	db "@"
 
 OaksLabText_1ca77:
-	TX_FAR _OaksLabText_1d2f5
+	TX_MARKOV _OaksLabText_1d2f5
 	db "@"
 
 OaksLabText_1ca7c:
-	TX_FAR _OaksLabText_1d2fa
+	TX_MARKOV _OaksLabText_1d2fa
 	db "@"
 
 OaksLabText_1ca81:
-	TX_FAR _OaksLabDeliverParcelText1
+	TX_MARKOV _OaksLabDeliverParcelText1
 	TX_SFX_KEY_ITEM
-	TX_FAR _OaksLabDeliverParcelText2
+	TX_MARKOV _OaksLabDeliverParcelText2
 	db "@"
 
 OaksLabText_1ca8b:
-	TX_FAR _OaksLabAroundWorldText
+	TX_MARKOV _OaksLabAroundWorldText
 	db "@"
 
 OaksLabText_1ca90:
-	TX_FAR _OaksLabGivePokeballsText1
+	TX_MARKOV _OaksLabGivePokeballsText1
 	TX_SFX_KEY_ITEM
-	TX_FAR _OaksLabGivePokeballsText2
+	TX_MARKOV _OaksLabGivePokeballsText2
 	db "@"
 
 OaksLabText_1ca9a:
-	TX_FAR _OaksLabPleaseVisitText
+	TX_MARKOV _OaksLabPleaseVisitText
 	db "@"
 
 OaksLabText_1ca9f:
-	TX_FAR _OaksLabText_1d31d
+	TX_MARKOV _OaksLabText_1d31d
 	db "@"
 
 OaksLabText4:
@@ -930,11 +930,11 @@ OaksLabText5:
 	jp TextScriptEnd
 
 OaksLabText_1caae:
-	TX_FAR _OaksLabText_1d32c
+	TX_MARKOV _OaksLabText_1d32c
 	db "@"
 
 OaksLabText6:
-	TX_FAR _OaksLabText8
+	TX_MARKOV _OaksLabText8
 	db "@"
 
 OaksLabText7:
@@ -944,7 +944,7 @@ OaksLabText7:
 	jp TextScriptEnd
 
 OaksLabText_1cac2:
-	TX_FAR _OaksLabText_1d340
+	TX_MARKOV _OaksLabText_1d340
 	db "@"
 
 OaksLabText13:
@@ -954,7 +954,7 @@ OaksLabText13:
 	jp TextScriptEnd
 
 OaksLabText_1cad1:
-	TX_FAR _OaksLabRivalWaitingText
+	TX_MARKOV _OaksLabRivalWaitingText
 	db "@"
 
 OaksLabText14:
@@ -964,7 +964,7 @@ OaksLabText14:
 	jp TextScriptEnd
 
 OaksLabText_1cae0:
-	TX_FAR _OaksLabChooseMonText
+	TX_MARKOV _OaksLabChooseMonText
 	db "@"
 
 OaksLabText15:
@@ -974,7 +974,7 @@ OaksLabText15:
 	jp TextScriptEnd
 
 OaksLabText_1caef:
-	TX_FAR _OaksLabRivalInterjectionText
+	TX_MARKOV _OaksLabRivalInterjectionText
 	db "@"
 
 OaksLabText16:
@@ -984,7 +984,7 @@ OaksLabText16:
 	jp TextScriptEnd
 
 OaksLabText_1cafe:
-	TX_FAR _OaksLabBePatientText
+	TX_MARKOV _OaksLabBePatientText
 	db "@"
 
 OaksLabText17:
@@ -1002,24 +1002,24 @@ OaksLabText17:
 	jp TextScriptEnd
 
 OaksLabText_1cb25:
-	TX_FAR _OaksLabRivalTakesText1
+	TX_MARKOV _OaksLabRivalTakesText1
 	db "@"
 
 OaksLabText_1cb2a:
-	TX_FAR _OaksLabRivalTakesText2
+	TX_MARKOV _OaksLabRivalTakesText2
 	TX_SFX_KEY_ITEM
 	db "@"
 
 OaksLabText_1cb30:
-	TX_FAR _OaksLabRivalTakesText3
+	TX_MARKOV _OaksLabRivalTakesText3
 	db "@"
 
 OaksLabText_1cb35:
-	TX_FAR _OaksLabRivalTakesText4
+	TX_MARKOV _OaksLabRivalTakesText4
 	db "@"
 
 OaksLabText_1cb3a:
-	TX_FAR _OaksLabRivalTakesText5
+	TX_MARKOV _OaksLabRivalTakesText5
 	db "@"
 
 OaksLabText18:
@@ -1051,11 +1051,11 @@ OaksLabText18:
 	jp TextScriptEnd
 
 OaksLabText_1cb85:
-	TX_FAR _OaksLabOakGivesText
+	TX_MARKOV _OaksLabOakGivesText
 	db "@"
 
 OaksLabText_1cb8a:
-	TX_FAR _OaksLabReceivedText
+	TX_MARKOV _OaksLabReceivedText
 	TX_SFX_KEY_ITEM
 	db "@"
 
@@ -1066,7 +1066,7 @@ OaksLabText10:
 	jp TextScriptEnd
 
 OaksLabText_1cb9a:
-	TX_FAR _OaksLabLeavingText
+	TX_MARKOV _OaksLabLeavingText
 	db "@"
 
 OaksLabText11:
@@ -1076,15 +1076,15 @@ OaksLabText11:
 	jp TextScriptEnd
 
 OaksLabText_1cba9:
-	TX_FAR _OaksLabRivalChallengeText
+	TX_MARKOV _OaksLabRivalChallengeText
 	db "@"
 
 OaksLabRivalDefeatedText:
-	TX_FAR _OaksLabText_1d3be
+	TX_MARKOV _OaksLabText_1d3be
 	db "@"
 
 OaksLabRivalBeatYouText:
-	TX_FAR _OaksLabText_1d3c3
+	TX_MARKOV _OaksLabText_1d3c3
 	db "@"
 
 OaksLabText12:
@@ -1094,7 +1094,7 @@ OaksLabText12:
 	jp TextScriptEnd
 
 OaksLabText_1cbc2:
-	TX_FAR _OaksLabRivalToughenUpText
+	TX_MARKOV _OaksLabRivalToughenUpText
 	db "@"
 
 OaksLabText26:
@@ -1106,7 +1106,7 @@ OaksLabText26:
 	jp TextScriptEnd
 
 OaksLabText_1cbdb:
-	TX_FAR _OaksLabPikachuDislikesPokeballsText1
+	TX_MARKOV _OaksLabPikachuDislikesPokeballsText1
 	db "@"
 
 OaksLabText27:
@@ -1116,36 +1116,36 @@ OaksLabText27:
 	jp TextScriptEnd
 
 OaksLabText_1cbea:
-	TX_FAR _OaksLabPikachuDislikesPokeballsText2
+	TX_MARKOV _OaksLabPikachuDislikesPokeballsText2
 	db "@"
 
 OaksLabText19:
-	TX_FAR _OaksLabText21
+	TX_MARKOV _OaksLabText21
 	db "@"
 
 OaksLabText20:
-	TX_FAR _OaksLabText22
+	TX_MARKOV _OaksLabText22
 	db "@"
 
 OaksLabText21:
-	TX_FAR _OaksLabText23
+	TX_MARKOV _OaksLabText23
 	db "@"
 
 OaksLabText22:
-	TX_FAR _OaksLabText24
+	TX_MARKOV _OaksLabText24
 	db "@"
 
 OaksLabText23:
-	TX_FAR _OaksLabText25
+	TX_MARKOV _OaksLabText25
 	TX_SFX_KEY_ITEM
 	db "@"
 
 OaksLabText24:
-	TX_FAR _OaksLabText26
+	TX_MARKOV _OaksLabText26
 	db "@"
 
 OaksLabText25:
-	TX_FAR _OaksLabText27
+	TX_MARKOV _OaksLabText27
 	db "@"
 
 OaksLabText8:
@@ -1156,5 +1156,5 @@ OaksLabText9:
 	jp TextScriptEnd
 
 OaksLabText_1c31d:
-	TX_FAR _OaksLabText_1d405
+	TX_MARKOV _OaksLabText_1d405
 	db "@"

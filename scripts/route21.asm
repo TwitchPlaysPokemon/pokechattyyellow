@@ -162,109 +162,109 @@ Route21Text9:
 	jp TextScriptEnd
 
 Route21BattleText1:
-	TX_FAR _Route21BattleText1
+	TX_MARKOV _Route21BattleText1
 	db "@"
 
 Route21EndBattleText1:
-	TX_FAR _Route21EndBattleText1
+	TX_MARKOV _Route21EndBattleText1
 	db "@"
 
 Route21AfterBattleText1:
-	TX_FAR _Route21AfterBattleText1
+	TX_MARKOV _Route21AfterBattleText1
 	db "@"
 
 Route21BattleText2:
-	TX_FAR _Route21BattleText2
+	TX_MARKOV _Route21BattleText2
 	db "@"
 
 Route21EndBattleText2:
-	TX_FAR _Route21EndBattleText2
+	TX_MARKOV _Route21EndBattleText2
 	db "@"
 
 Route21AfterBattleText2:
-	TX_FAR _Route21AfterBattleText2
+	TX_MARKOV _Route21AfterBattleText2
 	db "@"
 
 Route21BattleText3:
-	TX_FAR _Route21BattleText3
+	TX_MARKOV _Route21BattleText3
 	db "@"
 
 Route21EndBattleText3:
-	TX_FAR _Route21EndBattleText3
+	TX_MARKOV _Route21EndBattleText3
 	db "@"
 
 Route21AfterBattleText3:
-	TX_FAR _Route21AfterBattleText3
+	TX_MARKOV _Route21AfterBattleText3
 	db "@"
 
 Route21BattleText4:
-	TX_FAR _Route21BattleText4
+	TX_MARKOV _Route21BattleText4
 	db "@"
 
 Route21EndBattleText4:
-	TX_FAR _Route21EndBattleText4
+	TX_MARKOV _Route21EndBattleText4
 	db "@"
 
 Route21AfterBattleText4:
-	TX_FAR _Route21AfterBattleText4
+	TX_MARKOV _Route21AfterBattleText4
 	db "@"
 
 Route21BattleText5:
-	TX_FAR _Route21BattleText5
+	TX_MARKOV _Route21BattleText5
 	db "@"
 
 Route21EndBattleText5:
-	TX_FAR _Route21EndBattleText5
+	TX_MARKOV _Route21EndBattleText5
 	db "@"
 
 Route21AfterBattleText5:
-	TX_FAR _Route21AfterBattleText5
+	TX_MARKOV _Route21AfterBattleText5
 	db "@"
 
 Route21BattleText6:
-	TX_FAR _Route21BattleText6
+	TX_MARKOV _Route21BattleText6
 	db "@"
 
 Route21EndBattleText6:
-	TX_FAR _Route21EndBattleText6
+	TX_MARKOV _Route21EndBattleText6
 	db "@"
 
 Route21AfterBattleText6:
-	TX_FAR _Route21AfterBattleText6
+	TX_MARKOV _Route21AfterBattleText6
 	db "@"
 
 Route21BattleText7:
-	TX_FAR _Route21BattleText7
+	TX_MARKOV _Route21BattleText7
 	db "@"
 
 Route21EndBattleText7:
-	TX_FAR _Route21EndBattleText7
+	TX_MARKOV _Route21EndBattleText7
 	db "@"
 
 Route21AfterBattleText7:
-	TX_FAR _Route21AfterBattleText7
+	TX_MARKOV _Route21AfterBattleText7
 	db "@"
 
 Route21BattleText8:
-	TX_FAR _Route21BattleText8
+	TX_MARKOV _Route21BattleText8
 	db "@"
 
 Route21EndBattleText8:
-	TX_FAR _Route21EndBattleText8
+	TX_MARKOV _Route21EndBattleText8
 	db "@"
 
 Route21AfterBattleText8:
-	TX_FAR _Route21AfterBattleText8
+	TX_MARKOV _Route21AfterBattleText8
 	db "@"
 
 Route21BattleText9:
-	TX_FAR _Route21BattleText9
+	TX_MARKOV _Route21BattleText9
 	db "@"
 
 Route21EndBattleText9:
-	TX_FAR _Route21EndBattleText9
+	TX_MARKOV _Route21EndBattleText9
 	db "@"
 
 Route21AfterBattleText9:
-	TX_FAR _Route21AfterBattleText9
+	TX_MARKOV _Route21AfterBattleText9
 	db "@"

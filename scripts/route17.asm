@@ -130,15 +130,15 @@ Route17Text1:
 	jp TextScriptEnd
 
 Route17BattleText1:
-	TX_FAR _Route17BattleText1
+	TX_MARKOV _Route17BattleText1
 	db "@"
 
 Route17EndBattleText1:
-	TX_FAR _Route17EndBattleText1
+	TX_MARKOV _Route17EndBattleText1
 	db "@"
 
 Route17AfterBattleText1:
-	TX_FAR _Route17AfterBattleText1
+	TX_MARKOV _Route17AfterBattleText1
 	db "@"
 
 Route17Text2:
@@ -148,15 +148,15 @@ Route17Text2:
 	jp TextScriptEnd
 
 Route17BattleText2:
-	TX_FAR _Route17BattleText2
+	TX_MARKOV _Route17BattleText2
 	db "@"
 
 Route17EndBattleText2:
-	TX_FAR _Route17EndBattleText2
+	TX_MARKOV _Route17EndBattleText2
 	db "@"
 
 Route17AfterBattleText2:
-	TX_FAR _Route17AfterBattleText2
+	TX_MARKOV _Route17AfterBattleText2
 	db "@"
 
 Route17Text3:
@@ -166,15 +166,15 @@ Route17Text3:
 	jp TextScriptEnd
 
 Route17BattleText3:
-	TX_FAR _Route17BattleText3
+	TX_MARKOV _Route17BattleText3
 	db "@"
 
 Route17EndBattleText3:
-	TX_FAR _Route17EndBattleText3
+	TX_MARKOV _Route17EndBattleText3
 	db "@"
 
 Route17AfterBattleText3:
-	TX_FAR _Route17AfterBattleText3
+	TX_MARKOV _Route17AfterBattleText3
 	db "@"
 
 Route17Text4:
@@ -184,15 +184,15 @@ Route17Text4:
 	jp TextScriptEnd
 
 Route17BattleText4:
-	TX_FAR _Route17BattleText4
+	TX_MARKOV _Route17BattleText4
 	db "@"
 
 Route17EndBattleText4:
-	TX_FAR _Route17EndBattleText4
+	TX_MARKOV _Route17EndBattleText4
 	db "@"
 
 Route17AfterBattleText4:
-	TX_FAR _Route17AfterBattleText4
+	TX_MARKOV _Route17AfterBattleText4
 	db "@"
 
 Route17Text5:
@@ -202,15 +202,15 @@ Route17Text5:
 	jp TextScriptEnd
 
 Route17BattleText5:
-	TX_FAR _Route17BattleText5
+	TX_MARKOV _Route17BattleText5
 	db "@"
 
 Route17EndBattleText5:
-	TX_FAR _Route17EndBattleText5
+	TX_MARKOV _Route17EndBattleText5
 	db "@"
 
 Route17AfterBattleText5:
-	TX_FAR _Route17AfterBattleText5
+	TX_MARKOV _Route17AfterBattleText5
 	db "@"
 
 Route17Text6:
@@ -220,15 +220,15 @@ Route17Text6:
 	jp TextScriptEnd
 
 Route17BattleText6:
-	TX_FAR _Route17BattleText6
+	TX_MARKOV _Route17BattleText6
 	db "@"
 
 Route17EndBattleText6:
-	TX_FAR _Route17EndBattleText6
+	TX_MARKOV _Route17EndBattleText6
 	db "@"
 
 Route17AfterBattleText6:
-	TX_FAR _Route17AfterBattleText6
+	TX_MARKOV _Route17AfterBattleText6
 	db "@"
 
 Route17Text7:
@@ -238,15 +238,15 @@ Route17Text7:
 	jp TextScriptEnd
 
 Route17BattleText7:
-	TX_FAR _Route17BattleText7
+	TX_MARKOV _Route17BattleText7
 	db "@"
 
 Route17EndBattleText7:
-	TX_FAR _Route17EndBattleText7
+	TX_MARKOV _Route17EndBattleText7
 	db "@"
 
 Route17AfterBattleText7:
-	TX_FAR _Route17AfterBattleText7
+	TX_MARKOV _Route17AfterBattleText7
 	db "@"
 
 Route17Text8:
@@ -256,15 +256,15 @@ Route17Text8:
 	jp TextScriptEnd
 
 Route17BattleText8:
-	TX_FAR _Route17BattleText8
+	TX_MARKOV _Route17BattleText8
 	db "@"
 
 Route17EndBattleText8:
-	TX_FAR _Route17EndBattleText8
+	TX_MARKOV _Route17EndBattleText8
 	db "@"
 
 Route17AfterBattleText8:
-	TX_FAR _Route17AfterBattleText8
+	TX_MARKOV _Route17AfterBattleText8
 	db "@"
 
 Route17Text9:
@@ -274,15 +274,15 @@ Route17Text9:
 	jp TextScriptEnd
 
 Route17BattleText9:
-	TX_FAR _Route17BattleText9
+	TX_MARKOV _Route17BattleText9
 	db "@"
 
 Route17EndBattleText9:
-	TX_FAR _Route17EndBattleText9
+	TX_MARKOV _Route17EndBattleText9
 	db "@"
 
 Route17AfterBattleText9:
-	TX_FAR _Route17AfterBattleText9
+	TX_MARKOV _Route17AfterBattleText9
 	db "@"
 
 Route17Text10:
@@ -292,37 +292,37 @@ Route17Text10:
 	jp TextScriptEnd
 
 Route17BattleText10:
-	TX_FAR _Route17BattleText10
+	TX_MARKOV _Route17BattleText10
 	db "@"
 
 Route17EndBattleText10:
-	TX_FAR _Route17EndBattleText10
+	TX_MARKOV _Route17EndBattleText10
 	db "@"
 
 Route17AfterBattleText10:
-	TX_FAR _Route17AfterBattleText10
+	TX_MARKOV _Route17AfterBattleText10
 	db "@"
 
 Route17Text11:
-	TX_FAR _Route17Text11
+	TX_MARKOV _Route17Text11
 	db "@"
 
 Route17Text12:
-	TX_FAR _Route17Text12
+	TX_MARKOV _Route17Text12
 	db "@"
 
 Route17Text13:
-	TX_FAR _Route17Text13
+	TX_MARKOV _Route17Text13
 	db "@"
 
 Route17Text14:
-	TX_FAR _Route17Text14
+	TX_MARKOV _Route17Text14
 	db "@"
 
 Route17Text15:
-	TX_FAR _Route17Text15
+	TX_MARKOV _Route17Text15
 	db "@"
 
 Route17Text16:
-	TX_FAR _Route17Text16
+	TX_MARKOV _Route17Text16
 	db "@"

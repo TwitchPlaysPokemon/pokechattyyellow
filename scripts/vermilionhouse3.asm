@@ -5,5 +5,5 @@ VermilionHouse3TextPointers:
 	dw VermilionHouse3Text1
 
 VermilionHouse3Text1:
-	TX_FAR TeachingHMsText
+	TX_MARKOV TeachingHMsText
 	db "@"

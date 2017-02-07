@@ -138,15 +138,15 @@ Route16Text1:
 	jp TextScriptEnd
 
 Route16BattleText1:
-	TX_FAR _Route16BattleText1
+	TX_MARKOV _Route16BattleText1
 	db "@"
 
 Route16EndBattleText1:
-	TX_FAR _Route16EndBattleText1
+	TX_MARKOV _Route16EndBattleText1
 	db "@"
 
 Route16AfterBattleText1:
-	TX_FAR _Route16AfterBattleText1
+	TX_MARKOV _Route16AfterBattleText1
 	db "@"
 
 Route16Text2:
@@ -156,15 +156,15 @@ Route16Text2:
 	jp TextScriptEnd
 
 Route16BattleText2:
-	TX_FAR _Route16BattleText2
+	TX_MARKOV _Route16BattleText2
 	db "@"
 
 Route16EndBattleText2:
-	TX_FAR _Route16EndBattleText2
+	TX_MARKOV _Route16EndBattleText2
 	db "@"
 
 Route16AfterBattleText2:
-	TX_FAR _Route16AfterBattleText2
+	TX_MARKOV _Route16AfterBattleText2
 	db "@"
 
 Route16Text3:
@@ -174,15 +174,15 @@ Route16Text3:
 	jp TextScriptEnd
 
 Route16BattleText3:
-	TX_FAR _Route16BattleText3
+	TX_MARKOV _Route16BattleText3
 	db "@"
 
 Route16EndBattleText3:
-	TX_FAR _Route16EndBattleText3
+	TX_MARKOV _Route16EndBattleText3
 	db "@"
 
 Route16AfterBattleText3:
-	TX_FAR _Route16AfterBattleText3
+	TX_MARKOV _Route16AfterBattleText3
 	db "@"
 
 Route16Text4:
@@ -192,15 +192,15 @@ Route16Text4:
 	jp TextScriptEnd
 
 Route16BattleText4:
-	TX_FAR _Route16BattleText4
+	TX_MARKOV _Route16BattleText4
 	db "@"
 
 Route16EndBattleText4:
-	TX_FAR _Route16EndBattleText4
+	TX_MARKOV _Route16EndBattleText4
 	db "@"
 
 Route16AfterBattleText4:
-	TX_FAR _Route16AfterBattleText4
+	TX_MARKOV _Route16AfterBattleText4
 	db "@"
 
 Route16Text5:
@@ -210,15 +210,15 @@ Route16Text5:
 	jp TextScriptEnd
 
 Route16BattleText5:
-	TX_FAR _Route16BattleText5
+	TX_MARKOV _Route16BattleText5
 	db "@"
 
 Route16EndBattleText5:
-	TX_FAR _Route16EndBattleText5
+	TX_MARKOV _Route16EndBattleText5
 	db "@"
 
 Route16AfterBattleText5:
-	TX_FAR _Route16AfterBattleText5
+	TX_MARKOV _Route16AfterBattleText5
 	db "@"
 
 Route16Text6:
@@ -228,33 +228,33 @@ Route16Text6:
 	jp TextScriptEnd
 
 Route16BattleText6:
-	TX_FAR _Route16BattleText6
+	TX_MARKOV _Route16BattleText6
 	db "@"
 
 Route16EndBattleText6:
-	TX_FAR _Route16EndBattleText6
+	TX_MARKOV _Route16EndBattleText6
 	db "@"
 
 Route16AfterBattleText6:
-	TX_FAR _Route16AfterBattleText6
+	TX_MARKOV _Route16AfterBattleText6
 	db "@"
 
 Route16Text7:
-	TX_FAR _Route16Text7
+	TX_MARKOV _Route16Text7
 	db "@"
 
 Route16Text10:
-	TX_FAR _Route16Text10
+	TX_MARKOV _Route16Text10
 	db "@"
 
 Route16Text11:
-	TX_FAR _Route16Text11
+	TX_MARKOV _Route16Text11
 	db "@"
 
 Route16Text8:
-	TX_FAR _Route16Text8
+	TX_MARKOV _Route16Text8
 	db "@"
 
 Route16Text9:
-	TX_FAR _Route16Text9
+	TX_MARKOV _Route16Text9
 	db "@"

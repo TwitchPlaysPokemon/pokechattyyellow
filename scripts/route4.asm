@@ -33,7 +33,7 @@ Route4TrainerHeader0:
 	db $ff
 
 Route4Text1:
-	TX_FAR _Route4Text1
+	TX_MARKOV _Route4Text1
 	db "@"
 
 Route4Text2:
@@ -43,21 +43,21 @@ Route4Text2:
 	jp TextScriptEnd
 
 Route4BattleText1:
-	TX_FAR _Route4BattleText1
+	TX_MARKOV _Route4BattleText1
 	db "@"
 
 Route4EndBattleText1:
-	TX_FAR _Route4EndBattleText1
+	TX_MARKOV _Route4EndBattleText1
 	db "@"
 
 Route4AfterBattleText1:
-	TX_FAR _Route4AfterBattleText1
+	TX_MARKOV _Route4AfterBattleText1
 	db "@"
 
 Route4Text5:
-	TX_FAR _Route4Text5
+	TX_MARKOV _Route4Text5
 	db "@"
 
 Route4Text6:
-	TX_FAR _Route4Text6
+	TX_MARKOV _Route4Text6
 	db "@"

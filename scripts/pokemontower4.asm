@@ -69,37 +69,37 @@ PokemonTower4Text3:
 	jp TextScriptEnd
 
 PokemonTower4BattleText1:
-	TX_FAR _PokemonTower4BattleText1
+	TX_MARKOV _PokemonTower4BattleText1
 	db "@"
 
 PokemonTower4EndBattleText1:
-	TX_FAR _PokemonTower4EndBattleText1
+	TX_MARKOV _PokemonTower4EndBattleText1
 	db "@"
 
 PokemonTower4AfterBattleText1:
-	TX_FAR _PokemonTower4AfterBattleText1
+	TX_MARKOV _PokemonTower4AfterBattleText1
 	db "@"
 
 PokemonTower4BattleText2:
-	TX_FAR _PokemonTower4BattleText2
+	TX_MARKOV _PokemonTower4BattleText2
 	db "@"
 
 PokemonTower4EndBattleText2:
-	TX_FAR _PokemonTower4EndBattleText2
+	TX_MARKOV _PokemonTower4EndBattleText2
 	db "@"
 
 PokemonTower4AfterBattleText2:
-	TX_FAR _PokemonTower4AfterBattleText2
+	TX_MARKOV _PokemonTower4AfterBattleText2
 	db "@"
 
 PokemonTower4BattleText3:
-	TX_FAR _PokemonTower4BattleText3
+	TX_MARKOV _PokemonTower4BattleText3
 	db "@"
 
 PokemonTower4EndBattleText3:
-	TX_FAR _PokemonTower4EndBattleText3
+	TX_MARKOV _PokemonTower4EndBattleText3
 	db "@"
 
 PokemonTower4AfterBattleText3:
-	TX_FAR _PokemonTower4AfterBattleText3
+	TX_MARKOV _PokemonTower4AfterBattleText3
 	db "@"

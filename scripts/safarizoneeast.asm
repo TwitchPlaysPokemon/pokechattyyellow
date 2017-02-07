@@ -11,13 +11,13 @@ SafariZoneEastTextPointers:
 	dw SafariZoneEastText7
 
 SafariZoneEastText5:
-	TX_FAR _SafariZoneEastText5
+	TX_MARKOV _SafariZoneEastText5
 	db "@"
 
 SafariZoneEastText6:
-	TX_FAR _SafariZoneEastText6
+	TX_MARKOV _SafariZoneEastText6
 	db "@"
 
 SafariZoneEastText7:
-	TX_FAR _SafariZoneEastText7
+	TX_MARKOV _SafariZoneEastText7
 	db "@"

@@ -28,18 +28,18 @@ SaffronHouse2Text1:
 	jp TextScriptEnd
 
 TM29PreReceiveText:
-	TX_FAR _TM29PreReceiveText
+	TX_MARKOV _TM29PreReceiveText
 	db "@"
 
 ReceivedTM29Text:
-	TX_FAR _ReceivedTM29Text
+	TX_MARKOV _ReceivedTM29Text
 	TX_SFX_ITEM
 	db "@"
 
 TM29ExplanationText:
-	TX_FAR _TM29ExplanationText
+	TX_MARKOV _TM29ExplanationText
 	db "@"
 
 TM29NoRoomText:
-	TX_FAR _TM29NoRoomText
+	TX_MARKOV _TM29NoRoomText
 	db "@"

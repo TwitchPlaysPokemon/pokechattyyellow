@@ -337,19 +337,19 @@ SilphCo7Text1:
 	jp TextScriptEnd
 
 .MeetLaprasGuyText
-	TX_FAR _MeetLaprasGuyText
+	TX_MARKOV _MeetLaprasGuyText
 	db "@"
 
 .HeresYourLaprasText
-	TX_FAR _HeresYourLaprasText
+	TX_MARKOV _HeresYourLaprasText
 	db "@"
 
 .LaprasGuyText
-	TX_FAR _LaprasGuyText
+	TX_MARKOV _LaprasGuyText
 	db "@"
 
 .LaprasGuySavedText
-	TX_FAR _LaprasGuySavedText
+	TX_MARKOV _LaprasGuySavedText
 	db "@"
 
 SilphCo7Text2:
@@ -366,11 +366,11 @@ SilphCo7Text2:
 	jp TextScriptEnd
 
 .rockettext
-	TX_FAR _SilphCo7Text_51e00
+	TX_MARKOV _SilphCo7Text_51e00
 	db "@"
 
 .savedtext
-	TX_FAR _CanceledMasterBallText
+	TX_MARKOV _CanceledMasterBallText
 	db "@"
 
 SilphCo7Text3:
@@ -387,11 +387,11 @@ SilphCo7Text3:
 	jp TextScriptEnd
 
 .rockettext
-	TX_FAR _SilphCo7Text_51e23
+	TX_MARKOV _SilphCo7Text_51e23
 	db "@"
 
 .savedtext
-	TX_FAR _SilphCo7Text_51e28
+	TX_MARKOV _SilphCo7Text_51e28
 	db "@"
 
 SilphCo7Text4:
@@ -408,11 +408,11 @@ SilphCo7Text4:
 	jp TextScriptEnd
 
 .rockettext
-	TX_FAR _SilphCo7Text_51e46
+	TX_MARKOV _SilphCo7Text_51e46
 	db "@"
 
 .savedtext
-	TX_FAR _SilphCo7Text_51e4b
+	TX_MARKOV _SilphCo7Text_51e4b
 	db "@"
 
 SilphCo7Text5:
@@ -422,15 +422,15 @@ SilphCo7Text5:
 	jp TextScriptEnd
 
 SilphCo7BattleText1:
-	TX_FAR _SilphCo7BattleText1
+	TX_MARKOV _SilphCo7BattleText1
 	db "@"
 
 SilphCo7EndBattleText1:
-	TX_FAR _SilphCo7EndBattleText1
+	TX_MARKOV _SilphCo7EndBattleText1
 	db "@"
 
 SilphCo7AfterBattleText1:
-	TX_FAR _SilphCo7AfterBattleText1
+	TX_MARKOV _SilphCo7AfterBattleText1
 	db "@"
 
 SilphCo7Text6:
@@ -440,15 +440,15 @@ SilphCo7Text6:
 	jp TextScriptEnd
 
 SilphCo7BattleText2:
-	TX_FAR _SilphCo7BattleText2
+	TX_MARKOV _SilphCo7BattleText2
 	db "@"
 
 SilphCo7EndBattleText2:
-	TX_FAR _SilphCo7EndBattleText2
+	TX_MARKOV _SilphCo7EndBattleText2
 	db "@"
 
 SilphCo7AfterBattleText2:
-	TX_FAR _SilphCo7AfterBattleText2
+	TX_MARKOV _SilphCo7AfterBattleText2
 	db "@"
 
 SilphCo7Text7:
@@ -458,15 +458,15 @@ SilphCo7Text7:
 	jp TextScriptEnd
 
 SilphCo7BattleText3:
-	TX_FAR _SilphCo7BattleText3
+	TX_MARKOV _SilphCo7BattleText3
 	db "@"
 
 SilphCo7EndBattleText3:
-	TX_FAR _SilphCo7EndBattleText3
+	TX_MARKOV _SilphCo7EndBattleText3
 	db "@"
 
 SilphCo7AfterBattleText3:
-	TX_FAR _SilphCo7AfterBattleText3
+	TX_MARKOV _SilphCo7AfterBattleText3
 	db "@"
 
 SilphCo7Text8:
@@ -476,15 +476,15 @@ SilphCo7Text8:
 	jp TextScriptEnd
 
 SilphCo7BattleText4:
-	TX_FAR _SilphCo7BattleText4
+	TX_MARKOV _SilphCo7BattleText4
 	db "@"
 
 SilphCo7EndBattleText4:
-	TX_FAR _SilphCo7EndBattleText4
+	TX_MARKOV _SilphCo7EndBattleText4
 	db "@"
 
 SilphCo7AfterBattleText4:
-	TX_FAR _SilphCo7AfterBattleText4
+	TX_MARKOV _SilphCo7AfterBattleText4
 	db "@"
 
 SilphCo7Text9:
@@ -494,21 +494,21 @@ SilphCo7Text9:
 	jp TextScriptEnd
 
 SilphCo7Text_51ebe:
-	TX_FAR _SilphCo7Text_51ebe
+	TX_MARKOV _SilphCo7Text_51ebe
 	db "@"
 
 SilphCo7Text13:
-	TX_FAR _SilphCo7Text_51ec3
+	TX_MARKOV _SilphCo7Text_51ec3
 	db "@"
 
 SilphCo7Text14:
-	TX_FAR _SilphCo7Text_51ec8
+	TX_MARKOV _SilphCo7Text_51ec8
 	db "@"
 
 SilphCo7Text_51ecd:
-	TX_FAR _SilphCo7Text_51ecd
+	TX_MARKOV _SilphCo7Text_51ecd
 	db "@"
 
 SilphCo7Text15:
-	TX_FAR _SilphCo7Text_51ed2
+	TX_MARKOV _SilphCo7Text_51ed2
 	db "@"

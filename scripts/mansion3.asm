@@ -124,29 +124,29 @@ Mansion3Text2:
 	jp TextScriptEnd
 
 Mansion3BattleText1:
-	TX_FAR _Mansion3BattleText1
+	TX_MARKOV _Mansion3BattleText1
 	db "@"
 
 Mansion3EndBattleText1:
-	TX_FAR _Mansion3EndBattleText1
+	TX_MARKOV _Mansion3EndBattleText1
 	db "@"
 
 Mansion3AfterBattleText1:
-	TX_FAR _Mansion3AfterBattleText1
+	TX_MARKOV _Mansion3AfterBattleText1
 	db "@"
 
 Mansion3BattleText2:
-	TX_FAR _Mansion3BattleText2
+	TX_MARKOV _Mansion3BattleText2
 	db "@"
 
 Mansion3EndBattleText2:
-	TX_FAR _Mansion3EndBattleText2
+	TX_MARKOV _Mansion3EndBattleText2
 	db "@"
 
 Mansion3AfterBattleText2:
-	TX_FAR _Mansion3AfterBattleText2
+	TX_MARKOV _Mansion3AfterBattleText2
 	db "@"
 
 Mansion3Text5:
-	TX_FAR _Mansion3Text5
+	TX_MARKOV _Mansion3Text5
 	db "@"

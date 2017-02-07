@@ -18,15 +18,15 @@ Func_f2418:
 	jr .asm_f2427
 
 BillsHouseText_f243b:
-	TX_FAR _BillsHouseText_1e865
+	TX_MARKOV _BillsHouseText_1e865
 	db "@"
 
 BillsHouseText_f2440:
-	TX_FAR _BillsHouseText_1e86a
+	TX_MARKOV _BillsHouseText_1e86a
 	db "@"
 
 BillsHouseText_f2445:
-	TX_FAR _BillsHouseText_1e86f
+	TX_MARKOV _BillsHouseText_1e86f
 	db "@"
 
 Func_f244a:
@@ -57,21 +57,21 @@ Func_f244a:
 	ret
 
 BillsHouseText_f248c:
-	TX_FAR _BillThankYouText
+	TX_MARKOV _BillThankYouText
 	db "@"
 
 BillsHouseText_f2491:
-	TX_FAR _SSTicketReceivedText
+	TX_MARKOV _SSTicketReceivedText
 	TX_SFX_KEY_ITEM
 	TX_BUTTON_SOUND
 	db "@"
 
 BillsHouseText_f2498:
-	TX_FAR _SSTicketNoRoomText
+	TX_MARKOV _SSTicketNoRoomText
 	db "@"
 
 BillsHouseText_f249d:
-	TX_FAR _BillsHouseText_1e8cb
+	TX_MARKOV _BillsHouseText_1e8cb
 	db "@"
 
 Func_f24a2:
@@ -80,7 +80,7 @@ Func_f24a2:
 	ret
 
 BillsHouseText_f24a9:
-	TX_FAR _BillsHouseText_1e8da
+	TX_MARKOV _BillsHouseText_1e8da
 	db "@"
 
 Func_f24ae:

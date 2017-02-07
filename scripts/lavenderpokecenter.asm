@@ -16,11 +16,11 @@ LavenderHealNurseText:
 	TX_POKECENTER_NURSE
 
 LavenderPokecenterText2:
-	TX_FAR _LavenderPokecenterText2
+	TX_MARKOV _LavenderPokecenterText2
 	db "@"
 
 LavenderPokecenterText3:
-	TX_FAR _LavenderPokecenterText3
+	TX_MARKOV _LavenderPokecenterText3
 	db "@"
 
 LavenderPokecenterText5:

@@ -16,7 +16,7 @@ PewterMartText2:
 	jp TextScriptEnd
 
 .Text
-	TX_FAR _PewterMartText2
+	TX_MARKOV _PewterMartText2
 	db "@"
 
 PewterMartText3:
@@ -26,5 +26,5 @@ PewterMartText3:
 	jp TextScriptEnd
 
 .Text
-	TX_FAR _PewterMartText3
+	TX_MARKOV _PewterMartText3
 	db "@"

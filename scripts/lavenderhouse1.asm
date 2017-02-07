@@ -24,11 +24,11 @@ LavenderHouse1Text1:
 	jp TextScriptEnd
 
 LavenderHouse1Text_1d8d1:
-	TX_FAR _LavenderHouse1Text_1d8d1
+	TX_MARKOV _LavenderHouse1Text_1d8d1
 	db "@"
 
 LavenderHouse1Text_1d8d6:
-	TX_FAR _LavenderHouse1Text_1d8d6
+	TX_MARKOV _LavenderHouse1Text_1d8d6
 	db "@"
 
 LavenderHouse1Text2:
@@ -45,22 +45,22 @@ LavenderHouse1Text2:
 	jp TextScriptEnd
 
 LavenderHouse1Text_1d8f4:
-	TX_FAR _LavenderHouse1Text_1d8f4
+	TX_MARKOV _LavenderHouse1Text_1d8f4
 	db "@"
 
 LavenderHouse1Text_1d8f9:
-	TX_FAR _LavenderHouse1Text_1d8f9
+	TX_MARKOV _LavenderHouse1Text_1d8f9
 	db "@"
 
 LavenderHouse1Text3:
-	TX_FAR _LavenderHouse1Text3
+	TX_MARKOV _LavenderHouse1Text3
 	TX_ASM
 	ld a, PSYDUCK
 	call PlayCry
 	jp TextScriptEnd
 
 LavenderHouse1Text4:
-	TX_FAR _LavenderHouse1Text4
+	TX_MARKOV _LavenderHouse1Text4
 	TX_ASM
 	ld a, NIDORINO
 	call PlayCry
@@ -90,23 +90,23 @@ LavenderHouse1Text5:
 	jp TextScriptEnd
 
 LavenderHouse1Text_1d94c:
-	TX_FAR _LavenderHouse1Text_1d94c
+	TX_MARKOV _LavenderHouse1Text_1d94c
 	db "@"
 
 ReceivedFluteText:
-	TX_FAR _ReceivedFluteText
+	TX_MARKOV _ReceivedFluteText
 	db $11
-	TX_FAR _FluteExplanationText
+	TX_MARKOV _FluteExplanationText
 	db "@"
 
 FluteNoRoomText:
-	TX_FAR _FluteNoRoomText
+	TX_MARKOV _FluteNoRoomText
 	db "@"
 
 MrFujiAfterFluteText:
-	TX_FAR _MrFujiAfterFluteText
+	TX_MARKOV _MrFujiAfterFluteText
 	db "@"
 
 LavenderHouse1Text6:
-	TX_FAR _LavenderHouse1Text6
+	TX_MARKOV _LavenderHouse1Text6
 	db "@"

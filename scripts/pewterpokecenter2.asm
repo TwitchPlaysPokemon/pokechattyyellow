@@ -4,7 +4,7 @@ Func_f1d98:
 	ret
 
 PewterPokecenterText_f1d9f:
-	TX_FAR _PewterPokecenterText3
+	TX_MARKOV _PewterPokecenterText3
 	db "@"
 
 PewterJigglypuff:
@@ -61,7 +61,7 @@ PewterJigglypuff:
 	ret
 
 .Text
-	TX_FAR _PewterJigglypuffText
+	TX_MARKOV _PewterJigglypuffText
 	db "@"
 
 JigglypuffSpinData:

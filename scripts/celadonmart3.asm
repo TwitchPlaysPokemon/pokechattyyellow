@@ -26,50 +26,50 @@ CeladonMart3Text1:
 	jp TextScriptEnd
 
 CeladonMart3Text2:
-	TX_FAR _CeladonMart3Text2
+	TX_MARKOV _CeladonMart3Text2
 	db "@"
 
 CeladonMart3Text3:
-	TX_FAR _CeladonMart3Text3
+	TX_MARKOV _CeladonMart3Text3
 	db "@"
 
 CeladonMart3Text4:
-	TX_FAR _CeladonMart3Text4
+	TX_MARKOV _CeladonMart3Text4
 	db "@"
 
 CeladonMart3Text5:
-	TX_FAR _CeladonMart3Text5
+	TX_MARKOV _CeladonMart3Text5
 	db "@"
 
 CeladonMart3Text12
 CeladonMart3Text10:
 CeladonMart3Text8:
 CeladonMart3Text6:
-	TX_FAR _CeladonMart3Text6
+	TX_MARKOV _CeladonMart3Text6
 	db "@"
 
 CeladonMart3Text7:
-	TX_FAR _CeladonMart3Text7
+	TX_MARKOV _CeladonMart3Text7
 	db "@"
 
 CeladonMart3Text9:
-	TX_FAR _CeladonMart3Text9
+	TX_MARKOV _CeladonMart3Text9
 	db "@"
 
 CeladonMart3Text11:
-	TX_FAR _CeladonMart3Text11
+	TX_MARKOV _CeladonMart3Text11
 	db "@"
 
 CeladonMart3Text13:
-	TX_FAR _CeladonMart3Text13
+	TX_MARKOV _CeladonMart3Text13
 	db "@"
 
 CeladonMart3Text14:
-	TX_FAR _CeladonMart3Text14
+	TX_MARKOV _CeladonMart3Text14
 	db "@"
 
 CeladonMart3Text17:
 CeladonMart3Text16:
 CeladonMart3Text15:
-	TX_FAR _CeladonMart3Text15
+	TX_MARKOV _CeladonMart3Text15
 	db "@"

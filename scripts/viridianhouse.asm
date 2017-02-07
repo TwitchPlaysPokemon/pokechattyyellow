@@ -8,11 +8,11 @@ ViridianHouseTextPointers:
 	dw ViridianHouseText4
 
 ViridianHouseText1:
-	TX_FAR _ViridianHouseText1
+	TX_MARKOV _ViridianHouseText1
 	db "@"
 
 ViridianHouseText2:
-	TX_FAR _ViridianHouseText2
+	TX_MARKOV _ViridianHouseText2
 	db "@"
 
 ViridianHouseText3:
@@ -25,9 +25,9 @@ ViridianHouseText3:
 	jp TextScriptEnd
 
 ViridianHouseText_1d5b1:
-	TX_FAR _ViridianHouseText_1d5b1
+	TX_MARKOV _ViridianHouseText_1d5b1
 	db "@"
 
 ViridianHouseText4:
-	TX_FAR _ViridianHouseText4
+	TX_MARKOV _ViridianHouseText4
 	db "@"

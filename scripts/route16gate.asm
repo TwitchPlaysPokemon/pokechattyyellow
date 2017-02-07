@@ -106,17 +106,17 @@ Route16GateText1:
 	jp TextScriptEnd
 
 Route16GateText_49777:
-	TX_FAR _Route16GateText_49777
+	TX_MARKOV _Route16GateText_49777
 	db "@"
 
 Route16GateText_4977c:
-	TX_FAR _Route16GateText_4977c
+	TX_MARKOV _Route16GateText_4977c
 	db "@"
 
 Route16GateText3:
-	TX_FAR _Route16GateText_49781
+	TX_MARKOV _Route16GateText_49781
 	db "@"
 
 Route16GateText2:
-	TX_FAR _Route16GateText2
+	TX_MARKOV _Route16GateText2
 	db "@"

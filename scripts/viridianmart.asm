@@ -84,22 +84,22 @@ ViridianMartTextPointers:
 	dw ViridianMartText3
 
 ViridianMartText1:
-	TX_FAR _ViridianMartText1
+	TX_MARKOV _ViridianMartText1
 	db "@"
 
 ViridianMartText4:
-	TX_FAR _ViridianMartText4
+	TX_MARKOV _ViridianMartText4
 	db "@"
 
 ViridianMartText5:
-	TX_FAR ViridianMartParcelQuestText
+	TX_MARKOV ViridianMartParcelQuestText
 	TX_SFX_KEY_ITEM
 	db "@"
 
 ViridianMartText2:
-	TX_FAR _ViridianMartText2
+	TX_MARKOV _ViridianMartText2
 	db "@"
 
 ViridianMartText3:
-	TX_FAR _ViridianMartText3
+	TX_MARKOV _ViridianMartText3
 	db "@"

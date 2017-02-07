@@ -219,7 +219,7 @@ Route23Script_51388:
 	jp PrintText
 
 VictoryRoadGuardText1:
-	TX_FAR _VictoryRoadGuardText1
+	TX_MARKOV _VictoryRoadGuardText1
 	TX_ASM
 	ld a, SFX_DENIED
 	call PlaySoundWaitForCurrent
@@ -227,11 +227,11 @@ VictoryRoadGuardText1:
 	jp TextScriptEnd
 
 VictoryRoadGuardText2:
-	TX_FAR _VictoryRoadGuardText2
+	TX_MARKOV _VictoryRoadGuardText2
 	TX_SFX_ITEM
-	TX_FAR _VictoryRoadGuardText_513a3
+	TX_MARKOV _VictoryRoadGuardText_513a3
 	db "@"
 
 Route23Text8:
-	TX_FAR _Route23Text8
+	TX_MARKOV _Route23Text8
 	db "@"

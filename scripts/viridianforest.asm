@@ -79,7 +79,7 @@ ViridianForestTrainerHeader4:
 	db $ff
 
 ViridianForestText1:
-	TX_FAR _ViridianForestText1
+	TX_MARKOV _ViridianForestText1
 	db "@"
 
 ViridianForestText2:
@@ -110,67 +110,67 @@ ViridianForestTalkToTrainer:
 	jp TextScriptEnd
 
 ViridianForestBattleText1:
-	TX_FAR _ViridianForestBattleText1
+	TX_MARKOV _ViridianForestBattleText1
 	db "@"
 
 ViridianForestEndBattleText1:
-	TX_FAR _ViridianForestEndBattleText1
+	TX_MARKOV _ViridianForestEndBattleText1
 	db "@"
 
 ViridianForestAfterBattleText1:
-	TX_FAR _ViridianFrstAfterBattleText1
+	TX_MARKOV _ViridianFrstAfterBattleText1
 	db "@"
 
 ViridianForestBattleText2:
-	TX_FAR _ViridianForestBattleText2
+	TX_MARKOV _ViridianForestBattleText2
 	db "@"
 
 ViridianForestEndBattleText2:
-	TX_FAR _ViridianForestEndBattleText2
+	TX_MARKOV _ViridianForestEndBattleText2
 	db "@"
 
 ViridianForestAfterBattleText2:
-	TX_FAR _ViridianFrstAfterBattleText2
+	TX_MARKOV _ViridianFrstAfterBattleText2
 	db "@"
 
 ViridianForestBattleText3:
-	TX_FAR _ViridianForestBattleText3
+	TX_MARKOV _ViridianForestBattleText3
 	db "@"
 
 ViridianForestEndBattleText3:
-	TX_FAR _ViridianForestEndBattleText3
+	TX_MARKOV _ViridianForestEndBattleText3
 	db "@"
 
 ViridianForestAfterBattleText3:
-	TX_FAR _ViridianFrstAfterBattleText3
+	TX_MARKOV _ViridianFrstAfterBattleText3
 	db "@"
 
 ViridianForestBattleText4:
-	TX_FAR _ViridianForestBattleTextPikaGirl
+	TX_MARKOV _ViridianForestBattleTextPikaGirl
 	db "@"
 
 ViridianForestEndBattleText4:
-	TX_FAR _ViridianForestEndBattleTextPikaGirl
+	TX_MARKOV _ViridianForestEndBattleTextPikaGirl
 	db "@"
 
 ViridianForestAfterBattleText4:
-	TX_FAR _ViridianForestAfterBattleTextPikaGirl
+	TX_MARKOV _ViridianForestAfterBattleTextPikaGirl
 	db "@"
 
 ViridianForestBattleText5:
-	TX_FAR _ViridianForestBattleTextSamurai
+	TX_MARKOV _ViridianForestBattleTextSamurai
 	db "@"
 
 ViridianForestEndBattleText5:
-	TX_FAR _ViridianForestEndBattleTextSamurai
+	TX_MARKOV _ViridianForestEndBattleTextSamurai
 	db "@"
 
 ViridianForestAfterBattleText5:
-	TX_FAR _ViridianForestAfterBattleTextSamurai
+	TX_MARKOV _ViridianForestAfterBattleTextSamurai
 	db "@"
 
 ViridianForestText10:
-	TX_FAR _ViridianForestText8
+	TX_MARKOV _ViridianForestText8
 	db "@"
 
 ViridianForestText11:

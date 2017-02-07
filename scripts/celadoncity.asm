@@ -34,19 +34,19 @@ CeladonCityTextPointers:
 	dw CeladonCityText18
 
 CeladonCityText1:
-	TX_FAR _CeladonCityText1
+	TX_MARKOV _CeladonCityText1
 	db "@"
 
 CeladonCityText2:
-	TX_FAR _CeladonCityText2
+	TX_MARKOV _CeladonCityText2
 	db "@"
 
 CeladonCityText3:
-	TX_FAR _CeladonCityText3
+	TX_MARKOV _CeladonCityText3
 	db "@"
 
 CeladonCityText4:
-	TX_FAR _CeladonCityText4
+	TX_MARKOV _CeladonCityText4
 	db "@"
 
 CeladonCityText5:
@@ -73,39 +73,39 @@ CeladonCityText5:
 	jp TextScriptEnd
 
 TM41PreText:
-	TX_FAR _TM41PreText
+	TX_MARKOV _TM41PreText
 	db "@"
 
 ReceivedTM41Text:
-	TX_FAR _ReceivedTM41Text
+	TX_MARKOV _ReceivedTM41Text
 	TX_SFX_ITEM
 	db "@"
 
 TM41ExplanationText:
-	TX_FAR _TM41ExplanationText
+	TX_MARKOV _TM41ExplanationText
 	db "@"
 
 TM41NoRoomText:
-	TX_FAR _TM41NoRoomText
+	TX_MARKOV _TM41NoRoomText
 	db "@"
 
 CeladonCityText6:
-	TX_FAR _CeladonCityText6
+	TX_MARKOV _CeladonCityText6
 	db "@"
 
 CeladonCityText7:
-	TX_FAR _CeladonCityText7
+	TX_MARKOV _CeladonCityText7
 	TX_ASM
 	ld a, POLIWRATH
 	call PlayCry
 	jp TextScriptEnd
 
 CeladonCityText8:
-	TX_FAR _CeladonCityText8
+	TX_MARKOV _CeladonCityText8
 	db "@"
 
 CeladonCityText9:
-	TX_FAR _CeladonCityText9
+	TX_MARKOV _CeladonCityText9
 	db "@"
 
 CeladonCityText10:
@@ -114,29 +114,29 @@ CeladonCityText10:
 	jp TextScriptEnd
 
 CeladonCityText11:
-	TX_FAR _CeladonCityText11
+	TX_MARKOV _CeladonCityText11
 	db "@"
 
 CeladonCityText13:
-	TX_FAR _CeladonCityText13
+	TX_MARKOV _CeladonCityText13
 	db "@"
 
 CeladonCityText14:
-	TX_FAR _CeladonCityText14
+	TX_MARKOV _CeladonCityText14
 	db "@"
 
 CeladonCityText15:
-	TX_FAR _CeladonCityText15
+	TX_MARKOV _CeladonCityText15
 	db "@"
 
 CeladonCityText16:
-	TX_FAR _CeladonCityText16
+	TX_MARKOV _CeladonCityText16
 	db "@"
 
 CeladonCityText17:
-	TX_FAR _CeladonCityText17
+	TX_MARKOV _CeladonCityText17
 	db "@"
 
 CeladonCityText18:
-	TX_FAR _CeladonCityText18
+	TX_MARKOV _CeladonCityText18
 	db "@"

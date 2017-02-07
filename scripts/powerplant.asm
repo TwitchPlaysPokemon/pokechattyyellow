@@ -164,11 +164,11 @@ ZapdosText:
 	jr InitVoltorbBattle
 
 VoltorbBattleText:
-	TX_FAR _VoltorbBattleText
+	TX_MARKOV _VoltorbBattleText
 	db "@"
 
 ZapdosBattleText:
-	TX_FAR _ZapdosBattleText
+	TX_MARKOV _ZapdosBattleText
 	TX_ASM
 	ld a, ZAPDOS
 	call PlayCry

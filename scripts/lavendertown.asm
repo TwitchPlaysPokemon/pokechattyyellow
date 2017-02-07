@@ -27,37 +27,37 @@ LavenderTownText1:
 	jp TextScriptEnd
 
 LavenderTownText_4413c:
-	TX_FAR _LavenderTownText_4413c
+	TX_MARKOV _LavenderTownText_4413c
 	db "@"
 
 LavenderTownText_44141:
-	TX_FAR _LavenderTownText_44141
+	TX_MARKOV _LavenderTownText_44141
 	db "@"
 
 LavenderTownText_44146:
-	TX_FAR _LavenderTownText_44146
+	TX_MARKOV _LavenderTownText_44146
 	db "@"
 
 LavenderTownText2:
-	TX_FAR _LavenderTownText2
+	TX_MARKOV _LavenderTownText2
 	db "@"
 
 LavenderTownText3:
-	TX_FAR _LavenderTownText3
+	TX_MARKOV _LavenderTownText3
 	db "@"
 
 LavenderTownText4:
-	TX_FAR _LavenderTownText4
+	TX_MARKOV _LavenderTownText4
 	db "@"
 
 LavenderTownText5:
-	TX_FAR _LavenderTownText5
+	TX_MARKOV _LavenderTownText5
 	db "@"
 
 LavenderTownText8:
-	TX_FAR _LavenderTownText8
+	TX_MARKOV _LavenderTownText8
 	db "@"
 
 LavenderTownText9:
-	TX_FAR _LavenderTownText9
+	TX_MARKOV _LavenderTownText9
 	db "@"

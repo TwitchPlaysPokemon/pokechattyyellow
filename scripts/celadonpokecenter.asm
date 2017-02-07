@@ -16,11 +16,11 @@ CeladonHealNurseText:
 	TX_POKECENTER_NURSE
 
 CeladonPokecenterText2:
-	TX_FAR _CeladonPokecenterText2
+	TX_MARKOV _CeladonPokecenterText2
 	db "@"
 
 CeladonPokecenterText3:
-	TX_FAR _CeladonPokecenterText3
+	TX_MARKOV _CeladonPokecenterText3
 	db "@"
 
 CeladonPokecenterText5:

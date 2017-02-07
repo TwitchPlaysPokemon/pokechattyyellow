@@ -4,5 +4,5 @@ Func_f1ac6:
 	ret
 
 Text_f1acd:
-	TX_FAR _CeladonCityText10
+	TX_MARKOV _CeladonCityText10
 	db "@"

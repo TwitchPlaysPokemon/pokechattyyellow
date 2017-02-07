@@ -260,7 +260,7 @@ BillsHouseTextPointers:
 	dw BillsHouseText4
 
 BillsHouseText4:
-	TX_FAR _BillsHouseDontLeaveText
+	TX_MARKOV _BillsHouseDontLeaveText
 	db "@"
 
 BillsHouseText1:

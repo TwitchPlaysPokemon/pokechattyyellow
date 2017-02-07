@@ -314,7 +314,7 @@ RocketHideout4Text2:
 	db "@"
 
 RocketHideout4Text10:
-	TX_FAR _RocketHideoutJessieJamesText1
+	TX_MARKOV _RocketHideoutJessieJamesText1
 	TX_ASM
 	ld c, 10
 	call DelayFrames
@@ -330,15 +330,15 @@ RocketHideout4Text10:
 	jp TextScriptEnd
 
 RocketHideout4Text11:
-	TX_FAR _RocketHideoutJessieJamesText2
+	TX_MARKOV _RocketHideoutJessieJamesText2
 	db "@"
 
 RocketHideout4JessieJamesEndBattleText:
-	TX_FAR _RocketHideoutJessieJamesText3
+	TX_MARKOV _RocketHideoutJessieJamesText3
 	db "@"
 
 RocketHideout4Text12:
-	TX_FAR _RocketHideoutJessieJamesText4
+	TX_MARKOV _RocketHideoutJessieJamesText4
 	TX_ASM
 	ld c, 64
 	call DelayFrames
@@ -374,15 +374,15 @@ RocketHideout4Text0:
 	jp TextScriptEnd
 
 RocketHideout4Text_45804:
-	TX_FAR _RocketHideout4Text_4557a
+	TX_MARKOV _RocketHideout4Text_4557a
 	db "@"
 
 RocketHideout4Text_45809:
-	TX_FAR _RocketHideout4Text_4557f
+	TX_MARKOV _RocketHideout4Text_4557f
 	db "@"
 
 RocketHideout4Text9:
-	TX_FAR _RocketHideout4Text_45584
+	TX_MARKOV _RocketHideout4Text_45584
 	db "@"
 
 RocketHideout4Text3:
@@ -392,11 +392,11 @@ RocketHideout4Text3:
 	jp TextScriptEnd
 
 RocketHideout4Trainer0BeforeText:
-	TX_FAR _RocketHideout4BattleText4
+	TX_MARKOV _RocketHideout4BattleText4
 	db "@"
 
 RocketHideout4Trainer0EndBattleText:
-	TX_FAR _RocketHideout4EndBattleText4
+	TX_MARKOV _RocketHideout4EndBattleText4
 	TX_BUTTON_SOUND
 	TX_ASM
 	SetEvent EVENT_ROCKET_DROPPED_LIFT_KEY
@@ -412,5 +412,5 @@ RocketHideout4Trainer0AfterText:
 	jp TextScriptEnd
 
 RocketHideout4Text_45844:
-	TX_FAR _RocketHideout4Text_455ec
+	TX_MARKOV _RocketHideout4Text_455ec
 	db "@"

@@ -179,15 +179,15 @@ SilphCo9Text1:
 	jp TextScriptEnd
 
 SilphCo9Text_5d8e5:
-	TX_FAR _SilphCo9Text_5d8e5
+	TX_MARKOV _SilphCo9Text_5d8e5
 	db "@"
 
 SilphCo9Text_5d8ea:
-	TX_FAR _SilphCo9Text_5d8ea
+	TX_MARKOV _SilphCo9Text_5d8ea
 	db "@"
 
 SilphCo9Text_5d8ef:
-	TX_FAR _SilphCo9Text_5d8ef
+	TX_MARKOV _SilphCo9Text_5d8ef
 	db "@"
 
 SilphCo9Text2:
@@ -209,37 +209,37 @@ SilphCo9Text4:
 	jp TextScriptEnd
 
 SilphCo9BattleText1:
-	TX_FAR _SilphCo9BattleText1
+	TX_MARKOV _SilphCo9BattleText1
 	db "@"
 
 SilphCo9EndBattleText1:
-	TX_FAR _SilphCo9EndBattleText1
+	TX_MARKOV _SilphCo9EndBattleText1
 	db "@"
 
 SilphCo9AfterBattleText1:
-	TX_FAR _SilphCo9AfterBattleText1
+	TX_MARKOV _SilphCo9AfterBattleText1
 	db "@"
 
 SilphCo9BattleText2:
-	TX_FAR _SilphCo9BattleText2
+	TX_MARKOV _SilphCo9BattleText2
 	db "@"
 
 SilphCo9EndBattleText2:
-	TX_FAR _SilphCo9EndBattleText2
+	TX_MARKOV _SilphCo9EndBattleText2
 	db "@"
 
 SilphCo9AfterBattleText2:
-	TX_FAR _SilphCo9AfterBattleText2
+	TX_MARKOV _SilphCo9AfterBattleText2
 	db "@"
 
 SilphCo9BattleText3:
-	TX_FAR _SilphCo9BattleText3
+	TX_MARKOV _SilphCo9BattleText3
 	db "@"
 
 SilphCo9EndBattleText3:
-	TX_FAR _SilphCo9EndBattleText3
+	TX_MARKOV _SilphCo9EndBattleText3
 	db "@"
 
 SilphCo9AfterBattleText3:
-	TX_FAR _SilphCo9AfterBattleText3
+	TX_MARKOV _SilphCo9AfterBattleText3
 	db "@"

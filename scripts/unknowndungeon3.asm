@@ -38,7 +38,7 @@ MewtwoText:
 	jp TextScriptEnd
 
 MewtwoBattleText:
-	TX_FAR _MewtwoBattleText
+	TX_MARKOV _MewtwoBattleText
 	TX_ASM
 	ld a, MEWTWO
 	call PlayCry

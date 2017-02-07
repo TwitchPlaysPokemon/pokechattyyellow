@@ -122,11 +122,11 @@ SilphCo8Text1:
 	jp TextScriptEnd
 
 SilphCo8Text_565be:
-	TX_FAR _SilphCo8Text_565be
+	TX_MARKOV _SilphCo8Text_565be
 	db "@"
 
 SilphCo8Text_565c3:
-	TX_FAR _SilphCo8Text_565c3
+	TX_MARKOV _SilphCo8Text_565c3
 	db "@"
 
 SilphCo8Text2:
@@ -148,37 +148,37 @@ SilphCo8Text4:
 	jp TextScriptEnd
 
 SilphCo8BattleText1:
-	TX_FAR _SilphCo8BattleText1
+	TX_MARKOV _SilphCo8BattleText1
 	db "@"
 
 SilphCo8EndBattleText1:
-	TX_FAR _SilphCo8EndBattleText1
+	TX_MARKOV _SilphCo8EndBattleText1
 	db "@"
 
 SilphCo8AfterBattleText1:
-	TX_FAR _SilphCo8AfterBattleText1
+	TX_MARKOV _SilphCo8AfterBattleText1
 	db "@"
 
 SilphCo8BattleText2:
-	TX_FAR _SilphCo8BattleText2
+	TX_MARKOV _SilphCo8BattleText2
 	db "@"
 
 SilphCo8EndBattleText2:
-	TX_FAR _SilphCo8EndBattleText2
+	TX_MARKOV _SilphCo8EndBattleText2
 	db "@"
 
 SilphCo8AfterBattleText2:
-	TX_FAR _SilphCo8AfterBattleText2
+	TX_MARKOV _SilphCo8AfterBattleText2
 	db "@"
 
 SilphCo8BattleText3:
-	TX_FAR _SilphCo8BattleText3
+	TX_MARKOV _SilphCo8BattleText3
 	db "@"
 
 SilphCo8EndBattleText3:
-	TX_FAR _SilphCo8EndBattleText3
+	TX_MARKOV _SilphCo8EndBattleText3
 	db "@"
 
 SilphCo8AfterBattleText3:
-	TX_FAR _SilphCo8AfterBattleText3
+	TX_MARKOV _SilphCo8AfterBattleText3
 	db "@"

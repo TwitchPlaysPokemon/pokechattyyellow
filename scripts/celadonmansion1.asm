@@ -10,7 +10,7 @@ CeladonMansion1TextPointers:
 	dw CeladonMansion1Text5
 
 CeladonMansion1Text1:
-	TX_FAR _CeladonMansion1Text1
+	TX_MARKOV _CeladonMansion1Text1
 	TX_ASM
 	ld a, MEOWTH
 	call PlayCry
@@ -30,19 +30,19 @@ CeladonMansion1Text2:
 	jp TextScriptEnd
 
 CeladonMansion1Text3:
-	TX_FAR _CeladonMansion1Text3
+	TX_MARKOV _CeladonMansion1Text3
 	TX_ASM
 	ld a, CLEFAIRY
 	call PlayCry
 	jp TextScriptEnd
 
 CeladonMansion1Text4:
-	TX_FAR _CeladonMansion1Text4
+	TX_MARKOV _CeladonMansion1Text4
 	TX_ASM
 	ld a, NIDORAN_F
 	call PlayCry
 	jp TextScriptEnd
 
 CeladonMansion1Text5:
-	TX_FAR _CeladonMansion1Text5
+	TX_MARKOV _CeladonMansion1Text5
 	db "@"

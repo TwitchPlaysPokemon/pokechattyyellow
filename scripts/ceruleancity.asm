@@ -242,19 +242,19 @@ CeruleanCityText1:
 	jp TextScriptEnd
 
 CeruleanCityText_19668:
-	TX_FAR _CeruleanCityText_19668
+	TX_MARKOV _CeruleanCityText_19668
 	db "@"
 
 CeruleanCityText_1966d:
-	TX_FAR _CeruleanCityText_1966d
+	TX_MARKOV _CeruleanCityText_1966d
 	db "@"
 
 CeruleanCityText_19672:
-	TX_FAR _CeruleanCityText_19672
+	TX_MARKOV _CeruleanCityText_19672
 	db "@"
 
 CeruleanCityText_19677:
-	TX_FAR _CeruleanCityText_19677
+	TX_MARKOV _CeruleanCityText_19677
 	db "@"
 
 CeruleanCityText2:
@@ -295,43 +295,43 @@ CeruleanCityText2:
 	jp TextScriptEnd
 
 CeruleanCityText_196d9:
-	TX_FAR _CeruleanCityText_196d9
+	TX_MARKOV _CeruleanCityText_196d9
 	db "@"
 
 ReceivedTM28Text:
-	TX_FAR _ReceivedTM28Text
+	TX_MARKOV _ReceivedTM28Text
 	TX_SFX_ITEM
-	TX_FAR _ReceivedTM28Text2
+	TX_MARKOV _ReceivedTM28Text2
 	TX_WAIT_BUTTON
 	db "@"
 
 TM28NoRoomText:
-	TX_FAR _TM28NoRoomText
+	TX_MARKOV _TM28NoRoomText
 	db "@"
 
 CeruleanCityText_196ee:
-	TX_FAR _CeruleanCityText_196ee
+	TX_MARKOV _CeruleanCityText_196ee
 	db "@"
 
 CeruleanCityText_196f3:
-	TX_FAR _CeruleanCityText_196f3
+	TX_MARKOV _CeruleanCityText_196f3
 	db "@"
 
 CeruleanCityText3:
-	TX_FAR _CeruleanCityText3
+	TX_MARKOV _CeruleanCityText3
 	db "@"
 
 CeruleanCityText4:
-	TX_FAR _CeruleanCityText4
+	TX_MARKOV _CeruleanCityText4
 	db "@"
 
 CeruleanCityText5:
-	TX_FAR _CeruleanCityText5
+	TX_MARKOV _CeruleanCityText5
 	db "@"
 
 CeruleanCityText11:
 CeruleanCityText6:
-	TX_FAR _CeruleanCityText6
+	TX_MARKOV _CeruleanCityText6
 	db "@"
 
 CeruleanCityText7:
@@ -355,15 +355,15 @@ CeruleanCityText7:
 	jp TextScriptEnd
 
 CeruleanCityText_19730:
-	TX_FAR _CeruleanCityText_19730
+	TX_MARKOV _CeruleanCityText_19730
 	db "@"
 
 CeruleanCityText_19735:
-	TX_FAR _CeruleanCityText_19735
+	TX_MARKOV _CeruleanCityText_19735
 	db "@"
 
 CeruleanCityText_1973a:
-	TX_FAR _CeruleanCityText_1973a
+	TX_MARKOV _CeruleanCityText_1973a
 	db "@"
 
 CeruleanCityText8:
@@ -393,41 +393,41 @@ CeruleanCityText8:
 	jp TextScriptEnd
 
 CeruleanCityText_1976f:
-	TX_FAR _CeruleanCityText_1976f
+	TX_MARKOV _CeruleanCityText_1976f
 	db "@"
 
 CeruleanCityText_19774:
-	TX_FAR _CeruleanCityText_19774
+	TX_MARKOV _CeruleanCityText_19774
 	db "@"
 
 CeruleanCityText_19779:
-	TX_FAR _CeruleanCityText_19779
+	TX_MARKOV _CeruleanCityText_19779
 	db "@"
 
 CeruleanCityText_1977e:
-	TX_FAR _CeruleanCityText_1977e
+	TX_MARKOV _CeruleanCityText_1977e
 	db "@"
 
 CeruleanCityText9:
-	TX_FAR _CeruleanCityText9
+	TX_MARKOV _CeruleanCityText9
 	db "@"
 
 CeruleanCityText10:
-	TX_FAR _CeruleanCityText10
+	TX_MARKOV _CeruleanCityText10
 	db "@"
 
 CeruleanCityText12:
-	TX_FAR _CeruleanCityText12
+	TX_MARKOV _CeruleanCityText12
 	db "@"
 
 CeruleanCityText13:
-	TX_FAR _CeruleanCityText13
+	TX_MARKOV _CeruleanCityText13
 	db "@"
 
 CeruleanCityText16:
-	TX_FAR _CeruleanCityText16
+	TX_MARKOV _CeruleanCityText16
 	db "@"
 
 CeruleanCityText17:
-	TX_FAR _CeruleanCityText17
+	TX_MARKOV _CeruleanCityText17
 	db "@"

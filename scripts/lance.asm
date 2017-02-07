@@ -148,15 +148,15 @@ LanceText1:
 	jp TextScriptEnd
 
 LanceBeforeBattleText:
-	TX_FAR _LanceBeforeBattleText
+	TX_MARKOV _LanceBeforeBattleText
 	db "@"
 
 LanceEndBattleText:
-	TX_FAR _LanceEndBattleText
+	TX_MARKOV _LanceEndBattleText
 	db "@"
 
 LanceAfterBattleText:
-	TX_FAR _LanceAfterBattleText
+	TX_MARKOV _LanceAfterBattleText
 	TX_ASM
 	SetEvent EVENT_BEAT_LANCE
 	jp TextScriptEnd

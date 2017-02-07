@@ -81,21 +81,21 @@ Func_f1f77:
 	ret
 
 .WelcomeText
-	TX_FAR SafariZoneEntranceText_9e6e4
+	TX_MARKOV SafariZoneEntranceText_9e6e4
 	db "@"
 
 .MakePaymentText
-	TX_FAR SafariZoneEntranceText_9e747
+	TX_MARKOV SafariZoneEntranceText_9e747
 	TX_SFX_ITEM
-	TX_FAR _SafariZoneEntranceText_75360
+	TX_MARKOV _SafariZoneEntranceText_75360
 	db "@"
 
 .PleaseComeAgainText
-	TX_FAR _SafariZoneEntranceText_75365
+	TX_MARKOV _SafariZoneEntranceText_75365
 	db "@"
 
 .NotEnoughMoneyText
-	TX_FAR _SafariZoneEntranceText_7536a
+	TX_MARKOV _SafariZoneEntranceText_7536a
 	db "@"
 
 Func_f203e:
@@ -112,15 +112,15 @@ Func_f203e:
 	ret
 
 .FirstTimeQuestionText
-	TX_FAR _SafariZoneEntranceText_753e6
+	TX_MARKOV _SafariZoneEntranceText_753e6
 	db "@"
 
 .ExplanationText
-	TX_FAR _SafariZoneEntranceText_753eb
+	TX_MARKOV _SafariZoneEntranceText_753eb
 	db "@"
 
 .RegularText
-	TX_FAR _SafariZoneEntranceText_753f0
+	TX_MARKOV _SafariZoneEntranceText_753f0
 	db "@"
 
 SafariZoneEntranceStartSimulatingJoypadStates:
@@ -171,11 +171,11 @@ SafariZoneEntranceCalculateLowCostAdmission:
 	ret
 
 SafariZoneEntranceText_f20c4:
-	TX_FAR _SafariZoneLowCostText1
+	TX_MARKOV _SafariZoneLowCostText1
 	db "@"
 
 SafariZoneEntranceText_f20c9:
-	TX_FAR _SafariZoneLowCostText2
+	TX_MARKOV _SafariZoneLowCostText2
 	db "@"
 
 SafariZoneEntranceGetLowCostAdmissionText:
@@ -207,9 +207,9 @@ SafariZoneEntranceGetLowCostAdmissionText:
 	ret
 
 SafariZoneEntranceText_f20f6:
-	TX_FAR _SafariZoneLowCostText3
+	TX_MARKOV _SafariZoneLowCostText3
 	TX_SFX_ITEM
-	TX_FAR _SafariZoneLowCostText4
+	TX_MARKOV _SafariZoneLowCostText4
 	db "@"
 
 Pointers_f2100:
@@ -220,19 +220,19 @@ Pointers_f2100:
 	dw SafariZoneEntranceText_f2119
 
 SafariZoneEntranceText_f210a:
-	TX_FAR _SafariZoneLowCostText5
+	TX_MARKOV _SafariZoneLowCostText5
 	db "@"
 
 SafariZoneEntranceText_f210f:
-	TX_FAR _SafariZoneLowCostText6
+	TX_MARKOV _SafariZoneLowCostText6
 	db "@"
 
 SafariZoneEntranceText_f2114:
-	TX_FAR _SafariZoneLowCostText7
+	TX_MARKOV _SafariZoneLowCostText7
 	db "@"
 
 SafariZoneEntranceText_f2119:
-	TX_FAR _SafariZoneLowCostText8
+	TX_MARKOV _SafariZoneLowCostText8
 	db "@"
 
 SafariZoneEntranceConvertBCDtoNumber:

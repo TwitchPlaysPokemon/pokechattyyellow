@@ -177,15 +177,15 @@ RocketHideout3Text1:
 	jp TextScriptEnd
 
 RocketHideout3BattleText2:
-	TX_FAR _RocketHideout3BattleText2
+	TX_MARKOV _RocketHideout3BattleText2
 	db "@"
 
 RocketHideout3EndBattleText2:
-	TX_FAR _RocketHideout3EndBattleText2
+	TX_MARKOV _RocketHideout3EndBattleText2
 	db "@"
 
 RocketHideout3AfterBattleTxt2:
-	TX_FAR _RocketHideout3AfterBattleTxt2
+	TX_MARKOV _RocketHideout3AfterBattleTxt2
 	db "@"
 
 RocketHideout3Text2:
@@ -195,13 +195,13 @@ RocketHideout3Text2:
 	jp TextScriptEnd
 
 RocketHideout3BattleTxt:
-	TX_FAR _RocketHideout3BattleTxt
+	TX_MARKOV _RocketHideout3BattleTxt
 	db "@"
 
 RocketHideout3EndBattleText3:
-	TX_FAR _RocketHideout3EndBattleText3
+	TX_MARKOV _RocketHideout3EndBattleText3
 	db "@"
 
 RocketHideout3AfterBattleText3:
-	TX_FAR _RocketHide3AfterBattleText3
+	TX_MARKOV _RocketHide3AfterBattleText3
 	db "@"

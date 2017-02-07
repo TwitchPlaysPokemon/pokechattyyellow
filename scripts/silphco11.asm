@@ -491,7 +491,7 @@ SilphCo11TrainerHeader0:
 SilphCo11Text4:
 SilphCo11Text6:
 SilphCo11Text8:
-	TX_FAR _SilphCoJessieJamesText1
+	TX_MARKOV _SilphCoJessieJamesText1
 	TX_ASM
 	ld c, 10
 	call DelayFrames
@@ -507,15 +507,15 @@ SilphCo11Text8:
 	jp TextScriptEnd
 
 SilphCo11Text9:
-	TX_FAR _SilphCoJessieJamesText2
+	TX_MARKOV _SilphCoJessieJamesText2
 	db "@"
 
 SilphCo11Text_624c2:
-	TX_FAR _SilphCoJessieJamesText3
+	TX_MARKOV _SilphCoJessieJamesText3
 	db "@"
 
 SilphCo11Text10:
-	TX_FAR _SilphCoJessieJamesText4
+	TX_MARKOV _SilphCoJessieJamesText4
 	TX_ASM
 	ld c, 64
 	call DelayFrames
@@ -546,36 +546,36 @@ SilphCo11Text1:
 	jp TextScriptEnd
 
 SilphCo11Text_62509:
-	TX_FAR _SilphCoPresidentText
+	TX_MARKOV _SilphCoPresidentText
 	db "@"
 
 SilphCo11Text_6250e:
-	TX_FAR _ReceivedSilphCoMasterBallText
+	TX_MARKOV _ReceivedSilphCoMasterBallText
 	TX_SFX_KEY_ITEM
 	db "@"
 
 SilphCo11Text_62514:
-	TX_FAR _SilphCo10Text_6231c
+	TX_MARKOV _SilphCo10Text_6231c
 	db "@"
 
 SilphCo11Text_62519:
-	TX_FAR _SilphCoMasterBallNoRoomText
+	TX_MARKOV _SilphCoMasterBallNoRoomText
 	db "@"
 
 SilphCo11Text2:
-	TX_FAR _SilphCo11Text2
+	TX_MARKOV _SilphCo11Text2
 	db "@"
 
 SilphCo11Text3:
-	TX_FAR _SilphCo11Text3
+	TX_MARKOV _SilphCo11Text3
 	db "@"
 
 SilphCo10Text_62528:
-	TX_FAR _SilphCo10Text_62330
+	TX_MARKOV _SilphCo10Text_62330
 	db "@"
 
 SilphCo11Text7:
-	TX_FAR _SilphCo10Text_62335
+	TX_MARKOV _SilphCo10Text_62335
 	db "@"
 
 SilphCo11Text5:
@@ -585,13 +585,13 @@ SilphCo11Text5:
 	jp TextScriptEnd
 
 SilphCo11Trainer1BattleText:
-	TX_FAR _SilphCo11BattleText2
+	TX_MARKOV _SilphCo11BattleText2
 	db "@"
 
 SilphCo11Trainer1EndBattleText:
-	TX_FAR _SilphCo11EndBattleText2
+	TX_MARKOV _SilphCo11EndBattleText2
 	db "@"
 
 SilphCo11Trainer1AfterBattleText:
-	TX_FAR _SilphCo11AfterBattleText2
+	TX_MARKOV _SilphCo11AfterBattleText2
 	db "@"

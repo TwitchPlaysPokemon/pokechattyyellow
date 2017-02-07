@@ -28,18 +28,18 @@ SafariZoneSecretHouseText1:
 	jp TextScriptEnd
 
 SafariZoneSecretHouseText_4a350:
-	TX_FAR _SecretHouseText_4a350
+	TX_MARKOV _SecretHouseText_4a350
 	db "@"
 
 ReceivedHM03Text:
-	TX_FAR _ReceivedHM03Text
+	TX_MARKOV _ReceivedHM03Text
 	TX_SFX_ITEM
 	db "@"
 
 HM03ExplanationText:
-	TX_FAR _HM03ExplanationText
+	TX_MARKOV _HM03ExplanationText
 	db "@"
 
 HM03NoRoomText:
-	TX_FAR _HM03NoRoomText
+	TX_MARKOV _HM03NoRoomText
 	db "@"

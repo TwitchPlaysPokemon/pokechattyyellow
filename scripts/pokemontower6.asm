@@ -165,49 +165,49 @@ PokemonTower6Text7:
 	jp TextScriptEnd
 
 PokemonTower2Text_60c1f:
-	TX_FAR _PokemonTower2Text_60c1f
+	TX_MARKOV _PokemonTower2Text_60c1f
 	db "@"
 
 PokemonTower2Text_60c24:
-	TX_FAR _PokemonTower2Text_60c24
+	TX_MARKOV _PokemonTower2Text_60c24
 	db "@"
 
 PokemonTower6BattleText1:
-	TX_FAR _PokemonTower6BattleText1
+	TX_MARKOV _PokemonTower6BattleText1
 	db "@"
 
 PokemonTower6EndBattleText1:
-	TX_FAR _PokemonTower6EndBattleText1
+	TX_MARKOV _PokemonTower6EndBattleText1
 	db "@"
 
 PokemonTower6AfterBattleText1:
-	TX_FAR _PokemonTower6AfterBattleText1
+	TX_MARKOV _PokemonTower6AfterBattleText1
 	db "@"
 
 PokemonTower6BattleText2:
-	TX_FAR _PokemonTower6BattleText2
+	TX_MARKOV _PokemonTower6BattleText2
 	db "@"
 
 PokemonTower6EndBattleText2:
-	TX_FAR _PokemonTower6EndBattleText2
+	TX_MARKOV _PokemonTower6EndBattleText2
 	db "@"
 
 PokemonTower6AfterBattleText2:
-	TX_FAR _PokemonTower6AfterBattleText2
+	TX_MARKOV _PokemonTower6AfterBattleText2
 	db "@"
 
 PokemonTower6BattleText3:
-	TX_FAR _PokemonTower6BattleText3
+	TX_MARKOV _PokemonTower6BattleText3
 	db "@"
 
 PokemonTower6EndBattleText3:
-	TX_FAR _PokemonTower6EndBattleText3
+	TX_MARKOV _PokemonTower6EndBattleText3
 	db "@"
 
 PokemonTower6AfterBattleText3:
-	TX_FAR _PokemonTower6AfterBattleText3
+	TX_MARKOV _PokemonTower6AfterBattleText3
 	db "@"
 
 PokemonTower6Text6:
-	TX_FAR _PokemonTower6Text6
+	TX_MARKOV _PokemonTower6Text6
 	db "@"

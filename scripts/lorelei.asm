@@ -138,17 +138,17 @@ LoreleiText1:
 	jp TextScriptEnd
 
 LoreleiBeforeBattleText:
-	TX_FAR _LoreleiBeforeBattleText
+	TX_MARKOV _LoreleiBeforeBattleText
 	db "@"
 
 LoreleiEndBattleText:
-	TX_FAR _LoreleiEndBattleText
+	TX_MARKOV _LoreleiEndBattleText
 	db "@"
 
 LoreleiAfterBattleText:
-	TX_FAR _LoreleiAfterBattleText
+	TX_MARKOV _LoreleiAfterBattleText
 	db "@"
 
 LoreleiDontRunAwayText:
-	TX_FAR _LoreleiDontRunAwayText
+	TX_MARKOV _LoreleiDontRunAwayText
 	db "@"

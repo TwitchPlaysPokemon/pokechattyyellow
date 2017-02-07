@@ -170,29 +170,29 @@ VermilionGymText1:
 	jp TextScriptEnd
 
 VermilionGymText_5cb6d:
-	TX_FAR _VermilionGymText_5cb6d
+	TX_MARKOV _VermilionGymText_5cb6d
 	db "@"
 
 VermilionGymText_5cb72:
-	TX_FAR _VermilionGymText_5cb72
+	TX_MARKOV _VermilionGymText_5cb72
 	db "@"
 
 VermilionGymText6:
-	TX_FAR _VermilionGymText_5cb77
+	TX_MARKOV _VermilionGymText_5cb77
 	db "@"
 
 VermilionGymText7:
-	TX_FAR _ReceivedTM24Text
+	TX_MARKOV _ReceivedTM24Text
 	TX_SFX_KEY_ITEM
-	TX_FAR _TM24ExplanationText
+	TX_MARKOV _TM24ExplanationText
 	db "@"
 
 VermilionGymText8:
-	TX_FAR _TM24NoRoomText
+	TX_MARKOV _TM24NoRoomText
 	db "@"
 
 ReceivedThunderbadgeText:
-	TX_FAR _ReceivedThunderbadgeText
+	TX_MARKOV _ReceivedThunderbadgeText
 	db "@"
 
 VermilionGymText2:
@@ -202,15 +202,15 @@ VermilionGymText2:
 	jp TextScriptEnd
 
 VermilionGymBattleText1:
-	TX_FAR _VermilionGymBattleText1
+	TX_MARKOV _VermilionGymBattleText1
 	db "@"
 
 VermilionGymEndBattleText1:
-	TX_FAR _VermilionGymEndBattleText1
+	TX_MARKOV _VermilionGymEndBattleText1
 	db "@"
 
 VermilionGymAfterBattleText1:
-	TX_FAR _VermilionGymAfterBattleText1
+	TX_MARKOV _VermilionGymAfterBattleText1
 	db "@"
 
 VermilionGymText3:
@@ -220,15 +220,15 @@ VermilionGymText3:
 	jp TextScriptEnd
 
 VermilionGymBattleText2:
-	TX_FAR _VermilionGymBattleText2
+	TX_MARKOV _VermilionGymBattleText2
 	db "@"
 
 VermilionGymEndBattleText2:
-	TX_FAR _VermilionGymEndBattleText2
+	TX_MARKOV _VermilionGymEndBattleText2
 	db "@"
 
 VermilionGymAfterBattleText2:
-	TX_FAR _VermilionGymAfterBattleText2
+	TX_MARKOV _VermilionGymAfterBattleText2
 	db "@"
 
 VermilionGymText4:
@@ -238,15 +238,15 @@ VermilionGymText4:
 	jp TextScriptEnd
 
 VermilionGymBattleText3:
-	TX_FAR _VermilionGymBattleText3
+	TX_MARKOV _VermilionGymBattleText3
 	db "@"
 
 VermilionGymEndBattleText3:
-	TX_FAR _VermilionGymEndBattleText3
+	TX_MARKOV _VermilionGymEndBattleText3
 	db "@"
 
 VermilionGymAfterBattleText3:
-	TX_FAR _VermilionGymAfterBattleText3
+	TX_MARKOV _VermilionGymAfterBattleText3
 	db "@"
 
 VermilionGymText5:
@@ -265,9 +265,9 @@ VermilionGymText5:
 	jp TextScriptEnd
 
 VermilionGymText_5cbf4:
-	TX_FAR _VermilionGymText_5cbf4
+	TX_MARKOV _VermilionGymText_5cbf4
 	db "@"
 
 VermilionGymText_5cbf9:
-	TX_FAR _VermilionGymText_5cbf9
+	TX_MARKOV _VermilionGymText_5cbf9
 	db "@"

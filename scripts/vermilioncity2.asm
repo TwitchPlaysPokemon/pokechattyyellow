@@ -45,24 +45,24 @@ Func_f1a0f:
 	ret
 
 OfficerJennyText1:
-	TX_FAR _OfficerJennyText1
+	TX_MARKOV _OfficerJennyText1
 	db "@"
 
 OfficerJennyText2:
-	TX_FAR _OfficerJennyText2
+	TX_MARKOV _OfficerJennyText2
 	db "@"
 
 OfficerJennyText3:
-	TX_FAR _OfficerJennyText3
+	TX_MARKOV _OfficerJennyText3
 	TX_WAIT_BUTTON
 	db "@"
 
 OfficerJennyText4:
-	TX_FAR _OfficerJennyText4
+	TX_MARKOV _OfficerJennyText4
 	db "@"
 
 OfficerJennyText5:
-	TX_FAR _OfficerJennyText5
+	TX_MARKOV _OfficerJennyText5
 	db "@"
 
 Func_f1a8a:
@@ -71,7 +71,7 @@ Func_f1a8a:
 	ret
 
 VermilionCityText_f1a91:
-	TX_FAR _VermilionCityText8
+	TX_MARKOV _VermilionCityText8
 	db "@"
 
 Func_f1a96:
@@ -80,7 +80,7 @@ Func_f1a96:
 	ret
 
 VermilionCityText_f1a9d:
-	TX_FAR _VermilionCityText9
+	TX_MARKOV _VermilionCityText9
 	db "@"
 
 Func_f1aa2:
@@ -89,7 +89,7 @@ Func_f1aa2:
 	ret
 
 VermilionCityText_f1aa9:
-	TX_FAR _VermilionCityText12
+	TX_MARKOV _VermilionCityText12
 	db "@"
 
 Func_f1aae:
@@ -98,7 +98,7 @@ Func_f1aae:
 	ret
 
 VermilionCityText_f1ab5:
-	TX_FAR _VermilionCityText13
+	TX_MARKOV _VermilionCityText13
 	db "@"
 
 Func_f1aba:
@@ -107,5 +107,5 @@ Func_f1aba:
 	ret
 
 VermilionCityText_f1ac1:
-	TX_FAR _VermilionCityText14
+	TX_MARKOV _VermilionCityText14
 	db "@"

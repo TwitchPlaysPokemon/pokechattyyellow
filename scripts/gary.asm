@@ -247,23 +247,23 @@ GaryText1:
 	jp TextScriptEnd
 
 GaryChampionIntroText:
-	TX_FAR _GaryChampionIntroText
+	TX_MARKOV _GaryChampionIntroText
 	db "@"
 
 GaryDefeatedText:
-	TX_FAR _GaryDefeatedText
+	TX_MARKOV _GaryDefeatedText
 	db "@"
 
 GaryVictoryText:
-	TX_FAR _GaryVictoryText
+	TX_MARKOV _GaryVictoryText
 	db "@"
 
 GaryText_76103:
-	TX_FAR _GaryText_76103
+	TX_MARKOV _GaryText_76103
 	db "@"
 
 GaryText2:
-	TX_FAR _GaryText2
+	TX_MARKOV _GaryText2
 	db "@"
 
 GaryText3:
@@ -276,13 +276,13 @@ GaryText3:
 	jp TextScriptEnd
 
 GaryText_76120:
-	TX_FAR _GaryText_76120
+	TX_MARKOV _GaryText_76120
 	db "@"
 
 GaryText4:
-	TX_FAR _GaryText_76125
+	TX_MARKOV _GaryText_76125
 	db "@"
 
 GaryText5:
-	TX_FAR _GaryText_7612a
+	TX_MARKOV _GaryText_7612a
 	db "@"

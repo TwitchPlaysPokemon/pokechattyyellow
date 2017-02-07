@@ -6,9 +6,9 @@ PewterHouse2TextPointers:
 	dw PewterHouse2Text2
 
 PewterHouse2Text1:
-	TX_FAR _PewterHouse2Text1
+	TX_MARKOV _PewterHouse2Text1
 	db "@"
 
 PewterHouse2Text2:
-	TX_FAR _PewterHouse2Text2
+	TX_MARKOV _PewterHouse2Text2
 	db "@"

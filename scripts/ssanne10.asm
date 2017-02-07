@@ -119,84 +119,84 @@ SSAnne10Text6:
 	jp TextScriptEnd
 
 SSAnne10Text8:
-	TX_FAR _SSAnne10Text8
+	TX_MARKOV _SSAnne10Text8
 	TX_ASM
 	ld a, MACHOKE
 	call PlayCry
 	jp TextScriptEnd
 
 SSAnne10BattleText1:
-	TX_FAR _SSAnne10BattleText1
+	TX_MARKOV _SSAnne10BattleText1
 	db "@"
 
 SSAnne10EndBattleText1:
-	TX_FAR _SSAnne10EndBattleText1
+	TX_MARKOV _SSAnne10EndBattleText1
 	db "@"
 
 SSAnne10AfterBattleText1:
-	TX_FAR _SSAnne10AfterBattleText1
+	TX_MARKOV _SSAnne10AfterBattleText1
 	db "@"
 
 SSAnne10BattleText2:
-	TX_FAR _SSAnne10BattleText2
+	TX_MARKOV _SSAnne10BattleText2
 	db "@"
 
 SSAnne10EndBattleText2:
-	TX_FAR _SSAnne10EndBattleText2
+	TX_MARKOV _SSAnne10EndBattleText2
 	db "@"
 
 SSAnne10AfterBattleText2:
-	TX_FAR _SSAnne10AfterBattleText2
+	TX_MARKOV _SSAnne10AfterBattleText2
 	db "@"
 
 SSAnne10BattleText3:
-	TX_FAR _SSAnne10BattleText3
+	TX_MARKOV _SSAnne10BattleText3
 	db "@"
 
 SSAnne10EndBattleText3:
-	TX_FAR _SSAnne10EndBattleText3
+	TX_MARKOV _SSAnne10EndBattleText3
 	db "@"
 
 SSAnne10AfterBattleText3:
-	TX_FAR _SSAnne10AfterBattleText3
+	TX_MARKOV _SSAnne10AfterBattleText3
 	db "@"
 
 SSAnne10BattleText4:
-	TX_FAR _SSAnne10BattleText4
+	TX_MARKOV _SSAnne10BattleText4
 	db "@"
 
 SSAnne10EndBattleText4:
-	TX_FAR _SSAnne10EndBattleText4
+	TX_MARKOV _SSAnne10EndBattleText4
 	db "@"
 
 SSAnne10AfterBattleText4:
-	TX_FAR _SSAnne10AfterBattleText4
+	TX_MARKOV _SSAnne10AfterBattleText4
 	db "@"
 
 SSAnne10BattleText5:
-	TX_FAR _SSAnne10BattleText5
+	TX_MARKOV _SSAnne10BattleText5
 	db "@"
 
 SSAnne10EndBattleText5:
-	TX_FAR _SSAnne10EndBattleText5
+	TX_MARKOV _SSAnne10EndBattleText5
 	db "@"
 
 SSAnne10AfterBattleText5:
-	TX_FAR _SSAnne10AfterBattleText5
+	TX_MARKOV _SSAnne10AfterBattleText5
 	db "@"
 
 SSAnne10BattleText6:
-	TX_FAR _SSAnne10BattleText6
+	TX_MARKOV _SSAnne10BattleText6
 	db "@"
 
 SSAnne10EndBattleText6:
-	TX_FAR _SSAnne10EndBattleText6
+	TX_MARKOV _SSAnne10EndBattleText6
 	db "@"
 
 SSAnne10AfterBattleText6:
-	TX_FAR _SSAnne10AfterBattleText6
+	TX_MARKOV _SSAnne10AfterBattleText6
 	db "@"
 
 SSAnne10Text7:
-	TX_FAR _SSAnne10Text7
+	TX_MARKOV _SSAnne10Text7
 	db "@"

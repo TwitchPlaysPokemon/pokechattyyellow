@@ -31,11 +31,11 @@ ProgrammerText:
 	jp TextScriptEnd
 
 CeladonMansion3Text_486f0:
-	TX_FAR _ProgrammerText
+	TX_MARKOV _ProgrammerText
 	db "@"
 
 CeladonMansion3Text_486f5:
-	TX_FAR _ProgrammerText2
+	TX_MARKOV _ProgrammerText2
 	db "@"
 
 GraphicArtistText:
@@ -81,23 +81,23 @@ GraphicArtistText:
 	jp TextScriptEnd
 
 CeladonMansion3Text_48757:
-	TX_FAR _GraphicArtistText
+	TX_MARKOV _GraphicArtistText
 	db "@"
 
 CeladonMansion3Text_4875c:
-	TX_FAR _GraphicArtistText2
+	TX_MARKOV _GraphicArtistText2
 	db "@"
 
 CeladonMansion3Text_48761:
-	TX_FAR _GraphicArtistText3
+	TX_MARKOV _GraphicArtistText3
 	db "@"
 
 CeladonMansion3Text_48766:
-	TX_FAR _GraphicArtistText4
+	TX_MARKOV _GraphicArtistText4
 	db "@"
 
 CeladonMansion3Text_4876b:
-	TX_FAR _GraphicArtistText5
+	TX_MARKOV _GraphicArtistText5
 	db "@"
 
 WriterText:
@@ -112,11 +112,11 @@ WriterText:
 	jp TextScriptEnd
 
 CeladonMansion3Text_48784:
-	TX_FAR _WriterText
+	TX_MARKOV _WriterText
 	db "@"
 
 CeladonMansion3Text_48789:
-	TX_FAR _WriterText2
+	TX_MARKOV _WriterText2
 	db "@"
 
 DirectorText:
@@ -139,11 +139,11 @@ DirectorText:
 	jp TextScriptEnd
 
 .GameDesigner
-	TX_FAR _GameDesignerText
+	TX_MARKOV _GameDesignerText
 	db "@"
 
 .CompletedDexText
-	TX_FAR _CompletedDexText
+	TX_MARKOV _CompletedDexText
 	TX_BUTTON_SOUND
 	TX_ASM
 	callab DisplayDiploma
@@ -152,7 +152,7 @@ DirectorText:
 	jp TextScriptEnd
 
 .UnlockedDiplomaPrinting
-	TX_FAR _CompletedDexText2
+	TX_MARKOV _CompletedDexText2
 	db "@"
 
 GameFreakPCText1:

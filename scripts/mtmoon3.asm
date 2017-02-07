@@ -459,7 +459,7 @@ MtMoon3Text6:
 	db "@"
 
 MtMoon3Text12:
-	TX_FAR _MtMoonJessieJamesText1
+	TX_MARKOV _MtMoonJessieJamesText1
 	TX_ASM
 	ld c, 10
 	call DelayFrames
@@ -475,15 +475,15 @@ MtMoon3Text12:
 	jp TextScriptEnd
 
 MtMoon3Text13:
-	TX_FAR _MtMoonJessieJamesText2
+	TX_MARKOV _MtMoonJessieJamesText2
 	db "@"
 
 MtMoon3JessieJamesEndBattleText:
-	TX_FAR _MtMoonJessieJamesText3
+	TX_MARKOV _MtMoonJessieJamesText3
 	db "@"
 
 MtMoon3Text14:
-	TX_FAR _MtMoonJessieJamesText4
+	TX_MARKOV _MtMoonJessieJamesText4
 	TX_ASM
 	ld c, 64
 	call DelayFrames
@@ -564,7 +564,7 @@ MtMoon3Text7:
 	jp TextScriptEnd
 
 MtMoon3Text_4a0ae:
-	TX_FAR _MtMoon3Text_49f24
+	TX_MARKOV _MtMoon3Text_49f24
 	db "@"
 
 MtMoon3Text8:
@@ -591,7 +591,7 @@ MtMoon3Text8:
 	jp TextScriptEnd
 
 MtMoon3Text_4a0eb:
-	TX_FAR _MtMoon3Text_49f64
+	TX_MARKOV _MtMoon3Text_49f64
 	db "@"
 
 MtMoon3Script_4a0f0:
@@ -599,7 +599,7 @@ MtMoon3Script_4a0f0:
 	jp PrintText
 
 MtMoon3Text_4a0f6:
-	TX_FAR _MtMoon3Text_49f6f
+	TX_MARKOV _MtMoon3Text_49f6f
 	TX_SFX_KEY_ITEM
 	TX_WAIT_BUTTON
 	db "@"
@@ -610,64 +610,64 @@ MtMoon3Script_4a0fd:
 	jp TextScriptEnd
 
 MtMoon3Text_4a106:
-	TX_FAR _MtMoon3Text_49f7f
+	TX_MARKOV _MtMoon3Text_49f7f
 	TX_WAIT_BUTTON
 	db "@"
 
 MtMoon3Text_4a10c:
-	TX_FAR _MtMoon3Text_49f85
+	TX_MARKOV _MtMoon3Text_49f85
 	db "@"
 
 MtMoon3SuperNerdEndBattleText:
-	TX_FAR _MtMoon3Text_49f8a
+	TX_MARKOV _MtMoon3Text_49f8a
 	db "@"
 
 MtMoon3Text_4a116:
-	TX_FAR _MtMoon3Text_49f8f
+	TX_MARKOV _MtMoon3Text_49f8f
 	db "@"
 
 MtMoon3Text_4a11b:
-	TX_FAR _MtMoon3Text_49f94
+	TX_MARKOV _MtMoon3Text_49f94
 	db "@"
 
 MtMoon3Text11:
-	TX_FAR _MtMoon3Text_49f99
+	TX_MARKOV _MtMoon3Text_49f99
 	TX_SFX_KEY_ITEM
 	db "@"
 
 MtMoon3BattleText3:
-	TX_FAR _MtMoon3BattleText3
+	TX_MARKOV _MtMoon3BattleText3
 	db "@"
 
 MtMoon3EndBattleText3:
-	TX_FAR _MtMoon3EndBattleText3
+	TX_MARKOV _MtMoon3EndBattleText3
 	db "@"
 
 MtMoon3AfterBattleText3:
-	TX_FAR _MtMoon3AfterBattleText3
+	TX_MARKOV _MtMoon3AfterBattleText3
 	db "@"
 
 MtMoon3BattleText4:
-	TX_FAR _MtMoon3BattleText4
+	TX_MARKOV _MtMoon3BattleText4
 	db "@"
 
 MtMoon3EndBattleText4:
-	TX_FAR _MtMoon3EndBattleText4
+	TX_MARKOV _MtMoon3EndBattleText4
 	db "@"
 
 MtMoon3AfterBattleText4:
-	TX_FAR _MtMoon3AfterBattleText4
+	TX_MARKOV _MtMoon3AfterBattleText4
 	db "@"
 
 MtMoon3BattleText5:
-	TX_FAR _MtMoon3BattleText5
+	TX_MARKOV _MtMoon3BattleText5
 	db "@"
 
 MtMoon3EndBattleText5:
-	TX_FAR _MtMoon3EndBattleText5
+	TX_MARKOV _MtMoon3EndBattleText5
 	db "@"
 
 MtMoon3AfterBattleText5:
-	TX_FAR _MtMoon3AfterBattleText5
+	TX_MARKOV _MtMoon3AfterBattleText5
 	db "@"
 

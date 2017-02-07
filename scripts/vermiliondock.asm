@@ -211,5 +211,5 @@ VermilionDockTextPointers:
 	dw VermilionDockText1
 
 VermilionDockText1:
-	TX_FAR _VermilionDockText1
+	TX_MARKOV _VermilionDockText1
 	db "@"

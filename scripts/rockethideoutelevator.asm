@@ -80,6 +80,6 @@ RocketHideoutElevatorText1:
 	jp TextScriptEnd
 
 RocketHideoutElevatorText_4578b:
-	TX_FAR _RocketElevatorText_4578b
+	TX_MARKOV _RocketElevatorText_4578b
 	TX_WAIT_BUTTON
 	db "@"

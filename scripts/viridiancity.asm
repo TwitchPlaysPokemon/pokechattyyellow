@@ -309,7 +309,7 @@ ViridianCityText_6:
 	jp TextScriptEnd
 
 ViridianCityText_13:
-	TX_FAR _ViridianCityText_19219
+	TX_MARKOV _ViridianCityText_19219
 	db "@"
 
 ViridianCityText_7:
@@ -331,11 +331,11 @@ ViridianCityText_7:
 	jp TextScriptEnd
 
 ViridianCityText_192af:
-	TX_FAR _ViridianCityText_1920a
+	TX_MARKOV _ViridianCityText_1920a
 	db "@"
 
 ViridianCityText_192b4:
-	TX_FAR _OldManTextAfterBattle
+	TX_MARKOV _OldManTextAfterBattle
 	db "@"
 
 ViridianCityText_8:

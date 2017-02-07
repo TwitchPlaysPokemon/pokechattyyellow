@@ -34,5 +34,5 @@ TradeCenterTextPointers:
 	dw TradeCenterText1
 
 TradeCenterText1:
-	TX_FAR _TradeCenterText1
+	TX_MARKOV _TradeCenterText1
 	db "@"

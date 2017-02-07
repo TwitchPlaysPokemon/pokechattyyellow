@@ -44,42 +44,42 @@ CopycatsHouse2FText1:
 	jp TextScriptEnd
 
 CopycatsHouse2FText_5ccd4:
-	TX_FAR _CopycatsHouse2FText_5ccd4
+	TX_MARKOV _CopycatsHouse2FText_5ccd4
 	db "@"
 
 TM31PreReceiveText:
-	TX_FAR _TM31PreReceiveText
+	TX_MARKOV _TM31PreReceiveText
 	db "@"
 
 ReceivedTM31Text:
-	TX_FAR _ReceivedTM31Text
+	TX_MARKOV _ReceivedTM31Text
 	TX_SFX_ITEM
 TM31ExplanationText1:
-	TX_FAR _TM31ExplanationText1
+	TX_MARKOV _TM31ExplanationText1
 	TX_WAIT_BUTTON
 	db "@"
 
 TM31ExplanationText2:
-	TX_FAR _TM31ExplanationText2
+	TX_MARKOV _TM31ExplanationText2
 	db "@"
 
 TM31NoRoomText:
-	TX_FAR _TM31NoRoomText
+	TX_MARKOV _TM31NoRoomText
 	TX_WAIT_BUTTON
 	db "@"
 
 CopycatsHouse2FText2:
-	TX_FAR _CopycatsHouse2FText2
+	TX_MARKOV _CopycatsHouse2FText2
 	db "@"
 
 CopycatsHouse2FText5:
 CopycatsHouse2FText4:
 CopycatsHouse2FText3:
-	TX_FAR _CopycatsHouse2FText3
+	TX_MARKOV _CopycatsHouse2FText3
 	db "@"
 
 CopycatsHouse2FText6:
-	TX_FAR _CopycatsHouse2FText6
+	TX_MARKOV _CopycatsHouse2FText6
 	db "@"
 
 CopycatsHouse2FText7:
@@ -94,9 +94,9 @@ CopycatsHouse2FText7:
 	jp TextScriptEnd
 
 CopycatsHouse2FText_5cd17:
-	TX_FAR _CopycatsHouse2FText_5cd17
+	TX_MARKOV _CopycatsHouse2FText_5cd17
 	db "@"
 
 CopycatsHouse2FText_5cd1c:
-	TX_FAR _CopycatsHouse2FText_5cd1c
+	TX_MARKOV _CopycatsHouse2FText_5cd1c
 	db "@"

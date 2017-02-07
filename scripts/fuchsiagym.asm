@@ -176,31 +176,31 @@ FuchsiaGymText1:
 	jp TextScriptEnd
 
 KogaBeforeBattleText:
-	TX_FAR _KogaBeforeBattleText
+	TX_MARKOV _KogaBeforeBattleText
 	db "@"
 
 KogaAfterBattleText:
-	TX_FAR _KogaAfterBattleText
+	TX_MARKOV _KogaAfterBattleText
 	db "@"
 
 KogaExplainToxicText:
-	TX_FAR _KogaExplainToxicText
+	TX_MARKOV _KogaExplainToxicText
 	db "@"
 
 FuchsiaGymText9:
-	TX_FAR _FuchsiaGymText9
+	TX_MARKOV _FuchsiaGymText9
 	db "@"
 
 FuchsiaGymText10:
-	TX_FAR _ReceivedTM06Text
+	TX_MARKOV _ReceivedTM06Text
 	TX_SFX_KEY_ITEM
 
 TM06ExplanationText:
-	TX_FAR _TM06ExplanationText
+	TX_MARKOV _TM06ExplanationText
 	db "@"
 
 FuchsiaGymText11:
-	TX_FAR _TM06NoRoomText
+	TX_MARKOV _TM06NoRoomText
 	db "@"
 
 FuchsiaGymText2:
@@ -210,15 +210,15 @@ FuchsiaGymText2:
 	jp TextScriptEnd
 
 FuchsiaGymBattleText1:
-	TX_FAR _FuchsiaGymBattleText1
+	TX_MARKOV _FuchsiaGymBattleText1
 	db "@"
 
 FuchsiaGymEndBattleText1:
-	TX_FAR _FuchsiaGymEndBattleText1
+	TX_MARKOV _FuchsiaGymEndBattleText1
 	db "@"
 
 FuchsiaGymAfterBattleText1:
-	TX_FAR _FuchsiaGymAfterBattleText1
+	TX_MARKOV _FuchsiaGymAfterBattleText1
 	db "@"
 
 FuchsiaGymText3:
@@ -228,15 +228,15 @@ FuchsiaGymText3:
 	jp TextScriptEnd
 
 FuchsiaGymBattleText2:
-	TX_FAR _FuchsiaGymBattleText2
+	TX_MARKOV _FuchsiaGymBattleText2
 	db "@"
 
 FuchsiaGymEndBattleText2:
-	TX_FAR _FuchsiaGymEndBattleText2
+	TX_MARKOV _FuchsiaGymEndBattleText2
 	db "@"
 
 FuchsiaGymAfterBattleText2:
-	TX_FAR _FuchsiaGymAfterBattleText2
+	TX_MARKOV _FuchsiaGymAfterBattleText2
 	db "@"
 
 FuchsiaGymText4:
@@ -246,15 +246,15 @@ FuchsiaGymText4:
 	jp TextScriptEnd
 
 FuchsiaGymBattleText3:
-	TX_FAR _FuchsiaGymBattleText3
+	TX_MARKOV _FuchsiaGymBattleText3
 	db "@"
 
 FuchsiaGymEndBattleText3:
-	TX_FAR _FuchsiaGymEndBattleText3
+	TX_MARKOV _FuchsiaGymEndBattleText3
 	db "@"
 
 FuchsiaGymAfterBattleText3:
-	TX_FAR _FuchsiaGymAfterBattleText3
+	TX_MARKOV _FuchsiaGymAfterBattleText3
 	db "@"
 
 FuchsiaGymText5:
@@ -264,15 +264,15 @@ FuchsiaGymText5:
 	jp TextScriptEnd
 
 FuchsiaGymBattleText4:
-	TX_FAR _FuchsiaGymBattleText4
+	TX_MARKOV _FuchsiaGymBattleText4
 	db "@"
 
 FuchsiaGymEndBattleText4:
-	TX_FAR _FuchsiaGymEndBattleText4
+	TX_MARKOV _FuchsiaGymEndBattleText4
 	db "@"
 
 FuchsiaGymAfterBattleText4:
-	TX_FAR _FuchsiaGymAfterBattleText4
+	TX_MARKOV _FuchsiaGymAfterBattleText4
 	db "@"
 
 FuchsiaGymText6:
@@ -282,15 +282,15 @@ FuchsiaGymText6:
 	jp TextScriptEnd
 
 FuchsiaGymBattleText5:
-	TX_FAR _FuchsiaGymBattleText5
+	TX_MARKOV _FuchsiaGymBattleText5
 	db "@"
 
 FuchsiaGymEndBattleText5:
-	TX_FAR _FuchsiaGymEndBattleText5
+	TX_MARKOV _FuchsiaGymEndBattleText5
 	db "@"
 
 FuchsiaGymAfterBattleText5:
-	TX_FAR _FuchsiaGymAfterBattleText5
+	TX_MARKOV _FuchsiaGymAfterBattleText5
 	db "@"
 
 FuchsiaGymText7:
@@ -300,15 +300,15 @@ FuchsiaGymText7:
 	jp TextScriptEnd
 
 FuchsiaGymBattleText6:
-	TX_FAR _FuchsiaGymBattleText6
+	TX_MARKOV _FuchsiaGymBattleText6
 	db "@"
 
 FuchsiaGymEndBattleText6:
-	TX_FAR _FuchsiaGymEndBattleText6
+	TX_MARKOV _FuchsiaGymEndBattleText6
 	db "@"
 
 FuchsiaGymAfterBattleText6:
-	TX_FAR _FuchsiaGymAfterBattleText6
+	TX_MARKOV _FuchsiaGymAfterBattleText6
 	db "@"
 
 FuchsiaGymText8:
@@ -322,9 +322,9 @@ FuchsiaGymText8:
 	jp TextScriptEnd
 
 FuchsiaGymText_7564e:
-	TX_FAR _FuchsiaGymText_7564e
+	TX_MARKOV _FuchsiaGymText_7564e
 	db "@"
 
 FuchsiaGymText_75653:
-	TX_FAR _FuchsiaGymText_75653
+	TX_MARKOV _FuchsiaGymText_75653
 	db "@"

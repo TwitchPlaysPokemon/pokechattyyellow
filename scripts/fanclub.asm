@@ -101,15 +101,15 @@ FanClubText1:
 	jp TextScriptEnd
 
 .normaltext
-	TX_FAR PikachuFanText
+	TX_MARKOV PikachuFanText
 	db "@"
 
 .bettertext
-	TX_FAR PikachuFanBetterText
+	TX_MARKOV PikachuFanBetterText
 	db "@"
 
 .yellowtext
-	TX_FAR PikachuFanPrintText
+	TX_MARKOV PikachuFanPrintText
 	db "@"
 
 FanClubText2:
@@ -135,15 +135,15 @@ FanClubText2:
 	jp TextScriptEnd
 
 .normaltext
-	TX_FAR SeelFanText
+	TX_MARKOV SeelFanText
 	db "@"
 
 .bettertext
-	TX_FAR SeelFanBetterText
+	TX_MARKOV SeelFanBetterText
 	db "@"
 
 .yellowtext
-	TX_FAR SeelFanPrintText
+	TX_MARKOV SeelFanPrintText
 	db "@"
 
 FanClubText3:
@@ -157,7 +157,7 @@ FanClubText3:
 	jp TextScriptEnd
 
 .text
-	TX_FAR FanClubPikachuText
+	TX_MARKOV FanClubPikachuText
 	db "@"
 
 FanClubText4:
@@ -171,7 +171,7 @@ FanClubText4:
 	jp TextScriptEnd
 
 .text
-	TX_FAR FanClubSeelText
+	TX_MARKOV FanClubSeelText
 	db "@"
 
 FanClubText5:
@@ -261,47 +261,47 @@ FanClubText5:
 	jr .gbpals_print_text
 
 Text_59bfc:
-	TX_FAR FanClubMeetChairText
+	TX_MARKOV FanClubMeetChairText
 	db "@"
 
 Text_59c01:
-	TX_FAR FanClubChairStoryText
+	TX_MARKOV FanClubChairStoryText
 	db "@"
 
 Text_59c06:
-	TX_FAR ReceivedBikeVoucherText
+	TX_MARKOV ReceivedBikeVoucherText
 	TX_SFX_KEY_ITEM
-	TX_FAR ExplainBikeVoucherText
+	TX_MARKOV ExplainBikeVoucherText
 	db "@"
 
 Text_59c10:
-	TX_FAR FanClubNoStoryText
+	TX_MARKOV FanClubNoStoryText
 	db "@"
 
 Text_59c15:
-	TX_FAR FanClubChairFinalText
+	TX_MARKOV FanClubChairFinalText
 	db "@"
 
 Text_59c1a:
-	TX_FAR FanClubBagFullText
+	TX_MARKOV FanClubBagFullText
 	db "@"
 
 Text_59c1f:
-	TX_FAR FanClubChairPrintText1
+	TX_MARKOV FanClubChairPrintText1
 	db "@"
 
 Text_59c24:
-	TX_FAR FanClubChairPrintText2
+	TX_MARKOV FanClubChairPrintText2
 	db "@"
 
 Text_59c29:
-	TX_FAR FanClubChairPrintText3
+	TX_MARKOV FanClubChairPrintText3
 	db "@"
 
 Text_59c2e:
-	TX_FAR FanClubChairPrintText4
+	TX_MARKOV FanClubChairPrintText4
 	db "@"
 
 FanClubText6:
-	TX_FAR _FanClubText6
+	TX_MARKOV _FanClubText6
 	db "@"

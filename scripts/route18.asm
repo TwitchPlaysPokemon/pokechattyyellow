@@ -56,15 +56,15 @@ Route18Text1:
 	jp TextScriptEnd
 
 Route18BattleText1:
-	TX_FAR _Route18BattleText1
+	TX_MARKOV _Route18BattleText1
 	db "@"
 
 Route18EndBattleText1:
-	TX_FAR _Route18EndBattleText1
+	TX_MARKOV _Route18EndBattleText1
 	db "@"
 
 Route18AfterBattleText1:
-	TX_FAR _Route18AfterBattleText1
+	TX_MARKOV _Route18AfterBattleText1
 	db "@"
 
 Route18Text2:
@@ -74,15 +74,15 @@ Route18Text2:
 	jp TextScriptEnd
 
 Route18BattleText2:
-	TX_FAR _Route18BattleText2
+	TX_MARKOV _Route18BattleText2
 	db "@"
 
 Route18EndBattleText2:
-	TX_FAR _Route18EndBattleText2
+	TX_MARKOV _Route18EndBattleText2
 	db "@"
 
 Route18AfterBattleText2:
-	TX_FAR _Route18AfterBattleText2
+	TX_MARKOV _Route18AfterBattleText2
 	db "@"
 
 Route18Text3:
@@ -92,22 +92,22 @@ Route18Text3:
 	jp TextScriptEnd
 
 Route18BattleText3:
-	TX_FAR _Route18BattleText3
+	TX_MARKOV _Route18BattleText3
 	db "@"
 
 Route18EndBattleText3:
-	TX_FAR _Route18EndBattleText3
+	TX_MARKOV _Route18EndBattleText3
 	db "@"
 
 Route18AfterBattleText3:
-	TX_FAR _Route18AfterBattleText3
+	TX_MARKOV _Route18AfterBattleText3
 	db "@"
 
 Route18Text4:
-	TX_FAR _Route18Text4
+	TX_MARKOV _Route18Text4
 	db "@"
 
 Route18Text5:
-	TX_FAR _Route18Text5
+	TX_MARKOV _Route18Text5
 	db "@"
 ; 59b64

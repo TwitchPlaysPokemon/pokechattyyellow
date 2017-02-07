@@ -50,17 +50,17 @@ MagikarpSalesman:
 	ret
 
 .Text1
-	TX_FAR _MagikarpSalesmanText1
+	TX_MARKOV _MagikarpSalesmanText1
 	db "@"
 
 .RefuseText
-	TX_FAR _MagikarpSalesmanNoText
+	TX_MARKOV _MagikarpSalesmanNoText
 	db "@"
 
 .NoMoneyText
-	TX_FAR _MagikarpSalesmanNoMoneyText
+	TX_MARKOV _MagikarpSalesmanNoMoneyText
 	db "@"
 
 .Text2
-	TX_FAR _MagikarpSalesmanText2
+	TX_MARKOV _MagikarpSalesmanText2
 	db "@"

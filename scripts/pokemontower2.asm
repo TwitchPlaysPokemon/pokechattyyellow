@@ -153,21 +153,21 @@ PokemonTower2Text1:
 	jp TextScriptEnd
 
 PokemonTower2Text_6062d:
-	TX_FAR _PokemonTower2Text_6062d
+	TX_MARKOV _PokemonTower2Text_6062d
 	db "@"
 
 PokemonTower2Text_60632:
-	TX_FAR _PokemonTower2Text_60632
+	TX_MARKOV _PokemonTower2Text_60632
 	db "@"
 
 PokemonTower2Text_60637:
-	TX_FAR _PokemonTower2Text_60637
+	TX_MARKOV _PokemonTower2Text_60637
 	db "@"
 
 PokemonTower2Text_6063c:
-	TX_FAR _PokemonTower2Text_6063c
+	TX_MARKOV _PokemonTower2Text_6063c
 	db "@"
 
 PokemonTower2Text2:
-	TX_FAR _PokemonTower2Text2
+	TX_MARKOV _PokemonTower2Text2
 	db "@"

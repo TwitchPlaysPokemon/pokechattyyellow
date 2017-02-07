@@ -7,7 +7,7 @@ Func_f1b73:
 	ret
 
 MomWakeUpText:
-	TX_FAR _MomWakeUpText
+	TX_MARKOV _MomWakeUpText
 	db "@"
 
 MomHealPokemon:
@@ -32,10 +32,10 @@ MomHealPokemon:
 	ret
 
 MomHealText1:
-	TX_FAR _MomHealText1
+	TX_MARKOV _MomHealText1
 	db "@"
 MomHealText2:
-	TX_FAR _MomHealText2
+	TX_MARKOV _MomHealText2
 	db "@"
 
 Func_f1bc4:
@@ -49,10 +49,10 @@ Func_f1bc4:
 	ret
 
 StandByMeText:
-	TX_FAR _StandByMeText
+	TX_MARKOV _StandByMeText
 	db "@"
 
 TVWrongSideText:
-	TX_FAR _TVWrongSideText
+	TX_MARKOV _TVWrongSideText
 	db "@"
 

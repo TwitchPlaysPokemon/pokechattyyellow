@@ -8,11 +8,11 @@ VermilionHouse1TextPointers:
 	dw VermilionHouse1Text3
 
 VermilionHouse1Text1:
-	TX_FAR _VermilionHouse1Text1
+	TX_MARKOV _VermilionHouse1Text1
 	db "@"
 
 VermilionHouse1Text2:
-	TX_FAR _VermilionHouse1Text2
+	TX_MARKOV _VermilionHouse1Text2
 	TX_ASM
 	ld a, PIDGEY
 	call PlayCry
@@ -20,5 +20,5 @@ VermilionHouse1Text2:
 	jp TextScriptEnd
 
 VermilionHouse1Text3:
-	TX_FAR _VermilionHouse1Text3
+	TX_MARKOV _VermilionHouse1Text3
 	db "@"
