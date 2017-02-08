@@ -386,8 +386,8 @@ GBCBasePalettes:
 	RGB  3,  3,  3
 
 	RGB 31, 31, 31
-	RGB 31, 31,  0
-	RGB 11, 23, 31
+	RGB 31, 15, 18
+	RGB  0, 17, 31
 	RGB  3,  3,  3
 
 	RGB 31, 31, 31

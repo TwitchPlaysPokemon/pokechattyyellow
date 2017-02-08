@@ -151,5 +151,5 @@ MonsterPalettes:
 	db PAL_MEWMON    ; DRAGONITE
 	db PAL_PURPLEMON ; MEWTWO
 	db PAL_PINKMON   ; MEW
-	db PAL_CYANMON   ; CHATOT
+	db PAL_CHATOT    ; CHATOT
 ; 1c:69b9
