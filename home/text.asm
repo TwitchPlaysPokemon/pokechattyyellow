@@ -712,10 +712,61 @@ TextCommand18::
 	rst Bankswitch
 	ld a, LUA_REQUEST_NPC
 	call LuaRequest
+	ld a, BANK(TwitchEmotesGFX)
+	rst Bankswitch
+	ld hl, wMarkovChainBuffer
+	ld de, vChars1 + $c00
+	ld b, %11
+	jr .handleLoop
+.loadEmotesLoop
+	push hl
+	ld l, a
+	ld h, 0
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	ld a, l
+	add TwitchEmotesGFX & $ff
+	ld l, a
+	ld a, h
+	adc TwitchEmotesGFX >> 8
+	ld h, a
+	ld c, 4
+	di
+.waitNoHBlankLoop
+	ld a, [rSTAT]
+	and b
+	jr z, .waitNoHBlankLoop
+.waitHBlankLoop
+	ld a, [rSTAT]
+	and b
+	jr nz, .waitHBlankLoop
+	ld a, [hli]
+	ld [de], a
+	inc e
+	ld a, [hli]
+	ld [de], a
+	inc e
+	ld a, [hli]
+	ld [de], a
+	inc e
+	ld a, [hli]
+	ld [de], a
+	inc de
+	dec c
+	jr nz, .waitNoHBlankLoop
+	ei
+	pop hl
+.handleLoop
+	ld a, [hli]
+	cp $ff
+	jr nz, .loadEmotesLoop
 	pop af
 	rst Bankswitch
+	ld d, h
+	ld e, l
 	pop hl
-	ld de, wMarkovChainBuffer
 	call PlaceString
 	pop hl
 	jp NextTextCommand

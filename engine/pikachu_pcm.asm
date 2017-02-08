@@ -1,5 +1,5 @@
 PlayPikachuSoundClip::
-IF 0 == 1 ; DEF(MARKOV)
+IF DEF(MARKOV)
 	ld a, e
 	add LUA_REQUEST_CHATOT
 	call LuaRequest
