@@ -12,11 +12,11 @@ _OakSpeechText2A::
 	text "This world is"
 	line "inhabited by"
 	cont "creatures called"
-	cont "#MON!@@"
+	cont "#MON!"
+	prompt
 
 _OakSpeechText2B::
-	text ""
-	para "For some people,"
+	text "For some people,"
 	line "#MON are"
 	cont "pets. Others use"
 	cont "them for fights."

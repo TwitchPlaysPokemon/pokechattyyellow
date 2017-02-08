@@ -94,6 +94,10 @@ OakSpeech:
 	call MovePicLeft
 	ld hl, OakSpeechText2
 	call PrintText
+	ldpikacry e, PikachuCry11
+	callab PlayPikachuSoundClip
+	ld hl, OakSpeechText2B
+	call PrintText
 	call GBFadeOutToWhite
 
 	; Now, what is your name?
@@ -182,7 +186,8 @@ OakSpeechText1:
 	db "@"
 OakSpeechText2:
 	TX_MARKOV _OakSpeechText2A
-	TX_CRY_PIKACHU ; play CHATOT cry from TextCommandSounds
+	db "@"
+OakSpeechText2B:
 	TX_MARKOV _OakSpeechText2B
 	db "@"
 IntroducePlayerText:
