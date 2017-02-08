@@ -170,7 +170,7 @@ DisplayTitleScreen:
 	jr .titleScreenLoop
 
 .go_to_main_menu
-	ldpikacry e, PikachuCry11
+	ldpikacry e, PikachuCry6
 	call TitleScreen_PlayPikachuPCM
 	call GBPalWhiteOutWithDelay3
 	call ClearSprites
