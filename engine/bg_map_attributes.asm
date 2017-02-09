@@ -118,7 +118,7 @@ BGMapAttributesPointers:
 HandleBadgeFaceAttributes:
 ; zero out the attributes if the player doesn't have the respective badge
 ; BOULDERBADGE
-	ld hl, vBGMap1 + $183
+	ld hl, vBGMap1 + 12 * $20 + 3
 	ld de, wTrainerCardBadgeAttributes + 6 * 0
 	ld a, [de]
 	and a

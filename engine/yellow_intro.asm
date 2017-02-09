@@ -280,7 +280,7 @@ YellowIntroScene4:
 	and a
 	jr z, .dmg_sgb
 	; We can actually set palettes!
-	ld hl, $98d4
+	ld hl, $98 + 6 * $20 + $14
 	ld de, $20
 	ld b, $6
 	ld a, $1
@@ -330,7 +330,7 @@ YellowIntroScene6:
 	ld bc, $60
 	xor a
 	call Bank3E_FillMemory
-	ld hl, $9860
+	ld hl, $9800 + 3 * $20 + 0
 	ld c, $10
 	ld a, $20
 .asm_f9a8b
@@ -340,7 +340,7 @@ YellowIntroScene6:
 	dec a
 	dec c
 	jr nz, .asm_f9a8b
-	ld hl, $9880
+	ld hl, $9800 + 4 * $20 + 0
 	ld bc, $300
 	ld a, $10
 	call Bank3E_FillMemory
