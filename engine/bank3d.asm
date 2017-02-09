@@ -281,13 +281,14 @@ TitleScreenPikachuTilemap:
 	db $00, $9c, $9d, $9e, $9f, $a0, $a1, $a2, $a3, $a4, $a5, $00
 	db $00, $a6, $a7, $a8, $a9, $aa, $ab, $ac, $ad, $ae, $af, $00
 	db $00, $b0, $b1, $b2, $b3, $b4, $b5, $b6, $b7, $b8, $b9, $00
-	db $00, $ba, $bb, $bc, $bd, $be, $bf, $b0, $cc, $cd, $ce, $00
-	db $00, $cf, $d0, $d1, $d2, $d3, $d4, $d5, $d6, $d7, $d8, $00
+	db $00, $ba, $bb, $bc, $bd, $be, $bf, $c0, $c1, $c2, $c3, $00
+	db $00, $c4, $c5, $c6, $c7, $c8, $c9, $ca, $cb, $cc, $cd, $00
 
 ; f46f9 (3d:46f9)
 PokemonLogoGraphics:	     INCBIN "gfx/pokemon_logo.2bpp"
 PokemonLogoGraphicsEnd:
 YellowLogoGraphics:
+INCBIN "gfx/yellow_titlescreen0.w56.2bpp"
 INCBIN "gfx/yellow_titlescreen1.w24.2bpp"
 INCBIN "gfx/yellow_titlescreen2.w64.t2.2bpp"
 INCBIN "gfx/yellow_titlescreen3.w32.2bpp"
