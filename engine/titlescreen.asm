@@ -69,7 +69,7 @@ DisplayTitleScreen:
 	ld b, SET_PAL_TITLE_SCREEN
 	call RunPaletteCommand
 	call GBPalNormal
-	ld a, %11100000
+	ld a, %11100100
 	ld [rOBP0], a
 	call UpdateGBCPal_OBP0
 

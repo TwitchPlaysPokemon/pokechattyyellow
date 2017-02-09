@@ -177,6 +177,11 @@ LoadYellowTitleScreenGFX:
 	ld bc, 115 * $10
 	ld a, BANK(PokemonLogoGraphics) ; redundant because this function is in bank3d
 	call FarCopyData
+	ld hl, YellowLogoGraphics
+	ld de, vChars0 + 80 * $10
+	ld bc, 35 * $10
+	ld a, BANK(PokemonLogoGraphics) ; redundant because this function is in bank3d
+	call FarCopyData
 	ld hl, YellowLogoGraphics + 35 * $10
 	ld de, vChars0 + 253 * $10
 	ld bc, 3 * $10
@@ -201,15 +206,10 @@ TitleScreen_PlacePokemonLogo:
 	ret
 
 TitleScreen_PlacePikaSpeechBubble:
-	coord hl, 6, 4
-	ld de, TitleScreenPikaBubbleTilemap
-	lb bc, 4, 7
-	call Bank3D_CopyBox
-	coord hl, 9, 8
-	ld [hl], $64
-	inc hl
-	ld [hl], $65
-	ret
+	ld hl, TitleScreenPikaBubbleOAM
+	ld de, wOAMBuffer + 4 * 8
+	ld bc, 4 * 27
+	jp CopyData
 
 TitleScreen_PlacePikachu:
 	coord hl, 4, 8
@@ -271,6 +271,34 @@ TitleScreenPikaBubbleTilemap:
 	db $50, $51, $52, $53, $54, $55, $56
 	db $57, $58, $59, $5a, $5b, $5c, $5d
 	db $6d, $5e, $5f, $60, $61, $62, $63
+
+TitleScreenPikaBubbleOAM:
+	db $30, $48, $66, $00
+	db $30, $50, $67, $00
+	db $30, $58, $68, $00
+	db $30, $60, $69, $00
+	db $38, $38, $50, $00
+	db $38, $40, $51, $00
+	db $38, $48, $52, $00
+	db $38, $50, $53, $00
+	db $38, $58, $54, $00
+	db $38, $60, $55, $00
+	db $38, $68, $56, $00
+	db $40, $38, $57, $00
+	db $40, $40, $58, $00
+	db $40, $48, $59, $00
+	db $40, $50, $5a, $00
+	db $40, $58, $5b, $00
+	db $40, $60, $5c, $00
+	db $40, $68, $5d, $00
+	db $48, $40, $5e, $00
+	db $48, $48, $5f, $00
+	db $48, $50, $60, $00
+	db $48, $58, $61, $00
+	db $48, $60, $62, $00
+	db $48, $68, $63, $00
+	db $50, $50, $64, $00
+	db $50, $58, $65, $00
 
 TitleScreenPikachuTilemap:
 ; 12x9 (xy)
