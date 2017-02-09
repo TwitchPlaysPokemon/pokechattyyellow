@@ -867,6 +867,8 @@ INCLUDE "engine/intro.asm"
 INCLUDE "engine/trade2.asm"
 INCLUDE "engine/menu/options.asm"
 
+TwitchEmotesGFX::
+	INCBIN "gfx/emotes.2bpp"
 
 SECTION "bank11", ROMX,BANK[$11]
 

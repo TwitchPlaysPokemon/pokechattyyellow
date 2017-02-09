@@ -689,8 +689,6 @@ TextCommand18::
 	rst Bankswitch
 	ld a, LUA_REQUEST_NPC
 	call LuaRequest
-	pop af
-	rst Bankswitch
 	pop bc
 	ld hl, wMarkovChainBuffer
 	call TextCommandProcessor
