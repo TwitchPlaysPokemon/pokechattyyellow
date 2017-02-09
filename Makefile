@@ -23,7 +23,7 @@ $(foreach obj, $(objs:.o=), \
 .SUFFIXES: .asm .o .gbc .png .2bpp .1bpp .pic .wav .pcm
 .SECONDEXPANSION:
 # Suppress annoying intermediate file deletion messages.
-.PRECIOUS: %.2bpp
+.PRECIOUS: %.2bpp %.png
 .PHONY: all clean chatty debug
 
 rom := chatty.gbc
