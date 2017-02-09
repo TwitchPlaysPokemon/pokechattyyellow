@@ -57,12 +57,12 @@ LoadSpriteSetFromMapHeader:
 ; for a sprite slot, the picture ID for the sprite is looked up within the
 ; sprite set. The index of the picture ID within the sprite set plus two
 ; (since the Red sprite always has the first VRAM tile pattern slot and the
-; Pikachu sprite reserves the second slot) is the VRAM tile pattern slot.
+; Chatot sprite reserves the second slot) is the VRAM tile pattern slot.
 	ld hl, wSpriteSet
 	ld bc, (wSpriteSetID - wSpriteSet)
 	xor a
 	call FillMemory
-	ld a, SPRITE_PIKACHU ; load Pikachu separately
+	ld a, SPRITE_CHATOT ; load Chatot separately
 	ld [wSpriteSet], a
 	ld hl, wSprite01SpriteStateData1
 	ld a, 14
