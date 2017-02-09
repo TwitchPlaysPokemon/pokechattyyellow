@@ -1294,15 +1294,15 @@ HandlePlayerBlackOut:
 	ret
 
 Sony1WinText:
-	TX_FAR _Sony1WinText
+	TX_MARKOV _Sony1WinText
 	db "@"
 
 PlayerBlackedOutText2:
-	TX_FAR _PlayerBlackedOutText2
+	TX_MARKOV _PlayerBlackedOutText2
 	db "@"
 
 LinkBattleLostText:
-	TX_FAR _LinkBattleLostText
+	TX_MARKOV _LinkBattleLostText
 	db "@"
 
 ; slides pic of fainted mon downwards until it disappears
@@ -1745,11 +1745,11 @@ CantEscapeText:
 	db "@"
 
 NoRunningText:
-	TX_FAR _NoRunningText
+	TX_MARKOV _NoRunningText
 	db "@"
 
 GotAwayText:
-	TX_FAR _GotAwayText
+	TX_MARKOV _GotAwayText
 	db "@"
 
 ; copies from party data to battle mon data when sending out a new player mon
@@ -2346,7 +2346,7 @@ DisplayBattleMenu:
 	jp DisplayBattleMenu
 
 .RunAwayText
-	TX_FAR _RunAwayText
+	TX_MARKOV _RunAwayText
 	db "@"
 
 .upperLeftMenuItemWasNotSelected ; a menu item other than the upper left item was selected
@@ -3522,11 +3522,11 @@ PrintGhostText:
 	ret
 
 ScaredText:
-	TX_FAR _ScaredText
+	TX_MARKOV _ScaredText
 	db "@"
 
 GetOutText:
-	TX_FAR _GetOutText
+	TX_MARKOV _GetOutText
 	db "@"
 
 IsGhostBattle:
