@@ -130,7 +130,7 @@ LoadMonPartySpriteGfxWithLCDDisabled:
 ; LCD.
 	call DisableLCD
 	ld hl, MonPartySpritePointers
-	ld a, $1e
+	ld a, $20
 	ld bc, $0
 .loop
 	push af
@@ -312,6 +312,16 @@ MonPartySpritePointers:
 	db $40 / $10 ; $40 bytes
 	db BANK(MonPartySprites)
 	dw vSprites + $780
+
+	dw ChatotSprite
+	db $40 / $10 ; $40 bytes
+	db BANK(ChatotSprite)
+	dw vSprites + $2c0
+
+	dw ChatotSprite + $c0
+	db $40 / $10 ; $40 bytes
+	db BANK(ChatotSprite)
+	dw vSprites + $6c0
 
 WriteMonPartySpriteOAMByPartyIndex:
 ; Write OAM blocks for the party mon in [hPartyMonIndex].

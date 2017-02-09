@@ -12,6 +12,7 @@ const_value = 0
 	const SPRITE_SNAKE            ; $8
 	const SPRITE_QUADRUPED        ; $9
 	const SPRITE_PIKACHU_FAMILY   ; $A
+	const SPRITE_CHATOT_M         ; $B
 ; overworld sprites
 const_value = 1
 
@@ -85,20 +86,21 @@ const_value = 1
 	const SPRITE_CHANSEY                   ; $44
 	const SPRITE_JESSIE                    ; $45
 	const SPRITE_JAMES                     ; $46
+	const SPRITE_CHATOT                    ; $47
 
 	; 4-tile sprites
-	const SPRITE_BALL                      ; $47
-	const SPRITE_OMANYTE                   ; $48
-	const SPRITE_BOULDER                   ; $49
-	const SPRITE_PAPER_SHEET               ; $4a
-	const SPRITE_BOOK_MAP_DEX              ; $4b
-	const SPRITE_CLIPBOARD                 ; $4c
-	const SPRITE_SNORLAX                   ; $4d
-	const SPRITE_OLD_AMBER_COPY            ; $4e
-	const SPRITE_OLD_AMBER                 ; $4f
-	const SPRITE_LYING_OLD_MAN_UNUSED_1    ; $50
-	const SPRITE_LYING_OLD_MAN_UNUSED_2    ; $51
-	const SPRITE_LYING_OLD_MAN             ; $52
+	const SPRITE_BALL                      ; $48
+	const SPRITE_OMANYTE                   ; $49
+	const SPRITE_BOULDER                   ; $4a
+	const SPRITE_PAPER_SHEET               ; $4b
+	const SPRITE_BOOK_MAP_DEX              ; $4c
+	const SPRITE_CLIPBOARD                 ; $4d
+	const SPRITE_SNORLAX                   ; $4e
+	const SPRITE_OLD_AMBER_COPY            ; $4f
+	const SPRITE_OLD_AMBER                 ; $50
+	const SPRITE_LYING_OLD_MAN_UNUSED_1    ; $51
+	const SPRITE_LYING_OLD_MAN_UNUSED_2    ; $52
+	const SPRITE_LYING_OLD_MAN             ; $53
 
 ; different kinds of people events
 ITEM    EQU $80

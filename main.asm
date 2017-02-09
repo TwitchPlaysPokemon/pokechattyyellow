@@ -2236,6 +2236,8 @@ ChanseySprite:         INCBIN "gfx/sprites/chansey.2bpp"
 SurfingPikachuSprite:  INCBIN "gfx/sprites/surfing_pikachu.2bpp"
 JessieSprite:          INCBIN "gfx/sprites/jessie.2bpp"
 JamesSprite:           INCBIN "gfx/sprites/james.2bpp"
+ChatotSprite:          INCBIN "gfx/sprites/chatot.2bpp"
+ChatotSpriteEnd:
 
 SECTION "bank40", ROMX, BANK[$40]
 ; This space left intentionally blank
