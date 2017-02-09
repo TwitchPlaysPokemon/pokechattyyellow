@@ -416,6 +416,8 @@ WriteMonPartySpriteOAM:
 	pop af
 	cp SPRITE_HELIX << 2
 	jr z, .helix
+	cp SPRITE_CHATOT_M << 2
+	jr z, .helix
 	call WriteSymmetricMonPartySpriteOAM
 	jr .makeCopy
 .helix
