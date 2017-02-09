@@ -357,10 +357,12 @@ TX_FAR: MACRO
 
 IF DEF(MARKOV)
 TX_MARKOV: MACRO
-; 17AAAABB (use text at BB:AAAA to seed external markov chain)
+; 18AAAABB (use text at BB:AAAA to seed external markov chain)
 	db $18
 	dab \1
 	ENDM
+
+TX_TWITCHEMOTE EQUS "db $19,"
 ELSE
 TX_MARKOV EQUS "TX_FAR"
 ENDC

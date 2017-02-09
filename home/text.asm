@@ -331,7 +331,7 @@ TextCommandProcessor::
 	push af
 	set 1, a
 	ld e, a
-	ld a, [$fff9]
+	ld a, [hFFF9]
 	xor e
 	ld [wLetterPrintingDelayFlags], a
 	ld a, c
@@ -343,11 +343,15 @@ NextTextCommand::
 	ld a, [hli]
 	cp "@" ; terminator
 	jr nz, .doTextCommand
+.bail
 	pop af
 	ld [wLetterPrintingDelayFlags], a
 	ret
 
 .doTextCommand
+; try catch
+	cp (TextCommandJumpTableEnd - TextCommandJumpTable) / 2
+	jr nc, .bail
 	push hl
 	ld hl, TextCommandJumpTable
 	push bc
@@ -654,38 +658,11 @@ TextCommand17::
 	rst Bankswitch
 	jp NextTextCommand
 
-TextCommandJumpTable::
-	dw TextCommand00
-	dw TextCommand01
-	dw TextCommand02
-	dw TextCommand03
-	dw TextCommand04
-	dw TextCommand05
-	dw TextCommand06
-	dw TextCommand07
-	dw TextCommand08
-	dw TextCommand09
-	dw TextCommand0A
-	dw TextCommand0B
-	dw TextCommand0C
-	dw TextCommand0D
-	dw TextCommand0B
-	dw TextCommand0B
-	dw TextCommand0B
-	dw TextCommand0B
-	dw TextCommand0B
-	dw TextCommand0B
-	dw TextCommand0B
-	dw TextCommand0B
-	dw TextCommand0B
-	dw TextCommand17
 IF DEF(MARKOV)
-	dw TextCommand18
-
 TextCommand18::
 	ld a, [wPartyCount]
 	and a
-	jp z, TextCommand17
+	jr z, TextCommand17
 	pop hl
 ; bc is the tilemap dest
 ; hl, on the stack, is the text source
@@ -714,9 +691,92 @@ TextCommand18::
 	call LuaRequest
 	pop af
 	rst Bankswitch
+	pop bc
+	ld hl, wMarkovChainBuffer
+	call TextCommandProcessor
 	pop hl
-	ld de, wMarkovChainBuffer
-	call PlaceString
+	jp NextTextCommand
+
+TextCommand19::
+	pop hl
+	ld a, [hli]
+	push hl
+	ld e, a
+	ld d, $c0
+	ld hl, wLoadedEmotes
+.loop
+	ld a, [hli]
+	and a
+	jr z, .load
+	cp e
+	jr z, .found
+	inc d
+	ld a, d
+	cp $e0
+	jr c, .loop
+	ld d, $c0
+	ld hl, wLoadedEmotes + 1
+.load
+	dec hl
+	ld [hl], e
+	push bc
+	push de
+	dec e
+	ld l, e
+	ld h, 0
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	ld bc, TwitchEmotes
+	add hl, bc
+	push hl
+	ld l, d
+	ld h, $8
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	pop de
+	lb bc, BANK(TwitchEmotes), 1
+	call CopyVideoData
+	pop de
+	pop bc
+.found
+	ld a, d
+	ld [bc], a
+	inc bc
 	pop hl
 	jp NextTextCommand
 ENDC
+
+TextCommandJumpTable::
+	dw TextCommand00
+	dw TextCommand01
+	dw TextCommand02
+	dw TextCommand03
+	dw TextCommand04
+	dw TextCommand05
+	dw TextCommand06
+	dw TextCommand07
+	dw TextCommand08
+	dw TextCommand09
+	dw TextCommand0A
+	dw TextCommand0B
+	dw TextCommand0C
+	dw TextCommand0D
+	dw TextCommand0B
+	dw TextCommand0B
+	dw TextCommand0B
+	dw TextCommand0B
+	dw TextCommand0B
+	dw TextCommand0B
+	dw TextCommand0B
+	dw TextCommand0B
+	dw TextCommand0B
+	dw TextCommand17
+IF DEF(MARKOV)
+	dw TextCommand18
+	dw TextCommand19
+ENDC
+TextCommandJumpTableEnd::

@@ -334,6 +334,8 @@ hMarkovChain EQU $FFF6 ; dw
 
 hDisableJoypadPolling EQU $FFF8 ; non-zero value disables polling of joypad
 
+hFFF9 EQU $FFF9
+
 ; bit 0: draw HP fraction to the right of bar instead of below (for party menu)
 ; bit 1: menu is double spaced
 hFlags_0xFFFA EQU $FFFA

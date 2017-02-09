@@ -3260,7 +3260,10 @@ wBattleTentCurScript:: ; d669
 	ds 77
 wGameProgressFlagsEnd:: ; d6b7
 
-	ds 56
+wLoadedEmotes:: ; d6b7
+	ds 32
+	
+	ds 24
 
 wObtainedHiddenItemsFlags:: ; d6ef
 	ds 14

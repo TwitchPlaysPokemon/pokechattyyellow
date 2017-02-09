@@ -335,6 +335,7 @@ PlayCry::
 	call GetCryData
 	call PlaySound
 	call WaitForSoundToFinish
+_finishCry
 	pop af
 	ld [wLowHealthAlarm], a
 	pop bc
@@ -342,6 +343,15 @@ PlayCry::
 
 GetCryData::
 ; Load cry data for monster a.
+	cp CHATOT
+	jr nz, .not_chatot
+	add sp, 2
+	ld hl, PikachuCry1
+	ld b, BANK(PikachuCry1)
+	homecall PlayPikachuSoundClipBHL
+	jr _finishCry
+
+.not_chatot
 	dec a
 	ld c, a
 	ld b, 0
@@ -3269,6 +3279,10 @@ DivideBytes::
 	ret
 
 LoadFontTilePatterns::
+	xor a
+	ld hl, wLoadedEmotes
+	ld bc, 32
+	call FillMemory
 	ld a, [rLCDC]
 	bit 7, a ; is the LCD enabled?
 	jr nz, .on

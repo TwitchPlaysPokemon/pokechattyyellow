@@ -656,10 +656,10 @@ Pokedex_PrintFlavorTextAtRow11:
 	coord bc, 1, 11
 Pokedex_PrintFlavorTextAtBC:
 	ld a, 2
-	ld [$fff9], a
+	ld [hFFF9], a
 	call TextCommandProcessor ; print pokedex description text
 	xor a
-	ld [$fff9], a
+	ld [hFFF9], a
 	ret
 
 Pokedex_PrepareDexEntryForPrinting:

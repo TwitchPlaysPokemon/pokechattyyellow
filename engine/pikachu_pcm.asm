@@ -3,6 +3,8 @@ IF 0 == 1 ; DEF(MARKOV)
 	ld a, e
 	add LUA_REQUEST_CHATOT
 	call LuaRequest
+	ld b, 0
+	ld hl, 0
 ELSE
 	ld d, $0
 	ld hl, PikachuCriesPointerTable
@@ -16,6 +18,7 @@ ELSE
 	ld l, a
 	call Delay3
 ENDC
+PlayPikachuSoundClipBHL::
 	di
 	push hl
 	ld a, $80
