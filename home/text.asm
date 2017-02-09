@@ -746,6 +746,7 @@ TextCommand19::
 	ld a, d
 	ld [bc], a
 	inc bc
+	call PrintLetterDelay
 	pop hl
 	jp NextTextCommand
 ENDC
