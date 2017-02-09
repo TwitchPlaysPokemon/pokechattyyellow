@@ -62,7 +62,7 @@ SurfingPikachuMinigame:
 SurfingPikachuLoop:
 	call SurfingPikachuMinigame_LoadGFXAndLayout
 	call DelayFrame
-	ld b, $e
+	ld b, SET_PAL_SURFING_PIKACHU
 	call RunPaletteCommand
 .loop
 	ld a, [wSurfingMinigameRoutineNumber]
@@ -2366,7 +2366,7 @@ SurfingPikachuMinigameIntro:
 	ld [hSCY], a
 	ld a, $90
 	ld [hWY], a
-	ld b, $f
+	ld b, SET_PAL_SURFING_PIKACHU_INTRO
 	call RunPaletteCommand
 	ld a, $e3
 	ld [rLCDC], a

@@ -255,12 +255,12 @@ SetPal_TrainerCard:
 	ld de, wTrainerCardBlkPacket
 	ret
 
-SendUnknownPalPacket_7205d::
+SetPal_SurfingPikachu::
 	ld hl, UnknownPalPacket_72811
 	ld de, BlkPacket_WholeScreen
 	ret
 
-SendUnknownPalPacket_72064::
+SetPal_SurfingPikachuIntro::
 	ld hl, UnknownPalPacket_72821
 	ld de, UnknownPacket_72751
 	ret
@@ -280,8 +280,8 @@ SetPalFunctions:
 	dw SetPal_PokemonWholeScreen
 	dw SetPal_GameFreakIntro
 	dw SetPal_TrainerCard
-	dw SendUnknownPalPacket_7205d
-	dw SendUnknownPalPacket_72064
+	dw SetPal_SurfingPikachu
+	dw SetPal_SurfingPikachuIntro
 
 ; The length of the blk data of each badge on the Trainer Card.
 ; The Rainbow Badge has 3 entries because of its many colors.

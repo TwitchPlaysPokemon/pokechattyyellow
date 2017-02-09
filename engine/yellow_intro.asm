@@ -344,6 +344,30 @@ YellowIntroScene6:
 	ld bc, $300
 	ld a, $10
 	call Bank3E_FillMemory
+	ld a, [hGBC]
+	and a
+	jr z, .dmg_sgb
+	; We can actually set palettes!
+	ld hl, $98d4 ; (20, 6)
+	ld de, $20
+	ld b, $6
+	ld a, $1
+	ld [rVBK], a
+	xor a
+.attr_row
+	ld c, $6
+	push hl
+.attr_col
+	ld [hli], a
+	dec c
+	jr nz, .attr_col
+	pop hl
+	add hl, de
+	dec b
+	jr nz, .attr_row
+	xor a
+	ld [rVBK], a
+.dmg_sgb
 	lb de, $40, $f8
 	ld a, $5
 	call YellowIntro_SpawnAnimatedObjectAndSavePointer
@@ -843,7 +867,7 @@ InitYellowIntroGFXAndMusic:
 	call CopyVideoData
 	call ClearObjectAnimationBuffers
 	call LoadYellowIntroObjectAnimationDataPointers
-	ld b, $8
+	ld b, SET_PAL_GENERIC
 	call RunPaletteCommand
 	xor a
 	ld hl, wYellowIntroCurrentScene
