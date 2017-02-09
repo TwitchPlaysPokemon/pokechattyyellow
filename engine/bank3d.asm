@@ -188,11 +188,15 @@ LoadYellowTitleScreenGFX:
 	ld a, BANK(YellowLogoGraphics)
 	call FarCopyData
 	ld hl, YellowLogoGraphics + 102 * $10
-	ld de, vChars0 + 240 * $10
+	ld de, vChars1 + 112 * $10
 	ld bc, 12 * $10
 	ld a, BANK(YellowLogoGraphics)
 	call FarCopyData
-	ret
+	ld hl, YellowLogoGraphics + 114 * $10
+	ld de, vChars1 + 64 * $10
+	ld bc, 14 * $10
+	ld a, BANK(YellowLogoGraphics)
+	jp FarCopyData
 
 TitleScreen_PlacePokemonLogo:
 	coord hl, 2, 1
@@ -224,14 +228,14 @@ TitleScreen_PlacePikachu:
 	ret
 
 TitleScreenPikachuEyesOAMData:
-	db $60, $40, $f1, $22
-	db $60, $48, $f0, $22
-	db $68, $40, $f3, $22
-	db $68, $48, $f2, $22
-	db $60, $60, $f0, $02
-	db $60, $68, $f1, $02
-	db $68, $60, $f2, $02
-	db $68, $68, $f3, $02
+	db $70, $40, $f1, $22
+	db $70, $48, $f0, $22
+	db $78, $40, $f3, $22
+	db $78, $48, $f2, $22
+	db $70, $60, $f0, $02
+	db $70, $68, $f1, $02
+	db $78, $60, $f2, $02
+	db $78, $68, $f3, $02
 
 Bank3D_CopyBox:
 ; copy cxb (xy) screen area from de to hl
