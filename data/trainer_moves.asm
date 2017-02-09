@@ -182,9 +182,12 @@ SpecialTrainerMoves:
 	db JR_TRAINER_F,$0b
 	db 1,1,RAZOR_LEAF
 	db 1,2,GROWTH
-	db 2,1,0
-	db 2,2,0
-	db 2,3,MEGA_DRAIN
+	db 1,3,0
+	db 1,4,0
+	db 2,1,MEGA_DRAIN
+	db 2,2,GROWTH
+	db 2,3,0
+	db 2,4,0
 	db 0
 
 	db JR_TRAINER_F,$0c
@@ -1239,11 +1242,15 @@ SpecialTrainerMoves:
 	db SONY1,$3
 	db 1,3,PSYWAVE
 	db 1,4,REFLECT
-	db 2,1,CUT
-	db 2,3,SWORDS_DANCE
+	db 2,1,SLASH
+	db 2,2,SEISMIC_TOSS
+	db 2,3,0
 	db 3,1,METRONOME
 	db 3,2,FLASH
+	db 4,1,SWIFT
+	db 4,2,SAND_ATTACK
 	db 4,3,BIDE
+	db 4,4,0
 	db 0
 
 	db SCIENTIST,$3
@@ -1698,11 +1705,17 @@ SpecialTrainerMoves:
 	db 0
 
 	db MISTY,$1
-	db 1,4,THUNDER_WAVE
+	db 1,1,ICE_BEAM
+	db 1,2,THUNDERBOLT
+	db 1,3,THUNDER_WAVE
 	db 2,1,TOXIC
-	db 2,2,SKULL_BASH
+	db 2,2,REST
+	db 2,3,BUBBLEBEAM
+	db 2,4,SAND_ATTACK
 	db 3,1,TRI_ATTACK
-	db 3,4,PSYWAVE
+	db 3,2,BUBBLEBEAM
+	db 3,3,PSYWAVE
+	db 3,4,HARDEN
 	db 0
 
 	db LT_SURGE,$1
@@ -1774,10 +1787,10 @@ SpecialTrainerMoves:
 	db 0
 
 	db SABRINA,$1
-	db 1,1,SURF
-	db 1,4,REST
-	db 2,1,MEGA_KICK
-	db 2,3,SUBMISSION	
+	db 1,1,MEGA_KICK
+	db 1,3,SUBMISSION	
+	db 2,1,SURF
+	db 2,4,REST
 	db 3,1,EGG_BOMB
 	db 3,2,PSYWAVE
 	db 3,3,REFLECT
@@ -1839,7 +1852,10 @@ SpecialTrainerMoves:
 	db 5,2,SLASH
 	db 5,3,SAND_ATTACK
 	db 5,4,BIDE
+	db 6,1,DOUBLE_KICK
 	db 6,2,THUNDERBOLT
+	db 6,3,QUICK_ATTACK
+	db 6,4,SAND_ATTACK
 	db 0
 
 	db SONY2,$3

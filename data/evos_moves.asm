@@ -253,6 +253,7 @@ Mon021_EvosMoves:
 	db 15, FURY_ATTACK
 	db 22, MIRROR_MOVE
 	db 29, DRILL_PECK
+	db 33, ROOST
 	db 36, AGILITY
 	db 0
 
@@ -630,6 +631,7 @@ Mon022_EvosMoves:
 	db 15, FURY_ATTACK
 	db 25, MIRROR_MOVE
 	db 34, DRILL_PECK
+	db 41, ROOST
 	db 43, AGILITY
 	db 0
 
@@ -642,8 +644,10 @@ Mon016_EvosMoves:
 	db 5, SAND_ATTACK
 	db 12, QUICK_ATTACK
 	db 19, WHIRLWIND
+	db 25, FEATHERDANCE
 	db 28, WING_ATTACK
 	db 36, AGILITY
+	db 37, ROOST
 	db 44, MIRROR_MOVE
 	db 0
 
@@ -972,6 +976,8 @@ Mon083_EvosMoves:
 	db 23, SWORDS_DANCE
 	db 31, AGILITY
 	db 39, SLASH
+	db 44, ROOST
+	db 49, FEATHERDANCE
 	db 0
 
 Mon048_EvosMoves:
@@ -1071,6 +1077,7 @@ Mon146_EvosMoves:
 ;Learnset
 	db 51, LEER
 	db 55, AGILITY
+	db 57, ROOST
 	db 60, SKY_ATTACK
 	db 0
 
@@ -1081,6 +1088,7 @@ Mon144_EvosMoves:
 ;Learnset
 	db 51, BLIZZARD
 	db 55, AGILITY
+	db 57, ROOST
 	db 60, MIST
 	db 0
 
@@ -1091,6 +1099,7 @@ Mon145_EvosMoves:
 ;Learnset
 	db 51, THUNDER
 	db 55, AGILITY
+	db 57, ROOST
 	db 60, LIGHT_SCREEN
 	db 0
 
@@ -1355,6 +1364,7 @@ Mon039_EvosMoves:
 	db 29, REST
 	db 34, BODY_SLAM
 	db 39, DOUBLE_EDGE
+	db 44, HYPER_VOICE
 	db 0
 
 Mon040_EvosMoves:
@@ -1902,8 +1912,10 @@ Mon017_EvosMoves:
 	db 5, SAND_ATTACK
 	db 12, QUICK_ATTACK
 	db 21, WHIRLWIND
+	db 27, FEATHERDANCE
 	db 31, WING_ATTACK
 	db 40, AGILITY
+	db 42, ROOST
 	db 49, MIRROR_MOVE
 	db 0
 
@@ -1915,8 +1927,10 @@ Mon018_EvosMoves:
 	db 5, SAND_ATTACK
 	db 12, QUICK_ATTACK
 	db 21, WHIRLWIND
+	db 27, FEATHERDANCE
 	db 31, WING_ATTACK
-	db 44, AGILITY
+	db 44, ROOST
+	db 48, AGILITY
 	db 54, MIRROR_MOVE
 	db 0
 

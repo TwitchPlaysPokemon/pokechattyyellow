@@ -8,7 +8,7 @@ PlateauMons1:
 	db 51, LICKITUNG
 	db 51, ONIX
 	db 53, GOLEM
-	db 53, JYNX
+	db 53, RHYDON
 	db 53, MACHAMP
 	db $00
 

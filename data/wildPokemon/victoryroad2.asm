@@ -5,10 +5,10 @@ PlateauMons2:
 	db 49, MACHOKE
 	db 50, GOLBAT
 	db 51, KINGLER
-	db 51, LICKITUNG
+	db 51, GOLEM
 	db 51, ONIX
-	db 53, GOLEM
-	db 53, JYNX
 	db 53, MACHAMP
+	db 53, RHYDON
+	db 53, LICKITUNG
 	db $00
 
