@@ -184,17 +184,12 @@ LoadYellowTitleScreenGFX:
 	call FarCopyData
 	ld hl, YellowLogoGraphics + 38 * $10
 	ld de, vChars1
-	ld bc, 64 * $10
+	ld bc, 78 * $10
 	ld a, BANK(YellowLogoGraphics)
 	call FarCopyData
-	ld hl, YellowLogoGraphics + 102 * $10
+	ld hl, YellowLogoGraphics + 116 * $10
 	ld de, vChars1 + 112 * $10
 	ld bc, 12 * $10
-	ld a, BANK(YellowLogoGraphics)
-	call FarCopyData
-	ld hl, YellowLogoGraphics + 114 * $10
-	ld de, vChars1 + 64 * $10
-	ld bc, 14 * $10
 	ld a, BANK(YellowLogoGraphics)
 	jp FarCopyData
 
@@ -292,7 +287,10 @@ TitleScreenPikachuTilemap:
 ; f46f9 (3d:46f9)
 PokemonLogoGraphics:	     INCBIN "gfx/pokemon_logo.2bpp"
 PokemonLogoGraphicsEnd:
-YellowLogoGraphics:	      INCBIN "gfx/yellow_titlescreen.2bpp"
+YellowLogoGraphics:
+INCBIN "gfx/yellow_titlescreen1.w24.2bpp"
+INCBIN "gfx/yellow_titlescreen2.w64.t2.2bpp"
+INCBIN "gfx/yellow_titlescreen3.w32.2bpp"
 YellowLogoGraphicsEnd:
 
 INCLUDE "engine/menu/link_menu.asm"
