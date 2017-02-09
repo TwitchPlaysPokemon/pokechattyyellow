@@ -174,28 +174,33 @@ ProfOakPicBack:   INCBIN "pic/ytrainer/prof.oakb.pic"
 LoadYellowTitleScreenGFX:
 	ld hl, PokemonLogoGraphics
 	ld de, vChars2
-	ld bc, 115 * $10
+	ld bc, 80 * $10
 	ld a, BANK(PokemonLogoGraphics) ; redundant because this function is in bank3d
 	call FarCopyData
-	ld hl, YellowLogoGraphics
+	ld hl, YellowLogoGraphics0
 	ld de, vChars0 + 80 * $10
-	ld bc, 35 * $10
-	ld a, BANK(PokemonLogoGraphics) ; redundant because this function is in bank3d
+	ld bc, 26 * $10
+	ld a, BANK(YellowLogoGraphics0)
 	call FarCopyData
-	ld hl, YellowLogoGraphics + 35 * $10
+	ld hl, YellowLogoGraphics1
 	ld de, vChars0 + 253 * $10
 	ld bc, 3 * $10
-	ld a, BANK(YellowLogoGraphics)
+	ld a, BANK(YellowLogoGraphics1)
 	call FarCopyData
-	ld hl, YellowLogoGraphics + 38 * $10
+	ld hl, YellowLogoGraphics2
 	ld de, vChars1
 	ld bc, 78 * $10
-	ld a, BANK(YellowLogoGraphics)
+	ld a, BANK(YellowLogoGraphics2)
 	call FarCopyData
-	ld hl, YellowLogoGraphics + 116 * $10
+	ld hl, YellowLogoGraphics3
 	ld de, vChars1 + 112 * $10
 	ld bc, 12 * $10
-	ld a, BANK(YellowLogoGraphics)
+	ld a, BANK(YellowLogoGraphics3)
+	call FarCopyData
+	ld hl, YellowLogoGraphics4
+	ld de, vChars2 + 106 * $10
+	ld bc, 9 * $10
+	ld a, BANK(YellowLogoGraphics4)
 	jp FarCopyData
 
 TitleScreen_PlacePokemonLogo:
@@ -265,12 +270,12 @@ Pointer_f4669:
 ; Unreferenced
 	db $47, $48, $49, $4a, $4b, $4c, $4d, $4e, $4f, $5f
 
-TitleScreenPikaBubbleTilemap:
-; 7x4 (xy)
-	db $24, $25, $66, $67, $68, $69, $2a
-	db $50, $51, $52, $53, $54, $55, $56
-	db $57, $58, $59, $5a, $5b, $5c, $5d
-	db $6d, $5e, $5f, $60, $61, $62, $63
+; TitleScreenPikaBubbleTilemap:
+; ; 7x4 (xy)
+	; db $24, $25, $66, $67, $68, $69, $2a
+	; db $50, $51, $52, $53, $54, $55, $56
+	; db $57, $58, $59, $5a, $5b, $5c, $5d
+	; db $6d, $5e, $5f, $60, $61, $62, $63
 
 TitleScreenPikaBubbleOAM:
 	db $30, $48, $66, $00
@@ -315,10 +320,15 @@ TitleScreenPikachuTilemap:
 ; f46f9 (3d:46f9)
 PokemonLogoGraphics:	     INCBIN "gfx/pokemon_logo.2bpp"
 PokemonLogoGraphicsEnd:
-YellowLogoGraphics:
-INCBIN "gfx/yellow_titlescreen0.w56.2bpp"
+YellowLogoGraphics0:
+INCBIN "gfx/yellow_titlescreen0.w56.t2.2bpp"
+YellowLogoGraphics4:
+INCBIN "gfx/yellow_titleScreen4.2bpp"
+YellowLogoGraphics1:
 INCBIN "gfx/yellow_titlescreen1.w24.2bpp"
+YellowLogoGraphics2:
 INCBIN "gfx/yellow_titlescreen2.w64.t2.2bpp"
+YellowLogoGraphics3:
 INCBIN "gfx/yellow_titlescreen3.w32.2bpp"
 YellowLogoGraphicsEnd:
 
