@@ -105,77 +105,80 @@ BenchGuyTextPointers:
 	db $FF
 
 ViridianCityPokecenterBenchGuyText:
-	TX_FAR _ViridianCityPokecenterGuyText
+	TX_MARKOV _ViridianCityPokecenterGuyText
 	db "@"
 
 PewterCityPokecenterBenchGuyText:
-	TX_FAR _PewterCityPokecenterGuyText
+	TX_MARKOV _PewterCityPokecenterGuyText
 	db "@"
 
 CeruleanCityPokecenterBenchGuyText:
-	TX_FAR _CeruleanPokecenterGuyText
+	TX_MARKOV _CeruleanPokecenterGuyText
 	db "@"
 
 LavenderCityPokecenterBenchGuyText:
-	TX_FAR _LavenderPokecenterGuyText
+	TX_MARKOV _LavenderPokecenterGuyText
 	db "@"
 
 MtMoonPokecenterBenchGuyText:
-	TX_FAR _MtMoonPokecenterBenchGuyText
+	TX_MARKOV _MtMoonPokecenterBenchGuyText
 	db "@"
 
 RockTunnelPokecenterBenchGuyText:
-	TX_FAR _RockTunnelPokecenterGuyText
+	TX_MARKOV _RockTunnelPokecenterGuyText
 	db "@"
 
 UnusedBenchGuyText1:
-	TX_FAR _UnusedBenchGuyText1
+	TX_MARKOV _UnusedBenchGuyText1
 	db "@"
 
 UnusedBenchGuyText2:
-	TX_FAR _UnusedBenchGuyText2
+	TX_MARKOV _UnusedBenchGuyText2
 	db "@"
 
 UnusedBenchGuyText3:
-	TX_FAR _UnusedBenchGuyText3
+	TX_MARKOV _UnusedBenchGuyText3
 	db "@"
 
 VermilionCityPokecenterBenchGuyText:
-	TX_FAR _VermilionPokecenterGuyText
+	TX_MARKOV _VermilionPokecenterGuyText
 	db "@"
 
 CeladonCityPokecenterBenchGuyText:
-	TX_FAR _CeladonCityPokecenterGuyText
+	TX_MARKOV _CeladonCityPokecenterGuyText
 	db "@"
 
 FuchsiaCityPokecenterBenchGuyText:
-	TX_FAR _FuchsiaCityPokecenterGuyText
+	TX_MARKOV _FuchsiaCityPokecenterGuyText
 	db "@"
 
 CinnabarIslandPokecenterBenchGuyText:
-	TX_FAR _CinnabarPokecenterGuyText
+	TX_MARKOV _CinnabarPokecenterGuyText
 	db "@"
 
 SaffronCityPokecenterBenchGuyText:
-	TX_ASM
-	CheckEvent EVENT_BEAT_SILPH_CO_GIOVANNI
-	ld hl, SaffronCityPokecenterBenchGuyText2
-	jr nz, .asm_624f2
-	ld hl, SaffronCityPokecenterBenchGuyText1
-.asm_624f2
-	call PrintText
-	jp TextScriptEnd
+	; TX_ASM
+	; CheckEvent EVENT_BEAT_SILPH_CO_GIOVANNI
+	; ld hl, SaffronCityPokecenterBenchGuyText2
+	; jr nz, .asm_624f2
+	; ld hl, SaffronCityPokecenterBenchGuyText1
+; .asm_624f2
+	; call PrintText
+	; jp TextScriptEnd
+	
+	TX_MARKOV SaffronCityPokecenterBenchGuyText1
+	db "@"
 
 SaffronCityPokecenterBenchGuyText1:
-	TX_FAR _SaffronCityPokecenterGuyText1
+	TX_MARKOV _SaffronCityPokecenterGuyText1
 	db "@"
 
 SaffronCityPokecenterBenchGuyText2:
-	TX_FAR _SaffronCityPokecenterGuyText2
+	TX_MARKOV _SaffronCityPokecenterGuyText2
 	db "@"
 
 CeladonCityHotelText:
-	TX_FAR _CeladonCityHotelText
+	TX_MARKOV _CeladonCityHotelText
 	db "@"
 
 	ret
@@ -188,7 +191,7 @@ PrintBookcaseText:
 	tx_pre_jump BookcaseText
 
 BookcaseText:
-	TX_FAR _BookcaseText
+	TX_MARKOV _BookcaseText
 	db "@"
 
 OpenPokemonCenterPC:
