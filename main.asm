@@ -111,7 +111,7 @@ INCLUDE "engine/hidden_object_functions3.asm"
 
 SECTION "Graphics", ROMX, BANK[GFX]
 
-TwitchEmotes:                   ds $600 ; INCBIN "gfx/pokemon_logo_japan.2bpp"
+PokemonLogoJapan:               INCBIN "gfx/pokemon_logo_japan.2bpp"
 FontGraphics:                   INCBIN "gfx/font.1bpp"
 FontGraphicsEnd:
 ABTiles:                        INCBIN "gfx/AB.2bpp"

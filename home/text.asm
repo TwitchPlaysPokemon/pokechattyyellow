@@ -726,7 +726,7 @@ TextCommand19::
 	add hl, hl
 	add hl, hl
 	add hl, hl
-	ld bc, TwitchEmotes
+	ld bc, TwitchEmotesGFX
 	add hl, bc
 	push hl
 	ld l, d
@@ -736,7 +736,7 @@ TextCommand19::
 	add hl, hl
 	add hl, hl
 	pop de
-	lb bc, BANK(TwitchEmotes), 1
+	lb bc, BANK(TwitchEmotesGFX), 1
 	call CopyVideoData
 	pop de
 	pop bc
