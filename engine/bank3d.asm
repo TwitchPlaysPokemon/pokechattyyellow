@@ -194,7 +194,7 @@ LoadYellowTitleScreenGFX:
 	call FarCopyData
 	ld hl, YellowLogoGraphics3
 	ld de, vChars1 + 112 * $10
-	ld bc, 12 * $10
+	ld bc, 6 * $10
 	ld a, BANK(YellowLogoGraphics3)
 	call FarCopyData
 	ld hl, YellowLogoGraphics4
@@ -212,7 +212,7 @@ TitleScreen_PlacePokemonLogo:
 
 TitleScreen_PlacePikaSpeechBubble:
 	ld hl, TitleScreenPikaBubbleOAM
-	ld de, wOAMBuffer + 4 * 8
+	ld de, wOAMBuffer + 4 * 4
 	ld bc, 4 * 27
 	jp CopyData
 
@@ -223,19 +223,15 @@ TitleScreen_PlacePikachu:
 	call Bank3D_CopyBox
 	ld hl, TitleScreenPikachuEyesOAMData
 	ld de, wOAMBuffer
-	ld bc, $20
+	ld bc, $10
 	call CopyData
 	ret
 
 TitleScreenPikachuEyesOAMData:
-	db $70, $40, $f1, $22
 	db $70, $48, $f0, $22
-	db $78, $40, $f3, $22
-	db $78, $48, $f2, $22
+	db $78, $48, $f1, $22
 	db $70, $60, $f0, $02
-	db $70, $68, $f1, $02
-	db $78, $60, $f2, $02
-	db $78, $68, $f3, $02
+	db $78, $60, $f1, $02
 
 Bank3D_CopyBox:
 ; copy cxb (xy) screen area from de to hl
@@ -329,7 +325,7 @@ INCBIN "gfx/yellow_titlescreen1.w24.2bpp"
 YellowLogoGraphics2:
 INCBIN "gfx/yellow_titlescreen2.w64.t2.2bpp"
 YellowLogoGraphics3:
-INCBIN "gfx/yellow_titlescreen3.w32.2bpp"
+INCBIN "gfx/yellow_titlescreen3.interleave.w24.2bpp"
 YellowLogoGraphicsEnd:
 
 INCLUDE "engine/menu/link_menu.asm"

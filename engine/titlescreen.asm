@@ -290,28 +290,19 @@ DoTitleScreenFunction:
 	ret
 	
 .BlinkOpen:
-	ld e, 0
+	ld hl, .Frame1
 	jr .LoadBlinkFrame
 
 .BlinkHalf:
-	ld e, 4
+	ld hl, .Frame2
 	jr .LoadBlinkFrame
 
 .BlinkClosed:
-	ld e, 8
+	ld hl, .Frame3
 .LoadBlinkFrame:
-	ld hl, wOAMBuffer + 2
-	ld c, 8
-.loop
-	ld a, [hl]
-	and $f3
-	or e
-	ld [hli], a
-	inc hl
-	inc hl
-	inc hl
-	dec c
-	jr nz, .loop
+	ld de, wOAMBuffer
+	ld bc, 4 * 4
+	call CopyData
 .BlinkWait:
 	ld hl, wTitleScreenScene
 	inc [hl]
@@ -331,6 +322,24 @@ DoTitleScreenFunction:
 	ld a, $1
 	ld [wTitleScreenScene], a
 	ret
+
+.Frame1
+	db $70, $48, $f0, $22
+	db $78, $48, $f1, $22
+	db $70, $60, $f0, $02
+	db $78, $60, $f1, $02
+
+.Frame2
+	db $74, $48, $f2, $22
+	db $74, $60, $f2, $22
+	db $a0, $00, $00, $00
+	db $a0, $00, $00, $00
+
+.Frame3
+	db $74, $40, $f5, $22
+	db $74, $48, $f3, $22
+	db $74, $60, $f3, $02
+	db $74, $68, $f5, $02
 
 ; copy text of fixed length NAME_LENGTH (like player name, rival name, mon names, ...)
 CopyFixedLengthText:
