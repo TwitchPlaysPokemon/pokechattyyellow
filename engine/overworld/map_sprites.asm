@@ -120,9 +120,9 @@ CheckIfPictureIDAlreadyLoaded:
 
 CheckForFourTileSprite:
 ; Checks for a sprite added in yellow
-; Returns no carry if the sprite is Pikachu, as its sprite is handled separately
+; Returns no carry if the sprite is Chatot, as its sprite is handled separately
 ; Else, returns carry if the sprite uses 4 tiles
-	cp SPRITE_PIKACHU       ; is this the Pikachu Sprite?
+	cp SPRITE_CHATOT        ; is this the Chatot Sprite?
 	ret z                   ; return if yes
 
 	cp SPRITE_BALL          ; is this a four tile sprite?
