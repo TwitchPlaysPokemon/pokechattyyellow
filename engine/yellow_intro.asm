@@ -22,10 +22,12 @@ PlayIntroScene:
 	ld [wCurrentAnimatedObjectOAMBufferOffset], a
 	call RunObjectAnimations
 	ld a, [wYellowIntroCurrentScene]
-	cp $7
-	call z, .SetPal1OnObjs_8_14_16_18_19
-	cp $b
-	call z, .SetPal1OnObjs_18_19_20_25_26_28
+	; cp $7
+	; call z, .SetPal1OnObjs_8_14_16_18_19
+	cp $3
+	call z, .SetPal1OnAllObjs
+	; cp $b
+	; call z, .SetPal1OnObjs_18_19_20_25_26_28
 	call DelayFrame
 	jr .loop
 
@@ -55,44 +57,41 @@ PlayIntroScene:
 	ld [hBGMapMode], a
 	ret
 
-.SetPal1OnObjs_8_14_16_18_19:
-	ld a, [wOAMBuffer + 8 * 4 + 3]
-	or $1
-	ld [wOAMBuffer + 8 * 4 + 3], a
-	ld a, [wOAMBuffer + 14 * 4 + 3]
-	or $1
-	ld [wOAMBuffer + 14 * 4 + 3], a
-	ld a, [wOAMBuffer + 16 * 4 + 3]
-	or $1
-	ld [wOAMBuffer + 16 * 4 + 3], a
-	ld a, [wOAMBuffer + 18 * 4 + 3]
-	or $1
-	ld [wOAMBuffer + 18 * 4 + 3], a
-	ld a, [wOAMBuffer + 19 * 4 + 3]
-	or $1
-	ld [wOAMBuffer + 19 * 4 + 3], a
+.SetPal1OnAllObjs:
+	push hl
+	push bc
+	ld hl, wOAMBuffer + 3
+	ld bc, 4
+	ld a, 32
+.loopPals
+	set 0, [hl]
+	add hl, bc
+	dec a
+	jr nz, .loopPals
+	pop bc
+	pop hl
 	ret
 
-.SetPal1OnObjs_18_19_20_25_26_28:
-	ld a, [wOAMBuffer + 18 * 4 + 3]
-	or $1
-	ld [wOAMBuffer + 18 * 4 + 3], a
-	ld a, [wOAMBuffer + 19 * 4 + 3]
-	or $1
-	ld [wOAMBuffer + 19 * 4 + 3], a
-	ld a, [wOAMBuffer + 20 * 4 + 3]
-	or $1
-	ld [wOAMBuffer + 20 * 4 + 3], a
-	ld a, [wOAMBuffer + 25 * 4 + 3]
-	or $1
-	ld [wOAMBuffer + 25 * 4 + 3], a
-	ld a, [wOAMBuffer + 26 * 4 + 3]
-	or $1
-	ld [wOAMBuffer + 26 * 4 + 3], a
-	ld a, [wOAMBuffer + 28 * 4 + 3]
-	or $1
-	ld [wOAMBuffer + 28 * 4 + 3], a
-	ret
+; .SetPal1OnObjs_18_19_20_25_26_28:
+	; ld a, [wOAMBuffer + 18 * 4 + 3]
+	; or $1
+	; ld [wOAMBuffer + 18 * 4 + 3], a
+	; ld a, [wOAMBuffer + 19 * 4 + 3]
+	; or $1
+	; ld [wOAMBuffer + 19 * 4 + 3], a
+	; ld a, [wOAMBuffer + 20 * 4 + 3]
+	; or $1
+	; ld [wOAMBuffer + 20 * 4 + 3], a
+	; ld a, [wOAMBuffer + 25 * 4 + 3]
+	; or $1
+	; ld [wOAMBuffer + 25 * 4 + 3], a
+	; ld a, [wOAMBuffer + 26 * 4 + 3]
+	; or $1
+	; ld [wOAMBuffer + 26 * 4 + 3], a
+	; ld a, [wOAMBuffer + 28 * 4 + 3]
+	; or $1
+	; ld [wOAMBuffer + 28 * 4 + 3], a
+	; ret
 
 RunYellowIntroCommand:
 	ld a, [wYellowIntroCurrentScene]
@@ -196,29 +195,29 @@ YellowIntroScene2_PlaceGraphic:
 	add $10
 	dec b
 	jr nz, .row
-	ld a, [hGBC]
-	and a
-	jr z, .dmg_sgb
-	; We can actually set palettes!
-	ld hl, $98d4 ; (20, 6)
-	ld de, $20
-	ld b, $6
-	ld a, $1
-	ld [rVBK], a
-.attr_row
-	ld c, $6
-	push hl
-.attr_col
-	ld [hli], a
-	dec c
-	jr nz, .attr_col
-	pop hl
-	add hl, de
-	dec b
-	jr nz, .attr_row
-	xor a
-	ld [rVBK], a
-.dmg_sgb
+	; ld a, [hGBC]
+	; and a
+	; jr z, .dmg_sgb
+	; ; We can actually set palettes!
+	; ld hl, $98d4 ; (20, 6)
+	; ld de, $20
+	; ld b, $6
+	; ld a, $1
+	; ld [rVBK], a
+; .attr_row
+	; ld c, $6
+	; push hl
+; .attr_col
+	; ld [hli], a
+	; dec c
+	; jr nz, .attr_col
+	; pop hl
+	; add hl, de
+	; dec b
+	; jr nz, .attr_row
+	; xor a
+	; ld [rVBK], a
+; .dmg_sgb
 	ret
 
 LoadYellowIntroFlyingSpeedBars:
@@ -276,30 +275,30 @@ YellowIntroScene4:
 	call YellowIntro_BlankPalsDelay2AndDisableLCD
 	ld c, $5
 	call UpdateMusicCTimes
-	ld a, [hGBC]
-	and a
-	jr z, .dmg_sgb
-	; We can actually set palettes!
-	ld hl, $98 + 6 * $20 + $14
-	ld de, $20
-	ld b, $6
-	ld a, $1
-	ld [rVBK], a
-	xor a
-.attr_row
-	ld c, $6
-	push hl
-.attr_col
-	ld [hli], a
-	dec c
-	jr nz, .attr_col
-	pop hl
-	add hl, de
-	dec b
-	jr nz, .attr_row
-	xor a
-	ld [rVBK], a
-.dmg_sgb
+	; ld a, [hGBC]
+	; and a
+	; jr z, .dmg_sgb
+	; ; We can actually set palettes!
+	; ld hl, $98 + 6 * $20 + $14
+	; ld de, $20
+	; ld b, $6
+	; ld a, $1
+	; ld [rVBK], a
+	; xor a
+; .attr_row
+	; ld c, $6
+	; push hl
+; .attr_col
+	; ld [hli], a
+	; dec c
+	; jr nz, .attr_col
+	; pop hl
+	; add hl, de
+	; dec b
+	; jr nz, .attr_row
+	; xor a
+	; ld [rVBK], a
+; .dmg_sgb
 	xor a
 	ld [hLCDCPointer], a
 	call YellowIntro_RunningPikaLetterbox
@@ -344,30 +343,30 @@ YellowIntroScene6:
 	ld bc, $300
 	ld a, $10
 	call Bank3E_FillMemory
-	ld a, [hGBC]
-	and a
-	jr z, .dmg_sgb
+	; ld a, [hGBC]
+	; and a
+	; jr z, .dmg_sgb
 	; We can actually set palettes!
-	ld hl, $98d4 ; (20, 6)
-	ld de, $20
-	ld b, $6
-	ld a, $1
-	ld [rVBK], a
-	xor a
-.attr_row
-	ld c, $6
-	push hl
-.attr_col
-	ld [hli], a
-	dec c
-	jr nz, .attr_col
-	pop hl
-	add hl, de
-	dec b
-	jr nz, .attr_row
-	xor a
-	ld [rVBK], a
-.dmg_sgb
+	; ld hl, $98d4 ; (20, 6)
+	; ld de, $20
+	; ld b, $6
+	; ld a, $1
+	; ld [rVBK], a
+	; xor a
+; .attr_row
+	; ld c, $6
+	; push hl
+; .attr_col
+	; ld [hli], a
+	; dec c
+	; jr nz, .attr_col
+	; pop hl
+	; add hl, de
+	; dec b
+	; jr nz, .attr_row
+	; xor a
+	; ld [rVBK], a
+; .dmg_sgb
 	lb de, $40, $f8
 	ld a, $5
 	call YellowIntro_SpawnAnimatedObjectAndSavePointer

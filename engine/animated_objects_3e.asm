@@ -194,13 +194,13 @@ UpdateCurrentAnimatedObjectFrame:
 	inc hl
 	inc de
 	call SetCurrentAnimatedObjectOAMAttributes
-	ld b, a
-	ld a, [wSurfingMinigameUpdateMusicTempo]
-	cp $7
-	ld a, b
-	jr z, .skip_load
+	; ld b, a
+	; ld a, [wSurfingMinigameUpdateMusicTempo]
+	; cp $7
+	; ld a, b
+	; jr z, .skip_load
 	ld [de], a
-.skip_load
+; .skip_load
 	inc hl
 	inc de
 	ld a, e

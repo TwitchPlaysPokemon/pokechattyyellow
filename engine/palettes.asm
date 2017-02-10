@@ -736,7 +736,7 @@ SendSGBPackets:
 InitGBCPalettes:
 	ld a, [hl]
 	and $f8
-	cp $20
+	cp $20 ; ATTR_BLK
 	jp z, TranslatePalPacketToBGMapAttributes
 
 	inc hl

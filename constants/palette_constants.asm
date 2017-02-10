@@ -58,3 +58,5 @@ UPDATE_PARTY_MENU_BLK_PACKET  EQU $FC
 	const PAL_CAVE      ; $23
 	const PAL_GAMEFREAK ; $24
 	const PAL_CHATOT    ; $25
+	const PAL_26
+	const PAL_27

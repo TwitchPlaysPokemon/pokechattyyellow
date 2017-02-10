@@ -150,10 +150,10 @@ PalPacket_GameFreakIntro:
 	PAL_SET PAL_GAMEFREAK, PAL_REDMON, PAL_VIRIDIAN, PAL_BLUEMON
 
 UnknownPalPacket_72811:
-	db $51, $25,$0,$25,$0,$25,$0,$25,$0,$0,$0,$0,$0,$0,$0,$0
+	PAL_SET PAL_CHATOT, PAL_CHATOT, PAL_CHATOT, PAL_CHATOT
 
 UnknownPalPacket_72821:
-	db $51, $25,$0,$27,$0,$25,$0,$25,$0,$0,$0,$0,$0,$0,$0,$0
+	PAL_SET PAL_CHATOT, PAL_27, PAL_CHATOT, PAL_CHATOT
 
 PalTrnPacket:
 	PAL_TRN

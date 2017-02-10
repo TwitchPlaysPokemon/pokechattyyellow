@@ -1,59 +1,59 @@
 YellowIntro_AnimatedObjectFramesData:
-	dw Unkn_fa100
-	dw Unkn_fa103
-	dw Unkn_fa10a
-	dw Unkn_fa111
-	dw Unkn_fa118
-	dw Unkn_fa11b
-	dw Unkn_fa11e
-	dw Unkn_fa121
-	dw Unkn_fa124
-	dw Unkn_fa127
-	dw Unkn_fa138
+	dw .Frame_00
+	dw .Frame_01
+	dw .Frame_02
+	dw .Frame_03
+	dw .Frame_04
+	dw .Frame_05
+	dw .Frame_06
+	dw .Frame_07
+	dw .Frame_08
+	dw .Frame_09
+	dw .Frame_0a
 
-Unkn_fa100:
+.Frame_00:
 	frame $00, 32
 	endanim
 
-Unkn_fa103:
+.Frame_01:
 	frame $01, 4
 	frame $02, 4
 	frame $03, 4
 	dorestart
 
-Unkn_fa10a:
+.Frame_02:
 	frame $04, 4
 	frame $05, 4
 	frame $06, 4
 	dorestart
 
-Unkn_fa111:
+.Frame_03:
 	frame $07, 4
 	frame $08, 4
 	frame $09, 4
 	dorestart
 
-Unkn_fa118:
+.Frame_04:
 	frame $0a, 32
 	endanim
 
-Unkn_fa11b:
+.Frame_05:
 	frame $0b, 32
 	endanim
 
-Unkn_fa11e:
+.Frame_06:
 	frame $0c, 32
 	endanim
 
-Unkn_fa121:
+.Frame_07:
 	frame $0d, 32
 	endanim
 
-Unkn_fa124:
+.Frame_08:
 	frame $0e, 32
 	endanim
 
-Unkn_fa127:
+.Frame_09:
 	frame $0f, 31
 	frame $11, 2
 	frame $0f, 2
@@ -64,44 +64,45 @@ Unkn_fa127:
 	frame $10, 32
 	endanim
 
-Unkn_fa138:
+.Frame_0a:
 	frame $12, 4
 	frame $13, 4
 	dorestart
 
 YellowIntro_AnimatedObjectOAMData:
-	dbw $00, Unkn_fa179
-	dbw $96, Unkn_fa17e
-	dbw $98, Unkn_fa17e
-	dbw $9a, Unkn_fa17e
-	dbw $0c, Unkn_fa18f
-	dbw $0e, Unkn_fa18f
-	dbw $3c, Unkn_fa18f
-	dbw $60, Unkn_fa1b0
-	dbw $70, Unkn_fa1b0
-	dbw $80, Unkn_fa1b0
-	dbw $90, Unkn_fa201
-	dbw $00, Unkn_fa201
-	dbw $06, Unkn_fa201
-	dbw $c6, Unkn_fa292
-	dbw $6d, Unkn_fa2f7
-	dbw $f0, Unkn_fa308
-	dbw $f4, Unkn_fa308
-	dbw $f8, Unkn_fa308
-	dbw $9c, Unkn_fa329
-	dbw $ec, Unkn_fa329
+	dbw $00, .OAM_00 ; 00
+	dbw $96, .OAM_01 ; 01
+	dbw $98, .OAM_01 ; 02
+	dbw $9a, .OAM_01 ; 03
+	dbw $0c, .OAM_04 ; 04
+	dbw $0e, .OAM_04 ; 05
+	dbw $3c, .OAM_04 ; 06
+	dbw $60, .OAM_07 ; 07
+	dbw $70, .OAM_07 ; 08
+	dbw $80, .OAM_07 ; 09
+	dbw $90, .OAM_0a ; 0a
+	dbw $00, .OAM_0a ; 0b
+	dbw $06, .OAM_0a ; 0c
+	dbw $c6, .OAM_0d ; 0d
+	dbw $6d, .OAM_0e ; 0e
+	dbw $f0, .OAM_0f ; 0f
+	dbw $f4, .OAM_0f ; 10
+	dbw $f8, .OAM_0f ; 11
+	dbw $9c, .OAM_12 ; 12
+	dbw $ec, .OAM_12 ; 13
 
-Unkn_fa179:
+.OAM_00:
 	db 1
 	db $fc, $fc, $00, $00
-Unkn_fa17e:
+
+.OAM_01:
 	db 4
 	db $f8, $f8, $00, $00
 	db $f8, $00, $01, $00
 	db $00, $f8, $10, $00
 	db $00, $00, $11, $00
 
-Unkn_fa18f:
+.OAM_04:
 	db 8
 	db $f0, $f8, $00, $00
 	db $f0, $00, $01, $00
@@ -112,7 +113,7 @@ Unkn_fa18f:
 	db $08, $f8, $21, $00
 	db $08, $00, $21, $20
 
-Unkn_fa1b0:
+.OAM_07:
 	db 20
 	db $e8, $f8, $00, $00
 	db $e8, $00, $01, $00
@@ -135,7 +136,7 @@ Unkn_fa1b0:
 	db $10, $00, $0c, $20
 	db $10, $08, $0b, $20
 
-Unkn_fa201:
+.OAM_0a:
 	db 36
 	db $e8, $e8, $00, $00
 	db $e8, $f0, $01, $00
@@ -174,7 +175,7 @@ Unkn_fa201:
 	db $10, $08, $54, $00
 	db $10, $10, $55, $00
 
-Unkn_fa292:
+.OAM_0d:
 	db 25
 	db $ec, $f0, $00, $00
 	db $ec, $f8, $01, $00
@@ -202,14 +203,14 @@ Unkn_fa292:
 	db $0c, $08, $23, $00
 	db $0c, $10, $24, $00
 
-Unkn_fa2f7:
+.OAM_0e:
 	db 4
-	db $fc, $f0, $00, $00
-	db $fc, $f8, $01, $00
-	db $fc, $00, $01, $20
-	db $fc, $08, $00, $20
+	db $fc, $f0, $00, $01
+	db $fc, $f8, $01, $01
+	db $fc, $00, $01, $21
+	db $fc, $08, $00, $21
 
-Unkn_fa308:
+.OAM_0f:
 	db 8
 	db $f8, $e8, $00, $10
 	db $f8, $f0, $01, $10
@@ -220,7 +221,7 @@ Unkn_fa308:
 	db $00, $08, $03, $30
 	db $00, $10, $02, $30
 
-Unkn_fa329:
+.OAM_12:
 	db 12
 	db $f8, $d8, $00, $10
 	db $f8, $e0, $01, $10
