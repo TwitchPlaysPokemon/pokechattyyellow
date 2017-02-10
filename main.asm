@@ -122,8 +122,8 @@ BattleHudTiles1End:
 BattleHudTiles2:                INCBIN "gfx/battle_hud2.1bpp"
 BattleHudTiles3:                INCBIN "gfx/battle_hud3.1bpp"
 BattleHudTiles3End:
-NintendoCopyrightLogoGraphics:  INCBIN "gfx/copyright.2bpp"
-GamefreakLogoGraphics:          INCBIN "gfx/gamefreak.2bpp"
+NintendoCopyrightLogoGraphics:  INCBIN "gfx/copyright.w152.2bpp"
+GamefreakLogoGraphics:          INCBIN "gfx/gamefreak.w72.2bpp"
 GamefreakLogoGraphicsEnd:
 NineTile:                       INCBIN "gfx/9_tile.2bpp"
 TextBoxGraphics:                INCBIN "gfx/text_box.2bpp"
