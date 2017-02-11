@@ -159,19 +159,19 @@ PikachuEmotion_BillFirstTime:
 	pikaemotion_subcmd PIKAEMOTION_SUBCMD_SHOWMAPVIEW
 	db $ff
 
-PikachuEmotion_ThunderStone:
-	pikaemotion_dummy2
-	pikaemotion_emotebubble EXCLAMATION_BUBBLE
-	pikaemotion_pcm
-	pikaemotion_pikapic PikaPicAnimScript_ThunderStone
-	db $ff
+; PikachuEmotion_ThunderStone:
+	; pikaemotion_dummy2
+	; pikaemotion_emotebubble EXCLAMATION_BUBBLE
+	; pikaemotion_pcm
+	; pikaemotion_pikapic PikaPicAnimScript_ThunderStone
+	; db $ff
 
-PikachuEmotion_ThunderBolt:
-	pikaemotion_dummy2
-	pikaemotion_emotebubble BOLT_BUBBLE
-	pikaemotion_pcm PikachuCry_Mood3Happy5
-	pikaemotion_pikapic PikaPicAnimScript_ThunderBolt
-	db $ff
+; PikachuEmotion_ThunderBolt:
+	; pikaemotion_dummy2
+	; pikaemotion_emotebubble BOLT_BUBBLE
+	; pikaemotion_pcm PikachuCry_Mood3Happy5
+	; pikaemotion_pikapic PikaPicAnimScript_ThunderBolt
+	; db $ff
 
 PikachuEmotion_PewterWake:
 	pikaemotion_dummy2

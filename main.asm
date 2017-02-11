@@ -2079,18 +2079,23 @@ GFX_FishingRod_1:    INCBIN "gfx/pikachu/fishing_rod_1_2bpp.2bpp"
 GFX_FishingRod_2:    INCBIN "gfx/pikachu/fishing_rod_2_2bpp.2bpp"
 GFX_FishingRod_3:    INCBIN "gfx/pikachu/fishing_rod_3_2bpp.2bpp"
 
-GFX_LavenderTown_0:  INCBIN "gfx/pikachu/lavender_town_0_2bpp.2bpp"
-GFX_LavenderTown_1:  INCBIN "gfx/pikachu/lavender_town_1_2bpp.2bpp"
+; GFX_LavenderTown_0:  INCBIN "gfx/pikachu/lavender_town_0_2bpp.2bpp"
+; GFX_LavenderTown_1:  INCBIN "gfx/pikachu/lavender_town_1_2bpp.2bpp"
+
+GFX_LavenderTown_0:  INCBIN "gfx/chatot/Chatot14_1.2bpp"
+GFX_LavenderTown_1:  INCBIN "gfx/chatot/Chatot14_2.2bpp"
+GFX_LavenderTown_2:  INCBIN "gfx/chatot/Chatot14_3.2bpp"
+GFX_LavenderTown_3:  INCBIN "gfx/chatot/Chatot14_4.2bpp"
 
 GFX_BillFirstTime_0: INCBIN "gfx/pikachu/bill_first_time_0_2bpp.2bpp"
 GFX_BillFirstTime_1: INCBIN "gfx/pikachu/bill_first_time_1_2bpp.2bpp"
 
-GFX_ThunderStone_0:  INCBIN "gfx/pikachu/thunder_stone_0_2bpp.2bpp"
-GFX_ThunderStone_1:  INCBIN "gfx/pikachu/thunder_stone_1_2bpp.2bpp"
+; GFX_ThunderStone_0:  INCBIN "gfx/pikachu/thunder_stone_0_2bpp.2bpp"
+; GFX_ThunderStone_1:  INCBIN "gfx/pikachu/thunder_stone_1_2bpp.2bpp"
 
-Pic_ThunderBolt_0:   INCBIN "gfx/pikachu/thunder_bolt_0_pic.pic"
-GFX_ThunderBolt_0:   INCBIN "gfx/pikachu/thunder_bolt_0_2bpp.2bpp"
-GFX_ThunderBolt_1:   INCBIN "gfx/pikachu/thunder_bolt_1_2bpp.2bpp"
+; Pic_ThunderBolt_0:   INCBIN "gfx/pikachu/thunder_bolt_0_pic.pic"
+; GFX_ThunderBolt_0:   INCBIN "gfx/pikachu/thunder_bolt_0_2bpp.2bpp"
+; GFX_ThunderBolt_1:   INCBIN "gfx/pikachu/thunder_bolt_1_2bpp.2bpp"
 
 GFX_PewterWake_1:    INCBIN "gfx/pikachu/pewter_wake_1_2bpp.2bpp"
 GFX_PewterWake_2:    INCBIN "gfx/pikachu/pewter_wake_2_2bpp.2bpp"

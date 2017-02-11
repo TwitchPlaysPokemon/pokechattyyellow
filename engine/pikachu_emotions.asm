@@ -10,9 +10,9 @@ IsPlayerTalkingToPikachu:
 	ld [hSpriteIndexOrTextID], a
 	ld [wd436], a
 	ret
-	
+
 InitializePikachuTextID:
-	ld a, $d4 ; display 
+	ld a, $d4 ; display
 	ld [hSpriteIndexOrTextID], a
 	xor a
 	ld [wPlayerMovingDirection], a
@@ -49,7 +49,7 @@ DoStarterPikachuEmotions:
 
 .done
 	ret
-	
+
 StarterPikachuEmotionsJumptable:
 	dw StarterPikachuEmotionCommand_nop ; 0
 	dw StarterPikachuEmotionCommand_text ; 1
@@ -62,7 +62,7 @@ StarterPikachuEmotionsJumptable:
 	dw StarterPikachuEmotionCommand_nop2 ; 8
 	dw StarterPikachuEmotionCommand_turnawayfromplayer ; 9
 	dw StarterPikachuEmotionCommand_nop3 ; a
-	
+
 StarterPikachuEmotionCommand_nop:
 StarterPikachuEmotionCommand_nop3:
 	ret
@@ -78,7 +78,7 @@ StarterPikachuEmotionCommand_text:
 	call PrintText
 	pop de
 	ret
-	
+
 StarterPikachuEmotionCommand_pcm:
 	ld a, [de]
 	inc de
@@ -94,7 +94,7 @@ PlayPikachuSoundClip_:
 	ret z
 	callab PlayPikachuSoundClip
 	ret
-	
+
 StarterPikachuEmotionCommand_emote:
 	ld a, [wUpdateSpritesEnabled]
 	push af
@@ -108,14 +108,14 @@ StarterPikachuEmotionCommand_emote:
 	pop af
 	ld [wUpdateSpritesEnabled], a
 	ret
-	
+
 ShowPikachuEmoteBubble:
 	ld [wWhichEmotionBubble], a
 	ld a, $f ; Pikachu
 	ld [wEmotionBubbleSpriteIndex], a
 	predef EmotionBubble
 	ret
-	
+
 StarterPikachuEmotionCommand_movement:
 	ld a, [de]
 	inc de
@@ -128,7 +128,7 @@ StarterPikachuEmotionCommand_movement:
 	call ApplyPikachuMovementData_
 	pop de
 	ret
-	
+
 StarterPikachuEmotionCommand_delay:
 	ld a, [de]
 	inc de
@@ -137,7 +137,7 @@ StarterPikachuEmotionCommand_delay:
 	call DelayFrames
 	pop de
 	ret
-	
+
 StarterPikachuEmotionCommand_subcmd:
 	ld a, [de]
 	inc de
@@ -162,10 +162,10 @@ StarterPikachuEmotionCommand_subcmd:
 	dw PikachuPewterPokecenterCheck
 	dw PikachuFanClubCheck
 	dw PikachuBillsHouseCheck
-	
+
 StarterPikachuEmotionCommand_nop2:
 	ret
-	
+
 StarterPikachuEmotionCommand_turnawayfromplayer:
 	push de
 	call MakeChatotTurnAwayFromPlayer
@@ -178,7 +178,7 @@ MakeChatotTurnAwayFromPlayer:
 	xor $4
 	ld [wPikachuFacingDirection], a
 	ret
-	
+
 DeletedFunction_fcffb:
 ; Inexplicably empty.
 	rept 5
@@ -200,7 +200,7 @@ load_expression:
 	ld hl, PikachuEmotionTable
 	call DoStarterPikachuEmotions
 	ret
-	
+
 PikachuEmotionTable:
 pikaemotion_def: MACRO
 \1_id: dw \1
@@ -230,8 +230,8 @@ pikaemotion_def: MACRO
 	pikaemotion_def PikachuEmotion_FishingRod ; used a fishing rod
 	pikaemotion_def PikachuEmotion_LavenderTown ; spoopy
 	pikaemotion_def PikachuEmotion_BillFirstTime ; bill's house 0
-	pikaemotion_def PikachuEmotion_ThunderStone ; tried to use thunderstone
-	pikaemotion_def PikachuEmotion_ThunderBolt ; taught or learned thunder/thunderbolt
+	; pikaemotion_def PikachuEmotion_ThunderStone ; tried to use thunderstone
+	; pikaemotion_def PikachuEmotion_ThunderBolt ; taught or learned thunder/thunderbolt
 	pikaemotion_def PikachuEmotion_PewterWake ; wake up pikachu in pewter pokemon center
 	pikaemotion_def PikachuEmotion_BillEnterTeleporter ; bill's house 1
 	pikaemotion_def PikachuEmotion_Statused ; statused
@@ -240,10 +240,10 @@ pikaemotion_def: MACRO
 	pikaemotion_def PikachuEmotion_BillExitTeleporter ; bill's house 2
 	pikaemotion_def PikachuEmotion_BillGetOverShock ; bill's house 3
 	pikaemotion_def .error ; error handling
-	
+
 .error:
 	db $ff
-	
+
 MapSpecificPikachuExpression:
 	ld a, [wCurMap]
 	cp POKEMON_FAN_CLUB
@@ -312,14 +312,14 @@ MapSpecificPikachuExpression:
 .play_emotion
 	scf
 	ret
-	
+
 .Emotions:
 	dpikaemotion PikachuEmotion_CaughtPokemon ; caught a pokemon
 	dpikaemotion PikachuEmotion_FishingRod ; used a fishing rod
 	dpikaemotion PikachuEmotion_BillFirstTime
-	dpikaemotion PikachuEmotion_ThunderStone ; tried to use thunderstone
-	dpikaemotion PikachuEmotion_ThunderBolt ; taught or learned thunder/thunderbolt
-	
+	; dpikaemotion PikachuEmotion_ThunderStone ; tried to use thunderstone
+	; dpikaemotion PikachuEmotion_ThunderBolt ; taught or learned thunder/thunderbolt
+
 IsPlayerPikachuAsleepInParty:
 	xor a
 	ld [wWhichPokemon], a
@@ -360,7 +360,7 @@ IsPlayerPikachuAsleepInParty:
 .done
 	and a
 	ret
-	
+
 INCLUDE "data/pikachu_emotions.asm"
 
 PikachuWalksToNurseJoy:
