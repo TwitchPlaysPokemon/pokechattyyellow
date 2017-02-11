@@ -1,6 +1,14 @@
-LUA_REQUEST_NPC EQU 0
-LUA_REQUEST_MOVE EQU 1
-LUA_REQUEST_CHATOT EQU 2
+; hLSB request values
+	const_def
+	const LUA_REQUEST_NPC          ; 0
+	const LUA_REQUEST_MOVE         ; 1
+	const LUA_REQUEST_CHATOT       ; 2 - 43
+	
+const_value = const_value + 42
 
-LUA_REQUEST_COMPLETE EQU 0
-LUA_REQUEST_CHAIN EQU 1
+	const LUA_REQUEST_TRAINER_NAME ; 44
+
+; hLSC request values
+	const_def
+	const LUA_REQUEST_COMPLETE
+	const LUA_REQUEST_CHAIN
