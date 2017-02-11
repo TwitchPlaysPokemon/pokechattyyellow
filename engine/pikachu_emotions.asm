@@ -229,19 +229,19 @@ pikaemotion_def: MACRO
 	pikaemotion_def PikachuEmotion20 ; high mood, max happiness
 	pikaemotion_def PikachuEmotion21 ; used a fishing rod
 	pikaemotion_def PikachuEmotion22 ; spoopy
-	pikaemotion_def PikachuEmotion23 ; unused
+	pikaemotion_def PikachuEmotion23 ; bill's house 0
 	pikaemotion_def PikachuEmotion24 ; tried to use thunderstone
 	pikaemotion_def PikachuEmotion25 ; taught or learned thunder/thunderbolt
 	pikaemotion_def PikachuEmotion26 ; wake up pikachu in pewter pokemon center
-	pikaemotion_def PikachuEmotion27 ; unused
+	pikaemotion_def PikachuEmotion27 ; bill's house 1
 	pikaemotion_def PikachuEmotion28 ; statused
 	pikaemotion_def PikachuEmotion29 ; fan club 1
 	pikaemotion_def PikachuEmotion30 ; fan club 2
-	pikaemotion_def PikachuEmotion31 ; unused
-	pikaemotion_def PikachuEmotion32 ; unused
-	pikaemotion_def PikachuEmotion33 ; error handling
+	pikaemotion_def PikachuEmotion31 ; bill's house 2
+	pikaemotion_def PikachuEmotion32 ; bill's house 3
+	pikaemotion_def .error ; error handling
 	
-PikachuEmotion33:
+.error:
 	db $ff
 	
 MapSpecificPikachuExpression:
@@ -267,7 +267,7 @@ MapSpecificPikachuExpression:
 	jr .check_pikachu_status
 
 .notPewterPokecenter
-	callab Func_f24ae
+	callab BillsHousePikachuEmotionCheck
 	ld a, e
 	cp $ff
 	jr nz, .play_emotion

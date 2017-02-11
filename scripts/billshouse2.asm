@@ -83,7 +83,7 @@ BillsHouseText_f24a9:
 	TX_MARKOV _BillsHouseText_1e8da
 	db "@"
 
-Func_f24ae:
+BillsHousePikachuEmotionCheck:
 	ld a, [wCurMap]
 	cp BILLS_HOUSE
 	jr nz, .asm_f24d2
@@ -91,22 +91,22 @@ Func_f24ae:
 	jr z, .asm_f24d2
 	ld a, [wBillsHouseCurScript]
 	cp $5
-	ld e, $1b
+	ld e, $1b ; PikachuEmotion27
 	ret z
 	cp $0
-	ld e, $17
+	ld e, $17 ; PikachuEmotion23
 	ret z
 	CheckEventHL EVENT_MET_BILL_2
-	ld e, $20
+	ld e, $20 ; PikachuEmotion32
 	ret z
-	ld e, $1f
+	ld e, $1f ; PikachuEmotion31
 	ret
 
 .asm_f24d2
 	ld e, $ff
 	ret
 
-Func_f24d5:
+BillsHouse_PikachuReaction1:
 	ld a, $ff
 	ld [wJoyIgnore], a
 	xor a

@@ -91,7 +91,7 @@ PartyMonSpeeds:
 LoadMonPartySpriteGfx:
 ; Load mon party sprite tile patterns into VRAM during V-blank.
 	ld hl, MonPartySpritePointers
-	ld a, $20
+	ld a, (MonPartySpritePointersEnd - MonPartySpritePointers) / 6
 
 LoadAnimSpriteGfx:
 ; Load animated sprite tile patterns into VRAM during V-blank. hl is the address
@@ -130,7 +130,7 @@ LoadMonPartySpriteGfxWithLCDDisabled:
 ; LCD.
 	call DisableLCD
 	ld hl, MonPartySpritePointers
-	ld a, $20
+	ld a, (MonPartySpritePointersEnd - MonPartySpritePointers) / 6
 	ld bc, $0
 .loop
 	push af
@@ -322,6 +322,7 @@ MonPartySpritePointers:
 	db $40 / $10 ; $40 bytes
 	db BANK(ChatotSprite)
 	dw vSprites + $6c0
+MonPartySpritePointersEnd
 
 WriteMonPartySpriteOAMByPartyIndex:
 ; Write OAM blocks for the party mon in [hPartyMonIndex].

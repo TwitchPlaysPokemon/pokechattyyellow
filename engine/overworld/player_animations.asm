@@ -398,7 +398,7 @@ FishingAnim:
 	ld b, BANK(RedSprite)
 	ld c, $c
 	call CopyVideoData
-	ld a, $4
+	ld a, (RedFishingTilesEnd - RedFishingTiles) / 6
 	ld hl, RedFishingTiles
 	call LoadAnimSpriteGfx
 	ld a, [wSpriteStateData1 + 2]
@@ -509,6 +509,7 @@ RedFishingTiles:
 	dw RedFishingRodTiles
 	db 3, BANK(RedFishingRodTiles)
 	dw vNPCSprites2 + $7d0
+RedFishingTilesEnd
 
 _HandleMidJump:
 	ld a, [wPlayerJumpingYScreenCoordsIndex]

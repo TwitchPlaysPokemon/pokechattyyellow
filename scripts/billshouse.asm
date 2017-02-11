@@ -43,7 +43,7 @@ BillsHouseScript0:
 	jr z, .asm_1e0d2
 	callab CheckPikachuFaintedOrStatused
 	jr c, .asm_1e0d2
-	callab Func_f24d5
+	callab BillsHouse_PikachuReaction1
 .asm_1e0d2
 	xor a
 	ld [wJoyIgnore], a
