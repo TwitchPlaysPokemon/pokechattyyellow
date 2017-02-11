@@ -249,7 +249,7 @@ PikaPicAnimScript_FishingRod:
 	pikapic_looptofinish
 
 PikaPicAnimScript_LavenderTown:
-	pikapic_setduration 80
+	pikapic_setduration 24
 	pikapic_loadgfx GFX_LavenderTown_0
 	pikapic_loadgfx GFX_LavenderTown_1
 	pikapic_loadgfx GFX_LavenderTown_2

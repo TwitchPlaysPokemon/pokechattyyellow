@@ -254,18 +254,22 @@ PikaPicAnimBGFrames_FishingRod_1:
 	pikaframeend
 
 PikaPicAnimBGFrames_LavenderTown_1:
-	pikaframesleep                                  8
-	pikaframe PikaAnimTilemap_LavenderTown_1_0,     8
-	pikaframesleep                                  8
-	pikaframe PikaAnimTilemap_LavenderTown_1_0,     8
+	pikaframesleep                                  2
+	pikaframe PikaAnimTilemap_LavenderTown_1_0,     2
+	pikaframesleep                                  2
+	pikaframe PikaAnimTilemap_LavenderTown_1_0,     2
+	pikaframesleep                                  2
+	pikaframe PikaAnimTilemap_LavenderTown_1_0,     2
+	pikaframesleep                                  2
+	pikaframe PikaAnimTilemap_LavenderTown_1_0,     2
 	pikaframesleep                                100
 	pikaframeend
 
 PikaPicAnimBGFrames_LavenderTown_2:
-	pikaframesleep                                 32
-	pikaframe PikaAnimTilemap_LavenderTown_1_0,     8
-	pikaframe PikaAnimTilemap_FishingRod_1_1,       8
-	pikaframe PikaAnimTilemap_LavenderTown_1_0,     8
+	pikaframesleep                                 16
+	pikaframe PikaAnimTilemap_LavenderTown_1_0,     2
+	pikaframe PikaAnimTilemap_FishingRod_1_1,       2
+	pikaframe PikaAnimTilemap_LavenderTown_1_0,     2
 	pikaframe PikaAnimTilemap_FishingRod_1_1,     100
 	pikaframeend
 
@@ -305,7 +309,7 @@ PikaPicAnimBGFrames_BillEnterTeleporter_1:
 	pikaframeend
 
 PikaPicAnimBGFrames_Statused_1:
-    pikaframesleep                                 12
+	pikaframesleep                                 12
 	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,   12
 	pikaframesleep                                 12
 	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,  100
