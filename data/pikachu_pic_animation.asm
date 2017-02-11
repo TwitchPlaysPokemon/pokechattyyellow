@@ -75,9 +75,10 @@ PikaPicAnimScript_Mood2Happy4:
 	pikapic_looptofinish
 
 PikaPicAnimScript_Mood2Happy2:
-	pikapic_setduration 32
+	pikapic_setduration 24
 	pikapic_loadgfx Pic_Mood2Happy2_0
 	pikapic_loadgfx GFX_Mood2Happy2_0
+	pikapic_loadgfx GFX_Mood2Happy2_1
 	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood2Happy2_1, $99, $0, $0
 	pikapic_waitbgmap
@@ -338,7 +339,7 @@ pikapicanimgfx: MACRO
 PikaPicAnimGFX_Null_id::
 	dbbw            1, $39,$0000
 	pikapicanimgfx -1, Pic_Mood2Happy3_0
-	pikapicanimgfx  5, GFX_Mood2Happy3_0
+	pikapicanimgfx 25, GFX_Mood2Happy3_0
 ; 	pikapicanimgfx -1, Pic_Mood3Happy5_0
 ; 	pikapicanimgfx 10, GFX_Mood3Happy5_0
 ; 	pikapicanimgfx -1, Pic_Mood1Happy3_0
@@ -346,7 +347,8 @@ PikaPicAnimGFX_Null_id::
 	pikapicanimgfx -1, Pic_Mood2Happy4_0
 	pikapicanimgfx 20, GFX_Mood2Happy4_0
 	pikapicanimgfx -1, Pic_Mood2Happy2_0
-	pikapicanimgfx  4, GFX_Mood2Happy2_0
+	pikapicanimgfx 25, GFX_Mood2Happy2_0
+	pikapicanimgfx 25, GFX_Mood2Happy2_1
 	pikapicanimgfx -1, Pic_Mood2Happy1_0
 	pikapicanimgfx  4, GFX_Mood2Happy1_0
 	pikapicanimgfx -1, Pic_Mood2Happy5_0

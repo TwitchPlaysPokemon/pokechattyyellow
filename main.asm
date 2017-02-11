@@ -2010,8 +2010,8 @@ INCLUDE "engine/evos_moves.asm"
 SECTION "bank39", ROMX,BANK[$39]
 
 
-Pic_Mood2Happy3_0:   INCBIN "gfx/pikachu/mood2_happy3_0_pic.pic"
-GFX_Mood2Happy3_0:   INCBIN "gfx/pikachu/mood2_happy3_0_2bpp.2bpp"
+Pic_Mood2Happy3_0:   INCBIN "gfx/chatot/Chatot2_1.pic"
+GFX_Mood2Happy3_0:   INCBIN "gfx/chatot/Chatot2_2.2bpp"
 
 ; Pic_Mood3Happy5_0:   INCBIN "gfx/pikachu/mood3_happy5_0_pic.pic"
 ; GFX_Mood3Happy5_0:   INCBIN "gfx/pikachu/mood3_happy5_0_2bpp.2bpp"
@@ -2022,8 +2022,9 @@ GFX_Mood2Happy3_0:   INCBIN "gfx/pikachu/mood2_happy3_0_2bpp.2bpp"
 Pic_Mood2Happy4_0:   INCBIN "gfx/pikachu/mood2_happy4_0_pic.pic"
 GFX_Mood2Happy4_0:   INCBIN "gfx/pikachu/mood2_happy4_0_2bpp.2bpp"
 
-Pic_Mood2Happy2_0:   INCBIN "gfx/pikachu/mood2_happy2_0_pic.pic"
-GFX_Mood2Happy2_0:   INCBIN "gfx/pikachu/mood2_happy2_0_2bpp.2bpp"
+Pic_Mood2Happy2_0:   INCBIN "gfx/chatot/Chatot1_1.pic"
+GFX_Mood2Happy2_0:   INCBIN "gfx/chatot/Chatot1_2.2bpp"
+GFX_Mood2Happy2_1:   INCBIN "gfx/chatot/Chatot1_3.2bpp"
 
 Pic_Mood2Happy1_0:   INCBIN "gfx/pikachu/mood2_happy1_0_pic.pic"
 GFX_Mood2Happy1_0:   INCBIN "gfx/pikachu/mood2_happy1_0_2bpp.2bpp"
