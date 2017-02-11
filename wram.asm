@@ -1878,6 +1878,7 @@ wBattleMon:: battle_struct wBattleMon ; d013
 wTrainerClass:: ; d030
 	ds 1
 
+wPCMTempID::
 	ds 1
 
 wTrainerPicPointer:: ; d032
