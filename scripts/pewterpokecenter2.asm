@@ -55,7 +55,8 @@ PewterJigglypuff:
 	ld a, [wd472]
 	bit 7, a
 	ret z
-	callab CheckPikachuFaintedOrStatused
+	ld e, $ff
+	callab CheckPikachuStatused
 	ret c
 	call DisablePikachuFollowingPlayer
 	ret

@@ -277,7 +277,8 @@ MapSpecificPikachuExpression:
 	call IsPlayerPikachuAsleepInParty
 	ldpikaemotion a, PikachuEmotion_FastAsleep
 	jr c, .play_emotion
-	callab CheckPikachuFaintedOrStatused ; same bank
+	ld e, 1 << BRN
+	callab CheckPikachuStatused ; same bank
 	ldpikaemotion a, PikachuEmotion_Statused
 	jr c, .play_emotion
 	ld a, [wCurMap]

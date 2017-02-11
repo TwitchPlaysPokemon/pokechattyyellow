@@ -7,7 +7,7 @@ pikaanim_def: macro
 	pikaanim_def PikaPicAnimBGFrames_1 ; 01
 	pikaanim_def PikaPicAnimBGFrames_2 ; 02
 	pikaanim_def PikaPicAnimBGFrames_3 ; 03
-	pikaanim_def PikaPicAnimBGFrames_Mood2Happy3_0 ; 04
+	pikaanim_def PikaPicAnimBGFrames_Generic ; 04
 	pikaanim_def PikaPicAnimBGFrames_CaughtPokemon_0 ; 05
 	pikaanim_def PikaPicAnimBGFrames_Mood2Happy3_1 ; 06
 	pikaanim_def PikaPicAnimBGFrames_Mood3Happy5_1 ; 07
@@ -40,8 +40,8 @@ pikaanim_def: macro
 	pikaanim_def PikaPicAnimBGFrames_Statused_1 ; 22
 	pikaanim_def PikaPicAnimBGFrames_35 ; 23
 
-PikaPicAnimBGFrames_0:
-PikaPicAnimBGFrames_1:
+PikaPicAnimBGFrames_0: ; fallback
+PikaPicAnimBGFrames_1: ; unused
 	; Tilemap idx, duration
 	pikaframe PikaAnimTilemap_1,   20
 	pikaframe PikaAnimTilemap_7,    2
@@ -59,22 +59,22 @@ PikaPicAnimBGFrames_fdc1e: ; unreferenced
 	pikaframe PikaAnimTilemap_2,    8
 	pikaframeend
 
-PikaPicAnimBGFrames_2:
+PikaPicAnimBGFrames_2: ; unused
 	pikaframedelay                  8
 	pikaframe PikaAnimTilemap_8,    8
 	pikaframedelay                  8
 	pikaframe PikaAnimTilemap_8,    8
 	pikaframeend
 
-PikaPicAnimBGFrames_3:
+PikaPicAnimBGFrames_3: ; unused
 	pikaframe PikaAnimTilemap_8,    8
 	pikaframedelay                  8
 	pikaframe PikaAnimTilemap_8,    8
 	pikaframedelay                  8
 	pikaframeend
 
-PikaPicAnimBGFrames_Mood2Happy3_0:
-PikaPicAnimBGFrames_35:
+PikaPicAnimBGFrames_Generic:
+PikaPicAnimBGFrames_35: ; fallback
 	pikaframe PikaAnimTilemap_1,    0
 	pikaframeend
 
@@ -161,7 +161,7 @@ PikaPicAnimBGFrames_Mood1Happy2_1:
 	pikaframe PikaAnimTilemap_22,   2
 	pikaframeend
 
-PikaPicAnimBGFrames_15:
+PikaPicAnimBGFrames_15: ; unused
 	pikaframedelay                  8
 	pikaframe PikaAnimTilemap_23,   8
 	pikaframeend

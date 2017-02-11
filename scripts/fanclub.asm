@@ -36,7 +36,8 @@ FanClubScript_MovePikachuToSeel:
 	ld a, [wd472]
 	bit 7, a
 	ret z
-	callab CheckPikachuFaintedOrStatused
+	ld e, $ff
+	callab CheckPikachuStatused
 	ret c
 	ld a, $1
 	ld [wFanClubCurScript], a

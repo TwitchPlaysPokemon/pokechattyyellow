@@ -168,7 +168,7 @@ pikapic_def: macro
 \1_id: dw \1
 endm
 
-	pikapic_def PikaPicAnimScript0  ; 00
+	pikapic_def PikaPicAnimScript_00  ; 00
 	pikapic_def PikaPicAnimScript_Mood2Happy3  ; 01
 	pikapic_def PikaPicAnimScript_Mood3Happy5  ; 02
 	pikapic_def PikaPicAnimScript_Mood1Happy3  ; 03
@@ -197,7 +197,7 @@ endm
 	pikapic_def PikaPicAnimScript_PewterWake ; 1a
 	pikapic_def PikaPicAnimScript_BillEnterTeleporter ; 1b
 	pikapic_def PikaPicAnimScript_Statused ; 1c
-	pikapic_def PikaPicAnimScript29 ; 1d
+	pikapic_def PikaPicAnimScript_1d ; 1d
 
 ExecutePikaPicAnimScript:
 .loop
@@ -299,7 +299,7 @@ AnimateCurrentPikaPicAnimFrame:
 	jr nz, .loop
 	ret
 
-PikaPicAnimCommand_object:
+PikaPicAnimCommand_frame:
 	ld hl, wPikaPicAnimObjectDataBuffer
 	ld de, 8
 	ld c, 4
@@ -529,7 +529,7 @@ RunPikaPicAnimSetupScript:
 	dw PikaPicAnimCommand_nop ; 00, 0 params
 	dw PikaPicAnimCommand_writebyte ; 01, 1 param
 	dw PikaPicAnimCommand_loadgfx ; 02, 1 param
-	dw PikaPicAnimCommand_object ; 03, 5 params
+	dw PikaPicAnimCommand_frame ; 03, 5 params
 	dw PikaPicAnimCommand_nop4 ; 04, 0 params
 	dw PikaPicAnimCommand_nop5 ; 05, 0 params
 	dw PikaPicAnimCommand_deleteobject ; 06, 1 param

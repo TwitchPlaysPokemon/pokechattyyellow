@@ -41,7 +41,8 @@ BillsHouseScript0:
 	ld a, [wd472]
 	bit 7, a
 	jr z, .asm_1e0d2
-	callab CheckPikachuFaintedOrStatused
+	ld e, $ff
+	callab CheckPikachuStatused
 	jr c, .asm_1e0d2
 	callab BillsHouse_PikachuReaction1
 .asm_1e0d2

@@ -136,7 +136,7 @@ UpdatePikachuMoodAfterBattle::
 	ld [wPikachuMood], a
 	ret
 
-CheckPikachuFaintedOrStatused::
+CheckPikachuStatused::
 ; function to test if Pikachu is alive?
 	xor a
 	ld [wWhichPokemon], a
@@ -160,8 +160,8 @@ CheckPikachuFaintedOrStatused::
 	inc hl
 	inc hl
 	ld a, [hl] ; status
-	and a
-	jr nz, .alive
+	and e
+	jr nz, .statused
 	jr .dead_or_not_in_party
 
 .next
@@ -170,7 +170,7 @@ CheckPikachuFaintedOrStatused::
 	ld [wWhichPokemon], a
 	jr .loop
 
-.alive
+.statused
 	scf
 	ret
 

@@ -32,13 +32,13 @@ Data_fe26b:
 	pikapic_cry
 	pikapic_looptofinish
 
-PikaPicAnimScript0:
+PikaPicAnimScript_00:
+PikaPicAnimScript_1d:
 PikaPicAnimScript_Mood2Happy3:
-PikaPicAnimScript29:
 	pikapic_setduration 40
 	pikapic_loadgfx Pic_Mood2Happy3_0
 	pikapic_loadgfx GFX_Mood2Happy3_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry PikachuCry3
@@ -48,7 +48,7 @@ PikaPicAnimScript_Mood3Happy5:
 	pikapic_setduration 44
 	pikapic_loadgfx Pic_Mood3Happy5_0
 	pikapic_loadgfx GFX_Mood3Happy5_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood3Happy5_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -58,7 +58,7 @@ PikaPicAnimScript_Mood1Happy3:
 	pikapic_setduration 80
 	pikapic_loadgfx Pic_Mood1Happy3_0
 	pikapic_loadgfx GFX_Mood1Happy3_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood1Happy3_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -68,7 +68,7 @@ PikaPicAnimScript_Mood2Happy4:
 	pikapic_setduration 70
 	pikapic_loadgfx Pic_Mood2Happy4_0
 	pikapic_loadgfx GFX_Mood2Happy4_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood2Happy4_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -78,7 +78,7 @@ PikaPicAnimScript_Mood2Happy2:
 	pikapic_setduration 32
 	pikapic_loadgfx Pic_Mood2Happy2_0
 	pikapic_loadgfx GFX_Mood2Happy2_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood2Happy2_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -88,7 +88,7 @@ PikaPicAnimScript_Mood2Happy1:
 	pikapic_setduration 50
 	pikapic_loadgfx Pic_Mood2Happy1_0
 	pikapic_loadgfx GFX_Mood2Happy1_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood2Happy1_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry PikachuCry38
@@ -98,7 +98,7 @@ PikaPicAnimScript_Mood2Happy5:
 	pikapic_setduration 58
 	pikapic_loadgfx Pic_Mood2Happy5_0
 	pikapic_loadgfx GFX_Mood2Happy5_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood2Happy5_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -108,7 +108,7 @@ PikaPicAnimScript_Mood3Happy3:
 	pikapic_setduration 44
 	pikapic_loadgfx Pic_Mood3Happy3_0
 	pikapic_loadgfx GFX_Mood3Happy3_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood3Happy3_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -118,7 +118,7 @@ PikaPicAnimScript_Mood1Happy2:
 	pikapic_setduration 56
 	pikapic_loadgfx Pic_Mood1Happy2_0
 	pikapic_loadgfx GFX_Mood1Happy2_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood1Happy2_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -129,7 +129,7 @@ PikaPicAnimScript_Mood3Happy6:
 	pikapic_loadgfx Pic_Mood3Happy6_0
 	pikapic_loadgfx GFX_Mood3Happy6_0
 	pikapic_loadgfx GFX_Mood3Happy6_1
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood3Happy6_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -139,7 +139,7 @@ PikaPicAnimScript_FastAsleep:
 	pikapic_setduration 100
 	pikapic_loadgfx Pic_FastAsleep_0
 	pikapic_loadgfx GFX_FastAsleep_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_FastAsleep_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -149,7 +149,7 @@ PikaPicAnimScript_Mood3Happy2:
 	pikapic_setduration 50
 	pikapic_loadgfx Pic_Mood3Happy2_0
 	pikapic_loadgfx GFX_Mood3Happy2_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood3Happy2_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry PikachuCry25
@@ -159,7 +159,7 @@ PikaPicAnimScript_Mood3Happy1:
 	pikapic_setduration 50
 	pikapic_loadgfx Pic_Mood3Happy1_0
 	pikapic_loadgfx GFX_Mood3Happy1_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood3Happy1_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -169,7 +169,7 @@ PikaPicAnimScript_Mood1Happy1:
 	pikapic_setduration 40
 	pikapic_loadgfx Pic_Mood1Happy1_0
 	pikapic_loadgfx GFX_Mood1Happy1_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood1Happy1_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -179,7 +179,7 @@ PikaPicAnimScript_Mood3Happy4:
 	pikapic_setduration 50
 	pikapic_loadgfx Pic_Mood3Happy4_0
 	pikapic_loadgfx GFX_Mood3Happy4_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood3Happy4_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -189,7 +189,7 @@ PikaPicAnimScript_Mood2Happy6:
 	pikapic_setduration 32
 	pikapic_loadgfx Pic_Mood2Happy6_0
 	pikapic_loadgfx GFX_Mood2Happy6_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood2Happy6_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -199,7 +199,7 @@ PikaPicAnimScript_Mood1Happy5:
 	pikapic_setduration 100
 	pikapic_loadgfx Pic_Mood1Happy5_0
 	pikapic_loadgfx GFX_Mood1Happy5_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood1Happy5_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -219,7 +219,7 @@ PikaPicAnimScript_Mood2Happy7:
 	pikapic_setduration 44
 	pikapic_loadgfx Pic_Mood2Happy7_0
 	pikapic_loadgfx GFX_Mood2Happy7_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood2Happy7_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -229,7 +229,7 @@ PikaPicAnimScript_Mood3Happy7:
 	pikapic_setduration 50
 	pikapic_loadgfx Pic_Mood3Happy7_0
 	pikapic_loadgfx GFX_Mood3Happy7_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood3Happy7_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -242,7 +242,7 @@ PikaPicAnimScript_FishingRod:
 	pikapic_loadgfx GFX_FishingRod_1
 	pikapic_loadgfx GFX_FishingRod_2
 	pikapic_loadgfx GFX_FishingRod_3
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_FishingRod_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry PikachuCry20
@@ -283,7 +283,7 @@ PikaPicAnimScript_ThunderBolt:
 	pikapic_loadgfx Pic_ThunderBolt_0
 	pikapic_loadgfx GFX_ThunderBolt_0
 	pikapic_loadgfx GFX_ThunderBolt_1
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_ThunderBolt_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -300,7 +300,7 @@ PikaPicAnimScript_PewterWake:
 	pikapic_loadgfx GFX_FastAsleep_0
 	pikapic_loadgfx GFX_PewterWake_1
 	pikapic_loadgfx GFX_PewterWake_2
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_PewterWake_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -310,7 +310,7 @@ PikaPicAnimScript_BillEnterTeleporter:
 	pikapic_setduration 30
 	pikapic_loadgfx Pic_BillEnterTeleporter_0
 	pikapic_loadgfx GFX_BillEnterTeleporter_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_BillEnterTeleporter_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -320,7 +320,7 @@ PikaPicAnimScript_Statused:
 	pikapic_setduration 64
 	pikapic_loadgfx Pic_Statused_0
 	pikapic_loadgfx GFX_Statused_0
-	pikapic_animation PikaPicAnimBGFrames_Mood2Happy3_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Statused_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
