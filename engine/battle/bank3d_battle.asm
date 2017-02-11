@@ -110,7 +110,7 @@ InitWildBattle:
 
 ; common code that executes after init battle code specific to trainer or wild battles
 InitBattle_Common:
-	ld b, $0
+	ld b, SET_PAL_BATTLE_BLACK
 	call RunPaletteCommand
 	callab SlidePlayerAndEnemySilhouettesOnScreen
 	xor a

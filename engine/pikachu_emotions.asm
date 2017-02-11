@@ -206,40 +206,40 @@ pikaemotion_def: MACRO
 \1_id: dw \1
 	endm
 
-	pikaemotion_def PikachuEmotion0
-	pikaemotion_def PikachuEmotion1
-	pikaemotion_def PikachuEmotion2
-	pikaemotion_def PikachuEmotion3
-	pikaemotion_def PikachuEmotion4
-	pikaemotion_def PikachuEmotion5
-	pikaemotion_def PikachuEmotion6
-	pikaemotion_def PikachuEmotion7
-	pikaemotion_def PikachuEmotion8
-	pikaemotion_def PikachuEmotion9
-	pikaemotion_def PikachuEmotion10
-	pikaemotion_def PikachuEmotion11
-	pikaemotion_def PikachuEmotion12
-	pikaemotion_def PikachuEmotion13
-	pikaemotion_def PikachuEmotion14
-	pikaemotion_def PikachuEmotion15
-	pikaemotion_def PikachuEmotion16
-	pikaemotion_def PikachuEmotion17
-	pikaemotion_def PikachuEmotion18
-	pikaemotion_def PikachuEmotion19
-	pikaemotion_def PikachuEmotion20
+	pikaemotion_def PikachuEmotion0  ; error handling
+	pikaemotion_def PikachuEmotion1  ; average mood, okay happiness
+	pikaemotion_def PikachuEmotion2  ; high mood, good happiness
+	pikaemotion_def PikachuEmotion3  ;  low mood, okay/decent happiness
+	pikaemotion_def PikachuEmotion4  ; average mood, decent happiness
+	pikaemotion_def PikachuEmotion5  ; average mood, low happiness
+	pikaemotion_def PikachuEmotion6  ;  low mood, crap happiness
+	pikaemotion_def PikachuEmotion7  ; average mood, good happiness
+	pikaemotion_def PikachuEmotion8  ; high mood, okay happiness
+	pikaemotion_def PikachuEmotion9  ;  low mood, low happiness
+	pikaemotion_def PikachuEmotion10 ; high mood, high happiness
+	pikaemotion_def PikachuEmotion11 ; asleep
+	pikaemotion_def PikachuEmotion12 ; high mood, low happiness
+	pikaemotion_def PikachuEmotion13 ; high mood, crap happiness
+	pikaemotion_def PikachuEmotion14 ;  low mood, crap happiness
+	pikaemotion_def PikachuEmotion15 ; high mood, decent happiness
+	pikaemotion_def PikachuEmotion16 ; average mood, high happiness
+	pikaemotion_def PikachuEmotion17 ;  low mood, good/high/max happiness
+	pikaemotion_def PikachuEmotion18 ; caught a pokemon
+	pikaemotion_def PikachuEmotion19 ; average mood, max happiness
+	pikaemotion_def PikachuEmotion20 ; high mood, max happiness
 	pikaemotion_def PikachuEmotion21 ; used a fishing rod
-	pikaemotion_def PikachuEmotion22
-	pikaemotion_def PikachuEmotion23
-	pikaemotion_def PikachuEmotion24
-	pikaemotion_def PikachuEmotion25
+	pikaemotion_def PikachuEmotion22 ; spoopy
+	pikaemotion_def PikachuEmotion23 ; unused
+	pikaemotion_def PikachuEmotion24 ; tried to use thunderstone
+	pikaemotion_def PikachuEmotion25 ; taught or learned thunder/thunderbolt
 	pikaemotion_def PikachuEmotion26 ; wake up pikachu in pewter pokemon center
-	pikaemotion_def PikachuEmotion27
-	pikaemotion_def PikachuEmotion28
-	pikaemotion_def PikachuEmotion29
-	pikaemotion_def PikachuEmotion30
-	pikaemotion_def PikachuEmotion31
-	pikaemotion_def PikachuEmotion32
-	pikaemotion_def PikachuEmotion33
+	pikaemotion_def PikachuEmotion27 ; unused
+	pikaemotion_def PikachuEmotion28 ; statused
+	pikaemotion_def PikachuEmotion29 ; fan club 1
+	pikaemotion_def PikachuEmotion30 ; fan club 2
+	pikaemotion_def PikachuEmotion31 ; unused
+	pikaemotion_def PikachuEmotion32 ; unused
+	pikaemotion_def PikachuEmotion33 ; error handling
 	
 PikachuEmotion33:
 	db $ff
@@ -307,11 +307,11 @@ MapSpecificPikachuExpression:
 	ret
 	
 .Emotions:
-	dpikaemotion PikachuEmotion18
-	dpikaemotion PikachuEmotion21
+	dpikaemotion PikachuEmotion18 ; caught a pokemon
+	dpikaemotion PikachuEmotion21 ; used a fishing rod
 	dpikaemotion PikachuEmotion23
-	dpikaemotion PikachuEmotion24
-	dpikaemotion PikachuEmotion25
+	dpikaemotion PikachuEmotion24 ; tried to use thunderstone
+	dpikaemotion PikachuEmotion25 ; taught or learned thunder/thunderbolt
 	
 IsPlayerPikachuAsleepInParty:
 	xor a
