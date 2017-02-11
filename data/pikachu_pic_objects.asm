@@ -80,7 +80,7 @@ PikaPicAnimBGFrames_35: ; fallback
 	pikaframeend
 
 PikaPicAnimBGFrames_CaughtPokemon_0:
-	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,    0
+	pikaframe PikaAnimTilemap_1_0,                  0
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood2Happy3_1:
@@ -217,6 +217,8 @@ PikaPicAnimBGFrames_Mood3Happy4_1:
 
 PikaPicAnimBGFrames_Mood2Happy6_1:
 	pikaframe PikaAnimTilemap_Mood2Happy6_1_0,      8
+	pikaframesleep                                  8
+	pikaframe PikaAnimTilemap_Mood2Happy6_1_0,      8
 	pikaframesleep                                100
 	pikaframeend
 
@@ -229,10 +231,10 @@ PikaPicAnimBGFrames_Mood1Happy5_1:
 	pikaframeend
 
 PikaPicAnimBGFrames_CaughtPokemon_1:
-	pikaframesleep                                  3
-	pikaframe PikaAnimTilemap_CaughtPokemon_1_0,  100
 	pikaframesleep                                  8
-	pikaframe PikaAnimTilemap_CaughtPokemon_1_0,    8
+	pikaframe PikaAnimTilemap_1_0,                  2
+	pikaframe PikaAnimTilemap_FishingRod_1_1,       2
+	pikaframe PikaAnimTilemap_FishingRod_1_2,     100
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood2Happy7_1:

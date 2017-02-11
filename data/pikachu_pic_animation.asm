@@ -209,8 +209,10 @@ PikaPicAnimScript_Mood2Happy6:
 
 PikaPicAnimScript_CaughtPokemon:
 	pikapic_setduration 32
-	pikapic_loadgfx GFX_CaughtPokemon_0
-	pikapic_loadgfx GFX_CaughtPokemon_1
+	pikapic_loadgfx Pic_Mood2Happy2_0
+	pikapic_loadgfx Pic_Mood2Happy4_0
+	pikapic_loadgfx GFX_Mood2Happy3_0
+	pikapic_loadgfx GFX_Mood2Happy4_0
 	pikapic_animation PikaPicAnimBGFrames_CaughtPokemon_0, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_CaughtPokemon_1, $99, $0, $0
 	pikapic_waitbgmap
@@ -376,8 +378,6 @@ PikaPicAnimGFX_Null_id::
 	pikapicanimgfx 25, GFX_Mood2Happy6_0
 ; 	pikapicanimgfx -1, Pic_Mood1Happy5_0
 ; 	pikapicanimgfx 25, GFX_Mood1Happy5_0
-	pikapicanimgfx 25, GFX_CaughtPokemon_0
-	pikapicanimgfx 25, GFX_CaughtPokemon_1
 	pikapicanimgfx -1, Pic_Mood2Happy7_0
 	pikapicanimgfx 25, GFX_Mood2Happy7_0
 ; 	pikapicanimgfx -1, Pic_Mood3Happy7_0

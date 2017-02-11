@@ -2058,8 +2058,8 @@ GFX_FastAsleep_0:    INCBIN "gfx/pikachu/fast_asleep_0_2bpp.2bpp"
 ; Pic_Mood3Happy4_0:   INCBIN "gfx/pikachu/mood3_happy4_0_pic.pic"
 ; GFX_Mood3Happy4_0:   INCBIN "gfx/pikachu/mood3_happy4_0_2bpp.2bpp"
 
-Pic_Mood2Happy6_0:   INCBIN "gfx/pikachu/mood2_happy6_0_pic.pic"
-GFX_Mood2Happy6_0:   INCBIN "gfx/pikachu/mood2_happy6_0_2bpp.2bpp"
+Pic_Mood2Happy6_0:   INCBIN "gfx/chatot/Chatot6_1.pic"
+GFX_Mood2Happy6_0:   INCBIN "gfx/chatot/Chatot6_2.2bpp"
 
 ; Pic_Mood1Happy5_0:   INCBIN "gfx/pikachu/mood1_happy5_0_pic.pic"
 ; GFX_Mood1Happy5_0:   INCBIN "gfx/pikachu/mood1_happy5_0_2bpp.2bpp"
