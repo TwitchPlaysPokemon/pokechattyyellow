@@ -562,7 +562,7 @@ ItemUseBall:
 
 .skipShowingPokedexData
 	ld a, $1
-	ld [wContextDependentPikachuEmotion], a ; play PikachuEmotion18
+	ld [wContextDependentPikachuEmotion], a ; play PikachuEmotion_CaughtPokemon
 	ld a, $85
 	ld [wPikachuMood], a
 	ld a, [wPartyCount]
@@ -825,7 +825,7 @@ ItemUseEvoStone:
 	; ld hl, RefusingText
 	; call PrintText
 	; ld a, $4
-	; ld [wContextDependentPikachuEmotion], a ; play PikachuEmotion24
+	; ld [wContextDependentPikachuEmotion], a ; play PikachuEmotion_ThunderStone
 	; ld a, $82
 	; ld [wPikachuMood], a
 	; jr .canceledItemUse
@@ -1936,7 +1936,7 @@ ItemUsePokeflute:
 	ld hl, PlayedFluteHadEffectText
 	call PrintText
 	call ItemUseReloadOverworldData
-	ldpikaemotion e, PikachuEmotion26
+	ldpikaemotion e, PikachuEmotion_PewterWake
 	callab PlaySpecificPikachuEmotion
 	ret
 
@@ -2177,7 +2177,7 @@ FishingInit:
 	ld a, SFX_HEAL_AILMENT
 	call PlaySound
 	ld a, $2
-	ld [wContextDependentPikachuEmotion], a ; play PikachuEmotion21
+	ld [wContextDependentPikachuEmotion], a ; play PikachuEmotion_FishingRod
 	ld a, $81
 	ld [wPikachuMood], a
 	ld c, 80
@@ -2560,7 +2560,7 @@ ItemUseTMHM:
 	; jr nz, .notTeachingThunderboltOrThunderToPikachu
 ; .teachingThunderboltOrThunderToPlayerPikachu
 	; ld a, $5
-	; ld [wContextDependentPikachuEmotion], a ; PikachuEmotion25
+	; ld [wContextDependentPikachuEmotion], a ; PikachuEmotion_ThunderBolt
 	; ld a, $85
 	; ld [wPikachuMood], a
 ; .notTeachingThunderboltOrThunderToPikachu

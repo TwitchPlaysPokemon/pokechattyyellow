@@ -39,53 +39,53 @@ PikaPicAnimationScriptPointerLookupTable:
 ; First byte: happiness threshold
 ; Remaining bytes: loaded based on Pikachu's mood
 	db 50
-	dpikapic PikaPicAnimScript14
-	dpikapic PikaPicAnimScript14
-	dpikapic PikaPicAnimScript6
-	dpikapic PikaPicAnimScript13
-	dpikapic PikaPicAnimScript13
+	dpikaemotion PikachuEmotion_Mood1Happy1
+	dpikaemotion PikachuEmotion_Mood1Happy1
+	dpikaemotion PikachuEmotion_Mood2Happy1
+	dpikaemotion PikachuEmotion_Mood3Happy1
+	dpikaemotion PikachuEmotion_Mood3Happy1
 
 	db 100
-	dpikapic PikaPicAnimScript9
-	dpikapic PikaPicAnimScript9
-	dpikapic PikaPicAnimScript5
-	dpikapic PikaPicAnimScript12
-	dpikapic PikaPicAnimScript12
+	dpikaemotion PikachuEmotion_Mood1Happy2
+	dpikaemotion PikachuEmotion_Mood1Happy2
+	dpikaemotion PikachuEmotion_Mood2Happy2
+	dpikaemotion PikachuEmotion_Mood3Happy2
+	dpikaemotion PikachuEmotion_Mood3Happy2
 
 	db 130
-	dpikapic PikaPicAnimScript3
-	dpikapic PikaPicAnimScript3
-	dpikapic PikaPicAnimScript1
-	dpikapic PikaPicAnimScript8
-	dpikapic PikaPicAnimScript8
+	dpikaemotion PikachuEmotion_Mood1Happy3
+	dpikaemotion PikachuEmotion_Mood1Happy3
+	dpikaemotion PikachuEmotion_Mood2Happy3
+	dpikaemotion PikachuEmotion_Mood3Happy3
+	dpikaemotion PikachuEmotion_Mood3Happy3
 
 	db 160
-	dpikapic PikaPicAnimScript3
-	dpikapic PikaPicAnimScript3
-	dpikapic PikaPicAnimScript4
-	dpikapic PikaPicAnimScript15
-	dpikapic PikaPicAnimScript15
+	dpikaemotion PikachuEmotion_Mood1Happy3
+	dpikaemotion PikachuEmotion_Mood1Happy3
+	dpikaemotion PikachuEmotion_Mood2Happy4
+	dpikaemotion PikachuEmotion_Mood3Happy4
+	dpikaemotion PikachuEmotion_Mood3Happy4
 
 	db 200
-	dpikapic PikaPicAnimScript17
-	dpikapic PikaPicAnimScript17
-	dpikapic PikaPicAnimScript7
-	dpikapic PikaPicAnimScript2
-	dpikapic PikaPicAnimScript2
+	dpikaemotion PikachuEmotion_Mood1Happy5
+	dpikaemotion PikachuEmotion_Mood1Happy5
+	dpikaemotion PikachuEmotion_Mood2Happy5
+	dpikaemotion PikachuEmotion_Mood3Happy5
+	dpikaemotion PikachuEmotion_Mood3Happy5
 
 	db 250
-	dpikapic PikaPicAnimScript17
-	dpikapic PikaPicAnimScript17
-	dpikapic PikaPicAnimScript16
-	dpikapic PikaPicAnimScript10
-	dpikapic PikaPicAnimScript10
+	dpikaemotion PikachuEmotion_Mood1Happy5
+	dpikaemotion PikachuEmotion_Mood1Happy5
+	dpikaemotion PikachuEmotion_Mood2Happy6
+	dpikaemotion PikachuEmotion_Mood3Happy6
+	dpikaemotion PikachuEmotion_Mood3Happy6
 
 	db 255
-	dpikapic PikaPicAnimScript17
-	dpikapic PikaPicAnimScript17
-	dpikapic PikaPicAnimScript19
-	dpikapic PikaPicAnimScript20
-	dpikapic PikaPicAnimScript20
+	dpikaemotion PikachuEmotion_Mood1Happy5
+	dpikaemotion PikachuEmotion_Mood1Happy5
+	dpikaemotion PikachuEmotion_Mood2Happy7
+	dpikaemotion PikachuEmotion_Mood3Happy7
+	dpikaemotion PikachuEmotion_Mood3Happy7
 
 StarterPikachuEmotionCommand_pikapic:
 	ld a, [hBGMapMode]

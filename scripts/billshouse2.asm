@@ -91,15 +91,15 @@ BillsHousePikachuEmotionCheck:
 	jr z, .asm_f24d2
 	ld a, [wBillsHouseCurScript]
 	cp $5
-	ld e, $1b ; PikachuEmotion27
+	ld e, $1b ; PikachuEmotion_BillEnterTeleporter
 	ret z
 	cp $0
-	ld e, $17 ; PikachuEmotion23
+	ld e, $17 ; PikachuEmotion_BillFirstTime
 	ret z
 	CheckEventHL EVENT_MET_BILL_2
-	ld e, $20 ; PikachuEmotion32
+	ld e, $20 ; PikachuEmotion_BillGetOverShock
 	ret z
-	ld e, $1f ; PikachuEmotion31
+	ld e, $1f ; PikachuEmotion_BillExitTeleporter
 	ret
 
 .asm_f24d2
@@ -132,7 +132,7 @@ Data_f2505:
 	db $1e
 	db $3f
 
-Func_f250b:
+BillsHouse_PikachuReaction2:
 	ld hl, Data_f251c
 	ld b, SPRITE_FACING_UP
 	call TryApplyPikachuMovementData

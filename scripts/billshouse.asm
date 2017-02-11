@@ -63,7 +63,7 @@ BillsHouseScript2:
 	jr nz, .notDown
 	call IsPikachuPositionFrozenOnMap
 	jr nz, .asm_1e0f8
-	callab Func_f250b
+	callab BillsHouse_PikachuReaction2
 .asm_1e0f8
 	ld de, MovementData_1e7a0
 .notDown
