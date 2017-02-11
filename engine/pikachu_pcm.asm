@@ -3,16 +3,7 @@ IF DEF(MARKOV)
 	ld a, e
 	ld [wPCMTempID], a
 ELSE
-	ld d, $0
-	ld hl, PikachuCriesPointerTable
-	add hl, de
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	ld b, a ; bank of pikachu cry data
-	ld a, [hli] ; cry data pointer
-	ld h, [hl]
-	ld l, a
+	call GetPikachuCryPointer
 	call Delay3
 ENDC
 PlayPikachuSoundClipBHL::
@@ -54,15 +45,21 @@ PlayPikachuSoundClipBHL::
 IF DEF(MARKOV)
 	ld a, [wPCMTempID]
 	cp $ff
-	jr nz, .doLuaRequest
-	call PlayPikachuPCM
-	jr .afterPCM
-.doLuaRequest
-	ld c, a
-	xor a
+	jr z, .playPikachuPCM
+	ld e, a
+	ld a, [wIsInBattle]
+	and a
+	jr nz, .doNotPlayLuaCry
 	ld [rNR51], a
+	ld a, e
+	add 2
 	call LuaRequest
-.afterPCM
+	jr .afterLuaRequest
+.doNotPlayLuaCry
+	call GetPikachuCryPointer
+.playPikachuPCM
+	call PlayPikachuPCM
+.afterLuaRequest
 ELSE
 	call PlayPikachuPCM
 ENDC
@@ -88,6 +85,19 @@ ENDC
 	ld [wChannelSoundIDs+CH6], a
 	ld [wChannelSoundIDs+CH7], a
 	reti
+
+GetPikachuCryPointer::
+	ld d, $0
+	ld hl, PikachuCriesPointerTable
+	add hl, de
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld b, a ; bank of pikachu cry data
+	ld a, [hli] ; cry data pointer
+	ld h, [hl]
+	ld l, a
+	ret
 
 PikachuCriesPointerTable::
 ; format:

@@ -332,28 +332,29 @@ PlayCry::
 	xor a
 	ld [wLowHealthAlarm], a
 	ld a, b
+	cp CHATOT
+	jr nz, .notChatot
+	call PlayRegularChatotCry
+	jr .afterChatotCry
+.notChatot
 	call GetCryData
 	call PlaySound
 	call WaitForSoundToFinish
-_finishCry
+.afterChatotCry
 	pop af
 	ld [wLowHealthAlarm], a
 	pop bc
 	ret
 
-GetCryData::
-; Load cry data for monster a.
-	cp CHATOT
-	jr nz, .not_chatot
-	pop hl
+PlayRegularChatotCry::
 	ld hl, PikachuCry_Mood2Happy5
 	ld b, BANK(PikachuCry_Mood2Happy5)
 	ld a, $ff
 	ld [wPCMTempID], a
-	homecall PlayPikachuSoundClipBHL
-	jr _finishCry
+	homecall_jump PlayPikachuSoundClipBHL
 
-.not_chatot
+GetCryData::
+; Load cry data for monster a.
 	dec a
 	ld c, a
 	ld b, 0
@@ -2683,7 +2684,6 @@ PrintEndBattleText::
 	ld [hROMBank], a
 	ld [MBC5RomBank], a
 	push hl
-	callba SaveTrainerName
 	ld hl, TrainerEndBattleText
 	call PrintText
 	pop hl

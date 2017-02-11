@@ -152,6 +152,11 @@ HandlePokedexSideMenu:
 ; play pokemon cry
 .choseCry
 	ld a, [wd11e]
+	cp CHATOT
+	jr nz, .notChatot
+	call PlayRegularChatotCry
+	jr .handleMenuInput
+.notChatot
 	call GetCryData
 	call PlaySound
 	jr .handleMenuInput

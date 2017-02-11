@@ -933,7 +933,7 @@ wTotalPayDayMoney:: ; cce5
 wSafariEscapeFactor:: ; cce8
 	ds 1
 wSafariBaitFactor:: ; cce9
-	ds 1;
+	ds 1
 
 	ds 1
 
@@ -969,18 +969,24 @@ wLowHealthAlarmDisabled:: ; ccf6
 wPlayerMonMinimized:: ; ccf7
 	ds 1
 
-	ds 13
+wLuckySlotHiddenObjectIndex:: ; ccf8
 
-wLuckySlotHiddenObjectIndex:: ; cd05
-
-wEnemyNumHits:: ; cd05
+wEnemyNumHits:: ; ccf8
 ; number of hits by enemy in attacks like Double Slap, etc.
 
-wEnemyBideAccumulatedDamage:: ; cd05
+wEnemyBideAccumulatedDamage:: ; ccf8
 ; the amount of damage accumulated by the enemy while biding (2 bytes)
+	ds 2
 
-	ds 10
-wBattleRAMEnd:: ; cd0f
+wBattleRAMEnd:: ; ccfa
+
+	ds 3
+
+wTrainerName:: ; ccfd
+; 13 bytes for the letters of the opposing trainer
+; the name is terminated with $50 with possible
+; unused trailing letters
+	ds 18
 
 wInGameTradeGiveMonSpecies:: ; cd0f
 
@@ -1901,10 +1907,6 @@ wMissableObjectCounter:: ; d047
 
 	ds 1
 
-wTrainerName:: ; d049
-; 13 bytes for the letters of the opposing trainer
-; the name is terminated with $50 with possible
-; unused trailing letters
 	ds 13
 
 wIsInBattle:: ; d056

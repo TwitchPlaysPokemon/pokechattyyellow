@@ -33,8 +33,14 @@ _CardKeyFailText::
 	done
 
 _TrainerNameText::
-	TX_RAM wStringBuffer
+IF DEF(MARKOV)
+	TX_RAM wTrainerName
+	text ":"
+	line "@@"
+ELSE
+	TX_RAM wTrainerName
 	text ": @@"
+ENDC
 
 _NoNibbleText::
 	text "Not even a nibble!"
