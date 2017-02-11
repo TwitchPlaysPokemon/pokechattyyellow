@@ -815,8 +815,8 @@ PikachuCry8_End:
 
 	db $f7  ; unused
 
-PikachuCry_BillEnterTeleporter::
-	dw (PikachuCry9_End - PikachuCry_BillEnterTeleporter) - 2 ; length of pcm data
+PikachuCry_BillEmergeFromTeleporter::
+	dw (PikachuCry9_End - PikachuCry_BillEmergeFromTeleporter) - 2 ; length of pcm data
 	INCBIN "audio/pikachu_cries/pikachu_cry_9.pcm"
 PikachuCry9_End:
 

@@ -180,10 +180,10 @@ PikachuEmotion_PewterWake:
 	pikaemotion_subcmd PIKAEMOTION_SUBCMD_CHECKPEWTERCENTER
 	db $ff
 
-PikachuEmotion_BillEnterTeleporter:
+PikachuEmotion_BillEmergeFromTeleporter:
 	pikaemotion_dummy2
-	pikaemotion_pcm PikachuCry_BillEnterTeleporter
-	pikaemotion_pikapic PikaPicAnimScript_BillEnterTeleporter
+	pikaemotion_pcm PikachuCry_BillEmergeFromTeleporter
+	pikaemotion_pikapic PikaPicAnimScript_BillEmergeFromTeleporter
 	db $ff
 
 PikachuEmotion_Statused:
@@ -207,7 +207,7 @@ PikachuEmotion_Statused:
 	; pikaemotion_subcmd PIKAEMOTION_SUBCMD_CHECKLAVENDERTOWER
 	; db $ff
 
-PikachuEmotion_BillExitTeleporter:
+PikachuEmotion_BillEnterTeleporter:
 	pikaemotion_pcm PikachuCry_BillFirstTime
 	pikaemotion_pikapic PikaPicAnimScript_BillFirstTime
 	pikaemotion_subcmd PIKAEMOTION_SUBCMD_SHOWMAPVIEW

@@ -233,11 +233,11 @@ pikaemotion_def: MACRO
 	pikaemotion_def PikachuEmotion_Burned ; roast parrot anyone?
 	pikaemotion_def PikachuEmotion_LowHP ; taught or learned thunder/thunderbolt
 	pikaemotion_def PikachuEmotion_PewterWake ; wake up pikachu in pewter pokemon center
-	pikaemotion_def PikachuEmotion_BillEnterTeleporter ; bill's house 1
+	pikaemotion_def PikachuEmotion_BillEmergeFromTeleporter ; bill's house 1
 	pikaemotion_def PikachuEmotion_Statused ; statused
 	; pikaemotion_def PikachuEmotion_FanClub1 ; fan club 1
 	; pikaemotion_def PikachuEmotion_FanClub2 ; fan club 2
-	pikaemotion_def PikachuEmotion_BillExitTeleporter ; bill's house 2
+	pikaemotion_def PikachuEmotion_BillEnterTeleporter ; bill's house 2
 	pikaemotion_def PikachuEmotion_BillGetOverShock ; bill's house 3
 	pikaemotion_def .error ; error handling
 

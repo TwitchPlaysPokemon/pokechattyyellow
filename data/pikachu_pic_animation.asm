@@ -311,12 +311,12 @@ PikaPicAnimScript_PewterWake:
 	pikapic_cry
 	pikapic_looptofinish
 
-PikaPicAnimScript_BillEnterTeleporter:
+PikaPicAnimScript_BillEmergeFromTeleporter:
 	pikapic_setduration 30
-	pikapic_loadgfx Pic_BillEnterTeleporter_0
-	pikapic_loadgfx GFX_BillEnterTeleporter_0
+	pikapic_loadgfx Pic_BillEmergeFromTeleporter_0
+	pikapic_loadgfx GFX_BillEmergeFromTeleporter_0
 	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
-	pikapic_animation PikaPicAnimBGFrames_BillEnterTeleporter_1, $99, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_BillEmergeFromTeleporter_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
 	pikapic_looptofinish
@@ -405,8 +405,8 @@ PikaPicAnimGFX_Null_id::
 	pikapicanimgfx 25, GFX_LowHP_2
 	; pikapicanimgfx 25, GFX_PewterWake_1
 	; pikapicanimgfx 25, GFX_PewterWake_2
-	pikapicanimgfx -1, Pic_BillEnterTeleporter_0
-	pikapicanimgfx 25, GFX_BillEnterTeleporter_0
+	pikapicanimgfx -1, Pic_BillEmergeFromTeleporter_0
+	pikapicanimgfx 25, GFX_BillEmergeFromTeleporter_0
 	pikapicanimgfx -1, Pic_Statused_0
 	pikapicanimgfx 25, GFX_Statused_0
 	pikapicanimgfx 25, GFX_Statused_1

@@ -38,7 +38,7 @@ pikaanim_def: macro
 	pikaanim_def PikaPicAnimBGFrames_Burned_1 ; 1e
 	pikaanim_def PikaPicAnimBGFrames_LowHP_1 ; 1f
 	pikaanim_def PikaPicAnimBGFrames_PewterWake_1 ; 20
-	pikaanim_def PikaPicAnimBGFrames_BillEnterTeleporter_1 ; 21
+	pikaanim_def PikaPicAnimBGFrames_BillEmergeFromTeleporter_1 ; 21
 	pikaanim_def PikaPicAnimBGFrames_Statused_1 ; 22
 	pikaanim_def PikaPicAnimBGFrames_35 ; 23
 
@@ -340,7 +340,7 @@ PikaPicAnimBGFrames_PewterWake_1:
 	pikaframe PikaAnimTilemap_FishingRod_1_2,     100
 	pikaframeend
 
-PikaPicAnimBGFrames_BillEnterTeleporter_1:
+PikaPicAnimBGFrames_BillEmergeFromTeleporter_1:
 	pikaframesleep                                  4
 	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,    4
 	pikaframesleep                                  4
