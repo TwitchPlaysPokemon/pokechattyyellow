@@ -52,6 +52,7 @@ IF DEF(MARKOV)
 	jr nz, .doNotPlayLuaCry
 	ld [rNR51], a
 	ld a, e
+	add 2
 	call LuaRequest
 	jr .afterLuaRequest
 .doNotPlayLuaCry
