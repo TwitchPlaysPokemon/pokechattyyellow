@@ -113,9 +113,13 @@ PikaPicAnimBGFrames_Mood1Happy3_1:
 
 PikaPicAnimBGFrames_Mood2Happy4_1:
 	pikaframesleep                                  8
-	pikaframe PikaAnimTilemap_Mood2Happy4_1_0,      8
-	pikaframesleep                                 20
-	pikaframe PikaAnimTilemap_Mood2Happy4_1_0,      8
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,    8
+	pikaframesleep                                  8
+	pikaframe PikaAnimTilemap_FishingRod_1_1,       8
+	pikaframesleep                                  8
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,    8
+	pikaframesleep                                  8
+	pikaframe PikaAnimTilemap_FishingRod_1_1,     100
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood2Happy2_1:
@@ -135,11 +139,13 @@ PikaPicAnimBGFrames_Mood2Happy1_1:
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood2Happy5_1:
+	pikaframesleep                                  8
 	pikaframe PikaAnimTilemap_Mood2Happy5_1_0,      8
-	pikaframesleep                                  2
+	pikaframesleep                                  8
 	pikaframe PikaAnimTilemap_Mood2Happy5_1_0,      8
-	pikaframesleep                                  2
+	pikaframesleep                                  8
 	pikaframe PikaAnimTilemap_Mood2Happy5_1_0,      8
+	pikaframesleep                                100
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood3Happy3_1:
