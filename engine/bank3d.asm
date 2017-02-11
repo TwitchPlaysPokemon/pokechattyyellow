@@ -319,7 +319,7 @@ PokemonLogoGraphicsEnd:
 YellowLogoGraphics0:
 INCBIN "gfx/yellow_titlescreen0.w56.t2.2bpp"
 YellowLogoGraphics4:
-INCBIN "gfx/yellow_titleScreen4.2bpp"
+INCBIN "gfx/yellow_titlescreen4.2bpp"
 YellowLogoGraphics1:
 INCBIN "gfx/yellow_titlescreen1.w24.2bpp"
 YellowLogoGraphics2:
