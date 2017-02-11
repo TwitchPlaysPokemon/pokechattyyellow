@@ -223,7 +223,7 @@ DayCareMText1:
 	ld a, $6
 	ld [wPikachuSpawnState], a
 	callab SchedulePikachuSpawnForAfterText
-	ldpikacry e, PikachuCry35
+	ldpikacry e, PikachuCry_Mood3Happy5
 	callab PlayPikachuSoundClip
 .asm_56430
 	ld hl, DayCareGotMonBackText

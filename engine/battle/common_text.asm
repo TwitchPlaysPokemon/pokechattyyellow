@@ -12,7 +12,7 @@ PrintBeginningBattleText:
 	cp BATTLE_TYPE_PIKACHU
 	jr nz, .notPikachuBattle
 	callab IsPlayerPikachuAsleepInParty
-	ldpikacry e, PikachuCry37
+	ldpikacry e, PikachuCry_FastAsleep
 	jr c, .asm_f4026
 	ldpikacry e, PikachuCry11
 .asm_f4026

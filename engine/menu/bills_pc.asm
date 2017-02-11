@@ -306,7 +306,7 @@ BillsPCWithdraw:
 	call GetPartyMonName
 	callab IsThisPartymonStarterPikachu_Box
 	jr nc, .asm_21660
-	ldpikacry e, PikachuCry35
+	ldpikacry e, PikachuCry_Mood3Happy5
 	callab PlayPikachuSoundClip
 	jr .asm_21666
 .asm_21660
@@ -357,7 +357,7 @@ BillsPCRelease:
 	ld a, [wWhichPokemon]
 	ld hl, wBoxMonNicks
 	call GetPartyMonName
-	ldpikacry e, PikachuCry40
+	ldpikacry e, PikachuCry_Mood1Happy3
 	callab PlayPikachuSoundClip
 	ld hl, PikachuUnhappyText
 	call PrintText

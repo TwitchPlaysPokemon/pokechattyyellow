@@ -108,7 +108,7 @@ pikaemotion_dummy2: MACRO
 	db PIKAEMOTION_DUMMY2
 ENDM
 
-pikaemotion_9: MACRO
+pikaemotion_turnawayfromplayer: MACRO
 	db PIKAEMOTION_9
 ENDM
 

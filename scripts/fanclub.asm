@@ -44,7 +44,7 @@ FanClubScript_MovePikachuToSeel:
 	ld [wPlayerMovingDirection], a
 	call UpdateSprites
 	call UpdateSprites
-	ld a, $0
+	ld a, EXCLAMATION_BUBBLE
 	ld [wWhichEmotionBubble], a
 	ld a, $f ; Pikachu
 	ld [wEmotionBubbleSpriteIndex], a

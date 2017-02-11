@@ -1145,7 +1145,7 @@ RemoveFaintedPlayerMon:
 	ld [wWhichPokemon], a
 	callab IsThisPartymonStarterPikachu_Party
 	jr nc, .notPlayerPikachu
-	ldpikacry e, PikachuCry4
+	ldpikacry e, PikachuCry_LavenderTown
 	callab PlayPikachuSoundClip
 	jr .printText
 .notPlayerPikachu
@@ -1900,7 +1900,7 @@ SendOutMon:
 	ld [hBGMapMode], a
 	callab StarterPikachuBattleEntranceAnimation
 	callab IsPlayerPikachuAsleepInParty
-	ldpikacry e, PikachuCry37
+	ldpikacry e, PikachuCry_FastAsleep
 	jr c, .asm_3cd81
 	ldpikacry e, PikachuCry11
 .asm_3cd81

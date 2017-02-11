@@ -158,7 +158,7 @@ HoFDisplayAndRecordMonInfo:
 	ld [wWhichPokemon], a
 	callab IsThisPartymonStarterPikachu_Party ; 3f:4e18
 	jr nc, .asm_70336
-	ldpikacry e, PikachuCry35
+	ldpikacry e, PikachuCry_Mood3Happy5
 	callab PlayPikachuSoundClip
 	jr .asm_7033c
 .asm_70336

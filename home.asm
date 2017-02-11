@@ -346,8 +346,8 @@ GetCryData::
 	cp CHATOT
 	jr nz, .not_chatot
 	add sp, 2
-	ld hl, PikachuCry1
-	ld b, BANK(PikachuCry1)
+	ld hl, PikachuCry_Mood2Happy5
+	ld b, BANK(PikachuCry_Mood2Happy5)
 	homecall PlayPikachuSoundClipBHL
 	jr _finishCry
 

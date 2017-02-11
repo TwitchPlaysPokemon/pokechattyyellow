@@ -971,7 +971,7 @@ PikachuPewterPokecenterCheck:
 	cp PEWTER_POKECENTER
 	ret nz
 	call EnablePikachuFollowingPlayer
-	call StarterPikachuEmotionCommand_turnawayfromplayer
+	call MakeChatotTurnAwayFromPlayer
 	ret
 
 PikachuFanClubCheck:
@@ -979,7 +979,7 @@ PikachuFanClubCheck:
 	cp POKEMON_FAN_CLUB
 	ret nz
 	call EnablePikachuFollowingPlayer
-	call StarterPikachuEmotionCommand_turnawayfromplayer
+	call MakeChatotTurnAwayFromPlayer
 	ret
 
 PikachuBillsHouseCheck:

@@ -169,34 +169,34 @@ pikapic_def: macro
 endm
 
 	pikapic_def PikaPicAnimScript0  ; 00
-	pikapic_def PikaPicAnimScript1  ; 01
-	pikapic_def PikaPicAnimScript2  ; 02
-	pikapic_def PikaPicAnimScript3  ; 03
-	pikapic_def PikaPicAnimScript4  ; 04
-	pikapic_def PikaPicAnimScript5  ; 05
-	pikapic_def PikaPicAnimScript6  ; 06
-	pikapic_def PikaPicAnimScript7  ; 07
-	pikapic_def PikaPicAnimScript8  ; 08
-	pikapic_def PikaPicAnimScript9  ; 09
-	pikapic_def PikaPicAnimScript10 ; 0a
-	pikapic_def PikaPicAnimScript11 ; 0b
-	pikapic_def PikaPicAnimScript12 ; 0c
-	pikapic_def PikaPicAnimScript13 ; 0d
-	pikapic_def PikaPicAnimScript14 ; 0e
-	pikapic_def PikaPicAnimScript15 ; 0f
-	pikapic_def PikaPicAnimScript16 ; 10
-	pikapic_def PikaPicAnimScript17 ; 11
-	pikapic_def PikaPicAnimScript18 ; 12
-	pikapic_def PikaPicAnimScript19 ; 13
-	pikapic_def PikaPicAnimScript20 ; 14
-	pikapic_def PikaPicAnimScript21 ; 15
-	pikapic_def PikaPicAnimScript22 ; 16
-	pikapic_def PikaPicAnimScript23 ; 17
-	pikapic_def PikaPicAnimScript24 ; 18
-	pikapic_def PikaPicAnimScript25 ; 19
-	pikapic_def PikaPicAnimScript26 ; 1a
-	pikapic_def PikaPicAnimScript27 ; 1b
-	pikapic_def PikaPicAnimScript28 ; 1c
+	pikapic_def PikaPicAnimScript_Mood2Happy3  ; 01
+	pikapic_def PikaPicAnimScript_Mood3Happy5  ; 02
+	pikapic_def PikaPicAnimScript_Mood1Happy3  ; 03
+	pikapic_def PikaPicAnimScript_Mood2Happy4  ; 04
+	pikapic_def PikaPicAnimScript_Mood2Happy2  ; 05
+	pikapic_def PikaPicAnimScript_Mood2Happy1  ; 06
+	pikapic_def PikaPicAnimScript_Mood2Happy5  ; 07
+	pikapic_def PikaPicAnimScript_Mood3Happy3  ; 08
+	pikapic_def PikaPicAnimScript_Mood1Happy2  ; 09
+	pikapic_def PikaPicAnimScript_Mood3Happy6 ; 0a
+	pikapic_def PikaPicAnimScript_FastAsleep ; 0b
+	pikapic_def PikaPicAnimScript_Mood3Happy2 ; 0c
+	pikapic_def PikaPicAnimScript_Mood3Happy1 ; 0d
+	pikapic_def PikaPicAnimScript_Mood1Happy1 ; 0e
+	pikapic_def PikaPicAnimScript_Mood3Happy4 ; 0f
+	pikapic_def PikaPicAnimScript_Mood2Happy6 ; 10
+	pikapic_def PikaPicAnimScript_Mood1Happy5 ; 11
+	pikapic_def PikaPicAnimScript_CaughtPokemon ; 12
+	pikapic_def PikaPicAnimScript_Mood2Happy7 ; 13
+	pikapic_def PikaPicAnimScript_Mood3Happy7 ; 14
+	pikapic_def PikaPicAnimScript_FishingRod ; 15
+	pikapic_def PikaPicAnimScript_LavenderTown ; 16
+	pikapic_def PikaPicAnimScript_BillFirstTime ; 17
+	pikapic_def PikaPicAnimScript_ThunderStone ; 18
+	pikapic_def PikaPicAnimScript_ThunderBolt ; 19
+	pikapic_def PikaPicAnimScript_PewterWake ; 1a
+	pikapic_def PikaPicAnimScript_BillEnterTeleporter ; 1b
+	pikapic_def PikaPicAnimScript_Statused ; 1c
 	pikapic_def PikaPicAnimScript29 ; 1d
 
 ExecutePikaPicAnimScript:

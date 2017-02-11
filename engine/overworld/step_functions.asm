@@ -63,7 +63,7 @@ ApplyOutOfBattlePoisonDamage:
 	call DisplayTextID
 	callab IsThisPartymonStarterPikachu_Party
 	jr nc, .curMonNotPlayerPikachu
-	ldpikacry e, PikachuCry4
+	ldpikacry e, PikachuCry_LavenderTown
 	callab PlayPikachuSoundClip
 	calladb_ModifyPikachuHappiness PIKAHAPPY_PSNFNT
 .curMonNotPlayerPikachu

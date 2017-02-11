@@ -140,7 +140,7 @@ DisplayTitleScreen:
 	ld a, SCREEN_HEIGHT_PIXELS
 	ld [hWY], a
 	call Delay3
-	ldpikacry e, PikachuCry1
+	ldpikacry e, PikachuCry_Mood2Happy5
 	call TitleScreen_PlayPikachuPCM
 	call WaitForSoundToFinish
 	call StopAllMusic
@@ -170,7 +170,7 @@ DisplayTitleScreen:
 	jr .titleScreenLoop
 
 .go_to_main_menu
-	ldpikacry e, PikachuCry6
+	ldpikacry e, PikachuCry_Mood1Happy2
 	call TitleScreen_PlayPikachuPCM
 	call GBPalWhiteOutWithDelay3
 	call ClearSprites

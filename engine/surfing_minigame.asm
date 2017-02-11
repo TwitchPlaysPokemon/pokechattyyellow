@@ -1718,7 +1718,7 @@ DidPlayerGetAHighScore:
 	ld a, [wSurfingMinigameTotalScore + 1]
 	ld [wSurfingMinigameHiScore + 1], a
 	call WaitForSoundToFinish
-	ldpikacry e, PikachuCry34
+	ldpikacry e, PikachuCry_Mood3Happy4
 	call SurfingMinigame_PlayPikaCryIfSurfingPikaInParty
 	ld a, SFX_GET_ITEM2_4_2
 	call PlaySound

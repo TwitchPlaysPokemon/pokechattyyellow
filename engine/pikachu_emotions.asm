@@ -60,7 +60,7 @@ StarterPikachuEmotionsJumptable:
 	dw StarterPikachuEmotionCommand_subcmd ; 6
 	dw StarterPikachuEmotionCommand_delay ; 7
 	dw StarterPikachuEmotionCommand_nop2 ; 8
-	dw StarterPikachuEmotionCommand_9 ; 9
+	dw StarterPikachuEmotionCommand_turnawayfromplayer ; 9
 	dw StarterPikachuEmotionCommand_nop3 ; a
 	
 StarterPikachuEmotionCommand_nop:
@@ -166,14 +166,14 @@ StarterPikachuEmotionCommand_subcmd:
 StarterPikachuEmotionCommand_nop2:
 	ret
 	
-StarterPikachuEmotionCommand_9:
+StarterPikachuEmotionCommand_turnawayfromplayer:
 	push de
-	call StarterPikachuEmotionCommand_turnawayfromplayer
+	call MakeChatotTurnAwayFromPlayer
 	call UpdateSprites
 	pop de
 	ret
 
-StarterPikachuEmotionCommand_turnawayfromplayer:
+MakeChatotTurnAwayFromPlayer:
 	ld a, [wPlayerFacingDirection]
 	xor $4
 	ld [wPikachuFacingDirection], a
