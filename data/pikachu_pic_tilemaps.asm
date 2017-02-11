@@ -4,44 +4,44 @@ pikatilemap_def: macro
 	endm
 
 	pikatilemap_def PikaAnimTilemap_0
-	pikatilemap_def PikaAnimTilemap_1
-	pikatilemap_def PikaAnimTilemap_2
+	pikatilemap_def PikaAnimTilemap_1_0
+	pikatilemap_def PikaAnimTilemap_fdc1e_0
 	pikatilemap_def PikaAnimTilemap_3
 	pikatilemap_def PikaAnimTilemap_4
 	pikatilemap_def PikaAnimTilemap_5
 	pikatilemap_def PikaAnimTilemap_6
-	pikatilemap_def PikaAnimTilemap_7
-	pikatilemap_def PikaAnimTilemap_8
-	pikatilemap_def PikaAnimTilemap_9
-	pikatilemap_def PikaAnimTilemap_10
-	pikatilemap_def PikaAnimTilemap_11
-	pikatilemap_def PikaAnimTilemap_12
+	pikatilemap_def PikaAnimTilemap_1_1
+	pikatilemap_def PikaAnimTilemap_2_0
+	pikatilemap_def PikaAnimTilemap_CaughtPokemon_0_0
+	pikatilemap_def PikaAnimTilemap_FishingRod_1_1
+	pikatilemap_def PikaAnimTilemap_FishingRod_1_2
+	pikatilemap_def PikaAnimTilemap_FishingRod_1_3
 	pikatilemap_def PikaAnimTilemap_13
-	pikatilemap_def PikaAnimTilemap_14
-	pikatilemap_def PikaAnimTilemap_15
-	pikatilemap_def PikaAnimTilemap_16
-	pikatilemap_def PikaAnimTilemap_17
-	pikatilemap_def PikaAnimTilemap_18
-	pikatilemap_def PikaAnimTilemap_19
-	pikatilemap_def PikaAnimTilemap_20
-	pikatilemap_def PikaAnimTilemap_21
-	pikatilemap_def PikaAnimTilemap_22
-	pikatilemap_def PikaAnimTilemap_23
-	pikatilemap_def PikaAnimTilemap_24
-	pikatilemap_def PikaAnimTilemap_25
-	pikatilemap_def PikaAnimTilemap_26
-	pikatilemap_def PikaAnimTilemap_27
-	pikatilemap_def PikaAnimTilemap_28
-	pikatilemap_def PikaAnimTilemap_29
-	pikatilemap_def PikaAnimTilemap_30
-	pikatilemap_def PikaAnimTilemap_31
-	pikatilemap_def PikaAnimTilemap_32
-	pikatilemap_def PikaAnimTilemap_33
-	pikatilemap_def PikaAnimTilemap_34
+	pikatilemap_def PikaAnimTilemap_Mood2Happy3_1_0
+	pikatilemap_def PikaAnimTilemap_Mood3Happy5_1_0
+	pikatilemap_def PikaAnimTilemap_Mood1Happy3_1_0
+	pikatilemap_def PikaAnimTilemap_Mood2Happy4_1_0
+	pikatilemap_def PikaAnimTilemap_Mood2Happy2_1_0
+	pikatilemap_def PikaAnimTilemap_Mood2Happy1_1_0
+	pikatilemap_def PikaAnimTilemap_Mood2Happy5_1_0
+	pikatilemap_def PikaAnimTilemap_Mood3Happy3_1_0
+	pikatilemap_def PikaAnimTilemap_Mood1Happy2_1_0
+	pikatilemap_def PikaAnimTilemap_15_0
+	pikatilemap_def PikaAnimTilemap_Mood3Happy6_1_1
+	pikatilemap_def PikaAnimTilemap_FastAsleep_1_0
+	pikatilemap_def PikaAnimTilemap_Mood3Happy2_1_0
+	pikatilemap_def PikaAnimTilemap_Mood3Happy1_1_0
+	pikatilemap_def PikaAnimTilemap_Mood1Happy1_1_0
+	pikatilemap_def PikaAnimTilemap_Mood3Happy4_1_0
+	pikatilemap_def PikaAnimTilemap_Mood2Happy6_1_0
+	pikatilemap_def PikaAnimTilemap_Mood1Happy5_1_0
+	pikatilemap_def PikaAnimTilemap_CaughtPokemon_1_0
+	pikatilemap_def PikaAnimTilemap_Mood2Happy7_1_0
+	pikatilemap_def PikaAnimTilemap_Mood3Happy7_1_0
 	pikatilemap_def PikaAnimTilemap_35
-	pikatilemap_def PikaAnimTilemap_36
-	pikatilemap_def PikaAnimTilemap_37
-	pikatilemap_def PikaAnimTilemap_38
+	pikatilemap_def PikaAnimTilemap_LavenderTown_1_0
+	pikatilemap_def PikaAnimTilemap_BillFirstTime_1_0
+	pikatilemap_def PikaAnimTilemap_ThunderStone_1_0
 	pikatilemap_def PikaAnimTilemap_39
 	pikatilemap_def PikaAnimTilemap_40
 	pikatilemap_def PikaAnimTilemap_41
@@ -52,7 +52,7 @@ PikaAnimTilemap_0:
 
 
 	; $ff inhibits overwriting that tile
-PikaAnimTilemap_1:
+PikaAnimTilemap_1_0:
 PikaAnimTilemap_42:
 	db 5, 5
 	db $00, $05, $0a, $0f, $14
@@ -61,7 +61,7 @@ PikaAnimTilemap_42:
 	db $03, $08, $0d, $12, $17
 	db $04, $09, $0e, $13, $18
 
-PikaAnimTilemap_2:
+PikaAnimTilemap_fdc1e_0: ; unused
 	db 5, 5
 	db $19, $1e, $23, $28, $2d
 	db $1a, $1f, $24, $29, $2e
@@ -69,7 +69,7 @@ PikaAnimTilemap_2:
 	db $1c, $21, $26, $2b, $30
 	db $1d, $22, $27, $2c, $31
 
-PikaAnimTilemap_7:
+PikaAnimTilemap_1_1:
 	db 5, 5
 	db $ff, $ff, $ff, $ff, $ff
 	db $ff, $ff, $ff, $ff, $ff
@@ -91,7 +91,7 @@ PikaAnimTilemap_5:
 	db $00, $01
 
 PikaAnimTilemap_6:
-PikaAnimTilemap_8:
+PikaAnimTilemap_2_0:
 	db 2, 2
 	db $00, $01
 	db $02, $03
@@ -107,7 +107,7 @@ PikaAnimTilemap_fde79: ; unused
 	db $00, $01, $02
 	db $03, $04, $05
 
-PikaAnimTilemap_14:
+PikaAnimTilemap_Mood2Happy3_1_0:
 	db 5, 5
 	db $ff, $ff, $ff, $ff, $ff
 	db $ff, $ff, $ff, $ff, $ff
@@ -115,7 +115,7 @@ PikaAnimTilemap_14:
 	db $ff, $ff, $ff, $ff, $ff
 	db $ff, $ff, $ff, $ff, $ff
 
-PikaAnimTilemap_15:
+PikaAnimTilemap_Mood3Happy5_1_0:
 	db 5, 5
 	db $ff, $ff, $ff, $ff, $ff
 	db $ff, $ff, $ff, $ff, $ff
@@ -123,7 +123,7 @@ PikaAnimTilemap_15:
 	db $00, $01, $02, $03, $04
 	db $05, $06, $07, $08, $09
 
-PikaAnimTilemap_16:
+PikaAnimTilemap_Mood1Happy3_1_0:
 	db 5, 5
 	db $00, $01, $ff, $ff, $ff
 	db $02, $03, $ff, $ff, $ff
@@ -131,7 +131,7 @@ PikaAnimTilemap_16:
 	db $ff, $ff, $ff, $ff, $ff
 	db $ff, $ff, $ff, $ff, $ff
 
-PikaAnimTilemap_17:
+PikaAnimTilemap_Mood2Happy4_1_0:
 	db 5, 5
 	db $ff, $ff, $ff, $ff, $ff
 	db $00, $01, $02, $03, $04
@@ -139,7 +139,7 @@ PikaAnimTilemap_17:
 	db $0a, $0b, $0c, $0d, $0e
 	db $0f, $10, $11, $12, $13
 
-PikaAnimTilemap_18:
+PikaAnimTilemap_Mood2Happy2_1_0:
 	db 5, 5
 	db $ff, $ff, $ff, $ff, $ff
 	db $ff, $ff, $ff, $00, $01
@@ -147,7 +147,7 @@ PikaAnimTilemap_18:
 	db $ff, $ff, $ff, $ff, $ff
 	db $ff, $ff, $ff, $ff, $ff
 
-PikaAnimTilemap_19:
+PikaAnimTilemap_Mood2Happy1_1_0:
 	db 5, 5
 	db $ff, $ff, $ff, $ff, $ff
 	db $ff, $ff, $ff, $ff, $ff
@@ -155,7 +155,7 @@ PikaAnimTilemap_19:
 	db $02, $03, $ff, $ff, $ff
 	db $ff, $ff, $ff, $ff, $ff
 
-PikaAnimTilemap_20:
+PikaAnimTilemap_Mood2Happy5_1_0:
 	db 5, 5
 	db $00, $01, $02, $03, $04
 	db $05, $06, $07, $08, $09
@@ -163,7 +163,7 @@ PikaAnimTilemap_20:
 	db $0f, $10, $11, $12, $13
 	db $14, $15, $16, $17, $18
 
-PikaAnimTilemap_21:
+PikaAnimTilemap_Mood3Happy3_1_0:
 	db 5, 5
 	db $ff, $ff, $ff, $ff, $ff
 	db $ff, $ff, $ff, $ff, $ff
@@ -171,7 +171,7 @@ PikaAnimTilemap_21:
 	db $05, $06, $07, $08, $09
 	db $ff, $ff, $ff, $ff, $ff
 
-PikaAnimTilemap_22:
+PikaAnimTilemap_Mood1Happy2_1_0:
 	db 5, 5
 	db $ff, $ff, $ff, $ff, $ff
 	db $ff, $ff, $ff, $ff, $ff
@@ -179,7 +179,7 @@ PikaAnimTilemap_22:
 	db $02, $03, $ff, $ff, $ff
 	db $04, $05, $ff, $ff, $ff
 
-PikaAnimTilemap_23:
+PikaAnimTilemap_15_0:
 	db 5, 5
 	db $00, $01, $02, $03, $04
 	db $05, $06, $07, $08, $09
@@ -187,7 +187,7 @@ PikaAnimTilemap_23:
 	db $0f, $10, $11, $12, $13
 	db $14, $15, $16, $17, $18
 
-PikaAnimTilemap_24:
+PikaAnimTilemap_Mood3Happy6_1_1:
 	db 5, 5
 	db $19, $1a, $1b, $1c, $1d
 	db $1e, $1f, $20, $21, $22
@@ -195,21 +195,21 @@ PikaAnimTilemap_24:
 	db $28, $29, $2a, $2b, $2c
 	db $2d, $2e, $2f, $30, $31
 
-PikaAnimTilemap_9:
-PikaAnimTilemap_25:
-PikaAnimTilemap_26:
-PikaAnimTilemap_27:
-PikaAnimTilemap_28:
-PikaAnimTilemap_29:
-PikaAnimTilemap_30:
-PikaAnimTilemap_31:
-PikaAnimTilemap_32:
-PikaAnimTilemap_33:
-PikaAnimTilemap_34:
+PikaAnimTilemap_CaughtPokemon_0_0:
+PikaAnimTilemap_FastAsleep_1_0:
+PikaAnimTilemap_Mood3Happy2_1_0:
+PikaAnimTilemap_Mood3Happy1_1_0:
+PikaAnimTilemap_Mood1Happy1_1_0:
+PikaAnimTilemap_Mood3Happy4_1_0:
+PikaAnimTilemap_Mood2Happy6_1_0:
+PikaAnimTilemap_Mood1Happy5_1_0:
+PikaAnimTilemap_CaughtPokemon_1_0:
+PikaAnimTilemap_Mood2Happy7_1_0:
+PikaAnimTilemap_Mood3Happy7_1_0:
 PikaAnimTilemap_35:
-PikaAnimTilemap_36:
-PikaAnimTilemap_37:
-PikaAnimTilemap_38:
+PikaAnimTilemap_LavenderTown_1_0:
+PikaAnimTilemap_BillFirstTime_1_0:
+PikaAnimTilemap_ThunderStone_1_0:
 PikaAnimTilemap_39:
 	db 5, 5
 	db $00, $01, $02, $03, $04
@@ -218,7 +218,7 @@ PikaAnimTilemap_39:
 	db $0f, $10, $11, $12, $13
 	db $14, $15, $16, $17, $18
 
-PikaAnimTilemap_10:
+PikaAnimTilemap_FishingRod_1_1:
 PikaAnimTilemap_40:
 	db 5, 5
 	db $19, $1a, $1b, $1c, $1d
@@ -227,7 +227,7 @@ PikaAnimTilemap_40:
 	db $28, $29, $2a, $2b, $2c
 	db $2d, $2e, $2f, $30, $31
 
-PikaAnimTilemap_11:
+PikaAnimTilemap_FishingRod_1_2:
 PikaAnimTilemap_41:
 	db 5, 5
 	db $32, $33, $34, $35, $36
@@ -236,7 +236,7 @@ PikaAnimTilemap_41:
 	db $41, $42, $43, $44, $45
 	db $46, $47, $48, $49, $4a
 
-PikaAnimTilemap_12:
+PikaAnimTilemap_FishingRod_1_3:
 	db 5, 5
 	db $4b, $4c, $4d, $4e, $4f
 	db $50, $51, $52, $53, $54

@@ -43,258 +43,258 @@ pikaanim_def: macro
 PikaPicAnimBGFrames_0: ; fallback
 PikaPicAnimBGFrames_1: ; unused
 	; Tilemap idx, duration
-	pikaframe PikaAnimTilemap_1,   20
-	pikaframe PikaAnimTilemap_7,    2
-	pikaframe PikaAnimTilemap_1,    1
-	pikaframe PikaAnimTilemap_7,    2
-	pikaframe PikaAnimTilemap_1,    1
-	pikaframe PikaAnimTilemap_7,    8
+	pikaframe PikaAnimTilemap_1_0,                 20
+	pikaframe PikaAnimTilemap_1_1,                  2
+	pikaframe PikaAnimTilemap_1_0,                  1
+	pikaframe PikaAnimTilemap_1_1,                  2
+	pikaframe PikaAnimTilemap_1_0,                  1
+	pikaframe PikaAnimTilemap_1_1,                  8
 	pikaframeend
 
 PikaPicAnimBGFrames_fdc1e: ; unreferenced
-	pikaframe PikaAnimTilemap_2,    2
-	pikaframe PikaAnimTilemap_1,    1
-	pikaframe PikaAnimTilemap_2,    2
-	pikaframe PikaAnimTilemap_1,    1
-	pikaframe PikaAnimTilemap_2,    8
+	pikaframe PikaAnimTilemap_fdc1e_0,              2
+	pikaframe PikaAnimTilemap_1_0,                  1
+	pikaframe PikaAnimTilemap_fdc1e_0,              2
+	pikaframe PikaAnimTilemap_1_0,                  1
+	pikaframe PikaAnimTilemap_fdc1e_0,              8
 	pikaframeend
 
 PikaPicAnimBGFrames_2: ; unused
-	pikaframedelay                  8
-	pikaframe PikaAnimTilemap_8,    8
-	pikaframedelay                  8
-	pikaframe PikaAnimTilemap_8,    8
+	pikaframedelay                                  8
+	pikaframe PikaAnimTilemap_2_0,                  8
+	pikaframedelay                                  8
+	pikaframe PikaAnimTilemap_2_0,                  8
 	pikaframeend
 
 PikaPicAnimBGFrames_3: ; unused
-	pikaframe PikaAnimTilemap_8,    8
-	pikaframedelay                  8
-	pikaframe PikaAnimTilemap_8,    8
-	pikaframedelay                  8
+	pikaframe PikaAnimTilemap_2_0,                  8
+	pikaframedelay                                  8
+	pikaframe PikaAnimTilemap_2_0,                  8
+	pikaframedelay                                  8
 	pikaframeend
 
 PikaPicAnimBGFrames_Generic:
 PikaPicAnimBGFrames_35: ; fallback
-	pikaframe PikaAnimTilemap_1,    0
+	pikaframe PikaAnimTilemap_1_0,                  0
 	pikaframeend
 
 PikaPicAnimBGFrames_CaughtPokemon_0:
-	pikaframe PikaAnimTilemap_9,    0
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,    0
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood2Happy3_1:
-	pikaframedelay                  2
-	pikaframe PikaAnimTilemap_14,   4
-	pikaframedelay                  8
-	pikaframe PikaAnimTilemap_14,   4
-	pikaframedelay                 64
-	pikaframe PikaAnimTilemap_14,   4
-	pikaframedelay                 64
+	pikaframedelay                                  2
+	pikaframe PikaAnimTilemap_Mood2Happy3_1_0,      4
+	pikaframedelay                                  8
+	pikaframe PikaAnimTilemap_Mood2Happy3_1_0,      4
+	pikaframedelay                                 64
+	pikaframe PikaAnimTilemap_Mood2Happy3_1_0,      4
+	pikaframedelay                                 64
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood3Happy5_1:
-	pikaframedelay                  4
-	pikaframe PikaAnimTilemap_15,   4
-	pikaframedelay                  4
-	pikaframe PikaAnimTilemap_15,   4
-	pikaframedelay                  8
-	pikaframe PikaAnimTilemap_15,   4
-	pikaframedelay                  8
-	pikaframe PikaAnimTilemap_15,   4
+	pikaframedelay                                  4
+	pikaframe PikaAnimTilemap_Mood3Happy5_1_0,      4
+	pikaframedelay                                  4
+	pikaframe PikaAnimTilemap_Mood3Happy5_1_0,      4
+	pikaframedelay                                  8
+	pikaframe PikaAnimTilemap_Mood3Happy5_1_0,      4
+	pikaframedelay                                  8
+	pikaframe PikaAnimTilemap_Mood3Happy5_1_0,      4
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood1Happy3_1:
-	pikaframe PikaAnimTilemap_16,   1
-	pikaframedelay                  1
-	pikaframe PikaAnimTilemap_16,   1
-	pikaframedelay                 64
-	pikaframe PikaAnimTilemap_16,   1
-	pikaframedelay                 64
+	pikaframe PikaAnimTilemap_Mood1Happy3_1_0,      1
+	pikaframedelay                                  1
+	pikaframe PikaAnimTilemap_Mood1Happy3_1_0,      1
+	pikaframedelay                                 64
+	pikaframe PikaAnimTilemap_Mood1Happy3_1_0,      1
+	pikaframedelay                                 64
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood2Happy4_1:
-	pikaframedelay                  8
-	pikaframe PikaAnimTilemap_17,   8
-	pikaframedelay                 20
-	pikaframe PikaAnimTilemap_17,   8
+	pikaframedelay                                  8
+	pikaframe PikaAnimTilemap_Mood2Happy4_1_0,      8
+	pikaframedelay                                 20
+	pikaframe PikaAnimTilemap_Mood2Happy4_1_0,      8
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood2Happy2_1:
-	pikaframedelay                  2
-	pikaframe PikaAnimTilemap_18,   2
-	pikaframedelay                  2
-	pikaframe PikaAnimTilemap_18,  64
-	pikaframedelay                  3
-	pikaframe PikaAnimTilemap_18,  64
+	pikaframedelay                                  2
+	pikaframe PikaAnimTilemap_Mood2Happy2_1_0,      2
+	pikaframedelay                                  2
+	pikaframe PikaAnimTilemap_Mood2Happy2_1_0,     64
+	pikaframedelay                                  3
+	pikaframe PikaAnimTilemap_Mood2Happy2_1_0,     64
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood2Happy1_1:
-	pikaframedelay                  8
-	pikaframe PikaAnimTilemap_19,  64
-	pikaframedelay                  4
-	pikaframe PikaAnimTilemap_19,  64
+	pikaframedelay                                  8
+	pikaframe PikaAnimTilemap_Mood2Happy1_1_0,     64
+	pikaframedelay                                  4
+	pikaframe PikaAnimTilemap_Mood2Happy1_1_0,     64
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood2Happy5_1:
-	pikaframe PikaAnimTilemap_20,   8
-	pikaframedelay                  2
-	pikaframe PikaAnimTilemap_20,   8
-	pikaframedelay                  2
-	pikaframe PikaAnimTilemap_20,   8
+	pikaframe PikaAnimTilemap_Mood2Happy5_1_0,      8
+	pikaframedelay                                  2
+	pikaframe PikaAnimTilemap_Mood2Happy5_1_0,      8
+	pikaframedelay                                  2
+	pikaframe PikaAnimTilemap_Mood2Happy5_1_0,      8
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood3Happy3_1:
-	pikaframe PikaAnimTilemap_21,   4
-	pikaframedelay                  8
-	pikaframe PikaAnimTilemap_21,   4
-	pikaframedelay                 64
-	pikaframe PikaAnimTilemap_21,   4
-	pikaframedelay                 64
+	pikaframe PikaAnimTilemap_Mood3Happy3_1_0,      4
+	pikaframedelay                                  8
+	pikaframe PikaAnimTilemap_Mood3Happy3_1_0,      4
+	pikaframedelay                                 64
+	pikaframe PikaAnimTilemap_Mood3Happy3_1_0,      4
+	pikaframedelay                                 64
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood1Happy2_1:
-	pikaframedelay                  2
-	pikaframe PikaAnimTilemap_22,   2
-	pikaframedelay                  2
-	pikaframe PikaAnimTilemap_22,   2
-	pikaframedelay                 20
-	pikaframe PikaAnimTilemap_22,   2
+	pikaframedelay                                  2
+	pikaframe PikaAnimTilemap_Mood1Happy2_1_0,      2
+	pikaframedelay                                  2
+	pikaframe PikaAnimTilemap_Mood1Happy2_1_0,      2
+	pikaframedelay                                 20
+	pikaframe PikaAnimTilemap_Mood1Happy2_1_0,      2
 	pikaframeend
 
 PikaPicAnimBGFrames_15: ; unused
-	pikaframedelay                  8
-	pikaframe PikaAnimTilemap_23,   8
+	pikaframedelay                                  8
+	pikaframe PikaAnimTilemap_15_0,                 8
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood3Happy6_1:
-	pikaframedelay                  8
-	pikaframe PikaAnimTilemap_23,   3
-	pikaframe PikaAnimTilemap_24,   5
-	pikaframe PikaAnimTilemap_23,   3
-	pikaframedelay                  5
+	pikaframedelay                                  8
+	pikaframe PikaAnimTilemap_15_0,                 3
+	pikaframe PikaAnimTilemap_Mood3Happy6_1_1,      5
+	pikaframe PikaAnimTilemap_15_0,                 3
+	pikaframedelay                                  5
 	pikaframeend
 
 PikaPicAnimBGFrames_FastAsleep_1:
-	pikaframedelay                 20
-	pikaframe PikaAnimTilemap_25,   8
-	pikaframedelay                 20
-	pikaframe PikaAnimTilemap_25,   8
+	pikaframedelay                                 20
+	pikaframe PikaAnimTilemap_FastAsleep_1_0,       8
+	pikaframedelay                                 20
+	pikaframe PikaAnimTilemap_FastAsleep_1_0,       8
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood3Happy2_1:
-	pikaframedelay                 13
-	pikaframe PikaAnimTilemap_26,  12
-	pikaframedelay                100
-	pikaframe PikaAnimTilemap_26,   8
+	pikaframedelay                                 13
+	pikaframe PikaAnimTilemap_Mood3Happy2_1_0,     12
+	pikaframedelay                                100
+	pikaframe PikaAnimTilemap_Mood3Happy2_1_0,      8
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood3Happy1_1:
-	pikaframedelay                  5
-	pikaframe PikaAnimTilemap_27,   5
-	pikaframedelay                  5
-	pikaframe PikaAnimTilemap_27,   5
-	pikaframedelay                100
+	pikaframedelay                                  5
+	pikaframe PikaAnimTilemap_Mood3Happy1_1_0,      5
+	pikaframedelay                                  5
+	pikaframe PikaAnimTilemap_Mood3Happy1_1_0,      5
+	pikaframedelay                                100
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood1Happy1_1:
-	pikaframedelay                  2
-	pikaframe PikaAnimTilemap_28,   2
-	pikaframedelay                  2
-	pikaframe PikaAnimTilemap_28,   2
+	pikaframedelay                                  2
+	pikaframe PikaAnimTilemap_Mood1Happy1_1_0,      2
+	pikaframedelay                                  2
+	pikaframe PikaAnimTilemap_Mood1Happy1_1_0,      2
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood3Happy4_1:
-	pikaframedelay                  5
-	pikaframe PikaAnimTilemap_29,   5
-	pikaframedelay                  5
-	pikaframe PikaAnimTilemap_29,   5
+	pikaframedelay                                  5
+	pikaframe PikaAnimTilemap_Mood3Happy4_1_0,      5
+	pikaframedelay                                  5
+	pikaframe PikaAnimTilemap_Mood3Happy4_1_0,      5
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood2Happy6_1:
-	pikaframe PikaAnimTilemap_30,   8
-	pikaframedelay                100
+	pikaframe PikaAnimTilemap_Mood2Happy6_1_0,      8
+	pikaframedelay                                100
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood1Happy5_1:
-	pikaframedelay                 10
-	pikaframe PikaAnimTilemap_31,   3
-	pikaframedelay                  3
-	pikaframe PikaAnimTilemap_31,   3
-	pikaframedelay                100
+	pikaframedelay                                 10
+	pikaframe PikaAnimTilemap_Mood1Happy5_1_0,      3
+	pikaframedelay                                  3
+	pikaframe PikaAnimTilemap_Mood1Happy5_1_0,      3
+	pikaframedelay                                100
 	pikaframeend
 
 PikaPicAnimBGFrames_CaughtPokemon_1:
-	pikaframedelay                  3
-	pikaframe PikaAnimTilemap_32, 100
-	pikaframedelay                  8
-	pikaframe PikaAnimTilemap_32,   8
+	pikaframedelay                                  3
+	pikaframe PikaAnimTilemap_CaughtPokemon_1_0,  100
+	pikaframedelay                                  8
+	pikaframe PikaAnimTilemap_CaughtPokemon_1_0,    8
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood2Happy7_1:
-	pikaframe PikaAnimTilemap_33,   6
-	pikaframedelay                  6
-	pikaframe PikaAnimTilemap_33,   6
-	pikaframedelay                  6
+	pikaframe PikaAnimTilemap_Mood2Happy7_1_0,      6
+	pikaframedelay                                  6
+	pikaframe PikaAnimTilemap_Mood2Happy7_1_0,      6
+	pikaframedelay                                  6
 	pikaframeend
 
 PikaPicAnimBGFrames_Mood3Happy7_1:
-	pikaframedelay                  8
-	pikaframe PikaAnimTilemap_34,  12
-	pikaframedelay                  8
-	pikaframe PikaAnimTilemap_34,  12
+	pikaframedelay                                  8
+	pikaframe PikaAnimTilemap_Mood3Happy7_1_0,     12
+	pikaframedelay                                  8
+	pikaframe PikaAnimTilemap_Mood3Happy7_1_0,     12
 	pikaframeend
 
 PikaPicAnimBGFrames_FishingRod_1:
-	pikaframedelay                  8
-	pikaframe PikaAnimTilemap_9,    2
-	pikaframe PikaAnimTilemap_10,   1
-	pikaframe PikaAnimTilemap_11,   1
-	pikaframe PikaAnimTilemap_12, 100
+	pikaframedelay                                  8
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,    2
+	pikaframe PikaAnimTilemap_FishingRod_1_1,       1
+	pikaframe PikaAnimTilemap_FishingRod_1_2,       1
+	pikaframe PikaAnimTilemap_FishingRod_1_3,     100
 	pikaframeend
 
 PikaPicAnimBGFrames_LavenderTown_1:
-	pikaframedelay                  8
-	pikaframe PikaAnimTilemap_36, 100
+	pikaframedelay                                  8
+	pikaframe PikaAnimTilemap_LavenderTown_1_0,   100
 	pikaframeend
 
 PikaPicAnimBGFrames_BillFirstTime_1:
-	pikaframedelay                 16
-	pikaframe PikaAnimTilemap_37,  16
-	pikaframedelay                 16
-	pikaframe PikaAnimTilemap_37,  16
+	pikaframedelay                                 16
+	pikaframe PikaAnimTilemap_BillFirstTime_1_0,   16
+	pikaframedelay                                 16
+	pikaframe PikaAnimTilemap_BillFirstTime_1_0,   16
 	pikaframeend
 
 PikaPicAnimBGFrames_ThunderStone_1:
-	pikaframedelay                  6
-	pikaframe PikaAnimTilemap_38,   6
-	pikaframedelay                  6
-	pikaframe PikaAnimTilemap_38,   6
-	pikaframedelay                100
+	pikaframedelay                                  6
+	pikaframe PikaAnimTilemap_ThunderStone_1_0,     6
+	pikaframedelay                                  6
+	pikaframe PikaAnimTilemap_ThunderStone_1_0,     6
+	pikaframedelay                                100
 	pikaframeend
 
 PikaPicAnimBGFrames_ThunderBolt_1:
-	pikaframedelay                  6
-	pikaframe PikaAnimTilemap_9,    6
-	pikaframe PikaAnimTilemap_10, 100
+	pikaframedelay                                  6
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,    6
+	pikaframe PikaAnimTilemap_FishingRod_1_1,     100
 	pikaframeend
 
 PikaPicAnimBGFrames_PewterWake_1:
-	pikaframedelay                 20
-	pikaframe PikaAnimTilemap_9,    8
-	pikaframedelay                 20
-	pikaframe PikaAnimTilemap_9,    8
-	pikaframe PikaAnimTilemap_10,   8
-	pikaframe PikaAnimTilemap_11, 100
+	pikaframedelay                                 20
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,    8
+	pikaframedelay                                 20
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,    8
+	pikaframe PikaAnimTilemap_FishingRod_1_1,       8
+	pikaframe PikaAnimTilemap_FishingRod_1_2,     100
 	pikaframeend
 
 PikaPicAnimBGFrames_BillEnterTeleporter_1:
-	pikaframedelay                  4
-	pikaframe PikaAnimTilemap_9,  100
+	pikaframedelay                                  4
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,  100
 	pikaframeend
 
 PikaPicAnimBGFrames_Statused_1:
-    pikaframedelay                 12
-	pikaframe PikaAnimTilemap_9,   12
-	pikaframedelay                 12
-	pikaframe PikaAnimTilemap_9,  100
+    pikaframedelay                                 12
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,   12
+	pikaframedelay                                 12
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,  100
 	pikaframeend
