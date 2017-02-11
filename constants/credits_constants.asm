@@ -85,6 +85,28 @@
 	const CRED_NAKAMICHI             ; 53
 	const CRED_YOSHIMURA             ; 54
 	const CRED_YAMAZAKI              ; 55
+	const CRED_LIGHTNING             ; 56 - Chatty Yellow
+	const CRED_PIKALAX               ; 57
+	const CRED_LUCKY                 ; 58
+	const CRED_AX6                   ; 59
+	const CRED_CHAUZU                ; 5A
+	const CRED_DAN                   ; 5B
+	const CRED_AIS                   ; 5C
+	const CRED_FELK                  ; 5D
+	const CRED_FLARN                 ; 5E
+	const CRED_MEGAMAN               ; 5F
+	const CRED_PIOXYS                ; 60
+	const CRED_CHAOS                 ; 61
+	const CRED_HLIXED                ; 62
+	const CRED_GACT                  ; 63
+	const CRED_REVO                  ; 64
+	const CRED_TPP                   ; 65
+	const CRED_YELLOW1               ; 66
+	const CRED_YELLOW2               ; 67
+	const CRED_YOU                   ; 68
+	const CRED_CODING                ; 69
+	const CRED_GRAPHICS              ; 6A
+	const CRED_MOVES                 ; 6B
 
 const_value SET $fa
 	const CRED_THE_END

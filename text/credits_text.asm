@@ -85,10 +85,32 @@ CreditsTextPointers:
 	dw CreditsText_Nakamichi
 	dw CreditsText_Yoshimura
 	dw CreditsText_Yamazaki
+	dw CreditsText_Lightning
+	dw CreditsText_Pikalax
+	dw CreditsText_Lucky
+	dw CreditsText_ax6
+	dw CreditsText_Chauzu
+	dw CreditsText_danimg12
+	dw CreditsText_Aissurteivos
+	dw CreditsText_Felk
+	dw CreditsText_Flarn
+	dw CreditsText_MegamanOmega
+	dw CreditsText_Pioxys
+	dw CreditsText_ChaosLord
+	dw CreditsText_1hlixed
+	dw CreditsText_GACT
+	dw CreditsText_Revo
+	dw CreditsText_TwitchPlaysPokemon
+	dw CreditsText_Yellow1
+	dw CreditsText_Yellow2
+	dw CreditsText_You
+	dw CreditsText_Coding
+	dw CreditsText_GFX
+	dw CreditsText_Moves
 
 CreditsText_Version:
-	db -6,"YELLOW VERSION"
-	next   "    STAFF@"
+	db -6,"CHATTY YELLOW"
+	next   "    DEV TEAM@"
 CreditsText_Tajiri:
 	db -6,"SATOSHI TAJIRI@"
 CreditsText_Oota:
@@ -262,3 +284,48 @@ CreditsText_Yoshimura:
 	db -6,"KAMON YOSHIMURA@"
 CreditsText_Yamazaki:
 	db -6,"SAKAE YAMAZAKI@"
+;chatty yellow
+CreditsText_Lightning:
+	db -6,"LightningXCE@"
+CreditsText_Pikalax:
+	db -6,"PikalaxALT@"
+CreditsText_Lucky:
+	db -6,"Luckytyphlosion@"
+CreditsText_ax6:
+	db -6,"aaaaaa123456789@"
+CreditsText_Chauzu:
+	db -6,"Chauzu@"
+CreditsText_danimg12:
+	db -6,"danimg12@"
+CreditsText_Aissurteivos:
+	db -6,"Aissurteivos@"
+CreditsText_Felk:
+	db -6,"Felk@"
+CreditsText_Flarn:
+	db -6,"Flarn2006@"
+CreditsText_MegamanOmega:
+	db -6,"MegamanOmega@"
+CreditsText_Pioxys:
+	db -6,"Pioxys@"
+CreditsText_ChaosLord:
+	db -6,"Chaos-Lord@"
+CreditsText_1hlixed:
+	db -6,"1hlixed@"
+CreditsText_GACT:
+	db -6,"GACT@"
+CreditsText_Revo:
+	db -6,"ProjectRevoTPP@"
+CreditsText_TwitchPlaysPokemon:
+	db -6,"TwitchPlaysPokemon@"
+CreditsText_Yellow1:
+	db -3,"Pokemon Yellow@"
+CreditsText_Yellow2:
+	db -2,"Development Team@"
+CreditsText_You:
+	db -6,"...and you!@"
+CreditsText_Coding:
+	db -5,"Stream Coding@"
+CreditsText_GFX:
+	db -5,"Graphics@"
+CreditsText_Moves:
+	db -5,"Movesets@"
