@@ -2104,8 +2104,8 @@ GFX_LowHP_0:   INCBIN "gfx/chatot/Chatot11_2.2bpp"
 GFX_LowHP_1:   INCBIN "gfx/chatot/Chatot11_3.2bpp"
 GFX_LowHP_2:   INCBIN "gfx/chatot/Chatot11_4.2bpp"
 
-GFX_PewterWake_1:    INCBIN "gfx/pikachu/pewter_wake_1_2bpp.2bpp"
-GFX_PewterWake_2:    INCBIN "gfx/pikachu/pewter_wake_2_2bpp.2bpp"
+; GFX_PewterWake_1:    INCBIN "gfx/pikachu/pewter_wake_1_2bpp.2bpp"
+; GFX_PewterWake_2:    INCBIN "gfx/pikachu/pewter_wake_2_2bpp.2bpp"
 
 SECTION "bank3A", ROMX,BANK[$3A]
 

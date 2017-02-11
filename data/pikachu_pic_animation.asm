@@ -403,8 +403,8 @@ PikaPicAnimGFX_Null_id::
 	pikapicanimgfx 25, GFX_LowHP_0
 	pikapicanimgfx 25, GFX_LowHP_1
 	pikapicanimgfx 25, GFX_LowHP_2
-	pikapicanimgfx 25, GFX_PewterWake_1
-	pikapicanimgfx 25, GFX_PewterWake_2
+	; pikapicanimgfx 25, GFX_PewterWake_1
+	; pikapicanimgfx 25, GFX_PewterWake_2
 	pikapicanimgfx -1, Pic_BillEnterTeleporter_0
 	pikapicanimgfx 25, GFX_BillEnterTeleporter_0
 	pikapicanimgfx -1, Pic_Statused_0
