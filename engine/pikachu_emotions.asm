@@ -208,35 +208,35 @@ pikaemotion_def: MACRO
 
 	pikaemotion_def PikachuEmotion_null  ; error handling
 	pikaemotion_def PikachuEmotion_Mood2Happy3  ; average mood, okay happiness
-	pikaemotion_def PikachuEmotion_Mood3Happy5  ; high mood, good happiness
-	pikaemotion_def PikachuEmotion_Mood1Happy3  ;  low mood, okay/decent happiness
+; 	pikaemotion_def PikachuEmotion_Mood3Happy5  ; high mood, good happiness
+; 	pikaemotion_def PikachuEmotion_Mood1Happy3  ;  low mood, okay/decent happiness
 	pikaemotion_def PikachuEmotion_Mood2Happy4  ; average mood, decent happiness
 	pikaemotion_def PikachuEmotion_Mood2Happy2  ; average mood, low happiness
 	pikaemotion_def PikachuEmotion_Mood2Happy1  ; average mood, crap happiness
 	pikaemotion_def PikachuEmotion_Mood2Happy5  ; average mood, good happiness
-	pikaemotion_def PikachuEmotion_Mood3Happy3  ; high mood, okay happiness
-	pikaemotion_def PikachuEmotion_Mood1Happy2  ;  low mood, low happiness
-	pikaemotion_def PikachuEmotion_Mood3Happy6 ; high mood, high happiness
+; 	pikaemotion_def PikachuEmotion_Mood3Happy3  ; high mood, okay happiness
+; 	pikaemotion_def PikachuEmotion_Mood1Happy2  ;  low mood, low happiness
+; 	pikaemotion_def PikachuEmotion_Mood3Happy6 ; high mood, high happiness
 	pikaemotion_def PikachuEmotion_FastAsleep ; asleep
-	pikaemotion_def PikachuEmotion_Mood3Happy2 ; high mood, low happiness
-	pikaemotion_def PikachuEmotion_Mood3Happy1 ; high mood, crap happiness
-	pikaemotion_def PikachuEmotion_Mood1Happy1 ;  low mood, crap happiness
-	pikaemotion_def PikachuEmotion_Mood3Happy4 ; high mood, decent happiness
+; 	pikaemotion_def PikachuEmotion_Mood3Happy2 ; high mood, low happiness
+; 	pikaemotion_def PikachuEmotion_Mood3Happy1 ; high mood, crap happiness
+; 	pikaemotion_def PikachuEmotion_Mood1Happy1 ;  low mood, crap happiness
+; 	pikaemotion_def PikachuEmotion_Mood3Happy4 ; high mood, decent happiness
 	pikaemotion_def PikachuEmotion_Mood2Happy6 ; average mood, high happiness
-	pikaemotion_def PikachuEmotion_Mood1Happy5 ;  low mood, good/high/max happiness
+; 	pikaemotion_def PikachuEmotion_Mood1Happy5 ;  low mood, good/high/max happiness
 	pikaemotion_def PikachuEmotion_CaughtPokemon ; caught a pokemon
 	pikaemotion_def PikachuEmotion_Mood2Happy7 ; average mood, max happiness
-	pikaemotion_def PikachuEmotion_Mood3Happy7 ; high mood, max happiness
+; 	pikaemotion_def PikachuEmotion_Mood3Happy7 ; high mood, max happiness
 	pikaemotion_def PikachuEmotion_FishingRod ; used a fishing rod
 	pikaemotion_def PikachuEmotion_LavenderTown ; spoopy
 	pikaemotion_def PikachuEmotion_BillFirstTime ; bill's house 0
-	; pikaemotion_def PikachuEmotion_ThunderStone ; tried to use thunderstone
+	pikaemotion_def PikachuEmotion_Burned ; roast parrot anyone?
 	; pikaemotion_def PikachuEmotion_ThunderBolt ; taught or learned thunder/thunderbolt
 	pikaemotion_def PikachuEmotion_PewterWake ; wake up pikachu in pewter pokemon center
 	pikaemotion_def PikachuEmotion_BillEnterTeleporter ; bill's house 1
 	pikaemotion_def PikachuEmotion_Statused ; statused
-	pikaemotion_def PikachuEmotion_FanClub1 ; fan club 1
-	pikaemotion_def PikachuEmotion_FanClub2 ; fan club 2
+	; pikaemotion_def PikachuEmotion_FanClub1 ; fan club 1
+	; pikaemotion_def PikachuEmotion_FanClub2 ; fan club 2
 	pikaemotion_def PikachuEmotion_BillExitTeleporter ; bill's house 2
 	pikaemotion_def PikachuEmotion_BillGetOverShock ; bill's house 3
 	pikaemotion_def .error ; error handling
@@ -245,19 +245,19 @@ pikaemotion_def: MACRO
 	db $ff
 
 MapSpecificPikachuExpression:
-	ld a, [wCurMap]
-	cp POKEMON_FAN_CLUB
-	jr nz, .notFanClub
-	ld hl, wd492
-	bit 7, [hl]
-	ldpikaemotion a, PikachuEmotion_FanClub1
-	jr z, .play_emotion
-	call IsPikachuPositionFrozenOnMap
-	ldpikaemotion a, PikachuEmotion_FanClub2
-	jr nz, .play_emotion
-	jr .check_pikachu_status
+	; ld a, [wCurMap]
+	; cp POKEMON_FAN_CLUB
+	; jr nz, .notFanClub
+	; ld hl, wd492
+	; bit 7, [hl]
+	; ldpikaemotion a, PikachuEmotion_FanClub1
+	; jr z, .play_emotion
+	; call IsPikachuPositionFrozenOnMap
+	; ldpikaemotion a, PikachuEmotion_FanClub2
+	; jr nz, .play_emotion
+	; jr .check_pikachu_status
 
-.notFanClub
+; .notFanClub
 	ld a, [wCurMap]
 	cp PEWTER_POKECENTER
 	jr nz, .notPewterPokecenter
@@ -317,7 +317,7 @@ MapSpecificPikachuExpression:
 	dpikaemotion PikachuEmotion_CaughtPokemon ; caught a pokemon
 	dpikaemotion PikachuEmotion_FishingRod ; used a fishing rod
 	dpikaemotion PikachuEmotion_BillFirstTime
-	; dpikaemotion PikachuEmotion_ThunderStone ; tried to use thunderstone
+	; dpikaemotion PikachuEmotion_Burned ; tried to use thunderstone
 	; dpikaemotion PikachuEmotion_ThunderBolt ; taught or learned thunder/thunderbolt
 
 IsPlayerPikachuAsleepInParty:

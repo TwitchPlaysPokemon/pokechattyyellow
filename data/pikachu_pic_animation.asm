@@ -44,25 +44,25 @@ PikaPicAnimScript_Mood2Happy3:
 	pikapic_cry PikachuCry3
 	pikapic_looptofinish
 
-PikaPicAnimScript_Mood3Happy5:
-	pikapic_setduration 44
-	pikapic_loadgfx Pic_Mood3Happy5_0
-	pikapic_loadgfx GFX_Mood3Happy5_0
-	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
-	pikapic_animation PikaPicAnimBGFrames_Mood3Happy5_1, $99, $0, $0
-	pikapic_waitbgmap
-	pikapic_cry
-	pikapic_looptofinish
+; PikaPicAnimScript_Mood3Happy5:
+	; pikapic_setduration 44
+	; pikapic_loadgfx Pic_Mood3Happy5_0
+	; pikapic_loadgfx GFX_Mood3Happy5_0
+	; pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
+	; pikapic_animation PikaPicAnimBGFrames_Mood3Happy5_1, $99, $0, $0
+	; pikapic_waitbgmap
+	; pikapic_cry
+	; pikapic_looptofinish
 
-PikaPicAnimScript_Mood1Happy3:
-	pikapic_setduration 80
-	pikapic_loadgfx Pic_Mood1Happy3_0
-	pikapic_loadgfx GFX_Mood1Happy3_0
-	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
-	pikapic_animation PikaPicAnimBGFrames_Mood1Happy3_1, $99, $0, $0
-	pikapic_waitbgmap
-	pikapic_cry
-	pikapic_looptofinish
+; PikaPicAnimScript_Mood1Happy3:
+	; pikapic_setduration 80
+	; pikapic_loadgfx Pic_Mood1Happy3_0
+	; pikapic_loadgfx GFX_Mood1Happy3_0
+	; pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
+	; pikapic_animation PikaPicAnimBGFrames_Mood1Happy3_1, $99, $0, $0
+	; pikapic_waitbgmap
+	; pikapic_cry
+	; pikapic_looptofinish
 
 PikaPicAnimScript_Mood2Happy4:
 	pikapic_setduration 70
@@ -104,36 +104,36 @@ PikaPicAnimScript_Mood2Happy5:
 	pikapic_cry
 	pikapic_looptofinish
 
-PikaPicAnimScript_Mood3Happy3:
-	pikapic_setduration 44
-	pikapic_loadgfx Pic_Mood3Happy3_0
-	pikapic_loadgfx GFX_Mood3Happy3_0
-	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
-	pikapic_animation PikaPicAnimBGFrames_Mood3Happy3_1, $99, $0, $0
-	pikapic_waitbgmap
-	pikapic_cry
-	pikapic_looptofinish
+; PikaPicAnimScript_Mood3Happy3:
+	; pikapic_setduration 44
+	; pikapic_loadgfx Pic_Mood3Happy3_0
+	; pikapic_loadgfx GFX_Mood3Happy3_0
+	; pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
+	; pikapic_animation PikaPicAnimBGFrames_Mood3Happy3_1, $99, $0, $0
+	; pikapic_waitbgmap
+	; pikapic_cry
+	; pikapic_looptofinish
 
-PikaPicAnimScript_Mood1Happy2:
-	pikapic_setduration 56
-	pikapic_loadgfx Pic_Mood1Happy2_0
-	pikapic_loadgfx GFX_Mood1Happy2_0
-	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
-	pikapic_animation PikaPicAnimBGFrames_Mood1Happy2_1, $99, $0, $0
-	pikapic_waitbgmap
-	pikapic_cry
-	pikapic_looptofinish
+; PikaPicAnimScript_Mood1Happy2:
+	; pikapic_setduration 56
+	; pikapic_loadgfx Pic_Mood1Happy2_0
+	; pikapic_loadgfx GFX_Mood1Happy2_0
+	; pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
+	; pikapic_animation PikaPicAnimBGFrames_Mood1Happy2_1, $99, $0, $0
+	; pikapic_waitbgmap
+	; pikapic_cry
+	; pikapic_looptofinish
 
-PikaPicAnimScript_Mood3Happy6:
-	pikapic_setduration 56
-	pikapic_loadgfx Pic_Mood3Happy6_0
-	pikapic_loadgfx GFX_Mood3Happy6_0
-	pikapic_loadgfx GFX_Mood3Happy6_1
-	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
-	pikapic_animation PikaPicAnimBGFrames_Mood3Happy6_1, $99, $0, $0
-	pikapic_waitbgmap
-	pikapic_cry
-	pikapic_looptofinish
+; PikaPicAnimScript_Mood3Happy6:
+	; pikapic_setduration 56
+	; pikapic_loadgfx Pic_Mood3Happy6_0
+	; pikapic_loadgfx GFX_Mood3Happy6_0
+	; pikapic_loadgfx GFX_Mood3Happy6_1
+	; pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
+	; pikapic_animation PikaPicAnimBGFrames_Mood3Happy6_1, $99, $0, $0
+	; pikapic_waitbgmap
+	; pikapic_cry
+	; pikapic_looptofinish
 
 PikaPicAnimScript_FastAsleep:
 	pikapic_setduration 100
@@ -145,45 +145,45 @@ PikaPicAnimScript_FastAsleep:
 	pikapic_cry
 	pikapic_looptofinish
 
-PikaPicAnimScript_Mood3Happy2:
-	pikapic_setduration 50
-	pikapic_loadgfx Pic_Mood3Happy2_0
-	pikapic_loadgfx GFX_Mood3Happy2_0
-	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
-	pikapic_animation PikaPicAnimBGFrames_Mood3Happy2_1, $99, $0, $0
-	pikapic_waitbgmap
-	pikapic_cry PikachuCry25
-	pikapic_looptofinish
+; PikaPicAnimScript_Mood3Happy2:
+	; pikapic_setduration 50
+	; pikapic_loadgfx Pic_Mood3Happy2_0
+	; pikapic_loadgfx GFX_Mood3Happy2_0
+	; pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
+	; pikapic_animation PikaPicAnimBGFrames_Mood3Happy2_1, $99, $0, $0
+	; pikapic_waitbgmap
+	; pikapic_cry PikachuCry25
+	; pikapic_looptofinish
 
-PikaPicAnimScript_Mood3Happy1:
-	pikapic_setduration 50
-	pikapic_loadgfx Pic_Mood3Happy1_0
-	pikapic_loadgfx GFX_Mood3Happy1_0
-	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
-	pikapic_animation PikaPicAnimBGFrames_Mood3Happy1_1, $99, $0, $0
-	pikapic_waitbgmap
-	pikapic_cry
-	pikapic_looptofinish
+; PikaPicAnimScript_Mood3Happy1:
+	; pikapic_setduration 50
+	; pikapic_loadgfx Pic_Mood3Happy1_0
+	; pikapic_loadgfx GFX_Mood3Happy1_0
+	; pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
+	; pikapic_animation PikaPicAnimBGFrames_Mood3Happy1_1, $99, $0, $0
+	; pikapic_waitbgmap
+	; pikapic_cry
+	; pikapic_looptofinish
 
-PikaPicAnimScript_Mood1Happy1:
-	pikapic_setduration 40
-	pikapic_loadgfx Pic_Mood1Happy1_0
-	pikapic_loadgfx GFX_Mood1Happy1_0
-	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
-	pikapic_animation PikaPicAnimBGFrames_Mood1Happy1_1, $99, $0, $0
-	pikapic_waitbgmap
-	pikapic_cry
-	pikapic_looptofinish
+; PikaPicAnimScript_Mood1Happy1:
+	; pikapic_setduration 40
+	; pikapic_loadgfx Pic_Mood1Happy1_0
+	; pikapic_loadgfx GFX_Mood1Happy1_0
+	; pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
+	; pikapic_animation PikaPicAnimBGFrames_Mood1Happy1_1, $99, $0, $0
+	; pikapic_waitbgmap
+	; pikapic_cry
+	; pikapic_looptofinish
 
-PikaPicAnimScript_Mood3Happy4:
-	pikapic_setduration 50
-	pikapic_loadgfx Pic_Mood3Happy4_0
-	pikapic_loadgfx GFX_Mood3Happy4_0
-	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
-	pikapic_animation PikaPicAnimBGFrames_Mood3Happy4_1, $99, $0, $0
-	pikapic_waitbgmap
-	pikapic_cry
-	pikapic_looptofinish
+; PikaPicAnimScript_Mood3Happy4:
+	; pikapic_setduration 50
+	; pikapic_loadgfx Pic_Mood3Happy4_0
+	; pikapic_loadgfx GFX_Mood3Happy4_0
+	; pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
+	; pikapic_animation PikaPicAnimBGFrames_Mood3Happy4_1, $99, $0, $0
+	; pikapic_waitbgmap
+	; pikapic_cry
+	; pikapic_looptofinish
 
 PikaPicAnimScript_Mood2Happy6:
 	pikapic_setduration 32
@@ -195,15 +195,15 @@ PikaPicAnimScript_Mood2Happy6:
 	pikapic_cry
 	pikapic_looptofinish
 
-PikaPicAnimScript_Mood1Happy5:
-	pikapic_setduration 100
-	pikapic_loadgfx Pic_Mood1Happy5_0
-	pikapic_loadgfx GFX_Mood1Happy5_0
-	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
-	pikapic_animation PikaPicAnimBGFrames_Mood1Happy5_1, $99, $0, $0
-	pikapic_waitbgmap
-	pikapic_cry
-	pikapic_looptofinish
+; PikaPicAnimScript_Mood1Happy5:
+	; pikapic_setduration 100
+	; pikapic_loadgfx Pic_Mood1Happy5_0
+	; pikapic_loadgfx GFX_Mood1Happy5_0
+	; pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
+	; pikapic_animation PikaPicAnimBGFrames_Mood1Happy5_1, $99, $0, $0
+	; pikapic_waitbgmap
+	; pikapic_cry
+	; pikapic_looptofinish
 
 PikaPicAnimScript_CaughtPokemon:
 	pikapic_setduration 32
@@ -225,15 +225,15 @@ PikaPicAnimScript_Mood2Happy7:
 	pikapic_cry
 	pikapic_looptofinish
 
-PikaPicAnimScript_Mood3Happy7:
-	pikapic_setduration 50
-	pikapic_loadgfx Pic_Mood3Happy7_0
-	pikapic_loadgfx GFX_Mood3Happy7_0
-	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
-	pikapic_animation PikaPicAnimBGFrames_Mood3Happy7_1, $99, $0, $0
-	pikapic_waitbgmap
-	pikapic_cry
-	pikapic_looptofinish
+; PikaPicAnimScript_Mood3Happy7:
+	; pikapic_setduration 50
+	; pikapic_loadgfx Pic_Mood3Happy7_0
+	; pikapic_loadgfx GFX_Mood3Happy7_0
+	; pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
+	; pikapic_animation PikaPicAnimBGFrames_Mood3Happy7_1, $99, $0, $0
+	; pikapic_waitbgmap
+	; pikapic_cry
+	; pikapic_looptofinish
 
 PikaPicAnimScript_FishingRod:
 	pikapic_setduration 70
@@ -268,15 +268,15 @@ PikaPicAnimScript_BillFirstTime:
 	pikapic_cry
 	pikapic_looptofinish
 
-; PikaPicAnimScript_ThunderStone:
-	; pikapic_setduration 60
-	; pikapic_loadgfx GFX_ThunderStone_0
-	; pikapic_loadgfx GFX_ThunderStone_1
-	; pikapic_animation PikaPicAnimBGFrames_CaughtPokemon_0, $80, $0, $0
-	; pikapic_animation PikaPicAnimBGFrames_ThunderStone_1, $99, $0, $0
-	; pikapic_waitbgmap
-	; pikapic_cry
-	; pikapic_looptofinish
+PikaPicAnimScript_Burned:
+	pikapic_setduration 60
+	pikapic_loadgfx GFX_Burned_0
+	pikapic_loadgfx GFX_Burned_1
+	pikapic_animation PikaPicAnimBGFrames_CaughtPokemon_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_Burned_1, $99, $0, $0
+	pikapic_waitbgmap
+	pikapic_cry
+	pikapic_looptofinish
 
 ; PikaPicAnimScript_ThunderBolt:
 	; pikapic_setduration 50
@@ -339,10 +339,10 @@ PikaPicAnimGFX_Null_id::
 	dbbw            1, $39,$0000
 	pikapicanimgfx -1, Pic_Mood2Happy3_0
 	pikapicanimgfx  5, GFX_Mood2Happy3_0
-	pikapicanimgfx -1, Pic_Mood3Happy5_0
-	pikapicanimgfx 10, GFX_Mood3Happy5_0
-	pikapicanimgfx -1, Pic_Mood1Happy3_0
-	pikapicanimgfx  6, GFX_Mood1Happy3_0
+; 	pikapicanimgfx -1, Pic_Mood3Happy5_0
+; 	pikapicanimgfx 10, GFX_Mood3Happy5_0
+; 	pikapicanimgfx -1, Pic_Mood1Happy3_0
+; 	pikapicanimgfx  6, GFX_Mood1Happy3_0
 	pikapicanimgfx -1, Pic_Mood2Happy4_0
 	pikapicanimgfx 20, GFX_Mood2Happy4_0
 	pikapicanimgfx -1, Pic_Mood2Happy2_0
@@ -352,32 +352,32 @@ PikaPicAnimGFX_Null_id::
 	pikapicanimgfx -1, Pic_Mood2Happy5_0
 	pikapicanimgfx 25, GFX_Mood2Happy5_0
 	pikapicanimgfx -1, Pic_Mood3Happy3_0
-	pikapicanimgfx 10, GFX_Mood3Happy3_0
-	pikapicanimgfx -1, Pic_Mood1Happy2_0
-	pikapicanimgfx  6, GFX_Mood1Happy2_0
-	pikapicanimgfx -1, Pic_Mood3Happy6_0
-	pikapicanimgfx 25, GFX_Mood3Happy6_0
-	pikapicanimgfx 25, GFX_Mood3Happy6_1
+; 	pikapicanimgfx 10, GFX_Mood3Happy3_0
+; 	pikapicanimgfx -1, Pic_Mood1Happy2_0
+; 	pikapicanimgfx  6, GFX_Mood1Happy2_0
+; 	pikapicanimgfx -1, Pic_Mood3Happy6_0
+; 	pikapicanimgfx 25, GFX_Mood3Happy6_0
+; 	pikapicanimgfx 25, GFX_Mood3Happy6_1
 	pikapicanimgfx -1, Pic_FastAsleep_0
 	pikapicanimgfx 25, GFX_FastAsleep_0
-	pikapicanimgfx -1, Pic_Mood3Happy2_0
-	pikapicanimgfx 25, GFX_Mood3Happy2_0
-	pikapicanimgfx -1, Pic_Mood3Happy1_0
-	pikapicanimgfx 25, GFX_Mood3Happy1_0
-	pikapicanimgfx -1, Pic_Mood1Happy1_0
-	pikapicanimgfx 25, GFX_Mood1Happy1_0
-	pikapicanimgfx -1, Pic_Mood3Happy4_0
-	pikapicanimgfx 25, GFX_Mood3Happy4_0
+; 	pikapicanimgfx -1, Pic_Mood3Happy2_0
+; 	pikapicanimgfx 25, GFX_Mood3Happy2_0
+; 	pikapicanimgfx -1, Pic_Mood3Happy1_0
+; 	pikapicanimgfx 25, GFX_Mood3Happy1_0
+; 	pikapicanimgfx -1, Pic_Mood1Happy1_0
+; 	pikapicanimgfx 25, GFX_Mood1Happy1_0
+; 	pikapicanimgfx -1, Pic_Mood3Happy4_0
+; 	pikapicanimgfx 25, GFX_Mood3Happy4_0
 	pikapicanimgfx -1, Pic_Mood2Happy6_0
 	pikapicanimgfx 25, GFX_Mood2Happy6_0
-	pikapicanimgfx -1, Pic_Mood1Happy5_0
-	pikapicanimgfx 25, GFX_Mood1Happy5_0
+; 	pikapicanimgfx -1, Pic_Mood1Happy5_0
+; 	pikapicanimgfx 25, GFX_Mood1Happy5_0
 	pikapicanimgfx 25, GFX_CaughtPokemon_0
 	pikapicanimgfx 25, GFX_CaughtPokemon_1
 	pikapicanimgfx -1, Pic_Mood2Happy7_0
 	pikapicanimgfx 25, GFX_Mood2Happy7_0
-	pikapicanimgfx -1, Pic_Mood3Happy7_0
-	pikapicanimgfx 25, GFX_Mood3Happy7_0
+; 	pikapicanimgfx -1, Pic_Mood3Happy7_0
+; 	pikapicanimgfx 25, GFX_Mood3Happy7_0
 	pikapicanimgfx -1, Pic_FishingRod_0
 	pikapicanimgfx 25, GFX_FishingRod_0
 	; pikapicanimgfx 25, GFX_FishingRod_1
@@ -389,8 +389,8 @@ PikaPicAnimGFX_Null_id::
 	pikapicanimgfx 25, GFX_LavenderTown_3
 	pikapicanimgfx 25, GFX_BillFirstTime_0
 	pikapicanimgfx 25, GFX_BillFirstTime_1
-	; pikapicanimgfx 25, GFX_ThunderStone_0
-	; pikapicanimgfx 25, GFX_ThunderStone_1
+	pikapicanimgfx 25, GFX_Burned_0
+	pikapicanimgfx 25, GFX_Burned_1
 	; pikapicanimgfx -1, Pic_ThunderBolt_0
 	; pikapicanimgfx 25, GFX_ThunderBolt_0
 	; pikapicanimgfx 25, GFX_ThunderBolt_1

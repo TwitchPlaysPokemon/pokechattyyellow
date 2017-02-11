@@ -34,7 +34,7 @@ pikaanim_def: macro
 	pikaanim_def PikaPicAnimBGFrames_LavenderTown_1 ; 1c
 	pikaanim_def PikaPicAnimBGFrames_LavenderTown_2 ; 1c
 	pikaanim_def PikaPicAnimBGFrames_BillFirstTime_1 ; 1d
-	pikaanim_def PikaPicAnimBGFrames_ThunderStone_1 ; 1e
+	pikaanim_def PikaPicAnimBGFrames_Burned_1 ; 1e
 	pikaanim_def PikaPicAnimBGFrames_ThunderBolt_1 ; 1f
 	pikaanim_def PikaPicAnimBGFrames_PewterWake_1 ; 20
 	pikaanim_def PikaPicAnimBGFrames_BillEnterTeleporter_1 ; 21
@@ -283,11 +283,11 @@ PikaPicAnimBGFrames_BillFirstTime_1:
 	pikaframe PikaAnimTilemap_BillFirstTime_1_0,   16
 	pikaframeend
 
-PikaPicAnimBGFrames_ThunderStone_1:
+PikaPicAnimBGFrames_Burned_1:
 	pikaframesleep                                  6
-	pikaframe PikaAnimTilemap_ThunderStone_1_0,     6
+	pikaframe PikaAnimTilemap_Burned_1_0,           6
 	pikaframesleep                                  6
-	pikaframe PikaAnimTilemap_ThunderStone_1_0,     6
+	pikaframe PikaAnimTilemap_Burned_1_0,           6
 	pikaframesleep                                100
 	pikaframeend
 

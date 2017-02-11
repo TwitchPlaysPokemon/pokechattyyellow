@@ -1,73 +1,74 @@
 FanClubScript:
-	call EnableAutoTextBoxDrawing
-	ld hl, FanClubScriptPointers
-	ld a, [wFanClubCurScript]
-	rst Jumptable
-	ret
+	jp EnableAutoTextBoxDrawing
+	; call EnableAutoTextBoxDrawing
+	; ld hl, FanClubScriptPointers
+	; ld a, [wFanClubCurScript]
+	; rst Jumptable
+	; ret
 
-FanClubScriptPointers:
-	dw FanClubScript1
-	dw FanClubScript2
+; FanClubScriptPointers:
+	; dw FanClubScript1
+	; dw FanClubScript2
 
-FanClubScript1:
-	ld hl, wd492
-	bit 7, [hl]
-	call z, FanClubScript_MovePikachuToSeel
-	ld hl, wd492
-	set 7, [hl]
-	ret
+; FanClubScript1:
+	; ld hl, wd492
+	; bit 7, [hl]
+	; call z, FanClubScript_MovePikachuToSeel
+	; ld hl, wd492
+	; set 7, [hl]
+	; ret
 
-FanClubScript2:
-	ld hl, wd492
-	bit 7, [hl]
-	call z, FanClubScript_MovePikachuToSeel10percentOfTheTime
-	ld hl, wd492
-	set 7, [hl]
-	ret
+; FanClubScript2:
+	; ld hl, wd492
+	; bit 7, [hl]
+	; call z, FanClubScript_MovePikachuToSeel10percentOfTheTime
+	; ld hl, wd492
+	; set 7, [hl]
+	; ret
 
-FanClubScript_MovePikachuToSeel10percentOfTheTime:
-	call Random
-	ld a, [hRandomAdd]
-	cp 10 percent
-	call c, FanClubScript_MovePikachuToSeel
-	ret
+; FanClubScript_MovePikachuToSeel10percentOfTheTime:
+	; call Random
+	; ld a, [hRandomAdd]
+	; cp 10 percent
+	; call c, FanClubScript_MovePikachuToSeel
+	; ret
 
-FanClubScript_MovePikachuToSeel:
-	ld a, [wd472]
-	bit 7, a
-	ret z
-	ld e, $ff
-	callab CheckPikachuStatused
-	ret c
-	ld a, $1
-	ld [wFanClubCurScript], a
-	xor a
-	ld [wPlayerMovingDirection], a
-	call UpdateSprites
-	call UpdateSprites
-	ld a, EXCLAMATION_BUBBLE
-	ld [wWhichEmotionBubble], a
-	ld a, $f ; Pikachu
-	ld [wEmotionBubbleSpriteIndex], a
-	predef EmotionBubble
-	ld hl, .MovementData
-	call ApplyPikachuMovementData
-	ld a, $2
-	ld [wSprite03MovementStatus], a ; Seel
-	xor a ; SPRITE_FACING_DOWN
-	ld [wSprite03FacingDirection], a
-	callab InitializePikachuTextID
-	call DisablePikachuFollowingPlayer
-	ret
+; FanClubScript_MovePikachuToSeel:
+	; ld a, [wd472]
+	; bit 7, a
+	; ret z
+	; ld e, $ff
+	; callab CheckPikachuStatused
+	; ret c
+	; ld a, $1
+	; ld [wFanClubCurScript], a
+	; xor a
+	; ld [wPlayerMovingDirection], a
+	; call UpdateSprites
+	; call UpdateSprites
+	; ld a, EXCLAMATION_BUBBLE
+	; ld [wWhichEmotionBubble], a
+	; ld a, $f ; Pikachu
+	; ld [wEmotionBubbleSpriteIndex], a
+	; predef EmotionBubble
+	; ld hl, .MovementData
+	; call ApplyPikachuMovementData
+	; ld a, $2
+	; ld [wSprite03MovementStatus], a ; Seel
+	; xor a ; SPRITE_FACING_DOWN
+	; ld [wSprite03FacingDirection], a
+	; callab InitializePikachuTextID
+	; call DisablePikachuFollowingPlayer
+	; ret
 
-.MovementData:
-	db $00
-	db $26
-	db $20
-	db $20
-	db $20
-	db $1e
-	db $3f
+; .MovementData:
+	; db $00
+	; db $26
+	; db $20
+	; db $20
+	; db $20
+	; db $1e
+	; db $3f
 
 FanClubTextPointers:
 	dw FanClubText1

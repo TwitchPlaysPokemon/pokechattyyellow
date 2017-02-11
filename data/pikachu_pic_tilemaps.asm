@@ -41,7 +41,7 @@ pikatilemap_def: macro
 	pikatilemap_def PikaAnimTilemap_35
 	pikatilemap_def PikaAnimTilemap_LavenderTown_1_0
 	pikatilemap_def PikaAnimTilemap_BillFirstTime_1_0
-	pikatilemap_def PikaAnimTilemap_ThunderStone_1_0
+	pikatilemap_def PikaAnimTilemap_Burned_1_0
 	pikatilemap_def PikaAnimTilemap_39
 	pikatilemap_def PikaAnimTilemap_40
 	pikatilemap_def PikaAnimTilemap_41
@@ -209,7 +209,7 @@ PikaAnimTilemap_Mood3Happy7_1_0:
 PikaAnimTilemap_35:
 PikaAnimTilemap_LavenderTown_1_0:
 PikaAnimTilemap_BillFirstTime_1_0:
-PikaAnimTilemap_ThunderStone_1_0:
+PikaAnimTilemap_Burned_1_0:
 PikaAnimTilemap_39:
 	db 5, 5
 	db $00, $01, $02, $03, $04

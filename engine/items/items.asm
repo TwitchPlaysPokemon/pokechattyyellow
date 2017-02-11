@@ -825,7 +825,7 @@ ItemUseEvoStone:
 	; ld hl, RefusingText
 	; call PrintText
 	; ld a, $4
-	; ld [wContextDependentPikachuEmotion], a ; play PikachuEmotion_ThunderStone
+	; ld [wContextDependentPikachuEmotion], a ; play PikachuEmotion_Burned
 	; ld a, $82
 	; ld [wPikachuMood], a
 	; jr .canceledItemUse

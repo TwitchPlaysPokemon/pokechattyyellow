@@ -1,91 +1,94 @@
 GetPikaPicAnimationScriptIndex:
-	ld hl, PikachuMoodLookupTable
-	ld a, [wPikachuMood]
-	ld d, a
-.get_mood_param
-	ld a, [hli]
-	inc hl
-	cp d
-	jr c, .get_mood_param
-	dec hl
-	ld e, [hl]
+	; ld hl, PikachuMoodLookupTable
+	; ld a, [wPikachuMood]
+	; ld d, a
+; .get_mood_param
+	; ld a, [hli]
+	; inc hl
+	; cp d
+	; jr c, .get_mood_param
+	; dec hl
+	; ld e, [hl]
 	ld hl, PikaPicAnimationScriptPointerLookupTable
 	ld a, [wPikachuHappiness]
 	ld d, a
 	ld bc, 6
 .get_happiness_param
-	ld a, [hl]
+	; ld a, [hl]
+	ld a, [hli]
 	cp d
-	jr nc, .got_animation
-	add hl, bc
-	jr .get_happiness_param
+	ld a, [hli]
+	; jr nc, .got_animation
+	; add hl, bc
+	; jr .get_happiness_param
+	jr c, .get_happiness_param
 
-.got_animation
-	ld d, 0
-	add hl, de
-	ld a, [hl]
+; .got_animation
+	; ld d, 0
+	; add hl, de
+	; ld a, [hl]
 	ret
 
-PikachuMoodLookupTable:
-; First byte: mood threshold
-; Second byte: column index in PikaPicAnimationScriptPointerLookupTable
-	db  40, 1
-	db 127, 2
-	db 128, 3
-	db 210, 4
-	db 255, 5
+; PikachuMoodLookupTable:
+; ; First byte: mood threshold
+; ; Second byte: column index in PikaPicAnimationScriptPointerLookupTable
+	; db  40, 1
+	; db 127, 2
+	; db 128, 3
+	; db 210, 4
+	; db 255, 5
 
 PikaPicAnimationScriptPointerLookupTable:
 ; First byte: happiness threshold
 ; Remaining bytes: loaded based on Pikachu's mood
 	db 50
-	dpikaemotion PikachuEmotion_Mood1Happy1
-	dpikaemotion PikachuEmotion_Mood1Happy1
+	; dpikaemotion PikachuEmotion_Mood1Happy1
+	; dpikaemotion PikachuEmotion_Mood1Happy1
 	dpikaemotion PikachuEmotion_Mood2Happy1
-	dpikaemotion PikachuEmotion_Mood3Happy1
-	dpikaemotion PikachuEmotion_Mood3Happy1
+	; dpikaemotion PikachuEmotion_Mood3Happy1
+	; dpikaemotion PikachuEmotion_Mood3Happy1
 
 	db 100
-	dpikaemotion PikachuEmotion_Mood1Happy2
-	dpikaemotion PikachuEmotion_Mood1Happy2
+	; dpikaemotion PikachuEmotion_Mood1Happy2
+	; dpikaemotion PikachuEmotion_Mood1Happy2
 	dpikaemotion PikachuEmotion_Mood2Happy2
-	dpikaemotion PikachuEmotion_Mood3Happy2
-	dpikaemotion PikachuEmotion_Mood3Happy2
+	; dpikaemotion PikachuEmotion_Mood3Happy2
+	; dpikaemotion PikachuEmotion_Mood3Happy2
 
 	db 130
-	dpikaemotion PikachuEmotion_Mood1Happy3
-	dpikaemotion PikachuEmotion_Mood1Happy3
+	; dpikaemotion PikachuEmotion_Mood1Happy3
+	; dpikaemotion PikachuEmotion_Mood1Happy3
 	dpikaemotion PikachuEmotion_Mood2Happy3
-	dpikaemotion PikachuEmotion_Mood3Happy3
-	dpikaemotion PikachuEmotion_Mood3Happy3
+	; dpikaemotion PikachuEmotion_Mood3Happy3
+	; dpikaemotion PikachuEmotion_Mood3Happy3
 
 	db 160
-	dpikaemotion PikachuEmotion_Mood1Happy3
-	dpikaemotion PikachuEmotion_Mood1Happy3
+	; dpikaemotion PikachuEmotion_Mood1Happy3
+	; dpikaemotion PikachuEmotion_Mood1Happy3
 	dpikaemotion PikachuEmotion_Mood2Happy4
-	dpikaemotion PikachuEmotion_Mood3Happy4
-	dpikaemotion PikachuEmotion_Mood3Happy4
+	; dpikaemotion PikachuEmotion_Mood3Happy4
+	; dpikaemotion PikachuEmotion_Mood3Happy4
 
 	db 200
-	dpikaemotion PikachuEmotion_Mood1Happy5
-	dpikaemotion PikachuEmotion_Mood1Happy5
+	; dpikaemotion PikachuEmotion_Mood1Happy5
+	; dpikaemotion PikachuEmotion_Mood1Happy5
 	dpikaemotion PikachuEmotion_Mood2Happy5
-	dpikaemotion PikachuEmotion_Mood3Happy5
-	dpikaemotion PikachuEmotion_Mood3Happy5
+	; dpikaemotion PikachuEmotion_Mood3Happy5
+	; dpikaemotion PikachuEmotion_Mood3Happy5
 
 	db 250
-	dpikaemotion PikachuEmotion_Mood1Happy5
-	dpikaemotion PikachuEmotion_Mood1Happy5
+	; dpikaemotion PikachuEmotion_Mood1Happy5
+	; dpikaemotion PikachuEmotion_Mood1Happy5
 	dpikaemotion PikachuEmotion_Mood2Happy6
-	dpikaemotion PikachuEmotion_Mood3Happy6
-	dpikaemotion PikachuEmotion_Mood3Happy6
+	; dpikaemotion PikachuEmotion_Mood3Happy6
+	; dpikaemotion PikachuEmotion_Mood3Happy6
 
 	db 255
-	dpikaemotion PikachuEmotion_Mood1Happy5
-	dpikaemotion PikachuEmotion_Mood1Happy5
+	; dpikaemotion PikachuEmotion_Mood1Happy5
+	; dpikaemotion PikachuEmotion_Mood1Happy5
 	dpikaemotion PikachuEmotion_Mood2Happy7
-	dpikaemotion PikachuEmotion_Mood3Happy7
-	dpikaemotion PikachuEmotion_Mood3Happy7
+	; dpikaemotion PikachuEmotion_Mood3Happy7
+	; dpikaemotion PikachuEmotion_Mood3Happy7
 
 StarterPikachuEmotionCommand_pikapic:
 	ld a, [hBGMapMode]
@@ -170,29 +173,29 @@ endm
 
 	pikapic_def PikaPicAnimScript_00  ; 00
 	pikapic_def PikaPicAnimScript_Mood2Happy3  ; 01
-	pikapic_def PikaPicAnimScript_Mood3Happy5  ; 02
-	pikapic_def PikaPicAnimScript_Mood1Happy3  ; 03
+; 	pikapic_def PikaPicAnimScript_Mood3Happy5  ; 02
+; 	pikapic_def PikaPicAnimScript_Mood1Happy3  ; 03
 	pikapic_def PikaPicAnimScript_Mood2Happy4  ; 04
 	pikapic_def PikaPicAnimScript_Mood2Happy2  ; 05
 	pikapic_def PikaPicAnimScript_Mood2Happy1  ; 06
 	pikapic_def PikaPicAnimScript_Mood2Happy5  ; 07
-	pikapic_def PikaPicAnimScript_Mood3Happy3  ; 08
-	pikapic_def PikaPicAnimScript_Mood1Happy2  ; 09
-	pikapic_def PikaPicAnimScript_Mood3Happy6 ; 0a
+; 	pikapic_def PikaPicAnimScript_Mood3Happy3  ; 08
+; 	pikapic_def PikaPicAnimScript_Mood1Happy2  ; 09
+; 	pikapic_def PikaPicAnimScript_Mood3Happy6 ; 0a
 	pikapic_def PikaPicAnimScript_FastAsleep ; 0b
-	pikapic_def PikaPicAnimScript_Mood3Happy2 ; 0c
-	pikapic_def PikaPicAnimScript_Mood3Happy1 ; 0d
-	pikapic_def PikaPicAnimScript_Mood1Happy1 ; 0e
-	pikapic_def PikaPicAnimScript_Mood3Happy4 ; 0f
+; 	pikapic_def PikaPicAnimScript_Mood3Happy2 ; 0c
+; 	pikapic_def PikaPicAnimScript_Mood3Happy1 ; 0d
+; 	pikapic_def PikaPicAnimScript_Mood1Happy1 ; 0e
+; 	pikapic_def PikaPicAnimScript_Mood3Happy4 ; 0f
 	pikapic_def PikaPicAnimScript_Mood2Happy6 ; 10
-	pikapic_def PikaPicAnimScript_Mood1Happy5 ; 11
+; 	pikapic_def PikaPicAnimScript_Mood1Happy5 ; 11
 	pikapic_def PikaPicAnimScript_CaughtPokemon ; 12
 	pikapic_def PikaPicAnimScript_Mood2Happy7 ; 13
-	pikapic_def PikaPicAnimScript_Mood3Happy7 ; 14
+	; pikapic_def PikaPicAnimScript_Mood3Happy7 ; 14
 	pikapic_def PikaPicAnimScript_FishingRod ; 15
 	pikapic_def PikaPicAnimScript_LavenderTown ; 16
 	pikapic_def PikaPicAnimScript_BillFirstTime ; 17
-	; pikapic_def PikaPicAnimScript_ThunderStone ; 18
+	pikapic_def PikaPicAnimScript_Burned ; 18
 	; pikapic_def PikaPicAnimScript_ThunderBolt ; 19
 	pikapic_def PikaPicAnimScript_PewterWake ; 1a
 	pikapic_def PikaPicAnimScript_BillEnterTeleporter ; 1b
