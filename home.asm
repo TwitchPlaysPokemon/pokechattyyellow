@@ -345,9 +345,11 @@ GetCryData::
 ; Load cry data for monster a.
 	cp CHATOT
 	jr nz, .not_chatot
-	add sp, 2
+	pop hl
 	ld hl, PikachuCry_Mood2Happy5
 	ld b, BANK(PikachuCry_Mood2Happy5)
+	ld a, $ff
+	ld [wPCMTempID], a
 	homecall PlayPikachuSoundClipBHL
 	jr _finishCry
 

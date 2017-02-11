@@ -1,10 +1,7 @@
 PlayPikachuSoundClip::
 IF DEF(MARKOV)
 	ld a, e
-	add LUA_REQUEST_CHATOT
-	call LuaRequest
-	ld b, 0
-	ld hl, 0
+	ld [wPCMTempID], a
 ELSE
 	ld d, $0
 	ld hl, PikachuCriesPointerTable
@@ -54,7 +51,21 @@ PlayPikachuSoundClipBHL::
 	ld [rNR34], a
 	pop hl
 	push bc
+IF DEF(MARKOV)
+	ld a, [wPCMTempID]
+	cp $ff
+	jr nz, .doLuaRequest
 	call PlayPikachuPCM
+	jr .afterPCM
+.doLuaRequest
+	ld c, a
+	xor a
+	ld [rNR51], a
+	call LuaRequest
+.afterPCM
+ELSE
+	call PlayPikachuPCM
+ENDC
 	xor a
 	ld [wc0f3], a
 	ld [wc0f4], a
