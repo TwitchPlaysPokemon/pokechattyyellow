@@ -358,9 +358,9 @@ PikaPicAnimCommand_deleteobject:
 LoadPikaPicAnimObjectData:
 .loop
 	ld a, [wCurPikaPicAnimObjectScriptIdx]
-	cp $23
+	cp (PikaPicAnimBGFrames_35_id - PikaPicAnimBGFramesPointers) / 2
 	jr c, .valid
-	ld a, $4
+	ld a, (PikaPicAnimBGFrames_Generic_id - PikaPicAnimBGFramesPointers) / 2
 .valid
 	ld e, a
 	ld d, 0
@@ -377,33 +377,29 @@ LoadPikaPicAnimObjectData:
 	add hl, de
 	ld a, [hli]
 	cp $e0
-	jr z, .end
-	jr .init
-
-.end
+	jr nz, .play
 	xor a
 	ld [wCurPikaPicAnimObjectFrameIdx], a
 	ld [wCurPikaPicAnimObjectFrameTimer], a
 	jr .loop
 
-.init
+.play
 	push hl
 	call LoadCurPikaPicObjectTilemap
 	pop hl
 	ld a, [hl]
 	and a
-	jr z, .not_done ; lasts forever
+	ret z
 	ld a, [wCurPikaPicAnimObjectFrameTimer]
 	inc a
 	ld [wCurPikaPicAnimObjectFrameTimer], a
 	cp [hl]
-	jr nz, .not_done
+	ret nz
 	xor a
 	ld [wCurPikaPicAnimObjectFrameTimer], a
 	ld a, [wCurPikaPicAnimObjectFrameIdx]
 	inc a
 	ld [wCurPikaPicAnimObjectFrameIdx], a
-.not_done
 	ret
 
 INCLUDE "data/pikachu_pic_objects.asm"

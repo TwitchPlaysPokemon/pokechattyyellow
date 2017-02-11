@@ -271,15 +271,21 @@ MapSpecificPikachuExpression:
 	ld a, e
 	cp $ff
 	jr nz, .play_emotion
-	jr .check_pikachu_status ; useless
 
 .check_pikachu_status
 	call IsPlayerPikachuAsleepInParty
 	ldpikaemotion a, PikachuEmotion_FastAsleep
 	jr c, .play_emotion
 	ld e, 1 << BRN
-	callab CheckPikachuStatused ; same bank
+	call CheckPikachuStatused ; same bank
+	ldpikaemotion a, PikachuEmotion_Statused ; PikachuEmotion_Burned
+	jr c, .play_emotion
+	ld e, $ff ^ (1 << BRN)
+	call CheckPikachuStatused ; same bank
 	ldpikaemotion a, PikachuEmotion_Statused
+	jr c, .play_emotion
+	call CheckPikachuLowHP
+	ldpikaemotion a, PikachuEmotion_Statused ; PikachuEmotion_LowHP
 	jr c, .play_emotion
 	ld a, [wCurMap]
 	cp POKEMONTOWER_1

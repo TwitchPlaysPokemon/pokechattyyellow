@@ -23,7 +23,7 @@ IsStarterPikachuInOurParty::
 	push de
 	push bc
 	ld hl, wPlayerName
-	ld d, $6 ; possible Japanese player length + 1
+	ld d, 8
 .nameCompareLoop
 	dec d
 	jr z, .sameOT
@@ -136,46 +136,84 @@ UpdatePikachuMoodAfterBattle::
 	ld [wPikachuMood], a
 	ret
 
-CheckPikachuStatused::
-; function to test if Pikachu is alive?
+WhichMonIsPikachu:
 	xor a
 	ld [wWhichPokemon], a
-	ld hl, wPartyCount
+	ld hl, wPartyCount + 1
+	jr .handleLoop
 .loop
-	inc hl
-	ld a, [hl]
-	cp $ff
-	jr z, .dead_or_not_in_party
 	push hl
 	call IsThisPartymonStarterPikachu_Party
 	pop hl
-	jr nc, .next
+	ret c
+	ld a, [wWhichPokemon]
+	inc a
+	ld [wWhichPokemon], a
+.handleLoop
+	ld a, [hli]
+	cp $ff
+	jr nz, .loop
+	ret
+
+CheckPikachuStatused::
+	call WhichMonIsPikachu
+	ret nc
+	ld a, [wWhichPokemon]
+	ld hl, wPartyMon1Status
+	ld bc, wPartyMon2 - wPartyMon1
+	call AddNTimes
+	ld a, [hl] ; status
+	and e
+	ret z
+	scf
+	ret
+
+CheckPikachuLowHP::
+	call WhichMonIsPikachu
+	ret nc
 	ld a, [wWhichPokemon]
 	ld hl, wPartyMon1HP
 	ld bc, wPartyMon2 - wPartyMon1
 	call AddNTimes
 	ld a, [hli]
-	or [hl]
-	ld d, a
-	inc hl
-	inc hl
-	ld a, [hl] ; status
-	and e
-	jr nz, .statused
-	jr .dead_or_not_in_party
-
-.next
-	ld a, [wWhichPokemon]
-	inc a
-	ld [wWhichPokemon], a
-	jr .loop
-
-.statused
-	scf
+	ld b, a
+	ld a, [hli]
+	or b
+	ret z
+	ld c, a
+	ld de, wPartyMon1MaxHP - wPartyMon1BoxLevel
+	add hl, de
+	ld a, [hli]
+	ld l, [hl]
+	ld h, a
+	jr .handleLoop
+.shift
+	srl b
+	rr c
+	jr z, .set_carry ; set when bc is shifted to 0
+	srl h
+	rr l
+	ld a, h
+.handleLoop
+	and a
+	jr nz, .shift
+	ld a, c
+	ld [hDividend], a
+	xor a
+	ld [hDividend + 1], a
+	ld a, l
+	ld [hDivisor], a
+	ld b, 2
+	call Divide
+	ld a, [hQuotient + 2]
+	and a
+	ret nz
+	ld a, [hQuotient + 3]
+	cp $33
 	ret
 
-.dead_or_not_in_party
-	and a
+.set_carry
+	scf
 	ret
 
 IsSurfingPikachuInThePlayersParty::
