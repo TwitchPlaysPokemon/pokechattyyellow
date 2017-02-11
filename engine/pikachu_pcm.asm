@@ -41,7 +41,8 @@ PlayPikachuSoundClipBHL::
 	ld a, $80
 	ld [rNR30], a
 	ld a, [rNR51]
-	or $44
+	ld c, a
+	ld a, %01000100
 	ld [rNR51], a
 	ld a, $ff
 	ld [rNR31], a
@@ -52,6 +53,7 @@ PlayPikachuSoundClipBHL::
 	ld a, $87
 	ld [rNR34], a
 	pop hl
+	push bc
 	call PlayPikachuPCM
 	xor a
 	ld [wc0f3], a
@@ -66,8 +68,8 @@ PlayPikachuSoundClipBHL::
 	call CopyData
 	ld a, $80
 	ld [rNR30], a
-	ld a, [rNR51]
-	and $bb
+	pop bc
+	ld a, c
 	ld [rNR51], a
 	xor a
 	ld [wChannelSoundIDs+CH4], a
