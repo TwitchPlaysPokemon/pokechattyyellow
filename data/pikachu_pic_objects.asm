@@ -247,10 +247,13 @@ PikaPicAnimBGFrames_Mood3Happy7_1:
 
 PikaPicAnimBGFrames_FishingRod_1:
 	pikaframesleep                                  8
-	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,    2
-	pikaframe PikaAnimTilemap_FishingRod_1_1,       1
-	pikaframe PikaAnimTilemap_FishingRod_1_2,       1
-	pikaframe PikaAnimTilemap_FishingRod_1_3,     100
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,    8
+	pikaframesleep                                  8
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,    8
+	pikaframesleep                                  8
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,    8
+	pikaframesleep                                  8
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,  100
 	pikaframeend
 
 PikaPicAnimBGFrames_LavenderTown_1:
@@ -309,8 +312,12 @@ PikaPicAnimBGFrames_BillEnterTeleporter_1:
 	pikaframeend
 
 PikaPicAnimBGFrames_Statused_1:
-	pikaframesleep                                 12
-	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,   12
-	pikaframesleep                                 12
-	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,  100
+	pikaframesleep                                  4
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,    4
+	pikaframesleep                                  4
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,    4
+	pikaframesleep                                  4
+	pikaframe PikaAnimTilemap_CaughtPokemon_0_0,    4
+	pikaframe PikaAnimTilemap_FishingRod_1_1,       4
+	pikaframe PikaAnimTilemap_FishingRod_1_2,     100
 	pikaframeend

@@ -236,12 +236,9 @@ PikaPicAnimScript_Mood3Happy7:
 	pikapic_looptofinish
 
 PikaPicAnimScript_FishingRod:
-	pikapic_setduration 40
+	pikapic_setduration 70
 	pikapic_loadgfx Pic_FishingRod_0
 	pikapic_loadgfx GFX_FishingRod_0
-	pikapic_loadgfx GFX_FishingRod_1
-	pikapic_loadgfx GFX_FishingRod_2
-	pikapic_loadgfx GFX_FishingRod_3
 	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_FishingRod_1, $99, $0, $0
 	pikapic_waitbgmap
@@ -320,9 +317,11 @@ PikaPicAnimScript_BillEnterTeleporter:
 	pikapic_looptofinish
 
 PikaPicAnimScript_Statused:
-	pikapic_setduration 64
+	pikapic_setduration 40
 	pikapic_loadgfx Pic_Statused_0
 	pikapic_loadgfx GFX_Statused_0
+	pikapic_loadgfx GFX_Statused_1
+	pikapic_loadgfx GFX_Statused_2
 	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Statused_1, $99, $0, $0
 	pikapic_waitbgmap
@@ -381,9 +380,9 @@ PikaPicAnimGFX_Null_id::
 	pikapicanimgfx 25, GFX_Mood3Happy7_0
 	pikapicanimgfx -1, Pic_FishingRod_0
 	pikapicanimgfx 25, GFX_FishingRod_0
-	pikapicanimgfx 25, GFX_FishingRod_1
-	pikapicanimgfx 25, GFX_FishingRod_2
-	pikapicanimgfx 25, GFX_FishingRod_3
+	; pikapicanimgfx 25, GFX_FishingRod_1
+	; pikapicanimgfx 25, GFX_FishingRod_2
+	; pikapicanimgfx 25, GFX_FishingRod_3
 	pikapicanimgfx 25, GFX_LavenderTown_0
 	pikapicanimgfx 25, GFX_LavenderTown_1
 	pikapicanimgfx 25, GFX_LavenderTown_2
@@ -401,4 +400,6 @@ PikaPicAnimGFX_Null_id::
 	pikapicanimgfx 25, GFX_BillEnterTeleporter_0
 	pikapicanimgfx -1, Pic_Statused_0
 	pikapicanimgfx 25, GFX_Statused_0
+	pikapicanimgfx 25, GFX_Statused_1
+	pikapicanimgfx 25, GFX_Statused_2
 	pikapicanimgfx 24, ChatotSprite
