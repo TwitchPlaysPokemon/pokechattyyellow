@@ -813,24 +813,24 @@ ItemUseEvoStone:
 	jr c, .canceledItemUse
 	ld a, b
 	ld [wcf91], a
-	call Func_d85d
+	call DoesThisStoneEvolveThisPokemon
 	jr nc, .noEffect
-	callab IsThisPartymonStarterPikachu_Party
-	jr nc, .notPlayerPikachu
-	ldpikacry e, PikachuCry28
-	callab PlayPikachuSoundClip
-	ld a, [wWhichPokemon]
-	ld hl, wPartyMonNicks
-	call GetPartyMonName
-	ld hl, RefusingText
-	call PrintText
-	ld a, $4
-	ld [wContextDependentPikachuEmotion], a ; play PikachuEmotion24
-	ld a, $82
-	ld [wPikachuMood], a
-	jr .canceledItemUse
+	; callab IsThisPartymonStarterPikachu_Party
+	; jr nc, .notPlayerPikachu
+	; ldpikacry e, PikachuCry28
+	; callab PlayPikachuSoundClip
+	; ld a, [wWhichPokemon]
+	; ld hl, wPartyMonNicks
+	; call GetPartyMonName
+	; ld hl, RefusingText
+	; call PrintText
+	; ld a, $4
+	; ld [wContextDependentPikachuEmotion], a ; play PikachuEmotion24
+	; ld a, $82
+	; ld [wPikachuMood], a
+	; jr .canceledItemUse
 
-.notPlayerPikachu
+; .notPlayerPikachu
 	ld a, SFX_HEAL_AILMENT
 	call PlaySoundWaitForCurrent
 	call WaitForSoundToFinish
@@ -852,7 +852,7 @@ ItemUseEvoStone:
 	pop af
 	ret
 
-Func_d85d:
+DoesThisStoneEvolveThisPokemon:
 	ld hl, EvosMovesPointerTable
 	ld a, [wLoadedMon]
 	dec a
@@ -2551,19 +2551,19 @@ ItemUseTMHM:
 	ld a, d
 	ld [wWhichPokemon], a
 	callabd_ModifyPikachuHappiness PIKAHAPPY_USEDTMHM
-	callab IsThisPartymonStarterPikachu_Party
-	jr nc, .notTeachingThunderboltOrThunderToPikachu
-	ld a, [wcf91]
-	cp TM_24 ; are we teaching thunderbolt to the player pikachu?
-	jr z, .teachingThunderboltOrThunderToPlayerPikachu
-	cp TM_25 ; are we teaching thunder then?
-	jr nz, .notTeachingThunderboltOrThunderToPikachu
-.teachingThunderboltOrThunderToPlayerPikachu
-	ld a, $5
-	ld [wContextDependentPikachuEmotion], a ; PikachuEmotion25
-	ld a, $85
-	ld [wPikachuMood], a
-.notTeachingThunderboltOrThunderToPikachu
+	; callab IsThisPartymonStarterPikachu_Party
+	; jr nc, .notTeachingThunderboltOrThunderToPikachu
+	; ld a, [wcf91]
+	; cp TM_24 ; are we teaching thunderbolt to the player pikachu?
+	; jr z, .teachingThunderboltOrThunderToPlayerPikachu
+	; cp TM_25 ; are we teaching thunder then?
+	; jr nz, .notTeachingThunderboltOrThunderToPikachu
+; .teachingThunderboltOrThunderToPlayerPikachu
+	; ld a, $5
+	; ld [wContextDependentPikachuEmotion], a ; PikachuEmotion25
+	; ld a, $85
+	; ld [wPikachuMood], a
+; .notTeachingThunderboltOrThunderToPikachu
 	pop af
 	ld [wWhichPokemon], a
 
