@@ -233,8 +233,14 @@ INCLUDE "text/maps/seafoam_islands_b4f.asm"
 
 _AIBattleWithdrawText::
 	TX_RAM wTrainerName
+IF DEF(MARKOV)
+	text ""
+	line "withdrew"
+	cont "@"
+ELSE
 	text " with-"
 	line "drew @"
+ENDC
 	TX_RAM wEnemyMonNick
 	text "!"
 	prompt
@@ -1176,9 +1182,14 @@ _LinkBattleLostText::
 
 _TrainerAboutToUseText::
 	TX_RAM wTrainerName
+IF DEF(MARKOV)
+	text ""
+	line "is about to use"
+ELSE
 	text " is"
 	line "about to use"
-	cont"@"
+ENDC
+	cont "@"
 	TX_RAM wEnemyMonNick
 	text "!"
 
@@ -1188,8 +1199,14 @@ _TrainerAboutToUseText::
 
 _TrainerSentOutText::
 	TX_RAM wTrainerName
+IF DEF(MARKOV)
+	text ""
+	line "sent out"
+	cont "@"
+ELSE
 	text " sent"
 	line "out @"
+ENDC
 	TX_RAM wEnemyMonNick
 	text "!"
 	done
@@ -1545,8 +1562,13 @@ _EnemyAppearedText::
 
 _TrainerWantsToFightText::
 	TX_RAM wTrainerName
+IF DEF(MARKOV)
+	text ""
+	line "wants to fight!"
+ELSE
 	text " wants"
 	line "to fight!"
+ENDC
 	prompt
 
 _UnveiledGhostText::
