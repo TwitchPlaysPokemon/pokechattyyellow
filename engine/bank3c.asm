@@ -174,13 +174,13 @@ TryApplyPikachuMovementData: ; f0a82
 	callab RefreshPikachuFollow
 	ret
 
-Pic_f0abf:
+Pic_BillEnterTeleporter_0:
 INCBIN "gfx/pikachu/unknown_f0abf.pic"
-GFX_f0b64:
+GFX_BillEnterTeleporter_0:
 INCBIN "gfx/pikachu/unknown_f0b64.2bpp"
-Pic_f0cf4:
+Pic_Statused_0:
 INCBIN "gfx/pikachu/unknown_f0cf4.pic"
-GFX_f0d82:
+GFX_Statused_0:
 INCBIN "gfx/pikachu/unknown_f0d82.2bpp"
 
 PokecenterChanseyText:
