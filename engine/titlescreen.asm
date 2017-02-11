@@ -46,6 +46,11 @@ DisplayTitleScreen:
 	ld bc, 9 * $10
 	ld a, BANK(GamefreakLogoGraphics)
 	call FarCopyData
+	ld hl, TPPDevsGraphics
+	ld de, vTitleLogo + 80 * $10
+	ld bc, 8 * $10
+	ld a, BANK(TPPDevsGraphics)
+	call FarCopyData
 	callab LoadYellowTitleScreenGFX
 	ld hl, vBGMap0
 	ld bc, (vBGMap1 + $400) - vBGMap0
@@ -115,7 +120,7 @@ DisplayTitleScreen:
 
 ; place tiles for title screen copyright
 .WriteCopyrightTiles ; 4241 (1:4241)
-	coord hl, 2, 17
+	coord hl, 0, 17
 	ld de, .tileScreenCopyrightTiles
 .titleScreenCopyrightTilesLoop
 	ld a, [de]
@@ -126,7 +131,7 @@ DisplayTitleScreen:
 	jr .titleScreenCopyrightTilesLoop
 
 .tileScreenCopyrightTiles ; 424f (1:424f)
-	db $e0, $e1,$e2,$e3,$e1,$e2,$ee,$e5,$e6,$e7,$e8,$e9,$ea,$eb,$ec,$ed,$ff ; ©1995-1999 GAME FREAK inc.
+	db $e0,$e1,$e2,$ee,$e5,$e6,$e7,$e8,$e9,$ea,$eb,$e0,$d0,$d1,$d2,$d3,$d4,$d5,$d6,$d7,$ff ; ©1995-1999 GAME FREAK inc.
 
 .finishedBouncingPokemonLogo ; 4260 (1:4260)
 	call LoadScreenTilesFromBuffer1
