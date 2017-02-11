@@ -33,7 +33,7 @@ all: $(rom) $(debug)
 chatty: $(rom)
 
 tidy:
-	rm -f $(rom) $(debug) $(objs) $(markov_objs) $(rom:.gbc=.sym)
+	rm -f $(rom) $(debug) $(objs) $(markov_objs) $(rom:.gbc=.sym) $(debug:.gbc=.sym)
 
 clean: tidy
 	find . \( -iname '*.1bpp' -o -iname '*.2bpp' -o -iname '*.pic' -o -iname '*.pcm' \) -exec rm {} +
