@@ -175,13 +175,13 @@ TryApplyPikachuMovementData: ; f0a82
 	ret
 
 Pic_BillEnterTeleporter_0:
-INCBIN "gfx/pikachu/unknown_f0abf.pic"
+INCBIN "gfx/pikachu/bill_enter_teleporter_0_pic.pic"
 GFX_BillEnterTeleporter_0:
-INCBIN "gfx/pikachu/unknown_f0b64.2bpp"
+INCBIN "gfx/pikachu/bill_enter_teleporter_0_2bpp.2bpp"
 Pic_Statused_0:
-INCBIN "gfx/pikachu/unknown_f0cf4.pic"
+INCBIN "gfx/pikachu/statused_0_pic.pic"
 GFX_Statused_0:
-INCBIN "gfx/pikachu/unknown_f0d82.2bpp"
+INCBIN "gfx/pikachu/statused_0_2bpp.2bpp"
 
 PokecenterChanseyText:
 	ld hl, NurseChanseyText

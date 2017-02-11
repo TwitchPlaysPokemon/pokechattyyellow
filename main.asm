@@ -2012,119 +2012,119 @@ INCLUDE "engine/evos_moves.asm"
 SECTION "bank39", ROMX,BANK[$39]
 
 Pic_Mood2Happy3_0: ; e4000
-INCBIN "gfx/pikachu/unknown_e4000.pic"
+INCBIN "gfx/pikachu/mood2_happy3_0_pic.pic"
 GFX_Mood2Happy3_0: ; e40cc
-INCBIN "gfx/pikachu/unknown_e40cc.2bpp"
+INCBIN "gfx/pikachu/mood2_happy3_0_2bpp.2bpp"
 Pic_Mood3Happy5_0: ; e411c
-INCBIN "gfx/pikachu/unknown_e411c.pic"
+INCBIN "gfx/pikachu/mood3_happy5_0_pic.pic"
 GFX_Mood3Happy5_0: ; e41d2
-INCBIN "gfx/pikachu/unknown_e41d2.2bpp"
+INCBIN "gfx/pikachu/mood3_happy5_0_2bpp.2bpp"
 Pic_Mood1Happy3_0: ; e4272
-INCBIN "gfx/pikachu/unknown_e4272.pic"
+INCBIN "gfx/pikachu/mood1_happy3_0_pic.pic"
 GFX_Mood1Happy3_0: ; e4323
-INCBIN "gfx/pikachu/unknown_e4323.2bpp"
+INCBIN "gfx/pikachu/mood1_happy3_0_2bpp.2bpp"
 Pic_Mood2Happy4_0: ; e4383
-INCBIN "gfx/pikachu/unknown_e4383.pic"
+INCBIN "gfx/pikachu/mood2_happy4_0_pic.pic"
 GFX_Mood2Happy4_0: ; e444b
-INCBIN "gfx/pikachu/unknown_e444b.2bpp"
+INCBIN "gfx/pikachu/mood2_happy4_0_2bpp.2bpp"
 Pic_Mood2Happy2_0: ; e458b
-INCBIN "gfx/pikachu/unknown_e458b.pic"
+INCBIN "gfx/pikachu/mood2_happy2_0_pic.pic"
 GFX_Mood2Happy2_0: ; e463b
-INCBIN "gfx/pikachu/unknown_e463b.2bpp"
+INCBIN "gfx/pikachu/mood2_happy2_0_2bpp.2bpp"
 Pic_Mood2Happy1_0: ; e467b
-INCBIN "gfx/pikachu/unknown_e467b.pic"
+INCBIN "gfx/pikachu/mood2_happy1_0_pic.pic"
 GFX_Mood2Happy1_0: ; e472e
-INCBIN "gfx/pikachu/unknown_e472e.2bpp"
+INCBIN "gfx/pikachu/mood2_happy1_0_2bpp.2bpp"
 Pic_Mood2Happy5_0: ; e476e
-INCBIN "gfx/pikachu/unknown_e476e.pic"
+INCBIN "gfx/pikachu/mood2_happy5_0_pic.pic"
 GFX_Mood2Happy5_0: ; e4841
-INCBIN "gfx/pikachu/unknown_e4841.2bpp"
+INCBIN "gfx/pikachu/mood2_happy5_0_2bpp.2bpp"
 Pic_Mood3Happy3_0: ; e49d1
-INCBIN "gfx/pikachu/unknown_e49d1.pic"
+INCBIN "gfx/pikachu/mood3_happy3_0_pic.pic"
 GFX_Mood3Happy3_0: ; e4a99
-INCBIN "gfx/pikachu/unknown_e4a99.2bpp"
+INCBIN "gfx/pikachu/mood3_happy3_0_2bpp.2bpp"
 Pic_Mood1Happy2_0: ; e4b39
-INCBIN "gfx/pikachu/unknown_e4b39.pic"
+INCBIN "gfx/pikachu/mood1_happy2_0_pic.pic"
 GFX_Mood1Happy2_0: ; e4bde
-INCBIN "gfx/pikachu/unknown_e4bde.2bpp"
+INCBIN "gfx/pikachu/mood1_happy2_0_2bpp.2bpp"
 Pic_Mood3Happy6_0: ; e4c3e
-INCBIN "gfx/pikachu/unknown_e4c3e.pic"
+INCBIN "gfx/pikachu/mood3_happy6_0_pic.pic"
 GFX_Mood3Happy6_0: ; e4ce0
-INCBIN "gfx/pikachu/unknown_e4ce0.2bpp"
+INCBIN "gfx/pikachu/mood3_happy6_0_2bpp.2bpp"
 GFX_Mood3Happy6_1: ; e4e70
-INCBIN "gfx/pikachu/unknown_e4e70.2bpp"
+INCBIN "gfx/pikachu/mood3_happy6_1_2bpp.2bpp"
 Pic_FastAsleep_0: ; e5000
-INCBIN "gfx/pikachu/unknown_e5000.pic"
+INCBIN "gfx/pikachu/fast_asleep_0_pic.pic"
 GFX_FastAsleep_0: ; e50af
-INCBIN "gfx/pikachu/unknown_e50af.2bpp"
+INCBIN "gfx/pikachu/fast_asleep_0_2bpp.2bpp"
 Pic_Mood3Happy2_0: ; e523f
-INCBIN "gfx/pikachu/unknown_e523f.pic"
+INCBIN "gfx/pikachu/mood3_happy2_0_pic.pic"
 GFX_Mood3Happy2_0: ; e52fe
-INCBIN "gfx/pikachu/unknown_e52fe.2bpp"
+INCBIN "gfx/pikachu/mood3_happy2_0_2bpp.2bpp"
 Pic_Mood3Happy1_0: ; e548e
-INCBIN "gfx/pikachu/unknown_e548e.pic"
+INCBIN "gfx/pikachu/mood3_happy1_0_pic.pic"
 GFX_Mood3Happy1_0: ; e5541
-INCBIN "gfx/pikachu/unknown_e5541.2bpp"
+INCBIN "gfx/pikachu/mood3_happy1_0_2bpp.2bpp"
 Pic_Mood1Happy1_0: ; e56d1
-INCBIN "gfx/pikachu/unknown_e56d1.pic"
+INCBIN "gfx/pikachu/mood1_happy1_0_pic.pic"
 GFX_Mood1Happy1_0: ; e5794
-INCBIN "gfx/pikachu/unknown_e5794.2bpp"
+INCBIN "gfx/pikachu/mood1_happy1_0_2bpp.2bpp"
 Pic_Mood3Happy4_0: ; e5924
-INCBIN "gfx/pikachu/unknown_e5924.pic"
+INCBIN "gfx/pikachu/mood3_happy4_0_pic.pic"
 GFX_Mood3Happy4_0: ; e59ed
-INCBIN "gfx/pikachu/unknown_e59ed.2bpp"
+INCBIN "gfx/pikachu/mood3_happy4_0_2bpp.2bpp"
 Pic_Mood2Happy6_0: ; e5b7d
-INCBIN "gfx/pikachu/unknown_e5b7d.pic"
+INCBIN "gfx/pikachu/mood2_happy6_0_pic.pic"
 GFX_Mood2Happy6_0: ; e5c4d
-INCBIN "gfx/pikachu/unknown_e5c4d.2bpp"
+INCBIN "gfx/pikachu/mood2_happy6_0_2bpp.2bpp"
 Pic_Mood1Happy5_0: ; e5ddd
-INCBIN "gfx/pikachu/unknown_e5ddd.pic"
+INCBIN "gfx/pikachu/mood1_happy5_0_pic.pic"
 GFX_Mood1Happy5_0: ; e5e90
-INCBIN "gfx/pikachu/unknown_e5e90.2bpp"
+INCBIN "gfx/pikachu/mood1_happy5_0_2bpp.2bpp"
 GFX_CaughtPokemon_0: ; e6020
-INCBIN "gfx/pikachu/unknown_e6020.2bpp"
+INCBIN "gfx/pikachu/caught_pokemon_0_2bpp.2bpp"
 GFX_CaughtPokemon_1: ; e61b0
-INCBIN "gfx/pikachu/unknown_e61b0.2bpp"
+INCBIN "gfx/pikachu/caught_pokemon_1_2bpp.2bpp"
 Pic_Mood2Happy7_0: ; e6340
-INCBIN "gfx/pikachu/unknown_e6340.pic"
+INCBIN "gfx/pikachu/mood2_happy7_0_pic.pic"
 GFX_Mood2Happy7_0: ; e63f7
-INCBIN "gfx/pikachu/unknown_e63f7.2bpp"
+INCBIN "gfx/pikachu/mood2_happy7_0_2bpp.2bpp"
 Pic_Mood3Happy7_0: ; e6587
-INCBIN "gfx/pikachu/unknown_e6587.pic"
+INCBIN "gfx/pikachu/mood3_happy7_0_pic.pic"
 GFX_Mood3Happy7_0: ; e6646
-INCBIN "gfx/pikachu/unknown_e6646.2bpp"
+INCBIN "gfx/pikachu/mood3_happy7_0_2bpp.2bpp"
 Pic_FishingRod_0: ; e67d6
-INCBIN "gfx/pikachu/unknown_e67d6.pic"
+INCBIN "gfx/pikachu/fishing_rod_0_pic.pic"
 GFX_FishingRod_0: ; e682f
-INCBIN "gfx/pikachu/unknown_e682f.2bpp"
+INCBIN "gfx/pikachu/fishing_rod_0_2bpp.2bpp"
 GFX_FishingRod_1: ; e69bf
-INCBIN "gfx/pikachu/unknown_e69bf.2bpp"
+INCBIN "gfx/pikachu/fishing_rod_1_2bpp.2bpp"
 GFX_FishingRod_2: ; e6b4f
-INCBIN "gfx/pikachu/unknown_e6b4f.2bpp"
+INCBIN "gfx/pikachu/fishing_rod_2_2bpp.2bpp"
 GFX_FishingRod_3: ; e6cdf
-INCBIN "gfx/pikachu/unknown_e6cdf.2bpp"
+INCBIN "gfx/pikachu/fishing_rod_3_2bpp.2bpp"
 GFX_LavenderTown_0: ; e6e6f
-INCBIN "gfx/pikachu/unknown_e6e6f.2bpp"
+INCBIN "gfx/pikachu/lavender_town_0_2bpp.2bpp"
 GFX_LavenderTown_1: ; e6fff
-INCBIN "gfx/pikachu/unknown_e6fff.2bpp"
+INCBIN "gfx/pikachu/lavender_town_1_2bpp.2bpp"
 GFX_BillFirstTime_0: ; e718f
-INCBIN "gfx/pikachu/unknown_e718f.2bpp"
+INCBIN "gfx/pikachu/bill_first_time_0_2bpp.2bpp"
 GFX_BillFirstTime_1: ; e731f
-INCBIN "gfx/pikachu/unknown_e731f.2bpp"
+INCBIN "gfx/pikachu/bill_first_time_1_2bpp.2bpp"
 GFX_ThunderStone_0: ; e74af
-INCBIN "gfx/pikachu/unknown_e74af.2bpp"
+INCBIN "gfx/pikachu/thunder_stone_0_2bpp.2bpp"
 GFX_ThunderStone_1: ; e763f
-INCBIN "gfx/pikachu/unknown_e763f.2bpp"
+INCBIN "gfx/pikachu/thunder_stone_1_2bpp.2bpp"
 Pic_ThunderBolt_0: ; e77cf
-INCBIN "gfx/pikachu/unknown_e77cf.pic"
+INCBIN "gfx/pikachu/thunder_bolt_0_pic.pic"
 GFX_ThunderBolt_0: ; e7863
-INCBIN "gfx/pikachu/unknown_e7863.2bpp"
+INCBIN "gfx/pikachu/thunder_bolt_0_2bpp.2bpp"
 GFX_ThunderBolt_1: ; e79f3
-INCBIN "gfx/pikachu/unknown_e79f3.2bpp"
+INCBIN "gfx/pikachu/thunder_bolt_1_2bpp.2bpp"
 GFX_PewterWake_1: ; e7b83
-INCBIN "gfx/pikachu/unknown_e7b83.2bpp"
+INCBIN "gfx/pikachu/pewter_wake_1_2bpp.2bpp"
 GFX_PewterWake_2: ; e7d13
-INCBIN "gfx/pikachu/unknown_e7d13.2bpp"
+INCBIN "gfx/pikachu/pewter_wake_2_2bpp.2bpp"
 
 SECTION "bank3A", ROMX,BANK[$3A]
 
