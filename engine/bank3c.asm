@@ -174,8 +174,8 @@ TryApplyPikachuMovementData: ; f0a82
 	callab RefreshPikachuFollow
 	ret
 
-Pic_BillEnterTeleporter_0: INCBIN "gfx/pikachu/bill_enter_teleporter_0_pic.pic"
-GFX_BillEnterTeleporter_0: INCBIN "gfx/pikachu/bill_enter_teleporter_0_2bpp.2bpp"
+Pic_BillEnterTeleporter_0: INCBIN "gfx/chatot/Chatot10_1.pic"
+GFX_BillEnterTeleporter_0: INCBIN "gfx/chatot/Chatot10_2.2bpp"
 
 Pic_Statused_0:            INCBIN "gfx/chatot/Chatot15_1.pic"
 GFX_Statused_0:            INCBIN "gfx/chatot/Chatot15_2.2bpp"

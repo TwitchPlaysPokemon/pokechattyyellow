@@ -2560,7 +2560,7 @@ ItemUseTMHM:
 	; jr nz, .notTeachingThunderboltOrThunderToPikachu
 ; .teachingThunderboltOrThunderToPlayerPikachu
 	; ld a, $5
-	; ld [wContextDependentPikachuEmotion], a ; PikachuEmotion_ThunderBolt
+	; ld [wContextDependentPikachuEmotion], a ; PikachuEmotion_LowHP
 	; ld a, $85
 	; ld [wPikachuMood], a
 ; .notTeachingThunderboltOrThunderToPikachu
