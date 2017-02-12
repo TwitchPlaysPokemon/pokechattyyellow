@@ -50,10 +50,10 @@ IF DEF(MARKOV)
 	ld a, [wIsInBattle]
 	and a
 	jr nz, .doNotPlayLuaCry
-	ld [rNR51], a
+	ld [rNR52], a
 	ld a, e
 	add 2
-	call LuaRequest
+	call LuaRequest_NoHalt
 	jr .afterLuaRequest
 
 .doNotPlayLuaCry

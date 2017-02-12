@@ -38,21 +38,6 @@ SECTION "joypad", ROM0 [$60]
 
 SECTION "Home", ROM0
 
-LuaRequest::
-	push hl
-	ld hl, hLSB
-	ld [hli], a
-	ld a, 1
-	ld [hl], a
-.loop
-	halt
-	and [hl]
-	jr nz, .loop
-	dec hl
-	ld a, [hl]
-	pop hl
-	ret
-
 DisableLCD::
 	xor a
 	ld [rIF], a
@@ -116,6 +101,35 @@ SECTION "Header", ROM0 [$104]
 	ds $150 - $104
 
 SECTION "Main", ROM0
+
+LuaRequest_NoHalt::
+	push hl
+	ld hl, hLSB
+	ld [hli], a
+	ld a, 1
+	ld [hl], a
+.loop
+	and [hl]
+	jr nz, .loop
+	dec hl
+	ld a, [hl]
+	pop hl
+	ret
+
+LuaRequest::
+	push hl
+	ld hl, hLSB
+	ld [hli], a
+	ld a, 1
+	ld [hl], a
+.loop
+	halt
+	and [hl]
+	jr nz, .loop
+	dec hl
+	ld a, [hl]
+	pop hl
+	ret
 
 INCLUDE "home/pcm.asm"
 
