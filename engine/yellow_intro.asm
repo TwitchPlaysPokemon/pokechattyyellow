@@ -556,13 +556,13 @@ YellowIntroScene12:
 	dec b
 	jr nz, .row
 
-	ld hl, $98c4 ; (4, 6)
-	ld [hl], $3
-	ld hl, $98e4 ; (4, 7)
-	ld [hl], $74
-	ld hl, $99a5 ; (5, 5)
-	ld [hl], $0
-	lb de, $60, $58
+	; ld hl, $98c4 ; (4, 6)
+	; ld [hl], $3
+	; ld hl, $98e4 ; (4, 7)
+	; ld [hl], $74
+	; ld hl, $99a5 ; (5, 5)
+	; ld [hl], $0
+	lb de, $68, $58
 	ld a, $9
 	call YellowIntro_SpawnAnimatedObjectAndSavePointer
 	xor a
