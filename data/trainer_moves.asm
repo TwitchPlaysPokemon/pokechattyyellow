@@ -126,12 +126,12 @@ SpecialTrainerMoves:
 	db 2,1,SOLARBEAM
 	db 2,2,BUBBLEBEAM
 	db 2,3,PSYWAVE
-	db 2,4,0
+	db 2,4,$fe
 	db 0
 	
 	db LASS,$10
-	db 1,2,0
-	db 2,2,0
+	db 1,2,$fe
+	db 2,2,$fe
 	db 0
 	
 	db JR_TRAINER_M, $2
@@ -182,12 +182,12 @@ SpecialTrainerMoves:
 	db JR_TRAINER_F,$0b
 	db 1,1,RAZOR_LEAF
 	db 1,2,GROWTH
-	db 1,3,0
-	db 1,4,0
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,MEGA_DRAIN
 	db 2,2,GROWTH
-	db 2,3,0
-	db 2,4,0
+	db 2,3,$fe
+	db 2,4,$fe
 	db 0
 
 	db JR_TRAINER_F,$0c
@@ -204,7 +204,7 @@ SpecialTrainerMoves:
 	db 3,1,FLAMETHROWER
 	db 3,2,FIRE_SPIN
 	db 3,3,TAKE_DOWN
-	db 3,4,0
+	db 3,4,$fe
 	db 0
 
 	db JR_TRAINER_F,$0e
@@ -212,8 +212,8 @@ SpecialTrainerMoves:
 	db 1,2,SURF
 	db 2,1,TAKE_DOWN
 	db 2,2,THUNDER
-	db 2,3,0
-	db 2,4,0
+	db 2,3,$fe
+	db 2,4,$fe
 	db 3,3,SLAM
 	db 3,4,MEGA_DRAIN
 	db 0
@@ -257,11 +257,11 @@ SpecialTrainerMoves:
 	db 2,1,SURF
 	db 2,2,ICE_BEAM
 	db 2,3,DIG
-	db 2,4,0
+	db 2,4,$fe
 	db 3,1,PSYCHIC_M
 	db 3,2,SOLARBEAM
 	db 3,3,STRING_SHOT
-	db 3,4,0
+	db 3,4,$fe
 	db 0
 
 	db JR_TRAINER_F,$16
@@ -280,7 +280,7 @@ SpecialTrainerMoves:
 	db 3,1,ACID
 	db 3,2,STUN_SPORE
 	db 3,3,TAKE_DOWN
-	db 3,4,0
+	db 3,4,$fe
 	db 0
 
 	db JR_TRAINER_F,$18
@@ -335,19 +335,19 @@ SpecialTrainerMoves:
 	db SUPER_NERD,$3
 	db 1,1,FLASH
 	db 2,1,ICE_BEAM
-	db 2,2,0
-	db 2,4,0
+	db 2,2,$fe
+	db 2,4,$fe
 	db 0
 	
 	db SUPER_NERD,$5
 	db 1,1,SELFDESTRUCT
-	db 1,2,0
-	db 1,3,0
-	db 1,4,0
+	db 1,2,$fe
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,TOXIC
 	db 2,2,SONICBOOM
 	db 2,3,REST
-	db 2,4,0
+	db 2,4,$fe
 	db 0
 	
 	db SUPER_NERD,$9
@@ -455,10 +455,10 @@ SpecialTrainerMoves:
 	db 1,1,STRENGTH
 	db 1,2,SUBMISSION
 	db 1,3,BIDE
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,SKULL_BASH
 	db 2,3,THUNDERBOLT
-	db 2,4,0
+	db 2,4,$fe
 	db 3,1,BUBBLEBEAM
 	db 3,2,TAKE_DOWN
 	db 3,3,COUNTER
@@ -469,21 +469,21 @@ SpecialTrainerMoves:
 	db 1,1,ROCK_SLIDE
 	db 2,2,SURF
 	db 2,3,THUNDERBOLT
-	db 2,4,0
+	db 2,4,$fe
 	db 0
 
 	db BIKER,$4
 	db 1,1,FIRE_PUNCH
-	db 1,2,0
-	db 1,3,0
-	db 1,4,0
+	db 1,2,$fe
+	db 1,3,$fe
+	db 1,4,$fe
 	db 0
 
 	db BIKER,$7
 	db 1,1,EARTHQUAKE
 	db 1,2,DOUBLE_EDGE
-	db 1,3,0
-	db 1,4,0
+	db 1,3,$fe
+	db 1,4,$fe
 	db 0
 
 	db BIKER,$7
@@ -496,27 +496,27 @@ SpecialTrainerMoves:
 	db BIKER,$0b
 	db 1,1,SURF
 	db 1,2,SKULL_BASH
-	db 1,3,0
-	db 1,4,0
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,ROCK_SLIDE
 	db 3,1,FIRE_BLAST
 	db 3,2,DRAGON_RAGE
-	db 3,3,0
+	db 3,3,$fe
 	db 0
 
 	db BIKER,$0c
 	db 1,1,DRAGON_RAGE
 	db 1,2,FLAMETHROWER
 	db 1,3,SLASH
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,SLASH
 	db 2,2,SAND_ATTACK
 	db 2,3,SUBMISSION
-	db 2,4,0
+	db 2,4,$fe
 	db 3,1,SURF
 	db 3,2,ICE_BEAM
-	db 3,3,0
-	db 3,4,0
+	db 3,3,$fe
+	db 3,4,$fe
 	db 0
 
 	db BIKER,$0d
@@ -532,7 +532,7 @@ SpecialTrainerMoves:
 	db 3,1,TAKE_DOWN
 	db 3,2,DIG
 	db 3,3,DRAGON_RAGE
-	db 3,4,0
+	db 3,4,$fe
 	db 0
 
 	db BIKER,$0f
@@ -585,35 +585,35 @@ SpecialTrainerMoves:
 
 	db FISHER,$3
 	db 1,1,HYDRO_PUMP
-	db 1,2,0
+	db 1,2,$fe
 	db 0
 
 	db FISHER,$4
 	db 1,1,HYPNOSIS
 	db 1,2,SURF
-	db 1,3,0
-	db 1,4,0
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,BUBBLEBEAM
 	db 2,2,REST
-	db 2,3,0
-	db 2,4,0
+	db 2,3,$fe
+	db 2,4,$fe
 	db 3,1,SUBMISSION
 	db 3,2,ICE_BEAM
-	db 3,3,0
-	db 3,4,0
+	db 3,3,$fe
+	db 3,4,$fe
 	db 0
 
 	db FISHER,$6
 	db 1,3,BUBBLEBEAM
-	db 2,1,0
+	db 2,1,$fe
 	db 2,2,SELFDESTRUCT
 	db 3,1,SURF
 	db 3,2,TAKE_DOWN
-	db 3,3,0
-	db 3,4,0
+	db 3,3,$fe
+	db 3,4,$fe
 	db 4,1,BUBBLEBEAM
 	db 4,3,REST
-	db 4,4,0
+	db 4,4,$fe
 	db 0
 	
 	db FISHER,$7
@@ -640,7 +640,7 @@ SpecialTrainerMoves:
 	db FISHER,$0b
 	db 1,1,SURF
 	db 1,2,DOUBLE_EDGE
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,TAKE_DOWN
 	db 2,2,ACID
 	db 3,1,BUBBLEBEAM
@@ -650,52 +650,52 @@ SpecialTrainerMoves:
 	db SWIMMER,$2
 	db 1,1,SURF
 	db 1,2,PSYCHIC_M
-	db 1,3,0
-	db 1,4,0
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,SURF
 	db 2,2,BLIZZARD
 	db 2,3,EXPLOSION
-	db 2,4,0
+	db 2,4,$fe
 	db 0
 
 	db SWIMMER,$3
 	db 1,1,HYDRO_PUMP
 	db 1,2,BLIZZARD
 	db 1,3,COUNTER
-	db 1,4,0
+	db 1,4,$fe
 	db 0
 
 	db SWIMMER,$5
 	db 1,1,SURF
-	db 1,2,0
-	db 1,3,0
-	db 1,4,0
+	db 1,2,$fe
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,BUBBLEBEAM
 	db 2,2,ICE_BEAM
 	db 2,3,MEGA_DRAIN
-	db 2,4,0
+	db 2,4,$fe
 	db 0
 
 	db SWIMMER,$8
 	db 1,1,BUBBLEBEAM
 	db 1,2,THUNDERBOLT
 	db 1,3,PSYCHIC_M
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,SURF
 	db 2,2,ICE_BEAM
-	db 2,3,0
-	db 2,4,0
+	db 2,3,$fe
+	db 2,4,$fe
 	db 0
 
 	db SWIMMER,$9
 	db 1,1,BLIZZARD
 	db 1,2,DOUBLE_EDGE
 	db 1,3,AGILITY
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,FISSURE
 	db 2,2,SUBMISSION
 	db 2,3,SKULL_BASH
-	db 2,4,0
+	db 2,4,$fe
 	db 0
 
 	db SWIMMER,$0a
@@ -734,7 +734,7 @@ SpecialTrainerMoves:
 
 	db SWIMMER,$0f
 	db 1,2,BODY_SLAM
-	db 1,4,0
+	db 1,4,$fe
 	db 2,3,MEGA_KICK
 	db 3,2,SURF
 	db 4,1,ICE_BEAM
@@ -743,13 +743,13 @@ SpecialTrainerMoves:
 	
 	db CUE_BALL,$1
 	db 1,1,THUNDER
-	db 1,2,0
-	db 1,3,0
-	db 1,4,0
+	db 1,2,$fe
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,BLIZZARD
-	db 2,2,0
-	db 2,3,0
-	db 2,4,0
+	db 2,2,$fe
+	db 2,3,$fe
+	db 2,4,$fe
 	db 0
 	
 	db CUE_BALL,$3
@@ -761,8 +761,8 @@ SpecialTrainerMoves:
 	
 	db CUE_BALL,$4
 	db 1,1,BLIZZARD
-	db 1,3,0
-	db 1,4,0
+	db 1,3,$fe
+	db 1,4,$fe
 	db 0
 
 	db CUE_BALL,$7
@@ -789,71 +789,71 @@ SpecialTrainerMoves:
 	
 	db GAMBLER,$2
 	db 1,1,METRONOME
-	db 1,2,0
-	db 1,3,0
-	db 1,4,0
+	db 1,2,$fe
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,METRONOME
-	db 2,2,0
-	db 2,3,0
-	db 2,4,0
+	db 2,2,$fe
+	db 2,3,$fe
+	db 2,4,$fe
 	db 3,1,METRONOME
-	db 3,2,0
-	db 3,3,0
-	db 3,4,0
+	db 3,2,$fe
+	db 3,3,$fe
+	db 3,4,$fe
 	db 0
 	
 	db GAMBLER,$3
 	db 1,1,HORN_DRILL
 	db 1,2,AGILITY
 	db 1,3,THUNDER_WAVE
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,FISSURE
-	db 2,2,0
-	db 2,3,0
-	db 2,4,0
+	db 2,2,$fe
+	db 2,3,$fe
+	db 2,4,$fe
 	db 0
 	
 	db GAMBLER,$4
 	db 1,1,BIDE
-	db 1,2,0
-	db 1,3,0
-	db 1,4,0
+	db 1,2,$fe
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,BIDE
-	db 2,2,0
-	db 2,3,0
-	db 2,4,0
+	db 2,2,$fe
+	db 2,3,$fe
+	db 2,4,$fe
 	db 3,1,BIDE
-	db 3,2,0
-	db 3,3,0
-	db 3,4,0
+	db 3,2,$fe
+	db 3,3,$fe
+	db 3,4,$fe
 	db 0
 
 	db GAMBLER,$5
 	db 1,1,BIDE
-	db 1,2,0
-	db 1,3,0
-	db 1,4,0
+	db 1,2,$fe
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,BIDE
-	db 2,2,0
-	db 2,3,0
-	db 2,4,0
+	db 2,2,$fe
+	db 2,3,$fe
+	db 2,4,$fe
 	db 3,1,BIDE
-	db 3,2,0
-	db 3,3,0
-	db 3,4,0
+	db 3,2,$fe
+	db 3,3,$fe
+	db 3,4,$fe
 	db 0
 
 	db GAMBLER,$7
 	db 1,1,TAKE_DOWN
 	db 1,2,DIG
-	db 1,3,0
-	db 2,1,0
-	db 2,2,0
+	db 1,3,$fe
+	db 2,1,$fe
+	db 2,2,$fe
 	db 2,3,DRAGON_RAGE
 	db 3,1,DRAGON_RAGE
 	db 3,2,MEGA_PUNCH
 	db 3,3,COUNTER
-	db 3,4,0
+	db 3,4,$fe
 	db 0
 	
 	db BEAUTY,$1
@@ -871,7 +871,7 @@ SpecialTrainerMoves:
 	
 	db BEAUTY,$5
 	db 1,3,THUNDERBOLT
-	db 1,4,0
+	db 1,4,$fe
 	db 0
 
 	db BEAUTY,$6
@@ -895,7 +895,7 @@ SpecialTrainerMoves:
 	db BEAUTY,$0a
 	db 1,1,PSYWAVE
 	db 1,2,BUBBLEBEAM
-	db 1,4,0
+	db 1,4,$fe
 	db 0
 
 	db BEAUTY,$0c
@@ -905,8 +905,8 @@ SpecialTrainerMoves:
 	db BEAUTY,$0e
 	db 1,1,PSYCHIC_M
 	db 1,2,THUNDERBOLT
-	db 1,3,0
-	db 1,4,0
+	db 1,3,$fe
+	db 1,4,$fe
 	db 0
 
 	db BEAUTY,$0f
@@ -933,13 +933,13 @@ SpecialTrainerMoves:
 
 	db PSYCHIC_TR,$2
 	db 1,1,METRONOME
-	db 1,2,0
-	db 1,3,0
-	db 1,4,0
+	db 1,2,$fe
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,METRONOME
-	db 2,2,0
-	db 2,3,0
-	db 2,4,0
+	db 2,2,$fe
+	db 2,3,$fe
+	db 2,4,$fe
 	db 0
 
 	db PSYCHIC_TR,$3
@@ -954,57 +954,57 @@ SpecialTrainerMoves:
 
 	db PSYCHIC_TR,$4
 	db 1,1,METRONOME
-	db 1,2,0
-	db 1,3,0
-	db 1,4,0
+	db 1,2,$fe
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,METRONOME
-	db 2,2,0
-	db 2,3,0
-	db 2,4,0
+	db 2,2,$fe
+	db 2,3,$fe
+	db 2,4,$fe
 	db 0
 	
 	db ROCKER,$2
 	db 1,1,THUNDERBOLT
 	db 2,1,THUNDERBOLT
 	db 2,2,HYPER_BEAM
-	db 2,4,0
+	db 2,4,$fe
 	db 0
 	
 	db JUGGLER,$2
 	db 1,1,SEISMIC_TOSS
 	db 1,2,PSYWAVE
-	db 1,3,0
-	db 1,4,0
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,PSYWAVE
-	db 2,2,0
-	db 2,3,0
-	db 2,4,0
+	db 2,2,$fe
+	db 2,3,$fe
+	db 2,4,$fe
 	db 3,1,SEISMIC_TOSS
 	db 3,2,PSYWAVE
-	db 3,3,0
-	db 3,4,0
+	db 3,3,$fe
+	db 3,4,$fe
 	db 4,1,HORN_DRILL
 	db 4,2,AGILITY
-	db 4,3,0
-	db 4,4,0
+	db 4,3,$fe
+	db 4,4,$fe
 	db 0
 
 	db JUGGLER,$3
 	db 1,1,THUNDERBOLT
 	db 1,2,ICE_BEAM
 	db 1,3,BUBBLEBEAM
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,BODY_SLAM
 	db 2,2,HORN_DRILL
 	db 2,3,SURF
-	db 2,4,0
+	db 2,4,$fe
 	db 0
 
 	db JUGGLER,$4
 	db 1,1,SKULL_BASH
-	db 1,2,0
-	db 1,3,0
-	db 1,4,0
+	db 1,2,$fe
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,BODY_SLAM
 	db 2,2,BLIZZARD
 	db 2,3,DOUBLE_KICK
@@ -1013,24 +1013,24 @@ SpecialTrainerMoves:
 
 	db JUGGLER,$5
 	db 1,1,BIDE
-	db 1,2,0
-	db 1,3,0
-	db 1,4,0
+	db 1,2,$fe
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,BIDE
-	db 2,2,0
-	db 2,3,0
-	db 2,4,0
+	db 2,2,$fe
+	db 2,3,$fe
+	db 2,4,$fe
 	db 3,1,BIDE
-	db 3,2,0
-	db 3,3,0
-	db 3,4,0
+	db 3,2,$fe
+	db 3,3,$fe
+	db 3,4,$fe
 	db 0
 
 	db JUGGLER,$8
 	db 1,1,BODY_SLAM
 	db 1,2,HORN_DRILL
-	db 1,3,0
-	db 1,4,0
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,SLUDGE
 	db 2,2,MINIMIZE
 	db 2,3,POISON_GAS
@@ -1038,7 +1038,7 @@ SpecialTrainerMoves:
 	db 3,1,SOLARBEAM
 	db 3,2,PSYBEAM
 	db 3,3,SLEEP_POWDER
-	db 3,4,0
+	db 3,4,$fe
 	db 4,1,THUNDERBOLT
 	db 5,1,TOXIC
 	db 5,2,SELFDESTRUCT
@@ -1046,8 +1046,8 @@ SpecialTrainerMoves:
 	db 5,4,SUBSTITUTE
 	db 6,1,BLIZZARD
 	db 6,2,BIDE
-	db 6,3,0
-	db 6,4,0
+	db 6,3,$fe
+	db 6,4,$fe
 	db 0
 	
 	db TAMER,$1
@@ -1076,25 +1076,25 @@ SpecialTrainerMoves:
 	db 6,1,TAKE_DOWN
 	db 6,2,POISONPOWDER
 	db 6,3,REFLECT
-	db 6,4,0
+	db 6,4,$fe
 	db 0
 	
 	db TAMER,$3
 	db 1,1,EARTHQUAKE
 	db 1,2,ROCK_SLIDE
-	db 1,3,0
-	db 1,4,0
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,MEGA_KICK
 	db 2,2,SUBMISSION
 	db 2,3,EARTHQUAKE
-	db 2,4,0
+	db 2,4,$fe
 	db 0
 
 	db TAMER,$4
 	db 1,1,EARTHQUAKE
 	db 2,1,EARTHQUAKE
 	db 2,2,HORN_DRILL
-	db 2,3,0
+	db 2,3,$fe
 	db 0
 
 	db TAMER,$5
@@ -1123,15 +1123,15 @@ SpecialTrainerMoves:
 	db 1,1,PSYCHIC_M
 	db 1,2,SOLARBEAM
 	db 1,3,SLEEP_POWDER
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,FLY
 	db 0
 
 	db BIRD_KEEPER,$3
 	db 1,1,RAZOR_WIND
 	db 1,2,WATER_GUN
-	db 1,3,0
-	db 1,4,0
+	db 1,3,$fe
+	db 1,4,$fe
 	db 0
 
 	db BIRD_KEEPER,$5
@@ -1145,14 +1145,14 @@ SpecialTrainerMoves:
 	db 1,1,FLY
 	db 1,2,TOXIC
 	db 1,3,SUBSTITUTE
-	db 1,4,0
+	db 1,4,$fe
 	db 0
 
 	db BIRD_KEEPER,$7
 	db 1,1,DRILL_PECK
 	db 1,2,DOUBLE_EDGE
 	db 1,3,SKY_ATTACK
-	db 1,4,0
+	db 1,4,$fe
 	db 0
 
 	db BIRD_KEEPER,$9
@@ -1163,7 +1163,7 @@ SpecialTrainerMoves:
 	db 1,1,DOUBLE_EDGE
 	db 1,2,FLY
 	db 1,3,QUICK_ATTACK
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,DRILL_PECK
 	db 2,2,FLY
 	db 2,3,TRI_ATTACK
@@ -1177,14 +1177,14 @@ SpecialTrainerMoves:
 
 	db BIRD_KEEPER,$0f
 	db 1,1,HYDRO_PUMP
-	db 1,2,0
+	db 1,2,$fe
 	db 0
 
 	db BLACKBELT,$2
 	db 1,1,SUBMISSION
 	db 1,2,DIG
 	db 1,3,COUNTER
-	db 1,4,0
+	db 1,4,$fe
 	db 0
 
 	db BLACKBELT,$3
@@ -1211,14 +1211,14 @@ SpecialTrainerMoves:
 	db 3,1,SUBMISSION
 	db 3,2,SKULL_BASH
 	db 3,3,RAGE
-	db 3,4,0
+	db 3,4,$fe
 	db 0
 
 	db BLACKBELT,$7
 	db 1,1,EARTHQUAKE
 	db 1,2,FIRE_BLAST
 	db 1,3,SUBMISSION
-	db 1,4,0
+	db 1,4,$fe
 	db 0
 
 	db BLACKBELT,$8
@@ -1244,13 +1244,13 @@ SpecialTrainerMoves:
 	db 1,4,REFLECT
 	db 2,1,SLASH
 	db 2,2,SEISMIC_TOSS
-	db 2,3,0
+	db 2,3,$fe
 	db 3,1,METRONOME
 	db 3,2,FLASH
 	db 4,1,SWIFT
 	db 4,2,SAND_ATTACK
 	db 4,3,BIDE
-	db 4,4,0
+	db 4,4,$fe
 	db 0
 
 	db SCIENTIST,$3
@@ -1264,7 +1264,7 @@ SpecialTrainerMoves:
 	db 1,1,SURF
 	db 1,2,SLASH
 	db 1,3,BIDE
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,HORN_ATTACK
 	db 2,2,BLIZZARD
 	db 2,3,LEER
@@ -1290,17 +1290,17 @@ SpecialTrainerMoves:
 
 	db GIOVANNI,$1
 	db 1,1,THUNDERBOLT
-	db 1,3,0
+	db 1,3,$fe
 	db 2,1,BLIZZARD
 	db 2,2,BUBBLEBEAM
-	db 3,1,0
+	db 3,1,$fe
 	db 3,1,ROCK_SLIDE
 	db 3,2,DOUBLE_TEAM
-	db 3,4,0
+	db 3,4,$fe
 	db 4,1,BODY_SLAM
 	db 4,2,HORN_DRILL
-	db 4,3,0
-	db 4,4,0
+	db 4,3,$fe
+	db 4,4,$fe
 	db 5,2,SURF
 	db 5,4,MIMIC
 	db 0
@@ -1309,7 +1309,7 @@ SpecialTrainerMoves:
 	db 1,1,BODY_SLAM
 	db 1,2,THUNDER
 	db 1,3,HORN_DRILL
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,FURY_SWIPES
 	db 2,2,BUBBLEBEAM
 	db 2,3,BITE
@@ -1343,14 +1343,14 @@ SpecialTrainerMoves:
 	db 6,1,EARTHQUAKE
 	db 6,2,SKULL_BASH
 	db 6,3,ICE_BEAM
-	db 6,4,0
+	db 6,4,$fe
 	db 0
 
 	db ROCKET,$8
 	db 1,1,PSYWAVE
 	db 1,2,SEISMIC_TOSS
 	db 2,1,BUBBLEBEAM
-	db 2,2,0
+	db 2,2,$fe
 	db 0
 
 	db ROCKET,$9
@@ -1358,18 +1358,18 @@ SpecialTrainerMoves:
 	db 1,2,REST
 	db 2,1,THUNDER
 	db 2,2,BLIZZARD
-	db 2,4,0
+	db 2,4,$fe
 	db 0
 
 	db ROCKET,$0a
 	db 1,1,PSYCHIC_M
 	db 1,2,THUNDERSHOCK
 	db 1,3,QUICK_ATTACK
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,STRENGTH
 	db 2,2,LEER
 	db 2,3,SUBMISSION
-	db 2,4,0
+	db 2,4,$fe
 	db 0
 
 	db ROCKET,$0c
@@ -1381,11 +1381,11 @@ SpecialTrainerMoves:
 	db ROCKET,$0d
 	db 1,1,HORN_DRILL
 	db 1,2,FIRE_BLAST
-	db 1,3,0
-	db 1,4,0
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,2,STRENGTH
-	db 2,3,0
-	db 2,4,0
+	db 2,3,$fe
+	db 2,4,$fe
 	db 0
 
 	db ROCKET,$0f
@@ -1396,22 +1396,22 @@ SpecialTrainerMoves:
 	db 2,1,BUBBLEBEAM
 	db 2,2,PAY_DAY
 	db 2,3,DISABLE
-	db 2,4,0
+	db 2,4,$fe
 	db 0
 
 	db ROCKET,$12
 	db 1,1,MEGA_KICK
 	db 2,1,RAZOR_WIND
 	db 2,2,RAGE
-	db 2,3,0
-	db 2,4,0
+	db 2,3,$fe
+	db 2,4,$fe
 	db 0
 
 	db ROCKET,$18
 	db 1,1,DOUBLE_EDGE
 	db 1,2,CONFUSE_RAY
-	db 1,3,0
-	db 1,4,0
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,DIG
 	db 0
 
@@ -1430,15 +1430,15 @@ SpecialTrainerMoves:
 	db 1,1,TRI_ATTACK
 	db 1,2,SUBMISSION
 	db 1,3,MEDITATE
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,SEISMIC_TOSS
 	db 2,2,EARTHQUAKE
 	db 2,3,ROCK_SLIDE
-	db 2,4,0
+	db 2,4,$fe
 	db 3,1,BODY_SLAM
 	db 3,2,GUILLOTINE
-	db 3,3,0
-	db 3,4,0
+	db 3,3,$fe
+	db 3,4,$fe
 	db 0
 
 	db ROCKET,$1b
@@ -1450,7 +1450,7 @@ SpecialTrainerMoves:
 	db 3,1,RAZOR_WIND
 	db 3,3,CONFUSE_RAY
 	db 3,2,TAKE_DOWN
-	db 3,4,0
+	db 3,4,$fe
 	db 0
 
 	db ROCKET,$1c
@@ -1468,7 +1468,7 @@ SpecialTrainerMoves:
 	db 2,1,DRAGON_RAGE
 	db 2,2,TAKE_DOWN
 	db 2,3,LEER
-	db 2,4,0
+	db 2,4,$fe
 	db 0
 
 	db ROCKET,$21
@@ -1496,15 +1496,15 @@ SpecialTrainerMoves:
 	db ROCKET,$23
 	db 1,1,PSYWAVE
 	db 1,2,ICE_PUNCH
-	db 1,3,0
-	db 1,4,0
+	db 1,3,$fe
+	db 1,4,$fe
 	db 0
 
 	db ROCKET,$24
 	db 1,1,FIRE_BLAST
 	db 1,2,DRAGON_RAGE
 	db 1,3,TAKE_DOWN
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,PETAL_DANCE
 	db 2,2,DOUBLE_EDGE
 	db 2,3,ACID
@@ -1512,7 +1512,7 @@ SpecialTrainerMoves:
 	db 3,1,BUBBLEBEAM
 	db 3,2,SUBMISSION
 	db 3,3,SKULL_BASH
-	db 3,4,0
+	db 3,4,$fe
 	db 0
 
 	db ROCKET,$25
@@ -1529,12 +1529,12 @@ SpecialTrainerMoves:
 	db 1,1,SURF
 	db 1,2,TOXIC
 	db 1,3,REST
-	db 1,4,0
+	db 1,4,$fe
 	db 2,2,MEGA_KICK
 	db 3,1,FISSURE
 	db 3,2,THUNDER
-	db 3,3,0
-	db 3,4,0
+	db 3,3,$fe
+	db 3,4,$fe
 	db 0
 
 	db ROCKET,$2a
@@ -1552,7 +1552,7 @@ SpecialTrainerMoves:
 	db 1,1,TAKE_DOWN
 	db 1,2,BUBBLEBEAM
 	db 1,3,SCREECH
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,WRAP
 	db 2,2,ROCK_SLIDE
 	db 2,3,GLARE
@@ -1564,7 +1564,7 @@ SpecialTrainerMoves:
 	db ROCKET,$2c
 	db 1,1,TAKE_DOWN
 	db 1,2,BUBBLEBEAM
-	db 1,4,0
+	db 1,4,$fe
 	db 2,2,ROCK_SLIDE
 	db 3,1,THUNDERBOLT
 	db 3,2,REST
@@ -1581,19 +1581,19 @@ SpecialTrainerMoves:
 	db 2,4,GLARE
 	db 3,1,BUBBLEBEAM
 	db 3,2,SLASH
-	db 3,3,0
-	db 3,4,0
+	db 3,3,$fe
+	db 3,4,$fe
 	db 0
 
 	db COOLTRAINER_M,$1
 	db 1,1,BODY_SLAM
 	db 1,2,THUNDER
 	db 1,3,HORN_DRILL
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,BLIZZARD
 	db 2,2,BUBBLEBEAM
 	db 2,3,DOUBLE_EDGE
-	db 2,4,0
+	db 2,4,$fe
 	db 3,1,HYPER_BEAM
 	db 3,2,LEECH_SEED
 	db 3,3,SWORDS_DANCE
@@ -1627,16 +1627,16 @@ SpecialTrainerMoves:
 
 	db COOLTRAINER_M,$9
 	db 1,1,EARTHQUAKE
-	db 1,2,0
-	db 1,3,0
-	db 1,4,0
+	db 1,2,$fe
+	db 1,3,$fe
+	db 1,4,$fe
 	db 0
 
 	db COOLTRAINER_M,$0a
 	db 1,1,DOUBLE_EDGE
 	db 1,2,EARTHQUAKE
 	db 1,3,BLIZZARD
-	db 1,4,0
+	db 1,4,$fe
 	db 0
 
 	db COOLTRAINER_F,$2
@@ -1651,22 +1651,22 @@ SpecialTrainerMoves:
 	db 3,1,FLAMETHROWER
 	db 3,2,DIG
 	db 3,3,TAKE_DOWN
-	db 3,4,0
+	db 3,4,$fe
 	db 0
 
 	db COOLTRAINER_F,$3
 	db 1,1,METRONOME
-	db 1,2,0
-	db 1,3,0
-	db 1,4,0
+	db 1,2,$fe
+	db 1,3,$fe
+	db 1,4,$fe
 	db 2,1,METRONOME
-	db 2,2,0
-	db 2,3,0
-	db 2,4,0
+	db 2,2,$fe
+	db 2,3,$fe
+	db 2,4,$fe
 	db 3,1,METRONOME
 	db 3,2,SOFTBOILED
 	db 3,3,TOXIC
-	db 3,4,0
+	db 3,4,$fe
 	db 0
 
 	db COOLTRAINER_F,$5
@@ -1677,7 +1677,7 @@ SpecialTrainerMoves:
 	db 2,1,THUNDER
 	db 2,2,SEISMIC_TOSS
 	db 2,3,DOUBLE_EDGE
-	db 2,4,0
+	db 2,4,$fe
 	db 3,1,FIRE_BLAST
 	db 3,2,FIRE_SPIN
 	db 3,3,HORN_DRILL
@@ -1739,11 +1739,11 @@ SpecialTrainerMoves:
 	db 1,4,SWORDS_DANCE
 	db 2,1,STUN_SPORE
 	db 2,3,VINE_WHIP  
-	db 2,4,0
+	db 2,4,$fe
 	db 3,1,DIG
 	db 3,2,SLASH
 	db 3,3,SPORE
-	db 3,4,0
+	db 3,4,$fe
 	db 4,1,ACID
 	db 4,2,MEGA_DRAIN
 	db 4,3,REST
@@ -1822,15 +1822,15 @@ SpecialTrainerMoves:
 	db 1,1,EGG_BOMB
 	db 1,2,HYPNOSIS
 	db 1,3,REFLECT
-	db 1,4,0
+	db 1,4,$fe
 	db 2,1,SWORDS_DANCE
 	db 2,2,SLASH
 	db 2,3,SAND_ATTACK
-	db 2,4,0
+	db 2,4,$fe
 	db 3,1,METRONOME
 	db 3,2,CONFUSION
 	db 3,3,KINESIS
-	db 3,4,0
+	db 3,4,$fe
 	db 4,1,SWIFT
 	db 4,2,REST
 	db 4,3,SAND_ATTACK
@@ -2077,7 +2077,7 @@ SpecialTrainerMoves:
 	db CHANNELER,$18
 	db 1,1,SEISMIC_TOSS
 	db 1,2,MEGA_KICK
-	db 1,4,0
+	db 1,4,$fe
 	db 2,2,BLIZZARD
 	db 0
 

@@ -2,13 +2,14 @@ TransformEffect_:
 	ld hl, wBattleMonSpecies
 	ld de, wEnemyMonSpecies
 	ld bc, wEnemyBattleStatus3
-	ld a, [wEnemyBattleStatus1]
 	ld a, [hBattleTurn]
 	and a
+	ld a, [wEnemyBattleStatus1]
 	jr nz, .hitTest
 	ld hl, wEnemyMonSpecies
 	ld de, wBattleMonSpecies
 	ld bc, wPlayerBattleStatus3
+	xor a
 	ld [wPlayerMoveListIndex], a
 	ld a, [wPlayerBattleStatus1]
 .hitTest
@@ -39,7 +40,7 @@ TransformEffect_:
 .gotAnimToPlay
 	rst FarCall
 	pop af
-	jr nz, .skip2
+	jr z, .skip2
 	callab ReshowSubstituteAnim
 .skip2
 	pop bc

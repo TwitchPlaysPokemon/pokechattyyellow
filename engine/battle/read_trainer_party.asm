@@ -112,6 +112,10 @@ ReadTrainer:
 	ld b, 0
 	add hl, bc
 	ld a, [de]
+	cp $fe
+	jr nz, .notNullMove
+	xor a
+.notNullMove
 	inc de
 	ld [hl], a
 	jr .writeAdditionalMoveDataLoop

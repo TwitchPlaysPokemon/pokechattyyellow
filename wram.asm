@@ -1907,7 +1907,13 @@ wMissableObjectCounter:: ; d047
 
 	ds 1
 
-	ds 13
+wAIMoveWeightings::
+	ds 4
+
+wAIMoveNewList::
+	ds 4
+
+	ds 5
 
 wIsInBattle:: ; d056
 ; lost battle, this is -1
@@ -2050,8 +2056,12 @@ wPlayerBideAccumulatedDamage:: ; d073
 
 wUnknownSerialCounter2:: ; d073
 ; 2 bytes
+	ds 2
 
-	ds 4
+wAIBuffer1::
+	ds 1
+wAIBuffer2::
+	ds 1
 
 wEscapedFromBattle:: ; d077
 ; non-zero when an item or move that allows escape from battle was used
