@@ -196,6 +196,10 @@ TalkToPikachu:
 	call GetPikaPicAnimationScriptIndex
 	call DeletedFunction_fcffb
 load_expression
+	cp (PikachuEmotionTableEnd - PikachuEmotionTable) / 2
+	jr c, .okay
+	ld a, 1
+.okay
 	ld [wExpressionNumber], a
 	ld hl, PikachuEmotionTable
 	call DoStarterPikachuEmotions
