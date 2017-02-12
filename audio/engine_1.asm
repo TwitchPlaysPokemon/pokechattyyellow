@@ -833,7 +833,7 @@ Audio1_notepitch: ; 0x9568
 
 Audio1_EnableChannelOutput:
 	ld b, 0
-	call Audio1_9972
+	ld hl, Audio1_HWChannelEnableMasks
 	add hl, bc
 	ld a, [rNR51]
 	or [hl] ; set this channel's bits
@@ -853,7 +853,7 @@ Audio1_EnableChannelOutput:
 ; If this is the SFX noise channel or a music channel whose corresponding
 ; SFX channel is off, apply stereo panning.
 	ld a, [wStereoPanning]
-	call Audio1_9972
+	ld hl, Audio1_HWChannelEnableMasks
 	add hl, bc
 	and [hl]
 	ld d, a

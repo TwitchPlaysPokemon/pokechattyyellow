@@ -211,8 +211,6 @@ OptionsMenu_SpeakerSettings:
 	ld c, a
 	swap a
 	ld b, a
-	xor a
-	ld [rNR51], a
 	ld a, [wOptions]
 	and $cf
 	or b
