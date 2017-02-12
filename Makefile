@@ -40,10 +40,10 @@ clean: tidy
 
 %.asm: ;
 $(objs): %.o: %.asm $$(%_dep)
-	rgbasm -h -o $@ $*.asm
+	rgbasm -o $@ $*.asm
 
 $(markov_objs): %_markov.o: %.asm $$(%_dep)
-	rgbasm -D MARKOV -h -o $@ $*.asm
+	rgbasm -D MARKOV -o $@ $*.asm
 
 opts = -cjsv -k 01 -l 0x33 -m 0x1b -p 0 -r 03 -t "TPP_CHATTYYLLW"
 
