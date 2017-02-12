@@ -117,17 +117,9 @@ Func_41d07:
 	ret
 
 OptionsMenu_BattleAnimations:
-	ld a, [hJoy5]
-	and D_RIGHT | D_LEFT
-	jr nz, .asm_41d33
-	ld a, [wOptions]
-	and $80 ; mask other bits
-	jr .asm_41d3b
-.asm_41d33
-	ld a, [wOptions]
-	xor $80
-	ld [wOptions], a
-.asm_41d3b
+	ld hl, wOptions
+	res 7, [hl]
+	xor a
 	ld bc, $0
 	sla a
 	rl c
