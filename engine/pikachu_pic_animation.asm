@@ -221,10 +221,12 @@ PikaPicAnimTimerAndJoypad:
 	call Delay3
 	call CheckPikaPicAnimTimer
 	and a
+IF !DEF(MARKOV)
 	ret nz
 	call JoypadLowSensitivity
 	ld a, [hJoyPressed]
 	and A_BUTTON | B_BUTTON
+ENDC
 	ret
 
 CheckPikaPicAnimTimer:
