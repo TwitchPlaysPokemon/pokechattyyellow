@@ -5321,7 +5321,7 @@ ReloadMoveData:
 ; the follow two function calls are used to reload the move name
 	pop af
 	cp CHATTER
-	ld de, wMarkovChainBuffer
+	ld de, wOverworldMap
 	call nz, GetMoveName
 	call CopyStringToCF4B
 	ld a, $01
