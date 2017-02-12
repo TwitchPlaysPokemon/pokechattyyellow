@@ -675,7 +675,12 @@ TextCommand18::
 	push hl
 	push bc
 	ld bc, $180
+	ld a, [wIsInBattle]
+	and a
 	ld hl, wMarkovChainBuffer
+	jr z, .gotBuffer
+	ld hl, wOverworldMap
+.gotBuffer
 	xor a
 .fill
 	ld [hli], a
