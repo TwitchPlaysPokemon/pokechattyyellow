@@ -91,15 +91,15 @@ BillsHousePikachuEmotionCheck:
 	jr z, .asm_f24d2
 	ld a, [wBillsHouseCurScript]
 	cp $5
-	ld e, $1b ; PikachuEmotion_BillEmergeFromTeleporter
+	ldpikaemotion e, PikachuEmotion_BillEmergeFromTeleporter
 	ret z
 	cp $0
-	ld e, $17 ; PikachuEmotion_BillFirstTime
+	ldpikaemotion e, PikachuEmotion_BillFirstTime
 	ret z
 	CheckEventHL EVENT_MET_BILL_2
-	ld e, $20 ; PikachuEmotion_BillGetOverShock
+	ldpikaemotion e, PikachuEmotion_BillGetOverShock
 	ret z
-	ld e, $1f ; PikachuEmotion_BillEnterTeleporter
+	ldpikaemotion e, PikachuEmotion_BillEnterTeleporter
 	ret
 
 .asm_f24d2

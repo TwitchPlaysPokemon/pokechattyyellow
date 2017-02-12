@@ -195,7 +195,7 @@ TalkToPikachu:
 	jr c, load_expression
 	call GetPikaPicAnimationScriptIndex
 	call DeletedFunction_fcffb
-load_expression:
+load_expression
 	ld [wExpressionNumber], a
 	ld hl, PikachuEmotionTable
 	call DoStarterPikachuEmotions
@@ -239,6 +239,7 @@ pikaemotion_def: MACRO
 	; pikaemotion_def PikachuEmotion_FanClub2 ; fan club 2
 	pikaemotion_def PikachuEmotion_BillEnterTeleporter ; bill's house 2
 	pikaemotion_def PikachuEmotion_BillGetOverShock ; bill's house 3
+PikachuEmotionTableEnd
 	pikaemotion_def .error ; error handling
 
 .error:

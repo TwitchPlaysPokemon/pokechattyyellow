@@ -258,7 +258,7 @@ PikaPicAnimScript_LavenderTown:
 	pikapic_loadgfx GFX_LavenderTown_1
 	pikapic_loadgfx GFX_LavenderTown_2
 	pikapic_loadgfx GFX_LavenderTown_3
-	pikapic_animation PikaPicAnimBGFrames_CaughtPokemon_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_BillFirstTime_0, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_LavenderTown_1, $99, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_LavenderTown_2, $b2, $0, $0
 	pikapic_waitbgmap
@@ -279,7 +279,7 @@ PikaPicAnimScript_Burned:
 	pikapic_setduration 60
 	pikapic_loadgfx GFX_Burned_0
 	pikapic_loadgfx GFX_Burned_1
-	pikapic_animation PikaPicAnimBGFrames_CaughtPokemon_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_BillFirstTime_0, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Burned_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
