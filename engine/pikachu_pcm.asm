@@ -55,6 +55,7 @@ IF DEF(MARKOV)
 	add 2
 	call LuaRequest
 	jr .afterLuaRequest
+
 .doNotPlayLuaCry
 	call GetPikachuCryPointer
 .playPikachuPCM

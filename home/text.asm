@@ -697,7 +697,12 @@ TextCommand18::
 	pop af
 	rst Bankswitch
 	pop bc
+	ld a, [wIsInBattle]
+	and a
 	ld hl, wMarkovChainBuffer
+	jr z, .gotBuffer2
+	ld hl, wOverworldMap
+.gotBuffer2
 	call TextCommandProcessor
 	pop hl
 	jp NextTextCommand
