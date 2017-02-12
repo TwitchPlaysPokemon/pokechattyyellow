@@ -107,6 +107,8 @@
 	const CRED_CODING                ; 69
 	const CRED_GRAPHICS              ; 6A
 	const CRED_MOVES                 ; 6B
+	const CRED_DABOMSTEW             ; 6C
+	const CRED_KIP                   ; 6D
 
 const_value SET $fa
 	const CRED_THE_END
