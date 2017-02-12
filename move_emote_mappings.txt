@@ -1,0 +1,132 @@
+fn emote_mapper(s: &str) -> (u8, BadgeEnum) {
+    match s {
+        "Poooound" => (0x01, NoBadge), //Pound
+        "KappaWealth" | "tppPokeyen" => (0x06, NoBadge), //Pay Day
+        ":)" => (0x10, NoBadge), //Gust
+        "CoolStoryBob" => (0x11, NoBadge), //Wing Attack
+        "duDudu" => (0x1c, NoBadge), //Sand attack
+        "RlyTho" => (0x21, NoBadge), //Tackle
+        "TBAngel" => (0x18, NoBadge), //Double Kick
+        "CorgiDerp" => (0x27, NoBadge), //Tail Whip
+        "DoritosChip" | "WholeWheat" => (0x28, NoBadge), //Poison Sting
+        "GrammarKing" | "B)" => (0x2B, NoBadge), //Leer
+        "OhMyDog" | "DogFace" => (0x2E, NoBadge), //Roar
+        "SwiftRage" => (0x63, NoBadge), //Rage
+        "copyThis" => (0x66, NoBadge), //Mimic
+        "WTRuck" | "FailFish" | "tppCrit" => (0x74, NoBadge), //Focus Energy
+        "BrokeBack" | ":P" | ";P" => (0x7A, NoBadge), //Lick
+        "Kappa" => (0x84, NoBadge), //Constrict
+        "BatChest" => (0x8D, NoBadge), //Leech Life
+        "ArgieB8" | "TheIlluminati" => (0x96, NoBadge), //Splash
+		"KevinTurtle" | "MikeHogu" => (0x6E, NoBadge), //Withdraw
+		"SMOrc" | "GOWSkull" => (0x82, NoBadge), //Skull Bash
+		"DxCat" | "Keepo" => (0x0A, NoBadge), //Scratch
+		"FrankerZ" | "RalpherZ" => (0x2D, NoBadge), //Growl
+		"TTours" | "tppMiss" => (0x94, NoBadge), //Flash
+		"StinkyCheese"| "FreakinStinkin" | ":o" => (0x8B, NoBadge), //Poison Gas
+		"DansGame" => (0x7B, NoBadge), //Smog
+		"BudBlast" | "EagleEye" => (0x0D, NoBadge), //Razor Wind
+		"Kreygasm" | "VoHiYo" => (0x51, NoBadge), //String Shot
+		"OSfrog" => (0x36, NoBadge), //Mist
+		"TwitchRPG" | "OptimizePrime"  | ":D" => (0x90, NoBadge), //Transform
+        "SuperVinlin" | "ArsonNoSexy" => (0x75, NoBadge), //Bide
+        "PRChase" | "tppRng" => (0x76, NoBadge), //Metronome
+        "pastaThat" => (0x77, NoBadge), //Mirror Move
+		"BigBrother" | "OneHand" => (0x6A, NoBadge), //Harden
+        "OpieOP" => (0x70, NoBadge), //Defense Curl
+		"NotLikeThis" => (0x30, NoBadge), //Supersonic
+		"VoteYea" |  | "tppRobored" => (0xA0, NoBadge), //Conversion
+		"PJSalt" | "VoteNay" => (0x32, NoBadge), //Disable
+		"PJSugar" | "tppHax" => (0x86, NoBadge), //Kinesis
+		"FUNgineer" | "DAESuppy" => (0x58, NoBadge), //Rock Throw
+		"MrDestructoid" => (0x64, NoBadge), //Teleport
+        "UWot" | "YouDontSay" | "tppPc" => (0x95, NoBadge), //Psywave
+        "cmonBruh" => (0x44, NoBadge), //Counter
+        "JKanStyle" | "tppFogChamp" => (0x6C, NoBadge), //Smokescreen
+        
+        "TakeNRG" => (0x03, BoulderBadge), //Double Slap
+        "BrainSlug" | "tppDome" => (0x47, BoulderBadge), //Absorb
+        "HotPokket" | ":(" => (0x91, BoulderBadge), //Bubble
+		"Kippa" => (0x9a, BoulderBadge), //Fury Swipes
+		"twitchRaid"  => (0x2A, BoulderBadge), //Pin Missile
+		"WutFace" => (0x33, BoulderBadge), //Acid
+		"imGlitch" | "PrimeMe" => (0xA4, BoulderBadge), //Substitute
+		"RaccAttack" => (0x1f, BoulderBadge), //fury attack
+		"GivePLZ" | "SeemsGood" => (0x04, BoulderBadge), //Comet Punch
+
+        "YouWHY" => (0x0B, CascadeBadge), //Vicegrip
+        "AMPEnergy" => (0x48, CascadeBadge), //Mega Drain
+		"FunRun" => (0x61, CascadeBadge), //Agility
+		"PeoplesChamp" => (0x45, CascadeBadge), //Seismic Toss
+		"DxAbomb" | "StoneLightning" => (0x54, CascadeBadge), //Thundershock
+		"riPepperonis" => (0x4D, CascadeBadge), //Poisonpowder
+        "NomNom" => (0x8A, CascadeBadge), //Dream Eater
+		"DatSheffy" => (0x65, CascadeBadge), //Night Shade
+		"TinyFace" => (0x72, CascadeBadge), //Haze
+
+        "BCouch"  => (0x31, ThunderBadge), //Sonicboom
+        "CurseLit" => (0x34, ThunderBadge), //Ember
+        "AMPTropPunch" | "NerfBlueBlaster" => (0x37, ThunderBadge), //Water Gun
+        "DendiFace" | "BudStar" => (0x81, ThunderBadge), //Swift
+        "ItsBoshyTime" | "PraiseIt" | "tppHelix" => (0x83, ThunderBadge), //Spike Cannon
+		"ShazBotstix" | "MingLee" => (0x43, ThunderBadge), //Low Kick
+		"PMSTwin" => (0x29, ThunderBadge), //Twinneedle
+		"JonCarnage" => (0x15, ThunderBadge), //Slam
+        "TheThing" => (0x7D, ThunderBadge), //Bone Club
+		"UncleNox" | "MVGame" => (0x1E, ThunderBadge), //Horn Attack
+
+        "TooSpicy" => (0x4E, RainbowBadge), //Stun Spore
+        "mcaT" => (0x5D, RainbowBadge), //Confusion
+        "PicoMause" | "Mau5" => (0xA2, RainbowBadge), //Super Fang
+		"GingerPower" | "PipeHype" => (0x05, RainbowBadge), //Mega Punch
+		"CoolCat" | "ShadyLulu" => (0x89, RainbowBadge), //Glare
+		"BuddhaBar" | ":/"  => (0x60, RainbowBadge), //Meditate
+		"NinjaGrumpy"  => (0x68, RainbowBadge), //Double Team
+        "SoBayed" | "TheRinger" | "tppPokeball" => (0x2F, RainbowBadge), //Sing
+        "DBstyle" | "StrawBeary" => (0x42, RainbowBadge), //Submission
+        "BCWarrior" | "KappaPride" | ";)" => (0x6D, RainbowBadge), //Confuse Ray
+
+		"OSkomodo" => (0x2C, SoulBadge), //Bite
+        "FutureMan" | "<3" => (0x3C, SoulBadge), //Psybeam
+        "TBTacoLeft" => (0x71, SoulBadge), //Light Screen
+        "NotATK" | "TBTacoRight" => (0x73, SoulBadge), //Reflect
+        "SoonerLater" => (0x7C, SoulBadge), //Sludge
+		"TBCheesePull" | "ANELE" => (0x14, SoulBadge), //Bind
+		"ChefFrank" => (0x79, SoulBadge), //Egg Bomb
+		"PartyTime" | "HeyGuys" => (0x50, SoulBadge), //Petal Dance
+        "AMPEnergyCherry" => (0x4C, SoulBadge), //Solar Beam
+		"ThunBeast" | "RuleFive" | "tppSlowpoke" => (0x56, SoulBadge), //Thunder Wave
+
+        "PeteZaroll" | "PeteZarollTie"=> (0x1B, MarshBadge), //Rolling Kick
+        "BibleThump" => (0x3D, MarshBadge), //Bubble Beam
+        "AsianGlow" | "KappaClaus" => (0x3E, MarshBadge), //Aurora Beam
+        "BabyRage" => (0x52, MarshBadge), //Dragon Rage
+		"ResidentSleeper" | ":z" | "OSsloth" => (0x9C, MarshBadge), //Rest
+		"OMGScoots" | "o_O" => (0x92, MarshBadge), //Dizzy Punch
+		"SmoocherZ" => (0x49, MarshBadge), //Leech Seed
+		"PogChamp" => (0x9e, MarshBadge), //Hyper fang
+        "UnSane" | "RedCoat" => (0x24, MarshBadge), //Take Down
+
+        "HumbleLife" | "BlargNaut" => (0x5C, VolcanoBadge), //Toxic
+        "TF2John" | ">(" | "tppTrumpet" => (0x67, VolcanoBadge), //Screech
+		"HassanChop" => (0x02, VolcanoBadge), //Karate chop
+		"panicBasket" | "tppRiot" => (0x53, VolcanoBadge), //Fire Spin
+		"bleedPurple" => (0x97, VolcanoBadge), //Acid Armour
+		"HassaanChop" => (0x4A, VolcanoBadge), //Growth
+		"4Head" => (0x1D, VolcanoBadge), //Headbutt
+        "PanicVis" => (0x25, VolcanoBadge), //Thrash
+        "TriHard" => (0xA1, VolcanoBadge), //Tri Attack
+
+        "BloodTrail" => (0x1A, EarthBadge), //Jump Kick
+        "NerfRedBlaster" => (0x35, EarthBadge), //Flamethrower
+        "KappaRoss" => (0x41, EarthBadge), //Drill Peck
+        "RitzMitz" | "TheTarFu" => (0x5B, EarthBadge), //Dig
+        "R)" => (0x7f, EarthBadge), //Waterfall
+        "EleGiggle" | "Jebaited" => (0x9D, EarthBadge), //Rock Slide
+		"KAPOW" => (0x99, EarthBadge), //Explosion
+		"PermaSmug" | "SSSsss" => (0x78, EarthBadge), //Self-destruct
+		"PunchTrees" => (0x4B, EarthBadge), //Razor Leaf
+
+        _ => (0x96, BoulderBadge) //Splash, Default if not popular emote found
+    }
+}
