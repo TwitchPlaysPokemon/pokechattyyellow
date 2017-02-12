@@ -53,7 +53,7 @@ Func_f1f77:
 	ld hl, .MakePaymentText
 	call PrintText
 	ld a, 30
-	ld hl, 502
+	ld hl, 1502
 .poor_mans_discount
 	ld [wNumSafariBalls], a
 	ld a, h
@@ -144,6 +144,19 @@ SafariZoneEntranceCalculateLowCostAdmission:
 	ld a, 23
 	ld [hDivideBCDDivisor + 2], a
 	predef DivideBCDPredef3
+	; multiply by 3
+	ld hl, hDivideBCDQuotient
+	ld de, hMoney
+	ld bc, 3
+	call CopyData
+	ld hl, hMoney + 2
+	ld de, hDivideBCDQuotient + 2
+	ld c, 3
+	predef AddBCDPredef
+	ld hl, hMoney + 2
+	ld de, hDivideBCDQuotient + 2
+	ld c, 3
+	predef AddBCDPredef
 	ld a, [hDivideBCDQuotient + 2]
 	call SafariZoneEntranceConvertBCDtoNumber
 	push af
@@ -166,7 +179,7 @@ SafariZoneEntranceCalculateLowCostAdmission:
 .max_balls
 	ld a, 29
 .load_balls
-	ld hl, 502
+	ld hl, 1502
 	and a
 	ret
 
@@ -202,7 +215,7 @@ SafariZoneEntranceGetLowCostAdmissionText:
 	ld hl, SafariZoneEntranceText_f20f6
 	call PrintText_NoCreatingTextBox
 	ld a, $1
-	ld hl, 502
+	ld hl, 1502
 	and a
 	ret
 

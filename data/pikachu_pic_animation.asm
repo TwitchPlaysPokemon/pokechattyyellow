@@ -21,16 +21,16 @@ PikaPicAnimThunderboltPals:
 	db 4, %11100100
 	db $ff
 
-Data_fe26b:
-	pikapic_loadgfx Pic_Mood2Happy3_0
-	pikapic_loadgfx Pic_Mood3Happy3_0
-	pikapic_loadgfx ChatotSprite
-	pikapic_animation PikaPicAnimBGFrames_1, $80, $0, $0
-	pikapic_animation PikaPicAnimBGFrames_2, $b2, $5, $5
-	pikapic_animation PikaPicAnimBGFrames_3, $b6, $5, $5
-	pikapic_waitbgmap
-	pikapic_cry
-	pikapic_looptofinish
+; Data_fe26b:
+	; pikapic_loadgfx Pic_Mood2Happy3_0
+	; pikapic_loadgfx Pic_Mood3Happy3_0
+	; pikapic_loadgfx ChatotSprite
+	; pikapic_animation PikaPicAnimBGFrames_1, $80, $0, $0
+	; pikapic_animation PikaPicAnimBGFrames_2, $b2, $5, $5
+	; pikapic_animation PikaPicAnimBGFrames_3, $b6, $5, $5
+	; pikapic_waitbgmap
+	; pikapic_cry
+	; pikapic_looptofinish
 
 PikaPicAnimScript_00:
 PikaPicAnimScript_1d:
@@ -65,9 +65,10 @@ PikaPicAnimScript_Mood2Happy3:
 	; pikapic_looptofinish
 
 PikaPicAnimScript_Mood2Happy4:
-	pikapic_setduration 70
+	pikapic_setduration 64
 	pikapic_loadgfx Pic_Mood2Happy4_0
 	pikapic_loadgfx GFX_Mood2Happy4_0
+	pikapic_loadgfx GFX_Mood2Happy4_1
 	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood2Happy4_1, $99, $0, $0
 	pikapic_waitbgmap
@@ -75,9 +76,10 @@ PikaPicAnimScript_Mood2Happy4:
 	pikapic_looptofinish
 
 PikaPicAnimScript_Mood2Happy2:
-	pikapic_setduration 32
+	pikapic_setduration 24
 	pikapic_loadgfx Pic_Mood2Happy2_0
 	pikapic_loadgfx GFX_Mood2Happy2_0
+	pikapic_loadgfx GFX_Mood2Happy2_1
 	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood2Happy2_1, $99, $0, $0
 	pikapic_waitbgmap
@@ -85,7 +87,7 @@ PikaPicAnimScript_Mood2Happy2:
 	pikapic_looptofinish
 
 PikaPicAnimScript_Mood2Happy1:
-	pikapic_setduration 50
+	pikapic_setduration 24
 	pikapic_loadgfx Pic_Mood2Happy1_0
 	pikapic_loadgfx GFX_Mood2Happy1_0
 	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
@@ -207,8 +209,10 @@ PikaPicAnimScript_Mood2Happy6:
 
 PikaPicAnimScript_CaughtPokemon:
 	pikapic_setduration 32
-	pikapic_loadgfx GFX_CaughtPokemon_0
-	pikapic_loadgfx GFX_CaughtPokemon_1
+	pikapic_loadgfx Pic_Mood2Happy2_0
+	pikapic_loadgfx Pic_Mood2Happy4_0
+	pikapic_loadgfx GFX_Mood2Happy3_0
+	pikapic_loadgfx GFX_Mood2Happy4_0
 	pikapic_animation PikaPicAnimBGFrames_CaughtPokemon_0, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_CaughtPokemon_1, $99, $0, $0
 	pikapic_waitbgmap
@@ -216,9 +220,12 @@ PikaPicAnimScript_CaughtPokemon:
 	pikapic_looptofinish
 
 PikaPicAnimScript_Mood2Happy7:
-	pikapic_setduration 44
+	pikapic_setduration 64
 	pikapic_loadgfx Pic_Mood2Happy7_0
 	pikapic_loadgfx GFX_Mood2Happy7_0
+	pikapic_loadgfx GFX_Mood2Happy7_1
+	pikapic_loadgfx GFX_Mood2Happy7_2
+	pikapic_loadgfx GFX_Mood2Happy7_3
 	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_Mood2Happy7_1, $99, $0, $0
 	pikapic_waitbgmap
@@ -259,10 +266,10 @@ PikaPicAnimScript_LavenderTown:
 	pikapic_looptofinish
 
 PikaPicAnimScript_BillFirstTime:
-	pikapic_setduration 70
+	pikapic_setduration 35
 	pikapic_loadgfx GFX_BillFirstTime_0
 	pikapic_loadgfx GFX_BillFirstTime_1
-	pikapic_animation PikaPicAnimBGFrames_CaughtPokemon_0, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_BillFirstTime_0, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_BillFirstTime_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
@@ -278,19 +285,17 @@ PikaPicAnimScript_Burned:
 	pikapic_cry
 	pikapic_looptofinish
 
-; PikaPicAnimScript_ThunderBolt:
-	; pikapic_setduration 50
-	; pikapic_loadgfx Pic_ThunderBolt_0
-	; pikapic_loadgfx GFX_ThunderBolt_0
-	; pikapic_loadgfx GFX_ThunderBolt_1
-	; pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
-	; pikapic_animation PikaPicAnimBGFrames_ThunderBolt_1, $99, $0, $0
-	; pikapic_waitbgmap
-	; pikapic_cry
-	; pikapic_writebyte 13
-	; pikapic_waitbgmap
-	; pikapic_thunderbolt
-	; pikapic_ret
+PikaPicAnimScript_LowHP:
+	pikapic_setduration 50
+	pikapic_loadgfx Pic_LowHP_0
+	pikapic_loadgfx GFX_LowHP_0
+	pikapic_loadgfx GFX_LowHP_1
+	pikapic_loadgfx GFX_LowHP_2
+	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_LowHP_1, $99, $0, $0
+	pikapic_waitbgmap
+	pikapic_cry
+	pikapic_looptofinish
 
 Data_fe51f:
 	pikapic_waitbgmap
@@ -298,20 +303,20 @@ PikaPicAnimScript_PewterWake:
 	pikapic_setduration 100
 	pikapic_loadgfx Pic_FastAsleep_0
 	pikapic_loadgfx GFX_FastAsleep_0
-	pikapic_loadgfx GFX_PewterWake_1
-	pikapic_loadgfx GFX_PewterWake_2
+	pikapic_loadgfx GFX_Mood2Happy2_0
+	pikapic_loadgfx GFX_Mood2Happy2_1
 	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
 	pikapic_animation PikaPicAnimBGFrames_PewterWake_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
 	pikapic_looptofinish
 
-PikaPicAnimScript_BillEnterTeleporter:
+PikaPicAnimScript_BillEmergeFromTeleporter:
 	pikapic_setduration 30
-	pikapic_loadgfx Pic_BillEnterTeleporter_0
-	pikapic_loadgfx GFX_BillEnterTeleporter_0
+	pikapic_loadgfx Pic_BillEmergeFromTeleporter_0
+	pikapic_loadgfx GFX_BillEmergeFromTeleporter_0
 	pikapic_animation PikaPicAnimBGFrames_Generic, $80, $0, $0
-	pikapic_animation PikaPicAnimBGFrames_BillEnterTeleporter_1, $99, $0, $0
+	pikapic_animation PikaPicAnimBGFrames_BillEmergeFromTeleporter_1, $99, $0, $0
 	pikapic_waitbgmap
 	pikapic_cry
 	pikapic_looptofinish
@@ -338,20 +343,22 @@ pikapicanimgfx: MACRO
 PikaPicAnimGFX_Null_id::
 	dbbw            1, $39,$0000
 	pikapicanimgfx -1, Pic_Mood2Happy3_0
-	pikapicanimgfx  5, GFX_Mood2Happy3_0
+	pikapicanimgfx 25, GFX_Mood2Happy3_0
 ; 	pikapicanimgfx -1, Pic_Mood3Happy5_0
 ; 	pikapicanimgfx 10, GFX_Mood3Happy5_0
 ; 	pikapicanimgfx -1, Pic_Mood1Happy3_0
 ; 	pikapicanimgfx  6, GFX_Mood1Happy3_0
 	pikapicanimgfx -1, Pic_Mood2Happy4_0
-	pikapicanimgfx 20, GFX_Mood2Happy4_0
+	pikapicanimgfx 25, GFX_Mood2Happy4_0
+	pikapicanimgfx 25, GFX_Mood2Happy4_1
 	pikapicanimgfx -1, Pic_Mood2Happy2_0
-	pikapicanimgfx  4, GFX_Mood2Happy2_0
+	pikapicanimgfx 25, GFX_Mood2Happy2_0
+	pikapicanimgfx 25, GFX_Mood2Happy2_1
 	pikapicanimgfx -1, Pic_Mood2Happy1_0
-	pikapicanimgfx  4, GFX_Mood2Happy1_0
+	pikapicanimgfx 25, GFX_Mood2Happy1_0
 	pikapicanimgfx -1, Pic_Mood2Happy5_0
 	pikapicanimgfx 25, GFX_Mood2Happy5_0
-	pikapicanimgfx -1, Pic_Mood3Happy3_0
+; 	pikapicanimgfx -1, Pic_Mood3Happy3_0
 ; 	pikapicanimgfx 10, GFX_Mood3Happy3_0
 ; 	pikapicanimgfx -1, Pic_Mood1Happy2_0
 ; 	pikapicanimgfx  6, GFX_Mood1Happy2_0
@@ -372,10 +379,11 @@ PikaPicAnimGFX_Null_id::
 	pikapicanimgfx 25, GFX_Mood2Happy6_0
 ; 	pikapicanimgfx -1, Pic_Mood1Happy5_0
 ; 	pikapicanimgfx 25, GFX_Mood1Happy5_0
-	pikapicanimgfx 25, GFX_CaughtPokemon_0
-	pikapicanimgfx 25, GFX_CaughtPokemon_1
 	pikapicanimgfx -1, Pic_Mood2Happy7_0
 	pikapicanimgfx 25, GFX_Mood2Happy7_0
+	pikapicanimgfx 25, GFX_Mood2Happy7_1
+	pikapicanimgfx 25, GFX_Mood2Happy7_2
+	pikapicanimgfx 25, GFX_Mood2Happy7_3
 ; 	pikapicanimgfx -1, Pic_Mood3Happy7_0
 ; 	pikapicanimgfx 25, GFX_Mood3Happy7_0
 	pikapicanimgfx -1, Pic_FishingRod_0
@@ -391,13 +399,14 @@ PikaPicAnimGFX_Null_id::
 	pikapicanimgfx 25, GFX_BillFirstTime_1
 	pikapicanimgfx 25, GFX_Burned_0
 	pikapicanimgfx 25, GFX_Burned_1
-	; pikapicanimgfx -1, Pic_ThunderBolt_0
-	; pikapicanimgfx 25, GFX_ThunderBolt_0
-	; pikapicanimgfx 25, GFX_ThunderBolt_1
-	pikapicanimgfx 25, GFX_PewterWake_1
-	pikapicanimgfx 25, GFX_PewterWake_2
-	pikapicanimgfx -1, Pic_BillEnterTeleporter_0
-	pikapicanimgfx 25, GFX_BillEnterTeleporter_0
+	pikapicanimgfx -1, Pic_LowHP_0
+	pikapicanimgfx 25, GFX_LowHP_0
+	pikapicanimgfx 25, GFX_LowHP_1
+	pikapicanimgfx 25, GFX_LowHP_2
+	; pikapicanimgfx 25, GFX_PewterWake_1
+	; pikapicanimgfx 25, GFX_PewterWake_2
+	pikapicanimgfx -1, Pic_BillEmergeFromTeleporter_0
+	pikapicanimgfx 25, GFX_BillEmergeFromTeleporter_0
 	pikapicanimgfx -1, Pic_Statused_0
 	pikapicanimgfx 25, GFX_Statused_0
 	pikapicanimgfx 25, GFX_Statused_1

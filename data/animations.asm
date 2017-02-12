@@ -83,7 +83,7 @@ AttackAnimationPointers:
 	dw DragonRageAnim
 	dw FireSpinAnim
 	dw ThunderShockAnim
-	dw ThunderBoltAnim
+	dw LowHPAnim
 	dw ThunderWaveAnim
 	dw ThunderAnim
 	dw RockThrowAnim
@@ -667,7 +667,7 @@ ThunderShockAnim:
 	db $42, $53,$29
 	db $FF
 
-ThunderBoltAnim:
+LowHPAnim:
 	db $41, $54,$29
 	db $41, $54,$29
 	db $FF

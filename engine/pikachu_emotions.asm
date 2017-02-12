@@ -231,13 +231,13 @@ pikaemotion_def: MACRO
 	pikaemotion_def PikachuEmotion_LavenderTown ; spoopy
 	pikaemotion_def PikachuEmotion_BillFirstTime ; bill's house 0
 	pikaemotion_def PikachuEmotion_Burned ; roast parrot anyone?
-	; pikaemotion_def PikachuEmotion_ThunderBolt ; taught or learned thunder/thunderbolt
+	pikaemotion_def PikachuEmotion_LowHP ; taught or learned thunder/thunderbolt
 	pikaemotion_def PikachuEmotion_PewterWake ; wake up pikachu in pewter pokemon center
-	pikaemotion_def PikachuEmotion_BillEnterTeleporter ; bill's house 1
+	pikaemotion_def PikachuEmotion_BillEmergeFromTeleporter ; bill's house 1
 	pikaemotion_def PikachuEmotion_Statused ; statused
 	; pikaemotion_def PikachuEmotion_FanClub1 ; fan club 1
 	; pikaemotion_def PikachuEmotion_FanClub2 ; fan club 2
-	pikaemotion_def PikachuEmotion_BillExitTeleporter ; bill's house 2
+	pikaemotion_def PikachuEmotion_BillEnterTeleporter ; bill's house 2
 	pikaemotion_def PikachuEmotion_BillGetOverShock ; bill's house 3
 	pikaemotion_def .error ; error handling
 
@@ -278,14 +278,14 @@ MapSpecificPikachuExpression:
 	jr c, .play_emotion
 	ld e, 1 << BRN
 	call CheckPikachuStatused ; same bank
-	ldpikaemotion a, PikachuEmotion_Statused ; PikachuEmotion_Burned
+	ldpikaemotion a, PikachuEmotion_Burned
 	jr c, .play_emotion
 	ld e, $ff ^ (1 << BRN)
 	call CheckPikachuStatused ; same bank
 	ldpikaemotion a, PikachuEmotion_Statused
 	jr c, .play_emotion
 	call CheckPikachuLowHP
-	ldpikaemotion a, PikachuEmotion_Statused ; PikachuEmotion_LowHP
+	ldpikaemotion a, PikachuEmotion_LowHP ; PikachuEmotion_LowHP
 	jr c, .play_emotion
 	ld a, [wCurMap]
 	cp POKEMONTOWER_1
@@ -318,7 +318,7 @@ MapSpecificPikachuExpression:
 	dpikaemotion PikachuEmotion_FishingRod ; used a fishing rod
 	dpikaemotion PikachuEmotion_BillFirstTime
 	; dpikaemotion PikachuEmotion_Burned ; tried to use thunderstone
-	; dpikaemotion PikachuEmotion_ThunderBolt ; taught or learned thunder/thunderbolt
+	; dpikaemotion PikachuEmotion_LowHP ; taught or learned thunder/thunderbolt
 
 IsPlayerPikachuAsleepInParty:
 	xor a

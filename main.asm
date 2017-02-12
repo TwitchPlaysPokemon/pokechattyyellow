@@ -124,10 +124,10 @@ BattleHudTiles3:                INCBIN "gfx/battle_hud3.1bpp"
 BattleHudTiles3End:
 NintendoCopyrightLogoGraphics:  INCBIN "gfx/copyright.w152.2bpp"
 GamefreakLogoGraphics:          INCBIN "gfx/gamefreak.w72.2bpp"
-GamefreakLogoGraphicsEnd:
 NineTile:                       INCBIN "gfx/9_tile.2bpp"
 TextBoxGraphics:                INCBIN "gfx/text_box.2bpp"
 TextBoxGraphicsEnd:
+TPPDevsGraphics:                INCBIN "gfx/tppdevs.2bpp"
 PokedexTileGraphics:            INCBIN "gfx/pokedex.2bpp"
 PokedexTileGraphicsEnd:
 WorldMapTileGraphics:           INCBIN "gfx/town_map.2bpp"
@@ -2010,8 +2010,8 @@ INCLUDE "engine/evos_moves.asm"
 SECTION "bank39", ROMX,BANK[$39]
 
 
-Pic_Mood2Happy3_0:   INCBIN "gfx/pikachu/mood2_happy3_0_pic.pic"
-GFX_Mood2Happy3_0:   INCBIN "gfx/pikachu/mood2_happy3_0_2bpp.2bpp"
+Pic_Mood2Happy3_0:   INCBIN "gfx/chatot/Chatot2_1.pic"
+GFX_Mood2Happy3_0:   INCBIN "gfx/chatot/Chatot2_2.2bpp"
 
 ; Pic_Mood3Happy5_0:   INCBIN "gfx/pikachu/mood3_happy5_0_pic.pic"
 ; GFX_Mood3Happy5_0:   INCBIN "gfx/pikachu/mood3_happy5_0_2bpp.2bpp"
@@ -2019,20 +2019,22 @@ GFX_Mood2Happy3_0:   INCBIN "gfx/pikachu/mood2_happy3_0_2bpp.2bpp"
 ; Pic_Mood1Happy3_0:   INCBIN "gfx/pikachu/mood1_happy3_0_pic.pic"
 ; GFX_Mood1Happy3_0:   INCBIN "gfx/pikachu/mood1_happy3_0_2bpp.2bpp"
 
-Pic_Mood2Happy4_0:   INCBIN "gfx/pikachu/mood2_happy4_0_pic.pic"
-GFX_Mood2Happy4_0:   INCBIN "gfx/pikachu/mood2_happy4_0_2bpp.2bpp"
+Pic_Mood2Happy4_0:   INCBIN "gfx/chatot/Chatot4_1.pic"
+GFX_Mood2Happy4_0:   INCBIN "gfx/chatot/Chatot4_2.2bpp"
+GFX_Mood2Happy4_1:   INCBIN "gfx/chatot/Chatot4_3.2bpp"
 
-Pic_Mood2Happy2_0:   INCBIN "gfx/pikachu/mood2_happy2_0_pic.pic"
-GFX_Mood2Happy2_0:   INCBIN "gfx/pikachu/mood2_happy2_0_2bpp.2bpp"
+Pic_Mood2Happy2_0:   INCBIN "gfx/chatot/Chatot1_1.pic"
+GFX_Mood2Happy2_0:   INCBIN "gfx/chatot/Chatot1_2.2bpp"
+GFX_Mood2Happy2_1:   INCBIN "gfx/chatot/Chatot1_3.2bpp"
 
-Pic_Mood2Happy1_0:   INCBIN "gfx/pikachu/mood2_happy1_0_pic.pic"
-GFX_Mood2Happy1_0:   INCBIN "gfx/pikachu/mood2_happy1_0_2bpp.2bpp"
+Pic_Mood2Happy1_0:   INCBIN "gfx/chatot/Chatot8_1.pic"
+GFX_Mood2Happy1_0:   INCBIN "gfx/chatot/Chatot8_2.2bpp"
 
-Pic_Mood2Happy5_0:   INCBIN "gfx/pikachu/mood2_happy5_0_pic.pic"
-GFX_Mood2Happy5_0:   INCBIN "gfx/pikachu/mood2_happy5_0_2bpp.2bpp"
+Pic_Mood2Happy5_0:   INCBIN "gfx/chatot/Chatot5_1.pic"
+GFX_Mood2Happy5_0:   INCBIN "gfx/chatot/Chatot5_2.2bpp"
 
-Pic_Mood3Happy3_0:   INCBIN "gfx/pikachu/mood3_happy3_0_pic.pic"
-GFX_Mood3Happy3_0:   INCBIN "gfx/pikachu/mood3_happy3_0_2bpp.2bpp"
+; Pic_Mood3Happy3_0:   INCBIN "gfx/pikachu/mood3_happy3_0_pic.pic"
+; GFX_Mood3Happy3_0:   INCBIN "gfx/pikachu/mood3_happy3_0_2bpp.2bpp"
 
 ; Pic_Mood1Happy2_0:   INCBIN "gfx/pikachu/mood1_happy2_0_pic.pic"
 ; GFX_Mood1Happy2_0:   INCBIN "gfx/pikachu/mood1_happy2_0_2bpp.2bpp"
@@ -2041,8 +2043,8 @@ GFX_Mood3Happy3_0:   INCBIN "gfx/pikachu/mood3_happy3_0_2bpp.2bpp"
 ; GFX_Mood3Happy6_0:   INCBIN "gfx/pikachu/mood3_happy6_0_2bpp.2bpp"
 ; GFX_Mood3Happy6_1:   INCBIN "gfx/pikachu/mood3_happy6_1_2bpp.2bpp"
 
-Pic_FastAsleep_0:    INCBIN "gfx/pikachu/fast_asleep_0_pic.pic"
-GFX_FastAsleep_0:    INCBIN "gfx/pikachu/fast_asleep_0_2bpp.2bpp"
+Pic_FastAsleep_0:    INCBIN "gfx/chatot/Chatot12_1.pic"
+GFX_FastAsleep_0:    INCBIN "gfx/chatot/Chatot12_2.2bpp"
 
 ; Pic_Mood3Happy2_0:   INCBIN "gfx/pikachu/mood3_happy2_0_pic.pic"
 ; GFX_Mood3Happy2_0:   INCBIN "gfx/pikachu/mood3_happy2_0_2bpp.2bpp"
@@ -2056,17 +2058,20 @@ GFX_FastAsleep_0:    INCBIN "gfx/pikachu/fast_asleep_0_2bpp.2bpp"
 ; Pic_Mood3Happy4_0:   INCBIN "gfx/pikachu/mood3_happy4_0_pic.pic"
 ; GFX_Mood3Happy4_0:   INCBIN "gfx/pikachu/mood3_happy4_0_2bpp.2bpp"
 
-Pic_Mood2Happy6_0:   INCBIN "gfx/pikachu/mood2_happy6_0_pic.pic"
-GFX_Mood2Happy6_0:   INCBIN "gfx/pikachu/mood2_happy6_0_2bpp.2bpp"
+Pic_Mood2Happy6_0:   INCBIN "gfx/chatot/Chatot6_1.pic"
+GFX_Mood2Happy6_0:   INCBIN "gfx/chatot/Chatot6_2.2bpp"
 
 ; Pic_Mood1Happy5_0:   INCBIN "gfx/pikachu/mood1_happy5_0_pic.pic"
 ; GFX_Mood1Happy5_0:   INCBIN "gfx/pikachu/mood1_happy5_0_2bpp.2bpp"
 
-GFX_CaughtPokemon_0: INCBIN "gfx/pikachu/caught_pokemon_0_2bpp.2bpp"
-GFX_CaughtPokemon_1: INCBIN "gfx/pikachu/caught_pokemon_1_2bpp.2bpp"
+; GFX_CaughtPokemon_0: INCBIN "gfx/pikachu/caught_pokemon_0_2bpp.2bpp"
+; GFX_CaughtPokemon_1: INCBIN "gfx/pikachu/caught_pokemon_1_2bpp.2bpp"
 
-Pic_Mood2Happy7_0:   INCBIN "gfx/pikachu/mood2_happy7_0_pic.pic"
-GFX_Mood2Happy7_0:   INCBIN "gfx/pikachu/mood2_happy7_0_2bpp.2bpp"
+Pic_Mood2Happy7_0:   INCBIN "gfx/chatot/Chatot7_1.pic"
+GFX_Mood2Happy7_0:   INCBIN "gfx/chatot/Chatot7_2.2bpp"
+GFX_Mood2Happy7_1:   INCBIN "gfx/chatot/Chatot7_3.2bpp"
+GFX_Mood2Happy7_2:   INCBIN "gfx/chatot/Chatot7_4.2bpp"
+GFX_Mood2Happy7_3:   INCBIN "gfx/chatot/Chatot7_5.2bpp"
 
 ; Pic_Mood3Happy7_0:   INCBIN "gfx/pikachu/mood3_happy7_0_pic.pic"
 ; GFX_Mood3Happy7_0:   INCBIN "gfx/pikachu/mood3_happy7_0_2bpp.2bpp"
@@ -2088,18 +2093,19 @@ GFX_LavenderTown_1:  INCBIN "gfx/chatot/Chatot14_2.2bpp"
 GFX_LavenderTown_2:  INCBIN "gfx/chatot/Chatot14_3.2bpp"
 GFX_LavenderTown_3:  INCBIN "gfx/chatot/Chatot14_4.2bpp"
 
-GFX_BillFirstTime_0: INCBIN "gfx/pikachu/bill_first_time_0_2bpp.2bpp"
-GFX_BillFirstTime_1: INCBIN "gfx/pikachu/bill_first_time_1_2bpp.2bpp"
+GFX_BillFirstTime_0: INCBIN "gfx/chatot/Chatot9_1.2bpp"
+GFX_BillFirstTime_1: INCBIN "gfx/chatot/Chatot9_2.2bpp"
 
 GFX_Burned_0:        INCBIN "gfx/chatot/Chatot3_1.2bpp"
 GFX_Burned_1:        INCBIN "gfx/chatot/Chatot3_2.2bpp"
 
-; Pic_ThunderBolt_0:   INCBIN "gfx/pikachu/thunder_bolt_0_pic.pic"
-; GFX_ThunderBolt_0:   INCBIN "gfx/pikachu/thunder_bolt_0_2bpp.2bpp"
-; GFX_ThunderBolt_1:   INCBIN "gfx/pikachu/thunder_bolt_1_2bpp.2bpp"
+Pic_LowHP_0:   INCBIN "gfx/chatot/Chatot11_1.pic"
+GFX_LowHP_0:   INCBIN "gfx/chatot/Chatot11_2.2bpp"
+GFX_LowHP_1:   INCBIN "gfx/chatot/Chatot11_3.2bpp"
+GFX_LowHP_2:   INCBIN "gfx/chatot/Chatot11_4.2bpp"
 
-GFX_PewterWake_1:    INCBIN "gfx/pikachu/pewter_wake_1_2bpp.2bpp"
-GFX_PewterWake_2:    INCBIN "gfx/pikachu/pewter_wake_2_2bpp.2bpp"
+; GFX_PewterWake_1:    INCBIN "gfx/pikachu/pewter_wake_1_2bpp.2bpp"
+; GFX_PewterWake_2:    INCBIN "gfx/pikachu/pewter_wake_2_2bpp.2bpp"
 
 SECTION "bank3A", ROMX,BANK[$3A]
 

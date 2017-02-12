@@ -117,7 +117,7 @@ PikachuCriesPointerTable::
 
 ; bank 23
 	pikacry_def PikachuCry8 ; 23:4000
-	pikacry_def PikachuCry_BillEnterTeleporter ; 23:50ca
+	pikacry_def PikachuCry_BillEmergeFromTeleporter ; 23:50ca
 	pikacry_def PikachuCry_Mood1Happy1 ; 23:5e0c
 
 ; bank 24

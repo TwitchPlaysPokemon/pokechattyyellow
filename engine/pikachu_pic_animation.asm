@@ -196,9 +196,9 @@ endm
 	pikapic_def PikaPicAnimScript_LavenderTown ; 16
 	pikapic_def PikaPicAnimScript_BillFirstTime ; 17
 	pikapic_def PikaPicAnimScript_Burned ; 18
-	; pikapic_def PikaPicAnimScript_ThunderBolt ; 19
+	pikapic_def PikaPicAnimScript_LowHP ; 19
 	pikapic_def PikaPicAnimScript_PewterWake ; 1a
-	pikapic_def PikaPicAnimScript_BillEnterTeleporter ; 1b
+	pikapic_def PikaPicAnimScript_BillEmergeFromTeleporter ; 1b
 	pikapic_def PikaPicAnimScript_Statused ; 1c
 	pikapic_def PikaPicAnimScript_1d ; 1d
 
