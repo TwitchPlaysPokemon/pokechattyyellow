@@ -33,7 +33,7 @@ fn emote_mapper(s: &str) -> (u8, BadgeEnum) {
         "PRChase" | "tppRng" => (0x76, NoBadge), //Metronome
         "pastaThat" => (0x77, NoBadge), //Mirror Move
 		"BigBrother" | "OneHand" => (0x6A, NoBadge), //Harden
-        "OpieOP" => (0x70, NoBadge), //Defense Curl
+        "OpieOP" => (0x70, NoBadge), //Barrier
 		"NotLikeThis" => (0x30, NoBadge), //Supersonic
 		"VoteYea" |  | "tppRobored" => (0xA0, NoBadge), //Conversion
 		"PJSalt" | "VoteNay" => (0x32, NoBadge), //Disable
