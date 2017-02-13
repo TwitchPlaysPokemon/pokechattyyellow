@@ -19,7 +19,7 @@ Confused               EQU 7
 UsingXAccuracy    EQU 0
 ProtectedByMist   EQU 1
 GettingPumped     EQU 2 ; Focus Energy
-;                 EQU 3 ; unused?
+Roosting          EQU 3 ; unused?
 HasSubstituteUp   EQU 4
 NeedsToRecharge   EQU 5 ; Hyper Beam
 UsingRage         EQU 6

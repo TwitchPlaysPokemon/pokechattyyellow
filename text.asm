@@ -2479,6 +2479,11 @@ _RegainedHealthText::
 	line "regained health!"
 	prompt
 
+_StartedRoostingText::
+	text "<USER>"
+	line "began roosting!"
+	done
+
 _TransformedText::
 	text "<USER>"
 	line "transformed into"

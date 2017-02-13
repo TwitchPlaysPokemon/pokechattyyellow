@@ -1988,6 +1988,7 @@ wPlayerBattleStatus2:: ; d062
 ; bit 0 - X Accuracy effect
 ; bit 1 - protected by "mist"
 ; bit 2 - focus energy effect
+; bit 3 - roosting
 ; bit 4 - has a substitute
 ; bit 5 - need to recharge
 ; bit 6 - rage

@@ -91,11 +91,7 @@ const_value = 0
 	const LEECH_SEED_EFFECT          ; $54
 	const SPLASH_EFFECT              ; $55
 	const DISABLE_EFFECT             ; $56
-IF DEF(MARKOV)
 	const CHATTER_EFFECT             ; $57
-ELSE
-CHATTER_EFFECT EQU CONFUSION_SIDE_EFFECT
-ENDC
 
 ; fixed damage constants
 SONICBOOM_DAMAGE   EQU 20

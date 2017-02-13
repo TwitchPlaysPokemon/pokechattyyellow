@@ -19,6 +19,8 @@ HealEffect_:
 	sbc [hl]
 	jp z, .failed ; no effect if user's HP is already at its maximum
 	ld a, b
+	cp ROOST
+	jr z, .roostEffect
 	cp REST
 	jr nz, .healHP
 	push hl
@@ -39,6 +41,26 @@ HealEffect_:
 	jr z, .printRestText
 	ld hl, FellAsleepBecameHealthyText ; if mon had an status
 .printRestText
+	call PrintText
+	pop af
+	pop de
+	pop hl
+	jr .healHP
+
+.roostEffect
+	push hl
+	push de
+	push af
+	ld c, 50
+	call DelayFrames
+	ld hl, wPlayerBattleStatus2
+	ld a, [hBattleTurn]
+	and a
+	jr z, .okayRoost
+	ld hl, wEnemyBattleStatus2
+.okayRoost
+	set Roosting, [hl]
+	ld hl, StartedRoostingText
 	call PrintText
 	pop af
 	pop de
@@ -117,4 +139,8 @@ FellAsleepBecameHealthyText:
 
 RegainedHealthText:
 	TX_FAR _RegainedHealthText
+	db "@"
+
+StartedRoostingText:
+	TX_FAR _StartedRoostingText
 	db "@"

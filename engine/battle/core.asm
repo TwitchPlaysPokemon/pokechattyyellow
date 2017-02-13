@@ -5373,24 +5373,18 @@ AdjustDamageForMoveType:
 	ld a, [hli]
 	ld d, a    ; d = type 1 of defender
 	ld e, [hl] ; e = type 2 of defender
-	ld a, [wPlayerMoveType]
-	ld [wMoveType], a
 	ld a, [hBattleTurn]
 	and a
+	ld a, [wPlayerMoveType]
 	jr z, .next
 ; values for enemy turn
-	ld hl, wEnemyMonType
-	ld a, [hli]
-	ld b, a    ; b = type 1 of attacker
-	ld c, [hl] ; c = type 2 of attacker
-	ld hl, wBattleMonType
-	ld a, [hli]
-	ld d, a    ; d = type 1 of defender
-	ld e, [hl] ; e = type 2 of defender
+	push bc
+	ld b, d
+	ld c, e
+	pop de
 	ld a, [wEnemyMoveType]
-	ld [wMoveType], a
 .next
-	ld a, [wMoveType]
+	ld [wMoveType], a
 	cp b ; does the move type match type 1 of the attacker?
 	jr z, .sameTypeAttackBonus
 	cp c ; does the move type match type 2 of the attacker?
@@ -5415,6 +5409,23 @@ AdjustDamageForMoveType:
 	ld hl, wDamageMultipliers
 	set 7, [hl]
 .skipSameTypeAttackBonus
+	ld hl, wPlayerBattleStatus2
+	ld a, [hBattleTurn]
+	and a
+	jr nz, .gotBattleStatus
+	ld hl, wEnemyBattleStatus2
+.gotBattleStatus
+	bit Roosting, [hl]
+	jr z, .notRoosting
+	ld a, FLYING
+	cp d
+	jr z, .make_d_normal
+	cp e
+	jr nz, .notRoosting
+	ld e, d
+.make_d_normal
+	ld d, NORMAL
+.notRoosting
 	ld a, [wMoveType]
 	ld b, a
 	ld hl, TypeEffects
@@ -5939,10 +5950,13 @@ EnemyCheckIfMirrorMoveEffect:
 .chatterCheck
 IF DEF(MARKOV)
 	cp CHATTER_EFFECT
-	jr nz, .notChatterEffect
-	call ChatterPickMove
-	jp CheckIfPlayerNeedsToChargeUp
-.notChatterEffect
+	jr nz, .notChatter
+	ld a, [wLinkState]
+	cp LINK_STATE_BATTLING
+	jr nz, .notChatter
+	call MetronomePickMove
+	jp CheckIfEnemyNeedsToChargeUp
+.notChatter
 ENDC
 	ld a, [wEnemyMoveEffect]
 	ld hl, ResidualEffects2
@@ -7072,7 +7086,7 @@ MoveEffectPointerTable:
 	dw LeechSeedEffect           ; LEECH_SEED_EFFECT
 	dw SplashEffect              ; SPLASH_EFFECT
 	dw DisableEffect             ; DISABLE_EFFECT
-	dw $0000                     ; CHATTER_EFFECT
+	dw ConfusionSideEffect       ; CHATTER_EFFECT
 
 SleepEffect:
 	ld de, wEnemyMonStatus
