@@ -2,7 +2,7 @@ PlayPikachuSoundClip::
 IF DEF(MARKOV)
 	ld a, e
 	cp $ff
-	jr z, .playPikachuPCM
+	jr z, .defaultPikachuPCM
 	ld a, [wIsInBattle]
 	and a
 	jr nz, .playPikachuPCM
@@ -22,10 +22,11 @@ IF DEF(MARKOV)
 	ld [rNR50], a
 	ret
 
+.defaultPikachuPCM
+	ldpikacry e, PikachuCry_Mood2Happy5
 .playPikachuPCM
 ENDC
 	call GetPikachuCryPointer
-PlayPikachuSoundClipBHL::
 	call Delay3
 	di
 	push hl

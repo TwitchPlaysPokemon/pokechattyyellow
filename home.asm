@@ -346,11 +346,8 @@ PlayCry::
 	ret
 
 PlayRegularChatotCry::
-	ld hl, PikachuCry_Mood2Happy5
-	ld b, BANK(PikachuCry_Mood2Happy5)
-	ld a, $ff
-	ld [wPCMTempID], a
-	homecall_jump PlayPikachuSoundClipBHL
+	ld e, $ff
+	homecall_jump PlayPikachuSoundClip
 
 GetCryData::
 ; Load cry data for monster a.
