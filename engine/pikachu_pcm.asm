@@ -1,12 +1,32 @@
 PlayPikachuSoundClip::
 IF DEF(MARKOV)
 	ld a, e
-	ld [wPCMTempID], a
-ELSE
-	call GetPikachuCryPointer
+	cp $ff
+	jr z, .playPikachuPCM
+	ld a, [wIsInBattle]
+	and a
+	jr nz, .playPikachuPCM
 	call Delay3
+	ld a, [rNR50]
+	cp $33
+	push af
+	jr c, .skip_volume
+	ld a, $33
+	ld [rNR50], a
+.skip_volume
+	ld a, e
+	add 2
+	call LuaRequest
+	pop af
+	ret c
+	ld [rNR50], a
+	ret
+
+.playPikachuPCM
 ENDC
+	call GetPikachuCryPointer
 PlayPikachuSoundClipBHL::
+	call Delay3
 	di
 	push hl
 	ld a, $80
@@ -42,29 +62,7 @@ PlayPikachuSoundClipBHL::
 	ld [rNR34], a
 	pop hl
 	push bc
-IF DEF(MARKOV)
-	ld a, [wPCMTempID]
-	cp $ff
-	jr z, .playPikachuPCM
-	ld e, a
-	ld a, [wIsInBattle]
-	and a
-	jr nz, .doNotPlayLuaCry
-	ld a, %10111011
-	ld [rNR51], a
-	ld a, e
-	add 2
-	call LuaRequest_NoHalt
-	jr .afterLuaRequest
-
-.doNotPlayLuaCry
-	call GetPikachuCryPointer
-.playPikachuPCM
 	call PlayPikachuPCM
-.afterLuaRequest
-ELSE
-	call PlayPikachuPCM
-ENDC
 	xor a
 	ld [wc0f3], a
 	ld [wc0f4], a
