@@ -65,6 +65,7 @@ HealEffect_:
 	pop af
 	pop de
 	pop hl
+	inc a ; clear z flag
 .healHP
 	ld a, [hld]
 	ld [wHPBarMaxHP], a
