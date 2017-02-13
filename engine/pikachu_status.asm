@@ -143,7 +143,9 @@ WhichMonIsPikachu:
 	jr .handleLoop
 .loop
 	push hl
+	push de
 	call IsThisPartymonStarterPikachu_Party
+	pop de
 	pop hl
 	ret c
 	ld a, [wWhichPokemon]
