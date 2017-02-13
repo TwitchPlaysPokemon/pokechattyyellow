@@ -1749,7 +1749,7 @@ NoRunningText:
 	db "@"
 
 GotAwayText:
-	TX_MARKOV _GotAwayText
+	TX_FAR _GotAwayText
 	db "@"
 
 ; copies from party data to battle mon data when sending out a new player mon
@@ -2346,7 +2346,7 @@ DisplayBattleMenu:
 	jp DisplayBattleMenu
 
 .RunAwayText
-	TX_MARKOV _RunAwayText
+	TX_FAR _RunAwayText
 	db "@"
 
 .upperLeftMenuItemWasNotSelected ; a menu item other than the upper left item was selected
