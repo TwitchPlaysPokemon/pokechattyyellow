@@ -393,9 +393,13 @@ MainInBattleLoop:
 	and (1 << NeedsToRecharge) | (1 << UsingRage) ; check if the player is using Rage or needs to recharge
 	jr nz, .selectEnemyMove
 ; the player is not using Rage and doesn't need to recharge
-	ld hl, wEnemyBattleStatus1
+	ld hl, wEnemyBattleStatus2
+	res Roosting, [hl]
+	dec hl
 	res Flinched, [hl] ; reset flinch bit
-	ld hl, wPlayerBattleStatus1
+	ld hl, wPlayerBattleStatus2
+	res Roosting, [hl]
+	dec hl
 	res Flinched, [hl] ; reset flinch bit
 	ld a, [hl]
 	and (1 << ThrashingAbout) | (1 << ChargingUp) ; check if the player is thrashing about or charging for an attack
@@ -419,6 +423,7 @@ MainInBattleLoop:
 	ld a, $ff
 	ld [wPlayerSelectedMove], a
 	jr .selectEnemyMove
+
 .selectPlayerMove
 	ld a, [wActionResultOrTookBattleTurn]
 	and a ; has the player already used the turn (e.g. by using an item, trying to run or switching pokemon)
@@ -504,11 +509,13 @@ MainInBattleLoop:
 	cp $80
 	jr c, .playerMovesFirst
 	jr .enemyMovesFirst
+
 .invertOutcome
 	call BattleRandom
 	cp $80
 	jr c, .enemyMovesFirst
 	jr .playerMovesFirst
+
 .enemyMovesFirst
 	ld a, $1
 	ld [hBattleTurn], a
@@ -537,6 +544,7 @@ MainInBattleLoop:
 	call DrawHUDsAndHPBars
 	call CheckNumAttacksLeft
 	jp MainInBattleLoop
+
 .playerMovesFirst
 	call ExecutePlayerMove
 	ld a, [wEscapedFromBattle]
