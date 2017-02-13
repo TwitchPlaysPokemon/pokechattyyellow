@@ -5425,14 +5425,12 @@ AdjustDamageForMoveType:
 .gotBattleStatus
 	bit Roosting, [hl]
 	jr z, .notRoosting
-	ld a, FLYING
-	cp d
-	jr z, .make_d_normal
-	cp e
-	jr nz, .notRoosting
-	ld e, d
-.make_d_normal
-	ld d, NORMAL
+	ld a, d
+	call RoostTypeCheck
+	ld d, a
+	ld a, e
+	call RoostTypeCheck
+	ld e, a
 .notRoosting
 	ld a, [wMoveType]
 	ld b, a
@@ -5493,6 +5491,12 @@ AdjustDamageForMoveType:
 	inc hl
 	jp .loop
 .done
+	ret
+
+RoostTypeCheck:
+	cp FLYING
+	ret nz
+	ld a, NORMAL
 	ret
 
 ; function to tell how effective the type of an enemy attack is on the player's current pokemon
