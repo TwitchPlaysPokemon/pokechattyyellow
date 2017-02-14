@@ -2899,54 +2899,54 @@ SelectMenuItem_CursorDown:
 	ld [wCurrentMenuItem], a
 	jp SelectMenuItem
 
-Func_3d4f5:
-	bit 3, a
-	ld a, $0
-	jr nz, .asm_3d4fd
-	ld a, $1
-.asm_3d4fd
-	ld [hBattleTurn], a
-	call LoadScreenTilesFromBuffer1
-	call Func_3d536
-	ld a, [wTestBattlePlayerSelectedMove]
-	and a
-	jp z, MoveSelectionMenu
-	ld [wAnimationID], a
-	xor a
-	ld [wAnimationType], a
-	predef MoveAnimation
-	callab BattleAnimation_BackUpTilesAndCopyTileMapToMapAndWindow
-	jp MoveSelectionMenu
+; Func_3d4f5:
+	; bit 3, a
+	; ld a, $0
+	; jr nz, .asm_3d4fd
+	; ld a, $1
+; .asm_3d4fd
+	; ld [hBattleTurn], a
+	; call LoadScreenTilesFromBuffer1
+	; call Func_3d536
+	; ld a, [wTestBattlePlayerSelectedMove]
+	; and a
+	; jp z, MoveSelectionMenu
+	; ld [wAnimationID], a
+	; xor a
+	; ld [wAnimationType], a
+	; predef MoveAnimation
+	; callab BattleAnimation_BackUpTilesAndCopyTileMapToMapAndWindow
+	; jp MoveSelectionMenu
 
-Func_3d523:
-	ld a, [wTestBattlePlayerSelectedMove]
-	dec a
-	jr asm_3d52d
-Func_3d529:
-	ld a, [wTestBattlePlayerSelectedMove]
-	inc a
-asm_3d52d:
-	ld [wTestBattlePlayerSelectedMove], a
-	call Func_3d536
-	jp MoveSelectionMenu
+; Func_3d523:
+	; ld a, [wTestBattlePlayerSelectedMove]
+	; dec a
+	; jr asm_3d52d
+; Func_3d529:
+	; ld a, [wTestBattlePlayerSelectedMove]
+	; inc a
+; asm_3d52d:
+	; ld [wTestBattlePlayerSelectedMove], a
+	; call Func_3d536
+	; jp MoveSelectionMenu
 
-Func_3d536:
-	coord hl, 10, 16
-	lb bc, 2, 10
-	call ClearScreenArea
-	coord hl, 10, 17
-	ld de, wTestBattlePlayerSelectedMove
-	lb bc, LEADING_ZEROES | 1, 3
-	call PrintNumber
-	ld a, [wTestBattlePlayerSelectedMove]
-	and a
-	ret z
-	cp STRUGGLE
-	ret nc
-	ld [wd11e], a
-	call GetMoveName
-	coord hl, 13, 17
-	jp PlaceString
+; Func_3d536:
+	; coord hl, 10, 16
+	; lb bc, 2, 10
+	; call ClearScreenArea
+	; coord hl, 10, 17
+	; ld de, wTestBattlePlayerSelectedMove
+	; lb bc, LEADING_ZEROES | 1, 3
+	; call PrintNumber
+	; ld a, [wTestBattlePlayerSelectedMove]
+	; and a
+	; ret z
+	; cp STRUGGLE
+	; ret nc
+	; ld [wd11e], a
+	; call GetMoveName
+	; coord hl, 13, 17
+	; jp PlaceString
 
 AnyMoveToSelect:
 ; return z and Struggle as the selected move if all moves have 0 PP and/or are disabled
@@ -5165,7 +5165,7 @@ AttackSubstitute:
 	ld a, [hBattleTurn]
 	xor $01
 	ld [hBattleTurn], a
-	callab Func_79929 ; animate the substitute breaking
+	callab BreakSubstituteAnimation ; animate the substitute breaking
 ; flip the turn back to the way it was
 	ld a, [hBattleTurn]
 	xor $01

@@ -1,16 +1,16 @@
 DisplayOptionMenu_:
-	call Func_41f06
+	call LoadOptionsMenuText
 .optionMenuLoop
 	call JoypadLowSensitivity
 	ld a, [hJoy5]
 	and START | B_BUTTON
 	jr nz, .exitOptionMenu
-	call Func_41eb7
-	jr c, .asm_41c86
-	call Func_41c95
+	call OptionsMenuUpOrDown
+	jr c, .up_down
+	call OptionsMenuAction
 	jr c, .exitOptionMenu
-.asm_41c86
-	call Func_41ee9
+.up_down
+	call RefreshOptionsCursor
 	call DelayFrame
 	call DelayFrame
 	call DelayFrame
@@ -18,7 +18,7 @@ DisplayOptionMenu_:
 .exitOptionMenu
 	ret
 
-Func_41c95:
+OptionsMenuAction:
 	ld a, [wOptionsCursorLocation]
 	ld e, a
 	ld d, $0
@@ -41,7 +41,7 @@ OptionMenuJumpTable:
 	dw OptionsMenu_Cancel
 
 OptionsMenu_TextSpeed:
-	call Func_41d07
+	call GetTextSpeedScrollRegisters
 	ld a, [hJoy5]
 	bit 4, a ; right
 	jr nz, .pressedRight
@@ -96,7 +96,7 @@ MidText:
 SlowText:
 	db "SLOW@"
 
-Func_41d07:
+GetTextSpeedScrollRegisters:
 	ld a, [wOptions]
 	and $f
 	cp $5
@@ -236,7 +236,7 @@ Earphone3SoundText:
 	db "EARPHONE3@"
 
 OptionsMenu_GBPrinterBrightness:
-	call Func_41e7b
+	call GetPrinterBrightnessScrollRegisters
 	ld a, [hJoy5]
 	bit 4, a
 	jr nz, .pressedRight
@@ -294,7 +294,7 @@ DarkerPrintText:
 DarkestPrintText:
 	db "DARKEST @"
 
-Func_41e7b:
+GetPrinterBrightnessScrollRegisters:
 	ld a, [wPrinterSettings]
 	and a
 	jr z, .asm_41e93
@@ -338,7 +338,7 @@ OptionsMenu_Cancel:
 	scf
 	ret
 
-Func_41eb7:
+OptionsMenuUpOrDown:
 	ld hl, wOptionsCursorLocation
 	ld a, [hJoy5]
 	cp D_DOWN
@@ -378,7 +378,7 @@ Func_41eb7:
 	scf
 	ret
 
-Func_41ee9:
+RefreshOptionsCursor:
 	coord hl, 1, 1
 	ld de, SCREEN_WIDTH
 	ld c, 16
@@ -394,7 +394,7 @@ Func_41ee9:
 	ld [hl], "▶"
 	ret
 
-Func_41f06:
+LoadOptionsMenuText:
 	coord hl, 0, 0
 	lb bc, SCREEN_HEIGHT - 2, SCREEN_WIDTH - 2
 	call TextBoxBorder
@@ -409,7 +409,7 @@ Func_41f06:
 	ld c, 5
 .loop
 	push bc
-	call Func_41c95
+	call OptionsMenuAction
 	pop bc
 	ld hl, wOptionsCursorLocation
 	inc [hl]

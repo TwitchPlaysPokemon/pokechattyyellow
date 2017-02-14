@@ -909,7 +909,7 @@ ItemUseVitamin:
 ItemUseMedicine:
 	ld a, [wPartyCount]
 	and a
-	jp z, Func_e4bf
+	jp z, TryingToUseItemWithEmptyParty
 	ld a, [wWhichPokemon]
 	push af
 	ld a, [wcf91]
@@ -2613,7 +2613,7 @@ ItemUseNotYoursToUse:
 	ld hl, ItemUseNotYoursToUseText
 	jr ItemUseFailed
 
-Func_e4bf:
+TryingToUseItemWithEmptyParty:
 	ld a, $2
 	ld [wActionResultOrTookBattleTurn], a
 	ld hl, DontHavePokemonText

@@ -1086,7 +1086,7 @@ DecrementAICount: ; 3a695 (e:6695)
 	scf
 	ret
 
-Func_3a69b: ; 3a69b (e:669b)
+AI_PlayHealSFX: ; 3a69b (e:669b)
 	ld a, SFX_HEAL_AILMENT
 	jp PlaySoundWaitForCurrent
 
@@ -1245,7 +1245,7 @@ AIBattleWithdrawText: ; 3a781 (e:6781)
 	db "@"
 
 AIUseFullHeal: ; 3a786 (e:6786)
-	call Func_3a69b
+	call AI_PlayHealSFX
 	call AICureStatus
 	ld a,FULL_HEAL
 	jp AIPrintItemUse
@@ -1264,21 +1264,21 @@ AICureStatus: ; 3a791 (e:6791)
 	ret
 
 AIUseXAccuracy: ; 0x3a7a8 unused
-	call Func_3a69b
+	call AI_PlayHealSFX
 	ld hl,wEnemyBattleStatus2
 	set 0,[hl]
 	ld a,X_ACCURACY
 	jp AIPrintItemUse
 
 AIUseGuardSpec: ; 3a7b5 (e:67b5)
-	call Func_3a69b
+	call AI_PlayHealSFX
 	ld hl,wEnemyBattleStatus2
 	set 1,[hl]
 	ld a,GUARD_SPEC
 	jp AIPrintItemUse
 
 AIUseDireHit: ; 0x3a7c2 unused
-	call Func_3a69b
+	call AI_PlayHealSFX
 	ld hl,wEnemyBattleStatus2
 	set 2,[hl]
 	ld a,DIRE_HIT

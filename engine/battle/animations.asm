@@ -2283,7 +2283,7 @@ AnimationHideEnemyMonPic:
 	ld [hBGMapMode], a
 	jp Delay3
 
-Func_79929:
+BreakSubstituteAnimation:
 	ld hl, wPlayerMonMinimized
 	ld a, [hBattleTurn]
 	and a

@@ -14,7 +14,7 @@ _InitMapSprites:
 ; if the map is an inside map (i.e. mapID >= $25)
 	call LoadSpriteSetFromMapHeader
 	call LoadMapSpriteTilePatterns
-	call Func_14150
+	call SetUsedSprites
 	ret
 
 ; Loads sprite set for outside maps (cities and routes) and sets VRAM slots.
@@ -46,7 +46,7 @@ InitOutsideMapSprites:
 	call CopyData ; copy it to wSpriteSet
 	call LoadMapSpriteTilePatterns
 .skipLoadingSpriteSet
-	call Func_14150
+	call SetUsedSprites
 	scf
 	ret
 
@@ -189,33 +189,59 @@ LoadWalkingTilePattern:
 	ret
 
 GetSpriteVRAMAddress:
-	push bc
 	ld a, [hVRAMSlot]
-	ld c, a
-	ld b, 0
-	ld hl, SpriteVRAMAddresses
-	add hl, bc
-	add hl, bc
-	ld a, [hli]
-	ld h, [hl]
+	cp 9
+	jr nc, .four_tile_sprite
+	inc a
 	ld l, a
-	pop bc
+	add a
+	add l
+	ld l, a
+	ld h, vChars0 >> 14
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	add hl, hl
+	add hl, hl
 	ret
 
-SpriteVRAMAddresses:
-; Equivalent to multiplying $C0 (number of bytes in 12 tiles) times the VRAM
-; slot and adding the result to $8000 (the VRAM base address).
-	dw vChars0 + $0c0
-	dw vChars0 + $180
-	dw vChars0 + $240
-	dw vChars0 + $300
-	dw vChars0 + $3c0
-	dw vChars0 + $480
-	dw vChars0 + $540
-	dw vChars0 + $600
-	dw vChars0 + $6c0
-	dw vChars0 + $780 ; 4-tile sprites
-	dw vChars0 + $7c0 ; 4-tile sprites
+.four_tile_sprite
+	ld hl, $8780
+	ret z
+	ld hl, $87c0
+	ret
+
+	;28 bytes
+
+	; push bc
+	; ld a, [hVRAMSlot]
+	; ld c, a
+	; ld b, 0
+	; ld hl, SpriteVRAMAddresses
+	; add hl, bc
+	; add hl, bc
+	; ld a, [hli]
+	; ld h, [hl]
+	; ld l, a
+	; pop bc
+	; ret
+
+; SpriteVRAMAddresses:
+; ; Equivalent to multiplying $C0 (number of bytes in 12 tiles) times the VRAM
+; ; slot and adding the result to $8000 (the VRAM base address).
+	; dw vChars0 + $0c0
+	; dw vChars0 + $180
+	; dw vChars0 + $240
+	; dw vChars0 + $300
+	; dw vChars0 + $3c0
+	; dw vChars0 + $480
+	; dw vChars0 + $540
+	; dw vChars0 + $600
+	; dw vChars0 + $6c0
+	; dw vChars0 + $780 ; 4-tile sprites
+	; dw vChars0 + $7c0 ; 4-tile sprites
+	;37 bytes
 
 ReadSpriteSheetData:
 	ld a, [hVRAMSlot]
@@ -247,7 +273,7 @@ ReadSpriteSheetData:
 	scf
 	ret
 
-Func_14150:
+SetUsedSprites:
 	ld a, $1
 	ld [wPlayerSpriteImageBaseOffset], a ; vram slot for player
 	ld a, $2
@@ -259,7 +285,7 @@ Func_14150:
 	ld a, [hl] ; $c1x0 (picture ID)
 	and a ; is the sprite unused?
 	jr z, .spriteUnused
-	call Func_14179
+	call .getUsedSprite
 	push hl
 	ld de, (wPlayerSpriteImageBaseOffset) - (wSpriteStateData1) ; $10e
 	add hl, de ; get $c2xe (sprite image base offset)
@@ -273,7 +299,7 @@ Func_14150:
 	jr nz, .loop
 	ret
 
-Func_14179:
+.getUsedSprite:
 	push de
 	push bc
 	ld c, a  ; c = picture ID
