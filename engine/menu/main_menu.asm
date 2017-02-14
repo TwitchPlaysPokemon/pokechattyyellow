@@ -1,3 +1,5 @@
+INCLUDE "version.asm"
+
 MainMenu:
 ; Check save file
 	call InitOptions
@@ -48,6 +50,12 @@ MainMenu:
 	ld de, NewGameText
 	call PlaceString
 .next2
+	call PlaceVersion
+IF !DEF(MARKOV)
+	coord hl, 5, 14
+	ld de, DebugText
+	call PlaceString
+ENDC
 	ld hl, wd730
 	res 6, [hl]
 	call UpdateSprites
@@ -176,6 +184,34 @@ ContinueText:
 NewGameText:
 	db   "NEW GAME"
 	next "OPTION@"
+
+PlaceVersion:
+	coord hl, 2, 13
+	ld de, VersionText
+	call PlaceString
+	coord hl, 10, 13
+	ld de, MajorVersion
+	call .PrintNum
+	ld [hl], "."
+	inc hl
+	ld de, MinorVersion
+	call .PrintNum
+	ld [hl], "."
+	inc hl
+	ld de, BuildNumber
+.PrintNum
+	lb bc, LEFT_ALIGN | 1, 3
+	jp PrintNumber
+
+VersionText:
+	db "VERSION @"
+MajorVersion: db MAJOR_VERSION
+MinorVersion: db MINOR_VERSION
+BuildNumber:  db BUILD_NUMBER
+
+IF !DEF(MARKOV)
+DebugText: db "DEBUG@"
+ENDC
 
 DisplayContinueGameInfo:
 	xor a
