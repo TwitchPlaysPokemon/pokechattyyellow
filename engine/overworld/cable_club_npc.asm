@@ -167,32 +167,32 @@ Serial_SyncAndExchangeNybbleDouble:
 	ret
 
 CableClubNPCAreaReservedFor2FriendsLinkedByCableText:
-	TX_FAR _CableClubNPCAreaReservedFor2FriendsLinkedByCableText
+	TX_MARKOV _CableClubNPCAreaReservedFor2FriendsLinkedByCableText
 	db "@"
 
 CableClubNPCWelcomeText:
-	TX_FAR _CableClubNPCWelcomeText
+	TX_MARKOV _CableClubNPCWelcomeText
 	db "@"
 
 CableClubNPCPleaseApplyHereHaveToSaveText:
-	TX_FAR _CableClubNPCPleaseApplyHereHaveToSaveText
+	TX_MARKOV _CableClubNPCPleaseApplyHereHaveToSaveText
 	db "@"
 
 CableClubNPCPleaseWaitText:
-	TX_FAR _CableClubNPCPleaseWaitText
+	TX_MARKOV _CableClubNPCPleaseWaitText
 	TX_WAIT_30
 	db "@"
 
 CableClubNPCLinkClosedBecauseOfInactivityText:
-	TX_FAR _CableClubNPCLinkClosedBecauseOfInactivityText
+	TX_MARKOV _CableClubNPCLinkClosedBecauseOfInactivityText
 	db "@"
 
 CableClubNPCPleaseComeAgainText:
-	TX_FAR _CableClubNPCPleaseComeAgainText
+	TX_MARKOV _CableClubNPCPleaseComeAgainText
 	db "@"
 
 CableClubNPCMakingPreparationsText:
-	TX_FAR _CableClubNPCMakingPreparationsText
+	TX_MARKOV _CableClubNPCMakingPreparationsText
 	db "@"
 
 CloseLinkConnection:
