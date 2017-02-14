@@ -8,17 +8,16 @@ IF DEF(MARKOV)
 	jr nz, .playPikachuPCM
 	call Delay3
 	ld a, [rNR50]
-	cp $33
 	push af
-	jr c, .skip_volume
 	ld a, $33
 	ld [rNR50], a
-.skip_volume
+	ld hl, wd72c
+	set 1, [hl]
 	ld a, e
 	add 2
 	call LuaRequest
+	res 1, [hl]
 	pop af
-	ret c
 	ld [rNR50], a
 	ret
 
