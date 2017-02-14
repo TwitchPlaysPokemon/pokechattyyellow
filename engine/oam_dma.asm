@@ -23,4 +23,5 @@ DMARoutine:
 	dec a
 	jr nz, .wait
 	ret
+
 DMARoutineEnd:

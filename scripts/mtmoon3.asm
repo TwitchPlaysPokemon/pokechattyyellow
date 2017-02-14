@@ -13,6 +13,7 @@ MtMoon3Script:
 	ld hl, wd72e
 	set 4, [hl]
 	ret
+
 .asm_49d31
 	ld hl, wd72e
 	res 4, [hl]
@@ -206,6 +207,7 @@ MtMoon3Script5:
 	jr z, .asm_49e1d
 	ld a, HS_MT_MOON_3_FOSSIL_1
 	jr .asm_49e1f
+
 .asm_49e1d
 	ld a, HS_MT_MOON_3_FOSSIL_2
 .asm_49e1f
@@ -531,7 +533,6 @@ MtMoon3Text4:
 	TX_ASM
 	ld hl, MtMoon3TrainerHeader1
 	jr MtMoon3TalkToTrainer
-
 
 MtMoon3Text5:
 	TX_ASM

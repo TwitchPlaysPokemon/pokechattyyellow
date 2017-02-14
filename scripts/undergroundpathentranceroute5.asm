@@ -16,3 +16,4 @@ UndergroundPathEntranceRoute5Text1:
 	predef DoInGameTradeDialogue
 	ld hl, UndergroundPathEntranceRoute5_5d6af
 	ret
+

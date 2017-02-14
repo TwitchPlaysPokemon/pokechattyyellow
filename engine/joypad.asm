@@ -32,7 +32,6 @@ ReadJoypad_::
 	ld [rJOYP], a
 	ret
 
-
 _Joypad::
 ; hJoyReleased: (hJoyLast ^ hJoyInput) & hJoyLast
 ; hJoyPressed:  (hJoyLast ^ hJoyInput) & hJoyInput
@@ -95,3 +94,4 @@ TrySoftReset:
 	jp z, SoftReset
 
 	jp Joypad
+

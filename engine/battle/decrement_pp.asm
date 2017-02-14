@@ -41,3 +41,4 @@ DecrementPP:
 	                     ; based on the move chosen.
 	dec [hl]             ; Decrement PP
 	ret
+

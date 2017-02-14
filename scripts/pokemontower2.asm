@@ -131,6 +131,7 @@ PokemonTower2Text1:
 	ld hl, PokemonTower2Text_6063c
 	call PrintText
 	jr .asm_41852
+
 .asm_16f24
 	ld hl, PokemonTower2Text_6062d
 	call PrintText

@@ -23,6 +23,7 @@ _UpdateSprites:
 	cp $e               ; test for overflow (back at $0e)
 	jr nz, .spriteLoop
 	ret
+
 .updateCurrentSprite ; 4bd7 (1:4bd7)
 	ld a, [hCurrentSpriteOffset]
 	and a
@@ -41,6 +42,7 @@ UpdateNonPlayerSprite:
 	cp b
 	jr nz, .unequal
 	jp DoScriptedNPCMovement
+
 .unequal
 	jp UpdateNPCSprite
 
@@ -282,6 +284,7 @@ DetectCollisionBetweenSprites:
 	jr nz, .asm_4cd9
 	call Func_4d0a
 	jr .asm_4cef
+
 .asm_4cd9
 	ld a, [$ff91] ; a = 7 or 9 depending on sprite i's delta X
 	ld b, a
@@ -294,6 +297,7 @@ DetectCollisionBetweenSprites:
 	jr c, .next5
 	ld b, %1100
 	jr .next6
+
 .next5
 	ld b, %0011
 
@@ -345,6 +349,7 @@ Func_4d0a:
 	jr c, .asm_4d17
 	ld b, %1100
 	jr .asm_4d19
+
 .asm_4d17
 	ld b, %11
 .asm_4d19

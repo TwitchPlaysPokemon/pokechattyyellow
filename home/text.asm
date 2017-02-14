@@ -133,6 +133,7 @@ print_name: macro
 	push de
 	ld de, \1
 	jr FinishDTE
+
 endm
 
 Char52:: print_name wPlayerName ; player’s name
@@ -561,6 +562,7 @@ TextCommand0B::
 	jr z, .matchFound
 	inc hl
 	jr .loop
+
 .matchFound
 	cp $14
 	jr z, .pokemonCry
@@ -574,6 +576,7 @@ TextCommand0B::
 	pop hl
 	pop bc
 	jp NextTextCommand
+
 .pokemonCry
 	push de
 	ld a, [hl]
@@ -759,6 +762,7 @@ TextCommand19::
 	call PrintLetterDelay
 	pop hl
 	jp NextTextCommand
+
 ENDC
 
 TextCommandJumpTable::

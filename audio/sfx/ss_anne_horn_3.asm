@@ -9,7 +9,6 @@ SFX_SS_Anne_Horn_3_Ch1:
 	unknownsfx0x20 15, 242, 0, 5
 	endchannel
 
-
 SFX_SS_Anne_Horn_3_Ch2:
 	duty 3
 	unknownsfx0x20 15, 240, 130, 4

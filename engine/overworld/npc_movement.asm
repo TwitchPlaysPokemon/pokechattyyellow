@@ -15,6 +15,7 @@ PlayerStepOutFromDoor:
 	ld [wSpriteStateData1 + 2], a
 	call StartSimulatingJoypadStates
 	ret
+
 .notStandingOnDoor
 	xor a
 	ld [wWastedByteCD3A], a
@@ -72,6 +73,7 @@ PalletMovementScript_OakMoveLeft:
 	ld a, $1
 	ld [wNPCMovementScriptFunctionNum], a
 	jr .done
+
 ; The player is on the left tile of the northern path out of Pallet Town and
 ; Prof. Oak is below.
 ; Prof. Oak is already where he needs to be.
@@ -130,7 +132,6 @@ PalletMovementScript_WalkToLab:
 	ld a, $4
 	ld [wNPCMovementScriptFunctionNum], a
 	ret
-
 
 RLEList_ProfOakWalkToLab:
 	db NPC_MOVEMENT_DOWN, $06 ; differs from red

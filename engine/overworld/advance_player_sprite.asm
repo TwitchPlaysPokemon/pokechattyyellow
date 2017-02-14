@@ -34,6 +34,7 @@ _AdvancePlayerSprite::
 	or d
 	ld [wMapViewVRAMPointer], a
 	jr .adjustXCoordWithinBlock
+
 .checkIfMovingWest
 	cp $ff
 	jr nz, .checkIfMovingSouth
@@ -48,6 +49,7 @@ _AdvancePlayerSprite::
 	or d
 	ld [wMapViewVRAMPointer], a
 	jr .adjustXCoordWithinBlock
+
 .checkIfMovingSouth
 	ld a, b
 	cp $01
@@ -63,6 +65,7 @@ _AdvancePlayerSprite::
 	or $98
 	ld [wMapViewVRAMPointer + 1], a
 	jr .adjustXCoordWithinBlock
+
 .checkIfMovingNorth
 	cp $ff
 	jr nz, .adjustXCoordWithinBlock
@@ -95,6 +98,7 @@ _AdvancePlayerSprite::
 	ld de, wCurrentTileBlockMapViewPointer
 	call MoveTileBlockMapPointerEast
 	jr .updateMapView
+
 .checkForMoveToWestBlock
 	cp $ff
 	jr nz, .adjustYCoordWithinBlock
@@ -106,6 +110,7 @@ _AdvancePlayerSprite::
 	ld de, wCurrentTileBlockMapViewPointer
 	call MoveTileBlockMapPointerWest
 	jr .updateMapView
+
 .adjustYCoordWithinBlock
 	ld hl, wYBlockCoord
 	ld a, [hl]
@@ -122,6 +127,7 @@ _AdvancePlayerSprite::
 	ld a, [wCurMapWidth]
 	call MoveTileBlockMapPointerSouth
 	jr .updateMapView
+
 .checkForMoveToNorthBlock
 	cp $ff
 	jr nz, .updateMapView
@@ -141,12 +147,14 @@ _AdvancePlayerSprite::
 ; if moving south
 	call ScheduleSouthRowRedraw
 	jr .scrollBackgroundAndSprites
+
 .checkIfMovingNorth2
 	cp $ff
 	jr nz, .checkIfMovingEast2
 ; if moving north
 	call ScheduleNorthRowRedraw
 	jr .scrollBackgroundAndSprites
+
 .checkIfMovingEast2
 	ld a, [wSpriteStateData1 + 5] ; delta X
 	cp $1
@@ -154,6 +162,7 @@ _AdvancePlayerSprite::
 ; if moving east
 	call ScheduleEastColumnRedraw
 	jr .scrollBackgroundAndSprites
+
 .checkIfMovingWest2
 	cp $ff
 	jr nz, .scrollBackgroundAndSprites
@@ -239,3 +248,4 @@ MoveTileBlockMapPointerNorth::
 	dec a
 	ld [de], a
 	ret
+

@@ -18,6 +18,7 @@ DisplayTextBoxID_:
 	jr c, .textAndCoordTableMatch
 .done
 	ret
+
 .functionTableMatch
 	ld a, [hli]
 	ld h, [hl]
@@ -25,11 +26,13 @@ DisplayTextBoxID_:
 	ld de, .done
 	push de
 	jp [hl] ; jump to the function
+
 .coordTableMatch
 	call GetTextBoxIDCoords
 	call GetAddressOfScreenCoords
 	call TextBoxBorder
 	ret
+
 .textAndCoordTableMatch
 	call GetTextBoxIDCoords
 	push hl
@@ -60,6 +63,7 @@ SearchTextBoxTable:
 	jr z, .found
 	add hl, de
 	jr .loop
+
 .found
 	scf
 .notFound
@@ -120,6 +124,7 @@ GetAddressOfScreenCoords:
 	add hl, bc
 	dec d
 	jr .loop
+
 .addedRows
 	pop bc
 	add hl, de
@@ -319,6 +324,7 @@ DoBuySellQuitMenu:
 	ld a, CANCELLED_MENU
 	ld [wMenuExitMethod], a
 	jr .quit
+
 .pressedA
 	ld a, CHOSE_MENU_ITEM
 	ld [wMenuExitMethod], a
@@ -329,6 +335,7 @@ DoBuySellQuitMenu:
 	cp b
 	jr z, .quit
 	ret
+
 .quit
 	ld a, CANCELLED_MENU
 	ld [wMenuExitMethod], a
@@ -397,6 +404,7 @@ DisplayTwoOptionMenu:
 	jr nz, .notTradeCancelMenu
 	call CableClub_TextBoxBorder
 	jr .afterTextBoxBorder
+
 .notTradeCancelMenu
 	call TextBoxBorder
 .afterTextBoxBorder
@@ -436,6 +444,7 @@ DisplayTwoOptionMenu:
 	call TwoOptionMenu_RestoreScreenTiles
 	and a
 	ret
+
 .choseSecondMenuItem
 	ld a, 1
 	ld [wCurrentMenuItem], a
@@ -620,6 +629,7 @@ DisplayFieldMoveMonMenu:
 	cp "@"
 	jr nz, .skipNameLoop
 	jr .skipNamesLoop
+
 .reachedName
 	ld b, h
 	ld c, l
@@ -691,6 +701,7 @@ GetMonFieldMoves:
 	inc hl
 	inc hl
 	jr .fieldMoveLoop
+
 .foundFieldMove
 	ld a, b
 	ld [wLastFieldMoveID], a
@@ -710,6 +721,7 @@ GetMonFieldMoves:
 	ld a, [wLastFieldMoveID]
 	ld b, a
 	jr .loop
+
 .done
 	pop hl
 	ret

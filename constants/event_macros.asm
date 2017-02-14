@@ -155,7 +155,6 @@ event_byte = ((\1) / 8)
 	res (\1) % 8, [hl]
 	ENDM
 
-
 ;\1 = event index
 SetEvent: MACRO
 event_byte = ((\1) / 8)

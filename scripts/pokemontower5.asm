@@ -20,6 +20,7 @@ PokemonTower5Script0:
 	res 4, [hl]
 	ResetEvent EVENT_IN_PURIFIED_ZONE
 	jp CheckFightingMapTrainers
+
 .asm_60960
 	CheckAndSetEvent EVENT_IN_PURIFIED_ZONE
 	ret nz

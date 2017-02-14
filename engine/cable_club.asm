@@ -91,12 +91,14 @@ CableClub_DoBattleOrTradeAgain:
 	inc de
 	ld [hl], $ff
 	jr .patchPartyMonsLoop
+
 .startPatchListPart2
 	ld a, SERIAL_PATCH_LIST_PART_TERMINATOR
 	ld [de], a ; end of part 1
 	inc de
 	lb bc, 1, 0
 	jr .patchPartyMonsLoop
+
 .finishedPatchingPlayerData
 	ld a, SERIAL_PATCH_LIST_PART_TERMINATOR
 	ld [de], a ; end of part 2
@@ -220,6 +222,7 @@ CableClub_DoBattleOrTradeAgain:
 	pop bc
 	pop hl
 	jr .unpatchPartyMonsLoop
+
 .finishedPartyMonsPatchListPart
 	ld hl, wPartyMons + (SERIAL_PREAMBLE_BYTE - 1)
 	dec c ; is there another part?
@@ -249,6 +252,7 @@ CableClub_DoBattleOrTradeAgain:
 	pop bc
 	pop hl
 	jr .unpatchEnemyMonsLoop
+
 .finishedEnemyMonsPatchListPart
 	ld hl, wEnemyMons + (SERIAL_PREAMBLE_BYTE - 1)
 	dec c
@@ -288,6 +292,7 @@ CableClub_DoBattleOrTradeAgain:
 	ld [wLetterPrintingDelayFlags], a
 	predef HealParty
 	jp ReturnToCableClubRoom
+
 .trading
 	ld c, BANK(Music_GameCorner)
 	ld a, MUSIC_GAME_CORNER
@@ -332,6 +337,7 @@ TradeCenter_SelectMon:
 	inc a
 	ld [wSerialExchangeNybbleSendData], a
 	jp .playerMonMenu
+
 .enemyMonMenu
 	xor a
 	ld [wMenuWatchMovingOutOfBounds], a
@@ -371,6 +377,7 @@ TradeCenter_SelectMon:
 	ld hl, wEnemyMons
 	call TradeCenter_DisplayStats
 	jp .getNewInput
+
 .enemyMonMenu_ANotPressed
 	bit 5, a ; Left pressed?
 	jr z, .enemyMonMenu_LeftNotPressed
@@ -391,10 +398,12 @@ TradeCenter_SelectMon:
 	jr nc, .playerMonMenu
 	ld [wCurrentMenuItem], a
 	jr .playerMonMenu
+
 .enemyMonMenu_LeftNotPressed
 	bit 7, a ; Down pressed?
 	jp z, .getNewInput
 	jp .selectedCancelMenuItem ; jump if Down pressed
+
 .playerMonMenu
 	xor a ; player mon menu
 	ld [wWhichTradeMonSelectionMenu], a
@@ -419,16 +428,19 @@ TradeCenter_SelectMon:
 	and a ; was anything pressed?
 	jr nz, .playerMonMenu_SomethingPressed
 	jp .getNewInput
+
 .playerMonMenu_SomethingPressed
 	bit 0, a ; A button pressed?
 	jr z, .playerMonMenu_ANotPressed
 	jp .chosePlayerMon ; jump if A button pressed
+
 ; unreachable code
 	ld a, INIT_PLAYEROT_LIST
 	ld [wInitListType], a
 	callab InitList ; the list isn't used
 	call TradeCenter_DisplayStats
 	jp .getNewInput
+
 .playerMonMenu_ANotPressed
 	bit 4, a ; Right pressed?
 	jr z, .playerMonMenu_RightNotPressed
@@ -451,15 +463,18 @@ TradeCenter_SelectMon:
 	ld [wCurrentMenuItem], a
 .notPastLastEnemyMon
 	jp .enemyMonMenu
+
 .playerMonMenu_RightNotPressed
 	bit 7, a ; Down pressed?
 	jr z, .getNewInput
 	jp .selectedCancelMenuItem ; jump if Down pressed
+
 .getNewInput
 	ld a, [wWhichTradeMonSelectionMenu]
 	and a
 	jp z, .playerMonMenu_HandleInput
 	jp .enemyMonMenu_HandleInput
+
 .chosePlayerMon
 	call SaveScreenTilesToBuffer1
 	call PlaceUnfilledArrowMenuCursor
@@ -502,6 +517,7 @@ TradeCenter_SelectMon:
 	ld [wCurrentMenuItem], a
 	call LoadScreenTilesFromBuffer1
 	jp .playerMonMenu
+
 .selectTradeMenuItem
 	ld a, " "
 	Coorda 1, 16
@@ -515,6 +531,7 @@ TradeCenter_SelectMon:
 	bit 1, a ; B button pressed?
 	jr nz, .cancelPlayerMonChoice
 	jr .choseTrade
+
 .displayPlayerMonStats
 	pop af
 	ld [wCurrentMenuItem], a
@@ -524,6 +541,7 @@ TradeCenter_SelectMon:
 	call TradeCenter_DisplayStats
 	call LoadScreenTilesFromBuffer1
 	jp .playerMonMenu
+
 .choseTrade
 	call PlaceUnfilledArrowMenuCursor
 	pop af
@@ -539,6 +557,7 @@ TradeCenter_SelectMon:
 	ld a, $1 ; TradeCenter_Trade
 	ld [wTradeCenterPointerTableIndex], a
 	jp CallCurrentTradeCenterFunction
+
 .statsTrade
 	db "STATS     TRADE@"
 .selectedCancelMenuItem
@@ -572,6 +591,7 @@ TradeCenter_SelectMon:
 	dec a
 	ld [wCurrentMenuItem], a
 	jp .playerMonMenu
+
 .cancelMenuItem_APressed
 	ld a, $ec ; unfilled arrow cursor
 	Coorda 1, 16
@@ -740,6 +760,7 @@ TradeCenter_Trade:
 	call PlaceString
 	call Serial_PrintWaitingTextAndSyncAndExchangeNybble
 	jp .tradeCancelled
+
 .tradeConfirmed
 	ld a, $2
 	ld [wSerialExchangeNybbleSendData], a
@@ -755,6 +776,7 @@ TradeCenter_Trade:
 	ld de, TradeCanceled
 	call PlaceString
 	jp .tradeCancelled
+
 .doTrade
 	ld a, [wTradingWhichPlayerMon]
 	ld hl, wPartyMonOT
@@ -847,6 +869,7 @@ TradeCenter_Trade:
 	jr z, .usingExternalClock
 	predef InternalClockTradeAnim
 	jr .tradeCompleted
+
 .usingExternalClock
 	predef ExternalClockTradeAnim
 .tradeCompleted
@@ -871,6 +894,7 @@ TradeCenter_Trade:
 	xor a
 	ld [wTradeCenterPointerTableIndex], a
 	jp CableClub_DoBattleOrTradeAgain
+
 .tradeCancelled
 	ld c, 100
 	call DelayFrames
@@ -903,6 +927,7 @@ CableClub_Run:
 	ret nz
 	predef EmptyFunc3
 	jp Init
+
 .doBattleOrTrade
 	call CableClub_DoBattleOrTrade
 	ld hl, Club_GFX
@@ -982,3 +1007,4 @@ LoadTrainerInfoTextBoxTiles:
 	ld hl, vChars2 + $760
 	lb bc, BANK(TrainerInfoTextBoxTileGraphics), (TrainerInfoTextBoxTileGraphicsEnd - TrainerInfoTextBoxTileGraphics) / $10
 	jp CopyVideoData
+

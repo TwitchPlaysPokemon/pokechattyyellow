@@ -241,7 +241,6 @@ Credits: ; Roll credits
 	pop de
 	jr .nextCreditsCommand
 
-
 .fadeInTextAndShowMon
 	call FadeInCreditsText
 	ld c, 102

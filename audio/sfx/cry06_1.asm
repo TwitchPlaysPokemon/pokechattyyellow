@@ -7,10 +7,8 @@ SFX_Cry06_1_Ch1:
 	unknownsfx0x20 15, 130, 37, 2
 	unknownsfx0x20 15, 66, 7, 2
 
-
 SFX_Cry06_1_Ch2:
 	endchannel
-
 
 SFX_Cry06_1_Ch3:
 	unknownnoise0x20 8, 212, 140

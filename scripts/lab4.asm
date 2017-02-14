@@ -35,6 +35,7 @@ Lab4Script_GetFossilsInBag:
 	inc [hl]
 	pop hl
 	jr .loop
+
 .done
 	ld a, $ff
 	ld [de], a
@@ -58,17 +59,20 @@ Lab4Text1:
 	jr z, .asm_75d8d
 	callba GiveFossilToCinnabarLab
 	jr .asm_75d93
+
 .asm_75d8d
 	ld hl, Lab4Text_75dcb
 	call PrintText
 .asm_75d93
 	jp TextScriptEnd
+
 .asm_75d96
 	CheckEventAfterBranchReuseA EVENT_LAB_STILL_REVIVING_FOSSIL, EVENT_GAVE_FOSSIL_TO_LAB
 	jr z, .asm_75da2
 	ld hl, Lab4Text_75dd0
 	call PrintText
 	jr .asm_75d93
+
 .asm_75da2
 	call LoadFossilItemAndMonNameBank1D
 	ld hl, Lab4Text_75dd5

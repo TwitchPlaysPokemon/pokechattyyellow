@@ -43,6 +43,7 @@ Route7GateScript0:
 	ld a, $1
 	ld [wRoute7GateCurScript], a
 	ret
+
 .asm_1e15a
 	ld a, $3
 	ld [hSpriteIndexOrTextID], a

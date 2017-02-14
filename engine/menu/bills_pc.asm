@@ -13,10 +13,12 @@ DisplayPCMainMenu::
 	coord hl, 0, 0
 	lb bc, 8, 14
 	jr .next
+
 .noOaksPC
 	coord hl, 0, 0
 	lb bc, 6, 14
 	jr .next
+
 .leaguePCAvailable
 	coord hl, 0, 0
 	lb bc, 10, 14
@@ -30,6 +32,7 @@ DisplayPCMainMenu::
 	coord hl, 2, 2
 	ld de, SomeonesPCText
 	jr .next2
+
 .metBill
 	coord hl, 2, 2
 	ld de, BillsPCText
@@ -58,10 +61,12 @@ DisplayPCMainMenu::
 	coord hl, 2, 10
 	ld de, LogOffPCText
 	jr .next3
+
 .noLeaguePC
 	coord hl, 2, 8
 	ld de, LogOffPCText
 	jr .next3
+
 .noOaksPC2
 	ld a, $2
 	ld [wMaxMenuItem], a
@@ -157,6 +162,7 @@ BillsPCMenu:
 	ld [hl], "1"
 	add "0"
 	jr .next
+
 .singleDigitBoxNum
 	add "1"
 .next
@@ -214,6 +220,7 @@ BillsPCDeposit:
 	ld hl, CantDepositLastMonText
 	call PrintText
 	jp BillsPCMenu
+
 .partyLargeEnough
 	ld a, [wNumInBox]
 	cp MONS_PER_BOX
@@ -221,6 +228,7 @@ BillsPCDeposit:
 	ld hl, BoxFullText
 	call PrintText
 	jp BillsPCMenu
+
 .boxNotFull
 	ld hl, wPartyCount
 	call DisplayMonListMenu
@@ -234,6 +242,7 @@ BillsPCDeposit:
 .got_chatot_text
 	call PrintText
 	jp BillsPCMenu
+
 .asm_215ad
 	call DisplayDepositWithdrawMenu
 	jp nc, BillsPCMenu
@@ -242,6 +251,7 @@ BillsPCDeposit:
 	ldpikacry e, PikachuCry28
 	callab PlayPikachuSoundClip
 	jr .asm_215cf
+
 .asm_215c9
 	ld a, [wcf91]
 	call PlayCry
@@ -264,6 +274,7 @@ BillsPCDeposit:
 	inc hl
 	add "0"
 	jr .next
+
 .singleDigitBoxNum
 	add "1"
 .next
@@ -288,6 +299,7 @@ BillsPCWithdraw:
 	ld hl, NoMonText
 	call PrintText
 	jp BillsPCMenu
+
 .boxNotEmpty
 	ld a, [wPartyCount]
 	cp PARTY_LENGTH
@@ -295,6 +307,7 @@ BillsPCWithdraw:
 	ld hl, CantTakeMonText
 	call PrintText
 	jp BillsPCMenu
+
 .partyNotFull
 	ld hl, wNumInBox
 	call DisplayMonListMenu
@@ -309,6 +322,7 @@ BillsPCWithdraw:
 	ldpikacry e, PikachuCry_Mood3Happy5
 	callab PlayPikachuSoundClip
 	jr .asm_21666
+
 .asm_21660
 	ld a, [wcf91]
 	call PlayCry
@@ -331,6 +345,7 @@ BillsPCRelease:
 	ld hl, NoMonText
 	call PrintText
 	jp BillsPCMenu
+
 .loop
 	ld hl, wNumInBox
 	call DisplayMonListMenu
@@ -401,6 +416,7 @@ KnowsHMMove::
 	ld hl, wPartyMon1Moves
 	ld bc, wPartyMon2 - wPartyMon1
 	jr .next
+
 ; unreachable
 	ld hl, wBoxMon1Moves
 	ld bc, wBoxMon2 - wBoxMon1
@@ -477,9 +493,11 @@ DisplayDepositWithdrawMenu:
 .exit
 	and a
 	ret
+
 .choseDepositWithdraw
 	scf
 	ret
+
 .viewStats
 	call SaveScreenTilesToBuffer1
 	ld a, [wParentMenuItem]

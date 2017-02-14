@@ -65,6 +65,7 @@ RecoilEffect_:
 	predef UpdateHPBar2
 	ld hl, HitWithRecoilText
 	jp PrintText
+
 HitWithRecoilText:
 	TX_FAR _HitWithRecoilText
 	db "@"

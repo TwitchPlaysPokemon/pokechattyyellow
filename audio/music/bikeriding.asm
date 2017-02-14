@@ -152,7 +152,6 @@ Music_BikeRiding_branch_7dbc9::
 	vibrato 8, 1, 4
 	loopchannel 0, Music_BikeRiding_branch_7dbc9
 
-
 Music_BikeRiding_Ch2::
 	duty 2
 	vibrato 6, 1, 5
@@ -300,7 +299,6 @@ Music_BikeRiding_branch_7dc75::
 	B_ 12
 	notetype 12, 12, 3
 	loopchannel 0, Music_BikeRiding_branch_7dc75
-
 
 Music_BikeRiding_Ch3::
 	notetype 12, 1, 3
@@ -641,7 +639,6 @@ Music_BikeRiding_branch_7dd17::
 	F_ 1
 	rest 1
 	loopchannel 0, Music_BikeRiding_branch_7dd17
-
 
 Music_BikeRiding_Ch4::
 	dspeed 12

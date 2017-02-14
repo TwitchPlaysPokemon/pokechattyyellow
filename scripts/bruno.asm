@@ -18,6 +18,7 @@ BrunoShowOrHideExitBlock:
 	jr z, .blockExitToNextRoom
 	ld a, $5
 	jp .setExitBlock
+
 .blockExitToNextRoom
 	ld a, $24
 

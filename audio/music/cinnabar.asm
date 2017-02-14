@@ -84,7 +84,6 @@ Music_Cinnabar_branch_b878::
 	E_ 4
 	loopchannel 0, Music_Cinnabar_branch_b878
 
-
 Music_Cinnabar_Ch2::
 	duty 3
 	vibrato 10, 2, 3
@@ -177,7 +176,6 @@ Music_Cinnabar_branch_b8d9::
 	B_ 2
 	A_ 6
 	loopchannel 0, Music_Cinnabar_branch_b8d9
-
 
 Music_Cinnabar_Ch3::
 	notetype 12, 1, 0

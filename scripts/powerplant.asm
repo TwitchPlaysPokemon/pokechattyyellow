@@ -174,3 +174,4 @@ ZapdosBattleText:
 	call PlayCry
 	call WaitForSoundToFinish
 	jp TextScriptEnd
+

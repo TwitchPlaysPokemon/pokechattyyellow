@@ -59,6 +59,7 @@ SilphCo4Script_19d5d:
 	jr z, .asm_19d7a
 	inc hl
 	jr .asm_19d69
+
 .asm_19d7a
 	ld a, [hli]
 	cp c
@@ -68,6 +69,7 @@ SilphCo4Script_19d5d:
 	ld [hli], a
 	ld [hl], a
 	ret
+
 .asm_19d85
 	xor a
 	ld [$ffe0], a
@@ -82,6 +84,7 @@ SilphCo4Script_19d89:
 	jr nz, .next
 	SetEventReuseHL EVENT_SILPH_CO_4_UNLOCKED_DOOR1
 	ret
+
 .next
 	SetEventAfterBranchReuseHL EVENT_SILPH_CO_4_UNLOCKED_DOOR2, EVENT_SILPH_CO_4_UNLOCKED_DOOR1
 	ret

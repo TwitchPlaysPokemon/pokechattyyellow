@@ -58,6 +58,7 @@ GetMonSpecies:
 	jr z, .enemyParty
 	ld hl, wBoxSpecies
 	jr .getSpecies
+
 .enemyParty
 	ld hl, wEnemyPartyMons
 .getSpecies
@@ -66,3 +67,4 @@ GetMonSpecies:
 	ld a, [hl]
 	ld [wcf91], a
 	ret
+

@@ -20,6 +20,7 @@ Serial::
 	ld a, START_TRANSFER_EXTERNAL_CLOCK
 	ld [rSC], a
 	jr .done
+
 .connectionNotYetEstablished
 	ld a, [rSB]
 	ld [hSerialReceiveData], a
@@ -38,6 +39,7 @@ Serial::
 	ld a, START_TRANSFER_EXTERNAL_CLOCK
 	ld [rSC], a
 	jr .done
+
 .usingInternalClock
 	xor a
 	ld [rSB], a
@@ -80,6 +82,7 @@ Serial_ExchangeBytes::
 	xor a
 	ld [hSerialIgnoringInitialData], a
 	jr .loop
+
 .storeReceivedByte
 	ld [de], a
 	inc de
@@ -118,6 +121,7 @@ Serial_ExchangeByte::
 	call IsUnknownCounterZero
 	jr nz, .loop
 	jp SetUnknownCounterToFFFF
+
 .doNotIncrementUnknownCounter
 	ld a, [rIE]
 	and (1 << SERIAL) | (1 << TIMER) | (1 << LCD_STAT) | (1 << VBLANK)
@@ -250,6 +254,7 @@ Serial_SyncAndExchangeNybble::
 	pop hl
 	xor a
 	jp SetUnknownCounterToFFFF
+
 .next2
 	pop hl
 .next1
@@ -321,3 +326,4 @@ PrinterSerial__::
 	pop bc
 	pop af
 	reti
+

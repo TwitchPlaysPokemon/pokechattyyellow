@@ -22,12 +22,15 @@ Route12HouseText1:
 	set 5, [hl]
 	ld hl, Route12HouseText_564c5
 	jr .asm_df984
+
 .BagFull
 	ld hl, Route12HouseText_564d9
 	jr .asm_df984
+
 .asm_a2d76
 	ld hl, Route12HouseText_564cf
 	jr .asm_df984
+
 .asm_b4cad
 	ld hl, Route12HouseText_564d4
 .asm_df984

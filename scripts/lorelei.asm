@@ -20,6 +20,7 @@ LoreleiShowOrHideExitBlock:
 	jr z, .blockExitToNextRoom
 	ld a, $5
 	jr .setExitBlock
+
 .blockExitToNextRoom
 	ld a, $24
 .setExitBlock

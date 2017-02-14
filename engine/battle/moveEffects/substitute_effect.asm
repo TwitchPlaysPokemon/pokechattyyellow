@@ -60,6 +60,7 @@ SubstituteEffect_:
 .alreadyHasSubstitute
 	ld hl, HasSubstituteText
 	jr .printText
+
 .notEnoughHP
 	ld hl, TooWeakSubstituteText
 .printText

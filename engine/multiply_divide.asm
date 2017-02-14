@@ -12,6 +12,7 @@ _Multiply:: ; 66de
 	ld [hProduct + 2], a
 	ld [hProduct + 3], a
 	jr .skip
+
 .skip2
 	ld c, a
 	ld a, [hMultiplicand]
@@ -56,9 +57,8 @@ _Multiply:: ; 66de
 	pop hl
 	pop de
 	ret
+
 ; 673e
-
-
 
 _Divide:: ; 673e
 	push hl
@@ -97,6 +97,7 @@ _Divide:: ; 673e
 	sla l
 	dec b
 	jr .loop2
+
 .done
 	ld a, c
 	add hMathBuffer - hDividend
@@ -142,3 +143,4 @@ _Divide:: ; 673e
 .finished
 	pop hl
 	ret
+

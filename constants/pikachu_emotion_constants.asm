@@ -59,7 +59,6 @@ pikaframesleep EQUS "db 0,"
 	const PIKASTEPDIR_UP_LEFT
 	const PIKASTEPDIR_UP_RIGHT
 
-
 ; Macros for commands
 pikaemotion_dummy1: MACRO
 	db PIKAEMOTION_DUMMY1
@@ -133,7 +132,6 @@ ldpikacry: MACRO
 pikacry: MACRO
 	ldpikacry a, \1
 	endm
-
 
 	enum_start
 	enum pikapic_nop_command

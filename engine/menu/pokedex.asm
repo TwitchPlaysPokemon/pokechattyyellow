@@ -156,6 +156,7 @@ HandlePokedexSideMenu:
 	jr nz, .notChatot
 	call PlayRegularChatotCry
 	jr .handleMenuInput
+
 .notChatot
 	call GetCryData
 	call PlaySound
@@ -398,6 +399,7 @@ Pokedex_PlacePokemonList:
 	jr nz, .getPokemonName ; if the player has seen the pokemon
 	ld de, .dashedLine ; print a dashed line in place of the name if the player hasn't seen the pokemon
 	jr .skipGettingName
+
 .dashedLine ; for unseen pokemon in the list
 	db "----------@"
 .getPokemonName

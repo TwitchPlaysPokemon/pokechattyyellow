@@ -42,6 +42,7 @@ MainMenu:
 	ld de, ContinueText
 	call PlaceString
 	jr .next2
+
 .noSaveFile
 	coord hl, 0, 0
 	lb bc, 4, 13
@@ -94,6 +95,7 @@ ENDC
 	ld a, 1
 	ld [wOptionsInitialized], a
 	jp .mainMenuLoop
+
 .choseContinue
 	call DisplayContinueGameInfo
 	ld hl, wCurrentMapScriptFlags
@@ -110,6 +112,7 @@ ENDC
 	bit 1, a
 	jp nz, .mainMenuLoop ; pressed B
 	jr .inputLoop
+
 .pressedA
 	call GBPalWhiteOutWithDelay3
 	call ClearScreen
@@ -324,9 +327,11 @@ CheckForPlayerNameInSRAM:
 	ld [MBC5SRamBankingMode], a
 	and a
 	ret
+
 .found
 	xor a
 	ld [MBC5SRamEnable], a
 	ld [MBC5SRamBankingMode], a
 	scf
 	ret
+

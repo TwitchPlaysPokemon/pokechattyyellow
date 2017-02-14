@@ -14,7 +14,6 @@ prompt EQUS "db $58"  ; Prompt the player to end a text box (initiating some oth
 page   EQUS "db $49, "     ; Start a new Pokedex page.
 dex    EQUS "db $5f, $50" ; End a Pokedex entry.
 
-
 percent EQUS "* $ff / 100"
 
 lb: MACRO ; r, hi, lo
@@ -57,6 +56,7 @@ homecall_jump: MACRO
 	pop af
 	rst Bankswitch
 	ret
+
 	ENDM
 
 homecall_jump_sf: MACRO
@@ -69,6 +69,7 @@ homecall_jump_sf: MACRO
 	ld a, b
 	rst Bankswitch
 	ret
+
 	ENDM
 
 homecall: MACRO
@@ -101,6 +102,12 @@ callbs: MACRO
 	ld a, BANK(\1)
 	rst Bankswitch
 	call \1
+	ENDM
+
+condfarcall: MACRO
+	ld a, BANK(\2)
+	ld hl, \2
+	call \1, FarCall_hl
 	ENDM
 
 callba: MACRO
@@ -318,7 +325,6 @@ TX_BOX: MACRO
 	db \3, \4
 	ENDM
 
-
 TX_LINE EQUS "db $05"
 TX_BUTTON_SOUND EQUS "db $06"
 TX_CONT EQUS "db $07"
@@ -408,6 +414,7 @@ predef: MACRO
 predef_jump: MACRO
 	predef_id \1
 	jp Predef
+
 	ENDM
 
 tx_pre_const: MACRO
@@ -434,6 +441,7 @@ ENDM
 tx_pre_jump: MACRO
 	tx_pre_id \1
 	jp PrintPredefTextID
+
 ENDM
 
 WALK EQU $FE
@@ -739,7 +747,6 @@ ENDM
 endchannel: MACRO
 	db $FF
 ENDM
-
 
 ;\1 (byte) = current map id
 ;\2 (byte) = connected map id

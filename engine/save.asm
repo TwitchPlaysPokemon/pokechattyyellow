@@ -12,6 +12,7 @@ LoadSAV:
 	jr c, .badsum
 	ld a, $2 ; good checksum
 	jr .goodsum
+
 .badsum
 	ld hl, wd730
 	push hl
@@ -445,6 +446,7 @@ DisplayChangeBoxMenu:
 	ld [hl], "1"
 	add "0"
 	jr .next
+
 .singleDigitBoxNum
 	add "1"
 .next
@@ -680,3 +682,4 @@ DisableSRAMAndPrepareClockData:
 	ld [MBC5SRamBankingMode], a
 	ld [MBC5SRamEnable], a
 	ret
+

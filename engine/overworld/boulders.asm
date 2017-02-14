@@ -50,6 +50,7 @@ CheckForBoulderCollisionWithSprites:
 	ld a, [$ffdc]
 	dec a
 	jr .compareYCoords
+
 .pushingDown
 	ld a, [$ffdc]
 	inc a
@@ -61,6 +62,7 @@ CheckForBoulderCollisionWithSprites:
 	jr z, .success
 	add hl, de
 	jr .pushingVerticallyLoop
+
 .pushingHorizontallyLoop
 	ld a, [hli]
 	ld b, a
@@ -75,6 +77,7 @@ CheckForBoulderCollisionWithSprites:
 	ld a, [$ffdd]
 	inc a
 	jr .compareXCoords
+
 .pushingLeft
 	ld a, [$ffdd]
 	dec a
@@ -86,9 +89,12 @@ CheckForBoulderCollisionWithSprites:
 	jr z, .success
 	add hl, de
 	jr .pushingHorizontallyLoop
+
 .failure
 	ld a, $ff
 	ret
+
 .success
 	xor a
 	ret
+

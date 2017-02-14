@@ -151,10 +151,12 @@ FightingDojoText1:
 	ld [wFightingDojoCurScript], a
 	ld [wCurMapScript], a
 	jr .asm_9dba4
+
 .continue1
 	ld hl, FightingDojoText_5ce9d
 	call PrintText
 	jr .asm_9dba4
+
 .continue2
 	ld hl, FightingDojoText8
 	call PrintText
@@ -257,6 +259,7 @@ FightingDojoText6:
 	ld hl, OtherHitmonText
 	call PrintText
 	jr .done
+
 .GetMon
 	ld a, HITMONLEE
 	call DisplayPokedex
@@ -292,6 +295,7 @@ FightingDojoText7:
 	ld hl, OtherHitmonText
 	call PrintText
 	jr .done
+
 .GetMon
 	ld a, HITMONCHAN
 	call DisplayPokedex

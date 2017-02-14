@@ -105,7 +105,6 @@ Music_Routes1_branch_9be9::
 	loopchannel 0, Music_Routes1_branch_9be9
 	endchannel
 
-
 Music_Routes1_Ch2::
 	duty 2
 
@@ -233,7 +232,6 @@ Music_Routes1_branch_9c8d::
 	endchannel
 	endchannel
 
-
 Music_Routes1_Ch3::
 	vibrato 8, 2, 5
 	notetype 12, 1, 3
@@ -307,7 +305,6 @@ Music_Routes1_branch_9cdd::
 	D_ 6
 	loopchannel 0, Music_Routes1_branch_9cdd
 	endchannel
-
 
 Music_Routes1_Ch4::
 	dspeed 12

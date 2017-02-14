@@ -22,6 +22,7 @@ FormatMovesString:
 	ld [de], a
 	inc de
 	jr .copyNameLoop
+
 .doneCopyingName
 	ld a, b
 	ld [wNumMovesMinusOne], a
@@ -34,6 +35,7 @@ FormatMovesString:
 	cp NUM_MOVES
 	jr z, .done
 	jr .printMoveNameLoop
+
 .printDashLoop
 	ld a, "-"
 	ld [de], a
@@ -46,6 +48,7 @@ FormatMovesString:
 	ld [de], a
 	inc de
 	jr .printDashLoop
+
 .done
 	ld a, "@"
 	ld [de], a
@@ -60,6 +63,7 @@ InitList:
 	ld de, wEnemyMonOT
 	ld a, ENEMYOT_NAME
 	jr .done
+
 .notEnemy
 	cp INIT_PLAYEROT_LIST
 	jr nz, .notPlayer
@@ -67,6 +71,7 @@ InitList:
 	ld de, wPartyMonOT
 	ld a, PLAYEROT_NAME
 	jr .done
+
 .notPlayer
 	cp INIT_MON_LIST
 	jr nz, .notMonster
@@ -74,6 +79,7 @@ InitList:
 	ld de, MonsterNames
 	ld a, MONSTER_NAME
 	jr .done
+
 .notMonster
 	cp INIT_BAG_ITEM_LIST
 	jr nz, .notBag
@@ -81,6 +87,7 @@ InitList:
 	ld de, ItemNames
 	ld a, ITEM_NAME
 	jr .done
+
 .notBag
 	ld hl, wItemList
 	ld de, ItemNames
@@ -101,3 +108,4 @@ InitList:
 	ld a, b
 	ld [wItemPrices + 1], a
 	ret
+

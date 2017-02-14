@@ -4,6 +4,7 @@ CeladonPrizeMenu:
 	jr nz, .havingCoinCase
 	ld hl, RequireCoinCaseTextPtr
 	jp PrintText
+
 .havingCoinCase
 	ld hl, wd730
 	set 6, [hl] ; disable letter-printing delay
@@ -104,6 +105,7 @@ GetPrizeMenuId:
 	coord hl, 2, 8
 	call PlaceString
 	jr .putNoThanksText
+
 .putMonName
 	ld a, [wPrize1]
 	ld [wd11e], a
@@ -200,6 +202,7 @@ HandlePrizeChoice:
 	jr nz, .getMonName
 	call GetItemName
 	jr .givePrize
+
 .getMonName
 	call GetMonName
 .givePrize
@@ -222,6 +225,7 @@ HandlePrizeChoice:
 	call GiveItem
 	jr nc, .bagFull
 	jr .subtractCoins
+
 .giveMon
 	ld a, [wd11e]
 	ld [wcf91], a
@@ -250,12 +254,15 @@ HandlePrizeChoice:
 	ld c, $02 ; how many bytes
 	predef SubBCDPredef
 	jp PrintPrizePrice
+
 .bagFull
 	ld hl, PrizeRoomBagIsFullTextPtr
 	jp PrintText
+
 .notEnoughCoins
 	ld hl, SorryNeedMoreCoinsText
 	jp PrintText
+
 .printOhFineThen
 	ld hl, OhFineThenTextPtr
 	jp PrintText
@@ -298,6 +305,7 @@ GetPrizeMonLevel:
 	jr z, .matchFound
 	inc hl
 	jr .loop
+
 .matchFound
 	ld a, [hl]
 	ld [wCurEnemyLVL], a

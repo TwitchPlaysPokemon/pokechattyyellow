@@ -40,6 +40,7 @@ GetAnimationSpeed:
 .skipResetTimer
 	ld [wAnimCounter], a
 	jp DelayFrame
+
 .resetSprites
 	push bc
 	ld hl, wMonPartySpritesSavedOAM
@@ -49,6 +50,7 @@ GetAnimationSpeed:
 	pop bc
 	xor a
 	jr .incTimer
+
 .animateSprite
 	push bc
 	ld hl, wOAMBuffer + $02 ; OAM tile id
@@ -421,6 +423,7 @@ WriteMonPartySpriteOAM:
 	jr z, .helix
 	call WriteSymmetricMonPartySpriteOAM
 	jr .makeCopy
+
 .helix
 	call WriteAsymmetricMonPartySpriteOAM
 ; Make a copy of the OAM buffer with the first animation frame written so that

@@ -18,3 +18,4 @@ ClearVariablesAfterLoadingMapData:
 	ld bc, wStandingOnWarpPadOrHole - wUnusedCD3D
 	call FillMemory
 	ret
+

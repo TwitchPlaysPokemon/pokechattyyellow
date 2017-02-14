@@ -53,7 +53,6 @@ Music_MuseumGuy_branch_adec::
 	D_ 6
 	endchannel
 
-
 Music_MuseumGuy_Ch2::
 	duty 2
 	notetype 12, 12, 1
@@ -164,7 +163,6 @@ Music_MuseumGuy_branch_ae26::
 	A_ 4
 	loopchannel 0, Music_MuseumGuy_branch_ae26
 
-
 Music_MuseumGuy_Ch3::
 	notetype 12, 1, 0
 	rest 16
@@ -259,7 +257,6 @@ Music_MuseumGuy_branch_aec1::
 	rest 1
 	A_ 1
 	endchannel
-
 
 Music_MuseumGuy_Ch4::
 	dspeed 12

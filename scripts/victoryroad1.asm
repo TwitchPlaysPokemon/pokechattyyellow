@@ -10,6 +10,7 @@ VictoryRoad1Script:
 	call ExecuteCurMapScriptInTable
 	ld [wVictoryRoad1CurScript], a
 	ret
+
 .next
 	CheckEvent EVENT_VICTORY_ROAD_1_BOULDER_ON_SWITCH
 	ret z

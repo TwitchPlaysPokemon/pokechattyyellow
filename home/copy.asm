@@ -72,3 +72,4 @@ CopyVideoDataDoubleAlternate::
 	pop af
 	pop hl
 	jp FarCopyDataDouble
+

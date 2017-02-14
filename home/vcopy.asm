@@ -21,6 +21,7 @@ GetRowColAddressBgMap::
 ClearBgMap::
 	ld a, " "
 	jr .next
+
 	ld a, l
 .next
 	ld de, $400 ; size of VRAM background map
@@ -77,6 +78,7 @@ RedrawRowOrColumn::
 	xor a
 	ld [hRedrawRowOrColumnMode], a
 	ret
+
 .redrawRow
 	ld hl, wRedrawRowOrColumnSrcTiles
 	ld a, [hRedrawRowOrColumnDest]
@@ -140,6 +142,7 @@ AutoBgMapTransfer::
 	add hl, de
 	xor a ; TRANSFERTOP
 	jr .doTransfer
+
 .transferTopThird
 	coord hl, 0, 0
 	ld sp, hl
@@ -149,6 +152,7 @@ AutoBgMapTransfer::
 	ld l, a
 	ld a, TRANSFERMIDDLE
 	jr .doTransfer
+
 .transferMiddleThird
 	coord hl, 0, 6
 	ld sp, hl
@@ -217,7 +221,6 @@ VBlankCopyBgMap::
 	ld [hBGMapCopySrc], a ; disable transfer so it doesn't continue next V-blank
 	jr TransferBgRows
 
-
 VBlankCopyDouble::
 ; Copy [h1bppSize] 1bpp tiles
 ; from h1bppSrc to h1bppDest.
@@ -285,7 +288,6 @@ VBlankCopyDouble::
 
 	ret
 
-
 VBlankCopy::
 ; Copy [h2bppSize] 2bpp tiles (or 16 * [h2bppSize] tile map entries)
 ; from h2bppSrc to h2bppDest.
@@ -344,7 +346,6 @@ VBlankCopy::
 
 	ret
 
-
 UpdateMovingBgTiles::
 ; Animate water and flower
 ; tiles in the overworld.
@@ -384,6 +385,7 @@ UpdateMovingBgTiles::
 	dec c
 	jr nz, .right
 	jr .done
+
 .left
 	ld a, [hl]
 	rlca

@@ -31,7 +31,6 @@ Music_MeetMaleTrainer_branch_7f78f::
 	E_ 16
 	loopchannel 0, Music_MeetMaleTrainer_branch_7f78f
 
-
 Music_MeetMaleTrainer_Ch2::
 	duty 3
 	vibrato 24, 2, 2
@@ -73,7 +72,6 @@ Music_MeetMaleTrainer_branch_7f7b5::
 	octave 4
 	C# 8
 	loopchannel 0, Music_MeetMaleTrainer_branch_7f7b5
-
 
 Music_MeetMaleTrainer_Ch3::
 	notetype 12, 1, 0

@@ -55,6 +55,7 @@ FuchsiaGymScript3_75497:
 	call DisplayTextID
 	SetEvent EVENT_GOT_TM06
 	jr .asm_754c0
+
 .BagFull
 	ld a, $b
 	ld [hSpriteIndexOrTextID], a
@@ -149,10 +150,12 @@ FuchsiaGymText1:
 	call z, FuchsiaGymScript3_75497
 	call DisableWaitingAfterTextDisplay
 	jr .asm_e84c6
+
 .asm_adc3b
 	ld hl, KogaExplainToxicText
 	call PrintText
 	jr .asm_e84c6
+
 .asm_181b6
 	ld hl, KogaBeforeBattleText
 	call PrintText

@@ -109,10 +109,12 @@ PewterGymText1:
 	call z, PewterGymScript_5c3df
 	call DisableWaitingAfterTextDisplay
 	jr .asm_5c49b
+
 .asm_5c462
 	ld hl, PewterGymText_5c4a3
 	call PrintText
 	jr .asm_5c49b
+
 .asm_5c46a
 	ld hl, PewterGymText_5c49e
 	call PrintText
@@ -199,6 +201,7 @@ PewterGymText3:
 	ld hl, PewterGymText_5c51a
 	call PrintText
 	jr .asm_5c504
+
 .asm_5c4fe
 	ld hl, PewterGymText_5c524
 	call PrintText
@@ -206,6 +209,7 @@ PewterGymText3:
 	ld hl, PewterGymText_5c51f
 	call PrintText
 	jr .asm_5c512
+
 .asm_5c50c
 	ld hl, PewterGymText_5c529
 	call PrintText

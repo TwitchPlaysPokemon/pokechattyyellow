@@ -20,7 +20,6 @@ Music_MeetEvilTrainer_branch_7f6ae::
 	D_ 4
 	loopchannel 0, Music_MeetEvilTrainer_branch_7f6ae
 
-
 Music_MeetEvilTrainer_Ch2::
 	duty 1
 	notetype 12, 11, 6
@@ -58,7 +57,6 @@ Music_MeetEvilTrainer_branch_7f6c2::
 	A# 4
 	notetype 12, 12, 2
 	loopchannel 0, Music_MeetEvilTrainer_branch_7f6c2
-
 
 Music_MeetEvilTrainer_Ch3::
 	notetype 12, 1, 0

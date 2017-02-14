@@ -59,7 +59,6 @@ battle_struct: MACRO
 \1PP::         ds NUM_MOVES
 ENDM
 
-
 SECTION "WRAM Bank 0", WRAM0
 
 wUnusedC000:: ; c000
@@ -264,7 +263,6 @@ endm
 	spritestatedata1 Pikachu
 	; ds $10 * $10
 
-
 ;SECTION "Sprite State Data 2", WRAM0[$c200]
 
 wSpriteStateData2:: ; c200
@@ -323,7 +321,6 @@ endm
 	; ds $10 * $10
 
 wSpriteDataEnd::
-
 
 SECTION "OAM Buffer", WRAM0[$c300]
 
@@ -809,7 +806,6 @@ wPikaPicUsedGFXCount:: ; cc5b
 wPikaPicUsedGFX:: ; cc5c
 wDexRatingNumMonsOwned:: ; cc5c
 	ds 1
-
 
 wDexRatingText:: ; cc5d
 wTrainerCardBadgeAttributes:: ; cc5d
@@ -1833,7 +1829,6 @@ wPlayerMoveAccuracy:: ; cfd5
 wPlayerMoveMaxPP:: ; cfd6
 	ds 1
 
-
 wEnemyMonSpecies2:: ; cfd7
 	ds 1
 wBattleMonSpecies2:: ; cfd8
@@ -1879,7 +1874,6 @@ wEnemyMonBaseExp:: ds 1
 
 wBattleMonNick:: ds NAME_LENGTH ; d008
 wBattleMon:: battle_struct wBattleMon ; d013
-
 
 wTrainerClass:: ; d030
 	ds 1
@@ -2579,7 +2573,6 @@ wSavedNPCMovementDirections2Index:: ; d156
 wPlayerName:: ; d157
 	ds NAME_LENGTH
 
-
 wPartyDataStart::
 
 wPartyCount::   ds 1 ; d162
@@ -2600,7 +2593,6 @@ wPartyMonNicks:: ds NAME_LENGTH * PARTY_LENGTH ; d2b4
 wPartyMonNicksEnd::
 wPartyDataEnd::
 
-
 wMainDataStart::
 
 wPokedexOwned:: ; d2f5
@@ -2610,7 +2602,6 @@ wPokedexOwnedEnd::
 wPokedexSeen:: ; d309
 	flag_array NUM_POKEMON
 wPokedexSeenEnd::
-
 
 wNumBagItems:: ; d31c
 	ds 1
@@ -2878,7 +2869,6 @@ wPikachuStepSubtimer:: ds 1 ; d458
 	ds 5
 wCurPikaMovementDataEnd:: ; d45e
 	ds wCurPikaMovementData - @
-
 
 wPikaPicAnimPointer:: dw ; d44d
 wPikaPicAnimPointerSetupFinished:: ds 1 ; d44f
@@ -3531,7 +3521,6 @@ wEnemyMon6:: party_struct wEnemyMon6
 wEnemyMonOT::    ds NAME_LENGTH * PARTY_LENGTH ; d9ab
 wEnemyMonNicks:: ds NAME_LENGTH * PARTY_LENGTH ; d9ed
 
-
 wTrainerHeaderPtr:: ; da2f
 	ds 2
 
@@ -3568,7 +3557,6 @@ wSafariZoneGameOver:: ; da45
 wNumSafariBalls:: ; da46
 	ds 1
 
-
 wDayCareInUse:: ; da47
 ; 0 if no pokemon is in the daycare
 ; 1 if pokemon is in the daycare
@@ -3580,7 +3568,6 @@ wDayCareMonOT::   ds NAME_LENGTH ; da53
 wDayCareMon:: box_struct wDayCareMon ; da5e
 
 wMainDataEnd::
-
 
 wBoxDataStart::
 
@@ -3609,6 +3596,5 @@ wBTOrder:: ds 2
 SECTION "Stack", WRAMX[$dfff], BANK[1]
 wStack:: ; dfff
 	ds -$100
-
 
 INCLUDE "sram.asm"

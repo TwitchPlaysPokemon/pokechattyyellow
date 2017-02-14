@@ -17,6 +17,7 @@ SeafoamIslands4Script:
 	ld a, HS_SEAFOAM_ISLANDS_5_BOULDER_1
 	ld [wObjectToShow], a
 	jr .asm_465c4
+
 .asm_465b8
 	SetEventAfterBranchReuseHL EVENT_SEAFOAM4_BOULDER2_DOWN_HOLE, EVENT_SEAFOAM4_BOULDER1_DOWN_HOLE
 	ld a, HS_SEAFOAM_ISLANDS_4_BOULDER_2
@@ -31,6 +32,7 @@ SeafoamIslands4Script:
 	ld [wMissableObjectIndex], a
 	predef ShowObject
 	jr .asm_465ed
+
 .asm_465dc
 	ld a, $a2
 	ld [wDungeonWarpDestinationMap], a
@@ -102,6 +104,7 @@ SeafoamIslands4Script2:
 	jr nz, .asm_4667b
 	ld de, RLEData_4667f
 	jr .asm_46661
+
 .asm_4665e
 	ld de, RLEData_46688
 .asm_46661

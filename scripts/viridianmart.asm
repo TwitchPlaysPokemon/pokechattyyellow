@@ -11,6 +11,7 @@ ViridianMartScript_1d47d:
 	jr nz, .asm_1d489
 	ld hl, ViridianMartTextPointers
 	jr .asm_1d48c
+
 .asm_1d489
 	ld hl, ViridianMartTextPointers + $a ; starts at ViridianCashierText
 .asm_1d48c

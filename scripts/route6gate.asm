@@ -31,6 +31,7 @@ Route6GateScript0:
 	ld a, $1
 	ld [wRoute6GateCurScript], a
 	ret
+
 .asm_1e080
 	ld hl, wd728
 	set 6, [hl]

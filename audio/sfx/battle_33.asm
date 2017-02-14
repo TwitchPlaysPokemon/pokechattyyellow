@@ -7,7 +7,6 @@ SFX_Battle_33_Ch1:
 	unknownsfx0x20 8, 241, 0, 7
 	endchannel
 
-
 SFX_Battle_33_Ch2:
 	duty 3
 	unknownsfx0x20 6, 225, 16, 5

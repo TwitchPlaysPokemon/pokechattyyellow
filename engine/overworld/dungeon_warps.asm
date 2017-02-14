@@ -13,3 +13,4 @@ IsPlayerOnDungeonWarp:
 	ld hl, wd732
 	set 4, [hl]
 	ret
+

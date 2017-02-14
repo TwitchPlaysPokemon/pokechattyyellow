@@ -56,6 +56,7 @@ CeruleanCityScript0:
 	ld a, $2
 	ld [hSpriteIndexOrTextID], a
 	jp DisplayTextID
+
 .asm_194f7
 	CheckEvent EVENT_BEAT_CERULEAN_RIVAL
 	ret nz
@@ -163,6 +164,7 @@ CeruleanCityScript2:
 	jr nz, .asm_195f0
 	ld de, CeruleanCityMovement4
 	jr .asm_195f3
+
 .asm_195f0
 	ld de, CeruleanCityMovement3
 .asm_195f3
@@ -235,6 +237,7 @@ CeruleanCityText1:
 	ld hl, CeruleanCityText_19677
 	call PrintText
 	jr .end
+
 .PreBattleText
 	ld hl, CeruleanCityText_19668
 	call PrintText
@@ -276,6 +279,7 @@ CeruleanCityText2:
 	ld a, $4
 	ld [wCeruleanCityCurScript], a
 	jp TextScriptEnd
+
 .asm_4ca20
 	ld hl, CeruleanCityText_196f3
 	call PrintText
@@ -285,6 +289,7 @@ CeruleanCityText2:
 	ld hl, TM28NoRoomText
 	call PrintText
 	jr .Done
+
 .Success
 	ld a, $1
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
@@ -342,12 +347,14 @@ CeruleanCityText7:
 	ld hl, CeruleanCityText_19730
 	call PrintText
 	jr .asm_d486e
+
 .asm_e9fc9
 	cp $64
 	jr c, .asm_df99b
 	ld hl, CeruleanCityText_19735
 	call PrintText
 	jr .asm_d486e
+
 .asm_df99b
 	ld hl, CeruleanCityText_1973a
 	call PrintText
@@ -374,18 +381,21 @@ CeruleanCityText8:
 	ld hl, CeruleanCityText_1976f
 	call PrintText
 	jr .asm_f2f38
+
 .asm_e28da
 	cp $78
 	jr c, .asm_15d08
 	ld hl, CeruleanCityText_19774
 	call PrintText
 	jr .asm_f2f38
+
 .asm_15d08
 	cp $3c
 	jr c, .asm_d7fea
 	ld hl, CeruleanCityText_19779
 	call PrintText
 	jr .asm_f2f38
+
 .asm_d7fea
 	ld hl, CeruleanCityText_1977e
 	call PrintText

@@ -41,6 +41,7 @@ SeafoamIslands5Script0:
 	ld [wSimulatedJoypadStatesEnd + 1], a
 	ld a, 2
 	jr .asm_467e8
+
 .asm_467e6
 	ld a, 1
 .asm_467e8
@@ -84,6 +85,7 @@ SeafoamIslands5Script2:
 	jr nz, .asm_46837
 	ld de, RLEMovementData_46859
 	jr .asm_4683a
+
 .asm_46837
 	ld de, RLEMovementData_46852
 .asm_4683a

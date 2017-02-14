@@ -48,6 +48,7 @@ TradeAnimCommon:
 	ld de, .loop
 	push de
 	jp [hl] ; call trade func, which will return to the top of the loop
+
 .done
 	pop af
 	ld [hSCX], a
@@ -336,6 +337,7 @@ Trade_AnimateBallEnteringLinkCable:
 	ld a, SFX_TINK
 	call PlaySound
 	jr .moveBallInsideLinkCableLoop
+
 .ballSpriteReachedEdgeOfScreen
 	call ClearSprites
 	ld a, $1
@@ -580,6 +582,7 @@ Trade_AnimMonMoveHorizontal:
 	ld a, [hSCX]
 	sub $2
 	jr .next
+
 .movingRight
 	ld a, [hSCX]
 	add $2
@@ -655,6 +658,7 @@ Trade_AnimMonMoveVertical:
 	call .doAnim
 	lb bc, 0, 10 ; move down
 	jr .doAnim
+
 .movingLeft
 	lb bc, 0, -10 ; move up
 	call .doAnim

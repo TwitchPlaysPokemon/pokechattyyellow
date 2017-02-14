@@ -16,6 +16,7 @@ PrintStatusAilment:
 	ld [hli], a
 	ld [hl], "P"
 	ret
+
 .psn
 	ld a, "P"
 	ld [hli], a
@@ -23,6 +24,7 @@ PrintStatusAilment:
 	ld [hli], a
 	ld [hl], "N"
 	ret
+
 .brn
 	ld a, "B"
 	ld [hli], a
@@ -30,6 +32,7 @@ PrintStatusAilment:
 	ld [hli], a
 	ld [hl], "N"
 	ret
+
 .frz
 	ld a, "F"
 	ld [hli], a
@@ -37,6 +40,7 @@ PrintStatusAilment:
 	ld [hli], a
 	ld [hl], "Z"
 	ret
+
 .par
 	ld a, "P"
 	ld [hli], a
@@ -44,3 +48,4 @@ PrintStatusAilment:
 	ld [hli], a
 	ld [hl], "R"
 	ret
+

@@ -33,6 +33,7 @@ SafariZoneEntranceScriptPointers:
 	ld a, $2
 	ld [wSafariZoneEntranceCurScript], a
 	ret
+
 .asm_7520f
 	ld a, D_RIGHT
 	ld c, $1
@@ -94,6 +95,7 @@ SafariZoneEntranceScriptPointers:
 	ld a, $4
 	ld [wSafariZoneEntranceCurScript], a
 	jr .asm_75286
+
 .asm_7527f
 	ld a, $5
 	ld [hSpriteIndexOrTextID], a
@@ -168,6 +170,7 @@ SafariZoneEntranceTextPointers:
 	ld a, $0
 	ld [wcf0d], a
 	jr .asm_753b3
+
 .asm_7539c
 	ld hl, .SafariZoneEntranceText_753c0
 	call PrintText
@@ -199,3 +202,4 @@ SafariZoneEntranceTextPointers:
 	TX_ASM
 	callab Func_f203e
 	jp TextScriptEnd
+

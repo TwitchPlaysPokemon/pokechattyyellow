@@ -152,7 +152,6 @@ hDivideBCDDivisor  EQU $FFA2 ; 3-byte BCD number
 hDivideBCDQuotient EQU $FFA2 ; 3-byte BCD number
 hDivideBCDBuffer EQU $FFA5 ; 3 bytes
 
-
 hSerialReceivedNewData EQU $FFA9
 
 ; $01 = using external clock

@@ -65,6 +65,7 @@ LanceScript0:
 	ld a, $1
 	ld [hSpriteIndexOrTextID], a
 	jp DisplayTextID
+
 .notStandingNextToLance
 	cp $5  ; Is player standing on the entrance staircase?
 	jr z, WalkToLance
@@ -160,3 +161,4 @@ LanceAfterBattleText:
 	TX_ASM
 	SetEvent EVENT_BEAT_LANCE
 	jp TextScriptEnd
+

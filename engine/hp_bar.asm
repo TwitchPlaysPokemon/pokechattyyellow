@@ -97,6 +97,7 @@ UpdateHPBar2:
 	ld a, e
 	sub d         ; calc pixel difference
 	jr .ok
+
 .HPIncrease
 	inc bc        ; add 1 HP
 	ld a, c
@@ -116,6 +117,7 @@ UpdateHPBar2:
 	ld [wHPBarOldHP+1], a
 	pop de
 	jr .animateHPBarLoop
+
 .animateHPBarDone
 	pop de
 	ld a, e
@@ -155,6 +157,7 @@ UpdateHPBar_AnimateHPBar:
 	jr nz, .barAnimationLoop
 	pop hl
 	ret
+
 .barFilledUp
 	pop af
 	pop hl
@@ -183,6 +186,7 @@ UpdateHPBar_CalcHPDifference:
 	sbc b
 	ld d, a
 	ret
+
 .oldHPGreater
 	ld a, c
 	sub e
@@ -191,6 +195,7 @@ UpdateHPBar_CalcHPDifference:
 	sbc d
 	ld d, a
 	ret
+
 .testLowerByte
 	ld a, e
 	sub c
@@ -264,3 +269,4 @@ UpdateHPBar_CalcOldNewHPBarPixels:
 	ld e, a
 	pop hl
 	ret
+

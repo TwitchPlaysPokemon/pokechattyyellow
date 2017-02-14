@@ -8,7 +8,6 @@ sSpriteBuffer2:: ds SPRITEBUFFERSIZE ; a310
 
 sHallOfFame:: ds HOF_TEAM * HOF_TEAM_CAPACITY ; a598
 
-
 SECTION "Save Data", SRAM, BANK[1]
 	ds $598
 
@@ -20,7 +19,6 @@ sCurBoxData::  ds wBoxDataEnd    - wBoxDataStart ; b0c0
 sTilesetType:: ds 1 ; b522
 sMainDataCheckSum:: ds 1 ; b523
 
-
 SECTION "Saved Boxes 1", SRAM, BANK[2]
 
 sBox1:: ds wBoxDataEnd - wBoxDataStart ; a000
@@ -31,7 +29,6 @@ sBox5:: ds wBoxDataEnd - wBoxDataStart ; b188
 sBox6:: ds wBoxDataEnd - wBoxDataStart ; b5ea
 sBank2AllBoxesChecksum:: ds 1 ; ba4c
 sBank2IndividualBoxChecksums:: ds 6 ; ba4d
-
 
 SECTION "Saved Boxes 2", SRAM, BANK[3]
 

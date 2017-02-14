@@ -28,6 +28,7 @@ HandleLedges:
 	ld a, [hl]
 	ld e, a
 	jr .foundMatch
+
 .nextLedgeTile1
 	inc hl
 .nextLedgeTile2
@@ -35,6 +36,7 @@ HandleLedges:
 .nextLedgeTile3
 	inc hl
 	jr .loop
+
 .foundMatch
 	ld a, [hJoyHeld]
 	and e

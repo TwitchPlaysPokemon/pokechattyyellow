@@ -16,7 +16,6 @@ SFX_08_unused2_Ch1:
 	E_ 8
 	endchannel
 
-
 SFX_08_unused2_Ch2:
 	executemusic
 	vibrato 8, 2, 7
@@ -31,7 +30,6 @@ SFX_08_unused2_Ch2:
 	G# 2
 	B_ 8
 	endchannel
-
 
 SFX_08_unused2_Ch3:
 	executemusic

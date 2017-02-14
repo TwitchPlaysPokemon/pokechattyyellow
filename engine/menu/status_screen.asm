@@ -24,6 +24,7 @@ DrawHP_:
 	ld a, $6
 	ld d, a
 	jp .drawHPBarAndPrintFraction
+
 .nonzeroHP
 	ld a, [wLoadedMonMaxHP]
 	ld d, a
@@ -45,6 +46,7 @@ DrawHP_:
 	jr z, .printFractionBelowBar
 	ld bc, $9 ; right of bar
 	jr .printFraction
+
 .printFractionBelowBar
 	ld bc, SCREEN_WIDTH + 1 ; below bar
 .printFraction
@@ -60,7 +62,6 @@ DrawHP_:
 	pop hl
 	pop de
 	ret
-
 
 ; Predef 0x37
 StatusScreen:
@@ -178,6 +179,7 @@ StatusScreen:
 	callab IsThisPartymonStarterPikachu_Party
 	jr nc, .playRegularCry
 	jr .playPikachuSoundClip
+
 .checkBoxData
 	callab IsThisPartymonStarterPikachu_Box
 	jr nc, .playRegularCry
@@ -185,6 +187,7 @@ StatusScreen:
 	ldpikacry e, PikachuCry17
 	callab PlayPikachuSoundClip
 	jr .continue
+
 .playRegularCry
 	ld a, [wcf91]
 	call PlayCry ; play Pokémon cry
@@ -271,6 +274,7 @@ PrintStatsBox:
 	coord hl, 1, 9 ; Start printing stats from here
 	ld bc, $0019 ; Number offset
 	jr .PrintStats
+
 .DifferentBox
 	coord hl, 9, 2
 	lb bc, 8, 9
@@ -294,6 +298,7 @@ PrintStatsBox:
 	call PrintStat
 	ld de, wLoadedMonSpecial
 	jp PrintNumber
+
 PrintStat:
 	push hl
 	call PrintNumber
@@ -467,6 +472,7 @@ CalcExpToLevelUp:
 	sbc [hl]
 	ld [hld], a
 	ret
+
 .atMaxLevel
 	ld hl, wLoadedMonExp
 	xor a
@@ -492,3 +498,4 @@ StatusScreen_PrintPP:
 	dec c
 	jr nz, StatusScreen_PrintPP
 	ret
+

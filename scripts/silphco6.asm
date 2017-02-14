@@ -85,6 +85,7 @@ SilphCo6Script_1a22f:
 	CheckEvent EVENT_BEAT_SILPH_CO_GIOVANNI
 	jr nz, .asm_1a238
 	jr .asm_1a23a
+
 .asm_1a238
 	ld h, d
 	ld l, e

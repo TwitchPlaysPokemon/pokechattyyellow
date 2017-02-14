@@ -17,10 +17,12 @@ SafariZoneSecretHouseText1:
 	call PrintText
 	SetEvent EVENT_GOT_HM03
 	jr .asm_8f1fc
+
 .BagFull
 	ld hl, HM03NoRoomText
 	call PrintText
 	jr .asm_8f1fc
+
 .asm_20a9b
 	ld hl, HM03ExplanationText
 	call PrintText

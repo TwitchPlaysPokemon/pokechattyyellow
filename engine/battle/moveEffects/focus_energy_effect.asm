@@ -11,6 +11,7 @@ FocusEnergyEffect_:
 	callab PlayCurrentMoveAnimation
 	ld hl, GettingPumpedText
 	jp PrintText
+
 .alreadyUsing
 	ld c, 50
 	call DelayFrames

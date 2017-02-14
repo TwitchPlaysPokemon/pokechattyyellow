@@ -111,6 +111,7 @@ Route22Script1:
 	ld [wPlayerMovingDirection], a
 	ld a, SPRITE_FACING_UP
 	jr .asm_50f7a
+
 .asm_50f78
 	ld a, SPRITE_FACING_RIGHT
 .asm_50f7a
@@ -157,6 +158,7 @@ Route22Script2:
 	jr nz, .notDown
 	ld a, SPRITE_FACING_UP
 	jr .done
+
 .notDown
 	ld a, SPRITE_FACING_RIGHT
 .done
@@ -177,6 +179,7 @@ Route22Script2:
 	jr nz, .asm_50fff
 	call Route22Script_51008
 	jr .asm_51002
+
 .asm_50fff
 	call Route22Script_5100d
 .asm_51002
@@ -264,6 +267,7 @@ Route22Script4:
 	ld [wPlayerMovingDirection], a
 	ld a, SPRITE_FACING_UP
 	jr .asm_510a8
+
 .asm_510a1
 	ld a, PLAYER_DIR_LEFT
 	ld [wPlayerMovingDirection], a
@@ -308,6 +312,7 @@ Route22Script5:
 	ld [wPlayerMovingDirection], a
 	ld a, SPRITE_FACING_UP
 	jr .asm_51102
+
 .asm_510fb
 	ld a, PLAYER_DIR_LEFT
 	ld [wPlayerMovingDirection], a
@@ -328,6 +333,7 @@ Route22Script5:
 	jr nz, .asm_51134
 	call Route22Script_5113d
 	jr .asm_51137
+
 .asm_51134
 	call Route22Script_51142
 .asm_51137
@@ -389,3 +395,4 @@ Route22FrontGateText:
 	TX_ASM
 	callba Func_f1b67
 	jp TextScriptEnd
+

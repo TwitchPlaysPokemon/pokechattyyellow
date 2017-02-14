@@ -17,3 +17,4 @@ _DisplayPokedex:
 	ld a, $1
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
 	ret
+

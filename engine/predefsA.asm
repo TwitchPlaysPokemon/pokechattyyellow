@@ -71,3 +71,4 @@ PredefShakeScreenHorizontally:
 	ld [rWX], a
 	ld c, 4
 	jp DelayFrames
+

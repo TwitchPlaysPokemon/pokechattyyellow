@@ -110,15 +110,18 @@ DisplayPokemartDialogue_:
 	ld hl, wNumBagItems
 	call RemoveItemFromInventory
 	jp .sellMenuLoop
+
 .unsellableItem
 	ld hl, PokemartUnsellableItemText
 	call PrintText
 	jp .returnToMainPokemartMenu
+
 .bagEmpty
 	ld hl, PokemartItemBagEmptyText
 	call PrintText
 	call SaveScreenTilesToBuffer1
 	jp .returnToMainPokemartMenu
+
 .buyMenu
 
 ; the same variables are set again below, so this code has no effect
@@ -196,6 +199,7 @@ DisplayPokemartDialogue_:
 	ld hl, PokemartBoughtItemText
 	call PrintText
 	jp .buyMenuLoop
+
 .returnToMainPokemartMenu
 	call LoadScreenTilesFromBuffer1
 	ld a, MONEY_BOX
@@ -204,19 +208,23 @@ DisplayPokemartDialogue_:
 	ld hl, PokemartAnythingElseText
 	call PrintText
 	jp .loop
+
 .isThereEnoughMoney
 	ld de, wPlayerMoney
 	ld hl, hMoney
 	ld c, 3 ; length of money in bytes
 	jp StringCmp
+
 .notEnoughMoney
 	ld hl, PokemartNotEnoughMoneyText
 	call PrintText
 	jr .returnToMainPokemartMenu
+
 .bagFull
 	ld hl, PokemartItemBagFullText
 	call PrintText
 	jr .returnToMainPokemartMenu
+
 .done
 	ld hl, PokemartThankYouText
 	call PrintText

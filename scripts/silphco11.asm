@@ -50,6 +50,7 @@ SilphCo11Script_6214f:
 	jr z, .asm_62154
 	inc hl
 	jr .asm_62143
+
 .asm_62154
 	ld a, [hli]
 	cp c
@@ -59,6 +60,7 @@ SilphCo11Script_6214f:
 	ld [hli], a
 	ld [hl], a
 	ret
+
 .asm_6215f
 	xor a
 	ld [$ffe0], a
@@ -156,6 +158,7 @@ SilphCo11Script3:
 	ld a, PLAYER_DIR_LEFT
 	ld b, SPRITE_FACING_RIGHT
 	jr .asm_62240
+
 .asm_6223c
 	ld a, PLAYER_DIR_UP
 	ld b, SPRITE_FACING_DOWN
@@ -189,6 +192,7 @@ SilphCo11Script4:
 	ld a, PLAYER_DIR_LEFT
 	ld b, SPRITE_FACING_RIGHT
 	jr .asm_62288
+
 .asm_62284
 	ld a, PLAYER_DIR_UP
 	ld b, SPRITE_FACING_DOWN
@@ -249,6 +253,7 @@ SilphCo11Script_6229c:
 	ld a, $5
 	call SilphCo11Script_62189
 	ret
+
 ; 622f4
 
 SilphCo11MovementData_622f5:
@@ -534,6 +539,7 @@ SilphCo11Text1:
 	call PrintText
 	SetEvent EVENT_GOT_MASTER_BALL
 	jr .asm_62506
+
 .asm_624f8
 	ld hl, SilphCo11Text_62519
 	call PrintText

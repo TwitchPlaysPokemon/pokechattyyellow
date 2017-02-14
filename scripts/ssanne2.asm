@@ -47,6 +47,7 @@ SSAnne2Script0:
 	jr nz, .asm_61400
 	ld de, MovementData_6140c
 	jr .asm_61403
+
 .asm_61400
 	ld de, MovementData_6140d
 .asm_61403
@@ -77,6 +78,7 @@ SSAnne2Script_61416:
 	ld [wPlayerMovingDirection], a
 	ld a, SPRITE_FACING_RIGHT
 	jr .asm_61427
+
 .asm_61426
 	xor a ; SPRITE_FACING_DOWN
 .asm_61427
@@ -123,6 +125,7 @@ SSAnne2Script2:
 	jr nz, .asm_61497
 	ld de, MovementData_614b9
 	jr .asm_6149a
+
 .asm_61497
 	ld de, MovementData_614b7
 .asm_6149a

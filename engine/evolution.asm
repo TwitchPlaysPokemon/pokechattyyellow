@@ -82,6 +82,7 @@ EvolveMon:
 	ret z
 	scf
 	ret
+
 .evolutionCancelled
 	pop bc
 	ld a, 1
@@ -148,9 +149,11 @@ Evolution_CheckForCancel:
 	jr nz, Evolution_CheckForCancel
 	and a
 	ret
+
 .pressedB
 	ld a, [wForceEvolution]
 	and a
 	jr nz, .notAllowedToCancel
 	scf
 	ret
+

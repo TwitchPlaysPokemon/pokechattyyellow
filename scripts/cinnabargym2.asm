@@ -16,3 +16,4 @@ CinnabarGymScript_753f3:
 	bit 7, [hl]
 	pop hl
 	ret
+

@@ -60,6 +60,7 @@ Audio2_218db:
 	cp $14
 	jr nc, .asm_21920
 	ret
+
 .asm_21920
 	ld a, [hl]
 	cp $14
@@ -71,6 +72,7 @@ Audio2_218db:
 	jr z, .asm_21930
 	jr c, .asm_21930
 	ret
+
 .asm_21930
 	call InitSFXVariables
 	ld a, c
@@ -115,6 +117,7 @@ Audio2_21940:
 	inc hl
 	inc hl
 	jr .asm_21962
+
 .asm_2196a
 	push af
 	push hl
@@ -157,12 +160,14 @@ Audio2_21940:
 	cp $14
 	jr nc, .asm_219a3
 	jr .asm_219cd
+
 .asm_219a3
 	ld a, [wSoundID]
 	cp $86
 	jr z, .asm_219cd
 	jr c, .asm_219ae
 	jr .asm_219cd
+
 .asm_219ae
 	ld hl, wChannelSoundIDs + CH4
 	ld [hli], a
@@ -427,3 +432,4 @@ FillAudioRAM2:
 	dec b
 	jr nz, .loop
 	ret
+

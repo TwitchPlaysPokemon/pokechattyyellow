@@ -20,3 +20,4 @@ DisplayLinkBattleVersusTextBox:
 	callab SetupPlayerAndEnemyPokeballs
 	ld c, 150
 	jp DelayFrames
+

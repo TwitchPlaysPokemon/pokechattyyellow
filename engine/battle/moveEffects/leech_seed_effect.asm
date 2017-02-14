@@ -25,6 +25,7 @@ LeechSeedEffect_:
 	callab PlayCurrentMoveAnimation
 	ld hl, WasSeededText
 	jp PrintText
+
 .moveMissed
 	ld c, 50
 	call DelayFrames

@@ -18,6 +18,7 @@ StartSlotMachine:
 	jr z, .match
 	ld a, 253
 	jr .next
+
 .match
 	ld a, 250
 .next
@@ -26,12 +27,15 @@ StartSlotMachine:
 	ld [wSlotMachineSavedROMBank], a
 	call PromptUserToPlaySlots
 	ret
+
 .printOutOfOrder
 	tx_pre_id GameCornerOutOfOrderText
 	jr .printText
+
 .printOutToLunch
 	tx_pre_id GameCornerOutToLunchText
 	jr .printText
+
 .printSomeonesKeys
 	tx_pre_id GameCornerSomeonesKeysText
 .printText

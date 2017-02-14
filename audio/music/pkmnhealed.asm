@@ -18,7 +18,6 @@ Music_PkmnHealed_Ch1::
 	B_ 4
 	endchannel
 
-
 Music_PkmnHealed_Ch2::
 	duty 2
 	notetype 12, 12, 3
@@ -31,7 +30,6 @@ Music_PkmnHealed_Ch2::
 	octave 5
 	E_ 8
 	endchannel
-
 
 Music_PkmnHealed_Ch3::
 	notetype 12, 1, 0

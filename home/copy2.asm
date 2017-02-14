@@ -232,3 +232,4 @@ ClearScreen::
 	dec b
 	jr nz, .loop
 	jp Delay3
+

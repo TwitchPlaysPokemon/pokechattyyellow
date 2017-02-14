@@ -33,6 +33,7 @@ HandleItemListSwapping:
 	ld c, 20
 	call DelayFrames
 	jp DisplayListMenuIDLoop
+
 .swapItems
 	ld a, [wCurrentMenuItem]
 	inc a
@@ -95,6 +96,7 @@ HandleItemListSwapping:
 	pop de
 	pop hl
 	jp DisplayListMenuIDLoop
+
 .swapSameItemType
 	inc de
 	ld a, [hl]
@@ -109,6 +111,7 @@ HandleItemListSwapping:
 	ld a, 99
 	ld [hl], a
 	jr .done
+
 .combineItemSlots
 	ld [hl], a ; put the sum in the second item slot
 	ld hl, wListPointer
@@ -137,6 +140,7 @@ HandleItemListSwapping:
 	ld [de], a
 	inc de
 	jr .moveItemsUpLoop
+
 .afterMovingItemsUp
 	xor a
 	ld [wListScrollOffset], a
@@ -147,3 +151,4 @@ HandleItemListSwapping:
 	pop de
 	pop hl
 	jp DisplayListMenuIDLoop
+

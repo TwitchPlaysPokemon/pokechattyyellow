@@ -26,6 +26,7 @@ EndOfBattle:
 	ld c, 200
 	call DelayFrames
 	jr .evolution
+
 .notLinkBattle
 	ld a, [wBattleResult]
 	and a

@@ -211,6 +211,7 @@ PewterCityText3:
 	ld hl, PewterCityText_193f6
 	call PrintText
 	jr .asm_193ee
+
 .asm_193c9
 	ld hl, PewterCityText_193fb
 	call PrintText
@@ -257,6 +258,7 @@ PewterCityText4:
 	ld hl, PewterCityText_1942c
 	call PrintText
 	jr .asm_19424
+
 .asm_1941e
 	ld hl, PewterCityText_19431
 	call PrintText

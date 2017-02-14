@@ -147,7 +147,6 @@ Music_PalletTown_branch_a7ce::
 	loopchannel 0, Music_PalletTown_branch_a7ce
 	endchannel
 
-
 Music_PalletTown_Ch2::
 	duty 2
 
@@ -260,7 +259,6 @@ Music_PalletTown_branch_a861::
 	A_ 8
 	loopchannel 0, Music_PalletTown_branch_a861
 	endchannel
-
 
 Music_PalletTown_Ch3::
 	vibrato 24, 2, 8

@@ -15,6 +15,7 @@ DisplayOptionMenu_:
 	call DelayFrame
 	call DelayFrame
 	jr .optionMenuLoop
+
 .exitOptionMenu
 	ret
 
@@ -48,6 +49,7 @@ OptionsMenu_TextSpeed:
 	bit 5, a
 	jr nz, .pressedLeft
 	jr .asm_41ce0
+
 .pressedRight
 	ld a, c
 	cp $2
@@ -57,6 +59,7 @@ OptionsMenu_TextSpeed:
 	inc c
 	ld a, e
 	jr .asm_41cd6
+
 .pressedLeft
 	ld a, c
 	and a
@@ -107,10 +110,12 @@ GetTextSpeedScrollRegisters:
 	ld c, $1
 	lb de, 1, 5
 	ret
+
 .slowTextOption
 	ld c, $2
 	lb de, 3, 1
 	ret
+
 .fastTextOption
 	ld c, $0
 	lb de, 5, 3
@@ -150,6 +155,7 @@ OptionsMenu_BattleStyle:
 	ld a, [wOptions]
 	and $40 ; mask other bits
 	jr .asm_41d73
+
 .asm_41d6b
 	ld a, [wOptions]
 	xor $40
@@ -190,11 +196,13 @@ OptionsMenu_SpeakerSettings:
 	bit 5, a
 	jr nz, .pressedLeft
 	jr .asm_41dca
+
 .pressedRight
 	ld a, c
 	inc a
 	and $3
 	jr .asm_41dba
+
 .pressedLeft
 	ld a, c
 	dec a
@@ -243,6 +251,7 @@ OptionsMenu_GBPrinterBrightness:
 	bit 5, a
 	jr nz, .pressedLeft
 	jr .asm_41e32
+
 .pressedRight
 	ld a, c
 	cp $4
@@ -252,6 +261,7 @@ OptionsMenu_GBPrinterBrightness:
 	inc c
 	ld a, e
 	jr .asm_41e2e
+
 .pressedLeft
 	ld a, c
 	and a
@@ -307,18 +317,22 @@ GetPrinterBrightnessScrollRegisters:
 	ld c, $2
 	lb de, $20, $60
 	ret
+
 .asm_41e93
 	ld c, $0
 	lb de, $7f, $20
 	ret
+
 .asm_41e99
 	ld c, $1
 	lb de, $0, $40
 	ret
+
 .asm_41e9f
 	ld c, $3
 	lb de, $40, $7f
 	ret
+
 .asm_41ea5
 	ld c, $4
 	lb de, $60, $0
@@ -334,6 +348,7 @@ OptionsMenu_Cancel:
 	jr nz, .pressedCancel
 	and a
 	ret
+
 .pressedCancel
 	scf
 	ret
@@ -347,6 +362,7 @@ OptionsMenuUpOrDown:
 	jr z, .pressedUp
 	and a
 	ret
+
 .pressedDown
 	ld a, [hl]
 	cp $7
@@ -354,6 +370,7 @@ OptionsMenuUpOrDown:
 	ld [hl], $0
 	scf
 	ret
+
 .doNotWrapAround
 	cp $4
 	jr c, .regularIncrement
@@ -362,6 +379,7 @@ OptionsMenuUpOrDown:
 	inc [hl]
 	scf
 	ret
+
 .pressedUp
 	ld a, [hl]
 	cp $7
@@ -369,6 +387,7 @@ OptionsMenuUpOrDown:
 	ld [hl], $4
 	scf
 	ret
+
 .doNotMoveCursorToPrintOption
 	and a
 	jr nz, .regularDecrement

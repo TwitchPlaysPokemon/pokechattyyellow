@@ -620,3 +620,4 @@ PrinterSerial_:
 	xor a
 	ld [wPrinterOpcode], a
 	ret
+

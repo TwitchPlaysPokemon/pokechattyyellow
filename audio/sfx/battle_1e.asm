@@ -7,7 +7,6 @@ SFX_Battle_1E_Ch1:
 	unknownsfx0x10 8
 	endchannel
 
-
 SFX_Battle_1E_Ch2:
 	unknownnoise0x20 0, 209, 66
 	unknownnoise0x20 4, 161, 50

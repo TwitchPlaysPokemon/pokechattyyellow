@@ -17,6 +17,7 @@ LavenderMartText3:
 	ld hl, .ReviveText
 	call PrintText
 	jr .done
+
 .Nugget
 	ld hl, .NuggetText
 	call PrintText

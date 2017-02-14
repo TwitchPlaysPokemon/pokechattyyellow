@@ -9,7 +9,6 @@ SFX_Save_1_Ch1:
 	unknownsfx0x20 15, 242, 224, 7
 	endchannel
 
-
 SFX_Save_1_Ch2:
 	duty 2
 	unknownsfx0x20 4, 8, 0, 0

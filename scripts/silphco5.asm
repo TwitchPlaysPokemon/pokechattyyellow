@@ -56,11 +56,13 @@ SilphCo5Script_19f9e:
 	jr nz, .next1
 	SetEventReuseHL EVENT_SILPH_CO_5_UNLOCKED_DOOR1
 	ret
+
 .next1
 	cp $2
 	jr nz, .next2
 	SetEventAfterBranchReuseHL EVENT_SILPH_CO_5_UNLOCKED_DOOR2, EVENT_SILPH_CO_5_UNLOCKED_DOOR1
 	ret
+
 .next2
 	SetEventAfterBranchReuseHL EVENT_SILPH_CO_5_UNLOCKED_DOOR3, EVENT_SILPH_CO_5_UNLOCKED_DOOR1
 	ret

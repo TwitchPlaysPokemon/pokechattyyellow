@@ -20,3 +20,4 @@ SchoolText3:
 	TX_ASM
 	callba Func_f1c03
 	jp TextScriptEnd
+

@@ -23,6 +23,7 @@ Mansion1Subscript1:
 	call Mansion1Script_44304
 	lb bc, 13, 13
 	jp Mansion1Script_44304
+
 .asm_442ec
 	lb bc, 6, 12
 	call Mansion1Script_44304
@@ -116,6 +117,7 @@ Mansion1Text4:
 	jr z, .asm_44392
 	ResetEventReuseHL EVENT_MANSION_SWITCH_ON
 	jr .asm_44392
+
 .asm_4438c
 	ld hl, MansionSwitchNotPressedText
 	call PrintText

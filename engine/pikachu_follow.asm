@@ -131,6 +131,7 @@ CalculatePikachuPlacementCoords::
 .above_player
 	dec e
 	jr .load_coords ; useless jr
+
 .load_coords
 	ld hl, wPlayerMapY - wPlayerSpriteStateData1
 	add hl, bc
@@ -1588,3 +1589,4 @@ ComparePikachuHappinessTo80:
 	ld a, b
 	pop bc
 	ret
+

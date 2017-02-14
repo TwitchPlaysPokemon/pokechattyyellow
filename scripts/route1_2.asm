@@ -8,9 +8,11 @@ Func_f1ad2:
 	jr nc, .BagFull
 	ld hl, Route1Text_f1aff
 	jr .asm_1cadd
+
 .BagFull
 	ld hl, Route1Text_f1b0a
 	jr .asm_1cadd
+
 .asm_1cada
 	ld hl, Route1Text_f1b05
 .asm_1cadd

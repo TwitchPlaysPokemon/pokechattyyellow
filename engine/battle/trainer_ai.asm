@@ -29,6 +29,7 @@ AIEnemyTrainerChooseMoves: ; 39719 (e:5719)
 	and a
 	jr nz, .loopTrainerClassData
 	jr .loopTrainerClasses
+
 .readTrainerClassData
 	ld a, [hl]
 	and a
@@ -67,6 +68,7 @@ AIEnemyTrainerChooseMoves: ; 39719 (e:5719)
 	dec c
 	jr z, .loopFindMinimumEntries
 	jr .loopDecrementEntries
+
 .minimumEntriesFound
 	ld a, c
 .loopUndoPartialIteration ; undo last (partial) loop iteration
@@ -100,6 +102,7 @@ AIEnemyTrainerChooseMoves: ; 39719 (e:5719)
 	jr nz, .filterMinimalEntries
 	ld hl, wAIMoveNewList    ; use created temporary array as move set
 	ret
+
 .useOriginalMoveSet
 	ld hl, wEnemyMonMoves    ; use original move set
 	ret
@@ -145,6 +148,7 @@ AIMoveChoiceModification1: ; 397ab (e:57ab)
 	add $20 ; heavily discourage move
 	ld [hl], a
 	jr .nextMove
+
 .confusionCheck
 	ld a, [wPlayerBattleStatus1]
 	bit Confused, a
@@ -207,6 +211,7 @@ AIMoveChoiceModification1: ; 397ab (e:57ab)
 	add -8
 	ld [hl],a
 	jr .invLoop
+
 .usingChargingMoveCheck
 	ld a, [wPlayerBattleStatus1]
 	bit ChargingUp, a
@@ -218,6 +223,7 @@ AIMoveChoiceModification1: ; 397ab (e:57ab)
 .bideCheck
 	bit StoringEnergy,a
 	jr z,.mistCheck
+
 	ld hl, wAIMoveWeightings - 1
 	ld de, wEnemyMonMoves
 	ld b, NUM_MOVES + 1
@@ -233,14 +239,17 @@ AIMoveChoiceModification1: ; 397ab (e:57ab)
 	ld a, [wEnemyMovePower]
 	cp 10
 	jr nc,.discourageDamagingMove
+
 	ld a, [wEnemyMoveEffect]
 	cp SPECIAL_DAMAGE_EFFECT
 	jr nz,.doesDamageLoop
+
 .discourageDamagingMove
 	ld a,[hl]
 	add $20
 	ld [hl],a
 	jr .doesDamageLoop
+
 .mistCheck
 	ld a,[wPlayerBattleStatus2]
 	bit ProtectedByMist,a
@@ -261,14 +270,19 @@ AIMoveChoiceModification1: ; 397ab (e:57ab)
 	ld c,-8
 	cp ATTACK_DOWN1_EFFECT
 	jr c,.statLoweringMoveLoop
+
 	cp CONVERSION_EFFECT
 	jr c,.foundStatLoweringMove
+
 	cp HAZE_EFFECT
 	jr z,.foundHazeEffect
+
 	cp ATTACK_DOWN2_EFFECT
 	jr c,.statLoweringMoveLoop
+
 	cp LIGHT_SCREEN_EFFECT
 	jr nc,.statLoweringMoveLoop
+
 .foundStatLoweringMove
 	ld c,$20
 .foundHazeEffect
@@ -276,10 +290,12 @@ AIMoveChoiceModification1: ; 397ab (e:57ab)
 	add c
 	ld [hl],a
 	jr .statLoweringMoveLoop
+
 .substituteCheck
 	ld a,[wPlayerBattleStatus2]
 	bit HasSubstituteUp,a
 	jr z,.seededCheck
+
 	ld hl, wAIMoveWeightings - 1
 	ld de, wEnemyMonMoves
 	ld b, NUM_MOVES + 1
@@ -294,23 +310,31 @@ AIMoveChoiceModification1: ; 397ab (e:57ab)
 	call ReadMove
 	cp ATTACK_DOWN1_EFFECT
 	jr c,.doesNotEffectSubstituteLoop
+
 	cp CONVERSION_EFFECT
 	jr c,.foundNonAffectingMove
+
 	cp ATTACK_DOWN2_EFFECT
 	jr c,.doesNotEffectSubstituteLoop
+
 	cp LIGHT_SCREEN_EFFECT
 	jr c,.foundNonAffectingMove
+
 	cp CONFUSION_EFFECT
 	jr z,.foundNonAffectingMove
+
 	cp POISON_EFFECT
 	jr z,.foundNonAffectingMove
+
 	cp PARALYZE_EFFECT
 	jr nz,.doesNotEffectSubstituteLoop
+
 .foundNonAffectingMove
 	ld a,[hl]
 	add $20
 	ld [hl],a
 	jr .doesNotEffectSubstituteLoop
+
 .seededCheck
 	ld a,[wPlayerBattleStatus2]
 	bit Seeded,a
@@ -330,6 +354,7 @@ AIMoveChoiceModification1: ; 397ab (e:57ab)
 	ld a,[wPlayerBattleStatus3]
 	bit HasLightScreenUp,a
 	jr z,.reflectCheck
+
 	ld hl, wAIMoveWeightings - 1
 	ld de, wEnemyMonMoves
 	ld b, NUM_MOVES + 1
@@ -345,29 +370,36 @@ AIMoveChoiceModification1: ; 397ab (e:57ab)
 	ld a,[wEnemyMoveType]
 	cp FIRE
 	jr c,.discourageSpecialMovesLoop
+
 	inc [hl]
 	jr .discourageSpecialMovesLoop
+
 .reflectCheck
 	ld a,[wPlayerBattleStatus3]
 	bit HasReflectUp,a
 	jr z,.enemySubstituteCheck
+
 	ld hl, wAIMoveWeightings - 1
 	ld de, wEnemyMonMoves
 	ld b, NUM_MOVES + 1
 .discouragePhysicalMovesLoop
 	dec b
 	jr z,.enemySubstituteCheck
+
 	inc hl
 	ld a, [de]
 	and a
 	jr z,.enemySubstituteCheck
+
 	inc de
 	call ReadMove
 	ld a,[wEnemyMoveType]
 	cp FIRE
 	jr nc,.discouragePhysicalMovesLoop
+
 	inc [hl]
 	jr .discouragePhysicalMovesLoop
+
 .enemySubstituteCheck
 	ld a,[wEnemyBattleStatus2]
 	bit HasSubstituteUp,a
@@ -477,6 +509,7 @@ SmartAI:
 	jr c, .damageloop
 	dec [hl]
 	jr .damageloop
+
 ; healing moves?
 .healingcheck
 	ld a, [wEnemyMonMaxHP]
@@ -495,6 +528,7 @@ SmartAI:
 	rr a
 	ld c, a
 	jr .realhealcheck
+
 .noscale
 	ld a, [wEnemyMonMaxHP+1]
 	ld b, a
@@ -512,6 +546,7 @@ SmartAI:
 	cp $c0 ; 3/4 chance
 	jr nc, .explosioncheck
 	jr .applyhealingchange
+
 .debuffhealingmoves
 	ld b, 10
 .applyhealingchange
@@ -529,6 +564,7 @@ SmartAI:
 	cp $c0 ; 3/4 chance
 	jr nc, .superfangcheck
 	jr .applyexplosionchange
+
 .debuffexplosionmoves
 	ld b, 10
 .applyexplosionchange
@@ -581,6 +617,7 @@ SmartAI:
 	jr z, .debuffdreameater
 	ld b, -1
 	jr .applydreameater
+
 .debuffdreameater
 	ld b, 20
 .applydreameater
@@ -629,6 +666,7 @@ SmartAI:
 	dec [hl]
 	endr
 	jr .seloop
+
 .nvemove
 ; slightly discourage
 	and a
@@ -638,12 +676,14 @@ SmartAI:
 	jr nc, .seloop
 	inc [hl]
 	jr .seloop
+
 .immunity
 ; strongly discourage immunity
 	ld a, [hl]
 	add 50
 	ld [hl], a
 	jr .seloop
+
 .selfbuffcheck
 ; 50% chance to encourage self-buff or status on turn 1/2
 	ld a, [wAILayer2Encouragement]
@@ -757,6 +797,7 @@ AlterMovePriority:
 	add b
 	ld [hl], a
 	jr .moveloop
+
 	
 AlterMovePriorityArray:
 ; find if the enemy mon's moveset has a move in move array hl
@@ -796,6 +837,7 @@ AlterMovePriorityArray:
 	add b
 	ld [hl], a
 	jr .moveloop
+
 	
 ; encourages moves that are effective against the player's mon (even if non-damaging).
 ; discourage damaging moves that are ineffective or not very effective against the player's mon,
@@ -892,6 +934,7 @@ TrainerAI: ; 3a52e (e:652e)
 	inc hl
 	inc a
 	jr nz,.getpointer
+
 	dec hl
 	ld a,[hli]
 	ld [wAICount],a
@@ -979,6 +1022,7 @@ CooltrainerFAI: ; 3a601 (e:6601)
 	ld a,$A
 	call AICheckIfHPBelowFraction
 	jp c,AIUseHyperPotion
+
 	ld a,5
 	call AICheckIfHPBelowFraction
 	ret nc
@@ -1059,6 +1103,7 @@ BrunoAI: ; 3a670 (e:6670)
 AgathaAI: ; 3a676 (e:6676)
 	cp $14
 	jp c,AISwitchIfEnoughMons
+
 	cp $80
 	ret nc
 	ld a,4
@@ -1145,6 +1190,7 @@ AIRecoverHP: ; 3a6da (e:66da)
 	ld [wHPBarOldHP+1],a
 	ld [wHPBarNewHP+1],a
 	jr nc,.next
+
 	inc a
 	ld [hl],a
 	ld [wHPBarNewHP+1],a
@@ -1163,6 +1209,7 @@ AIRecoverHP: ; 3a6da (e:66da)
 	ld [wHPBarMaxHP+1],a
 	sbc b
 	jr nc,AIPrintItemUseAndUpdateHPBar
+
 	inc de
 	ld a,[de]
 	dec de
@@ -1196,6 +1243,7 @@ AISwitchIfEnoughMons: ; 3a72a (e:672a)
 	ld a,[hld]
 	or b
 	jr z,.Fainted ; has monster fainted?
+
 	inc d
 .Fainted
 	push bc
@@ -1208,6 +1256,7 @@ AISwitchIfEnoughMons: ; 3a72a (e:672a)
 	ld a,d ; how many available monsters are there?
 	cp 2 ; don't bother if only 1 or 2
 	jp nc,SwitchEnemyMon
+
 	and a
 	ret
 

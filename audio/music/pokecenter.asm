@@ -148,7 +148,6 @@ Music_Pokecenter_branch_be61::
 	G_ 2
 	loopchannel 0, Music_Pokecenter_branch_be61
 
-
 Music_Pokecenter_Ch2::
 	vibrato 8, 2, 5
 
@@ -246,7 +245,6 @@ Music_Pokecenter_branch_bf60::
 	E_ 4
 	C# 2
 	endchannel
-
 
 Music_Pokecenter_Ch3::
 	notetype 12, 1, 0

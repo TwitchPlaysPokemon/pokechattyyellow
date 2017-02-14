@@ -61,11 +61,13 @@ CeladonCityText5:
 	ld hl, TM41NoRoomText
 	call PrintText
 	jr .Done
+
 .Success
 	ld hl, ReceivedTM41Text
 	call PrintText
 	SetEvent EVENT_GOT_TM41
 	jr .Done
+
 .asm_7053f
 	ld hl, TM41ExplanationText
 	call PrintText

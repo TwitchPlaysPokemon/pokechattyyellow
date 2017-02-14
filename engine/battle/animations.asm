@@ -32,6 +32,7 @@ DrawFrameBlock:
 	inc de
 	ld a, [wBaseCoordX]
 	jr .finishCopying
+
 .flipBaseCoords
 	ld a, [wBaseCoordY]
 	ld b, a
@@ -67,6 +68,7 @@ DrawFrameBlock:
 	ld [de], a ; store flags
 	inc de
 	jp .nextTile
+
 .flipHorizontalAndVertical
 	ld a, [wBaseCoordY]
 	add [hl] ; Y offset
@@ -112,6 +114,7 @@ DrawFrameBlock:
 	ld [de], a
 	inc de
 	jp .nextTile
+
 .flipHorizontalTranslateDown
 	ld a, [wBaseCoordY]
 	add [hl]
@@ -143,6 +146,7 @@ DrawFrameBlock:
 .enableHorizontalFlip
 	set 5, a
 	jr .storeFlags2
+
 .disableHorizontalFlip
 	res 5, a
 .storeFlags2
@@ -178,6 +182,7 @@ DrawFrameBlock:
 	ld a, h
 	ld [wFBDestAddr], a ; set destination address to beginning of OAM buffer
 	ret
+
 .advanceFrameBlockDestAddr
 	ld a, e
 	ld [wFBDestAddr + 1], a
@@ -217,6 +222,7 @@ PlayAnimation:
 	inc de
 	inc de
 	jr .searchSpecialEffectTableLoop
+
 .foundMatch
 	ld a, [hli]
 	cp $FF ; is there a sound to play?
@@ -239,6 +245,7 @@ PlayAnimation:
 	ld de, .nextAnimationCommand
 	push de
 	jp [hl] ; jump to special effect function
+
 .playSubanimation
 	ld c, a
 	and %00111111
@@ -280,6 +287,7 @@ PlayAnimation:
 .nextAnimationCommand
 	pop hl
 	jr .animationLoop
+
 .AnimationOver ; 417B
 	ret
 
@@ -303,6 +311,7 @@ LoadSubanimation:
 .isType5
 	call GetSubanimationTransform2
 	jr .saveTransformation
+
 .isNotType5
 	call GetSubanimationTransform1
 .saveTransformation
@@ -422,6 +431,7 @@ MoveAnimation:
 	call ShareMoveAnimations
 	call PlayAnimation
 	jr .next4
+
 .animationsDisabled
 	ld c, 30
 	call DelayFrames
@@ -562,6 +572,7 @@ SetAnimationPalette:
 	call UpdateGBCPal_OBP0
 	call UpdateGBCPal_OBP1
 	ret
+
 .notSGB
 	ld a, $e4
 	ld [wAnimPalette], a
@@ -688,6 +699,7 @@ DoSpecialEffectByAnimationId:
 	ld de, .done
 	push de
 	jp [hl]
+
 .done
 	pop bc
 	pop de
@@ -769,6 +781,7 @@ DoBallTossSpecialEffects:
 	ld a, %00001000
 	ld [rNR10], a ; Channel 1 sweep register
 	ret
+
 .isTrainerBattle ; if it's a trainer battle, shorten the animation by one frame
 	ld a, [wSubAnimCounter]
 	cp 3
@@ -827,6 +840,7 @@ DoRockSlideSpecialEffects:
 	cp 1
 	jp z, AnimationFlashScreen ; if it's the end of the subanimation, flash the screen
 	ret
+
 ; if the subaninmation counter is between 8 and 11, shake the screen horizontally and vertically
 .shakeScreen
 	ld b, 1
@@ -914,6 +928,7 @@ TradeShakePokeball:
 	call Delay3
 	pop bc
 	jr .loop
+
 .done
 	call AnimationCleanOAM
 	ld a, SFX_TRADE_MACHINE
@@ -1079,6 +1094,7 @@ CallWithTurnFlipped:
 	ld de, .returnAddress
 	push de
 	jp [hl]
+
 .returnAddress
 	pop af
 	ld [hBattleTurn], a
@@ -1103,6 +1119,7 @@ AnimationFlashScreenLong:
 	call UpdateGBCPal_BGP
 	call FlashScreenLongDelay
 	jr .innerLoop
+
 .endOfPalettes
 	ld a, [wFlashScreenLongCounter]
 	dec a
@@ -1640,6 +1657,7 @@ AnimationSpiralBallsInward:
 	ld a, 80
 	ld [wSpiralBallsBaseX], a
 	jr .next
+
 .playerTurn
 	xor a
 	ld [wSpiralBallsBaseY], a
@@ -1691,6 +1709,7 @@ AnimationSpiralBallsInward:
 	inc hl
 	inc hl
 	jr .loop
+
 .done
 	pop hl
 	call AnimationCleanOAM
@@ -1735,6 +1754,7 @@ AnimationSquishMonPic:
 	coord hl, 16, 0
 	coord de, 14, 0
 	jr .next
+
 .playerTurn
 	coord hl, 5, 5
 	coord de, 3, 5
@@ -1766,6 +1786,7 @@ _AnimationSquishMonPic:
 	call AnimCopyRowLeft
 	dec hl
 	jr .next
+
 .right
 	call AnimCopyRowRight
 	inc hl
@@ -1787,6 +1808,7 @@ AnimationShootBallsUpward:
 	jr z, .playerTurn
 	lb bc, 0, 16 * 8
 	jr .next
+
 .playerTurn
 	lb bc, 6 * 8, 5 * 8
 .next
@@ -1830,6 +1852,7 @@ _AnimationShootBallsUpward:
 	add -4 ; ball hasn't reached the top. move it up 4 pixels
 	ld [hl], a
 	jr .next
+
 .reachedTop
 ; remove the ball once it has reached the top
 	ld [hl], 0 ; put it off-screen
@@ -1947,6 +1970,7 @@ _AnimationSlideMonOff:
 	jr z, .playerTurn
 	coord hl, 12, 0
 	jr .next
+
 .playerTurn
 	coord hl, 0, 5
 .next
@@ -1962,6 +1986,7 @@ _AnimationSlideMonOff:
 	jr z, .playerTurn2
 	call .EnemyNextTile
 	jr .next2
+
 .playerTurn2
 	call .PlayerNextTile
 .next2
@@ -2111,6 +2136,7 @@ AnimationSubstitute:
 	ld de, wTempPic + $120 + $10 + $70
 	call CopySlowbroSpriteData
 	jr .next
+
 .playerTurn
 	ld hl, SlowbroSprite + $40 ; facing up sprite
 	ld de, wTempPic + $120 + $70
@@ -2154,6 +2180,7 @@ HideSubstituteShowMonAnim:
 	jr nz, .substituteStillUp
 	call AnimationSlideMonDown
 	jr .next2
+
 .substituteStillUp
 	call AnimationSlideMonOff
 .next2
@@ -2174,6 +2201,7 @@ HideSubstituteShowMonAnim:
 	jp nz, AnimationMinimizeMon
 	call AnimationFlashMonPic
 	jp AnimationShowMonPic
+
 .flyOrDig
 	ld a, [hBattleTurn]
 	and a
@@ -2187,6 +2215,7 @@ HideSubstituteShowMonAnim:
 	call GetMonHeader
 	predef LoadMonBackPic
 	ret
+
 .enemy
 	ld a, [wEnemyMonMinimized]
 	and a
@@ -2197,6 +2226,7 @@ HideSubstituteShowMonAnim:
 	call GetMonHeader
 	ld de, vFrontPic
 	jp LoadMonFrontSprite
+
 .monIsMinimized
 	ld hl, wTempPic
 	push hl
@@ -2255,6 +2285,7 @@ ChangeMonPic:
 	coord hl, 12, 0
 	call LoadFrontSpriteByMonIndex
 	jr .done
+
 .playerTurn
 	ld a, [wBattleMonSpecies2]
 	push af
@@ -2295,6 +2326,7 @@ BreakSubstituteAnimation:
 	jr z, .notMinimized
 	call AnimationMinimizeMon
 	ret
+
 .notMinimized
 	call AnimationFlashMonPic
 	call AnimationShowMonPic
@@ -2330,6 +2362,7 @@ AnimationHideMonPic:
 	jr z, .playerTurn
 	ld a, 12
 	jr ClearMonPicFromTileMap
+
 .playerTurn
 	ld a, 5 * SCREEN_WIDTH + 1
 
@@ -2358,6 +2391,7 @@ GetMonSpriteTileMapPointerFromRowCount:
 	jr nz, .enemyTurn
 	ld a, 20 * 5 + 1
 	jr .next
+
 .enemyTurn
 	ld a, 12
 .next
@@ -2450,6 +2484,7 @@ GetMoveSound:
 	jr nz, .next
 	ld a, [wBattleMonSpecies] ; get number of current monster
 	jr .Continue
+
 .next
 	ld a, [wEnemyMonSpecies]
 .Continue
@@ -2465,6 +2500,7 @@ GetMoveSound:
 	add [hl]
 	ld [wTempoModifier], a
 	jr .done
+
 .NotCryMove
 	ld a, [hli]
 	ld [wFrequencyModifier], a
@@ -2687,6 +2723,7 @@ CopyDownscaledMonTiles:
 	jr nz, .smallerSize
 	ld de, DownscaledMonTiles_5x5
 	jr CopyTileIDs_NoBGTransfer
+
 .smallerSize
 	ld de, DownscaledMonTiles_3x3
 ; fall through
@@ -2922,6 +2959,7 @@ FallingObjects_UpdateOAMEntry:
 	inc hl
 	xor a ; no horizontal flip
 	jr .next2
+
 .movingLeft
 	ld a, [de]
 	ld b, a
@@ -3203,3 +3241,4 @@ PlayApplyingAttackSound:
 	ld [wTempoModifier], a
 	ld a, c
 	jp PlaySound
+

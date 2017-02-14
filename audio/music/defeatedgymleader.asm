@@ -161,7 +161,6 @@ Music_DefeatedGymLeader_branch_23ccc::
 	E_ 8
 	loopchannel 0, Music_DefeatedGymLeader_branch_23ccc
 
-
 Music_DefeatedGymLeader_Ch2::
 	duty 2
 	vibrato 24, 2, 4
@@ -350,7 +349,6 @@ Music_DefeatedGymLeader_branch_23d84::
 	octave 4
 	C# 1
 	loopchannel 0, Music_DefeatedGymLeader_branch_23d84
-
 
 Music_DefeatedGymLeader_Ch3::
 	notetype 12, 1, 0

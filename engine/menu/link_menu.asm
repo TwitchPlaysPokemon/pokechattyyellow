@@ -81,6 +81,7 @@ Func_f531b::
 	and $c
 	jr z, .asm_f5377
 	jr .asm_f53df
+
 .asm_f53c4
 	ld a, [wLinkMenuSelectionSendBuffer]
 	and $c
@@ -158,6 +159,7 @@ Func_f531b::
 	ld de, .returnaddress
 	push de
 	jp hl
+
 .returnaddress
 	ld [wLinkMenuSelectionSendBuffer], a
 	xor a
@@ -705,6 +707,7 @@ LinkMenu:
 	and $c ; did the player press A or B?
 	jr z, .waitForInputLoop ; if neither the player nor the enemy pressed A or B, try again
 	jr .doneChoosingMenuSelection ; if the player pressed A or B but the enemy didn't, use the player's selection
+
 .enemyPressedAOrB
 	ld a, [wLinkMenuSelectionSendBuffer]
 	and $c ; did the player press A or B?

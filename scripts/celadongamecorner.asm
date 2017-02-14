@@ -69,12 +69,14 @@ CeladonGameCornerScript1:
 	jr nz, .asm_48c43
 	ld de, MovementData_48c63
 	jr .asm_48c4d
+
 .asm_48c43
 	ld a, [wXCoord]
 	cp $8
 	jr nz, .pikachu
 	ld de, MovementData_48c63
 	jr .asm_48c4d
+
 .pikachu
 	callab Func_f1f23
 	ld de, MovementData_48c5a
@@ -163,6 +165,7 @@ CeladonGameCornerText2:
 	jr nc, .asm_48cdb
 	ld hl, CeladonGameCornerText_48d31
 	jr .asm_48d1c
+
 .asm_48cdb
 	xor a
 	ld [hMoney], a
@@ -185,12 +188,15 @@ CeladonGameCornerText2:
 	call CeladonGameCornerScript_48f1e
 	ld hl, CeladonGameCornerText_48d27
 	jr .asm_48d1c
+
 .asm_48d0f
 	ld hl, CeladonGameCornerText_48d2c
 	jr .asm_48d1c
+
 .asm_48d14
 	ld hl, CeladonGameCornerText_48d36
 	jr .asm_48d1c
+
 .asm_48d19
 	ld hl, CeladonGameCornerText_48d3b
 .asm_48d1c
@@ -254,12 +260,15 @@ CeladonGameCornerText5:
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
 	ld hl, Received10CoinsText
 	jr .asm_48d96
+
 .asm_48d89
 	ld hl, CeladonGameCornerText_48dac
 	jr .asm_48d96
+
 .asm_48d8e
 	ld hl, CeladonGameCornerText_48da7
 	jr .asm_48d96
+
 .asm_48d93
 	ld hl, CeladonGameCornerText_48f19
 .asm_48d96
@@ -332,12 +341,15 @@ CeladonGameCornerText9:
 	SetEvent EVENT_GOT_20_COINS_2
 	ld hl, Received20CoinsText
 	jr .asm_48e20
+
 .asm_48e13
 	ld hl, CeladonGameCornerText_48e36
 	jr .asm_48e20
+
 .asm_48e18
 	ld hl, CeladonGameCornerText_48e31
 	jr .asm_48e20
+
 .asm_48e1d
 	ld hl, CeladonGameCornerText_48f19
 .asm_48e20
@@ -384,12 +396,15 @@ CeladonGameCornerText10:
 	SetEvent EVENT_GOT_20_COINS
 	ld hl, CeladonGameCornerText_48e8d
 	jr .asm_48e82
+
 .asm_48e75
 	ld hl, CeladonGameCornerText_48e98
 	jr .asm_48e82
+
 .asm_48e7a
 	ld hl, CeladonGameCornerText_48e93
 	jr .asm_48e82
+
 .asm_48e7f
 	ld hl, CeladonGameCornerText_48f19
 .asm_48e82
@@ -528,3 +543,4 @@ Has9990Coins:
 	ld a, $90
 	ld [hCoins + 1], a
 	jp HasEnoughCoins
+

@@ -84,6 +84,7 @@ DisplayTownMap:
 	pop af
 	ld [hl], a
 	ret
+
 .pressedUp
 	ld a, [wWhichTownMapLocation]
 	inc a
@@ -93,6 +94,7 @@ DisplayTownMap:
 .noOverflow
 	ld [wWhichTownMapLocation], a
 	jp .townMapLoop
+
 .pressedDown
 	ld a, [wWhichTownMapLocation]
 	dec a
@@ -204,6 +206,7 @@ LoadTownMap_Fly:
 	bit 7, b
 	jr nz, .pressedDown
 	jr .pressedB
+
 .pressedA
 	ld a, SFX_HEAL_AILMENT
 	call PlaySound
@@ -222,6 +225,7 @@ LoadTownMap_Fly:
 	pop af
 	ld [hl], a
 	ret
+
 .pressedUp
 	coord de, 18, 0
 	inc hl
@@ -231,9 +235,11 @@ LoadTownMap_Fly:
 	cp $fe
 	jr z, .pressedUp ; skip past unvisited towns
 	jp .townMapFlyLoop
+
 .wrapToStartOfList
 	ld hl, wFlyLocationsList
 	jp .townMapFlyLoop
+
 .pressedDown
 	coord de, 19, 0
 	dec hl
@@ -243,6 +249,7 @@ LoadTownMap_Fly:
 	cp $fe
 	jr z, .pressedDown ; skip past unvisited towns
 	jp .townMapFlyLoop
+
 .wrapToEndOfList
 	ld hl, wFlyLocationsList + 11
 	jr .pressedDown
@@ -315,6 +322,7 @@ LoadTownMap:
 	jr nz, .writeRunLoop
 	inc de
 	jr .nextTile
+
 .done
 	call EnableLCD
 	ld b, SET_PAL_TOWN_MAP
@@ -394,6 +402,7 @@ DisplayWildLocations:
 .nextEntry
 	inc de
 	jr .loop
+
 .exitLoop
 	ld a, l
 	and a ; were any OAM entries written?
@@ -406,6 +415,7 @@ DisplayWildLocations:
 	ld de, AreaUnknownText
 	call PlaceString
 	jr .done
+
 .drawPlayerSprite
 	ld a, [wCurMap]
 	ld b, $0
@@ -566,9 +576,11 @@ LoadTownMapEntry:
 	jr c, .foundEntry
 	add hl, bc
 	jr .loop
+
 .foundEntry
 	inc hl
 	jr .readEntry
+
 .external
 	ld hl, ExternalMapEntries
 	ld c, a
@@ -606,6 +618,7 @@ TownMapSpriteBlinkingAnimation:
 	call CopyData
 	xor a
 	jr .done
+
 .hideSprites
 	ld hl, wOAMBuffer
 	ld b, $24
@@ -619,3 +632,4 @@ TownMapSpriteBlinkingAnimation:
 .done
 	ld [wAnimCounter], a
 	jp DelayFrame
+

@@ -222,6 +222,7 @@ CinnabarGymQuiz_1ea92:
 	ld b, FLAG_SET
 	call CinnabarGymGateFlagAction
 	jp UpdateCinnabarGymGateTileBlocks_
+
 .wrongAnswer
 	call WaitForSoundToFinish
 	ld a, SFX_DENIED
@@ -306,6 +307,7 @@ UpdateCinnabarGymGateTileBlocks_:
 	jr nz, .unlocked
 	ld a, [wGymGateTileBlock]
 	jr .next
+
 .unlocked
 	ld a, $e
 .next
@@ -327,7 +329,6 @@ CinnabarGymGateCoords:
 	db $03, $08,$5f,$00
 	db $02, $06,$54,$00
 	db $02, $03,$54,$00
-
 
 CinnabarGym_ReplaceTileBlock:
 ; basically a copy of the first half of ReplaceTileBlock
@@ -405,6 +406,7 @@ BillsHousePC:
 	call PlayDefaultMusic
 	SetEvent EVENT_USED_CELL_SEPARATOR_ON_BILL
 	ret
+
 .displayBillsHousePokemonList
 	ld a, $1
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
@@ -472,10 +474,12 @@ BillsHousePokemonList:
 	cp VAPOREON
 	jr z, .displayPokedex
 	jr .cancel
+
 .displayPokedex
 	call DisplayPokedex
 	call LoadScreenTilesFromBuffer2
 	jr .billsPokemonLoop
+
 .cancel
 	ld hl, wd730
 	res 6, [hl]

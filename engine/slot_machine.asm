@@ -105,6 +105,7 @@ MainSlotMachineLoop:
 	ld hl, NotEnoughCoinsSlotMachineText
 	call PrintText
 	jr .loop
+
 .skip1
 	call LoadScreenTilesFromBuffer1
 	call SlotMachine_SubtractBetFromPlayerCoins
@@ -130,6 +131,7 @@ MainSlotMachineLoop:
 	call PrintText
 	ld c, 60
 	jp DelayFrames
+
 .skip2
 	ld hl, OneMoreGoSlotMachineText
 	call PrintText
@@ -190,13 +192,16 @@ SlotMachine_SetFlags:
 	jr c, .allowMatches ; 55/256 (~21.5%) chance
 	ld [hl], 0
 	ret
+
 .allowMatches
 	set 6, [hl]
 	ret
+
 .setAllowMatchesCounter
 	ld a, 60
 	ld [wSlotMachineAllowMatchesCounter], a
 	ret
+
 .allowSevenAndBarMatches
 	set 7, [hl]
 	ret
@@ -280,6 +285,7 @@ SlotMachine_StopOrAnimWheel3:
 ; wheel 3 stops as soon as possible
 	scf
 	ret
+
 .animWheel
 	call SlotMachine_AnimWheel3
 	and a
@@ -297,6 +303,7 @@ SlotMachine_StopWheel1Early:
 	cp SLOTSCHERRY >> 8
 	jr nz, .stopWheel
 	ret
+
 ; It looks like this was intended to make the wheel stop when a 7 symbol was
 ; visible, but it has a bug and so the wheel stops randomly.
 .sevenAndBarMode
@@ -308,6 +315,7 @@ SlotMachine_StopWheel1Early:
 	dec c
 	jr nz, .loop
 	ret
+
 .stopWheel
 	inc a
 	ld hl, wSlotMachineWheel1SlipCounter
@@ -323,6 +331,7 @@ SlotMachine_StopWheel2Early:
 	call SlotMachine_FindWheel1Wheel2Matches
 	ret nz
 	jr .stopWheel
+
 ; Stop early if two 7 symbols or two bar symbols are lined up in the first two
 ; wheels OR if no symbols are lined up and the bottom symbol in wheel 2 is a
 ; 7 symbol or bar symbol. The second part could be a bug or a way to reduce the
@@ -413,12 +422,14 @@ SlotMachine_CheckForMatches:
 	xor a
 	ld [wMuteAudioAndPauseMusic], a
 	ret
+
 .rollWheel3DownByOneSymbol
 	call SlotMachine_AnimWheel3
 	call DelayFrame
 	call SlotMachine_AnimWheel3
 	call DelayFrame
 	jp SlotMachine_CheckForMatches
+
 .foundMatch
 	ld a, [wSlotMachineFlags]
 	and $c0
@@ -843,6 +854,7 @@ SlotMachine_HandleInputWhileWheelsSpin:
 	inc [hl]
 	ld a, SFX_SLOTS_STOP_WHEEL
 	jp PlaySound
+
 .skip
 	ld a, [de]
 	and a

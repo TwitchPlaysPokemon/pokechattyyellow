@@ -392,3 +392,4 @@ ExecuteCurrentAnimatedObjectCallback:
 	ld h, [hl]
 	ld l, a
 	jp [hl]
+

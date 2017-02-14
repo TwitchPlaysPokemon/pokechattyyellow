@@ -114,6 +114,7 @@ CheckIfPictureIDAlreadyLoaded:
 	ld a, c
 	ld [de], a
 	ret
+
 .spriteNotAlreadyLoaded
 	scf
 	ret
@@ -314,6 +315,7 @@ SetUsedSprites:
 	jr nz, .findSpriteImageBaseOffsetLoop ; continue looping if not
 	ld a, $1 ; assume slot one if this ever happens
 	jr .done
+
 .foundSpritePictureID
 	ld a, 13
 	sub b ; get sprite image base offset
@@ -352,6 +354,7 @@ GetSplitMapSpriteSetID:
 .northSouthDivide
 	ld a, [wYCoord]
 	jr .compareCoord
+
 .eastWestDivide
 	ld a, [wXCoord]
 .compareCoord
@@ -362,6 +365,7 @@ GetSplitMapSpriteSetID:
 .loadSpriteSetID
 	ld a, [hl]
 	ret
+
 ; Uses sprite set $01 for West side and $0A for East side.
 ; Route 20 is a special case because the two map sections have a more complex
 ; shape instead of the map simply being split horizontally or vertically.

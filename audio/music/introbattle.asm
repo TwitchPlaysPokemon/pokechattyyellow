@@ -89,7 +89,6 @@ Music_IntroBattle_Ch1::
 	D_ 16
 	endchannel
 
-
 Music_IntroBattle_Ch2::
 	duty 3
 	vibrato 8, 2, 5
@@ -164,7 +163,6 @@ Music_IntroBattle_Ch2::
 	D_ 16
 	endchannel
 
-
 Music_IntroBattle_Ch3::
 	notetype 12, 1, 0
 	rest 8
@@ -227,7 +225,6 @@ Music_IntroBattle_Ch3::
 	D_ 1
 	rest 15
 	endchannel
-
 
 Music_IntroBattle_Ch4::
 	dspeed 6

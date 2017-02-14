@@ -160,7 +160,6 @@ DivideBCD_f686:
 	pop bc
 	jr .asm_f689
 
-
 AddBCDPredef::
 	call GetPredefRegisters
 
@@ -187,7 +186,6 @@ AddBCD::
 .done
 	ret
 
-
 SubBCDPredef::
 	call GetPredefRegisters
 
@@ -213,3 +211,4 @@ SubBCD::
 	scf
 .done
 	ret
+

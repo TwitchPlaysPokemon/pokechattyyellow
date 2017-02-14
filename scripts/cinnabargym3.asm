@@ -3,6 +3,7 @@ Func_f2133:
 	jr nz, .asm_627d9
 	ld hl, CinnabarGymText_75ac2
 	jr .asm_0b11d
+
 .asm_627d9
 	ld hl, CinnabarGymText_75ac7
 .asm_0b11d

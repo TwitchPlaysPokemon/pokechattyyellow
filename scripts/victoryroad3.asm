@@ -43,6 +43,7 @@ VictoryRoad3Script0:
 	set 5, [hl]
 	SetEvent EVENT_VICTORY_ROAD_3_BOULDER_ON_SWITCH1
 	ret
+
 .asm_449dc
 	CheckAndSetEvent EVENT_VICTORY_ROAD_3_BOULDER_ON_SWITCH2
 	jr nz, .asm_449fe
@@ -71,6 +72,7 @@ VictoryRoad3Script0:
 	ld hl, wd732
 	res 4, [hl]
 	ret
+
 .asm_44a1b
 	ld a, [wd72d]
 	bit 4, a

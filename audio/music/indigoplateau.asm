@@ -85,7 +85,6 @@ Music_IndigoPlateau_branch_a659::
 	A_ 4
 	endchannel
 
-
 Music_IndigoPlateau_Ch2::
 	duty 3
 	vibrato 8, 2, 5
@@ -145,7 +144,6 @@ Music_IndigoPlateau_branch_a6af::
 	D_ 4
 	D_ 4
 	endchannel
-
 
 Music_IndigoPlateau_Ch3::
 	notetype 12, 1, 0
@@ -223,7 +221,6 @@ Music_IndigoPlateau_branch_a6fe::
 	rest 2
 	A_ 4
 	endchannel
-
 
 Music_IndigoPlateau_Ch4::
 	dspeed 6

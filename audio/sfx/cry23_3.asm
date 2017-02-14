@@ -7,7 +7,6 @@ SFX_Cry23_3_Ch1:
 	unknownsfx0x20 8, 193, 192, 7
 	endchannel
 
-
 SFX_Cry23_3_Ch2:
 	dutycycle 95
 	unknownsfx0x20 15, 151, 129, 7
@@ -15,7 +14,6 @@ SFX_Cry23_3_Ch2:
 	unknownsfx0x20 10, 150, 129, 7
 	unknownsfx0x20 15, 131, 129, 7
 	endchannel
-
 
 SFX_Cry23_3_Ch3:
 	unknownnoise0x20 3, 242, 60

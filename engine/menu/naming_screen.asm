@@ -74,6 +74,7 @@ DisplayNameRaterScreen:
 	call CopyData
 	and a
 	ret
+
 .playerCancelled
 	scf
 	ret
@@ -140,6 +141,7 @@ DisplayNamingScreen:
 	inc hl
 	inc hl
 	jr .checkForPressedButton
+
 .foundPressedButton
 	ld a, [hli]
 	ld e, a
@@ -239,6 +241,7 @@ DisplayNamingScreen:
 	ld a, [wNamingScreenNameLength]
 	cp $7 ; max length of player/rival names
 	jr .checkNameLength
+
 .checkMonNameLength
 	ld a, [wNamingScreenNameLength]
 	cp $a ; max length of pokemon nicknames
@@ -259,6 +262,7 @@ DisplayNamingScreen:
 	ld a, SFX_PRESS_AB
 	call PlaySound
 	ret
+
 .pressedB
 	ld a, [wNamingScreenNameLength]
 	and a
@@ -267,6 +271,7 @@ DisplayNamingScreen:
 	dec hl
 	ld [hl], "@"
 	ret
+
 .pressedRight
 	ld a, [wCurrentMenuItem]
 	cp $6
@@ -277,9 +282,11 @@ DisplayNamingScreen:
 	inc a
 	inc a
 	jr .done
+
 .wrapToFirstColumn
 	ld a, $1
 	jr .done
+
 .pressedLeft
 	ld a, [wCurrentMenuItem]
 	cp $6
@@ -289,9 +296,11 @@ DisplayNamingScreen:
 	jp z, .wrapToLastColumn
 	dec a
 	jr .done
+
 .wrapToLastColumn
 	ld a, $11 ; max
 	jr .done
+
 .pressedUp
 	ld a, [wCurrentMenuItem]
 	dec a
@@ -302,6 +311,7 @@ DisplayNamingScreen:
 	ld [wCurrentMenuItem], a
 	ld a, $1 ; force left column
 	jr .done
+
 .pressedDown
 	ld a, [wCurrentMenuItem]
 	inc a
@@ -311,6 +321,7 @@ DisplayNamingScreen:
 	ld a, $1
 	ld [wCurrentMenuItem], a
 	jr .done
+
 .wrapToTopRow
 	cp $6
 	ret nz
@@ -399,6 +410,7 @@ PrintNicknameAndUnderscores:
 	jr nc, .pokemon1
 	ld b, 7 ; player or rival max name length
 	jr .playerOrRival1
+
 .pokemon1
 	ld b, 10 ; pokemon max name length
 .playerOrRival1
@@ -413,6 +425,7 @@ PrintNicknameAndUnderscores:
 	jr nc, .pokemon2
 	cp 7 ; player or rival max name length
 	jr .playerOrRival2
+
 .pokemon2
 	cp 10 ; pokemon max name length
 .playerOrRival2
@@ -503,6 +516,7 @@ PrintNamingText:
 	coord hl, 1, 3
 	ld de, NicknameTextString
 	jr .placeString
+
 .notNickname
 	call PlaceString
 	ld l, c

@@ -240,6 +240,7 @@ PalletTownText1:
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
 	ld hl, OakAppearsText
 	jr .done
+
 .next
 	dec a
 	jr nz, .asm_18fd3

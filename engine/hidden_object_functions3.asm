@@ -26,11 +26,13 @@ PrintBookshelfText:
 	xor a
 	ld [$ffdb], a
 	ret
+
 .nextBookshelfEntry1
 	inc hl
 .nextBookshelfEntry2
 	inc hl
 	jr .loop
+
 .noMatch
 	ld a, $ff
 	ld [$ffdb], a

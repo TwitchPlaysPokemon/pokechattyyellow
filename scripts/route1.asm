@@ -21,3 +21,4 @@ Route1Text3:
 	TX_ASM
 	callba Func_f1b1b
 	jp TextScriptEnd
+

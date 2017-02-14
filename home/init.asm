@@ -126,7 +126,6 @@ ClearVram:
 	xor a
 	jp FillMemory
 
-
 StopAllSounds::
 	ld a, $2
 	ld [wAudioROMBank], a
@@ -136,3 +135,4 @@ StopAllSounds::
 	ld [wNewSoundID], a
 	ld [wLastMusicSoundID], a
 	jp StopAllMusic
+

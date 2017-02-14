@@ -27,3 +27,4 @@ CeladonPokecenterText5:
 	TX_ASM
 	callab PokecenterChanseyText
 	jp TextScriptEnd
+

@@ -4,7 +4,6 @@ SFX_Purchase_3_Ch1:
 	unknownsfx0x20 8, 242, 224, 7
 	endchannel
 
-
 SFX_Purchase_3_Ch2:
 	duty 2
 	unknownsfx0x20 1, 8, 0, 0

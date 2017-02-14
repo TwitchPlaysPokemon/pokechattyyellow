@@ -40,3 +40,4 @@ IndigoPlateauLobbyText6:
 	TX_ASM
 	callab PokecenterChanseyText
 	jp TextScriptEnd
+

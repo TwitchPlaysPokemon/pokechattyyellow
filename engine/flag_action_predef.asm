@@ -38,6 +38,7 @@ FlagAction:
 	jr z, .shifted
 	sla d
 	jr .shift
+
 .shifted
 
 	ld a, b
@@ -71,3 +72,4 @@ FlagAction:
 	pop hl
 	ld c, a
 	ret
+

@@ -50,7 +50,6 @@ pikatilemap_def: macro
 PikaAnimTilemap_0:
 	db $ff ; unused
 
-
 	; $ff inhibits overwriting that tile
 PikaAnimTilemap_1_0:
 PikaAnimTilemap_42:

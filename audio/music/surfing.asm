@@ -115,7 +115,6 @@ Music_Surfing_branch_7fa30::
 	E_ 4
 	loopchannel 0, Music_Surfing_branch_7fa30
 
-
 Music_Surfing_Ch2::
 	duty 3
 	vibrato 16, 2, 5
@@ -201,7 +200,6 @@ Music_Surfing_branch_7faae::
 	octave 5
 	C# 6
 	loopchannel 0, Music_Surfing_branch_7faae
-
 
 Music_Surfing_Ch3::
 	notetype 12, 1, 0

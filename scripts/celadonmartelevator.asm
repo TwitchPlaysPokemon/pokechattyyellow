@@ -71,3 +71,4 @@ CeladonMartElevatorText1:
 	ld hl, CeladonMartElevatorWarpMaps
 	predef DisplayElevatorFloorMenu
 	jp TextScriptEnd
+

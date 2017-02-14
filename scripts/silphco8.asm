@@ -49,6 +49,7 @@ SilphCo8Script_56541:
 	jr z, .asm_5655e
 	inc hl
 	jr .asm_5654d
+
 .asm_5655e
 	ld a, [hli]
 	cp c
@@ -58,6 +59,7 @@ SilphCo8Script_56541:
 	ld [hli], a
 	ld [hl], a
 	ret
+
 .asm_56569
 	xor a
 	ld [$ffe0], a

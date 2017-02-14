@@ -11,6 +11,7 @@ MistEffect_:
 	callab PlayCurrentMoveAnimation
 	ld hl, ShroudedInMistText
 	jp PrintText
+
 .mistAlreadyInUse
 	jpab PrintButItFailedText_
 

@@ -55,6 +55,7 @@ SaffronGymText_5d068:
 	call DisplayTextID
 	SetEvent EVENT_GOT_TM46
 	jr .asm_5d091
+
 .BagFull
 	ld a, $c
 	ld [hSpriteIndexOrTextID], a
@@ -159,10 +160,12 @@ SaffronGymText1:
 	call z, SaffronGymText_5d068
 	call DisableWaitingAfterTextDisplay
 	jr .asm_5d15f
+
 .asm_5d12c
 	ld hl, SaffronGymText_5d16e
 	call PrintText
 	jr .asm_5d15f
+
 .asm_5d134
 	ld hl, SaffronGymText_5d162
 	call PrintText
@@ -260,6 +263,7 @@ SaffronGymText9:
 	ld hl, SaffronGymText_5d1e6
 	call PrintText
 	jr .asm_5d1e3
+
 .asm_5d1dd
 	ld hl, SaffronGymText_5d1eb
 	call PrintText

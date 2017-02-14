@@ -50,16 +50,19 @@ PushBoulder:
 	ret z
 	ld de, PushBoulderDownMovementData
 	jr .done
+
 .pushBoulderUp
 	bit 6, b
 	ret z
 	ld de, PushBoulderUpMovementData
 	jr .done
+
 .pushBoulderLeft
 	bit 5, b
 	ret z
 	ld de, PushBoulderLeftMovementData
 	jr .done
+
 .pushBoulderRight
 	bit 4, b
 	ret z
@@ -105,3 +108,4 @@ ResetBoulderPushFlags:
 	res 1, [hl]
 	res 6, [hl]
 	ret
+

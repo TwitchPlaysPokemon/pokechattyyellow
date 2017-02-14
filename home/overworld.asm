@@ -70,6 +70,7 @@ OverworldLoopLessDelay::
 	jr z, .notSimulating
 	ld a, [hJoyHeld]
 	jr .checkIfStartIsPressed
+
 .notSimulating
 	ld a, [hJoyPressed]
 .checkIfStartIsPressed
@@ -79,6 +80,7 @@ OverworldLoopLessDelay::
 	xor a
 	ld [hSpriteIndexOrTextID], a ; start menu text ID
 	jp .displayDialogue
+
 .startButtonNotPressed
 	bit 2, a ; select button
 	jr z, .selectButtonNotPressed
@@ -86,6 +88,7 @@ OverworldLoopLessDelay::
 	ld a, TEXT_SELECT_BUTTON
 	ld [hSpriteIndexOrTextID], a ; words of oqt
 	jp .displayDialogue
+
 .selectButtonNotPressed
 	bit 0, a ; A button
 	jp z, .checkIfDownButtonIsPressed
@@ -123,6 +126,7 @@ OverworldLoopLessDelay::
 	xor a
 	ld [wLinkTimeoutCounter], a
 	jp EnterMap
+
 .checkForOpponent
 	ld a, [wCurOpponent]
 	and a
@@ -444,6 +448,7 @@ CheckWarpsCollision::
 	ld a, [hl]
 	ld [hWarpDestinationMap], a
 	jr WarpFound2
+
 .retry1
 	inc hl
 .retry2
@@ -501,6 +506,7 @@ WarpFound2::
 	ld hl, wd732
 	set 3, [hl]
 	jr .skipMapChangeSound
+
 .notWarpPad
 	call PlayMapChangeSound
 .skipMapChangeSound
@@ -681,6 +687,7 @@ PlayMapChangeSound::
 	jr nz, .didNotGoThroughDoor
 	ld a, SFX_GO_INSIDE
 	jr .playSound
+
 .didNotGoThroughDoor
 	ld a, SFX_GO_OUTSIDE
 .playSound
@@ -728,6 +735,7 @@ ExtraWarpCheck::
 .useFunction1
 	ld hl, IsPlayerFacingEdgeOfMap
 	jr .doBankswitch
+
 .useFunction2
 	ld hl, IsWarpTileInFrontOfPlayer
 .doBankswitch
@@ -1269,6 +1277,7 @@ CollisionCheckOnLand::
 .setCarry
 	scf
 	ret
+
 .noCollision
 	and a
 	ret
@@ -1320,6 +1329,7 @@ CheckForTilePairCollisions::
 .retry
 	inc hl
 	jr .tilePairCollisionLoop
+
 .tilesetMatches
 	ld a, [wTilePlayerStandingOn] ; tile the player is on
 	ld b, a
@@ -1331,12 +1341,14 @@ CheckForTilePairCollisions::
 	cp b
 	jr z, .currentTileMatchesSecondInPair
 	jr .retry
+
 .currentTileMatchesFirstInPair
 	inc hl
 	ld a, [hl]
 	cp c
 	jr z, .foundMatch
 	jr .tilePairCollisionLoop
+
 .currentTileMatchesSecondInPair
 	dec hl
 	ld a, [hli]
@@ -1346,6 +1358,7 @@ CheckForTilePairCollisions::
 .foundMatch
 	scf
 	ret
+
 .noMatch
 	and a
 	ret
@@ -1689,7 +1702,6 @@ GetSimulatedInput::
 	and a
 	ret
 
-
 ; function to check the tile ahead to determine if the character should get on land or keep surfing
 ; sets carry if there is a collision and clears carry otherwise
 ; This function had a bug in Red/Blue, but it was fixed in Yellow.
@@ -1727,6 +1739,7 @@ CollisionCheckOnWater::
 	cp SHIP_PORT ; Vermilion Dock tileset
 	jr nz, .noCollision ; keep surfing if it's not the boarding platform tile
 	jr .stopSurfing ; if it is the boarding platform tile, stop surfing
+
 .stopSurfing ; based game freak
 	ld a, $3
 	ld [wPikachuSpawnState], a
@@ -1767,6 +1780,7 @@ RunMapScript::
 	ld de, .return
 	push de
 	jp [hl] ; jump to script
+
 .return
 	ret
 

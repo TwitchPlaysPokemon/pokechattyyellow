@@ -30,7 +30,6 @@ Music_HallOfFame_branch_7fbc5::
 	rest 16
 	loopchannel 0, Music_HallOfFame_branch_7fbc5
 
-
 Music_HallOfFame_Ch2::
 	vibrato 8, 2, 5
 	duty 3
@@ -61,7 +60,6 @@ Music_HallOfFame_branch_7fbdf::
 	A_ 4
 	F_ 2
 	loopchannel 0, Music_HallOfFame_branch_7fbdf
-
 
 Music_HallOfFame_Ch3::
 	notetype 12, 1, 2

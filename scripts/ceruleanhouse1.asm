@@ -104,3 +104,4 @@ CeruleanHouse1Text4:
 	ld a, SANDSHREW
 	call PlayCry
 	jp TextScriptEnd
+

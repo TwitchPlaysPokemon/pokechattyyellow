@@ -41,6 +41,7 @@ EnterMapAnim:
 .done
 	call Func_151d
 	jp RestoreFacingDirectionAndYScreenPos
+
 .dungeonWarpAnimation
 	ld c, 50
 	call DelayFrames
@@ -48,6 +49,7 @@ EnterMapAnim:
 	ld a, $0
 	ld [wPikachuSpawnState], a
 	jr .done
+
 .flyAnimation
 	pop hl
 	call LoadBirdSpriteGraphics
@@ -93,7 +95,6 @@ PlayerSpinWhileMovingDown:
 	ld [hl], a ; wPlayerSpinWhileMovingUpOrDownAnimFrameDelay
 	jp PlayerSpinWhileMovingUpOrDown
 
-
 _LeaveMapAnim:
 	call Func_1510
 	call InitFacingDirectionList
@@ -124,6 +125,7 @@ _LeaveMapAnim:
 .playerStandingOnWarpPad
 	call GBFadeOutToWhite
 	jp RestoreFacingDirectionAndYScreenPos
+
 .playerNotStandingOnWarpPadOrHole
 	ld a, $4
 	call StopMusic
@@ -142,6 +144,7 @@ _LeaveMapAnim:
 	ld hl, wFacingDirectionList
 	call PlayerSpinInPlace
 	jr .spinWhileMovingUp
+
 .flyAnimation
 	call LoadBirdSpriteGraphics
 	ld hl, wFlyAnimUsingCoordList
@@ -372,6 +375,7 @@ IsPlayerStandingOnWarpPadOrHole:
 	inc hl
 	inc hl
 	jr .loop
+
 .foundMatch
 	inc hl
 	ld b, [hl]
@@ -524,6 +528,7 @@ _HandleMidJump:
 	ld a, [hl]
 	ld [wSpriteStateData1 + 4], a ; player's sprite y coordinate
 	ret
+
 .finishedJump
 	ld a, [wWalkCounter]
 	cp 0

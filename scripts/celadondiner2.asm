@@ -10,10 +10,12 @@ Func_f1f31:
 	ld hl, ReceivedCoinCaseText
 	call PrintText
 	jr .asm_68b61
+
 .BagFull
 	ld hl, CoinCaseNoRoomText
 	call PrintText
 	jr .asm_68b61
+
 .asm_eb14d
 	ld hl, CeladonDinerText_491b7
 	call PrintText

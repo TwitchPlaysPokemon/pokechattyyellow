@@ -15,3 +15,4 @@ RedsHouse1FText2: ; TV
 	TX_ASM
 	callab Func_f1bc4
 	jp TextScriptEnd
+

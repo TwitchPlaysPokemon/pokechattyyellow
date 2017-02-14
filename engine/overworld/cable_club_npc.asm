@@ -12,6 +12,7 @@ CableClubNPC:
 	ld hl, CableClubNPCMakingPreparationsText
 	call PrintText
 	jp .didNotConnect
+
 .receivedPokedex
 	ld a, $1
 	ld [wMenuJoypadPollCount], a
@@ -41,6 +42,7 @@ CableClubNPC:
 	ld [rSC], a
 	call DelayFrame
 	jr .establishConnectionLoop
+
 .establishedConnection
 	call Serial_SendZeroByte
 	call DelayFrame
@@ -88,10 +90,12 @@ CableClubNPC:
 	ld hl, CableClubNPCLinkClosedBecauseOfInactivityText
 	call PrintText
 	jr .didNotConnect
+
 .failedToEstablishConnection
 	ld hl, CableClubNPCAreaReservedFor2FriendsLinkedByCableText
 	call PrintText
 	jr .didNotConnect
+
 .choseNo
 	call CloseLinkConnection
 	ld hl, CableClubNPCPleaseComeAgainText
@@ -106,6 +110,7 @@ CableClubNPC:
 	xor a
 	ld [wMenuJoypadPollCount], a
 	ret
+
 .connected
 	xor a
 	ld [hld], a
@@ -133,6 +138,7 @@ Serial_SyncAndExchangeNybbleDouble:
 	jr nz, .next
 	pop hl
 	jr .setUnknownSerialCounterToFFFF
+
 .next
 	pop hl
 	ld a, [wSerialExchangeNybbleReceiveData]
@@ -160,6 +166,7 @@ Serial_SyncAndExchangeNybbleDouble:
 	ld a, [wSerialExchangeNybbleReceiveData]
 	ld [wSerialSyncAndExchangeNybbleReceiveData], a
 	ret
+
 .setUnknownSerialCounterToFFFF
 	ld a, $ff
 	ld [wUnknownSerialCounter], a
@@ -206,3 +213,4 @@ CloseLinkConnection:
 	ld a, START_TRANSFER_EXTERNAL_CLOCK
 	ld [rSC], a
 	ret
+

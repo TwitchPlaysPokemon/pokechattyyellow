@@ -90,3 +90,4 @@ AnimCutGrass_SwapOAMEntries:
 	ld de, wOAMBuffer + $98
 	ld bc, $8
 	jp CopyData
+

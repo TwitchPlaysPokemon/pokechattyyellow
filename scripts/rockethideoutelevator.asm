@@ -73,6 +73,7 @@ RocketHideoutElevatorText1:
 	ld hl, RocketHideoutElevatorWarpMaps
 	predef DisplayElevatorFloorMenu
 	jr .asm_45788
+
 .asm_45782
 	ld hl, RocketHideoutElevatorText_4578b
 	call PrintText

@@ -12,6 +12,7 @@ _MoveMon:
 	cp MONS_PER_BOX
 	jr nz, .partyOrBoxNotFull
 	jr .boxFull
+
 .checkPartyMonSlots
 	ld hl, wPartyCount
 	ld a, [hl]
@@ -20,6 +21,7 @@ _MoveMon:
 .boxFull
 	scf
 	ret
+
 .partyOrBoxNotFull
 	inc a
 	ld [hl], a           ; increment number of mons in party/box
@@ -170,3 +172,4 @@ _MoveMon:
 .asm_f4ea
 	and a
 	ret
+

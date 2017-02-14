@@ -65,7 +65,6 @@ EmotionBubble:
 	call UpdateSprites
 	ret
 
-
 EmotionBubblesOAM:
 	db $F8, $00,$F9,$00
 	db $FA, $00,$FB,$00

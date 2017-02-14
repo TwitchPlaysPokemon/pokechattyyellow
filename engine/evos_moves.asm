@@ -93,6 +93,7 @@ Evolution_PartyMonLoop: ; loop over party mons
 	cp b ; is the mon's level greater than the evolution requirement?
 	jp c, Evolution_PartyMonLoop ; if so, go the next mon
 	jr .doEvolution
+
 .checkItemEvo
 	ld a, [wIsInBattle] ; are we in battle?
 	and a
@@ -407,6 +408,7 @@ CanMonOrAnyPreEvolutionLegallyHaveThisMove:
 	ld [wcf91], a
 	and a
 	ret
+
 .found
 	pop af
 	ld [wcf91], a
@@ -450,6 +452,7 @@ CanMonLegallyHaveThisMove:
 .carry
 	scf
 	ret
+
 .no_carry
 	and a
 	ret
@@ -522,6 +525,7 @@ GetPreEvolution:
 	jr c, .loop
 	and a
 	ret
+
 .got_it
 	inc c
 	ld a, c
@@ -538,6 +542,7 @@ WriteMonMoves:
 	push bc
 	call GetMonLearnset
 	jr .firstMove
+
 .nextMove
 	pop de
 .nextMove2

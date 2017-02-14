@@ -648,7 +648,6 @@ Music_TrainerBattle_branch_22962::
 	A# 1
 	loopchannel 0, Music_TrainerBattle_branch_22962
 
-
 Music_TrainerBattle_Ch2::
 	duty 3
 	vibrato 10, 2, 5
@@ -951,7 +950,6 @@ Music_TrainerBattle_branch_22bfc::
 	E_ 8
 	G_ 8
 	loopchannel 0, Music_TrainerBattle_branch_22bfc
-
 
 Music_TrainerBattle_Ch3::
 	vibrato 0, 2, 0

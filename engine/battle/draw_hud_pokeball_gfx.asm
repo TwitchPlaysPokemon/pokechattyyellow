@@ -88,6 +88,7 @@ PickPokeball:
 	jr nz, .done
 	dec b ; regular ball
 	jr .done
+
 .done_fainted
 	inc hl
 	inc hl

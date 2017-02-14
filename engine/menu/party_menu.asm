@@ -107,6 +107,7 @@ RedrawPartyMenu_:
 	call SetPartyMenuHPBarColor ; color the HP bar (on SGB)
 	pop hl
 	jr .printLevel
+
 .teachMoveMenu
 	push hl
 	predef CanLearnTM ; check if the pokemon can learn the move
@@ -134,6 +135,7 @@ RedrawPartyMenu_:
 	pop bc
 	inc c
 	jp .loop
+
 .ableToLearnMoveText
 	db "ABLE@"
 .notAbleToLearnMoveText
@@ -191,6 +193,7 @@ RedrawPartyMenu_:
 	call PlaceString
 	pop hl
 	jr .printLevel
+
 .ableToEvolveText
 	db "ABLE@"
 .notAbleToEvolveText
@@ -224,6 +227,7 @@ RedrawPartyMenu_:
 	ld [hBGMapMode], a
 	call Delay3
 	jp GBPalNormal
+
 .printItemUseMessage
 	and $0F
 	ld hl, PartyMenuItemUseMessagePointers
@@ -331,3 +335,4 @@ SetPartyMenuHPBarColor:
 	ld hl, wWhichPartyMenuHPBar
 	inc [hl]
 	ret
+

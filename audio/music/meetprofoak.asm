@@ -73,7 +73,6 @@ Music_MeetProfOak_branch_af85::
 	G# 4
 	loopchannel 0, Music_MeetProfOak_branch_af85
 
-
 Music_MeetProfOak_Ch2::
 	vibrato 8, 1, 1
 	duty 2
@@ -206,7 +205,6 @@ Music_MeetProfOak_branch_b005::
 	notetype 12, 11, 7
 	G# 16
 	loopchannel 0, Music_MeetProfOak_branch_b005
-
 
 Music_MeetProfOak_Ch3::
 	notetype 12, 1, 2

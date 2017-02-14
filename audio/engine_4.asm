@@ -119,6 +119,7 @@ Audio4_7d192:
 	inc hl
 	inc hl
 	jr .asm_7d1b4
+
 .asm_7d1bc
 	push af
 	push hl
@@ -168,6 +169,7 @@ Audio4_7d192:
 	jr z, .asm_7d21f
 	jr c, .asm_7d200
 	jr .asm_7d21f
+
 .asm_7d200
 	ld hl, wChannelSoundIDs + CH4
 	ld [hli], a

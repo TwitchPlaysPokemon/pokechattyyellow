@@ -20,6 +20,7 @@ DisplayTextIDInit:
 	coord hl, 10, 0
 	lb bc, 12, 8
 	jr .drawTextBoxBorder
+
 ; if text ID is not 0 (i.e. not the start menu) then do a standard dialogue text box
 .notStartMenu
 	coord hl, 0, 12
@@ -161,3 +162,4 @@ PrintStartMenuItem:
 	ld de, SCREEN_WIDTH * 2
 	add hl, de
 	ret
+

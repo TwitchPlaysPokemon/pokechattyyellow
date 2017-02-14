@@ -6,7 +6,6 @@ SFX_Battle_2C_Ch1:
 	loopchannel 3, SFX_Battle_2C_Ch1
 	endchannel
 
-
 SFX_Battle_2C_Ch2:
 	dutycycle 141
 	unknownsfx0x20 7, 228, 48, 4
@@ -14,7 +13,6 @@ SFX_Battle_2C_Ch2:
 	unknownsfx0x20 15, 162, 56, 4
 	loopchannel 4, SFX_Battle_2C_Ch2
 	endchannel
-
 
 SFX_Battle_2C_Ch3:
 	unknownnoise0x20 9, 244, 68

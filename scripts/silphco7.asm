@@ -69,6 +69,7 @@ SilphCo7Text_51bc8:
 	jr z, .asm_51be5
 	inc hl
 	jr .asm_51bd4
+
 .asm_51be5
 	ld a, [hli]
 	cp c
@@ -78,6 +79,7 @@ SilphCo7Text_51bc8:
 	ld [hli], a
 	ld [hl], a
 	ret
+
 .asm_51bf0
 	xor a
 	ld [$ffe0], a
@@ -92,11 +94,13 @@ SilphCo7Text_51bf4:
 	jr nz, .next1
 	SetEventReuseHL EVENT_SILPH_CO_7_UNLOCKED_DOOR1
 	ret
+
 .next1
 	cp $2
 	jr nz, .next2
 	SetEventAfterBranchReuseHL EVENT_SILPH_CO_7_UNLOCKED_DOOR2, EVENT_SILPH_CO_7_UNLOCKED_DOOR1
 	ret
+
 .next2
 	SetEventAfterBranchReuseHL EVENT_SILPH_CO_7_UNLOCKED_DOOR3, EVENT_SILPH_CO_7_UNLOCKED_DOOR1
 	ret
@@ -315,6 +319,7 @@ SilphCo7Text1:
 	ld hl, .LaprasGuyText
 	call PrintText
 	jr .done
+
 .givelapras
 	ld hl, .MeetLaprasGuyText
 	call PrintText
@@ -330,6 +335,7 @@ SilphCo7Text1:
 	ld hl, wd72e
 	set 0, [hl]
 	jr .done
+
 .savedsilph
 	ld hl, .LaprasGuySavedText
 	call PrintText
@@ -359,6 +365,7 @@ SilphCo7Text2:
 	ld hl, .rockettext
 	call PrintText
 	jr .done
+
 .savedsilph
 	ld hl, .savedtext
 	call PrintText
@@ -380,6 +387,7 @@ SilphCo7Text3:
 	ld hl, .rockettext
 	call PrintText
 	jr .done
+
 .savedsilph
 	ld hl, .savedtext
 	call PrintText
@@ -401,6 +409,7 @@ SilphCo7Text4:
 	ld hl, .rockettext
 	call PrintText
 	jr .done
+
 .savedsilph
 	ld hl, .savedtext
 	call PrintText

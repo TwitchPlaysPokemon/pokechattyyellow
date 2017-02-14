@@ -76,7 +76,6 @@ Music_MeetJessieJames_branch_83187::
 	A# 4
 	loopchannel 0, Music_MeetJessieJames_branch_83187
 
-
 Music_MeetJessieJames_Ch2::
 	duty 3
 	vibrato 6, 1, 5
@@ -162,7 +161,6 @@ Music_MeetJessieJames_branch_831df::
 	notetype 12, 12, 5
 	D# 8
 	loopchannel 0, Music_MeetJessieJames_branch_831df
-
 
 Music_MeetJessieJames_Ch3::
 	notetype 12, 1, 0

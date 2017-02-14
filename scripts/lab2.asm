@@ -23,3 +23,4 @@ Lab2Text3:
 Lab2DoTrade:
 	predef DoInGameTradeDialogue
 	jp TextScriptEnd
+

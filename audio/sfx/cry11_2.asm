@@ -9,7 +9,6 @@ SFX_Cry11_2_Ch1:
 	unknownsfx0x20 8, 177, 48, 7
 	endchannel
 
-
 SFX_Cry11_2_Ch2:
 	dutycycle 10
 	unknownsfx0x20 4, 8, 0, 0
@@ -21,7 +20,6 @@ SFX_Cry11_2_Ch2:
 	unknownsfx0x20 3, 130, 204, 6
 	unknownsfx0x20 8, 113, 216, 6
 	endchannel
-
 
 SFX_Cry11_2_Ch3:
 	unknownnoise0x20 2, 242, 76

@@ -13,6 +13,7 @@ _GetTileAndCoordsInFrontOfPlayer:
 	aCoord 8, 11
 	inc d
 	jr .storeTile
+
 .notFacingDown
 	cp SPRITE_FACING_UP
 	jr nz, .notFacingUp
@@ -20,6 +21,7 @@ _GetTileAndCoordsInFrontOfPlayer:
 	aCoord 8, 7
 	dec d
 	jr .storeTile
+
 .notFacingUp
 	cp SPRITE_FACING_LEFT
 	jr nz, .notFacingLeft
@@ -27,6 +29,7 @@ _GetTileAndCoordsInFrontOfPlayer:
 	aCoord 6, 9
 	dec e
 	jr .storeTile
+
 .notFacingLeft
 	cp SPRITE_FACING_RIGHT
 	jr nz, .storeTile
@@ -54,6 +57,7 @@ GetTileTwoStepsInFrontOfPlayer:
 	aCoord 8, 13
 	inc d
 	jr .storeTile
+
 .notFacingDown
 	cp SPRITE_FACING_UP
 	jr nz, .notFacingUp
@@ -63,6 +67,7 @@ GetTileTwoStepsInFrontOfPlayer:
 	aCoord 8, 5
 	dec d
 	jr .storeTile
+
 .notFacingUp
 	cp SPRITE_FACING_LEFT
 	jr nz, .notFacingLeft
@@ -72,6 +77,7 @@ GetTileTwoStepsInFrontOfPlayer:
 	aCoord 4, 9
 	dec e
 	jr .storeTile
+
 .notFacingLeft
 	cp SPRITE_FACING_RIGHT
 	jr nz, .storeTile
@@ -85,3 +91,4 @@ GetTileTwoStepsInFrontOfPlayer:
 	ld [wTileInFrontOfBoulderAndBoulderCollisionResult], a
 	ld [wTileInFrontOfPlayer], a
 	ret
+

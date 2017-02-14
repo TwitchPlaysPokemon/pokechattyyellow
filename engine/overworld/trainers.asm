@@ -87,6 +87,7 @@ TrainerWalkUpToPlayer:
 	cp SPRITE_FACING_LEFT
 	jr z, .facingLeft
 	jr .facingRight
+
 .facingDown
 	ld a, [wTrainerScreenY]
 	ld b, a
@@ -100,6 +101,7 @@ TrainerWalkUpToPlayer:
 	xor a
 	ld b, a           ; a = direction to go to
 	jr .writeWalkScript
+
 .facingUp
 	ld a, [wTrainerScreenY]
 	ld b, a
@@ -113,6 +115,7 @@ TrainerWalkUpToPlayer:
 	ld b, $0
 	ld a, $40           ; a = direction to go to
 	jr .writeWalkScript
+
 .facingRight
 	ld a, [wTrainerScreenX]
 	ld b, a
@@ -126,6 +129,7 @@ TrainerWalkUpToPlayer:
 	ld b, $0
 	ld a, $c0           ; a = direction to go to
 	jr .writeWalkScript
+
 .facingLeft
 	ld a, [wTrainerScreenX]
 	ld b, a
@@ -174,6 +178,7 @@ TrainerEngage:
 	sub $ff
 	jr nz, .spriteOnScreen ; test if sprite is on screen
 	jp .noEngage
+
 .spriteOnScreen
 	ld a, [wTrainerSpriteOffset]
 	add $9
@@ -196,6 +201,7 @@ TrainerEngage:
 	jr z, .linedUpX
 	xor a
 	jp .noEngage
+
 .linedUpY
 	ld a, [wTrainerScreenX]        ; sprite screen X pos
 	ld b, a
@@ -206,6 +212,7 @@ TrainerEngage:
 	jr c, .engage
 	xor a
 	jr .noEngage
+
 .linedUpX
 	ld a, [wTrainerScreenY]        ; sprite screen Y pos
 	ld b, a
@@ -216,6 +223,7 @@ TrainerEngage:
 	jr c, .engage
 	xor a
 	jp .noEngage
+
 .engage
 	call CheckPlayerIsInFrontOfSprite
 	ld a, [wTrainerSpriteOffset]
@@ -271,12 +279,14 @@ CheckSpriteCanSeePlayer:
 	cp SPRITE_FACING_RIGHT
 	jr z, .checkYCoord
 	jr .notInLine
+
 .checkXCoord
 	ld a, [wTrainerScreenX]         ; sprite screen X position
 	ld b, a
 	cp $40
 	jr z, .inLine
 	jr .notInLine
+
 .checkYCoord
 	ld a, [wTrainerScreenY]         ; sprite screen Y position
 	ld b, a
@@ -285,6 +295,7 @@ CheckSpriteCanSeePlayer:
 .inLine
 	scf
 	ret
+
 .notInLine
 	and a
 	ret
@@ -342,8 +353,10 @@ CheckPlayerIsInFrontOfSprite:
 .engage
 	ld a, $ff
 	jr .done
+
 .noEngage
 	xor a
 .done
 	ld [wTrainerSpriteOffset], a
 	ret
+

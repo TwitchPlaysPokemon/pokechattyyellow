@@ -19,6 +19,7 @@ RocketHideout1Script_44be0:
 	jr nz, .asm_44bf7
 	ld a, $54
 	jr .asm_44c03
+
 .asm_44bf7
 	ld a, SFX_GO_INSIDE
 	call PlaySound

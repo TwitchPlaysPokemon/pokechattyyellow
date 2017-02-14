@@ -174,10 +174,12 @@ Route24Text1:
 	ld [wRoute24CurScript], a
 	ld [wCurMapScript], a
 	jp TextScriptEnd
+
 .asm_514f9
 	ld hl, Route24Text_51530
 	call PrintText
 	jp TextScriptEnd
+
 .BagFull
 	ld hl, Route24Text_51521
 	call PrintText

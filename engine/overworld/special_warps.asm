@@ -152,3 +152,4 @@ LoadSpecialWarpData:
 	ld a, $ff ; the player's coordinates have already been updated using a special warp, so don't use any of the normal warps
 	ld [wDestinationWarpID], a
 	ret
+

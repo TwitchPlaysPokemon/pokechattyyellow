@@ -44,6 +44,7 @@ FindPathToPlayer:
 	jr nz, .playerIsLeftOfNPC
 	ld d, NPC_MOVEMENT_RIGHT
 	jr .next1
+
 .playerIsLeftOfNPC
 	ld d, NPC_MOVEMENT_LEFT
 .next1
@@ -51,12 +52,14 @@ FindPathToPlayer:
 	add 1
 	ld [hFindPathXProgress], a
 	jr .storeDirection
+
 .yDistanceGreater
 	ld a, [hNPCPlayerRelativePosFlags]
 	bit 0, a
 	jr nz, .playerIsAboveNPC
 	ld d, NPC_MOVEMENT_DOWN
 	jr .next2
+
 .playerIsAboveNPC
 	ld d, NPC_MOVEMENT_UP
 .next2
@@ -70,6 +73,7 @@ FindPathToPlayer:
 	inc a
 	ld [hFindPathNumSteps], a
 	jp .loop
+
 .done
 	ld [hl], $ff
 	ret
@@ -101,6 +105,7 @@ CalcPositionOfPlayerRelativeToNPC:
 	set 0, [hl]
 	pop hl
 	jr .divideYDistance
+
 .NPCSouthOfOrAlignedWithPlayer
 	push hl
 	ld hl, hNPCPlayerRelativePosFlags
@@ -129,6 +134,7 @@ CalcPositionOfPlayerRelativeToNPC:
 	set 1, [hl]
 	pop hl
 	jr .divideXDistance
+
 .NPCEastOfOrAlignedWithPlayer
 	push hl
 	ld hl, hNPCPlayerRelativePosFlags
@@ -184,6 +190,7 @@ ConvertNPCMovementDirectionToJoypadMask:
 	jr z, .loadJoypadMask
 	inc hl
 	jr .loop
+
 .loadJoypadMask
 	ld a, [hl]
 .done
@@ -199,3 +206,4 @@ NPCMovementDirectionsToJoypadMasksTable:
 
 ; unreferenced
 	ret
+

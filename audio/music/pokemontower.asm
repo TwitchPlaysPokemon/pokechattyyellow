@@ -139,7 +139,6 @@ Music_PokemonTower_branch_7f05a::
 	C_ 16
 	loopchannel 0, Music_PokemonTower_branch_7f05a
 
-
 Music_PokemonTower_Ch2::
 	vibrato 20, 3, 4
 	duty 3
@@ -290,7 +289,6 @@ Music_PokemonTower_branch_7f0ee::
 	notetype 12, 10, 7
 	C_ 16
 	loopchannel 0, Music_PokemonTower_branch_7f0ee
-
 
 Music_PokemonTower_Ch3::
 	vibrato 4, 1, 1

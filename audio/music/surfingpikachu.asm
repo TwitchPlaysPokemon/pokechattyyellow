@@ -161,7 +161,6 @@ Music_SurfingPikachu_branch_82d1a::
 	duty 3
 	loopchannel 0, Music_SurfingPikachu_branch_82d1a
 
-
 Music_SurfingPikachu_Ch2::
 	duty 3
 	vibrato 6, 1, 5
@@ -310,7 +309,6 @@ Music_SurfingPikachu_branch_82de0::
 	octave 4
 	C# 1
 	loopchannel 0, Music_SurfingPikachu_branch_82de0
-
 
 Music_SurfingPikachu_Ch3::
 	notetype 12, 1, 0

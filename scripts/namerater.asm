@@ -33,6 +33,7 @@ NameRaterScript_1da20:
 	jr nz, .asm_1da47
 	and a
 	ret
+
 .asm_1da52
 	scf
 	ret
@@ -74,6 +75,7 @@ NameRaterText1:
 .asm_1daa8
 	call PrintText
 	jp TextScriptEnd
+
 .asm_1daae
 	ld hl, NameRaterText_1dacc
 	jr .asm_1daa8

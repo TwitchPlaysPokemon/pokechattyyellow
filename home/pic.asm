@@ -85,6 +85,7 @@ UncompressSpriteDataLoop::
 	call WriteSpriteBitsToBuffer  ; otherwise write input to output and repeat
 	call MoveToNextBufferPosition
 	jr .readNextInput
+
 .readRLEncodedZeros
 	ld c, $0                   ; number of zeroes it length encoded, the number
 .countConsecutiveOnesLoop      ; of consecutive ones determines the number of bits the number has
@@ -93,6 +94,7 @@ UncompressSpriteDataLoop::
 	jr z, .countConsecutiveOnesFinished
 	inc c
 	jr .countConsecutiveOnesLoop
+
 .countConsecutiveOnesFinished
 	ld a, c
 	add a
@@ -118,6 +120,7 @@ UncompressSpriteDataLoop::
 	sla e
 	rl d
 	jr .readNumberOfZerosLoop
+
 .readNumberOfZerosDone
 	pop hl                     ; add the offset
 	add hl, de
@@ -158,6 +161,7 @@ MoveToNextBufferPosition::
 	inc a
 	ld [wSpriteOutputPtr+1], a
 	ret
+
 .curColumnDone
 	xor a
 	ld [wSpriteCurPosY], a
@@ -172,6 +176,7 @@ MoveToNextBufferPosition::
 	ld a, [hl]
 	ld [wSpriteOutputPtr+1], a
 	ret
+
 .bitOffsetsDone
 	ld a, $3
 	ld [wSpriteOutputBitOffset], a
@@ -188,6 +193,7 @@ MoveToNextBufferPosition::
 	ld h, a
 	inc hl
 	jp StoreSpriteOutputPointer
+
 .allColumnsDone
 	pop hl
 	xor a
@@ -199,6 +205,7 @@ MoveToNextBufferPosition::
 	set 1, a
 	ld [wSpriteLoadFlags], a
 	jp UncompressSpriteDataLoop
+
 .done
 	jp UnpackSprite
 
@@ -214,10 +221,12 @@ WriteSpriteBitsToBuffer::
 	rrc e ; offset 3
 	rrc e
 	jr .offset0
+
 .offset1
 	sla e
 	sla e
 	jr .offset0
+
 .offset2
 	swap e
 .offset0
@@ -305,6 +314,7 @@ SpriteDifferentialDecode::
 	ld hl, DecodeNybble0TableFlipped
 	ld de, DecodeNybble1TableFlipped
 	jr .storeDecodeTablesPointers
+
 .notFlipped
 	ld hl, DecodeNybble0Table
 	ld de, DecodeNybble1Table
@@ -373,6 +383,7 @@ SpriteDifferentialDecode::
 	inc hl
 	call StoreSpriteOutputPointer
 	jr .decodeNextByteLoop
+
 .done
 	xor a
 	ld [wSpriteCurPosY], a
@@ -391,6 +402,7 @@ DifferentialDecodeNybble::
 	jr z, .notFlipped     ; determine if initial value is 0 or one
 	bit 3, e              ; if flipped, consider MSB of last data
 	jr .selectLookupTable
+
 .notFlipped
 	bit 0, e              ; else consider LSB
 .selectLookupTable
@@ -400,6 +412,7 @@ DifferentialDecodeNybble::
 	ld l, a
 	ld a, [wSpriteDecodeTable0Ptr+1]
 	jr .tableLookup
+
 .initialValue1
 	ld a, [wSpriteDecodeTable1Ptr]
 	ld l, a
@@ -542,6 +555,7 @@ ResetSpriteBufferPointers::
 	ld de, sSpriteBuffer1
 	ld hl, sSpriteBuffer2
 	jr .storeBufferPointers
+
 .buffer2Selected
 	ld de, sSpriteBuffer2
 	ld hl, sSpriteBuffer1
@@ -586,3 +600,4 @@ StoreSpriteOutputPointer::
 	ld [wSpriteOutputPtr+1], a
 	ld [wSpriteOutputPtrCached+1], a
 	ret
+

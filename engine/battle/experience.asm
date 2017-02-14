@@ -42,6 +42,7 @@ GainExperience:
 	ld [de], a
 	inc de
 	jr .nextBaseStat
+
 .maxStatExp ; if the upper byte also overflowed, then we have hit the max stat exp
 	dec a ; a is 0 from previous check
 	ld [de], a
@@ -53,6 +54,7 @@ GainExperience:
 	inc de
 	inc de
 	jr .gainStatExpLoop
+
 .statExpDone
 	xor a
 	ld [hMultiplicand], a
@@ -281,6 +283,7 @@ GainExperience:
 	ld hl, wPartyMon1
 	call AddNTimes
 	jp .partyMonLoop
+
 .done
 	ld hl, wPartyGainExpFlags
 	xor a

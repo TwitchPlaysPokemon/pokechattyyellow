@@ -17,6 +17,7 @@ CanLearnTM:
 	jr z, .TMfoundLoop
 	inc c
 	jr .findTMloop
+
 .TMfoundLoop
 	pop hl
 	ld b, FLAG_TEST

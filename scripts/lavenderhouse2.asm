@@ -20,6 +20,7 @@ LavenderHouse2Text2:
 	ld hl, LavenderHouse2Text_1d9dc
 	call PrintText
 	jr .asm_64be1
+
 .asm_65711
 	ld hl, LavenderHouse2Text_1d9e1
 	call PrintText

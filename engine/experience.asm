@@ -108,6 +108,7 @@ CalcExperience:
 	adc b
 	ld [hExperience], a
 	jr .addCubedTerm
+
 .subtractSquaredTerm
 	pop bc
 	ld a, [hExperience + 2]

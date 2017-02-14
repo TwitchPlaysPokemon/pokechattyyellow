@@ -26,6 +26,7 @@ VermilionDockScript:
 	dec a
 	ld [wJoyIgnore], a
 	ret
+
 .asm_1db8d
 	CheckEventAfterBranchReuseHL EVENT_WALKED_OUT_OF_DOCK, EVENT_STARTED_WALKING_OUT_OF_DOCK
 	ret nz

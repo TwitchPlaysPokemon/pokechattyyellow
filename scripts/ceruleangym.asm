@@ -110,10 +110,12 @@ CeruleanGymText1:
 	call z, CeruleanGymScript_5c70d
 	call DisableWaitingAfterTextDisplay
 	jr .asm_5c7bb
+
 .asm_5c785
 	ld hl, CeruleanGymText_5c7c3
 	call PrintText
 	jr .asm_5c7bb
+
 .asm_5c78d
 	ld hl, CeruleanGymText_5c7be
 	call PrintText
@@ -205,6 +207,7 @@ CeruleanGymText4:
 	ld hl, CeruleanGymText_5c82a
 	call PrintText
 	jr .asm_5c827
+
 .asm_5c821
 	ld hl, CeruleanGymText_5c82f
 	call PrintText

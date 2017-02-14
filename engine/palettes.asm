@@ -181,15 +181,19 @@ SetPal_Overworld:
 	ld a, SET_PAL_OVERWORLD
 	ld [wDefaultPaletteCommand], a
 	ret
+
 .PokemonTowerOrAgatha
 	ld a, PAL_GREYMON - 1
 	jr .town
+
 .caveOrBruno
 	ld a, PAL_CAVE - 1
 	jr .town
+
 .Lorelei
 	xor a
 	jr .town
+
 .trade_center_colosseum
 	ld a, PAL_GREYMON - 1
 	jr .town
@@ -239,6 +243,7 @@ SetPal_TrainerCard:
 	jr nz, .zeroBadgeDataLoop
 	pop bc
 	jr .nextBadge
+
 .haveBadge
 ; The player does have the badge, so skip past the badge's blk data.
 	ld a, [de]
@@ -553,6 +558,7 @@ LoadSGB:
 	ld [wOnSGB], a
 .onDMG
 	ret
+
 .onSGB
 	ld a, $1
 	ld [wOnSGB], a
@@ -650,6 +656,7 @@ CheckSGB:
 	call SendMltReq1Packet
 	and a
 	ret
+
 .isSGB
 	call SendMltReq1Packet
 	scf
@@ -673,6 +680,7 @@ CopyGfxToSuperNintendoVRAM:
 	jr z, .notCopyingTileData
 	call CopySGBBorderTiles
 	jr .next
+
 .notCopyingTileData
 	ld bc, $1000
 	call CopyData
@@ -727,6 +735,7 @@ SendSGBPackets:
 	ret z
 	call Delay3
 	ret
+
 .notGBC
 	push de
 	call SendSGBPacket
@@ -811,12 +820,14 @@ DMGPalToGBCPal::
 	ld a, [rBGP]
 	ld [wLastBGP], a
 	jr .convert
+
 .notBGP
 	dec a
 	jr nz, .notOBP0
 	ld a, [rOBP0]
 	ld [wLastOBP0], a
 	jr .convert
+
 .notOBP0
 	ld a, [rOBP1]
 	ld [wLastOBP1], a
@@ -866,6 +877,7 @@ TransferCurBGPData::
 	call TransferPalColorLCDDisabled
 	endr
 	jr .done
+
 .lcdEnabled
 	rept NUM_COLORS
 	call TransferPalColorLCDEnabled
@@ -942,6 +954,7 @@ TransferCurOBPData:
 	call TransferPalColorLCDDisabled
 	endr
 	jr .done
+
 .lcdEnabled
 	rept NUM_COLORS
 	call TransferPalColorLCDEnabled
@@ -1046,6 +1059,7 @@ TranslatePalPacketToBGMapAttributes::
 	dec c
 	jr nz, .innerLoop
 	ret
+
 .checkHighByte
 ; the low byte of pointer matched, so check the high byte
 	inc hl
@@ -1056,6 +1070,7 @@ TranslatePalPacketToBGMapAttributes::
 	dec c
 	jr nz, .loop
 	ret
+
 .foundMatchingPointer
 	callba LoadBGMapAttributes
 	ret

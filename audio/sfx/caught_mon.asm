@@ -21,7 +21,6 @@ SFX_Caught_Mon_Ch1:
 	E_ 8
 	endchannel
 
-
 SFX_Caught_Mon_Ch2:
 	executemusic
 	duty 2
@@ -42,7 +41,6 @@ SFX_Caught_Mon_Ch2:
 	notetype 6, 12, 5
 	G# 8
 	endchannel
-
 
 SFX_Caught_Mon_Ch3:
 	executemusic

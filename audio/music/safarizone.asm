@@ -38,7 +38,6 @@ Music_SafariZone_branch_bc5f::
 	C_ 4
 	endchannel
 
-
 Music_SafariZone_Ch2::
 	duty 2
 	vibrato 8, 2, 5
@@ -71,7 +70,6 @@ Music_SafariZone_branch_bc89::
 	D_ 4
 	G_ 4
 	endchannel
-
 
 Music_SafariZone_Ch3::
 	notetype 12, 1, 0

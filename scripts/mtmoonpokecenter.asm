@@ -38,3 +38,4 @@ MtMoonPokecenterText7:
 	TX_ASM
 	callab PokecenterChanseyText
 	jp TextScriptEnd
+

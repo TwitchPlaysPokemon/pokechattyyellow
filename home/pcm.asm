@@ -12,6 +12,7 @@ IF 0 == 1; DEF(MARKOV)
 	ld a, [hli]
 	ld e, a
 	jr .handleLoop
+
 .loop
 	bit 7, h
 	jr nz, .switchBank
@@ -20,8 +21,10 @@ IF 0 == 1; DEF(MARKOV)
 	ld b, a
 
 	jr .waitSixCycles1
+
 .waitSixCycles1
 	jr .waitSixCycles2
+
 .waitSixCycles2
 
 .afterSwitchBank
@@ -47,6 +50,7 @@ IF 0 == 1; DEF(MARKOV)
 	ld [MBC5RomBank], a ; 9
 	ld h, $40 ; 12
 	jr .afterSwitchBank ; 15
+
 	; +1
 ELSE
 	ld a, [hROMBank]
@@ -78,6 +82,7 @@ ELSE
 	pop af
 	rst Bankswitch
 	ret
+
 ENDC
 
 LoadNextSoundClipSample::

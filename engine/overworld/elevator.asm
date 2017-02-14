@@ -67,3 +67,4 @@ ShakeElevatorRedrawRow:
 	pop af
 	ld [hl], a
 	jp Delay3
+

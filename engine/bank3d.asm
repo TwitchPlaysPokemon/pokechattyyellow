@@ -358,6 +358,7 @@ HandleMenuInputPokemonSelectionDouble:
 	xor a
 	ld [wMenuWrappingEnabled], a ; disable menu wrapping
 	ret
+
 .keyPressed
 	xor a
 	ld [wCheckFor180DegreeTurn], a
@@ -373,6 +374,7 @@ HandleMenuInputPokemonSelectionDouble:
 	dec a
 	ld [wCurrentMenuItem], a ; move selected menu item up one space
 	jr .checkOtherKeys
+
 .checkIfDownPressed
 	bit 7, a
 	jr z, .checkOtherKeys
@@ -501,6 +503,7 @@ IsSurfingAllowed:
 	res 1, [hl]
 	ld hl, CurrentTooFastText
 	jp PrintText
+
 .forcedToRideBike
 	ld hl, wd728
 	res 1, [hl]
@@ -572,6 +575,7 @@ AddItemToInventory_:
 	ld [hli], a ; store item quantity
 	ld [hl], $ff ; store terminator
 	jp .success
+
 .increaseItemQuantity ; increase the quantity of an item already in the inventory
 	ld a, [wItemQuantity]
 	ld b, a ; b = quantity to add
@@ -590,10 +594,12 @@ AddItemToInventory_:
 	ld a, 99
 	ld [hli], a
 	jp .loop
+
 .increaseItemQuantityFailed
 	pop hl
 	and a
 	jr .done
+
 .storeNewQuantity
 	ld [hl], a
 	pop hl
@@ -660,6 +666,7 @@ RemoveItemFromInventory_:
 	jr c, .done
 	ld [wMaxMenuItem], a
 	jr .done
+
 .skipMovingUpSlots
 	pop hl
 .done
@@ -684,9 +691,11 @@ ReadSuperRodData:
 	ld de, $8
 	add hl, de
 	jr .loop
+
 .found
 	call GenerateRandomFishingEncounter
 	ret
+
 .notfound
 	ld de, $0
 	ret
@@ -710,3 +719,4 @@ GenerateRandomFishingEncounter:
 	inc hl
 	ld d, [hl]
 	ret
+

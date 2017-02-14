@@ -20,3 +20,4 @@ CopycatsHouse1FText3:
 	ld a, CHANSEY
 	call PlayCry
 	jp TextScriptEnd
+

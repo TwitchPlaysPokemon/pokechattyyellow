@@ -9,7 +9,6 @@ SFX_Cry0D_2_Ch1:
 	loopchannel 2, SFX_Cry0D_2_Ch1
 	endchannel
 
-
 SFX_Cry0D_2_Ch2:
 	dutycycle 64
 	unknownsfx0x20 4, 8, 0, 0
@@ -24,7 +23,6 @@ SFX_Cry0D_2_Ch2:
 	unknownsfx0x20 5, 242, 17, 6
 	unknownsfx0x20 4, 209, 33, 6
 	endchannel
-
 
 SFX_Cry0D_2_Ch3:
 	unknownnoise0x20 6, 210, 28

@@ -21,4 +21,3 @@ SFX_80d0d_4_Ch7:
 	unknownnoise0x20 8, 145, 73
 	endchannel
 
-

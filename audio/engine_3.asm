@@ -62,6 +62,7 @@ Audio3_7d12d:
 	cp $14
 	jr nc, .asm_7d172
 	ret
+
 .asm_7d172
 	ld a, [hl]
 	cp $14
@@ -73,6 +74,7 @@ Audio3_7d12d:
 	jr z, .asm_7d182
 	jr c, .asm_7d182
 	ret
+
 .asm_7d182
 	call InitSFXVariables
 	ld a, c
@@ -117,6 +119,7 @@ Audio3_7d192:
 	inc hl
 	inc hl
 	jr .asm_7d1b4
+
 .asm_7d1bc
 	push af
 	push hl
@@ -159,12 +162,14 @@ Audio3_7d192:
 	cp $14
 	jr nc, .asm_7d1f5
 	jr .asm_7d21f
+
 .asm_7d1f5
 	ld a, [wSoundID]
 	cp $86
 	jr z, .asm_7d21f
 	jr c, .asm_7d200
 	jr .asm_7d21f
+
 .asm_7d200
 	ld hl, wChannelSoundIDs + CH4
 	ld [hli], a

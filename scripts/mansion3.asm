@@ -22,6 +22,7 @@ Mansion3Script_52204:
 	ld bc, $507
 	call Mansion2Script_5202f
 	ret
+
 .asm_52224
 	ld a, $5f
 	ld bc, $207

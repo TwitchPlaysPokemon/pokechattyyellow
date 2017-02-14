@@ -86,6 +86,7 @@ GetBattleTransitionID_WildOrTrainer:
 	jr nc, .trainer
 	res 0, c
 	ret
+
 .trainer
 	set 0, c
 	ret
@@ -99,6 +100,7 @@ GetBattleTransitionID_CompareLevels:
 	ld de, wPartyMon2 - (wPartyMon1 + 1)
 	add hl, de
 	jr .faintedLoop
+
 .notFainted
 	ld de, wPartyMon1Level - (wPartyMon1HP + 1)
 	add hl, de
@@ -112,6 +114,7 @@ GetBattleTransitionID_CompareLevels:
 	ld a, 1
 	ld [wBattleTransitionSpiralDirection], a
 	ret
+
 .highLevelEnemy
 	set 1, c
 	xor a
@@ -134,6 +137,7 @@ GetBattleTransitionID_IsDungeonMap:
 .match
 	set 2, c
 	ret
+
 .noMatch1
 	ld hl, DungeonMaps2
 .loop2
@@ -211,6 +215,7 @@ BattleTransition_Spiral:
 	jr z, .outwardSpiral
 	call BattleTransition_InwardSpiral
 	jr .done
+
 .outwardSpiral
 	coord hl, 10, 10
 	ld a, $3
@@ -247,6 +252,7 @@ BattleTransition_InwardSpiral:
 	call BattleTransition_InwardSpiral_
 	inc c
 	jr .skip
+
 .loop
 	ld de, SCREEN_WIDTH
 	call BattleTransition_InwardSpiral_
@@ -311,6 +317,7 @@ BattleTransition_OutwardSpiral_:
 	ld a, h
 	ld [wOutwardSpiralTileMapPointer], a
 	ret
+
 .up
 	dec hl
 	ld a, [hl]
@@ -319,6 +326,7 @@ BattleTransition_OutwardSpiral_:
 	inc hl
 	add hl, bc
 	jr .keepSameDirection
+
 .left
 	add hl, de
 	ld a, [hl]
@@ -327,6 +335,7 @@ BattleTransition_OutwardSpiral_:
 	add hl, bc
 	dec hl
 	jr .keepSameDirection
+
 .down
 	inc hl
 	ld a, [hl]
@@ -335,6 +344,7 @@ BattleTransition_OutwardSpiral_:
 	dec hl
 	add hl, de
 	jr .keepSameDirection
+
 .right
 	add hl, bc
 	ld a, [hl]
@@ -343,6 +353,7 @@ BattleTransition_OutwardSpiral_:
 	add hl, de
 	inc hl
 	jr .keepSameDirection
+
 .changeDirection
 	ld [hl], $ff
 	ld a, [wOutwardSpiralCurrentDirection]
@@ -366,6 +377,7 @@ BattleTransition_FlashScreen_:
 	ld c, 2
 	call DelayFrames
 	jr .loop
+
 .done
 	dec b
 	jr nz, BattleTransition_FlashScreen_
@@ -777,6 +789,7 @@ BattleTransition_Circle_Sub3:
 	jr z, .skip1
 	inc hl
 	jr .skip2
+
 .skip1
 	dec hl
 .skip2
@@ -803,6 +816,7 @@ BattleTransition_Circle_Sub3:
 	jr z, .skip4
 	dec hl
 	jr .skip5
+
 .skip4
 	inc hl
 .skip5

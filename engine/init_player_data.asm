@@ -58,3 +58,4 @@ InitializeEmptyList:
 	dec a ; terminator
 	ld [hl], a
 	ret
+

@@ -19,7 +19,6 @@ SFX_Level_Up_Ch1:
 	F_ 8
 	endchannel
 
-
 SFX_Level_Up_Ch2:
 	executemusic
 	vibrato 4, 2, 2
@@ -38,7 +37,6 @@ SFX_Level_Up_Ch2:
 	notetype 6, 12, 4
 	A_ 8
 	endchannel
-
 
 SFX_Level_Up_Ch3:
 	executemusic

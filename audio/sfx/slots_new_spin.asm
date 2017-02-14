@@ -5,7 +5,6 @@ SFX_Slots_New_Spin_Ch1:
 	unknownsfx0x20 15, 241, 192, 7
 	endchannel
 
-
 SFX_Slots_New_Spin_Ch2:
 	duty 2
 	unknownsfx0x20 4, 193, 193, 6

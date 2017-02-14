@@ -27,16 +27,19 @@ OaksAideScript:
 	call PrintText
 	ld a, $1
 	jr .done
+
 .bagFull
 	ld hl, OaksAideNoRoomText
 	call PrintText
 	xor a
 	jr .done
+
 .notEnoughOwnedMons
 	ld hl, OaksAideUhOhText
 	call PrintText
 	ld a, $80
 	jr .done
+
 .choseNo
 	ld hl, OaksAideComeBackText
 	call PrintText

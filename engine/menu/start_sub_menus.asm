@@ -16,6 +16,7 @@ StartMenu_Pokemon:
 	ld [wUpdateSpritesEnabled], a
 	call DisplayPartyMenu
 	jr .checkIfPokemonChosen
+
 .loop
 	xor a
 	ld [wMenuItemToSwap], a
@@ -28,6 +29,7 @@ StartMenu_Pokemon:
 	call RestoreScreenTilesAndReloadTilePatterns
 	call LoadGBPal
 	jp RedisplayStartMenu
+
 .chosePokemon
 	call SaveScreenTilesToBuffer1
 	ld a, FIELD_MOVE_MON_MENU
@@ -46,6 +48,7 @@ StartMenu_Pokemon:
 	dec c
 	dec c
 	jr .adjustMenuVariablesLoop
+
 .storeMenuVariables
 	ld hl, wTopMenuItemY
 	ld a, c
@@ -84,6 +87,7 @@ StartMenu_Pokemon:
 	ld hl, wFieldMoves
 	add hl, bc
 	jp .choseOutOfBattleMove
+
 .choseSwitch
 	ld a, [wPartyCount]
 	cp 2 ; is there more than one pokemon in the party?
@@ -93,6 +97,7 @@ StartMenu_Pokemon:
 	ld [wPartyMenuTypeOrMessageID], a
 	call GoBackToPartyMenu
 	jp .checkIfPokemonChosen
+
 .choseStats
 	call ClearSprites
 	xor a ; PLAYER_PARTY_DATA
@@ -101,6 +106,7 @@ StartMenu_Pokemon:
 	predef StatusScreen2
 	call ReloadMapData
 	jp StartMenu_Pokemon
+
 .choseOutOfBattleMove
 	push hl
 	ld a, [wWhichPokemon]
@@ -119,6 +125,7 @@ StartMenu_Pokemon:
 	ld l, a
 	ld a, [wObtainedBadges] ; badges obtained
 	jp [hl]
+
 .outOfBattleMovePointers
 	dw .cut
 	dw .fly
@@ -140,6 +147,7 @@ StartMenu_Pokemon:
 	ld hl, .cannotFlyHereText
 	call PrintText
 	jp .loop
+
 .canFly
 	call ChooseFlyDestination
 	ld a, [wd732]
@@ -149,9 +157,11 @@ StartMenu_Pokemon:
 	ld hl, wd72e
 	set 1, [hl]
 	jp StartMenu_Pokemon
+
 .asm_5d4c
 	call Func_1510
 	jp .goBackToMap
+
 .cut ; 11d52 (4:5d52)
 	bit 1, a ; does the player have the Cascade Badge?
 	jp z, .newBadgeRequired
@@ -160,6 +170,7 @@ StartMenu_Pokemon:
 	and a
 	jp z, .loop
 	jp CloseTextDisplay
+
 .surf
 	bit 4, a ; does the player have the Soul Badge?
 	jp z, .newBadgeRequired
@@ -173,6 +184,7 @@ StartMenu_Pokemon:
 	jr z, .surfingPikachu
 	ld a, $1
 	jr .continue
+
 .surfingPikachu
 	ld a, $2
 .continue
@@ -186,16 +198,19 @@ StartMenu_Pokemon:
 	jr z, .reloadNormalSprite
 	call GBPalWhiteOutWithDelay3
 	jp .goBackToMap
+
 .reloadNormalSprite
 	xor a
 	ld [wd473], a
 	jp .loop
+
 .strength
 	bit 3, a ; does the player have the Rainbow Badge?
 	jp z, .newBadgeRequired
 	predef PrintStrengthTxt
 	call GBPalWhiteOutWithDelay3
 	jp .goBackToMap
+
 .flash
 	bit 0, a ; does the player have the Boulder Badge?
 	jp z, .newBadgeRequired
@@ -205,6 +220,7 @@ StartMenu_Pokemon:
 	call PrintText
 	call GBPalWhiteOutWithDelay3
 	jp .goBackToMap
+
 .flashLightsAreaText
 	TX_FAR _FlashLightsAreaText
 	db "@"
@@ -218,6 +234,7 @@ StartMenu_Pokemon:
 	jp z, .loop
 	call GBPalWhiteOutWithDelay3
 	jp .goBackToMap
+
 .teleport
 	call CheckIfInOutsideMap
 	jr z, .canTeleport
@@ -227,6 +244,7 @@ StartMenu_Pokemon:
 	ld hl, .cannotUseTeleportNowText
 	call PrintText
 	jp .loop
+
 .canTeleport
 	ld hl, .warpToLastPokemonCenterText
 	call PrintText
@@ -241,6 +259,7 @@ StartMenu_Pokemon:
 	call DelayFrames
 	call GBPalWhiteOutWithDelay3
 	jp .goBackToMap
+
 .warpToLastPokemonCenterText
 	TX_FAR _WarpToLastPokemonCenterText
 	db "@"
@@ -282,20 +301,24 @@ StartMenu_Pokemon:
 	pop af
 	ld [wPartyAndBillsPCSavedMenuItem], a
 	jp .loop
+
 .notHealthyEnough ; if current HP is less than 1/5 of max HP
 	ld hl, .notHealthyEnoughText
 	call PrintText
 	jp .loop
+
 .notHealthyEnoughText
 	TX_FAR _NotHealthyEnoughText
 	db "@"
 .goBackToMap
 	call RestoreScreenTilesAndReloadTilePatterns
 	jp CloseTextDisplay
+
 .newBadgeRequired
 	ld hl, .newBadgeRequiredText
 	call PrintText
 	jp .loop
+
 .newBadgeRequiredText
 	TX_FAR _NewBadgeRequiredText
 	db "@"
@@ -323,6 +346,7 @@ StartMenu_Item:
 	ld hl, CannotUseItemsHereText
 	call PrintText
 	jr .exitMenu
+
 .notInCableClubRoom
 	ld hl, wListPointer
 	ld [hl], wNumBagItems & $ff
@@ -343,6 +367,7 @@ StartMenu_Item:
 	call LoadTextBoxTilePatterns
 	call UpdateSprites
 	jp RedisplayStartMenu
+
 .choseItem
 ; erase menu cursor (blank each tile in front of an item name)
 	ld a, " "
@@ -379,6 +404,7 @@ StartMenu_Item:
 	bit 1, a ; was the B button pressed?
 	jr z, .useOrTossItem
 	jp ItemMenuLoop
+
 .useOrTossItem ; if the player made the choice to use or toss the item
 	ld a, [wcf91]
 	ld [wd11e], a
@@ -393,6 +419,7 @@ StartMenu_Item:
 	ld hl, CannotGetOffHereText
 	call PrintText
 	jp ItemMenuLoop
+
 .notBicycle2
 	ld a, [wCurrentMenuItem]
 	and a
@@ -413,6 +440,7 @@ StartMenu_Item:
 	jr c, .useItem_partyMenu
 	call UseItem
 	jp ItemMenuLoop
+
 .useItem_closeMenu
 	xor a
 	ld [wPseudoItemID], a
@@ -421,6 +449,7 @@ StartMenu_Item:
 	and a
 	jp z, ItemMenuLoop
 	jp CloseStartMenu
+
 .useItem_partyMenu
 	ld a, [wUpdateSpritesEnabled]
 	push af
@@ -433,10 +462,12 @@ StartMenu_Item:
 	pop af
 	ld [wUpdateSpritesEnabled], a
 	jp StartMenu_Item
+
 .partyMenuNotDisplayed
 	pop af
 	ld [wUpdateSpritesEnabled], a
 	jp ItemMenuLoop
+
 .tossItem
 	call IsKeyItem
 	ld a, [wIsKeyItem]
@@ -764,6 +795,7 @@ SwitchPartyMon_InitVarOrSwapData:
 	inc a ; [wMenuItemToSwap] counts from 1
 	ld [wMenuItemToSwap], a
 	ret
+
 .pickedMonsToSwap
 	xor a
 	ld [wPartyMenuTypeOrMessageID], a
@@ -779,6 +811,7 @@ SwitchPartyMon_InitVarOrSwapData:
 	ld [wMenuItemToSwap], a
 	ld [wPartyMenuTypeOrMessageID], a
 	ret
+
 .swappingDifferentMons
 	ld a, b
 	ld [wMenuItemToSwap], a
@@ -869,3 +902,4 @@ SwitchPartyMon_InitVarOrSwapData:
 	pop de
 	pop hl
 	ret
+

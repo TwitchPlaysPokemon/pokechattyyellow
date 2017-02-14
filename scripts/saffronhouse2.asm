@@ -17,10 +17,12 @@ SaffronHouse2Text1:
 	call PrintText
 	SetEvent EVENT_GOT_TM29
 	jr .asm_fe4e1
+
 .BagFull
 	ld hl, TM29NoRoomText
 	call PrintText
 	jr .asm_fe4e1
+
 .asm_9e72b
 	ld hl, TM29ExplanationText
 	call PrintText

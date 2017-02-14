@@ -18,6 +18,7 @@ AgathaShowOrHideExitBlock:
 	jr z, .blockExitToNextRoom
 	ld a, $e
 	jp .setExitBlock
+
 .blockExitToNextRoom
 	ld a, $3b
 

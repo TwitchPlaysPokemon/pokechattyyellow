@@ -22,7 +22,6 @@ SFX_Get_Key_Item_3_Ch1:
 	A# 8
 	endchannel
 
-
 SFX_Get_Key_Item_3_Ch2:
 	executemusic
 	vibrato 4, 2, 3
@@ -45,7 +44,6 @@ SFX_Get_Key_Item_3_Ch2:
 	octave 5
 	D# 8
 	endchannel
-
 
 SFX_Get_Key_Item_3_Ch3:
 	executemusic

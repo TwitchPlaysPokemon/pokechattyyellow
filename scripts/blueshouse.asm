@@ -32,6 +32,7 @@ BluesHouseText1:
 	ld hl, DaisyInitialText
 	call PrintText
 	jr .done
+
 .GiveMap
 	ld hl, DaisyOfferMapText
 	call PrintText
@@ -45,10 +46,12 @@ BluesHouseText1:
 	call PrintText
 	SetEvent EVENT_GOT_TOWN_MAP
 	jr .done
+
 .GotMap
 	ld hl, DaisyUseMapText
 	call PrintText
 	jr .done
+
 .BagFull
 	ld hl, DaisyBagFullText
 	call PrintText

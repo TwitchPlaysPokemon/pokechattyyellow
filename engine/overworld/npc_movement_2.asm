@@ -12,6 +12,7 @@ FreezeEnemyTrainerSprite:
 	cp b
 	ret z ; the rival leaves after battling, so don't freeze him
 	jr .loop
+
 .notRival
 	ld a, [wSpriteIndex]
 	ld [hSpriteIndexOrTextID], a

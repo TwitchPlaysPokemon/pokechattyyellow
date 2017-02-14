@@ -362,3 +362,4 @@ ViridianCityText_12:
 	TX_ASM
 	callba Func_f19f5
 	jp TextScriptEnd
+

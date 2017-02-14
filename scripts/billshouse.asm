@@ -278,3 +278,4 @@ BillsHouseText3:
 	TX_ASM
 	callba Func_f24a2
 	jp TextScriptEnd
+

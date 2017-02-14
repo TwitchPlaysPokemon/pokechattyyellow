@@ -158,6 +158,7 @@ VermilionCityText2:
 	ld hl, VermilionCityText_198a7
 	call PrintText
 	jr .asm_198a4
+
 .asm_1989e
 	ld hl, VermilionCityText_198ac
 	call PrintText
@@ -186,6 +187,7 @@ VermilionCityText3:
 	ld hl, SSAnneWelcomeText4
 	call PrintText
 	jr .asm_198fc
+
 .asm_198d0
 	ld hl, SSAnneWelcomeText9
 	call PrintText
@@ -197,12 +199,14 @@ VermilionCityText3:
 	ld hl, SSAnneNoTicketText
 	call PrintText
 	jr .asm_198fc
+
 .asm_198e9
 	ld hl, SSAnneFlashedTicketText
 	call PrintText
 	ld a, $4
 	ld [wVermilionCityCurScript], a
 	jr .asm_198fc
+
 .asm_198f6
 	ld hl, SSAnneNotHereText
 	call PrintText
@@ -284,3 +288,4 @@ VermilionCityText7:
 	TX_ASM
 	callba Func_f1a0f
 	jp TextScriptEnd
+

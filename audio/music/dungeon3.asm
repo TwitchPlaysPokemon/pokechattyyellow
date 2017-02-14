@@ -334,7 +334,6 @@ Music_Dungeon3_branch_7eafc::
 	tempo 160
 	endchannel
 
-
 Music_Dungeon3_Ch2::
 	vibrato 11, 1, 5
 	duty 3
@@ -606,7 +605,6 @@ Music_Dungeon3_branch_7eb6d::
 	D# 2
 	loopchannel 0, Music_Dungeon3_branch_7eb6d
 
-
 Music_Dungeon3_Ch3::
 	notetype 12, 1, 2
 	rest 16
@@ -708,7 +706,6 @@ Music_Dungeon3_Ch3::
 	rest 16
 	rest 10
 	loopchannel 0, Music_Dungeon3_Ch3
-
 
 Music_Dungeon3_Ch4::
 	dspeed 12

@@ -182,7 +182,6 @@ Music_GameCorner_branch_7e222::
 	G# 8
 	loopchannel 0, Music_GameCorner_branch_7e222
 
-
 Music_GameCorner_Ch2::
 	duty 2
 	vibrato 10, 2, 3
@@ -341,7 +340,6 @@ Music_GameCorner_branch_7e2fa::
 	F# 4
 	B_ 16
 	loopchannel 0, Music_GameCorner_branch_7e2fa
-
 
 Music_GameCorner_Ch3::
 	notetype 12, 1, 3

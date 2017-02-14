@@ -8,7 +8,6 @@ SFX_02_unused_Ch1:
 	unknownsfx0x20 8, 113, 132, 7
 	endchannel
 
-
 SFX_02_unused_Ch2:
 	dutycycle 5
 	unknownsfx0x20 15, 160, 65, 7
@@ -18,7 +17,6 @@ SFX_02_unused_Ch2:
 	unknownsfx0x20 10, 76, 65, 7
 	unknownsfx0x20 8, 49, 70, 7
 	endchannel
-
 
 SFX_02_unused_Ch3:
 	unknownnoise0x20 2, 242, 76

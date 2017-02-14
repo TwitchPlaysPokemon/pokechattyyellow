@@ -87,6 +87,7 @@ LoadBGMapAttributes::
 	jr nz, .checkIfHandlingPartyMenu
 	call HandleBadgeFaceAttributes
 	jr .done
+
 .checkIfHandlingPartyMenu
 	dec a
 	call z, HandlePartyHPBarAttributes
@@ -212,3 +213,4 @@ HandlePartyHPBarAttributes:
 	dec c
 	jr nz, .loop
 	ret
+

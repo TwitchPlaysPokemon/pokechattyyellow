@@ -18,6 +18,7 @@ CinnabarGymScript_75759:
 	call nz, UpdateCinnabarGymGateTileBlocks
 	ResetEvent EVENT_2A7
 	ret
+
 CinnabarGymScript_75772:
 	ld hl, Gym7CityName
 	ld de, Gym7LeaderName
@@ -64,6 +65,7 @@ CinnabarGymScript0:
 	call CinnabarGymScript_74fa3
 	ld de, MovementData_757d7
 	jr .asm_757cb
+
 .asm_757c3
 	ld a, PLAYER_DIR_RIGHT
 	ld [wPlayerMovingDirection], a
@@ -153,6 +155,7 @@ CinnabarGymScript2:
 	call PlaySound
 	call WaitForSoundToFinish
 	jr .asm_75013
+
 .asm_7500d
 	call CinnabarGymScript_75023
 	call CinnabarGymScript_75041
@@ -213,6 +216,7 @@ CinnabarGymScript3_75857:
 	call DisplayTextID
 	SetEvent EVENT_GOT_TM38
 	jr .asm_75880
+
 .BagFull
 	ld a, $c
 	ld [hSpriteIndexOrTextID], a
@@ -258,6 +262,7 @@ CinnabarGymScript_750c3:
 	jr z, .asm_758d4
 	ld a, $2
 	jr .asm_758d6
+
 .asm_758d4
 	ld a, $3
 .asm_758d6
@@ -274,10 +279,12 @@ CinnabarGymText1:
 	call z, CinnabarGymScript3_75857
 	call DisableWaitingAfterTextDisplay
 	jp TextScriptEnd
+
 .asm_3012f
 	ld hl, BlaineFireBlastText
 	call PrintText
 	jp TextScriptEnd
+
 .asm_d9332
 	ld hl, BlaineBattleText
 	call PrintText
@@ -327,6 +334,7 @@ CinnabarGymText2:
 	ld de, CinnabarGymText_75964
 	call SaveEndBattleTextPointers
 	jp CinnabarGymScript_750c3
+
 .asm_46bb4
 	ld hl, CinnabarGymText_75969
 	call PrintText
@@ -400,6 +408,7 @@ CinnabarGymText4:
 	ld de, CinnabarGymText_759ce
 	call SaveEndBattleTextPointers
 	jp CinnabarGymScript_750c3
+
 .asm_751ee
 	ld hl, CinnabarGymText_759d3
 	call PrintText
@@ -436,6 +445,7 @@ CinnabarGymText5:
 	ld de, CinnabarGymText_75a03
 	call SaveEndBattleTextPointers
 	jp CinnabarGymScript_750c3
+
 .asm_75234
 	ld hl, CinnabarGymText_75a08
 	call PrintText
@@ -472,6 +482,7 @@ CinnabarGymText6:
 	ld de, CinnabarGymText_75a38
 	call SaveEndBattleTextPointers
 	jp CinnabarGymScript_750c3
+
 .asm_776b4
 	ld hl, CinnabarGymText_75a3d
 	call PrintText
@@ -508,6 +519,7 @@ CinnabarGymText7:
 	ld de, CinnabarGymText_75a6d
 	call SaveEndBattleTextPointers
 	jp CinnabarGymScript_750c3
+
 .asm_2f755
 	ld hl, CinnabarGymText_75a72
 	call PrintText
@@ -544,6 +556,7 @@ CinnabarGymText8:
 	ld de, CinnabarGymText_75aa2
 	call SaveEndBattleTextPointers
 	jp CinnabarGymScript_750c3
+
 .asm_d87be
 	ld hl, CinnabarGymText_75aa7
 	call PrintText
@@ -565,3 +578,4 @@ CinnabarGymText9:
 	TX_ASM
 	callab Func_f2133
 	jp TextScriptEnd
+

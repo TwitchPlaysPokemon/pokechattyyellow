@@ -267,7 +267,6 @@ Music_Cities1_branch_ab8a::
 	E_ 2
 	endchannel
 
-
 Music_Cities1_Ch2::
 	vibrato 5, 1, 5
 	callchannel Music_Cities1_branch_ac00
@@ -399,7 +398,6 @@ Music_Cities1_branch_ac00::
 	G# 2
 	F# 2
 	endchannel
-
 
 Music_Cities1_Ch3::
 	notetype 12, 1, 1
@@ -577,7 +575,6 @@ Music_Cities1_branch_acce::
 	E_ 2
 	F# 2
 	endchannel
-
 
 Music_Cities1_Ch4::
 	dspeed 12

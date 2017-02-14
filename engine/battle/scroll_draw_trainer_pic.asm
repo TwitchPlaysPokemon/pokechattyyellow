@@ -48,3 +48,4 @@ DrawTrainerPicColumn:
 	pop de
 	pop hl
 	ret
+

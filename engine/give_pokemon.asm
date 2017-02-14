@@ -28,6 +28,7 @@ _GivePokemon:
 	inc hl
 	add "0"
 	jr .next
+
 .singleDigitBoxNum
 	add "1"
 .next
@@ -37,11 +38,13 @@ _GivePokemon:
 	call PrintText
 	scf
 	ret
+
 .boxFull
 	ld hl, BoxIsFullText
 	call PrintText
 	and a
 	ret
+
 .addToParty
 	call SetPokedexOwnedFlag
 	ld hl, UnknownTerminator_f6794

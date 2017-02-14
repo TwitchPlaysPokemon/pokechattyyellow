@@ -40,6 +40,7 @@ ApplyOutOfBattlePoisonDamage:
 	dec [hl]
 	inc hl
 	jr .nextMon
+
 .noBorrow
 	ld a, [hli]
 	or [hl]
@@ -84,6 +85,7 @@ ApplyOutOfBattlePoisonDamage:
 	inc [hl]
 	pop hl
 	jr .applyDamageLoop
+
 .applyDamageLoopDone
 	ld hl, wPartyMon1Status
 	ld a, [wPartyCount]
@@ -118,6 +120,7 @@ ApplyOutOfBattlePoisonDamage:
 	set 5, [hl]
 	ld a, $ff
 	jr .done
+
 .noBlackOut
 	xor a
 .done
@@ -149,3 +152,4 @@ Func_c4c7:
 	xor a
 	ld [wContextDependentPikachuEmotion], a
 	ret
+

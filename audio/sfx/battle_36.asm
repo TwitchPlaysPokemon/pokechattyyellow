@@ -19,7 +19,6 @@ SFX_Battle_36_branch_20930:
 	unknownsfx0x20 15, 241, 0, 7
 	endchannel
 
-
 SFX_Battle_36_Ch2:
 	dutycycle 179
 	unknownsfx0x20 2, 241, 129, 7
@@ -38,7 +37,6 @@ SFX_Battle_36_Ch2:
 	loopchannel 12, SFX_Battle_36_branch_20930
 	unknownsfx0x20 15, 241, 1, 7
 	endchannel
-
 
 SFX_Battle_36_Ch3:
 	unknownnoise0x20 1, 209, 73

@@ -20,7 +20,6 @@ SFX_Pokedex_Rating_1_Ch1:
 	F_ 4
 	endchannel
 
-
 SFX_Pokedex_Rating_1_Ch2:
 	executemusic
 	duty 2
@@ -42,7 +41,6 @@ SFX_Pokedex_Rating_1_Ch2:
 	G_ 4
 	F_ 4
 	endchannel
-
 
 SFX_Pokedex_Rating_1_Ch3:
 	executemusic

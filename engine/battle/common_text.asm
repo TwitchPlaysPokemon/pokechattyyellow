@@ -18,6 +18,7 @@ PrintBeginningBattleText:
 .asm_f4026
 	callab PlayPikachuSoundClip
 	jr .continue
+
 .notPikachuBattle
 	ld a, [wEnemyMonSpecies2]
 	call PlayCry
@@ -29,6 +30,7 @@ PrintBeginningBattleText:
 	ld hl, HookedMonAttackedText
 .notFishing
 	jr .wildBattle
+
 .trainerBattle
 	call .playSFX
 	ld c, 20
@@ -44,6 +46,7 @@ PrintBeginningBattleText:
 .doNotDrawPokeballs
 	call PrintText
 	jr .done
+
 .pokemonTower
 	ld b, SILPH_SCOPE
 	call IsItemInBag
@@ -56,12 +59,14 @@ PrintBeginningBattleText:
 	jr z, .noSilphScope
 	callab LoadEnemyMonData
 	jr .notPokemonTower
+
 .noSilphScope
 	ld hl, EnemyAppearedText
 	call PrintText
 	ld hl, GhostCantBeIDdText
 	call PrintText
 	jr .done
+
 .isMarowak
 	ld a, b
 	and a
@@ -83,6 +88,7 @@ PrintBeginningBattleText:
 	ld a, SFX_SILPH_SCOPE
 	call PlaySound
 	jp WaitForSoundToFinish
+
 .done
 	ret
 

@@ -69,7 +69,6 @@ Music_Dungeon2_branch_7e892::
 	rest 16
 	loopchannel 0, Music_Dungeon2_branch_7e892
 
-
 Music_Dungeon2_Ch2::
 	vibrato 11, 1, 5
 
@@ -160,7 +159,6 @@ Music_Dungeon2_branch_7e8db::
 	C_ 16
 	D_ 16
 	loopchannel 0, Music_Dungeon2_branch_7e8db
-
 
 Music_Dungeon2_Ch3::
 	notetype 12, 1, 3
@@ -300,7 +298,6 @@ Music_Dungeon2_branch_7e9d1::
 	octave 4
 	F# 4
 	endchannel
-
 
 Music_Dungeon2_Ch4::
 	dspeed 12

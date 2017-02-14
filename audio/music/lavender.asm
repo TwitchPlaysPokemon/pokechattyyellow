@@ -61,7 +61,6 @@ Music_Lavender_branch_bb6b::
 	rest 16
 	loopchannel 0, Music_Lavender_branch_bb6b
 
-
 Music_Lavender_Ch2::
 	vibrato 0, 3, 4
 	duty 3
@@ -74,7 +73,6 @@ Music_Lavender_branch_bba5::
 	B_ 4
 	F# 4
 	loopchannel 0, Music_Lavender_branch_bba5
-
 
 Music_Lavender_Ch3::
 	vibrato 4, 1, 1
@@ -184,7 +182,6 @@ Music_Lavender_branch_bbb9::
 	F# 4
 	B_ 4
 	loopchannel 0, Music_Lavender_branch_bbb9
-
 
 Music_Lavender_Ch4::
 	dspeed 12

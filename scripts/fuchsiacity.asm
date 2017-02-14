@@ -142,11 +142,13 @@ FuchsiaCityText24:
 	ld hl, FuchsiaCityText_19b2a
 	call PrintText
 	jr .asm_4343f
+
 .asm_3b4e8
 	ld hl, FuchsiaCityOmanyteText
 	call PrintText
 	ld a, OMANYTE
 	jr .asm_81556
+
 .asm_667d5
 	ld hl, FuchsiaCityKabutoText
 	call PrintText

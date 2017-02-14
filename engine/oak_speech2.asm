@@ -10,6 +10,7 @@ ChoosePlayerName:
 	; ld de, wPlayerName
 	; call OakSpeechSlidePicLeft
 	; jr .done
+
 .customName
 	ld hl, wPlayerName
 	xor a ; NAME_PLAYER_SCREEN
@@ -43,6 +44,7 @@ ChooseRivalName:
 	; ld de, wRivalName
 	; call OakSpeechSlidePicLeft
 	; jr .done
+
 .customName
 	ld hl, wRivalName
 	ld a, NAME_RIVAL_SCREEN
@@ -117,6 +119,7 @@ OakSpeechSlidePicCommon:
 	ld [hld], a
 	dec hl
 	jr .next2
+
 .slideLeft
 	ld a, [hld]
 	ld [hli], a
@@ -146,6 +149,7 @@ OakSpeechSlidePicCommon:
 	jr nz, .slideLeft2
 	inc hl
 	jr .next4
+
 .slideLeft2
 	dec hl
 .next4
@@ -218,6 +222,7 @@ GetDefaultName:
 	jr z, .foundName
 	inc c
 	jr .loop
+
 .foundName
 	ld h, d
 	ld l, e

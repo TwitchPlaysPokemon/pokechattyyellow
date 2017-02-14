@@ -127,6 +127,7 @@ DirectorText:
 	jr nc, .CompletedDex
 	ld hl, .GameDesigner
 	jr .done
+
 .CompletedDex
 	ld hl, .CompletedDexText
 	call PrintText
@@ -174,3 +175,4 @@ GameFreakSignText:
 	TX_ASM
 	callba Func_f1f17
 	jp TextScriptEnd
+

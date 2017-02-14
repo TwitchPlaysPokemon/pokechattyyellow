@@ -14,6 +14,7 @@ GetTrainerName_:
 IF DEF(MARKOV)
 	ld a, LUA_REQUEST_TRAINER_NAME
 	jp LuaRequest
+
 ELSE
 	ld [wd0b5], a
 	ld a, TRAINER_NAME
@@ -26,3 +27,4 @@ ENDC
 .foundName
 	ld hl, wTrainerName
 	jp CopyString
+

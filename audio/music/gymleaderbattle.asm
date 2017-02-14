@@ -546,7 +546,6 @@ Music_GymLeaderBattle_branch_223b0::
 	E_ 6
 	loopchannel 0, Music_GymLeaderBattle_branch_223b0
 
-
 Music_GymLeaderBattle_Ch2::
 	duty 3
 	vibrato 8, 2, 5
@@ -846,7 +845,6 @@ Music_GymLeaderBattle_branch_225e0::
 	octave 4
 	A_ 6
 	loopchannel 0, Music_GymLeaderBattle_branch_225e0
-
 
 Music_GymLeaderBattle_Ch3::
 	vibrato 0, 2, 0

@@ -68,7 +68,6 @@ Music_OaksLab_branch_7eed0::
 	G# 4
 	loopchannel 0, Music_OaksLab_branch_7eed0
 
-
 Music_OaksLab_Ch2::
 	duty 3
 	vibrato 10, 2, 5
@@ -142,7 +141,6 @@ Music_OaksLab_branch_7ef16::
 	F# 1
 	rest 1
 	loopchannel 0, Music_OaksLab_branch_7ef16
-
 
 Music_OaksLab_Ch3::
 	notetype 12, 1, 1

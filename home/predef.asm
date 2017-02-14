@@ -41,3 +41,4 @@ GetPredefRegisters::
 	ld a, [wPredefRegisters + 5]
 	ld c, a
 	ret
+

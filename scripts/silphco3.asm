@@ -46,6 +46,7 @@ SilphCo3Script_59fad:
 	jr nz, .next
 	SetEventReuseHL EVENT_SILPH_CO_3_UNLOCKED_DOOR1
 	ret
+
 .next
 	SetEventAfterBranchReuseHL EVENT_SILPH_CO_3_UNLOCKED_DOOR2, EVENT_SILPH_CO_3_UNLOCKED_DOOR1
 	ret

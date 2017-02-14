@@ -99,7 +99,6 @@ Music_YellowIntro_Ch1::
 	B_ 16
 	endchannel
 
-
 Music_YellowIntro_Ch2::
 	duty 2
 	vibrato 6, 1, 5
@@ -201,7 +200,6 @@ Music_YellowIntro_Ch2::
 	notetype 12, 12, 2
 	E_ 16
 	endchannel
-
 
 Music_YellowIntro_Ch3::
 	notetype 12, 1, 0

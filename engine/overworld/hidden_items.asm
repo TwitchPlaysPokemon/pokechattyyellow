@@ -42,6 +42,7 @@ FoundHiddenItemText:
 	call PlaySoundWaitForCurrent
 	call WaitForSoundToFinish
 	jp TextScriptEnd
+
 .bagFull
 	call WaitForTextScrollButtonPress ; wait for button press
 	xor a
@@ -94,14 +95,17 @@ HiddenCoins:
 	ld a, $10
 	ld [hCoins + 1], a
 	jr .bcdDone
+
 .bcd20
 	ld a, $20
 	ld [hCoins + 1], a
 	jr .bcdDone
+
 .bcd40 ; due to a typo, this is never used
 	ld a, $40
 	ld [hCoins + 1], a
 	jr .bcdDone
+
 .bcd100
 	ld a, $1
 	ld [hCoins], a
@@ -124,6 +128,7 @@ HiddenCoins:
 	jr nz, .roomInCoinCase
 	tx_pre_id DroppedHiddenCoinsText
 	jr .done
+
 .roomInCoinCase
 	tx_pre_id FoundHiddenCoinsText
 .done
@@ -165,8 +170,10 @@ FindHiddenItemOrCoinsIndex:
 	jr nz, .loop
 	ld a, c
 	ret
+
 .next1
 	inc hl
 .next2
 	inc hl
 	jr .loop
+

@@ -36,6 +36,7 @@ _RemovePokemon:
 	jr nz, .notRemovingLastMon ; if not, shift the pokemon below
 	ld [hl], $ff ; else, write the terminator and return
 	ret
+
 .notRemovingLastMon
 	ld d, h
 	ld e, l
@@ -67,6 +68,7 @@ _RemovePokemon:
 	add hl, bc ; get address of pokemon after the pokemon removed
 	ld bc, wBoxMonOT ; address of when to stop copying
 	jr .continue
+
 .copyUntilPartyMonOTs
 	ld bc, wPartyMon2 - wPartyMon1
 	add hl, bc ; get address of pokemon after the pokemon removed
@@ -93,3 +95,4 @@ _RemovePokemon:
 	ld bc, wBoxMonNicksEnd
 .copyUntilPartyMonNicksEnd
 	jp CopyDataUntil
+

@@ -335,6 +335,7 @@ BattleTent_Heal:
 	ld a, 8
 	ld [wBattleTentCurScript], a
 	ret
+
 .stillTehUrn
 	ld hl, wBTStreakCnt
 	inc [hl]
@@ -466,6 +467,7 @@ BattleTentGuy:
 	call RestoreScreenTilesAndReloadTilePatterns
 	call LoadGBPal
 	jr .seeya
+
 .monchosen
 	ld a, [wWhichPokemon]
 	inc a
@@ -479,6 +481,7 @@ BattleTentGuy:
 	ld a, b
 	ld [hl], a
 	jr .partymenuloop
+
 .deselfirst
 	ld a, [hli]
 	swap a
@@ -494,6 +497,7 @@ BattleTentGuy:
 	ld a, b
 	ld [hl], a
 	jr .partymenuloop
+
 .skipfirst
 	ld a, [hl]
 	swap a
@@ -508,6 +512,7 @@ BattleTentGuy:
 	or b
 	ld [hl], a
 	jr .partymenuloop
+
 .deselsecond
 	ld a, [hli]
 	and $7
@@ -520,6 +525,7 @@ BattleTentGuy:
 	xor a
 	ld [hl], a
 	jr .partymenuloop
+
 .skipsecond
 	inc hl
 	ld a, [hl]
@@ -531,10 +537,12 @@ BattleTentGuy:
 	ld hl, BattleTentNoMoreThan3
 	call PrintText
 	jp .partymenuloop
+
 .deselthird
 	xor a
 	ld [hl], a
 	jp .partymenuloop
+
 .skipthird
 	ld a, b
 	ld [hl], a
@@ -610,6 +618,7 @@ BattleTentGuy2:
 	ld [wBTStreakCnt], a
 	ld hl, BattleTentGuy2_Init
 	jr .skip2
+
 .skip
 	cp 11
 	jr nz, .skip2

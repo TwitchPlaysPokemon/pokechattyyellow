@@ -20,6 +20,7 @@ MagikarpSalesman:
 	jr nc, .enoughMoney
 	ld hl, .NoMoneyText
 	jr .printText
+
 .enoughMoney
 	lb bc, MAGIKARP, 5
 	call GivePokemon
@@ -39,9 +40,11 @@ MagikarpSalesman:
 	call DisplayTextBoxID
 	SetEvent EVENT_BOUGHT_MAGIKARP
 	jr .done
+
 .choseNo
 	ld hl, .RefuseText
 	jr .printText
+
 .alreadyBoughtMagikarp
 	ld hl, .Text2
 .printText

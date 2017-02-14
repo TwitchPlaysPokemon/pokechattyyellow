@@ -6,6 +6,7 @@ PrintWaitingText:
 	jr z, .asm_4b9a
 	call TextBoxBorder
 	jr .asm_4b9d
+
 .asm_4b9a
 	call CableClub_TextBoxBorder
 .asm_4b9d

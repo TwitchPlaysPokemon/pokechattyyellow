@@ -86,3 +86,4 @@ SilphCoElevatorText1:
 	ld hl, SilphCoElevatorWarpMaps
 	predef DisplayElevatorFloorMenu
 	jp TextScriptEnd
+

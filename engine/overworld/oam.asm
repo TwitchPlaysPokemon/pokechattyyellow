@@ -69,7 +69,6 @@ PrepareOAMData:
 	ld [hSpritePriority], a ; temp store sprite priority
 	pop de
 
-
 	call GetSpriteScreenXY
 
 	ld a, [hOAMBufferOffset]
@@ -225,6 +224,7 @@ _IsTilePassable::
 	jr nz, .loop
 	xor a
 	ret
+
 .tileNotPassable
 	scf
 	ret

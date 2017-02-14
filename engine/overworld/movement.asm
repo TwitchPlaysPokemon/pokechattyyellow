@@ -1106,3 +1106,4 @@ UpdateSpriteMovementStatus:
 	ld c, [hl]
 	ld [hl], a
 	ret
+

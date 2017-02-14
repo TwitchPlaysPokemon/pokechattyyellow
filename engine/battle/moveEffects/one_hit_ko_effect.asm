@@ -31,8 +31,10 @@ OneHitKOEffect_:
 	ld a, $2
 	ld [wCriticalHitOrOHKO], a
 	ret
+
 .userIsSlower
 ; keep damage at 0 and set move missed flag if target's current speed is higher instead
 	ld a, $1
 	ld [wMoveMissed], a
 	ret
+

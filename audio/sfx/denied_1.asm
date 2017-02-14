@@ -8,7 +8,6 @@ SFX_Denied_1_Ch1:
 	unknownsfx0x20 1, 0, 0, 0
 	endchannel
 
-
 SFX_Denied_1_Ch2:
 	duty 3
 	unknownsfx0x20 4, 240, 1, 4

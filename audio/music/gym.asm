@@ -164,7 +164,6 @@ Music_Gym_branch_bcd8::
 	A_ 2
 	loopchannel 0, Music_Gym_branch_bcd8
 
-
 Music_Gym_Ch2::
 	duty 3
 	vibrato 10, 2, 5
@@ -286,7 +285,6 @@ Music_Gym_branch_bd82::
 	D_ 1
 	E_ 12
 	loopchannel 0, Music_Gym_branch_bd82
-
 
 Music_Gym_Ch3::
 	notetype 12, 1, 1

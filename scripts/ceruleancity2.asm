@@ -14,3 +14,4 @@ CeruleanHideRocket:
 	predef HideObject
 	call GBFadeInFromBlack
 	ret
+

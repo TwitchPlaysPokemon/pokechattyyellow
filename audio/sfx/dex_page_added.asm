@@ -7,7 +7,6 @@ SFX_Dex_Page_Added_Ch1:
 	unknownsfx0x10 8
 	endchannel
 
-
 SFX_Dex_Page_Added_Ch2:
 	duty 2
 	unknownsfx0x20 15, 146, 0, 6

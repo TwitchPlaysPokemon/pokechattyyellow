@@ -25,7 +25,6 @@ Music_MeetFemaleTrainer_branch_7f70c::
 	E_ 4
 	loopchannel 0, Music_MeetFemaleTrainer_branch_7f70c
 
-
 Music_MeetFemaleTrainer_Ch2::
 	duty 2
 	notetype 12, 12, 2
@@ -69,7 +68,6 @@ Music_MeetFemaleTrainer_branch_7f726::
 	G# 2
 	A_ 2
 	loopchannel 0, Music_MeetFemaleTrainer_branch_7f726
-
 
 Music_MeetFemaleTrainer_Ch3::
 	notetype 12, 1, 0

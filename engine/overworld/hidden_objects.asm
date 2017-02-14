@@ -44,6 +44,7 @@ CheckForHiddenObject:
 	inc [hl]
 	pop hl
 	jr .hiddenObjectLoop
+
 .foundMatchingObject
 	ld a, [hli]
 	ld [wHiddenObjectFunctionArgument], a
@@ -53,6 +54,7 @@ CheckForHiddenObject:
 	ld h, [hl]
 	ld l, a
 	ret
+
 .noMatch
 	ld a, $ff
 	ld [hDidntFindAnyHiddenObject], a
@@ -72,6 +74,7 @@ CheckIfCoordsInFrontOfPlayerMatch:
 	ld a, [wYCoord]
 	inc a
 	jr .upDownCommon
+
 .facingUp
 	ld a, [wYCoord]
 	dec a
@@ -82,10 +85,12 @@ CheckIfCoordsInFrontOfPlayerMatch:
 	cp c
 	jr nz, .didNotMatch
 	jr .matched
+
 .facingLeft
 	ld a, [wXCoord]
 	dec a
 	jr .leftRightCommon
+
 .facingRight
 	ld a, [wXCoord]
 	inc a
@@ -98,6 +103,7 @@ CheckIfCoordsInFrontOfPlayerMatch:
 .matched
 	xor a
 	jr .done
+
 .didNotMatch
 	ld a, $ff
 .done

@@ -106,7 +106,6 @@ Music_SSAnne_branch_b3b2::
 	D_ 8
 	loopchannel 0, Music_SSAnne_branch_b3b2
 
-
 Music_SSAnne_Ch2::
 	duty 0
 	vibrato 12, 2, 4
@@ -280,7 +279,6 @@ Music_SSAnne_branch_b41e::
 	octave 3
 	B_ 3
 	loopchannel 0, Music_SSAnne_branch_b41e
-
 
 Music_SSAnne_Ch3::
 	notetype 12, 1, 3

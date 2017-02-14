@@ -94,7 +94,6 @@ Music_DefeatedTrainer_branch_23a76::
 	B_ 3
 	loopchannel 0, Music_DefeatedTrainer_branch_23a76
 
-
 Music_DefeatedTrainer_Ch2::
 	duty 2
 	notetype 4, 12, 3
@@ -170,7 +169,6 @@ Music_DefeatedTrainer_branch_23ad2::
 	notetype 4, 6, 7
 	E_ 12
 	loopchannel 0, Music_DefeatedTrainer_branch_23ad2
-
 
 Music_DefeatedTrainer_Ch3::
 	notetype 4, 1, 0

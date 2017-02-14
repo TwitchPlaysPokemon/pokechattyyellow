@@ -4,6 +4,7 @@ SECTION "rst 00", ROM0 [$00]
 	jr_abs $38
 SECTION "rst 08", ROM0 [$08]
 	jp FarCall_hl
+
 SECTION "rst 10", ROM0 [$10]
 	ld [hROMBank], a
 	ld [MBC5RomBank], a
@@ -11,6 +12,7 @@ SECTION "rst 10", ROM0 [$10]
 
 SECTION "rst 18", ROM0 [$18]
 	jp StackFarcall
+
 SECTION "rst 20", ROM0 [$20]
 	jr_abs $38
 SECTION "rst 28", ROM0 [$28]
@@ -27,12 +29,16 @@ SECTION "rst 38", ROM0 [$38]
 ; Hardware interrupts
 SECTION "vblank", ROM0 [$40]
 	jp VBlank
+
 SECTION "hblank", ROM0 [$48]
 	jp LCDC
+
 SECTION "timer", ROM0 [$50]
 	jp Timer
+
 SECTION "serial", ROM0 [$58]
 	jp Serial
+
 SECTION "joypad", ROM0 [$60]
 	reti
 
@@ -123,6 +129,7 @@ Start::
 	jr z, .gbc
 	xor a
 	jr .ok
+
 .gbc
 	ld a, 1
 .ok
@@ -306,6 +313,7 @@ LoadFrontSpriteByMonIndex::
 	ld a, RHYDON ; $1
 	ld [wcf91], a
 	ret
+
 .validDexNumber
 	push hl
 	ld de, vFrontPic
@@ -335,6 +343,7 @@ PlayCry::
 	jr nz, .notChatot
 	call PlayRegularChatotCry
 	jr .afterChatotCry
+
 .notChatot
 	call GetCryData
 	call PlaySound
@@ -486,6 +495,7 @@ HandlePartyMenuInput::
 	call BankswitchBack
 	and a
 	ret
+
 .asm_128f
 	pop af
 	ld hl, PartyMenuText_12cc
@@ -498,6 +508,7 @@ HandlePartyMenuInput::
 	call BankswitchBack
 	scf
 	ret
+
 .swappingPokemon
 	bit 1, b ; was the B button pressed?
 	jr z, .handleSwap ; if not, handle swapping the pokemon
@@ -508,6 +519,7 @@ HandlePartyMenuInput::
 	ld [wPartyMenuTypeOrMessageID], a
 	call RedrawPartyMenu
 	jp HandlePartyMenuInput
+
 .handleSwap
 	ld a, [wCurrentMenuItem]
 	ld [wWhichPokemon], a
@@ -634,6 +646,7 @@ GetMonHeader::
 	ld bc, MonBaseStatsEnd - MonBaseStats
 	call CopyData
 	jr .done
+
 .specialID
 	ld hl, wMonHSpriteDim
 	ld [hl], b ; write sprite dimensions
@@ -742,6 +755,7 @@ PrintBCDDigit::
 	add "0"
 	ld [hli], a
 	jp PrintLetterDelay
+
 .zeroDigit
 	bit 7, b ; either printing leading zeroes or already reached a nonzero digit?
 	jr z, .outputDigit ; if so, print a zero digit
@@ -1053,6 +1067,7 @@ FadeOutAudio::
 	ld a, $77
 	ld [rNR50], a
 	ret
+
 .fadingOut
 	ld a, [wAudioFadeOutCounter]
 	and a
@@ -1060,6 +1075,7 @@ FadeOutAudio::
 	dec a
 	ld [wAudioFadeOutCounter], a
 	ret
+
 .counterReachedZero
 	ld a, [wAudioFadeOutCounterReloadValue]
 	ld [wAudioFadeOutCounter], a
@@ -1078,6 +1094,7 @@ FadeOutAudio::
 	or c
 	ld [rNR50], a
 	ret
+
 .fadeOutComplete
 	ld a, [wAudioFadeOutControl]
 	ld b, a
@@ -1180,6 +1197,7 @@ DisplayTextID::
 	jr nz, .notVendingMachine
 	callba VendingMachineMenu ; jump banks to vending machine routine
 	jr AfterDisplayingTextID
+
 .notVendingMachine
 	cp $f7   ; prize menu
 	jp z, FuncTX_GameCornerPrizeMenu
@@ -1187,6 +1205,7 @@ DisplayTextID::
 	jr nz, .notSpecialCase
 	callab CableClubNPC
 	jr AfterDisplayingTextID
+
 .notSpecialCase
 	call PrintText_NoCreatingTextBox ; display the text
 	ld a, [wDoNotWaitForButtonPressAfterDisplayingText]
@@ -1346,6 +1365,7 @@ DisplayPikachuEmotion::
 ; ELSE
 	callab TalkToPikachu ; 3f:5004
 	jp CloseTextDisplay
+
 ; ENDC
 
 INCLUDE "engine/menu/start_menu.asm"
@@ -1427,6 +1447,7 @@ DisplayListMenuID::
 	jr nz, .specialBattleType
 	ld a, $01 ; hardcoded bank
 	jr .bankswitch
+
 .specialBattleType ; Old Man battle
 	ld a, BANK(DisplayBattleMenu)
 .bankswitch
@@ -1492,6 +1513,7 @@ DisplayListMenuIDLoop::
 	ld a, h
 	ld [wMenuCursorLocation + 1], a
 	jr .buttonAPressed
+
 .notOldManBattle
 	call LoadGBPal
 	call HandleMenuInput
@@ -1559,6 +1581,7 @@ DisplayListMenuIDLoop::
 	ld [wPredefBank], a
 	call GetName
 	jr .storeChosenEntry
+
 .pokemonList
 	ld hl, wPartyCount
 	ld a, [wListPointer]
@@ -1581,6 +1604,7 @@ DisplayListMenuIDLoop::
 	ld hl, wd730
 	res 6, [hl] ; turn on letter printing delay
 	jp BankswitchBack
+
 .checkOtherKeys ; check B, SELECT, Up, and Down keys
 	bit 1, a ; was the B button pressed?
 	jp nz, ExitListMenu ; if so, exit the menu
@@ -1599,6 +1623,7 @@ DisplayListMenuIDLoop::
 	jp c, DisplayListMenuIDLoop
 	inc [hl] ; if not, go down
 	jp DisplayListMenuIDLoop
+
 .upPressed
 	ld a, [hl]
 	and a
@@ -1629,6 +1654,7 @@ DisplayChooseQuantityMenu::
 	xor a
 	ld [wItemQuantity], a ; initialize current quantity to 0
 	jp .incrementQuantity
+
 .waitForKeyPressLoop
 	call JoypadLowSensitivity
 	ld a, [hJoyPressed] ; newly pressed buttons
@@ -1641,6 +1667,7 @@ DisplayChooseQuantityMenu::
 	bit 7, a ; was Down pressed?
 	jr nz, .decrementQuantity
 	jr .waitForKeyPressLoop
+
 .incrementQuantity
 	ld a, [wMaxItemQuantity]
 	inc a
@@ -1654,6 +1681,7 @@ DisplayChooseQuantityMenu::
 	ld a, 1
 	ld [hl], a
 	jr .handleNewQuantity
+
 .decrementQuantity
 	ld hl, wItemQuantity ; current quantity
 	dec [hl]
@@ -1713,10 +1741,12 @@ DisplayChooseQuantityMenu::
 	lb bc, LEADING_ZEROES | 1, 2 ; 1 byte, 2 digits
 	call PrintNumber
 	jp .waitForKeyPressLoop
+
 .buttonAPressed ; the player chose to make the transaction
 	xor a
 	ld [wMenuItemToSwap], a ; 0 means no item is currently being swapped
 	ret
+
 .buttonBPressed ; the player chose to cancel the transaction
 	xor a
 	ld [wMenuItemToSwap], a ; 0 means no item is currently being swapped
@@ -1792,6 +1822,7 @@ PrintListMenuEntries::
 .itemMenu
 	call GetItemName
 	jr .placeNameString
+
 .pokemonPCMenu
 	push hl
 	ld hl, wPartyCount
@@ -1811,6 +1842,7 @@ PrintListMenuEntries::
 	call GetPartyMonName
 	pop hl
 	jr .placeNameString
+
 .movesMenu
 	call GetMoveName
 .placeNameString
@@ -1929,6 +1961,7 @@ PrintListMenuEntries::
 	ld a, $ee ; down arrow
 	ld [hl], a
 	ret
+
 .printCancelMenuItem
 	ld de, ListMenuCancelText
 	jp PlaceString
@@ -2003,6 +2036,7 @@ GetMachineName::
 	ld hl, HiddenPrefix ; points to "HM"
 	ld bc, 2
 	jr .WriteMachinePrefix
+
 .WriteTM
 	ld hl, TechnicalPrefix ; points to "TM"
 	ld bc, 2
@@ -2019,6 +2053,7 @@ GetMachineName::
 	jr c, .SecondDigit
 	inc b
 	jr .FirstDigit
+
 .SecondDigit
 	add 10
 	push af
@@ -2051,6 +2086,7 @@ IsItemHM::
 	jr c, .notHM
 	cp TM_01
 	ret
+
 .notHM
 	and a
 	ret
@@ -2397,6 +2433,7 @@ ReadTrainerHeaderInfo::
 	ld a, [hl]
 	ld [wTrainerHeaderFlagBit], a  ; store flag's bit
 	jr .done
+
 .nonZeroOffset
 	cp $2
 	jr z, .readPointer ; read flag's byte ptr
@@ -2412,6 +2449,7 @@ ReadTrainerHeaderInfo::
 	ld d, [hl]
 	ld e, a
 	jr .done
+
 .readPointer
 	ld a, [hli]
 	ld h, [hl]
@@ -2439,6 +2477,7 @@ TalkToTrainer::
 	ld a, $6
 	call ReadTrainerHeaderInfo     ; print after battle text
 	jp PrintText
+
 .trainerNotYetFought
 	ld a, $4
 	call ReadTrainerHeaderInfo     ; print before battle text
@@ -2471,6 +2510,7 @@ CheckFightingMapTrainers::
 	ld [wSpriteIndex], a
 	ld [wTrainerHeaderFlagBit], a
 	ret
+
 .trainerEngaging
 	ld hl, wFlags_D733
 	set 3, [hl]
@@ -2568,6 +2608,7 @@ InitBattleEnemyParameters::
 	jr c, .noTrainer
 	ld [wTrainerNo], a
 	ret
+
 .noTrainer
 	ld [wCurEnemyLVL], a
 	ret
@@ -2699,6 +2740,7 @@ GetSavedEndBattleTextPointer::
 	ld a, [wEndBattleWinTextPointer + 1]
 	ld l, a
 	ret
+
 .lostBattle
 	ld a, [wEndBattleLoseTextPointer]
 	ld h, a
@@ -2741,6 +2783,7 @@ PlayTrainerMusic::
 	jr nz, .evilTrainerListLoop
 	ld a, MUSIC_MEET_EVIL_TRAINER
 	jr .PlaySound
+
 .noEvilTrainer
 	ld hl, FemaleTrainerList
 .femaleTrainerListLoop
@@ -2751,6 +2794,7 @@ PlayTrainerMusic::
 	jr nz, .femaleTrainerListLoop
 	ld a, MUSIC_MEET_FEMALE_TRAINER
 	jr .PlaySound
+
 .maleTrainer
 	ld a, MUSIC_MEET_MALE_TRAINER
 .PlaySound
@@ -2780,6 +2824,7 @@ DecodeArrowMovementRLE::
 	dec a
 	ld [wSimulatedJoypadStatesIndex], a
 	ret
+
 .nextArrowMovementTileEntry1
 	inc hl
 .nextArrowMovementTileEntry2
@@ -2957,6 +3002,7 @@ CheckCoords::
 	jr z, .compareXCoord
 	inc hl
 	jr .loop
+
 .compareXCoord
 	ld a, [hli]
 	cp c
@@ -2964,6 +3010,7 @@ CheckCoords::
 .inArray
 	scf
 	ret
+
 .notInArray
 	and a
 	ret
@@ -3032,6 +3079,7 @@ DecodeRLEList::
 	call FillMemory              ; write a c-times to output
 	inc de
 	jr .listLoop
+
 .endOfList
 	ld a, $ff
 	ld [hl], a                   ; write final $ff
@@ -3108,6 +3156,7 @@ GetTrainerInformation::
 	ld [de], a
 	call IsFightingJessieJames
 	jp BankswitchBack
+
 .linkBattle
 	ld hl, wTrainerPicPointer
 	ld de, RedPicFront
@@ -3272,6 +3321,7 @@ DivideBytes::
 	inc [hl]
 	dec hl
 	jr .loop
+
 .done
 	pop hl
 	ret
@@ -3290,6 +3340,7 @@ LoadFontTilePatterns::
 	ld bc, FontGraphicsEnd - FontGraphics
 	ld a, BANK(FontGraphics)
 	jp FarCopyDataDouble ; if LCD is off, transfer all at once
+
 .on
 	ld de, FontGraphics
 	ld hl, vFont
@@ -3306,6 +3357,7 @@ LoadTextBoxTilePatterns::
 	ld bc, TextBoxGraphicsEnd - TextBoxGraphics
 	ld a, BANK(TextBoxGraphics)
 	jp FarCopyData ; if LCD is off, transfer all at once
+
 .on
 	ld de, TextBoxGraphics
 	ld hl, vChars2 + $600
@@ -3322,6 +3374,7 @@ LoadHpBarAndStatusTilePatterns::
 	ld bc, HpBarAndStatusGraphicsEnd - HpBarAndStatusGraphics
 	ld a, BANK(HpBarAndStatusGraphics)
 	jp FarCopyData ; if LCD is off, transfer all at once
+
 .on
 	ld de, HpBarAndStatusGraphics
 	ld hl, vChars2 + $620
@@ -3446,6 +3499,7 @@ GetName::
 	ld e, l
 	ld d, h
 	jr .gotPtr
+
 .otherEntries
 	;2-7 = OTHER ENTRIES
 	ld a, [wPredefBank]
@@ -3531,6 +3585,7 @@ GetItemPrice::
 	ld a, [hl]
 	ld [hItemPrice], a
 	jr .done
+
 .getTMPrice
 	callbs GetMachinePrice
 .done
@@ -3584,6 +3639,7 @@ JoypadLowSensitivity::
 	ld a, 30 ; half a second delay
 	ld [hVBlankCounter], a
 	ret
+
 .noNewlyPressedButtons
 	ld a, [hVBlankCounter]
 	and a ; is the delay over?
@@ -3592,6 +3648,7 @@ JoypadLowSensitivity::
 	xor a
 	ld [hJoy5], a ; report no buttons as pressed
 	ret
+
 .delayOver
 ; if [hJoy6] = 0 and A or B is pressed, report no buttons as pressed
 	ld a, [hJoyHeld]
@@ -3650,6 +3707,7 @@ ManualTextScroll::
 	call WaitForSoundToFinish
 	ld a, SFX_PRESS_AB
 	jp PlaySound
+
 .inLinkBattle
 	ld c, 65
 	jp DelayFrames
@@ -3721,6 +3779,7 @@ PrintLetterDelay::
 	and $f
 	ld [hVBlankCounter], a
 	jr .checkButtons
+
 .waitOneFrame
 	ld a, 1
 	ld [hVBlankCounter], a
@@ -3731,12 +3790,14 @@ PrintLetterDelay::
 	bit 0, a ; is the A button pressed?
 	jr z, .checkBButton
 	jr .endWait
+
 .checkBButton
 	bit 1, a ; is the B button pressed?
 	jr z, .buttonsNotPressed
 .endWait
 	call DelayFrame
 	jr .done
+
 .buttonsNotPressed ; if neither A nor B is pressed
 	ld a, [hVBlankCounter]
 	and a
@@ -3881,21 +3942,25 @@ CalcStat::
 	add b      ; HP IV: LSB of the other 4 IVs
 	pop bc
 	jr .calcStatFromIV
+
 .getAttackIV
 	ld a, [hl]
 	swap a
 	and $f
 	jr .calcStatFromIV
+
 .getDefenseIV
 	ld a, [hl]
 	and $f
 	jr .calcStatFromIV
+
 .getSpeedIV
 	inc hl
 	ld a, [hl]
 	swap a
 	and $f
 	jr .calcStatFromIV
+
 .getSpecialIV
 	inc hl
 	ld a, [hl]
@@ -4093,6 +4158,7 @@ HandleMenuInputPokemonSelection::
 	dec a
 	jr z, .giveUpWaiting
 	jr .loop2
+
 .giveUpWaiting
 ; if a key wasn't pressed within the specified number of checks
 	pop af
@@ -4102,6 +4168,7 @@ HandleMenuInputPokemonSelection::
 	xor a
 	ld [wMenuWrappingEnabled], a ; disable menu wrapping
 	ret
+
 .keyPressed
 	xor a
 	ld [wCheckFor180DegreeTurn], a
@@ -4119,6 +4186,7 @@ HandleMenuInputPokemonSelection::
 	dec a
 	ld [wCurrentMenuItem], a ; move selected menu item up one space
 	jr .checkOtherKeys
+
 .alreadyAtTop
 	ld a, [wMenuWrappingEnabled]
 	and a ; is wrapping around enabled?
@@ -4126,6 +4194,7 @@ HandleMenuInputPokemonSelection::
 	ld a, [wMaxMenuItem]
 	ld [wCurrentMenuItem], a ; wrap to the bottom of the menu
 	jr .checkOtherKeys
+
 .checkIfDownPressed
 	bit 7, a
 	jr z, .checkOtherKeys
@@ -4169,6 +4238,7 @@ HandleMenuInputPokemonSelection::
 	ld [wMenuWrappingEnabled], a ; disable menu wrapping
 	ld a, [hJoy5]
 	ret
+
 .noWrappingAround
 	ld a, [wMenuWatchMovingOutOfBounds]
 	and a ; should we return if the user tried to go past the top or bottom?
@@ -4299,6 +4369,7 @@ HandleDownArrowBlinkTiming::
 	ld a, $06
 	ld [hDownArrowBlinkCnt2], a
 	ret
+
 .downArrowOff
 	ld a, [hDownArrowBlinkCnt1]
 	and a
@@ -4456,6 +4527,7 @@ endm
 	sub 10
 	inc c
 	jr .mod
+
 .ok
 
 	ld b, a
@@ -4465,6 +4537,7 @@ endm
 	jr nz, .past
 	call .PrintLeadingZero
 	jr .next
+
 .past
 	ld a, "0"
 	add c
@@ -4593,6 +4666,7 @@ JumpTable::
 	ld de, .returnAddress
 	push de
 	jp [hl]
+
 .returnAddress
 	pop bc
 	pop de
@@ -4735,6 +4809,7 @@ CheckForHiddenObjectOrBookshelfOrCardKeyDoor::
 	call FarJump_hl
 	ld a, [hItemAlreadyFound]
 	jr .done
+
 .hiddenObjectNotFound
 	predef GetTileAndCoordsInFrontOfPlayer
 	callba PrintBookshelfText

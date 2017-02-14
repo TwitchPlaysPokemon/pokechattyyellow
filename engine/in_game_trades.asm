@@ -133,6 +133,7 @@ InGameTrade_DoTrade:
 	and a
 	ld a, $3
 	jr .tradeSucceeded
+
 .tradeFailed
 	scf
 .tradeSucceeded

@@ -18,3 +18,4 @@ LCDC::
 .noLCDCInterrupt
 	pop af
 	reti
+

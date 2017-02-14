@@ -25,6 +25,7 @@ Mansion2Script_51fee:
 	lb bc, 11, 3
 	call Mansion2Script_5202f
 	ret
+
 .asm_52016
 	ld a, $5f
 	lb bc, 2, 4
@@ -122,6 +123,7 @@ Mansion2Text5:
 	jr z, .asm_520bf
 	ResetEventReuseHL EVENT_MANSION_SWITCH_ON
 	jr .asm_520bf
+
 .asm_520b9
 	ld hl, Mansion2Text_520cc
 	call PrintText

@@ -6,6 +6,7 @@ PrintSafariZoneBattleText:
 	dec [hl]
 	ld hl, SafariZoneEatingText
 	jr .asm_4138
+
 .asm_411e
 	dec hl
 	ld a, [hl]

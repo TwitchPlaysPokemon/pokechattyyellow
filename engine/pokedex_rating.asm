@@ -19,6 +19,7 @@ DisplayDexRating:
 	inc hl
 	inc hl
 	jr .findRating
+
 .foundRating
 	ld a, [hli]
 	ld h, [hl]
@@ -32,6 +33,7 @@ DisplayDexRating:
 	call PrintText
 	callba PlayPokedexRatingSfx
 	jp WaitForTextScrollButtonPress
+
 .hallOfFame
 	ld de, wDexRatingNumMonsSeen
 	ld a, [hDexRatingNumMonsSeen]
@@ -47,6 +49,7 @@ DisplayDexRating:
 	ld [de], a
 	inc de
 	jr .copyRatingTextLoop
+
 .doneCopying
 	ld [de], a
 	ret

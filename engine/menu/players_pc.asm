@@ -92,6 +92,7 @@ PlayerPCDeposit:
 	ld hl, NothingToDepositText
 	call PrintText
 	jp PlayerPCMenu
+
 .loop
 	ld hl, WhatToDepositText
 	call PrintText
@@ -125,6 +126,7 @@ PlayerPCDeposit:
 	ld hl, NoRoomToStoreText
 	call PrintText
 	jp .loop
+
 .roomAvailable
 	ld hl, wNumBagItems
 	call RemoveItemFromInventory
@@ -146,6 +148,7 @@ PlayerPCWithdraw:
 	ld hl, NothingStoredText
 	call PrintText
 	jp PlayerPCMenu
+
 .loop
 	ld hl, WhatToWithdrawText
 	call PrintText
@@ -179,6 +182,7 @@ PlayerPCWithdraw:
 	ld hl, CantCarryMoreText
 	call PrintText
 	jp .loop
+
 .roomAvailable
 	ld hl, wNumBoxItems
 	call RemoveItemFromInventory
@@ -200,6 +204,7 @@ PlayerPCToss:
 	ld hl, NothingStoredText
 	call PrintText
 	jp PlayerPCMenu
+
 .loop
 	ld hl, WhatToTossText
 	call PrintText

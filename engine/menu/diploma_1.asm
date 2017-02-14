@@ -15,3 +15,4 @@ DisplayDiploma:
 	call RestoreScreenTilesAndReloadTilePatterns
 	call Delay3
 	jp GBPalNormal
+

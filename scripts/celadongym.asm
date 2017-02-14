@@ -55,6 +55,7 @@ CeladonGymText_48963:
 	call DisplayTextID
 	SetEvent EVENT_GOT_TM21
 	jr .asm_4898c
+
 .BagFull
 	ld a, $b
 	ld [hSpriteIndexOrTextID], a
@@ -158,10 +159,12 @@ CeladonGymText1:
 	call z, CeladonGymText_48963
 	call DisableWaitingAfterTextDisplay
 	jr .asm_48a5b
+
 .asm_48a25
 	ld hl, CeladonGymText_48a68
 	call PrintText
 	jr .asm_48a5b
+
 .asm_48a2d
 	ld hl, CeladonGymText_48a5e
 	call PrintText

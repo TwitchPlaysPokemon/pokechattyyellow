@@ -59,6 +59,7 @@ MarkTownVisitedAndLoadMissableObjects:
 	ld [de], a                 ; write (global) missable object index
 	inc de
 	jr .writeMissableObjectsListLoop
+
 .done
 	ld a, $ff
 	ld [de], a                 ; write sentinel
@@ -173,6 +174,7 @@ MissableObjectFlagAction:
 	jr z, .shifted
 	sla d
 	jr .shift
+
 .shifted
 
 	ld a, b
@@ -210,3 +212,4 @@ MissableObjectFlagAction:
 	pop hl
 	ld c, a
 	ret
+

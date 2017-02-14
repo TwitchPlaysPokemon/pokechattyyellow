@@ -45,6 +45,7 @@ PrintCardKeyText:
 	jr nz, .notSilphCo11F
 	ld a, $3
 	jr .replaceCardKeyDoorTileBlock
+
 .notSilphCo11F
 	ld a, $e
 .replaceCardKeyDoorTileBlock
@@ -54,6 +55,7 @@ PrintCardKeyText:
 	set 5, [hl]
 	ld a, SFX_GO_INSIDE
 	jp PlaySound
+
 .noCardKey
 	tx_pre_id CardKeyFailText
 	ld [hSpriteIndexOrTextID], a
@@ -95,19 +97,23 @@ GetCoordsInFrontOfPlayer:
 ; facing down
 	inc d
 	ret
+
 .notFacingDown
 	cp SPRITE_FACING_UP
 	jr nz, .notFacingUp
 ; facing up
 	dec d
 	ret
+
 .notFacingUp
 	cp SPRITE_FACING_LEFT
 	jr nz, .notFacingLeft
 ; facing left
 	dec e
 	ret
+
 .notFacingLeft
 ; facing right
 	inc e
 	ret
+

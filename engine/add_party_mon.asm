@@ -141,6 +141,7 @@ _AddPartyMon:
 	ld [de], a         ; status ailments
 	inc de
 	jr .copyMonTypesAndMoves
+
 .copyEnemyMonData
 	ld bc, wEnemyMon1DVs - wEnemyMon1
 	add hl, bc
@@ -241,6 +242,7 @@ _AddPartyMon:
 	call CopyData          ; copy stats of cur enemy mon
 	pop hl
 	jr .done
+
 .calcFreshStats
 	pop hl
 	ld bc, wPartyMon1HPExp - 1 - wPartyMon1

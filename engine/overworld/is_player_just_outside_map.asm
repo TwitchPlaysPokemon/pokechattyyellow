@@ -14,3 +14,4 @@ IsPlayerJustOutsideMap:
 	ret z
 	inc b
 	ret
+

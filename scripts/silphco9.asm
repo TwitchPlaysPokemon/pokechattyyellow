@@ -79,6 +79,7 @@ SilphCo9Script_5d837:
 	jr z, .asm_5d854
 	inc hl
 	jr .asm_5d843
+
 .asm_5d854
 	ld a, [hli]
 	cp c
@@ -88,6 +89,7 @@ SilphCo9Script_5d837:
 	ld [hli], a
 	ld [hl], a
 	ret
+
 .asm_5d85f
 	xor a
 	ld [$ffe0], a
@@ -102,16 +104,19 @@ SilphCo9Script_5d863:
 	jr nz, .next1
 	SetEventReuseHL EVENT_SILPH_CO_9_UNLOCKED_DOOR1
 	ret
+
 .next1
 	cp $2
 	jr nz, .next2
 	SetEventAfterBranchReuseHL EVENT_SILPH_CO_9_UNLOCKED_DOOR2, EVENT_SILPH_CO_9_UNLOCKED_DOOR1
 	ret
+
 .next2
 	cp $3
 	jr nz, .next3
 	SetEventAfterBranchReuseHL EVENT_SILPH_CO_9_UNLOCKED_DOOR3, EVENT_SILPH_CO_9_UNLOCKED_DOOR1
 	ret
+
 .next3
 	cp $4
 	ret nz
@@ -172,6 +177,7 @@ SilphCo9Text1:
 	ld hl, SilphCo9Text_5d8ea
 	call PrintText
 	jr .asm_5d8e2
+
 .asm_5d8dc
 	ld hl, SilphCo9Text_5d8ef
 	call PrintText

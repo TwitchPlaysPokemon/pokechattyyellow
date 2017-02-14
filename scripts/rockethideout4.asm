@@ -54,7 +54,7 @@ RocketHideout4Script3:
 	ld a, HS_ROCKET_HIDEOUT_4_GIOVANNI
 	ld [wMissableObjectIndex], a
 	predef HideObject
-	ld a, HS_ROCKET_HIDEOUT_4_ITEM_4
+	ld a, HS_ROCKET_HIDEOUT_4_ITEM_4 ; Silph Scope
 	ld [wMissableObjectIndex], a
 	predef ShowObject
 	call UpdateSprites

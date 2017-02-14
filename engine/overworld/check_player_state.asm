@@ -21,6 +21,7 @@ IsPlayerStandingOnWarp:
 	ld hl, wd736
 	set 2, [hl] ; standing on warp flag
 	ret
+
 .nextWarp1
 	inc hl
 .nextWarp2
@@ -72,11 +73,13 @@ CheckForceBikeOrSurf:
 	ld [wWalkBikeSurfStateCopy], a
 	call ForceBikeOrSurf
 	ret
+
 .incorrectMap
 	inc hl
 .incorrectY
 	inc hl
 	jr .loop
+
 .forceSurfing
 	ld a, $2
 	ld [wWalkBikeSurfState], a
@@ -106,6 +109,7 @@ IsPlayerFacingEdgeOfMap:
 	ld de, .returnaddress
 	push de
 	jp [hl]
+
 .returnaddress
 	pop bc
 	pop de
@@ -145,9 +149,11 @@ IsPlayerFacingEdgeOfMap:
 	cp c
 	jr z, .setCarry
 	jr .resetCarry
+
 .resetCarry
 	and a
 	ret
+
 .setCarry
 	scf
 	ret
@@ -202,6 +208,7 @@ IsWarpTileInFrontOfPlayer:
 	jr nz, .notSSAnne5Warp
 	scf
 	jr .done
+
 .notSSAnne5Warp
 	and a
 	jr .done

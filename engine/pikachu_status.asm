@@ -141,6 +141,7 @@ WhichMonIsPikachu:
 	ld [wWhichPokemon], a
 	ld hl, wPartyCount + 1
 	jr .handleLoop
+
 .loop
 	push hl
 	push de
@@ -189,6 +190,7 @@ CheckPikachuLowHP::
 	ld l, [hl]
 	ld h, a
 	jr .handleLoop
+
 .shift
 	srl b
 	rr c
@@ -296,3 +298,4 @@ IsSurfingPikachuInThePlayersParty::
 	pop hl
 	and a
 	ret
+

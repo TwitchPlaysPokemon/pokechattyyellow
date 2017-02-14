@@ -16,6 +16,7 @@ CeruleanHouseTrashedText1:
 	ld hl, CeruleanHouseTrashedText_1d6b0
 	call PrintText
 	jr .asm_8dfe9
+
 .asm_f8734
 	ld hl, CeruleanHouseTrashedText_1d6ab
 	call PrintText

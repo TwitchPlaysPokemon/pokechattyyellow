@@ -124,6 +124,7 @@ HealEffect_:
 	call Bankswitch3DtoF
 	ld hl, RegainedHealthText
 	jp PrintText
+
 .failed
 	ld c, 50
 	call DelayFrames

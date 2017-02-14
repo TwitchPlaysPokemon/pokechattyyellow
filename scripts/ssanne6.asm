@@ -44,11 +44,13 @@ SSAnne6Text7:
 	jr z, .asm_93eb1
 	ld hl, SSAnne6Text_6180c
 	jr .asm_63292
+
 .asm_93eb1
 	bit 4, a
 	jr z, .asm_7436c
 	ld hl, SSAnne6Text_61811
 	jr .asm_63292
+
 .asm_7436c
 	ld hl, SSAnne6Text_61816
 .asm_63292

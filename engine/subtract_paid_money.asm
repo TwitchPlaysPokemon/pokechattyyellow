@@ -15,3 +15,4 @@ SubtractAmountPaidFromMoney_:
 	call DisplayTextBoxID ; redraw money text box
 	and a
 	ret
+

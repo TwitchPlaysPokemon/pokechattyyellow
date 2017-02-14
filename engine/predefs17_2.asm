@@ -13,3 +13,4 @@ SetPartyMonTypes:
 	ld a, [wMonHType2]
 	ld [hl], a
 	ret
+

@@ -429,3 +429,4 @@ PikachuWalksToNurseJoy:
 	db $36 ; look up
 	db $33 ; hop up left
 	db $3f ; ret
+

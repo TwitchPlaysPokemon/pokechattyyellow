@@ -39,6 +39,7 @@ Route18GateScript0:
 	ld a, $1
 	ld [wRoute18GateCurScript], a
 	ret
+
 .asm_498c6
 	ld a, $2
 	ld [wRoute18GateCurScript], a
@@ -94,6 +95,7 @@ Route18GateText1:
 	ld hl, Route18GateText_4992d
 	call PrintText
 	jr .asm_a8410
+
 .asm_3c84d
 	ld hl, Route18GateText_49928
 	call PrintText

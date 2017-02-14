@@ -230,7 +230,6 @@ DisplayTitleScreen:
 .doClearSaveDialogue ; 432a (1:432a)
 	jpba DoClearSaveDialogue
 
-
 TitleScreenCopyTileMapToVRAM:
 	ld [hBGMapAddress + 1], a
 	jp Delay3
@@ -259,6 +258,7 @@ CopyrightTextString:
 TitleScreen_PlayPikachuPCM:
 	callab PlayPikachuSoundClip
 	ret
+
 	
 DoTitleScreenFunction:
 	call .CheckTimer
@@ -293,6 +293,7 @@ DoTitleScreenFunction:
 	ld [wTitleScreenScene], a
 .Nop
 	ret
+
 	
 .BlinkOpen:
 	ld hl, .Frame1
@@ -312,6 +313,7 @@ DoTitleScreenFunction:
 	ld hl, wTitleScreenScene
 	inc [hl]
 	ret
+
 	
 .CheckTimer:
 	ld hl, wTitleScreenTimer
@@ -382,3 +384,4 @@ FillSpriteBuffer0WithAA:
 	call FillMemory
 	call CloseSRAM
 	ret
+

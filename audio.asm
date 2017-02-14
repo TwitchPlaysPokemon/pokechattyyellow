@@ -22,11 +22,7 @@ GLOBAL AUDIO_1, AUDIO_2, AUDIO_3, AUDIO_4
 GLOBAL PCM_1, PCM_2, PCM_3, PCM_4, PCM_5, PCM_6, PCM_7
 GLOBAL PCM_8, PCM_9, PCM_10, PCM_11, PCM_12, PCM_13
 
-
-
-
 INCLUDE "constants.asm"
-
 
 SECTION "Sound Effect Headers 1", ROMX, BANK[AUDIO_1]
 INCLUDE "audio/headers/sfxheaders1.asm"
@@ -464,6 +460,7 @@ PlayBattleMusic::
 	jr z, .notGymLeaderBattle
 	ld a, $ea ; MUSIC_GYM_LEADER_BATTLE
 	jr .playSong
+
 .notGymLeaderBattle
 	ld a, [wCurOpponent]
 	cp 200
@@ -474,20 +471,21 @@ PlayBattleMusic::
 	jr nz, .normalTrainerBattle
 	ld a, $ea ; MUSIC_GYM_LEADER_BATTLE ; lance also plays gym leader theme
 	jr .playSong
+
 .normalTrainerBattle
 	ld a, $ed ; MUSIC_TRAINER_BATTLE
 	jr .playSong
+
 .finalBattle
 	ld a, $f3 ; MUSIC_FINAL_BATTLE
 	jr .playSong
+
 .wildBattle
 	ld a, $f0 ; MUSIC_WILD_BATTLE
 .playSong
 	jp PlayMusic
 
-
 INCLUDE "audio/engine_1.asm"
-
 
 ; an alternate start for MeetRival which has a different first measure
 Music_RivalAlternateStart::
@@ -637,6 +635,7 @@ PlayPokedexRatingSfx::
 	inc c
 	inc hl
 	jr .getSfxPointer
+
 .gotSfxPointer
 	push bc
 	call StopAllMusic
@@ -661,7 +660,6 @@ PokedexRatingSfxPointers:
 
 OwnedMonValues:
 	db 10, 40, 60, 90, 120, 150, $ff
-
 
 INCLUDE "audio/engine_3.asm"
 
@@ -703,7 +701,6 @@ INCLUDE "audio/music/safarizone.asm"
 INCLUDE "audio/music/gym.asm"
 INCLUDE "audio/music/pokecenter.asm"
 
-
 SECTION "Music 2", ROMX, BANK[AUDIO_2]
 
 INCLUDE "audio/sfx/unused2_2.asm"
@@ -717,7 +714,6 @@ INCLUDE "audio/sfx/caught_mon.asm"
 INCLUDE "audio/music/defeatedtrainer.asm"
 INCLUDE "audio/music/defeatedwildmon.asm"
 INCLUDE "audio/music/defeatedgymleader.asm"
-
 
 SECTION "Music 3", ROMX, BANK[AUDIO_3]
 
@@ -783,7 +779,6 @@ PikachuCry4_End:
 
 	db $e0  ; unused
 
-
 SECTION "Pikachu Cries 2", ROMX,BANK[PCM_2]
 PikachuCry_Mood3Happy6::
 	dw (PikachuCry5_End - PikachuCry_Mood3Happy6) - 2 ; length of pcm data
@@ -805,7 +800,6 @@ PikachuCry7::
 PikachuCry7_End:
 
 	db $ff  ; unused
-
 
 SECTION "Pikachu Cries 3", ROMX,BANK[PCM_3]
 PikachuCry8::
@@ -829,7 +823,6 @@ PikachuCry10_End:
 
 	db $ff  ; unused
 
-
 SECTION "Pikachu Cries 4", ROMX,BANK[PCM_4]
 PikachuCry11::
 	dw (PikachuCry11_End - PikachuCry11) - 2 ; length of pcm data
@@ -851,7 +844,6 @@ PikachuCry_Mood1Happy5::
 PikachuCry13_End:
 
 	db $f0  ; unused
-
 
 SECTION "Pikachu Cries 5", ROMX,BANK[PCM_5]
 PikachuCry14::
@@ -890,7 +882,6 @@ PikachuCry22_End:
 
 	db $7e  ; unused
 
-
 SECTION "Pikachu Cries 7", ROMX,BANK[PCM_7]
 PikachuCry20::
 	dw (PikachuCry20_End - PikachuCry20) - 2 ; length of pcm data
@@ -905,7 +896,6 @@ PikachuCry21::
 PikachuCry21_End:
 
 	db $ff  ; unused
-
 
 SECTION "Pikachu Cries 8", ROMX,BANK[PCM_8]
 PikachuCry_BillFirstTime::
@@ -926,7 +916,6 @@ PikachuCry_BillGetOverShock::
 	dw (PikachuCry26_End - PikachuCry_BillGetOverShock) - 2 ; length of pcm data
 	INCBIN "audio/pikachu_cries/pikachu_cry_26.pcm"
 PikachuCry26_End:
-
 
 SECTION "Pikachu Cries 9", ROMX,BANK[PCM_9]
 PikachuCry17::
@@ -949,7 +938,6 @@ PikachuCry25::
 PikachuCry25_End:
 
 	db $03  ; unused
-
 
 SECTION "Pikachu Cries 10", ROMX,BANK[PCM_10]
 PikachuCry27::
@@ -985,7 +973,6 @@ PikachuCry_Mood2Happy2::
 	INCBIN "audio/pikachu_cries/pikachu_cry_31.pcm"
 PikachuCry31_End:
 
-
 SECTION "Pikachu Cries 11", ROMX,BANK[PCM_11]
 PikachuCry32::
 	dw (PikachuCry32_End - PikachuCry32) - 2 ; length of pcm data
@@ -1015,7 +1002,6 @@ PikachuCry41_End:
 
 	db $9b  ; unused
 
-
 SECTION "Pikachu Cries 12", ROMX,BANK[PCM_12]
 PikachuCry_Mood3Happy5::
 	dw (PikachuCry35_End - PikachuCry_Mood3Happy5) - 2 ; length of pcm data
@@ -1037,7 +1023,6 @@ PikachuCry_Mood3Happy3::
 PikachuCry39_End:
 
 	db $0f  ; unused
-
 
 SECTION "Pikachu Cries 13", ROMX,BANK[PCM_13]
 PikachuCry_FastAsleep::

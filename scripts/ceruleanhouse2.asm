@@ -44,6 +44,7 @@ CeruleanHouse2Text1:
 	ld l, a
 	call PrintText
 	jr .asm_74e23
+
 .asm_74e60
 	xor a
 	ld [wListScrollOffset], a

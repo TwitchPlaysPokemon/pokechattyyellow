@@ -41,6 +41,7 @@ PewterGuys:
 	inc a
 	ld [wSimulatedJoypadStatesIndex], a
 	jr .copyMovementDataLoop
+
 .nextEntry1
 	inc hl
 .nextEntry2

@@ -76,7 +76,6 @@ Music_Routes3_branch_9fc3::
 	G_ 12
 	loopchannel 0, Music_Routes3_branch_9fc3
 
-
 Music_Routes3_Ch2::
 	vibrato 8, 2, 3
 	duty 2
@@ -176,7 +175,6 @@ Music_Routes3_branch_a01a::
 	A_ 8
 	B_ 8
 	loopchannel 0, Music_Routes3_branch_a01a
-
 
 Music_Routes3_Ch3::
 	vibrato 4, 1, 0
@@ -352,7 +350,6 @@ Music_Routes3_branch_a0a3::
 	rest 1
 	A_ 4
 	loopchannel 0, Music_Routes3_branch_a0a3
-
 
 Music_Routes3_Ch4::
 	dspeed 6

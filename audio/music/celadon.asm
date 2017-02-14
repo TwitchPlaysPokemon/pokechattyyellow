@@ -106,7 +106,6 @@ Music_Celadon_branch_b6d4::
 	A_ 4
 	loopchannel 0, Music_Celadon_branch_b6d4
 
-
 Music_Celadon_Ch2::
 	duty 3
 	notetype 12, 12, 2
@@ -224,7 +223,6 @@ Music_Celadon_branch_b74a::
 	E_ 2
 	D_ 8
 	loopchannel 0, Music_Celadon_branch_b74a
-
 
 Music_Celadon_Ch3::
 	notetype 12, 1, 3

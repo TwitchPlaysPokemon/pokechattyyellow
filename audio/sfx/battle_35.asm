@@ -12,7 +12,6 @@ SFX_Battle_35_Ch1:
 	G# 8
 	endchannel
 
-
 SFX_Battle_35_Ch2:
 	executemusic
 	vibrato 10, 2, 3

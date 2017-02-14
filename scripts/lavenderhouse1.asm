@@ -17,6 +17,7 @@ LavenderHouse1Text1:
 	ld hl, LavenderHouse1Text_1d8d1
 	call PrintText
 	jr .asm_6957f
+
 .asm_72e5d
 	ld hl, LavenderHouse1Text_1d8d6
 	call PrintText
@@ -38,6 +39,7 @@ LavenderHouse1Text2:
 	ld hl, LavenderHouse1Text_1d8f4
 	call PrintText
 	jr .asm_3d208
+
 .asm_06470
 	ld hl, LavenderHouse1Text_1d8f9
 	call PrintText
@@ -79,10 +81,12 @@ LavenderHouse1Text5:
 	call PrintText
 	SetEvent EVENT_GOT_POKE_FLUTE
 	jr .asm_da749
+
 .BagFull
 	ld hl, FluteNoRoomText
 	call PrintText
 	jr .asm_da749
+
 .asm_15ac2
 	ld hl, MrFujiAfterFluteText
 	call PrintText

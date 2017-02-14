@@ -18,6 +18,7 @@ SurfinDudeText:
 	ld hl, .SurfinDudeText4
 	call PrintText
 	jr .done
+
 .next
 	ld hl, wd492
 	bit 0, [hl]
@@ -25,6 +26,7 @@ SurfinDudeText:
 	jr nz, .next2
 	ld hl, .SurfinDudeText1
 	jr .next3
+
 .next2
 	ld hl, .SurfinDudeText3
 .next3

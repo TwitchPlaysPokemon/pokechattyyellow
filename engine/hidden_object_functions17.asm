@@ -162,6 +162,7 @@ LinkCableHelp:
 	ld l, a
 	call PrintText
 	jp .linkHelpLoop
+
 .exit
 	ld hl, wd730
 	res 6, [hl]
@@ -245,6 +246,7 @@ ViridianSchoolBlackboard:
 	ld a, 3 ; in the the right column, use an offset to prevent overlap
 	ld [wMenuItemOffset], a
 	jr .blackboardLoop
+
 .didNotPressRight
 	bit 5, a ; pressed left
 	jr z, .didNotPressLeftOrRight
@@ -258,6 +260,7 @@ ViridianSchoolBlackboard:
 	xor a
 	ld [wMenuItemOffset], a
 	jr .blackboardLoop
+
 .didNotPressLeftOrRight
 	ld a, [wCurrentMenuItem]
 	ld b, a
@@ -279,6 +282,7 @@ ViridianSchoolBlackboard:
 	ld l, a
 	call PrintText
 	jp .blackboardLoop
+
 .exitBlackboard
 	ld hl, wd730
 	res 6, [hl]
@@ -465,3 +469,4 @@ VermilionGymTrashFailText:
 	call PlaySound
 	call WaitForSoundToFinish
 	jp TextScriptEnd
+

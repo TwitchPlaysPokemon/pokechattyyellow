@@ -1,7 +1,10 @@
 GymStatues:
 ; if in a gym and have the corresponding badge, a = GymStatueText2_id and jp PrintPredefTextID
+
 ; if in a gym and don’t have the corresponding badge, a = GymStatueText1_id and jp PrintPredefTextID
+
 ; else ret
+
 	call EnableAutoTextBoxDrawing
 	ld a, [wPlayerFacingDirection]
 	cp SPRITE_FACING_UP
@@ -17,6 +20,7 @@ GymStatues:
 	jr z, .match
 	inc hl
 	jr .loop
+
 .match
 	ld b, [hl]
 	ld a, [wBeatGymFlags]
@@ -61,6 +65,7 @@ PrintBenchGuyText:
 	inc hl
 	inc hl
 	jr .loop
+
 .match
 	ld a, [hli]
 	ld b, a
@@ -165,6 +170,7 @@ SaffronCityPokecenterBenchGuyText:
 ; .asm_624f2
 	; call PrintText
 	; jp TextScriptEnd
+
 	
 	TX_MARKOV SaffronCityPokecenterBenchGuyText1
 	db "@"

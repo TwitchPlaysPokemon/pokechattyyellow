@@ -15,7 +15,6 @@ SFX_Get_Item1_3_Ch1:
 	E_ 4
 	endchannel
 
-
 SFX_Get_Item1_3_Ch2:
 	executemusic
 	vibrato 8, 2, 7
@@ -28,7 +27,6 @@ SFX_Get_Item1_3_Ch2:
 	notetype 12, 12, 3
 	B_ 4
 	endchannel
-
 
 SFX_Get_Item1_3_Ch3:
 	executemusic

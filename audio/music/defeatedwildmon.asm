@@ -76,7 +76,6 @@ Music_DefeatedWildMon_branch_23b8b::
 	A_ 8
 	loopchannel 0, Music_DefeatedWildMon_branch_23b8b
 
-
 Music_DefeatedWildMon2_Ch2::
 	executemusic
 	duty 2
@@ -155,7 +154,6 @@ Music_DefeatedWildMon_branch_23bce::
 	D_ 4
 	C_ 8
 	loopchannel 0, Music_DefeatedWildMon_branch_23bce
-
 
 Music_DefeatedWildMon2_Ch3::
 	executemusic

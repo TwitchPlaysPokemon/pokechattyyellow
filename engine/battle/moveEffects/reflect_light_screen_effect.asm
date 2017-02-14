@@ -15,6 +15,7 @@ ReflectLightScreenEffect_:
 	set HasLightScreenUp, [hl] ; mon is now protected by light screen
 	ld hl, LightScreenProtectedText
 	jr .playAnim
+
 .reflect
 	bit HasReflectUp, [hl] ; is mon already protected by reflect?
 	jr nz, .moveFailed
@@ -26,6 +27,7 @@ ReflectLightScreenEffect_:
 	call Bankswitch3DtoF
 	pop hl
 	jp PrintText
+
 .moveFailed
 	ld c, 50
 	call DelayFrames
@@ -43,3 +45,4 @@ ReflectGainedArmorText:
 Bankswitch3DtoF:
 	ld a, BANK(BattleCore)
 	jp FarCall_hl
+

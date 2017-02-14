@@ -69,6 +69,7 @@ AnimateHallOfFame:
 	pop bc
 	pop hl
 	jr .partyMonLoop
+
 .doneShowingParty
 	ld a, c
 	inc a
@@ -110,6 +111,7 @@ HoFShowMonOrPlayer:
 ; show player
 	call HoFLoadPlayerPics
 	jr .next1
+
 .showMon
 	coord hl, 12, 5
 	call GetMonHeader
@@ -161,6 +163,7 @@ HoFDisplayAndRecordMonInfo:
 	ldpikacry e, PikachuCry_Mood3Happy5
 	callab PlayPikachuSoundClip
 	jr .asm_7033c
+
 .asm_70336
 	ld a, [wHoFMonSpecies]
 	call PlayCry
@@ -301,3 +304,4 @@ HoFFadeOutScreenAndMusic:
 	ld a, $ff
 	ld [wAudioFadeOutControl], a
 	jp GBFadeOutToWhite
+

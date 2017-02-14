@@ -37,7 +37,6 @@ Music_CinnabarMansion_branch_7ed19::
 	B_ 2
 	loopchannel 0, Music_CinnabarMansion_branch_7ed19
 
-
 Music_CinnabarMansion_Ch2::
 	duty 2
 	toggleperfectpitch
@@ -94,7 +93,6 @@ Music_CinnabarMansion_branch_7ed6c::
 	A# 4
 	endchannel
 
-
 Music_CinnabarMansion_Ch3::
 	notetype 12, 1, 1
 
@@ -141,7 +139,6 @@ Music_CinnabarMansion_branch_7ed80::
 	G# 8
 	D# 8
 	loopchannel 0, Music_CinnabarMansion_branch_7ed80
-
 
 Music_CinnabarMansion_Ch4::
 	dspeed 6

@@ -42,9 +42,11 @@ GiveFossilToCinnabarLab:
 	jr z, .choseHelixFossil
 	ld b, AERODACTYL
 	jr .fossilSelected
+
 .choseHelixFossil
 	ld b, OMANYTE
 	jr .fossilSelected
+
 .choseDomeFossil
 	ld b, KABUTO
 .fossilSelected
@@ -67,6 +69,7 @@ GiveFossilToCinnabarLab:
 	call PrintText
 	SetEvents EVENT_GAVE_FOSSIL_TO_LAB, EVENT_LAB_STILL_REVIVING_FOSSIL
 	ret
+
 .cancelledGivingFossil
 	ld hl, LabFossil_610bd
 	call PrintText
@@ -121,3 +124,4 @@ LoadFossilItemAndMonName:
 	ld [wd11e], a
 	call GetItemName
 	ret
+

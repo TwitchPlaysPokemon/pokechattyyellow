@@ -61,6 +61,7 @@ ReadTrainer:
 	call AddPartyMon
 	pop hl
 	jr .LoopTrainerData
+
 .SpecialTrainer
 ; if this code is being run:
 ; - each pokemon has a specific level
@@ -78,6 +79,7 @@ ReadTrainer:
 	call AddPartyMon
 	pop hl
 	jr .SpecialTrainer
+
 .AddAdditionalMoveData
 ; does the trainer have additional move data?
 	ld a, [wTrainerClass]
@@ -119,11 +121,13 @@ ReadTrainer:
 	inc de
 	ld [hl], a
 	jr .writeAdditionalMoveDataLoop
+
 .asm_39c46
 	ld a, [hli]
 	and a
 	jr nz, .asm_39c46
 	jr .loopAdditionalMoveData
+
 .FinishUp
 ; clear wAmountMoneyWon addresses
 	xor a
@@ -147,3 +151,4 @@ ReadTrainer:
 	dec b
 	jr nz, .LastLoop ; repeat wCurEnemyLVL times
 	ret
+

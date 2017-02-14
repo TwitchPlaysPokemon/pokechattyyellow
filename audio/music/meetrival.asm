@@ -142,7 +142,6 @@ Music_MeetRival_branch_b1a5::
 	A_ 2
 	loopchannel 0, Music_MeetRival_branch_b140
 
-
 Music_MeetRival_Ch2::
 	duty 3
 	vibrato 10, 2, 6
@@ -246,7 +245,6 @@ Music_MeetRival_branch_b21d::
 	F_ 2
 	F# 2
 	loopchannel 0, Music_MeetRival_branch_b1d8
-
 
 Music_MeetRival_Ch3::
 	notetype 12, 1, 4

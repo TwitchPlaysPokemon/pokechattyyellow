@@ -33,10 +33,12 @@ CopycatsHouse2FText1:
 	callba RemoveItemByID
 	SetEvent EVENT_GOT_TM31
 	jr .asm_62ecd
+
 .BagFull
 	ld hl, TM31NoRoomText
 	call PrintText
 	jr .asm_62ecd
+
 .asm_7ccf3
 	ld hl, TM31ExplanationText2
 	call PrintText

@@ -21,10 +21,12 @@ Lab3Text1:
 	call PrintText
 	SetEvent EVENT_GOT_TM35
 	jr .asm_eb896
+
 .BagFull
 	ld hl, TM35NoRoomText
 	call PrintText
 	jr .asm_eb896
+
 .asm_e551a
 	ld hl, TM35ExplanationText
 	call PrintText

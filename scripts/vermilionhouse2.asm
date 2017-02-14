@@ -22,12 +22,15 @@ VermilionHouse2Text1:
 	set 3, [hl]
 	ld hl, VermilionHouse2Text_560b6
 	jr .asm_5dd95
+
 .BagFull
 	ld hl, VermilionHouse2Text_560ca
 	jr .asm_5dd95
+
 .asm_eb1b7
 	ld hl, VermilionHouse2Text_560c0
 	jr .asm_5dd95
+
 .asm_03ef5
 	ld hl, VermilionHouse2Text_560c5
 .asm_5dd95

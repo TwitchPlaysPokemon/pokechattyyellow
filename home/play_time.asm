@@ -52,6 +52,7 @@ CountDownIgnoreInputBitReset:
 	jr nz, .asm_1f5e
 	ld a, $ff
 	jr .asm_1f5f
+
 .asm_1f5e
 	dec a
 .asm_1f5f
@@ -69,3 +70,4 @@ CountDownIgnoreInputBitReset:
 	ld [hJoyPressed], a
 	ld [hJoyHeld], a
 	ret
+

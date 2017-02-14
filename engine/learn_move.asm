@@ -175,14 +175,17 @@ TryingToLearn:
 	add hl, bc
 	and a
 	ret
+
 .hm
 	ld hl, HMCantDeleteText
 	call PrintText
 	pop hl
 	jr .loop
+
 .cancel
 	scf
 	ret
+
 .chatter
 	ld hl, CantDeleteChatterText
 	call PrintText

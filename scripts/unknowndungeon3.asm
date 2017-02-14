@@ -44,3 +44,4 @@ MewtwoBattleText:
 	call PlayCry
 	call WaitForSoundToFinish
 	jp TextScriptEnd
+

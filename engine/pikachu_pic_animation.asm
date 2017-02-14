@@ -21,6 +21,7 @@ GetPikaPicAnimationScriptIndex:
 	; jr nc, .got_animation
 	; add hl, bc
 	; jr .get_happiness_param
+
 	jr c, .get_happiness_param
 
 ; .got_animation
@@ -752,6 +753,7 @@ CheckIfThereIsRoomForPikaPicAnimGFX:
 .failed
 	scf
 .pop_ret
+
 	pop hl
 	pop bc
 	ret
@@ -776,6 +778,7 @@ LookUpTileOffsetForCurrentPikaPicAnimGFX:
 	ld a, [hl]
 	and a
 .pop_ret
+
 	pop hl
 	pop bc
 	ret

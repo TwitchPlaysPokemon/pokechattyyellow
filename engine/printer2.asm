@@ -160,6 +160,7 @@ Printer_GetMonStats:
 .place_string
 	call PlaceString
 	ret
+
 ; ea52f
 
 .OT:

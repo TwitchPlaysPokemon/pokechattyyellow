@@ -31,10 +31,12 @@ SSAnne7Text1:
 	ld hl, wd72d
 	res 5, [hl]
 	jr .asm_0faf5
+
 .BagFull
 	ld hl, HM01NoRoomText
 	call PrintText
 	jr .asm_0faf5
+
 .asm_797c4
 	ld hl, SSAnne7Text_61932
 	call PrintText

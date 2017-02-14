@@ -30,6 +30,7 @@ CeladonMartRoofScript_GetDrinksInBag:
 	inc [hl]
 	pop hl
 	jr .loop
+
 .done
 	ld a, $ff
 	ld [de], a
@@ -98,6 +99,7 @@ CeladonMartRoofScript_GiveDrinkToGirl:
 	call PrintText
 	SetEvent EVENT_GOT_TM49
 	ret
+
 .gaveSodaPop
 	CheckEvent EVENT_GOT_TM48
 	jr nz, .alreadyGaveDrink
@@ -111,6 +113,7 @@ CeladonMartRoofScript_GiveDrinkToGirl:
 	call PrintText
 	SetEvent EVENT_GOT_TM48
 	ret
+
 .gaveFreshWater
 	CheckEvent EVENT_GOT_TM13
 	jr nz, .alreadyGaveDrink
@@ -124,10 +127,12 @@ CeladonMartRoofScript_GiveDrinkToGirl:
 	call PrintText
 	SetEvent EVENT_GOT_TM13
 	ret
+
 .bagFull
 	ld hl, CeladonMartRoofText_48526
 	call PrintText
 	ret
+
 .alreadyGaveDrink
 	ld hl, CeladonMartRoofText_4852c
 	call PrintText
@@ -237,6 +242,7 @@ CeladonMartRoofText2:
 	jr nz, .done
 	call CeladonMartRoofScript_GiveDrinkToGirl
 	jr .done
+
 .noDrinksInBag
 	ld hl, CeladonMartRoofText3
 	call PrintText

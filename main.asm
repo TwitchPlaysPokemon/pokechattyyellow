@@ -14,7 +14,6 @@ PICS_5 EQU $D
 
 INCLUDE "home.asm"
 
-
 SECTION "bank01", ROMX,BANK[$01]
 
 INCLUDE "data/facing.asm"
@@ -66,7 +65,6 @@ INCLUDE "engine/menu/players_pc.asm"
 INCLUDE "engine/remove_pokemon.asm"
 INCLUDE "engine/display_pokedex.asm"
 
-
 SECTION "bank03", ROMX,BANK[$03]
 
 INCLUDE "engine/joypad.asm"
@@ -108,7 +106,6 @@ INCLUDE "engine/overworld/npc_pathfinding.asm"
 INCLUDE "engine/hp_bar.asm"
 INCLUDE "engine/hidden_object_functions3.asm"
 
-
 SECTION "Graphics", ROMX, BANK[GFX]
 
 PokemonLogoJapan:               INCBIN "gfx/pokemon_logo_japan.2bpp"
@@ -143,7 +140,6 @@ ShrinkPic2:  INCBIN "pic/trainer/shrink2.pic"
 
 INCLUDE "engine/menu/start_sub_menus.asm"
 INCLUDE "engine/items/tms.asm"
-
 
 SECTION "NPC Sprites 1", ROMX, BANK[NPC_SPRITES_1]
 
@@ -181,7 +177,6 @@ INCLUDE "engine/battle/wild_encounters.asm"
 INCLUDE "engine/battle/moveEffects/recoil_effect.asm"
 INCLUDE "engine/battle/moveEffects/conversion_effect.asm"
 INCLUDE "engine/battle/moveEffects/haze_effect.asm"
-
 
 SECTION "NPC Sprites 2", ROMX, BANK[NPC_SPRITES_2]
 
@@ -232,7 +227,6 @@ SeelSprite:           INCBIN "gfx/sprites/seel.2bpp"
 INCLUDE "engine/battle/moveEffects/substitute_effect.asm"
 INCLUDE "engine/menu/pc.asm"
 
-
 SECTION "bank06", ROMX,BANK[$06]
 
 INCLUDE "data/mapHeaders/celadoncity.asm"
@@ -261,7 +255,6 @@ VermilionCityBlocks: INCBIN "maps/vermilioncity.blk"
 INCLUDE "data/mapHeaders/fuchsiacity.asm"
 INCLUDE "data/mapObjects/fuchsiacity.asm"
 FuchsiaCityBlocks: INCBIN "maps/fuchsiacity.blk"
-
 
 INCLUDE "scripts/pallettown.asm"
 INCLUDE "scripts/viridiancity.asm"
@@ -304,7 +297,6 @@ SilphCo6Blocks: INCBIN "maps/silphco6.blk"
 INCLUDE "engine/overworld/npc_movement.asm"
 INCLUDE "engine/overworld/doors.asm"
 INCLUDE "engine/overworld/ledges.asm"
-
 
 SECTION "bank07", ROMX,BANK[$07]
 
@@ -478,7 +470,6 @@ INCLUDE "engine/menu/oaks_pc.asm"
 
 INCLUDE "engine/hidden_object_functions7.asm"
 
-
 SECTION "Pics 1", ROMX, BANK[PICS_1]
 
 RhydonPicFront:      INCBIN "pic/ymon/rhydon.pic"
@@ -616,7 +607,6 @@ ChatotPicBack:       INCBIN "pic/monback/chatotb.pic" ; FIXME
 INCLUDE "engine/predefsA.asm"
 INCLUDE "engine/battle/moveEffects/leech_seed_effect.asm"
 
-
 SECTION "Pics 3", ROMX, BANK[PICS_3]
 
 ArticunoPicFront:    INCBIN "pic/ymon/articuno.pic"
@@ -703,7 +693,6 @@ Func_2fd6a:
 INCLUDE "engine/battle/scale_sprites.asm"
 INCLUDE "engine/game_corner_slots2.asm"
 
-
 SECTION "Pics 4", ROMX, BANK[PICS_4]
 
 DodrioPicFront:       INCBIN "pic/ymon/dodrio.pic"
@@ -764,7 +753,6 @@ PidgeotPicFront:      INCBIN "pic/ymon/pidgeot.pic"
 PidgeotPicBack:       INCBIN "pic/monback/pidgeotb.pic"
 StarmiePicFront:      INCBIN "pic/ymon/starmie.pic"
 StarmiePicBack:       INCBIN "pic/monback/starmieb.pic"
-
 
 SECTION "Pics 5", ROMX, BANK[PICS_5]
 
@@ -854,7 +842,6 @@ TradingAnimationGraphics2End:
 SECTION "bank0F", ROMX,BANK[$0F]
 
 INCLUDE "engine/battle/core.asm"
-
 
 SECTION "bank10", ROMX,BANK[$10]
 
@@ -1014,7 +1001,6 @@ INCLUDE "data/mapObjects/seafoamislands5.asm"
 SeafoamIslands5Blocks: INCBIN "maps/seafoamislands5.blk"
 
 INCLUDE "engine/overworld/dungeon_warps.asm"
-
 
 SECTION "bank12", ROMX,BANK[$12]
 
@@ -1189,7 +1175,6 @@ INCLUDE "scripts/safarizonesecrethouse.asm"
 INCLUDE "data/mapObjects/safarizonesecrethouse.asm"
 SafariZoneSecretHouseBlocks: INCBIN "maps/safarizonesecrethouse.blk"
 
-
 SECTION "bank13", ROMX,BANK[$13]
 
 TrainerPics:
@@ -1254,7 +1239,6 @@ INCLUDE "data/mapHeaders/colosseum.asm"
 INCLUDE "scripts/colosseum.asm"
 INCLUDE "data/mapObjects/colosseum.asm"
 ColosseumBlocks: INCBIN "maps/colosseum.blk"
-
 
 SECTION "bank14", ROMX,BANK[$14]
 
@@ -1328,7 +1312,6 @@ INCLUDE "engine/overworld/card_key.asm"
 INCLUDE "engine/menu/prize_menu.asm"
 
 INCLUDE "engine/hidden_object_functions14.asm"
-
 
 SECTION "bank15", ROMX,BANK[$15]
 
@@ -1420,7 +1403,6 @@ INCLUDE "engine/menu/diploma_1.asm"
 
 INCLUDE "engine/overworld/trainers.asm"
 
-
 SECTION "bank16", ROMX,BANK[$16]
 
 INCLUDE "data/mapHeaders/route6.asm"
@@ -1503,7 +1485,6 @@ INCLUDE "data/mapObjects/halloffameroom.asm"
 HallofFameRoomBlocks: INCBIN "maps/halloffameroom.blk"
 
 INCLUDE "engine/overworld/saffron_guards.asm"
-
 
 SECTION "bank17", ROMX,BANK[$17]
 
@@ -1656,7 +1637,6 @@ INCLUDE "engine/predefs17_2.asm"
 
 INCLUDE "engine/hidden_object_functions17.asm"
 
-
 SECTION "bank18", ROMX,BANK[$18]
 
 ViridianForestBlocks: INCBIN "maps/viridianforest.blk"
@@ -1774,7 +1754,6 @@ SilphCo11Blocks: INCBIN "maps/silphco11.blk"
 
 INCLUDE "engine/hidden_object_functions18.asm"
 
-
 SECTION "bank19", ROMX,BANK[$19]
 
 Overworld_GFX:     INCBIN "gfx/tilesets/overworld.2bpp"
@@ -1793,7 +1772,6 @@ Interior_GFX:      INCBIN "gfx/tilesets/interior.t1.2bpp"
 Interior_Block:    INCBIN "gfx/blocksets/interior.bst"
 Plateau_GFX:       INCBIN "gfx/tilesets/plateau.t10.2bpp"
 Plateau_Block:     INCBIN "gfx/blocksets/plateau.bst"
-
 
 SECTION "bank1A", ROMX,BANK[$1A]
 
@@ -1818,7 +1796,6 @@ Forest_Block:      INCBIN "gfx/blocksets/forest.bst"
 Facility_GFX:      INCBIN "gfx/tilesets/facility.2bpp"
 Facility_Block:    INCBIN "gfx/blocksets/facility.bst"
 
-
 SECTION "bank1B", ROMX,BANK[$1B]
 
 Cemetery_GFX:      INCBIN "gfx/tilesets/cemetery.t4.2bpp"
@@ -1836,7 +1813,6 @@ Club_Block:        INCBIN "gfx/blocksets/club.bst"
 Underground_GFX:   INCBIN "gfx/tilesets/underground.t7.2bpp"
 Underground_Block: INCBIN "gfx/blocksets/underground.bst"
 
-
 SECTION "bank1C", ROMX,BANK[$1C]
 
 INCLUDE "engine/gamefreak.asm"
@@ -1850,7 +1826,6 @@ INCLUDE "engine/mon_party_sprites.asm"
 INCLUDE "engine/in_game_trades.asm"
 INCLUDE "engine/palettes.asm"
 INCLUDE "engine/save.asm"
-
 
 SECTION "bank1D", ROMX,BANK[$1D]
 
@@ -1977,7 +1952,6 @@ INCLUDE "engine/overworld/elevator.asm"
 
 INCLUDE "engine/overworld/hidden_items.asm"
 
-
 SECTION "bank1E", ROMX,BANK[$1E]
 
 INCLUDE "engine/battle/animations.asm"
@@ -2008,7 +1982,6 @@ INCLUDE "data/trainer_parties.asm"
 INCLUDE "engine/evos_moves.asm"
 
 SECTION "bank39", ROMX,BANK[$39]
-
 
 Pic_Mood2Happy3_0:   INCBIN "gfx/chatot/Chatot2_1.pic"
 GFX_Mood2Happy3_0:   INCBIN "gfx/chatot/Chatot2_2.2bpp"

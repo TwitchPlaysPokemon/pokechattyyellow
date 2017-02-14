@@ -68,6 +68,7 @@ Func_f1f77:
 	ld a, $3
 	ld [wSafariZoneEntranceCurScript], a
 	jr .asm_f2024
+
 .declined:
 	ld hl, .PleaseComeAgainText
 	call PrintText
@@ -262,3 +263,4 @@ SafariZoneEntranceConvertBCDtoNumber:
 	ld a, l
 	pop hl
 	ret
+

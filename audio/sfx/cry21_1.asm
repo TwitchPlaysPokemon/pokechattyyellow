@@ -10,7 +10,6 @@ SFX_Cry21_1_Ch1:
 	unknownsfx0x20 8, 209, 2, 5
 	endchannel
 
-
 SFX_Cry21_1_Ch2:
 	dutycycle 204
 	unknownsfx0x20 3, 211, 96, 5
@@ -21,7 +20,6 @@ SFX_Cry21_1_Ch2:
 	unknownsfx0x20 3, 211, 32, 5
 	unknownsfx0x20 3, 196, 224, 4
 	unknownsfx0x20 8, 193, 0, 5
-
 
 SFX_Cry21_1_Ch3:
 	endchannel

@@ -28,6 +28,7 @@ Mansion4Script_523cf:
 	ld bc, $808
 	call Mansion2Script_5202f
 	ret
+
 .asm_523ff
 	ld a, $2d
 	ld bc, $80d

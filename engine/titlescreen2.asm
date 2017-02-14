@@ -120,3 +120,4 @@ GetTitleBallY:
 	ld [wOAMBuffer + $28], a
 	inc e
 	ret
+

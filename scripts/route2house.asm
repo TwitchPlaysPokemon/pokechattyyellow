@@ -15,3 +15,4 @@ Route2HouseText2:
 	ld [wWhichTrade], a
 	predef DoInGameTradeDialogue
 	jp TextScriptEnd
+

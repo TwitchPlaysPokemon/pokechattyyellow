@@ -299,7 +299,6 @@ Music_WildBattle_branch_230e0::
 	C# 8
 	loopchannel 0, Music_WildBattle_branch_230e0
 
-
 Music_WildBattle_Ch2::
 	duty 3
 	vibrato 8, 2, 5
@@ -460,7 +459,6 @@ Music_WildBattle_branch_23225::
 	notetype 12, 12, 7
 	F_ 8
 	loopchannel 0, Music_WildBattle_branch_23225
-
 
 Music_WildBattle_Ch3::
 	vibrato 0, 2, 0

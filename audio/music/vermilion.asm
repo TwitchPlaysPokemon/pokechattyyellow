@@ -110,7 +110,6 @@ Music_Vermilion_branch_b9f6::
 	B_ 2
 	loopchannel 0, Music_Vermilion_branch_b9f6
 
-
 Music_Vermilion_Ch2::
 	duty 3
 	vibrato 10, 2, 3
@@ -176,7 +175,6 @@ Music_Vermilion_branch_ba66::
 	F# 8
 	E_ 8
 	loopchannel 0, Music_Vermilion_branch_ba66
-
 
 Music_Vermilion_Ch3::
 	notetype 12, 1, 0
@@ -280,7 +278,6 @@ Music_Vermilion_branch_baa8::
 	G# 2
 	E_ 2
 	loopchannel 0, Music_Vermilion_branch_baa8
-
 
 Music_Vermilion_Ch4::
 	dspeed 12

@@ -202,6 +202,7 @@ Route23Script_51346:
 	ld a, $1
 	ld [wRoute23CurScript], a
 	ret
+
 .asm_5136e
 	ld hl, VictoryRoadGuardText2
 	call PrintText

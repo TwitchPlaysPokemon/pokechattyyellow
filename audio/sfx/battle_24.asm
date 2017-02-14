@@ -5,7 +5,6 @@ SFX_Battle_24_Ch1:
 	unknownsfx0x10 8
 	endchannel
 
-
 SFX_Battle_24_Ch2:
 	unknownnoise0x20 15, 63, 34
 	unknownnoise0x20 15, 242, 33

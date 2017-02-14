@@ -73,7 +73,6 @@ VBlank::
 	pop af
 	reti
 
-
 DelayFrame::
 ; Wait for the next vblank interrupt.
 ; As a bonus, this saves battery.
@@ -88,3 +87,4 @@ NOT_VBLANKED EQU 1
 	and a
 	jr nz, .halt
 	ret
+

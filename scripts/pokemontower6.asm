@@ -69,6 +69,7 @@ PokemonTower6Script4:
 	ld [wPokemonTower6CurScript], a
 	ld [wCurMapScript], a
 	ret
+
 .asm_60b82
 	ld a, $1
 	ld [wSimulatedJoypadStatesIndex], a

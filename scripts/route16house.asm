@@ -18,6 +18,7 @@ Route16HouseText1:
 	SetEvent EVENT_GOT_HM02
 	ld hl, ReceivedHM02Text
 	jr .asm_13616
+
 .BagFull
 	ld hl, HM02NoRoomText
 .asm_13616

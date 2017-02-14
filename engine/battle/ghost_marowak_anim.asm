@@ -90,3 +90,4 @@ CopyMonPicFromBGToSpriteVRAM:
 	dec b
 	jr nz, .oamLoop
 	ret
+

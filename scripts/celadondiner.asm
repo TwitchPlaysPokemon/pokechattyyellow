@@ -29,3 +29,4 @@ CeladonDinerText5:
 	TX_ASM
 	callab Func_f1f31
 	jp TextScriptEnd
+

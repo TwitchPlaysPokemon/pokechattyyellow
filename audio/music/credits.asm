@@ -283,7 +283,6 @@ Music_Credits_Ch1::
 	A_ 8
 	endchannel
 
-
 Music_Credits_Ch2::
 	duty 3
 	vibrato 10, 2, 5
@@ -572,7 +571,6 @@ Music_Credits_Ch2::
 	notetype 12, 12, 1
 	A_ 8
 	endchannel
-
 
 Music_Credits_Ch3::
 	notetype 12, 1, 0

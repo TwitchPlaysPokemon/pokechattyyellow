@@ -1,5 +1,6 @@
 FanClubScript:
 	jp EnableAutoTextBoxDrawing
+
 	; call EnableAutoTextBoxDrawing
 	; ld hl, FanClubScriptPointers
 	; ld a, [wFanClubCurScript]
@@ -122,6 +123,7 @@ FanClubText2:
 	ld hl, .yellowtext
 	call PrintText
 	jr .done
+
 .asm_59ae7
 	CheckEventReuseHL EVENT_SEEL_FAN_BOAST
 	jr nz, .mineisbetter
@@ -129,6 +131,7 @@ FanClubText2:
 	ld hl, .normaltext
 	call PrintText
 	jr .done
+
 .mineisbetter
 	ResetEventReuseHL EVENT_SEEL_FAN_BOAST
 	ld hl, .bettertext

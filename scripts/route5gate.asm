@@ -38,6 +38,7 @@ Route5GateScript0:
 	ld a, $1
 	ld [wRoute5GateCurScript], a
 	ret
+
 .asm_1df82
 	ld a, $3
 	ld [hSpriteIndexOrTextID], a
@@ -84,12 +85,14 @@ Route5GateText1:
 	ld a, $1
 	ld [wRoute5GateCurScript], a
 	jp TextScriptEnd
+
 .asm_768a2
 	ld hl, Route5GateText3
 	call PrintText
 	ld hl, wd728
 	set 6, [hl]
 	jp TextScriptEnd
+
 .asm_88856
 	ld hl, SaffronGateText_1dff6
 	call PrintText
@@ -114,5 +117,4 @@ Route5GateText3:
 SaffronGateText_1dff6:
 	TX_MARKOV _SaffronGateText_1dff6
 	db "@"
-
 

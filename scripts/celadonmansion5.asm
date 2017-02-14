@@ -20,3 +20,4 @@ CeladonMansion5Text2:
 	predef HideObject
 .asm_24365
 	jp TextScriptEnd
+

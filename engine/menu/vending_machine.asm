@@ -44,6 +44,7 @@ VendingMachineMenu:
 	jr nc, .enoughMoney
 	ld hl, VendingMachineText4
 	jp PrintText
+
 .enoughMoney
 	call LoadVendingMachineItem
 	ld a, [hVendingMachineItem]
@@ -72,9 +73,11 @@ VendingMachineMenu:
 	ld a, MONEY_BOX
 	ld [wTextBoxID], a
 	jp DisplayTextBoxID
+
 .BagFull
 	ld hl, VendingMachineText6
 	jp PrintText
+
 .notThirsty
 	ld hl, VendingMachineText7
 	jp PrintText

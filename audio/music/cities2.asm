@@ -93,7 +93,6 @@ Music_Cities2_branch_b51a::
 	rest 14
 	loopchannel 0, Music_Cities2_branch_b51a
 
-
 Music_Cities2_Ch2::
 	duty 3
 	vibrato 8, 2, 3
@@ -278,7 +277,6 @@ Music_Cities2_branch_b58b::
 	G# 1
 	A_ 1
 	loopchannel 0, Music_Cities2_branch_b58b
-
 
 Music_Cities2_Ch3::
 	notetype 12, 1, 1

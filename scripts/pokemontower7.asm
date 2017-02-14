@@ -120,6 +120,7 @@ PokemonTower7Script4:
 	ld a, $5
 	call PokemonTower7Script_60d05
 	ret
+
 PokemonTower7Script5:
 	ld a, $ff
 	ld [wJoyIgnore], a

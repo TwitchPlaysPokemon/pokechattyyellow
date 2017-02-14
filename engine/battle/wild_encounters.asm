@@ -13,6 +13,7 @@ TryDoWildEncounter:
 	ld a, $1
 	and a
 	ret
+
 .notStandingOnDoorOrWarpTile
 	callab IsPlayerJustOutsideMap
 	jr z, .CantEncounter
@@ -61,6 +62,7 @@ TryDoWildEncounter:
 	jr nc, .gotEncounterSlot
 	inc hl
 	jr .determineEncounterSlot
+
 .gotEncounterSlot
 ; determine which wild pokemon (grass or water) can appear in the half-block we're standing in
 	ld c, [hl]
@@ -86,6 +88,7 @@ TryDoWildEncounter:
 	cp b
 	jr c, .CantEncounter2 ; repel prevents encounters if the leading party mon's level is higher than the wild mon
 	jr .willEncounter
+
 .lastRepelStep
 	ld [wRepelRemainingSteps], a
 	ld a, TEXT_REPEL_WORE_OFF
@@ -96,6 +99,7 @@ TryDoWildEncounter:
 	ld a, $1
 	and a
 	ret
+
 .willEncounter
 	xor a
 	ret

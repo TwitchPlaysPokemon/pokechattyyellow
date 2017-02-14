@@ -33,3 +33,4 @@ PrintButItFailedText:
 CallBankF:
 	ld a, BANK(PrintButItFailedText_)
 	jp FarCall_hl
+

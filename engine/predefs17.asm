@@ -7,3 +7,4 @@ StarterDex:
 	xor a ; unset starter flags
 	ld [wPokedexOwned], a
 	ret
+

@@ -174,6 +174,7 @@ ItemUseBall:
 	ld b, $63
 	jp nz, .setAnimData
 	jp .captured
+
 .notOldManBattle
 ; If the player is fighting the ghost Marowak, set the value that indicates the
 ; Pokémon can't be caught and skip the capture calculations.
@@ -639,6 +640,7 @@ ItemUseBallText05:
 	callba Music_WinWildAlternateStart
 	ld hl, .done
 	ret
+
 .done
 	TX_BUTTON_SOUND
 	db "@"
@@ -1464,6 +1466,7 @@ ItemUseMedicine:
 	add hl, bc ; hl now points to LSB of experience
 	ld b, 1
 	jp CalcStats ; recalculate stats
+
 .useRareCandy
 	push hl
 	ld bc, wPartyMon1Level - wPartyMon1
@@ -2515,6 +2518,7 @@ ItemUseTMHM:
 	call ClearSprites
 	call RunDefaultPaletteCommand
 	jp LoadScreenTilesFromBuffer1 ; restore saved screen
+
 .checkIfAbleToLearnMove
 	predef CanLearnTM ; check if the pokemon can learn the move
 	push bc
@@ -3227,6 +3231,7 @@ FindWildLocationsOfMon:
 	inc hl
 	inc c
 	jr .loop
+
 .done
 	ld a, $ff ; list terminator
 	ld [de], a
@@ -3249,3 +3254,4 @@ CheckMapForMon:
 	jr nz, .loop
 	dec hl
 	ret
+

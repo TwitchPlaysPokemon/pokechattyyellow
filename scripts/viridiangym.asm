@@ -127,6 +127,7 @@ ViridianGymScript4:
 	ld a, $0
 	ld [wCurMapScript], a
 	ret
+
 .asm_74980
 	jpba LoadSpinnerArrowTiles
 
@@ -149,6 +150,7 @@ ViridianGymScript3_74995:
 	call DisplayTextID
 	SetEvent EVENT_GOT_TM27
 	jr .asm_749be
+
 .BagFull
 	ld a, $e
 	ld [hSpriteIndexOrTextID], a
@@ -268,6 +270,7 @@ ViridianGymText1:
 	call z, ViridianGymScript3_74995
 	call DisableWaitingAfterTextDisplay
 	jr .asm_6dff7
+
 .asm_9fc95
 	ld a, $1
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
@@ -281,6 +284,7 @@ ViridianGymText1:
 	call Delay3
 	call GBFadeInFromBlack
 	jr .asm_6dff7
+
 .asm_6de66
 	ld hl, ViridianGymText_74ace
 	call PrintText
@@ -482,6 +486,7 @@ ViridianGymText10:
 	ld hl, ViridianGymText_74bd4
 	call PrintText
 	jr .asm_6064d
+
 .asm_1abd1
 	ld hl, ViridianGymText_74bd9
 	call PrintText

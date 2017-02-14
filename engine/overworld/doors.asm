@@ -21,6 +21,7 @@ IsPlayerStandingOnDoorTile:
 	jr nz, .loop
 	scf
 	ret
+
 .notStandingOnDoor
 	and a
 	ret

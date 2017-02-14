@@ -26,3 +26,4 @@ MtMoon3Script_4a325: ; pikachu-related function?
 	pop hl
 	call ApplyPikachuMovementData
 	ret
+

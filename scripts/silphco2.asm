@@ -59,6 +59,7 @@ SilphCo2Script_59d43:
 	jr z, .asm_59d60
 	inc hl
 	jr .asm_59d4f
+
 .asm_59d60
 	ld a, [hli]
 	cp c
@@ -68,6 +69,7 @@ SilphCo2Script_59d43:
 	ld [hli], a
 	ld [hl], a
 	ret
+
 .asm_59d6b
 	xor a
 	ld [$ffe0], a
@@ -82,6 +84,7 @@ SilphCo2Script_59d6f:
 	jr nz, .next
 	SetEventReuseHL EVENT_SILPH_CO_2_UNLOCKED_DOOR1
 	ret
+
 .next
 	SetEventAfterBranchReuseHL EVENT_SILPH_CO_2_UNLOCKED_DOOR2, EVENT_SILPH_CO_2_UNLOCKED_DOOR1
 	ret
@@ -150,6 +153,7 @@ SilphCo2Text1:
 	SetEvent EVENT_GOT_TM36
 	ld hl, ReceivedTM36Text
 	jr .asm_59de7
+
 .asm_59de4
 	ld hl, TM36ExplanationText
 .asm_59de7

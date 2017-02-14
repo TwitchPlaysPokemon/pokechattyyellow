@@ -31,6 +31,7 @@ RedisplayStartMenu_DoNotDrawStartMenu:
 	ld [wCurrentMenuItem], a
 	call EraseMenuCursor
 	jr .loop
+
 .checkIfDownPressed
 	bit 7, a
 	jr z, .buttonPressed
@@ -48,6 +49,7 @@ RedisplayStartMenu_DoNotDrawStartMenu:
 	ld [wCurrentMenuItem], a
 	call EraseMenuCursor
 	jr .loop
+
 .buttonPressed ; A, B, or Start button pressed
 	call PlaceUnfilledArrowMenuCursor
 	ld a, [wCurrentMenuItem]
@@ -82,3 +84,4 @@ CloseStartMenu::
 	jr nz, CloseStartMenu
 	call LoadTextBoxTilePatterns
 	jp CloseTextDisplay
+

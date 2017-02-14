@@ -39,6 +39,7 @@ Route16GateScript0:
 	ld a, $1
 	ld [wRoute16GateCurScript], a
 	ret
+
 .asm_4970e
 	ld a, $2
 	ld [wRoute16GateCurScript], a
@@ -99,6 +100,7 @@ Route16GateText1:
 	ld hl, Route16GateText_4977c
 	call PrintText
 	jr .asm_56c9d
+
 .asm_0bdf3
 	ld hl, Route16GateText_49777
 	call PrintText

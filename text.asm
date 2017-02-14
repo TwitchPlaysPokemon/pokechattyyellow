@@ -15,7 +15,6 @@ MOVE_NAMES   EQU POKEDEX_TEXT + 1
 INCLUDE "macros.asm"
 INCLUDE "hram.asm"
 
-
 SECTION "Text 1", ROMX, BANK[TEXT_1]
 
 _CardKeySuccessText1::
@@ -203,7 +202,6 @@ INCLUDE "text/maps/silph_co_7f.asm"
 INCLUDE "text/maps/silph_co_8f.asm"
 INCLUDE "text/maps/silph_co_9f.asm"
 INCLUDE "text/maps/silph_co_10f.asm"
-
 
 SECTION "Text 2", ROMX, BANK[TEXT_2]
 
@@ -1551,7 +1549,6 @@ _HookedMonAttackedText::
 	cont "attacked!"
 	prompt
 
-
 SECTION "Text 3", ROMX, BANK[TEXT_3]
 
 _EnemyAppearedText::
@@ -2173,7 +2170,6 @@ INCLUDE "text/maps/route_7.asm"
 INCLUDE "text/maps/route_8.asm"
 INCLUDE "text/maps/route_9_1.asm"
 
-
 SECTION "Text 4", ROMX, BANK[TEXT_4]
 
 INCLUDE "text/maps/route_9_2.asm"
@@ -2249,7 +2245,6 @@ _StoppedEvolvingText::
 	text ""
 	line "stopped evolving!"
 	prompt
-
 
 SECTION "Text 5", ROMX, BANK[TEXT_5]
 
@@ -2555,7 +2550,6 @@ INCLUDE "text/maps/bike_shop.asm"
 INCLUDE "text/maps/cerulean_mart.asm"
 INCLUDE "text/maps/cerulean_badge_house_1.asm"
 
-
 SECTION "Text 6", ROMX, BANK[TEXT_6]
 
 INCLUDE "text/maps/cerulean_badge_house_2.asm"
@@ -2603,7 +2597,6 @@ INCLUDE "text/maps/celadon_mansion_4f_inside.asm"
 INCLUDE "text/maps/celadon_pokecenter.asm"
 INCLUDE "text/maps/celadon_gym.asm"
 INCLUDE "text/maps/celadon_game_corner_1.asm"
-
 
 SECTION "Text 7", ROMX, BANK[TEXT_7]
 
@@ -2859,7 +2852,6 @@ _CableClubNPCPleaseApplyHereHaveToSaveText::
 	line "the link, we have"
 	cont "to save the game."
 	done
-
 
 SECTION "Text 8", ROMX, BANK[TEXT_8]
 
@@ -3426,11 +3418,9 @@ _UsedCutText::
 	line "away with CUT!"
 	prompt
 
-
 SECTION "Pokedex Text", ROMX, BANK[POKEDEX_TEXT]
 
 INCLUDE "text/pokedex.asm"
-
 
 SECTION "Move Names", ROMX, BANK[MOVE_NAMES]
 

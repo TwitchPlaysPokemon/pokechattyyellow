@@ -19,10 +19,12 @@ Route12GateUpstairsText1:
 	call PrintText
 	SetEvent EVENT_GOT_TM39
 	jr .asm_4ba56
+
 .BagFull
 	ld hl, TM39NoRoomText
 	call PrintText
 	jr .asm_4ba56
+
 .asm_0ad3c
 	ld hl, TM39ExplanationText
 	call PrintText
@@ -70,9 +72,11 @@ GateUpstairsScript_PrintIfFacingUp:
 	jr z, .up
 	ld a, $1
 	jr .done
+
 .up
 	call PrintText
 	xor a
 .done
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
 	jp TextScriptEnd
+

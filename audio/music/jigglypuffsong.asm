@@ -20,7 +20,6 @@ Music_JigglypuffSong_Ch1::
 	E_ 10
 	endchannel
 
-
 Music_JigglypuffSong_Ch2::
 	vibrato 5, 1, 5
 	duty 2

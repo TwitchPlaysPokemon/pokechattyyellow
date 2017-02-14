@@ -57,6 +57,7 @@ AnimateShootingStar:
 	cp 80
 	jr nz, .next
 	jr .bigStarLoop
+
 .next
 	cp b
 	jr nz, .bigStarLoop

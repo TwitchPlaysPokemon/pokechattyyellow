@@ -28,6 +28,7 @@ FuchsiaHouse2Text1:
 .asm_61238
 	call PrintText
 	jr .asm_52039
+
 .asm_3f30f
 	ld hl, WardenTeethText1
 	call PrintText
@@ -45,10 +46,12 @@ FuchsiaHouse2Text1:
 	call PrintText
 	SetEvent EVENT_GOT_HM04
 	jr .asm_52039
+
 .subtract
 	ld hl, HM04ExplanationText
 	call PrintText
 	jr .asm_52039
+
 .BagFull
 	ld hl, HM04NoRoomText
 	call PrintText

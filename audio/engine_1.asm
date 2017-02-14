@@ -25,6 +25,7 @@ Audio1_UpdateMusic::
 	ld a, $80
 	ld [rNR30], a
 	jr .nextChannel
+
 .applyAffects
 	call Audio1_ApplyMusicAffects
 .nextChannel
@@ -54,6 +55,7 @@ Audio1_ApplyMusicAffects:
 	and a
 	jr z, .startChecks
 	ret
+
 .startChecks
 	ld hl, wChannelFlags1
 	add hl, bc
@@ -74,6 +76,7 @@ Audio1_ApplyMusicAffects:
 	bit BIT_PITCH_BEND_ON, [hl]
 	jr z, .checkVibratoDelay
 	jp Audio1_ApplyPitchBend
+
 .checkVibratoDelay
 	ld hl, wChannelVibratoDelayCounters
 	add hl, bc
@@ -83,6 +86,7 @@ Audio1_ApplyMusicAffects:
 	dec [hl] ; otherwise, dec delay
 .skipPitchBendVibrato
 	ret
+
 .checkForVibrato
 	ld hl, wChannelVibratoExtents
 	add hl, bc
@@ -100,6 +104,7 @@ Audio1_ApplyMusicAffects:
 	jr z, .applyVibrato
 	dec [hl] ; decrement counter
 	ret
+
 .applyVibrato
 	ld a, [hl]
 	swap [hl]
@@ -124,6 +129,7 @@ Audio1_ApplyMusicAffects:
 	ld a, 0
 .noCarry
 	jr .done
+
 .unset
 	set BIT_VIBRATO_DIRECTION, [hl]
 	ld a, d
@@ -163,6 +169,7 @@ Audio1_PlayNextNote:
 	jr z, .asm_918c
 	call Audio1_EnableChannelOutput
 	ret
+
 .asm_918c
 	call Audio1_ProcessMusicCommand
 	ret
@@ -181,6 +188,7 @@ Audio1_ProcessMusicCommand: ; 0x91e6
 	cp CH3
 	jr nc, .noiseOrSfxChannel
 	jr .disableChannelOutput
+
 .noiseOrSfxChannel
 	res BIT_NOISE_OR_SFX, [hl]
 	ld hl, wChannelFlags2
@@ -201,8 +209,10 @@ Audio1_ProcessMusicCommand: ; 0x91e6
 	xor a
 	ld [wDisableChannelOutputWhenSfxEnds], a
 	jr .disableChannelOutput
+
 .asm_9222
 	jr .asm_9248
+
 .returnFromCall
 	res 1, [hl]
 	ld d, $0
@@ -223,6 +233,7 @@ Audio1_ProcessMusicCommand: ; 0x91e6
 	ld a, [de]
 	ld [hl], a ; loads channel address to return to
 	jp Audio1_ProcessMusicCommand
+
 .disableChannelOutput
 	ld hl, Audio1_HWChannelDisableMasks
 	add hl, bc
@@ -308,6 +319,7 @@ Audio1_loopchannel: ; 0x92a9
 	call Audio1_GetNextMusicByte ; skip pointer
 	call Audio1_GetNextMusicByte
 	jp Audio1_ProcessMusicCommand
+
 .loopAgain ; inc loop count
 	inc a
 	ld [hl], a
@@ -350,6 +362,7 @@ Audio1_notetype: ; 0x92e4
 	jr nz, .skipChannel3
 	ld hl, wSfxWaveInstrument
 	jr .channel3
+
 .musicChannel3
 	ld hl, wMusicWaveInstrument
 .channel3
@@ -492,6 +505,7 @@ Audio1_tempo: ; 0x93ba
 	ld [wChannelNoteDelayCountersFractionalPart + 2], a
 	ld [wChannelNoteDelayCountersFractionalPart + 3], a
 	jr .musicChannelDone
+
 .sfxChannel
 	call Audio1_GetNextMusicByte
 	ld [wSfxTempo], a ; store first param
@@ -701,6 +715,7 @@ Audio1_notelength: ; 0x950a
 	ld a, [wMusicTempo + 1]
 	ld e, a
 	jr .skip
+
 .sfxChannel
 	ld d, $1
 	ld e, $0
@@ -767,6 +782,7 @@ Audio1_notepitch: ; 0x9568
 	and [hl]
 	ld [rNR51], a ; disable hardware channel 3's output
 	jr .done
+
 .notChannel3
 	ld b, REG_VOLUME_ENVELOPE
 	call Audio1_GetRegisterPointer
@@ -777,6 +793,7 @@ Audio1_notepitch: ; 0x9568
 	ld [hl], a
 .done
 	ret
+
 .notRest
 	swap a
 	ld b, 0
@@ -802,9 +819,11 @@ Audio1_notepitch: ; 0x9568
 	and a
 	jr nz, .noSfx
 	jr .sfxChannel
+
 .noSfx
 	pop de
 	ret
+
 .sfxChannel
 	ld b, 0
 	ld hl, wChannelVolumes
@@ -1089,6 +1108,7 @@ Audio1_ApplyPitchBend: ; 0x96f9
 	cp e
 	jp c, .reachedTargetFrequency
 	jr .applyUpdatedFrequency
+
 .frequencyDecreasing
 	ld hl, wChannelPitchBendCurrentFrequencyLowBytes
 	add hl, bc
@@ -1139,6 +1159,7 @@ Audio1_ApplyPitchBend: ; 0x96f9
 	ld [hli], a
 	ld [hl], d
 	ret
+
 .reachedTargetFrequency
 ; Turn off pitch bend when the target frequency has been reached.
 	ld hl, wChannelFlags1
@@ -1181,6 +1202,7 @@ Audio1_InitPitchBendVars: ; 0x978f
 	add hl, bc
 	set BIT_PITCH_BEND_DECREASING, [hl]
 	jr .next2
+
 .targetFrequencyGreater
 ; If the target frequency is greater, subtract the current frequency from
 ; the target frequency to get the absolute difference.
@@ -1230,6 +1252,7 @@ Audio1_InitPitchBendVars: ; 0x978f
 	dec a
 	ld d, a
 	jr .divideLoop
+
 .doneDividing
 	ld a, e ; a = remainder - dividend
 	add [hl]
@@ -1296,6 +1319,7 @@ Audio1_MultiplyAdd: ; 0x9847
 	and a
 	jr z, .done
 	jr .loop
+
 .done
 	ret
 
@@ -1319,6 +1343,7 @@ Audio1_CalculateFrequency: ; 0x9858
 	rr e
 	inc a
 	jr .loop
+
 .done
 	ld a, 8
 	add d
@@ -1388,6 +1413,7 @@ Audio1_PlaySound::
 	cp $14
 	jr nc, .asm_9993
 	ret
+
 .asm_9993
 	ld a, [hl]
 	cp $14
@@ -1399,6 +1425,7 @@ Audio1_PlaySound::
 	jr z, .asm_99a3
 	jr c, .asm_99a3
 	ret
+
 .asm_99a3
 	call InitSFXVariables
 .asm_9a2b
@@ -1444,6 +1471,7 @@ Audio1_PlaySound::
 	inc hl
 	inc hl
 	jr .commandPointerLoop
+
 .next
 	push af
 	push hl
@@ -1557,5 +1585,4 @@ Audio1_Pitches:
 	dw $FB58 ; A_
 	dw $FB9B ; A#
 	dw $FBDA ; B_
-
 

@@ -223,7 +223,6 @@ Music_Dungeon1_branch_7dfd5::
 	rest 1
 	endchannel
 
-
 Music_Dungeon1_Ch2::
 	vibrato 11, 1, 5
 	duty 3
@@ -438,7 +437,6 @@ Music_Dungeon1_branch_7e0cd::
 	F# 6
 	endchannel
 
-
 Music_Dungeon1_Ch3::
 	notetype 12, 1, 1
 	vibrato 8, 2, 6
@@ -592,7 +590,6 @@ Music_Dungeon1_branch_7e177::
 	E_ 1
 	A# 4
 	endchannel
-
 
 Music_Dungeon1_Ch4::
 	dspeed 12

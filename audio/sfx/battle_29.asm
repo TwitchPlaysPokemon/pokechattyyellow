@@ -7,7 +7,6 @@ SFX_Earthquake_Ch1:
 	unknownsfx0x20 15, 194, 16, 1
 	endchannel
 
-
 SFX_Earthquake_Ch2:
 	unknownnoise0x20 10, 243, 53
 	unknownnoise0x20 14, 246, 69

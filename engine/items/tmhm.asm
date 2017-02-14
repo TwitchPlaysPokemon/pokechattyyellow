@@ -15,6 +15,7 @@ CheckIfMoveIsKnown:
 	jr nz, .loop
 	and a
 	ret
+
 .alreadyKnown
 	ld hl, AlreadyKnowsText
 	call PrintText

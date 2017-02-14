@@ -205,3 +205,4 @@ ViridianForestScript_6120d
 	ld a, BANK(Func_f2528)
 	rst FarCall
 	jp TextScriptEnd
+

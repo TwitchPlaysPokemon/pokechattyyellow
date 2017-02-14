@@ -63,3 +63,4 @@ Museum1FText5:
 	TX_ASM
 	callba Func_f1d8c
 	jp TextScriptEnd
+

@@ -181,7 +181,6 @@ Music_UnusedSong_branch_a91b::
 	loopchannel 0, Music_UnusedSong_branch_a91b
 	endchannel
 
-
 Music_UnusedSong_Ch2::
 	tempo 144
 	volume 7, 7

@@ -380,7 +380,6 @@ Music_FinalBattle_branch_23429::
 	E_ 8
 	loopchannel 0, Music_FinalBattle_branch_23429
 
-
 Music_FinalBattle_Ch2::
 	duty 3
 	vibrato 8, 2, 5
@@ -736,7 +735,6 @@ Music_FinalBattle_branch_23710::
 	F# 2
 	D_ 2
 	endchannel
-
 
 Music_FinalBattle_Ch3::
 	notetype 12, 1, 1

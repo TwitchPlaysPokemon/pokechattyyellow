@@ -13,6 +13,8 @@ GetQuantityOfItemInBag:
 	ld a, [hl]
 	ld b, a
 	ret
+
 .notInBag
 	ld b, 0
 	ret
+

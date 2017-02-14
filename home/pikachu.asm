@@ -112,3 +112,4 @@ ApplyPikachuMovementData::
 	pop af
 	call Bankswitch
 	ret
+

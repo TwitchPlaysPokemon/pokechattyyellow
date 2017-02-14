@@ -153,7 +153,6 @@ Music_TitleScreen_branch_7e55c::
 	D_ 1
 	endchannel
 
-
 Music_TitleScreen_Ch2::
 	vibrato 16, 4, 6
 	duty 1
@@ -320,7 +319,6 @@ Music_TitleScreen_branch_7e636::
 	D_ 1
 	endchannel
 
-
 Music_TitleScreen_Ch3::
 	notetype 12, 1, 0
 	octave 3
@@ -457,7 +455,6 @@ Music_TitleScreen_branch_7e6e5::
 	D_ 1
 	rest 5
 	endchannel
-
 
 Music_TitleScreen_Ch4::
 	dspeed 6

@@ -16,3 +16,4 @@ IncrementDayCareMonExp:
 	ld a, $50
 	ld [hl], a
 	ret
+

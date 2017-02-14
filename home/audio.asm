@@ -83,6 +83,7 @@ CheckForNoBikingMusicMap::
 	jr z, .found
 	and a
 	ret
+
 .found
 	scf
 	ret
@@ -112,6 +113,7 @@ CompareMapMusicBankWithCurrentBank::
 	ld [wAudioSavedROMBank], a
 	and a
 	ret
+
 .differentBanks
 	ld a, c ; this is a fade-out counter value and it's always non-zero
 	and a

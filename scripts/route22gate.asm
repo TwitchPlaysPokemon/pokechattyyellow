@@ -69,6 +69,7 @@ Route22GateText1:
 	call Route22GateScript_1e6ba
 	ld a, $1
 	jr .asm_1e6fe
+
 .asm_1e6f6
 	ld hl, Route22GateText_1e71a
 	call PrintText

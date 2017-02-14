@@ -137,7 +137,6 @@ Music_Routes4_branch_a28a::
 	A_ 3
 	loopchannel 0, Music_Routes4_branch_a28a
 
-
 Music_Routes4_Ch2::
 	vibrato 12, 2, 4
 	duty 1
@@ -286,7 +285,6 @@ Music_Routes4_branch_a325::
 	notetype 12, 10, 7
 	E_ 10
 	loopchannel 0, Music_Routes4_branch_a325
-
 
 Music_Routes4_Ch3::
 	notetype 12, 1, 0
@@ -504,7 +502,6 @@ Music_Routes4_branch_a3d7::
 	D# 1
 	rest 1
 	loopchannel 0, Music_Routes4_branch_a3d7
-
 
 Music_Routes4_Ch4::
 	dspeed 12
