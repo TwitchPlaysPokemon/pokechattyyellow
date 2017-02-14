@@ -3378,7 +3378,7 @@ wBeatGymFlags:: ; d729
 
 wd72c:: ; d72b
 ; bit 0: if not set, the 3 minimum steps between random battles have passed
-; bit 1: prevent audio fade out
+; bit 1: prevent automatic volume reset
 	ds 1
 
 wd72d:: ; d72c

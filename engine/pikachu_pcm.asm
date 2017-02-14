@@ -7,18 +7,22 @@ IF DEF(MARKOV)
 	and a
 	jr nz, .playPikachuPCM
 	call Delay3
-	ld a, [rNR50]
+	ld c, rNR50 % $100
+	ld hl, wd72c
+	ld a, [hl]
+	push af
+	set 1, [hl]
+	ld a, [$ff00+c]
 	push af
 	ld a, $33
-	ld [rNR50], a
-	ld hl, wd72c
-	set 1, [hl]
+	ld [$ff00+c], a
 	ld a, e
 	add 2
 	call LuaRequest
-	res 1, [hl]
 	pop af
-	ld [rNR50], a
+	ld [$ff00+c], a
+	pop af
+	ld [hl], a
 	ret
 
 .defaultPikachuPCM
