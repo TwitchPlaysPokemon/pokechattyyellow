@@ -46,7 +46,7 @@ ItemUsePtrTable:
 	dw UnusableItem      ; EARTHBADGE
 	dw ItemUseEscapeRope ; ESCAPE_ROPE
 	dw ItemUseRepel      ; REPEL
-	dw UnusableItem      ; OLD_AMBER
+	dw ItemFossil        ; OLD_AMBER
 	dw ItemUseEvoStone   ; FIRE_STONE
 	dw ItemUseEvoStone   ; THUNDER_STONE
 	dw ItemUseEvoStone   ; WATER_STONE
@@ -56,8 +56,8 @@ ItemUsePtrTable:
 	dw ItemUseVitamin    ; CARBOS
 	dw ItemUseVitamin    ; CALCIUM
 	dw ItemUseVitamin    ; RARE_CANDY
-	dw UnusableItem      ; DOME_FOSSIL
-	dw UnusableItem      ; HELIX_FOSSIL
+	dw ItemFossil        ; DOME_FOSSIL
+	dw ItemFossil        ; HELIX_FOSSIL
 	dw UnusableItem      ; SECRET_KEY
 	dw UnusableItem
 	dw UnusableItem      ; BIKE_VOUCHER
@@ -2609,6 +2609,10 @@ ItemUseNotTime:
 	ld hl, ItemUseNotTimeText
 	jr ItemUseFailed
 
+ItemFossil:
+	ld hl, ItemMarkovText
+	jr ItemUseFailed
+
 ItemUseNotYoursToUse:
 	ld hl, ItemUseNotYoursToUseText
 	jr ItemUseFailed
@@ -2650,6 +2654,10 @@ ItemUseFailed:
 
 ItemUseNotTimeText:
 	TX_FAR _ItemUseNotTimeText
+	db "@"
+
+ItemMarkovText:
+	TX_MARKOV _ItemUseNotTimeText
 	db "@"
 
 ItemUseNotYoursToUseText:
