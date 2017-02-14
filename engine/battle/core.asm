@@ -5252,8 +5252,10 @@ AttackSubstitute:
 	jr z, .nullifyEffect
 	ld hl, wEnemyMoveEffect ; value for enemy's turn
 .nullifyEffect
-	xor a
-	ld [hl], a ; zero the effect of the attacker's move
+	ld a, [hl]
+	cp EXPLODE_EFFECT
+	jp z, DrawHUDsAndHPBars
+	ld [hl], 0 ; zero the effect of the attacker's move
 	jp DrawHUDsAndHPBars
 
 SubstituteTookDamageText:
