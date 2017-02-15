@@ -116,6 +116,10 @@ ReadTrainer:
 	ld a, [de]
 	cp $fe
 	jr nz, .notNullMove
+	ld a, c
+	and a
+	ld a, STRUGGLE ; error handling
+	jr z, .notNullMove
 	xor a
 .notNullMove
 	inc de
