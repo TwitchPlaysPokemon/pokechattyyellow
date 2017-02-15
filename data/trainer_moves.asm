@@ -605,7 +605,6 @@ SpecialTrainerMoves:
 
 	db FISHER,$6
 	db 1,3,BUBBLEBEAM
-	db 2,1,$fe
 	db 2,2,SELFDESTRUCT
 	db 3,1,SURF
 	db 3,2,TAKE_DOWN
@@ -847,8 +846,6 @@ SpecialTrainerMoves:
 	db 1,1,TAKE_DOWN
 	db 1,2,DIG
 	db 1,3,$fe
-	db 2,1,$fe
-	db 2,2,$fe
 	db 2,3,DRAGON_RAGE
 	db 3,1,DRAGON_RAGE
 	db 3,2,MEGA_PUNCH
@@ -1293,7 +1290,6 @@ SpecialTrainerMoves:
 	db 1,3,$fe
 	db 2,1,BLIZZARD
 	db 2,2,BUBBLEBEAM
-	db 3,1,$fe
 	db 3,1,ROCK_SLIDE
 	db 3,2,DOUBLE_TEAM
 	db 3,4,$fe

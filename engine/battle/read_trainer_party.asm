@@ -92,10 +92,10 @@ ReadTrainer:
 	cp $ff
 	jr z, .FinishUp
 	cp b
-	jr nz, .asm_39c46
+	jr nz, .nextTrainer
 	ld a, [hli]
 	cp c
-	jr nz, .asm_39c46
+	jr nz, .nextTrainer
 	ld d, h
 	ld e, l
 .writeAdditionalMoveDataLoop
@@ -122,10 +122,10 @@ ReadTrainer:
 	ld [hl], a
 	jr .writeAdditionalMoveDataLoop
 
-.asm_39c46
+.nextTrainer
 	ld a, [hli]
 	and a
-	jr nz, .asm_39c46
+	jr nz, .nextTrainer
 	jr .loopAdditionalMoveData
 
 .FinishUp

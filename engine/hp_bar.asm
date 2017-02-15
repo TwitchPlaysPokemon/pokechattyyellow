@@ -17,17 +17,21 @@ GetHPBarLength:
 	ld a, d
 	and a
 	jr z, .maxHPSmaller256
-	srl d              ; make HP in de fit into 1 byte by dividing by 4
-	rr e
-	srl d
-	rr e
 	ld a, [hMultiplicand+1]
 	ld b, a
 	ld a, [hMultiplicand+2]
-	srl b              ; divide multiplication result as well
-	rr a
+	; Modified to avoid div0 glitch
+	ld c, a
+.loopShift
 	srl b
-	rr a
+	rr c
+	srl d
+	rr e
+	ld a, d
+	and a
+	jr nz, .loopShift
+	ld a, c
+	; End modified portion
 	ld [hMultiplicand+2], a
 	ld a, b
 	ld [hMultiplicand+1], a
@@ -68,9 +72,9 @@ UpdateHPBar2:
 	pop de
 	call UpdateHPBar_CompareNewHPToOldHP
 	ret z
-	ld a, $ff
+	ld a, -1
 	jr c, .HPdecrease
-	ld a, $1
+	ld a,  1
 .HPdecrease
 	ld [wHPBarDelta], a
 	call GetPredefRegisters
