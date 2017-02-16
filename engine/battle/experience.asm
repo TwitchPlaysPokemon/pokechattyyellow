@@ -25,7 +25,7 @@ GainExperience:
 	add hl, de
 	ld d, h
 	ld e, l
-	ld hl, wEnemyMonBaseStats
+	ld hl, wTempEnemyMonBaseStats
 	ld c, NUM_STATS
 .gainStatExpLoop
 	ld a, [hli]
@@ -59,7 +59,7 @@ GainExperience:
 	xor a
 	ld [hMultiplicand], a
 	ld [hMultiplicand + 1], a
-	ld a, [wEnemyMonBaseExp]
+	ld a, [wTempEnemyMonBaseExp]
 	ld [hMultiplicand + 2], a
 	ld a, [wEnemyMonLevel]
 	ld [hMultiplier], a
@@ -235,16 +235,11 @@ GainExperience:
 .recalcStatChanges
 	xor a ; battle mon
 	ld [wCalculateWhoseStats], a
-	ld hl, CalculateModifiedStats
-	call Bankswitch15ToF
-	ld hl, ApplyBurnAndParalysisPenaltiesToPlayer
-	call Bankswitch15ToF
-	ld hl, ApplyBadgeStatBoosts
-	call Bankswitch15ToF
-	ld hl, DrawPlayerHUDAndHPBar
-	call Bankswitch15ToF
-	ld hl, PrintEmptyString
-	call Bankswitch15ToF
+	callba CalculateModifiedStats
+	callba ApplyBurnAndParalysisPenaltiesToPlayer
+	callba ApplyBadgeStatBoosts
+	callba DrawPlayerHUDAndHPBar
+	callba PrintEmptyString
 	call SaveScreenTilesToBuffer1
 .printGrewLevelText
 	callabd_ModifyPikachuHappiness PIKAHAPPY_LEVELUP
@@ -317,18 +312,20 @@ DivideExpDataByNumMonsGainingExp:
 	ret c ; return if only one mon is gaining exp
 	ld [wd11e], a ; store number of mons gaining exp
 	ld hl, wEnemyMonBaseStats
+	ld de, wTempEnemyMonBaseStats
 	ld c, wEnemyMonBaseExp + 1 - wEnemyMonBaseStats
 .divideLoop
 	xor a
 	ld [hDividend], a
-	ld a, [hl]
+	ld a, [hli]
 	ld [hDividend + 1], a
 	ld a, [wd11e]
 	ld [hDivisor], a
 	ld b, $2
 	call Divide ; divide value by number of mons gaining exp
 	ld a, [hQuotient + 3]
-	ld [hli], a
+	ld [de], a
+	inc de
 	dec c
 	jr nz, .divideLoop
 	ret
@@ -347,10 +344,6 @@ BoostExp:
 	adc b
 	ld [hQuotient + 2], a
 	ret
-
-Bankswitch15ToF:
-	ld a, BANK(BattleCore)
-	jp FarCall_hl
 
 GainedText:
 	TX_FAR _GainedText

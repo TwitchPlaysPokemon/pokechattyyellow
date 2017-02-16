@@ -958,6 +958,7 @@ FaintEnemyPokemon:
 ; the player has exp all
 ; now, set the gain exp flag for every party member
 ; half of the total stat exp and normal exp will divided evenly amongst every party member
+; keep in mind that the experience value has already been divided by the size of the party
 	ld a, $1
 	ld [wBoostExpByExpAll], a
 	ld a, [wPartyCount]

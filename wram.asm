@@ -1690,7 +1690,11 @@ wcf4b:: ds 2 ; storage buffer for various strings
 wGainBoostedExp:: ; cf4c
 	ds 1
 
-	ds 17
+wTempEnemyMonBaseStats:: ds 5
+wTempEnemyMonCatchRate:: ds 1
+wTempEnemyMonBaseExp:: ds 1
+
+	ds 10
 
 wGymCityName:: ; cf5e
 	ds 17
