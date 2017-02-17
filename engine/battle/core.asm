@@ -3606,7 +3606,7 @@ IsGhostBattle:
 	ld a, [wCurMap]
 	cp POKEMONTOWER_1
 	jr c, .next
-	cp LAVENDER_HOUSE_1
+	cp POKEMONTOWER_7 + 1
 	jr nc, .next
 	ld b, SILPH_SCOPE
 	call IsItemInBag
@@ -5589,22 +5589,22 @@ RoostTypeCheck:
 ; as far is can tell, this is only used once in some AI code to help decide which move to use
 AIGetTypeEffectiveness: ; 3e449 (f:6449)
 	ld a,[wEnemyMoveType]
-	ld d,a                 ; d = type of enemy move
-	ld hl,wBattleMonType
-	ld b,[hl]              ; b = type 1 of player's pokemon
-	ld a,10
-	ld [hMultiplier],a           ; initialize [wd11e] to neutral effectiveness
-	ld hl,TypeEffects
+	ld d, a                 ; d = type of enemy move
+	ld hl, wBattleMonType
+	ld b, [hl]              ; b = type 1 of player's pokemon
+	ld a, 10
+	ld [hMultiplier], a           ; initialize [wd11e] to neutral effectiveness
+	ld hl, TypeEffects
 .loop
-	ld a,[hli]
-	cp a,$ff
+	ld a, [hli]
+	cp $ff
 	jr z, .start2
 	cp d                   ; match the type of the move
-	jr nz,.nextTypePair1
+	jr nz, .nextTypePair1
 
-	ld a,[hli]
+	ld a, [hli]
 	cp b                   ; match with type 1 of pokemon
-	jr z,.match
+	jr z, .match
 
 	jr .nextTypePair2
 
@@ -5616,35 +5616,35 @@ AIGetTypeEffectiveness: ; 3e449 (f:6449)
 
 .match
 	ld a,[hl]
-	ld [hMultiplier],a           ; store damage multiplier
+	ld [hMultiplier], a           ; store damage multiplier
 .start2
-    ld hl,wBattleMonType+1
+    ld hl ,wBattleMonType + 1
     ld a,[hl]
     cp b
-    jr nz,.checksecondtype
+    jr nz, .checksecondtype
 
     ld a, [hMultiplier]
     ld [wd11e], a
 	ret
 
 .checksecondtype
-    ld b,[hl]
+    ld b, [hl]
     xor a
-    ld [hMultiplicand],a
-    ld [hMultiplicand+1],a
-    ld a,10
-    ld [hMultiplicand+2],a
-    ld hl,TypeEffects
+    ld [hMultiplicand], a
+    ld [hMultiplicand+1], a
+    ld a, 10
+    ld [hMultiplicand+2], a
+    ld hl, TypeEffects
 .loop2
-    ld a,[hli]
-    cp a,$ff
-    jr z,.multandret
+    ld a, [hli]
+    cp a, $ff
+    jr z, .multandret
 
     cp d ; match the type
     jr nz, .nextTypePair3
-    ld a,[hli]
+    ld a, [hli]
     cp b ; match with type 2 of pokemon
-    jr z,.match2
+    jr z, .match2
 
     jr .nextTypePair4
 
@@ -5655,8 +5655,8 @@ AIGetTypeEffectiveness: ; 3e449 (f:6449)
     jr .loop2
 
 .match2
-    ld a,[hl]
-    ld [hMultiplicand+2],a
+    ld a, [hl]
+    ld [hMultiplicand+2], a
 .multandret
 
     call Multiply

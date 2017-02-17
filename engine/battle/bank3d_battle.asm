@@ -63,11 +63,19 @@ InitWildBattle:
 	ld [wIsInBattle], a
 	callab LoadEnemyMonData
 	callab DoBattleTransitionAndInitBattleVariables
-	ld a, [wCurOpponent]
-	cp MAROWAK
-	jr z, .isGhost
 	callab IsGhostBattle
 	jr nz, .isNoGhost
+	ld a, [wCurOpponent]
+	cp MAROWAK
+	jr nz, .isGhost
+	ld a, [wPokemonTower6CurScript]
+	cp $4
+	jr z, .isGhost
+.isNoGhost
+	ld de, vFrontPic
+	call LoadMonFrontSprite ; load mon sprite
+	jr .spriteLoaded
+
 .isGhost
 	ld hl, wMonHSpriteDim
 	ld a, $66
@@ -96,11 +104,6 @@ InitWildBattle:
 	call LoadMonFrontSprite ; load ghost sprite
 	pop af
 	ld [wcf91], a
-	jr .spriteLoaded
-
-.isNoGhost
-	ld de, vFrontPic
-	call LoadMonFrontSprite ; load mon sprite
 .spriteLoaded
 	xor a
 	ld [wTrainerClass], a
