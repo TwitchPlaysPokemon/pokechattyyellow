@@ -59,6 +59,9 @@ PokemonTower6Script4:
 	ld a, [wBattleResult]
 	and a
 	jr nz, .asm_60b82
+	ld a, [wEscapedFromBattle]
+	and a
+	jr nz, .asm_60b82
 	SetEvent EVENT_BEAT_GHOST_MAROWAK
 	ld a, $7
 	ld [hSpriteIndexOrTextID], a
