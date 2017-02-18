@@ -99,7 +99,7 @@ OverworldLoopLessDelay::
 	call IsPlayerCharacterBeingControlledByGame
 	jr nz, .checkForOpponent
 	call CheckForHiddenObjectOrBookshelfOrCardKeyDoor
-	ld a, [$ffeb]
+	ld a, [hItemAlreadyFound]
 	and a
 	jp z, OverworldLoop ; jump if a hidden object or bookshelf was found, but not if a card key door was found
 	xor a
@@ -2014,7 +2014,7 @@ LoadMapData::
 	ld a, $01
 	ld [wUpdateSpritesEnabled], a
 	call EnableLCD
-	ld b, $09
+	ld b, SET_PAL_OVERWORLD
 	call RunPaletteCommand
 	call LoadPlayerSpriteGraphics
 	ld a, [wd732]
@@ -2114,9 +2114,9 @@ SwitchToMapRomBank::
 	ld hl, MapHeaderBanks
 	add hl, bc
 	ld a, [hl]
-	ld [$ffe8], a ; save map ROM bank
+	ld [hMapROMBank], a ; save map ROM bank
 	call BankswitchBack
-	ld a, [$ffe8]
+	ld a, [hMapROMBank]
 	call Bankswitch
 	pop bc
 	pop hl
@@ -2216,9 +2216,9 @@ InitSprites::
 	ld a, [hli]
 	ld [de], a ; store movement byte 1 at C2X6
 	ld a, [hli]
-	ld [$ff8d], a ; save movement byte 2
+	ld [hLoadSpriteTemp1], a ; save movement byte 2
 	ld a, [hli]
-	ld [$ff8e], a ; save text ID and flags byte
+	ld [hLoadSpriteTemp2], a ; save text ID and flags byte
 	push bc
 	call LoadSprite
 	pop bc
@@ -2264,16 +2264,16 @@ LoadSprite::
 	ld b, $0
 	ld hl, wMapSpriteData
 	add hl, bc
-	ld a, [$ff8d]
+	ld a, [hLoadSpriteTemp1]
 	ld [hli], a ; store movement byte 2 in byte 0 of sprite entry
-	ld a, [$ff8e]
+	ld a, [hLoadSpriteTemp2]
 	ld [hl], a ; this appears pointless, since the value is overwritten immediately after
-	ld a, [$ff8e]
-	ld [$ff8d], a
+	ld a, [hLoadSpriteTemp2]
+	ld [hLoadSpriteTemp1], a
 	and $3f
 	ld [hl], a ; store text ID in byte 1 of sprite entry
 	pop hl
-	ld a, [$ff8d]
+	ld a, [hLoadSpriteTemp1]
 	bit 6, a
 	jr nz, .trainerSprite
 	bit 7, a
@@ -2291,26 +2291,26 @@ LoadSprite::
 
 .trainerSprite
 	ld a, [hli]
-	ld [$ff8d], a ; save trainer class
+	ld [hLoadSpriteTemp1], a ; save trainer class
 	ld a, [hli]
-	ld [$ff8e], a ; save trainer number (within class)
+	ld [hLoadSpriteTemp2], a ; save trainer number (within class)
 	push hl
 	ld hl, wMapSpriteExtraData
 	add hl, bc
-	ld a, [$ff8d]
+	ld a, [hLoadSpriteTemp1]
 	ld [hli], a ; store trainer class in byte 0 of the entry
-	ld a, [$ff8e]
+	ld a, [hLoadSpriteTemp2]
 	ld [hl], a ; store trainer number in byte 1 of the entry
 	pop hl
 	ret
 
 .itemBallSprite
 	ld a, [hli]
-	ld [$ff8d], a ; save item number
+	ld [hLoadSpriteTemp1], a ; save item number
 	push hl
 	ld hl, wMapSpriteExtraData
 	add hl, bc
-	ld a, [$ff8d]
+	ld a, [hLoadSpriteTemp1]
 	ld [hli], a ; store item number in byte 0 of the entry
 	xor a
 	ld [hl], a ; zero byte 1, since it is not used

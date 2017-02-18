@@ -68,9 +68,9 @@ OakSpeech:
 	call SpecialWarpIn
 	xor a
 	ld [hTilesetType], a
-	ld a, [wd732]
-	bit 1, a ; possibly a debug mode bit
-	jp nz, .skipChoosingNames
+	; ld a, [wd732]
+	; bit 1, a ; possibly a debug mode bit
+	; jp nz, .skipChoosingNames
 
 	; Fade in Oak's pic
 	ld de, ProfOakPic

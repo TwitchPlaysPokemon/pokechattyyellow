@@ -1292,9 +1292,9 @@ LoadItemList::
 DisplayPokemonCenterDialogue::
 ; zeroing these doesn't appear to serve any purpose
 	xor a
-	ld [$ff8b], a
-	ld [$ff8c], a
-	ld [$ff8d], a
+	ld [hNurse1], a
+	ld [hNurse2], a
+	ld [hNurse3], a
 
 	inc hl
 	homecall DisplayPokemonCenterDialogue_
@@ -1403,7 +1403,7 @@ SubtractAmountPaidFromMoney::
 ; adds the amount the player sold to their money
 AddAmountSoldToMoney::
 	ld de, wPlayerMoney + 2
-	ld hl, $ffa1 ; total price of items
+	ld hl, hMoney + 2 ; total price of items
 	ld c, 3 ; length of money in bytes
 	predef AddBCDPredef ; add total price to money
 	ld a, MONEY_BOX
@@ -3515,12 +3515,7 @@ GetName::
 	ld hl, NamePointers
 	add hl, de
 	ld a, [hli]
-	ld [$ff96], a
-	ld a, [hl]
-	ld [$ff95], a
-	ld a, [$ff95]
-	ld h, a
-	ld a, [$ff96]
+	ld h, [hl]
 	ld l, a
 	ld a, [wd0b5]
 	ld b, a
@@ -3893,11 +3888,11 @@ CalcStat::
 	call Multiply
 	ld a, [hld]
 	ld d, a
-	ld a, [$ff98]
+	ld a, [hProduct+2]
 	sub d
 	ld a, [hli]
 	ld d, a
-	ld a, [$ff97]
+	ld a, [hProduct+1]
 	sbc d               ; test if (current stat exp bonus)^2 < stat exp
 	jr c, .statExpLoop
 .statExpDone

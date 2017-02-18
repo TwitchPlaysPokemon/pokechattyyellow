@@ -68,7 +68,7 @@ GraphicArtistText:
 	call Delay3
 	call GBPalNormal
 	ld hl, CeladonMansion3Text_4876b
-	ld a, [$ffdb]
+	ld a, [hPrinterError]
 	and a
 	jr nz, .print
 	ld hl, CeladonMansion3Text_48766

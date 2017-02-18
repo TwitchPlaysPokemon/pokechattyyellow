@@ -24,12 +24,12 @@ ScaleFirstThreeSpriteColumnsByTwo:
 .columnInnerLoop
 	push bc
 	ld a, [de]
-	ld bc, -(7*8)+1       ; $ffc9, scale lower nybble and seek to previous output column
+	ld bc, -(7*8)+1       ; scale lower nybble and seek to previous output column
 	call ScalePixelsByTwo
 	ld a, [de]
 	dec de
 	swap a
-	ld bc, 7*8+1-2        ; $37, scale upper nybble and seek back to current output column and to the next 2 rows
+	ld bc, 7*8+1-2        ; scale upper nybble and seek back to current output column and to the next 2 rows
 	call ScalePixelsByTwo
 	pop bc
 	dec c
@@ -39,7 +39,7 @@ ScaleFirstThreeSpriteColumnsByTwo:
 	dec de
 	dec de
 	ld a, b
-	ld bc, -7*8 ; $ffc8, skip one output column (which has already been written along with the current one)
+	ld bc, -7*8 ; skip one output column (which has already been written along with the current one)
 	add hl, bc
 	ld b, a
 	dec b

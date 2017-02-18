@@ -31,7 +31,7 @@ VBlank::
 	call VBlankCopy
 	call VBlankCopyDouble
 	call UpdateMovingBgTiles
-	call $ff80 ; hOAMDMA
+	call hDMARoutine
 	callbs PrepareOAMData
 
 	; VBlank-sensitive operations end.

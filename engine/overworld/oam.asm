@@ -105,7 +105,7 @@ PrepareOAMData:
 	cp $80
 	jr c, .asm_4a1c
 	ld b, a
-	ld a, [$fffc]
+	ld a, [hLoadPikachuSpriteIntoTile4C]
 	add b
 .asm_4a1c
 	ld [de], a ; tile id

@@ -655,9 +655,9 @@ OaksLabScript_1c897:
 
 OaksLabScript_1c8b9:
 	ld a, $7c
-	ld [$ffeb], a
+	ld [hCurSpriteScreenY], a
 	ld a, $8
-	ld [$ffee], a
+	ld [hCurSpriteMapX], a
 	ld a, [wYCoord]
 	cp 3
 	jr nz, .asm_1c8d3
@@ -689,9 +689,9 @@ OaksLabScript_1c8b9:
 .asm_1c8f4
 	ld a, $20
 .asm_1c8f6
-	ld [$ffec], a
+	ld [hCurSpriteScreenX], a
 	ld a, b
-	ld [$ffed], a
+	ld [hCurSpriteMapY], a
 	ld a, $1
 	ld [wSpriteIndex], a
 	call SetSpritePosition1

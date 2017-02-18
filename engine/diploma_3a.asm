@@ -44,7 +44,7 @@ _DisplayDiploma:
 	ld b, SET_PAL_GENERIC
 	call RunPaletteCommand
 	ld a, $01
-	ld [$ffba], a
+	ld [hBGMapMode], a
 	call Delay3
 	call GBPalNormal
 	ret

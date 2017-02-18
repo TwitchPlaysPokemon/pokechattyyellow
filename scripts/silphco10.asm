@@ -15,7 +15,7 @@ SilphCo10Script_5a14f:
 	ret z
 	ld hl, SilphCo10GateCoords
 	call SilphCo2Script_59d43
-	call SilphCo10Text_5a176
+	call SilphCo10CheckUnlockedDoor
 	CheckEvent EVENT_SILPH_CO_10_UNLOCKED_DOOR
 	ret nz
 	ld a, $54
@@ -27,8 +27,8 @@ SilphCo10GateCoords:
 	db $04, $05
 	db $FF
 
-SilphCo10Text_5a176:
-	ld a, [$ffe0]
+SilphCo10CheckUnlockedDoor:
+	ld a, [hUnlockedSilphDoor]
 	and a
 	ret z
 	SetEvent EVENT_SILPH_CO_10_UNLOCKED_DOOR

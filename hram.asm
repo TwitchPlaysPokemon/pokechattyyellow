@@ -1,3 +1,5 @@
+hDMARoutine EQU $FF80
+
 hSoftReset EQU $FF8A
 ; Initialized to 16.
 ; Decremented each input iteration if the player
@@ -38,6 +40,10 @@ hSpriteDataOffset EQU $FF8B
 hMapStride EQU $FF8B
 hMapWidth  EQU $FF8C
 
+hNurse1 EQU $FF8B
+hNurse2 EQU $FF8C
+hNurse3 EQU $FF8D
+
 hNorthSouthConnectionStripWidth EQU $FF8B
 hNorthSouthConnectedMapWidth    EQU $FF8C
 
@@ -71,6 +77,11 @@ hLoadSpriteTemp2 EQU $FF8E
 
 hHalveItemPrices EQU $FF8E
 
+hCurMapSpriteIndex EQU $FF8F
+hCurMapSpriteDeltaY EQU $FF90
+hCurMapSpriteDeltaX EQU $FF91
+hCurMapSpriteDistance EQU $FF92
+
 hSpriteOffset2 EQU $FF8F
 
 hOAMBufferOffset EQU $FF90
@@ -84,14 +95,18 @@ hSpritePriority EQU $FF94
 
 ; 2 bytes
 hSignCoordPointer EQU $FF95
+hNamePointer EQU $FF95
 
 hNPCMovementDirections2Index EQU $FF95
+
+hSerialPrintPartyListNameIdx EQU $FF95
 
 ; CalcPositionOfPlayerRelativeToNPC
 hNPCSpriteOffset EQU $FF95
 
 ; temp value used when swapping bytes
 hSwapTemp EQU $FF95
+hSwapTempQuantity EQU $FF96
 
 hExperience EQU $FF96 ; 3 bytes, big endian
 
@@ -118,6 +133,9 @@ hSavedNumToPrint   EQU $FF9C ; 3 bytes
 ; distance in steps between NPC and player
 hNPCPlayerYDistance EQU $FF95
 hNPCPlayerXDistance EQU $FF96
+
+hShakeScreenWY EQU $FF96
+hShakeScreenWX EQU $FF97
 
 hFindPathNumSteps EQU $FF97
 
@@ -199,6 +217,8 @@ hBGMapThird EQU $FFBB
 ; the destination address of the automatic background transfer
 hBGMapAddress EQU $FFBC ; 2 bytes
 
+hReplaceTileBlockMapRedrawRowIDX EQU $FFBE
+
 ; temporary storage for stack pointer during memory transfers that use pop
 ; to increase speed
 hSPBuffer EQU $FFBF ; 2 bytes
@@ -265,11 +285,18 @@ hMovingBGTilesCounter1 EQU $FFD8
 
 hCurrentSpriteOffset EQU $FFDA ; multiple of $10
 
+hCoordIndex EQU $FFDB
+
+hPrinterError EQU $FFDB
+
 hItemCounter EQU $FFDB
 
 hCanceledPrinting EQU $FFDB
 
 hGymGateIndex EQU $FFDB
+hGymGateCorrectAnswer EQU $FFDC
+
+hIsCardKeyDoor EQU $FFDB
 
 hGymTrashCanRandNumMask EQU $FFDB
 
@@ -292,6 +319,15 @@ hItemToRemoveIndex EQU $FFDC
 hVendingMachineItem  EQU $FFDB
 hVendingMachinePrice EQU $FFDC ; 3-byte BCD number
 
+hBoulderDirection EQU $FFDB
+hBoulderY EQU $FFDC
+hBoulderX EQU $FFDD
+
+hMissableObjectIndex EQU $FFDB
+
+hUnlockedSilphDoor EQU $FFE0
+hGymGateIndex2 EQU $FFE0
+
 ; the first tile ID in a sequence of tile IDs that increase by 1 each step
 hStartTileID EQU $FFE1
 
@@ -302,6 +338,8 @@ hObjectIsHidden EQU $FFE5
 hDividend2 EQU $FFE5
 hDivisor2  EQU $FFE6
 hQuotient2 EQU $FFE7
+
+hMapROMBank EQU $FFE8
 
 hSpriteVRAMSlotAndFacing EQU $FFE9
 

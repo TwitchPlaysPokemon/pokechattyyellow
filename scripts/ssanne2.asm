@@ -30,7 +30,7 @@ SSAnne2Script0:
 	ld a, MUSIC_MEET_RIVAL
 	call PlayMusic
 	ld a, [wCoordIndex]
-	ld [$ffdb], a
+	ld [hCoordIndex], a
 	ld a, HS_SS_ANNE_2_RIVAL
 	ld [wMissableObjectIndex], a
 	predef ShowObject
@@ -42,7 +42,7 @@ SSAnne2Script0:
 	ld [hJoyHeld], a
 	ld a, $f0
 	ld [wJoyIgnore], a
-	ld a, [$ffdb]
+	ld a, [hCoordIndex]
 	cp $2
 	jr nz, .asm_61400
 	ld de, MovementData_6140c

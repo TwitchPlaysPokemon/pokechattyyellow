@@ -10,8 +10,8 @@ SpecialWarpIn:
 	jr .next2
 
 .next
-	bit 1, [hl]
-	call nz, EmptyFunc
+	; bit 1, [hl]
+	; call nz, EmptyFunc
 	ld a, 0
 .next2
 	ld b, a
@@ -51,8 +51,8 @@ LoadSpecialWarpData:
 
 .notColosseum
 	ld a, [wd732]
-	bit 1, a
-	jr nz, .notFirstMap
+	; bit 1, a
+	; jr nz, .notFirstMap
 	bit 2, a
 	jr nz, .notFirstMap
 	ld hl, FirstMapSpec

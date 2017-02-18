@@ -17,7 +17,7 @@ IsPlayerStandingOnWarp:
 	ld a, [hli] ; target warp
 	ld [wDestinationWarpID], a
 	ld a, [hl] ; target map
-	ld [$ff8b], a
+	ld [hWarpDestinationMap], a
 	ld hl, wd736
 	set 2, [hl] ; standing on warp flag
 	ret

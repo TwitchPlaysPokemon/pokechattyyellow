@@ -108,13 +108,13 @@ ViridianCityScript_190db:
 
 ViridianCityScript_190ef:
 	ld a, [wSpriteStateData1 + 3 * $10 + 4]
-	ld [$ffeb], a
+	ld [hCurSpriteScreenY], a
 	ld a, [wSpriteStateData1 + 3 * $10 + 6]
-	ld [$ffec], a
+	ld [hCurSpriteScreenX], a
 	ld a, [wSpriteStateData2 + 3 * $10 + 4]
-	ld [$ffed], a
+	ld [hCurSpriteMapY], a
 	ld a, [wSpriteStateData2 + 3 * $10 + 5]
-	ld [$ffee], a
+	ld [hCurSpriteMapX], a
 	ret
 
 ViridianCityScript4:

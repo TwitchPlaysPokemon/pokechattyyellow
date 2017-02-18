@@ -73,7 +73,7 @@ RedrawMapView:
 	ld a, h
 	ld [wBuffer + 1], a ; this copy of the address is not used
 	ld a, 2
-	ld [$ffbe], a
+	ld [hReplaceTileBlockMapRedrawRowIDX], a
 	ld c, 9 ; number of rows of 2x2 tiles (this covers the whole screen)
 .redrawRowLoop
 	push bc
@@ -81,15 +81,15 @@ RedrawMapView:
 	push hl
 	ld hl, wTileMap - 2 * SCREEN_WIDTH
 	ld de, SCREEN_WIDTH
-	ld a, [$ffbe]
+	ld a, [hReplaceTileBlockMapRedrawRowIDX]
 .calcWRAMAddrLoop
 	add hl, de
 	dec a
 	jr nz, .calcWRAMAddrLoop
 	call CopyToRedrawRowOrColumnSrcTiles
 	pop hl
-	ld de, $20
-	ld a, [$ffbe]
+	ld de, SCREEN_WIDTH
+	ld a, [hReplaceTileBlockMapRedrawRowIDX]
 	ld c, a
 .calcVRAMAddrLoop
 	add hl, de
@@ -104,7 +104,7 @@ RedrawMapView:
 	ld a, REDRAW_ROW
 	ld [hRedrawRowOrColumnMode], a
 	call DelayFrame
-	ld hl, $ffbe
+	ld hl, hReplaceTileBlockMapRedrawRowIDX
 	inc [hl]
 	inc [hl]
 	pop hl

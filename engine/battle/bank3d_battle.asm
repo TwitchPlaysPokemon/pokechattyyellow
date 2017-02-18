@@ -10,13 +10,13 @@ InitOpponent:
 	jr InitOpponent_continue
 
 InitBattle_check_b_button:
-	ld a, [wd732]
-	bit 1, a
-	jr z, .skip_b_button_check
-	ld a, [hJoyHeld]
-	bit BIT_B_BUTTON, a ; B button pressed?
-	ret nz
-.skip_b_button_check
+	; ld a, [wd732]
+	; bit 1, a
+	; jr z, .skip_b_button_check
+	; ld a, [hJoyHeld]
+	; bit BIT_B_BUTTON, a ; B button pressed?
+	; ret nz
+; .skip_b_button_check
 	ld a, [wNumberOfNoRandomBattleStepsLeft]
 	and a
 	ret nz

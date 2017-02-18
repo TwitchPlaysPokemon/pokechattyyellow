@@ -55,14 +55,14 @@ SilphCo7Text_51bc8:
 	ld a, [hl]
 	ld c, a
 	xor a
-	ld [$ffe0], a
+	ld [hUnlockedSilphDoor], a
 	pop hl
 .asm_51bd4
 	ld a, [hli]
 	cp $ff
 	jr z, .asm_51bf0
 	push hl
-	ld hl, $ffe0
+	ld hl, hUnlockedSilphDoor
 	inc [hl]
 	pop hl
 	cp b
@@ -82,12 +82,12 @@ SilphCo7Text_51bc8:
 
 .asm_51bf0
 	xor a
-	ld [$ffe0], a
+	ld [hUnlockedSilphDoor], a
 	ret
 
 SilphCo7Text_51bf4:
 	EventFlagAddress hl, EVENT_SILPH_CO_7_UNLOCKED_DOOR1
-	ld a, [$ffe0]
+	ld a, [hUnlockedSilphDoor]
 	and a
 	ret z
 	cp $1

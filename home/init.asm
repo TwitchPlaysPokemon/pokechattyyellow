@@ -53,6 +53,7 @@ rLCDC_DEFAULT EQU %11100011
 
 	call ClearVram
 
+	; clear HRAM
 	ld hl, $ff80
 	ld bc, $fffe - $ff80
 	call FillMemory

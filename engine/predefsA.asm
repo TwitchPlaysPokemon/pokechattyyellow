@@ -21,7 +21,7 @@ PredefShakeScreenVertically:
 	ld [wDisableVBlankWYUpdate], a
 	xor a
 .loop
-	ld [$ff96], a
+	ld [hShakeScreenWY], a
 	call .MutateWY
 	call .MutateWY
 	dec b
@@ -32,9 +32,9 @@ PredefShakeScreenVertically:
 	ret
 
 .MutateWY ; 2bd81 (a:7d81)
-	ld a, [$ff96]
+	ld a, [hShakeScreenWY]
 	xor b
-	ld [$ff96], a
+	ld [hShakeScreenWY], a
 	ld [rWY], a
 	ld c, 3
 	jp DelayFrames
@@ -45,7 +45,7 @@ PredefShakeScreenHorizontally:
 	call GetPredefRegisters
 	xor a
 .loop
-	ld [$ff97], a
+	ld [hShakeScreenWX], a
 	call .MutateWX
 	ld c, 1
 	call DelayFrames
@@ -60,9 +60,9 @@ PredefShakeScreenHorizontally:
 	ret
 
 .MutateWX ; 2bda7 (a:4da7)
-	ld a, [$ff97]
+	ld a, [hShakeScreenWX]
 	xor b
-	ld [$ff97], a
+	ld [hShakeScreenWX], a
 	bit 7, a
 	jr z, .skipZeroing
 	xor a ; zero a if it's negative

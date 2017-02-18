@@ -508,7 +508,7 @@ MainInBattleLoop:
 	jr .enemyMovesFirst ; if enemy is faster
 
 .speedEqual ; 50/50 chance for both players
-	ld a, [$ffaa]
+	ld a, [hSerialConnectionStatus]
 	cp $2
 	jr z, .invertOutcome
 	call BattleRandom

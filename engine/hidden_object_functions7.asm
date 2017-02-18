@@ -135,7 +135,7 @@ CinnabarGymQuiz:
 	pop af
 	and $f0
 	swap a
-	ld [$ffdc], a
+	ld [hGymGateCorrectAnswer], a
 	ld a, [hGymGateIndex]
 	ld hl, CinnabarGymQuizIntroText
 	cp 1
@@ -205,7 +205,7 @@ CinnabarQuizQuestionsText6:
 
 CinnabarGymQuiz_1ea92:
 	call YesNoChoice
-	ld a, [$ffdc]
+	ld a, [hGymGateCorrectAnswer]
 	ld c, a
 	ld a, [wCurrentMenuItem]
 	cp c
@@ -213,10 +213,10 @@ CinnabarGymQuiz_1ea92:
 	ld hl, wCurrentMapScriptFlags
 	set 5, [hl]
 	ld a, [hGymGateIndex]
-	ld [$ffe0], a
+	ld [hGymGateIndex2], a
 	ld hl, CinnabarGymQuizCorrectText
 	call PrintText
-	ld a, [$ffe0]
+	ld a, [hGymGateIndex2]
 	AdjustEventBit EVENT_CINNABAR_GYM_GATE0_UNLOCKED, 0
 	ld c, a
 	ld b, FLAG_SET
@@ -253,7 +253,7 @@ CinnabarGymQuizCorrectText:
 	TX_BUTTON_SOUND
 	TX_ASM
 
-	ld a, [$ffe0]
+	ld a, [hGymGateIndex2]
 	AdjustEventBit EVENT_CINNABAR_GYM_GATE0_UNLOCKED, 0
 	ld c, a
 	ld b, FLAG_TEST
@@ -297,7 +297,7 @@ UpdateCinnabarGymGateTileBlocks_:
 	ld [wGymGateTileBlock], a
 	push bc
 	ld a, [hGymGateIndex]
-	ld [$ffe0], a
+	ld [hGymGateIndex2], a
 	AdjustEventBit EVENT_CINNABAR_GYM_GATE0_UNLOCKED, 0
 	ld c, a
 	ld b, FLAG_TEST

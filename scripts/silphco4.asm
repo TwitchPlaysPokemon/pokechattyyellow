@@ -45,14 +45,14 @@ SilphCo4Script_19d5d:
 	ld a, [hl]
 	ld c, a
 	xor a
-	ld [$ffe0], a
+	ld [hUnlockedSilphDoor], a
 	pop hl
 .asm_19d69
 	ld a, [hli]
 	cp $ff
 	jr z, .asm_19d85
 	push hl
-	ld hl, $ffe0
+	ld hl, hUnlockedSilphDoor
 	inc [hl]
 	pop hl
 	cp b
@@ -72,12 +72,12 @@ SilphCo4Script_19d5d:
 
 .asm_19d85
 	xor a
-	ld [$ffe0], a
+	ld [hUnlockedSilphDoor], a
 	ret
 
 SilphCo4Script_19d89:
 	EventFlagAddress hl, EVENT_SILPH_CO_4_UNLOCKED_DOOR1
-	ld a, [$ffe0]
+	ld a, [hUnlockedSilphDoor]
 	and a
 	ret z
 	cp $1

@@ -577,7 +577,7 @@ TradeCenter_SelectMon:
 	Coorda 1, 16
 .cancelMenuItem_JoypadLoop
 	call JoypadLowSensitivity
-	ld a, [$ffb5]
+	ld a, [hJoy5]
 	and a ; pressed anything?
 	jr z, .cancelMenuItem_JoypadLoop
 	bit 0, a ; A button pressed?
@@ -690,14 +690,14 @@ TradeCenter_PrintPartyListNames:
 	push de
 	push hl
 	ld a, c
-	ld [$ff95], a
+	ld [hSerialPrintPartyListNameIdx], a
 	call GetMonName
 	pop hl
 	call PlaceString
 	pop de
 	inc de
 	pop hl
-	ld bc, 20
+	ld bc, SCREEN_WIDTH
 	add hl, bc
 	pop bc
 	inc c
@@ -946,7 +946,7 @@ CableClub_Run:
 	ld [wGrassRate], a
 	inc a ; LINK_STATE_IN_CABLE_CLUB
 	ld [wLinkState], a
-	ld [$ffb5], a
+	ld [hJoy5], a
 	ld a, 10
 	ld [wAudioFadeOutControl], a
 	ld a, BANK(Music_Celadon)

@@ -24,7 +24,7 @@ PrintBookshelfText:
 	pop af
 	call PrintPredefTextID
 	xor a
-	ld [$ffdb], a
+	ld [hIsCardKeyDoor], a
 	ret
 
 .nextBookshelfEntry1
@@ -35,7 +35,7 @@ PrintBookshelfText:
 
 .noMatch
 	ld a, $ff
-	ld [$ffdb], a
+	ld [hIsCardKeyDoor], a
 	jpba PrintCardKeyText
 
 ; format: db tileset id, bookshelf tile id, text id

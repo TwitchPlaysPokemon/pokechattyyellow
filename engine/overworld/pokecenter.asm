@@ -43,10 +43,10 @@ DisplayPokemonCenterDialogue_:
 	jr nz, .playerPikachuNotOnScreen
 	call DisablePikachuOverworldSpriteDrawing
 	callab IsStarterPikachuInOurParty
-	call c, Func_6eaa
+	call c, Yellow_NurseJoyFacesUp
 .playerPikachuNotOnScreen
 	lb bc, 1, 8
-	call Func_6ebb
+	call Pokecenter_ApplyFacing
 	ld c, 30
 	call DelayFrames
 	callba AnimateHealingMachine ; do the healing machine animation
@@ -62,19 +62,19 @@ DisplayPokemonCenterDialogue_:
 	call IsPikachuPositionFrozenOnMap
 	jr nz, .doNotReturnPikachu
 	callab IsStarterPikachuInOurParty
-	call c, Func_6eaa
+	call c, Yellow_NurseJoyFacesUp
 	ld a, $5
 	ld [wPikachuSpawnState], a
 	call EnablePikachuOverworldSpriteDrawing
 .doNotReturnPikachu
 	lb bc, 1, 0
-	call Func_6ebb
+	call Pokecenter_ApplyFacing
 	ld hl, PokemonFightingFitText
 	call PrintText
 	callab IsStarterPikachuInOurParty
 	jr nc, .notInParty
 	lb bc, 15, 0
-	call Func_6ebb
+	call Pokecenter_ApplyFacing
 .notInParty
 	call LoadCurrentMapView
 	call Delay3
@@ -99,7 +99,7 @@ DisplayPokemonCenterDialogue_:
 	call UpdateSprites
 	ret
 
-Func_6eaa:
+Yellow_NurseJoyFacesUp:
 	ld a, $1
 	ld [hSpriteIndexOrTextID], a
 	ld a, $4
@@ -109,7 +109,7 @@ Func_6eaa:
 	call DelayFrames
 	ret
 
-Func_6ebb:
+Pokecenter_ApplyFacing:
 	ld a, b
 	ld [hSpriteIndexOrTextID], a
 	ld a, c
@@ -129,7 +129,7 @@ PokemonCenterWelcomeText:
 	db "@"
 
 ShallWeHealYourPokemonText:
-	db $a
+	TX_WAIT_30
 	TX_FAR _ShallWeHealYourPokemonText
 	db "@"
 
@@ -142,7 +142,7 @@ PokemonFightingFitText:
 	db "@"
 
 PokemonCenterFarewellText:
-	db $a
+	TX_WAIT_30
 	TX_FAR _PokemonCenterFarewellText
 	db "@"
 

@@ -25,34 +25,34 @@ CheckForBoulderCollisionWithSprites:
 	ld hl, wSpriteStateData2 + $14
 	add hl, de
 	ld a, [hli] ; map Y position
-	ld [$ffdc], a
+	ld [hBoulderY], a
 	ld a, [hl] ; map X position
-	ld [$ffdd], a
+	ld [hBoulderX], a
 	ld a, [wNumSprites]
 	ld c, a
 	ld de, $f
 	ld hl, wSpriteStateData2 + $14
-	ld a, [$ffdb]
+	ld a, [hBoulderDirection]
 	and $3 ; facing up or down?
 	jr z, .pushingHorizontallyLoop
 .pushingVerticallyLoop
 	inc hl
-	ld a, [$ffdd]
+	ld a, [hBoulderX]
 	cp [hl]
 	jr nz, .nextSprite1 ; if X coordinates don't match
 	dec hl
 	ld a, [hli]
 	ld b, a
-	ld a, [$ffdb]
+	ld a, [hBoulderDirection]
 	rrca
 	jr c, .pushingDown
 ; pushing up
-	ld a, [$ffdc]
+	ld a, [hBoulderY]
 	dec a
 	jr .compareYCoords
 
 .pushingDown
-	ld a, [$ffdc]
+	ld a, [hBoulderY]
 	inc a
 .compareYCoords
 	cp b
@@ -66,20 +66,20 @@ CheckForBoulderCollisionWithSprites:
 .pushingHorizontallyLoop
 	ld a, [hli]
 	ld b, a
-	ld a, [$ffdc]
+	ld a, [hBoulderY]
 	cp b
 	jr nz, .nextSprite2
 	ld b, [hl]
-	ld a, [$ffdb]
+	ld a, [hBoulderDirection]
 	bit 2, a
 	jr nz, .pushingLeft
 ; pushing right
-	ld a, [$ffdd]
+	ld a, [hBoulderX]
 	inc a
 	jr .compareXCoords
 
 .pushingLeft
-	ld a, [$ffdd]
+	ld a, [hBoulderX]
 	dec a
 .compareXCoords
 	cp b

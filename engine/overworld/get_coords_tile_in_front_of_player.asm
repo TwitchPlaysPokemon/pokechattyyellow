@@ -42,8 +42,9 @@ _GetTileAndCoordsInFrontOfPlayer:
 	ret
 
 GetTileTwoStepsInFrontOfPlayer:
+; Or: GetTileInFrontOfBoulderBeingPushedByPlayer
 	xor a
-	ld [$ffdb], a
+	ld [hBoulderDirection], a
 	ld hl, wYCoord
 	ld a, [hli]
 	ld d, a
@@ -52,7 +53,7 @@ GetTileTwoStepsInFrontOfPlayer:
 	and a ; cp SPRITE_FACING_DOWN
 	jr nz, .notFacingDown
 ; facing down
-	ld hl, $ffdb
+	ld hl, hBoulderDirection
 	set 0, [hl]
 	aCoord 8, 13
 	inc d
@@ -62,7 +63,7 @@ GetTileTwoStepsInFrontOfPlayer:
 	cp SPRITE_FACING_UP
 	jr nz, .notFacingUp
 ; facing up
-	ld hl, $ffdb
+	ld hl, hBoulderDirection
 	set 1, [hl]
 	aCoord 8, 5
 	dec d
@@ -72,7 +73,7 @@ GetTileTwoStepsInFrontOfPlayer:
 	cp SPRITE_FACING_LEFT
 	jr nz, .notFacingLeft
 ; facing left
-	ld hl, $ffdb
+	ld hl, hBoulderDirection
 	set 2, [hl]
 	aCoord 4, 9
 	dec e
@@ -82,7 +83,7 @@ GetTileTwoStepsInFrontOfPlayer:
 	cp SPRITE_FACING_RIGHT
 	jr nz, .storeTile
 ; facing right
-	ld hl, $ffdb
+	ld hl, hBoulderDirection
 	set 3, [hl]
 	aCoord 12, 9
 	inc e
