@@ -158,6 +158,7 @@ AnimatePikachuShadow:
 	ret
 
 PikachuMovementDatabase:
+	; func1, param, func2, param
 	db $01, 1 - 1, $00, 1 - 1 ; $00 start
 
 	db $03, $80, $01, 1 - 1 ; $01
@@ -764,6 +765,7 @@ SetPikachuFacing:
 	ret
 
 CheckPikachuStepTimer1:
+	; ***XXXXX + 1
 	ld hl, wPikachuStepTimer
 	inc [hl]
 	ld a, [wCurPikaMovementParam1]
@@ -775,7 +777,7 @@ CheckPikachuStepTimer1:
 	ret
 
 GetPikachuStepVectorMagnitude:
-	; *XX*****
+	; *XX***** + 1
 	ld a, [wCurPikaMovementParam1]
 	swap a
 	rrca
@@ -784,6 +786,7 @@ GetPikachuStepVectorMagnitude:
 	ret
 
 CheckPikachuStepTimer2:
+	; ****XXXX + 1
 	ld hl, wPikachuStepSubtimer
 	inc [hl]
 	ld a, [wCurPikaMovementParam2]

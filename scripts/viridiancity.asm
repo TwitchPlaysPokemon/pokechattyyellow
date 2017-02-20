@@ -19,17 +19,17 @@ ViridianCityScriptPointers:
 	dw ViridianCityScript10
 
 ViridianCityScript0:
-	call ViridianCityScript_1905b
-	call ViridianCityScript_190ab
+	call ViridianGymCheck
+	call ViridianGym_TryForcePlayerDown
 	ret
 
 ViridianCityScript1:
-	call ViridianCityScript_19162
+	call ViridianOldManCheck
 ViridianCityScript2:
-	call ViridianCityScript_1905b
+	call ViridianGymCheck
 	ret
 
-ViridianCityScript_1905b:
+ViridianGymCheck:
 	CheckEvent EVENT_VIRIDIAN_GYM_OPEN
 	ret nz
 	ld a, [wObtainedBadges]
@@ -70,7 +70,7 @@ ViridianCityScript6:
 	ld [wViridianCityCurScript], a
 	ret
 
-ViridianCityScript_190ab:
+ViridianGym_TryForcePlayerDown:
 	ld a, [wYCoord]
 	cp 9
 	ret nz
@@ -82,20 +82,20 @@ ViridianCityScript_190ab:
 	call DisplayTextID
 	xor a
 	ld [hJoyHeld], a
-	call ViridianCityScript_1914d
+	call ViridianGym_ForcePlayerDown
 	ld a, $5
 	ld [wViridianCityCurScript], a
 	ret
 
 ViridianCityScript3:
-	call ViridianCityScript_190ef
-	call ViridianCityScript_190db
+	call PushOldManSpriteCoords
+	call LoadOldManBattleData
 	ResetEvent EVENT_02F
 	ld a, $4
 	ld [wViridianCityCurScript], a
 	ret
 
-ViridianCityScript_190db:
+LoadOldManBattleData:
 	xor a
 	ld [wListScrollOffset], a
 	ld a, BATTLE_TYPE_OLD_MAN
@@ -106,7 +106,7 @@ ViridianCityScript_190db:
 	ld [wCurOpponent], a
 	ret
 
-ViridianCityScript_190ef:
+PushOldManSpriteCoords:
 	ld a, [wSpriteStateData1 + 3 * $10 + 4]
 	ld [hCurSpriteScreenY], a
 	ld a, [wSpriteStateData1 + 3 * $10 + 6]
@@ -118,7 +118,7 @@ ViridianCityScript_190ef:
 	ret
 
 ViridianCityScript4:
-	call ViridianCityScript_1912a
+	call PopOldManSpriteCoords
 	call UpdateSprites
 	call Delay3
 	SetEvent EVENT_02E
@@ -134,14 +134,14 @@ ViridianCityScript4:
 	ld [wViridianCityCurScript], a
 	ret
 
-ViridianCityScript_1912a:
-	ld a, [$ffeb]
+PopOldManSpriteCoords:
+	ld a, [hCurSpriteScreenY]
 	ld [wSpriteStateData1 + 3 * $10 + 4], a
-	ld a, [$ffec]
+	ld a, [hCurSpriteScreenX]
 	ld [wSpriteStateData1 + 3 * $10 + 6], a
-	ld a, [$ffed]
+	ld a, [hCurSpriteMapY]
 	ld [wSpriteStateData2 + 3 * $10 + 4], a
-	ld a, [$ffee]
+	ld a, [hCurSpriteMapX]
 	ld [wSpriteStateData2 + 3 * $10 + 5], a
 	ret
 
@@ -154,7 +154,7 @@ ViridianCityScript5:
 	ld [wViridianCityCurScript], a
 	ret
 
-ViridianCityScript_1914d:
+ViridianGym_ForcePlayerDown:
 	call StartSimulatingJoypadStates
 	ld a, $1
 	ld [wSimulatedJoypadStatesIndex], a
@@ -165,7 +165,7 @@ ViridianCityScript_1914d:
 	ld [wJoyIgnore], a
 	ret
 
-ViridianCityScript_19162:
+ViridianOldManCheck:
 	CheckEvent EVENT_02D
 	ret nz
 	ld a, [wYCoord]
@@ -184,13 +184,13 @@ ViridianCityScript_19162:
 	ld a, $8
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
-	ld a, D_UP | D_DOWN | D_LEFT | D_RIGHT | START | SELECT
+	ld a, $FF ^ (A_BUTTON | B_BUTTON)
 	ld [wJoyIgnore], a
 	ret
 
 ViridianCityScript7:
-	call ViridianCityScript_190ef
-	call ViridianCityScript_190db
+	call PushOldManSpriteCoords
+	call LoadOldManBattleData
 	SetEvent EVENT_02F
 	ld a, D_UP | D_DOWN | D_LEFT | D_RIGHT | START | SELECT
 	ld [wJoyIgnore], a
@@ -199,7 +199,7 @@ ViridianCityScript7:
 	ret
 
 ViridianCityScript8:
-	call ViridianCityScript_1912a
+	call PopOldManSpriteCoords
 	call UpdateSprites
 	call Delay3
 	SetEvent EVENT_02D
@@ -221,7 +221,7 @@ ViridianCityScript9:
 	ld a, [wXCoord]
 	cp 19
 	jr z, .asm_191e4
-	callab Func_f1a01
+	callab ViridianCity_MovePikachuOutOfOldMansWay
 	ld de, ViridianCityOldManMovementData1
 .asm_191e4
 	ld a, $8

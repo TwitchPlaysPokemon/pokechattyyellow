@@ -35,7 +35,7 @@ _UpdateSprites:
 UpdateNonPlayerSprite:
 	dec a
 	swap a
-	ld [$ff93], a  ; $10 * sprite#
+	ld [hCurMapSpriteRAMStructOffset], a  ; $10 * sprite#
 	ld a, [wNPCMovementScriptSpriteOffset] ; some sprite offset?
 	ld b, a
 	ld a, [hCurrentSpriteOffset]

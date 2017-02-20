@@ -81,6 +81,7 @@ hCurMapSpriteIndex EQU $FF8F
 hCurMapSpriteDeltaY EQU $FF90
 hCurMapSpriteDeltaX EQU $FF91
 hCurMapSpriteDistance EQU $FF92
+hCurMapSpriteRAMStructOffset EQU $FF93
 
 hSpriteOffset2 EQU $FF8F
 

@@ -203,7 +203,7 @@ ViridianCityText_f19fc:
 	TX_MARKOV _ViridianCityText14
 	db "@"
 
-Func_f1a01:
+ViridianCity_MovePikachuOutOfOldMansWay:
 	ld hl, Data_f1a0a
 	ld b, SPRITE_FACING_RIGHT
 	call TryApplyPikachuMovementData
