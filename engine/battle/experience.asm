@@ -309,11 +309,11 @@ DivideExpDataByNumMonsGainingExp:
 	dec c
 	jr nz, .countSetBitsLoop
 	cp $2
-	ret c ; return if only one mon is gaining exp
-	ld [wd11e], a ; store number of mons gaining exp
 	ld hl, wEnemyMonBaseStats
 	ld de, wTempEnemyMonBaseStats
-	ld c, wEnemyMonBaseExp + 1 - wEnemyMonBaseStats
+	ld bc, wEnemyMonBaseExp + 1 - wEnemyMonBaseStats
+	jp c, CopyData ; return if only one mon is gaining exp
+	ld [wd11e], a ; store number of mons gaining exp
 .divideLoop
 	xor a
 	ld [hDividend], a

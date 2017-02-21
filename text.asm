@@ -64,7 +64,7 @@ _GroundRoseText::
 	line "somewhere!"
 	done
 
-_BoulderText::
+__BoulderText::
 	text "This requires"
 	line "STRENGTH to move!"
 	done
@@ -2919,6 +2919,16 @@ _CannotGetOffHereText::
 	text "You can't get off"
 	line "here."
 	prompt
+
+AskStrengthText::
+	text "The rock is big,"
+	line "but the stunt"
+	cont "of the pocket"
+	cont "monster maybe"
+	cont "push it?"
+	cont "Can I use the"
+	cont "great STRENGTH?"
+	done
 
 _UsedStrengthText::
 	TX_RAM wStringBuffer

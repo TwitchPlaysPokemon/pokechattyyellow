@@ -462,6 +462,33 @@ HandleMenuInputPokemonSelectionDouble:
 	ld [wLastMenuItem], a
 	ret
 
+_BoulderText::
+	TX_ASM
+	ld a, [wObtainedBadges]
+	bit 3, a
+	ld hl, .Terminator
+	ret z
+	ld hl, .AskStrengthText
+	ret
+
+.Terminator
+	TX_FAR __BoulderText
+.Terminator2
+	db "@"
+
+.AskStrengthText
+	TX_FAR AskStrengthText
+	TX_ASM
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	ld hl, .Terminator2
+	ret nz
+	ld hl, wd728
+	set 0, [hl]
+	ld hl, Text_f5b17
+	ret
+
 PrintStrengthTxt:
 	ld hl, wd728
 	set 0, [hl]
@@ -488,6 +515,11 @@ TrySurfOW:
 	ret c
 	ld a, [wObtainedBadges]
 	bit 4, a
+	scf
+	ret z
+	call IsSurfingAllowed
+	ld a, [wd728]
+	bit 1, a
 	scf
 	ret z
 	callba AutoMapTextBox
