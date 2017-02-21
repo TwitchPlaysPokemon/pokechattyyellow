@@ -105,7 +105,7 @@ OverworldLoopLessDelay::
 	xor a
 	ld [wd436], a ; new yellow address
 	call IsSpriteOrSignInFrontOfPlayer
-	call Func_0ffe
+	call IsPlayerTalkingToPikachu_
 	ld a, [hSpriteIndexOrTextID]
 	and a
 	jp z, OverworldLoop
@@ -2175,7 +2175,7 @@ IsSpinning::
 	ret z ; no spinning
 	jpba LoadSpinnerArrowTiles ; spin while moving
 
-Func_0ffe::
+IsPlayerTalkingToPikachu_::
 	jpab IsPlayerTalkingToPikachu
 
 InitSprites::

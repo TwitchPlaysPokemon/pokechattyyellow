@@ -1,3 +1,11 @@
+AutoMapTextBox:
+	ld a, 1
+	ld [hSpriteIndexOrTextID], a
+	call DisplayTextIDInit
+	xor a
+	ld [hSpriteIndexOrTextID], a
+	ret
+
 ; function that performs initialization for DisplayTextID
 DisplayTextIDInit:
 	xor a

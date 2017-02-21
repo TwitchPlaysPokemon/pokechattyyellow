@@ -1048,16 +1048,11 @@ AnimationDelay10:
 ; calls a function with the turn flipped from player to enemy or vice versa
 ; input - hl - address of function to call
 CallWithTurnFlipped:
+	call .SwitchTurn
+	call FarJump_hl
+.SwitchTurn
 	ld a, [hBattleTurn]
-	push af
 	xor 1
-	ld [hBattleTurn], a
-	ld de, .returnAddress
-	push de
-	jp [hl]
-
-.returnAddress
-	pop af
 	ld [hBattleTurn], a
 	ret
 

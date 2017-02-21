@@ -109,9 +109,7 @@ StartMenu_Pokemon:
 
 .choseOutOfBattleMove
 	push hl
-	ld a, [wWhichPokemon]
-	ld hl, wPartyMonNicks
-	call GetPartyMonName
+	call GetPartyMonName2
 	pop hl
 	ld a, [hl]
 	dec a
@@ -141,9 +139,7 @@ StartMenu_Pokemon:
 	jp z, .newBadgeRequired
 	call CheckIfInOutsideMap
 	jr z, .canFly
-	ld a, [wWhichPokemon]
-	ld hl, wPartyMonNicks
-	call GetPartyMonName
+	call GetPartyMonName2
 	ld hl, .cannotFlyHereText
 	call PrintText
 	jp .loop
@@ -238,9 +234,7 @@ StartMenu_Pokemon:
 .teleport
 	call CheckIfInOutsideMap
 	jr z, .canTeleport
-	ld a, [wWhichPokemon]
-	ld hl, wPartyMonNicks
-	call GetPartyMonName
+	call GetPartyMonName2
 	ld hl, .cannotUseTeleportNowText
 	call PrintText
 	jp .loop

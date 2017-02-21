@@ -466,8 +466,6 @@ PrintStrengthTxt:
 	ld hl, wd728
 	set 0, [hl]
 	ld hl, Text_f5b17
-	call PrintText
-	ld hl, Text_f5b28
 	jp PrintText
 
 Text_f5b17:
@@ -476,10 +474,38 @@ Text_f5b17:
 	ld a, [wcf91]
 	call PlayCry
 	call Delay3
-	jp TextScriptEnd
+	ld hl, Text_f5b28
+	ret
 
 Text_f5b28:
 	TX_FAR _CanMoveBouldersText ; 2d:4193
+	db "@"
+
+TrySurfOW:
+	ld a, SURF
+	ld [wMoveNum], a
+	callba CheckIfAnyMonKnowsMove
+	ret c
+	ld a, [wObtainedBadges]
+	bit 4, a
+	scf
+	ret z
+	callba AutoMapTextBox
+	ld hl, .AskSurfText
+	call PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr nz, .done
+	call GetPartyMonName2
+	callba ItemUseSurfboard
+.done
+	call CloseTextDisplay
+	xor a
+	ret
+
+.AskSurfText
+	TX_FAR _AskSurfText
 	db "@"
 
 IsSurfingAllowed:

@@ -3038,6 +3038,11 @@ _ItemUseBallText06::
 	TX_RAM wEnemyMonNick
 	text "!@@"
 
+_AskSurfText::
+	text "The wave is small."
+	line "May is urf?"
+	done
+
 _SurfingGotOnText::
 	text "<PLAYER> got on"
 	line "@"
@@ -3411,6 +3416,12 @@ _NothingToCutText::
 	text "There isn't"
 	line "anything to CUT!"
 	prompt
+
+_AskCutText::
+	text "The tree will fall"
+	line "down! While"
+	cont "useing the saw?"
+	done
 
 _UsedCutText::
 	TX_RAM wStringBuffer

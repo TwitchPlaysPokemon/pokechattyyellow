@@ -1,3 +1,32 @@
+TryCutOW:
+	ld a, [wObtainedBadges]
+	bit 1, a
+	scf
+	ret z
+	ld a, CUT
+	ld [wMoveNum], a
+	callba CheckIfAnyMonKnowsMove
+	ret c
+	callba AutoMapTextBox
+	ld hl, .AskCutText
+	call PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr nz, .done
+	ld a, [wTileInFrontOfPlayer]
+	ld [wCutTile], a
+	call GetPartyMonName2
+	call FinishCutFunction
+.done
+	call CloseTextDisplay
+	xor a
+	ret
+
+.AskCutText
+	TX_FAR _AskCutText
+	db "@"
+
 UsedCut:
 	xor a
 	ld [wActionResultOrTookBattleTurn], a ; initialise to failure value
@@ -30,9 +59,7 @@ UsedCut:
 	ld [wCutTile], a
 	ld a, 1
 	ld [wActionResultOrTookBattleTurn], a ; used cut
-	ld a, [wWhichPokemon]
-	ld hl, wPartyMonNicks
-	call GetPartyMonName
+	call GetPartyMonName2
 	ld hl, wd730
 	set 6, [hl]
 	call GBPalWhiteOutWithDelay3
@@ -47,6 +74,7 @@ UsedCut:
 	call Delay3
 	xor a
 	ld [hWY], a
+FinishCutFunction:
 	ld hl, UsedCutText
 	call PrintText
 	call LoadScreenTilesFromBuffer2
@@ -63,7 +91,7 @@ UsedCut:
 	ld [wUpdateSpritesEnabled], a
 	ld a, SFX_CUT
 	call PlaySound
-	ld a, $90
+	ld a, SCREEN_HEIGHT_PIXELS
 	ld [hWY], a
 	call UpdateSprites
 	jp RedrawMapView

@@ -4808,7 +4808,7 @@ CheckForHiddenObjectOrBookshelfOrCardKeyDoor::
 .hiddenObjectNotFound
 	predef GetTileAndCoordsInFrontOfPlayer
 	callba PrintBookshelfText
-	ld a, [hGymTrashCanRandNumMask]
+	ld a, [hIsCardKeyDoor]
 	and a
 	jr z, .done
 .nothingFound
