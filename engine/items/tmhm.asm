@@ -38,7 +38,9 @@ CheckIfAnyMonKnowsMove:
 	ld a, [wWhichPokemon]
 	inc a
 	ld [wWhichPokemon], a
-	cp $86
+	res 7, a
+	ld hl, wPartyCount
+	cp [hl]
 	jr nz, .loop
 	scf
 	ret
