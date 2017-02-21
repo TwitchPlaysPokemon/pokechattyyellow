@@ -2939,7 +2939,7 @@ _CanMoveBouldersText::
 	TX_RAM wStringBuffer
 	text " can"
 	line "move boulders."
-	prompt
+	done
 
 _CurrentTooFastText::
 	text "The current is"

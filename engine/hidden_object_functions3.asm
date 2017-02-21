@@ -7,25 +7,23 @@ PrintBookshelfText:
 	jr nz, .checkOverworldTiles
 ; facing up
 	ld hl, BookshelfTileIDs
+	ld de, 1
 	call FindBookshelfID
 	jr c, .bookshelf
 .checkOverworldTiles
 	ld hl, OverworldTileIDs
+	ld de, 0
 	call FindBookshelfID
+	jr c, .cut
+	callba IsNextTileShoreOrWater
 	jr nc, .noMatch
-	ld a, [hl]
-	push af
 	call EnableAutoTextBoxDrawing
-	pop af
-	ld de, .Return
-	push de
-	and a
-	jr nz, .surf
-	jpba TryCutOW
+	callba TrySurfOW
+	jr .Return
 
-.surf
-	jpba TrySurfOW
-
+.cut
+	call EnableAutoTextBoxDrawing
+	callba TryCutOW
 .Return
 	ld a, 0
 	sbc 0
@@ -50,7 +48,7 @@ PrintBookshelfText:
 nextBookshelfEntry1
 	inc hl
 nextBookshelfEntry2
-	inc hl
+	add hl, de
 FindBookshelfID:
 	ld a, [hli]
 	cp $ff
@@ -90,8 +88,8 @@ bookshelf_tile: MACRO
 	db $FF
 
 OverworldTileIDs:
-	db OVERWORLD, $3d, 0
-	db GYM,       $50, 0
+	db OVERWORLD, $3d
+	db GYM,       $50
 	db $FF
 
 IndigoPlateauStatues:

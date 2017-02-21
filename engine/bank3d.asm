@@ -468,6 +468,13 @@ _BoulderText::
 	bit 3, a
 	ld hl, .Terminator
 	ret z
+	ld a, STRENGTH
+	ld [wMoveNum], a
+	push bc
+	callba CheckIfAnyMonKnowsMove
+	pop bc
+	ld hl, .Terminator
+	ret c
 	ld hl, .AskStrengthText
 	ret
 
@@ -484,25 +491,35 @@ _BoulderText::
 	and a
 	ld hl, .Terminator2
 	ret nz
-	ld hl, wd728
-	set 0, [hl]
-	ld hl, Text_f5b17
+	call GetPartyMonName2
+	ld a, [wWhichPokemon]
+	add wPartySpecies % $100
+	ld l, a
+	ld h, wPartySpecies / $100
+	ld a, [hl]
+	ld [wcf91], a
+	call PrintStrengthTxt_
+	ld hl, .Terminator2
 	ret
 
 PrintStrengthTxt:
+	call PrintStrengthTxt_
+	jp ManualTextScroll
+
+PrintStrengthTxt_:
 	ld hl, wd728
 	set 0, [hl]
 	ld hl, Text_f5b17
-	jp PrintText
-
-Text_f5b17:
-	TX_FAR _UsedStrengthText ; 2d:417e
-	TX_ASM
+	call PrintText
 	ld a, [wcf91]
 	call PlayCry
 	call Delay3
 	ld hl, Text_f5b28
-	ret
+	jp PrintText
+
+Text_f5b17:
+	TX_FAR _UsedStrengthText ; 2d:417e
+	db "@"
 
 Text_f5b28:
 	TX_FAR _CanMoveBouldersText ; 2d:4193
