@@ -63,7 +63,7 @@ RedrawMapView:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	ld de, -2 * 32
+	ld de, -2 * BG_MAP_WIDTH
 	add hl, de
 	ld a, h
 	and $3
@@ -88,7 +88,7 @@ RedrawMapView:
 	jr nz, .calcWRAMAddrLoop
 	call CopyToRedrawRowOrColumnSrcTiles
 	pop hl
-	ld de, SCREEN_WIDTH
+	ld de, BG_MAP_WIDTH
 	ld a, [hReplaceTileBlockMapRedrawRowIDX]
 	ld c, a
 .calcVRAMAddrLoop
