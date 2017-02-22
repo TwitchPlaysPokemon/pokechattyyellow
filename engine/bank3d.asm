@@ -464,6 +464,10 @@ HandleMenuInputPokemonSelectionDouble:
 
 _BoulderText::
 	TX_ASM
+	ld a, [wd728]
+	bit 0, a
+	ld hl, Text_f5b28
+	ret nz
 	ld a, [wObtainedBadges]
 	bit 3, a
 	ld hl, .Terminator
@@ -489,8 +493,7 @@ _BoulderText::
 	call YesNoChoice
 	ld a, [wCurrentMenuItem]
 	and a
-	ld hl, .Terminator2
-	ret nz
+	jr nz, .skip
 	call GetPartyMonName2
 	ld a, [wWhichPokemon]
 	add wPartySpecies % $100
@@ -501,6 +504,10 @@ _BoulderText::
 	call PrintStrengthTxt_
 	ld hl, .Terminator2
 	ret
+
+.skip
+	add sp, 14
+	jp CloseTextDisplay
 
 PrintStrengthTxt:
 	call PrintStrengthTxt_

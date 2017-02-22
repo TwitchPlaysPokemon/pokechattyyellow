@@ -2922,11 +2922,10 @@ _CannotGetOffHereText::
 
 AskStrengthText::
 	text "The rock is big,"
-	line "but the stunt"
-	cont "of the pocket"
-	cont "monster maybe"
-	cont "push it?"
-	cont "Can I use the"
+	line "but the stunt of"
+	cont "the pocket mon-"
+	cont "ster maybe push"
+	cont "it? Can I use the"
 	cont "great STRENGTH?"
 	done
 
