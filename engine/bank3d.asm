@@ -546,6 +546,10 @@ TrySurfOW:
 	bit 1, a
 	scf
 	ret z
+	ld a, [wWalkBikeSurfState]
+	cp 2
+	scf
+	ret z
 	callba AutoMapTextBox
 	ld hl, .AskSurfText
 	call PrintText
