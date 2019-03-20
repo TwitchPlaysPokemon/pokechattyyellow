@@ -2,3 +2,6 @@
 	path = extras
 	url = https://github.com/pret/pokemon-reverse-engineering-tools
 	ignore = dirty
+[submodule "rgbds"]
+	path = rgbds
+	url = git://github.com/rednex/rgbds.git
