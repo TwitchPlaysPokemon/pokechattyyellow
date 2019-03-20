@@ -7,6 +7,8 @@ pcm      := $(PYTHON) extras/pokemontools/pcm.py pcm
 pic      := $(PYTHON) extras/pokemontools/pic.py compress
 includes := $(PYTHON) extras/pokemontools/scan_includes.py
 
+RGBDS := ./rgbds/rgbasm ./rgbds/rgblink ./rgbds/rgbfix
+
 objs := \
 	audio.o \
 	main.o \
@@ -29,31 +31,37 @@ $(foreach obj, $(objs:.o=), \
 rom := chatty.gbc
 debug := chatty_debug.gbc
 
-all: $(rom) $(debug)
-chatty: $(rom)
+all: assembler $(rom) $(debug)
+chatty: assembler $(rom)
 
 tidy:
 	rm -f $(rom) $(debug) $(objs) $(markov_objs) $(rom:.gbc=.sym) $(debug:.gbc=.sym)
 
 clean: tidy
 	find . \( -iname '*.1bpp' -o -iname '*.2bpp' -o -iname '*.pic' -o -iname '*.pcm' \) -exec rm {} +
+	@$(MAKE) -C ./rgbds clean
+
+assembler: $(RGBDS)
+
+$(RGBDS): %:
+	@$(MAKE) -C ./rgbds
 
 %.asm: ;
-$(objs): %.o: %.asm $$(%_dep)
-	rgbasm -o $@ $*.asm
+$(objs): %.o: %.asm $$(%_dep) assembler
+	./rgbds/rgbasm -o $@ $*.asm
 
 $(markov_objs): %_markov.o: %.asm $$(%_dep)
-	rgbasm -D MARKOV -o $@ $*.asm
+	./rgbds/rgbasm -D MARKOV -o $@ $*.asm
 
 opts = -cjsv -k 01 -l 0x33 -m 0x1b -p 0 -r 03 -t "TPP_CHATTYYLLW"
 
 $(rom): $(markov_objs)
-	rgblink -n $*.sym -o $@ $^
-	rgbfix $(opts) $@
+	./rgbds/rgblink -n $*.sym -o $@ $^
+	./rgbds/rgbfix $(opts) $@
 
 $(debug): $(objs)
-	rgblink -n $*.sym -o $@ $^
-	rgbfix $(opts) $@
+	./rgbds/rgblink -n $*.sym -o $@ $^
+	./rgbds/rgbfix $(opts) $@
 
 %.png:  ;
 %.2bpp: %.png  ; @$(2bpp) $<
